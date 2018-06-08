@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements. See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+to you under the Apache License, Version 2.0 (the
+        "License"); you may not use this file except in compliance
+with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied. See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<?xml-stylesheet type="text/xsl" href="./../TK-doc-sv.xsl"?>
+<testsuite>
+	<id>NTjP</id>
+	<contractName>GetCareDocumentation</contractName>
+	<description>Denna testsvit används för att verifiera releasekandidater av NTjP.</description>
+	<globaldata>
+		<webServiceUrl>https://test.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl>
+		<!-- <webServiceUrl>http://localhost:8088/mockGetCareDocumentationResponderBinding</webServiceUrl> -->
+		<httpHeaderHsaId>112233</httpHeaderHsaId>
+		<logicalAddress>5565594230</logicalAddress>
+		<patientId>193601286499</patientId>
+		<patientIdType>1.2.752.129.2.1.3.1</patientIdType>
+		<sourceSystemHSAId>LOAD-MOCKS</sourceSystemHSAId>
+		<!-- Loggparametrar-->
+		<logTestData>true</logTestData>
+		<logTestDataPath>C:/temp/SOAP-UI/</logTestDataPath>
+		<logTestDataFilesAllowed>500</logTestDataFilesAllowed>
+	</globaldata>	
+	<testcase id="1.1.1 - Angränsande konsument skickar fråga via aggregerande tjänst">
+		<description>
+			Testfall 1.1.1: 
+			KONSUMENT1 -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
+			VP - Vårdsystemets request skickas vidare till AGP (x-rivta-original-serviceconsumer-hsaid saknas, HSA tas från certifikatet)
+			AGP(GCD) - Genererar en request mot EI för att kontrollera engagemang för patienten
+			VP - AGP's request skickas vidare internt till EI. (http, x-vp-sender-id satt)
+			AGP(GCD) - Genererar request(er) baserat på ursprungsrequesten, direktaddresserat mot relevanta producenter
+			VP - AGP's request(er) skickas vidare externt till producent(er). (x-vp-sender-id satt, x-rivta-original-serviceconsumer-hsaid satt)
+			
+			Förväntat resultat:
+			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från x-vp-sender-id)
+		</description>
+		<data>
+			<!-- Avkommentera för att skriva över den globalt definierade parametern -->
+			<!-- <patientIdExtension></patientIdExtension> -->
+		</data>
+	</testcase>
+	<testcase id="1.1.2 - Angränsande konsument skickar fråga via aggregerande tjänst (x-rivta-original-serviceconsumer-hsaid satt)">
+		<description>
+			Testfall 1.1.2: 
+			KONSUMENT1 -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
+			VP - Vårdsystemets request skickas vidare till AGP (x-rivta-original-serviceconsumer-hsaid satt, HSA tas från x-rivta-original-serviceconsumer-hsaid)
+			I övrigt, se Testfall 1.1.1
+			
+			Förväntat resultat:
+			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från x-vp-sender-id)
+		</description>
+		<data>
+			<!-- Avkommentera för att skriva över den globalt definierade parametern -->
+			<!-- <patientIdExtension></patientIdExtension> -->
+		</data>
+	</testcase>
+	<testcase id="1.1.3 Konsument skickar fråga via regional TjP">
+		<description>
+			Testfall 1.1.3: 
+			KONSUMENT1 ->  RTJP -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
+			VP - Vårdsystemets request skickas vidare till AGP (x-rivta-original-serviceconsumer-hsaid satt, sklijer sig från x-vp-sender-id). 
+			I övrigt, se Testfall 1.1.1
+			
+			Förväntat resultat:
+			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från x-rivta-original-serviceconsumer-hsaid)
+		</description>
+		<data>
+			<!-- Avkommentera för att skriva över den globalt definierade parametern -->
+			<!-- <patientIdExtension></patientIdExtension> -->
+		</data>
+	</testcase>	
+	<testcase id="1.2.1 Konsument skickar direktaddresserad fråga">
+		<description>
+			Testfall 1.2.1: 
+			KONSUMENT1 -> NTJP(SUT) -> PRODUCENT1
+			VP - Vårdsystemets request skickas vidare externt till PRODUCENT1
+			
+			Förväntat resultat:
+			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från x-vp-sender-id)
+		</description>
+		<data>
+			<logicalAddress>LOAD-MOCKS</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="1.2.2 Konsument skickar direktaddresserad fråga, behörighet saknas">
+		<description>
+			Testfall 1.2.2: 
+			KONSUMENT1 -> NTJP(SUT)
+			VP - Vårdsystemets request skickas inte vidare
+			
+			Förväntat resultat:
+			VP007 returneras (anropsbehörighet saknas mot PRODUCENT4)
+		</description>
+		<data>
+			<logicalAddress>PRODUCENT4</logicalAddress>
+		</data>
+	</testcase>	
+	
+</testsuite>
