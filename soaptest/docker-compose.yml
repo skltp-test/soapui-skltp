@@ -1,0 +1,12 @@
+version: '3'
+services:
+  testsuite:
+    build: .
+    volumes:
+      - .:/usr/src/soapui
+    entrypoint: 
+      - /opt/soapui/bin/testrunner.sh
+      - soapuiskltp-soapui-project.xml
+      - -j # Output jUnit XML
+      - -r # Pretty print results in terminal
+      - -e https://test.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21 # Set endpoint

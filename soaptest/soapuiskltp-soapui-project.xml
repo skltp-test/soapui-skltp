@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project abortOnError="false" activeEnvironment="Default" id="c450007f-9b70-4c70-babd-e9b810f58abd" name="soapuiskltp" resourceRoot="${projectDir}" runType="SEQUENTIAL" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config">
+    <con:settings/>
+    <con:testSuite id="3e025744-a0dc-4603-84f1-f420662597b5" name="TestSuite 1">
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase failOnError="true" failTestCaseOnErrors="true" id="3690d02b-071e-4c44-ac23-8d06a26f2ed1" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true">
+            <con:settings/>
+            <con:testStep id="dfaefccd-6f06-43c3-a275-4683e6d97a61" name="Delay" type="delay">
+                <con:settings/>
+                <con:config>
+                    <delay>1000</delay>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:properties/>
+    </con:testSuite>
+    <con:properties/>
+    
+    <con:wssContainer>
+        <con:crypto>
+            <con:source>TSTNMT2321000156-B02.p12</con:source>
+            <con:password>CERTKEYPASSWORD</con:password>
+            <con:type>KEYSTORE</con:type>
+            <con:defaultAlias/>
+        </con:crypto>
+    </con:wssContainer>
+    
+    <con:oAuth2ProfileContainer/>
+    <con:oAuth1ProfileContainer/>
+</con:soapui-project>
