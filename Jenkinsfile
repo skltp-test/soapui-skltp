@@ -10,14 +10,6 @@ pipeline {
                 sh 'cd soaptest && docker-compose run --rm testsuite'
             }
         }
-        
-//        stage('Load testing (Gatling)') {
-//            steps {
-//                // Run the tests
-//                sh 'cd loadtest && docker-compose run --rm testsuite'
-//            }
-//        }
-        
     }
 
     post {
@@ -25,9 +17,6 @@ pipeline {
             
             // Archive soaptest results
             junit healthScaleFactor: 100.0, testResults: 'soaptest/TEST*.xml'
-            
-//            // Archive Gatling results
-//            gatlingArchive()
             
         }
     }
