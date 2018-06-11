@@ -1,7 +1,6 @@
 pipeline {
-    agent {
-        label 'docker-compose'
-    }
+
+    agent any
 
     stages {
         stage('SOAP testing') {
