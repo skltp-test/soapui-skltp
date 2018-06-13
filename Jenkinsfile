@@ -7,7 +7,7 @@ pipeline {
             agent {
                 dockerfile {
                     dir 'soaptest'
-                    args '$PWD:/usr/src/soapui -it --rm testsuite -e https://test.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21'
+                    args '$PWD:/usr/src/soapui -e https://test.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21'
                 }
             } 
         }
