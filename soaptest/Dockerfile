@@ -4,6 +4,7 @@ FROM java:openjdk-7-jdk
 #  Version
 ENV   SOAPUI_VERSION  5.4.0
 ENV   SOAPUI_SUPPORT_VERSION  1.5.7
+ENV   SOAPUI_PROJECT soapuiskltp-soapui-project.xml
 
 # Download and unarchive SoapUI
 RUN mkdir -p /opt &&\
@@ -26,6 +27,9 @@ WORKDIR /usr/src/soapui
 # Set environment
 ENV PATH ${PATH}:/opt/soapui/bin
 
+# Copy SoapUI files to root folder (must be something better?...)
+COPY data.xml /. 
+
 # -j: Output jUnit XML report
 # -r: Pretty print the result at the end of the run.
-ENTRYPOINT ["/opt/soapui/bin/testrunner.sh", "soapuiskltp-soapui-project.xml", "-j", "-r"]
+#ENTRYPOINT ["/opt/soapui/bin/testrunner.sh", "${SOAPUI_PROJECT}", "-j", "-r"]
