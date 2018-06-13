@@ -5,8 +5,8 @@ pipeline {
     stages {
         stage('SOAP testing') {
             steps {
-                sh "cd soaptest"
-                sh "docker build -t testsuite ."
+                sh 'cd soaptest'
+                sh "docker build -t testsuite -f soaptest/Dockerfile"
                 sh "docker run -v $PWD:/usr/src/soapui -it --rm testsuite -e https://test.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21"
             }
         }
