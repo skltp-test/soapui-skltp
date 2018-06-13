@@ -4,10 +4,12 @@ pipeline {
 
     stages {
         stage('SOAP testing') {
-            steps {
-                // Run the tests
-                sh 'cd soaptest && docker-compose run --rm testsuite'
-            }
+            agent {
+                dockerfile {
+                    dir 'soaptest'
+                    args '$PWD:/usr/src/soapui -it --rm testsuite -e https://test.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21'
+                }
+            } 
         }
     }
 

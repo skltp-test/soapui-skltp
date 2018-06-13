@@ -28,4 +28,4 @@ ENV PATH ${PATH}:/opt/soapui/bin
 
 # -j: Output jUnit XML report
 # -r: Pretty print the result at the end of the run.
-ENTRYPOINT ["/opt/soapui/bin/testrunner.sh", "-j", -"r"]
+ENTRYPOINT ["/opt/soapui/bin/testrunner.sh", "soapuiskltp-soapui-project.xml", "-j", "-r"]
