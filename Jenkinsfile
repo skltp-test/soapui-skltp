@@ -8,7 +8,8 @@ pipeline {
                 withCredentials([certificate(credentialsId: 'TSTNMT2321000156-B4X', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTPWD')]) {
                     sh "openssl pkcs12 -info -in ${CERTKEY} -passin pass:${CERTPWD} -noout"
                     sh "cd soaptest"
-                    sh "sed -i -e \"s/KEYSTOREVARIABLE/${CERTKEY}/g\;s/PASSWORDVARIABLE/${CERTPWD}/g\" soapui-settings.xml"
+                    sh "sed -i -e \"s/KEYSTOREVARIABLE/${CERTKEY}/g\" soapui-settings.xml"
+                    sh "sed -i -e \"s/PASSWORDVARIABLE/${CERTPWD}/g\" soapui-settings.xml"
                     sh "cd soaptest; docker build -t testsuite ."
                     sh "docker run -v `pwd`:/usr/src/soapui --rm testsuite -e https://test.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21"
                 }
