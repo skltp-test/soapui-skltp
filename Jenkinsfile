@@ -7,7 +7,7 @@ pipeline {
             steps {
                 withCredentials([certificate(credentialsId: 'TSTNMT2321000156-B4X', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTPWD')]) {
                     sh "openssl pkcs12 -info -in ${CERTKEY} -passin pass:${CERTPWD} -noout"
-                    sh "cd soaptest; docker build -t testsuite ."
+                    sh "cd soaptest; ./cert_prepare.sh ${CERTKEY} ${CERTPWD}; docker build -t testsuite ."
                     sh "docker run -v `pwd`:/usr/src/soapui --rm testsuite -e https://test.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21"
                 }
             }
