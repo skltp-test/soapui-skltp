@@ -3,9 +3,9 @@ pipeline {
     agent any
 
     stages {
-        withCredentials([certificate(credentialsId: 'TSTNMT2321000156-B4X', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTPWD')]) {
-            stage('SOAP testing') {
-                steps {
+       stage('SOAP testing') {
+            steps {
+                withCredentials([certificate(credentialsId: 'TSTNMT2321000156-B4X', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTPWD')]) {
                     sh "openssl pkcs12 -info -in ${CERT} -passin pass:${CERTPWD} -noout"
                     sh "cd soaptest; docker build -t testsuite ."
                     sh "docker run -v `pwd`:/usr/src/soapui --rm testsuite -e https://test.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21"
