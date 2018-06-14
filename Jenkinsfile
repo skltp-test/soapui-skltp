@@ -7,7 +7,7 @@ pipeline {
             steps {
                 withCredentials([certificate(credentialsId: 'TSTNMT2321000156-B4X', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTPWD')]) {
                     sh '''
-                        set +x
+                        #! /bin/bash 
                         openssl pkcs12 -info -in ${CERTKEY} -passin pass:${CERTPWD} -noout
                         cd soaptest 
                         sed -i -e "s/KEYSTOREVARIABLE/${CERTKEY}/g; s/PASSWORDVARIABLE/${CERTPWD}/g" soapui-settings.xml
