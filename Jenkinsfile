@@ -11,6 +11,7 @@ pipeline {
                         openssl pkcs12 -info -in ${CERTKEY} -passin pass:${CERTPWD} -noout
                         cd soaptest 
                         cat ${CERTKEY} > ./cert.p12 
+                        ls -l ./cert.p12
                         sed -i -e 's@KEYSTOREVARIABLE@'"TSTNMT2321000156-B4X"'@; s@PASSWORDVARIABLE@'"${CERTPWD}"'@' soapui-settings.xml
                         cat soapui-settings.xml
                         docker build -t testsuite .
