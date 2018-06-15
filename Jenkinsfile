@@ -10,7 +10,8 @@ pipeline {
                         #! /bin/bash 
                         openssl pkcs12 -info -in ${CERTKEY} -passin pass:${CERTPWD} -noout
                         cd soaptest 
-                        sed -i -e 's@KEYSTOREVARIABLE@'"${CERTKEY}"'@; s@PASSWORDVARIABLE@'"${CERTPWD}"'@' soapui-settings.xml
+                        cat ${CERTKEY} > ./TSTNMT2321000156-B4X.p12 
+                        sed -i -e 's@KEYSTOREVARIABLE@'"TSTNMT2321000156-B4X"'@; s@PASSWORDVARIABLE@'"${CERTPWD}"'@' soapui-settings.xml
                         cat soapui-settings.xml
                         docker build -t testsuite .
                         docker run -v `pwd`:/usr/src/soapui --rm testsuite -e https://test.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21
