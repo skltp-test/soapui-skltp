@@ -29,6 +29,7 @@ ENV PATH ${PATH}:/opt/soapui/bin
 
 # Copy SoapUI files to root folder (must be something better?...)
 COPY data.xml /. 
+COPY cert.p12 /. 
 
 # -j: Output jUnit XML report
 # -r: Pretty print the result at the end of the run.
