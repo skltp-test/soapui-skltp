@@ -8,7 +8,7 @@ pipeline {
                 withCredentials([certificate(credentialsId: 'TSTNMT2321000156-B02', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTPWD')]) {
                     sh """
                         #! /bin/bash 
-                        echo "Tests will be run on: ${TEST_ENV}"
+                        echo "Tests will be run using the following url: ${TEST_ENV}"
                         openssl pkcs12 -info -in ${CERTKEY} -passin pass:${CERTPWD} -noout
                         cd soaptest 
                         cat ${CERTKEY} > ./cert.p12 
@@ -16,7 +16,7 @@ pipeline {
                         sed -i -e 's@KEYSTOREVARIABLE@'"cert.p12"'@; s@PASSWORDVARIABLE@'"${CERTPWD}"'@' soapui-settings.xml
                         cat soapui-settings.xml
                         docker build -t testsuite .
-                        docker run -v `pwd`:/usr/src/soapui --rm testsuite -e https://test.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21
+                        docker run -v `pwd`:/usr/src/soapui --rm testsuite -e ${TEST_ENV}
                     """
                 }
             }
