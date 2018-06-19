@@ -8,6 +8,7 @@ pipeline {
                 withCredentials([certificate(credentialsId: 'TSTNMT2321000156-B02', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTPWD')]) {
                     sh """
                         #! /bin/bash 
+                        echo "Tests will be run on: ${TEST_ENV}"
                         openssl pkcs12 -info -in ${CERTKEY} -passin pass:${CERTPWD} -noout
                         cd soaptest 
                         cat ${CERTKEY} > ./cert.p12 
