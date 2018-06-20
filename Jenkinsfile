@@ -14,7 +14,7 @@ pipeline {
                         cat ${CERTKEY} > ./cert.p12 
                         ls -l ./cert.p12
                         sed -i -e 's@KEYSTOREVARIABLE@'"cert.p12"'@; s@PASSWORDVARIABLE@'"${CERTPWD}"'@' soapui-settings.xml
-                        sed -i -e 's@LOGICALADDRESS@'"${LOGICALADDRESS}"'@' data.xml
+                        sed -i -e 's@SOURCESYSTEMHSA@'"${SOURCESYSTEMHSA}"'@' data.xml
                         docker build -t testsuite .
                         docker run -v `pwd`:/usr/src/soapui --rm testsuite -e ${TEST_ENV}
                     """
