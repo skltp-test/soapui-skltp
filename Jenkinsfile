@@ -31,6 +31,7 @@ pipeline {
                         cd loadtest
                         docker-compose run --rm testsuite 
                     """
+                }
             }
         }
     }
