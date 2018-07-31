@@ -30,9 +30,11 @@ pipeline {
                         echo "Loadtest will be run using the following url: ${TEST_ENV}"
                         cd loadtest
                         docker-compose run --rm testsuite 
-                        gatlingArchive()
                     """
                 }
+            }
+            steps {
+                gatlingArchive()
             }
         }
     }
