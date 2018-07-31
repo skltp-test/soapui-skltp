@@ -22,6 +22,17 @@ pipeline {
                 }
             }
         }
+        stage('Load testing') {
+            steps {
+                withCredentials([certificate(credentialsId: 'TSTNMT2321000156-B02', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTPWD')]) {
+                    sh """
+                        #! /bin/bash
+                        echo "Loadtest will be run using the following url: ${TEST_ENV}"
+                        cd loadtest
+                        docker-compose run --rm testsuite 
+                    """
+            }
+        }
     }
 
     post {
