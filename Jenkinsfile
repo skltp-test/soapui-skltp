@@ -32,8 +32,6 @@ pipeline {
                         docker-compose run --rm testsuite 
                     """
                 }
-            }
-            steps {
                 gatlingArchive()
             }
         }
