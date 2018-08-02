@@ -29,8 +29,7 @@ pipeline {
                     sh """
                         #! /bin/bash
                         echo "Loadtest will be run using the following url: ${TEST_ENV}"
-                        openssl pkcs12 -info -in ${CERTKEY} -passin pass:${CERTKEYPWD} -noout
-                        keytool -list -v -keystore ${TRUSTKEY} -storepass ${TRUSTKEYPWD} -storetype pkcs12
+                        keytool -list -keystore ${TRUSTKEY} -storepass ${TRUSTKEYPWD} -storetype pkcs12
                         cd loadtest
                         cat ${CERTKEY} > ./conf/cert.p12
                         ls -l ./conf/cert.p12
