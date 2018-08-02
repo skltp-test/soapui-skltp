@@ -87,17 +87,17 @@ class RequestsNTjP extends Simulation {
   // Simulate NPÖ that requests patient data once per second
   // NOTE: Injections are run in parallell, stepts within an injection are sequencial
   setUp(
-    requestGetDiagnosis_2.inject(constantUsersPerSec(1) during(60 seconds)),
-    requestGetMedicationHistory_2.inject(constantUsersPerSec(1) during(60 seconds)),
-    requestGetImagingOutcome_1.inject(constantUsersPerSec(1) during(60 seconds)),
-    requestGetLaboratoryOrderOutcome_3.inject(constantUsersPerSec(1) during(60 seconds)),
-    requestGetReferralOutcome_3.inject(constantUsersPerSec(1) during(60 seconds)),
-    requestGetAlertInformation_2.inject(constantUsersPerSec(1) during(60 seconds)),
-    requestGetCareContacts_2.inject(constantUsersPerSec(1) during(60 seconds)),
-    requestGetCareDocumentation_2.inject(constantUsersPerSec(1) during(60 seconds)),
-    requestGetVaccinationHistory_2.inject(constantUsersPerSec(1) during(60 seconds)),
-    requestGetFunctionalStatus_2.inject(constantUsersPerSec(1) during(60 seconds)),
-    requestGetCarePlans_2.inject(constantUsersPerSec(1) during(60 seconds))
+    requestGetDiagnosis_2.inject(constantUsersPerSec(1) during(300 seconds)),
+    requestGetMedicationHistory_2.inject(constantUsersPerSec(1) during(300 seconds)),
+    requestGetImagingOutcome_1.inject(constantUsersPerSec(1) during(300 seconds)),
+    requestGetLaboratoryOrderOutcome_3.inject(constantUsersPerSec(1) during(300 seconds)),
+    requestGetReferralOutcome_3.inject(constantUsersPerSec(1) during(300 seconds)),
+    requestGetAlertInformation_2.inject(constantUsersPerSec(1) during(300 seconds)),
+    requestGetCareContacts_2.inject(constantUsersPerSec(1) during(300 seconds)),
+    requestGetCareDocumentation_2.inject(constantUsersPerSec(1) during(300 seconds)),
+    requestGetVaccinationHistory_2.inject(constantUsersPerSec(1) during(300 seconds)),
+    requestGetFunctionalStatus_2.inject(constantUsersPerSec(1) during(300 seconds)),
+    requestGetCarePlans_2.inject(constantUsersPerSec(1) during(300 seconds))
   ).protocols(httpConf)  
   
   
