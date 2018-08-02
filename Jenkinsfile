@@ -29,12 +29,14 @@ pipeline {
                     sh """
                         #! /bin/bash
                         echo "Loadtest will be run using the following url: ${TEST_ENV}"
+                        openssl pkcs12 -info -in ${CERTKEY} -passin pass:${CERTKEYPWD} -noout
+                        keytool -list -v -keystore ${TRUSTKEY} -storepass ${TRUSTKEYPWD} -storetype pkcs12
                         cd loadtest
                         cat ${CERTKEY} > ./conf/cert.p12
-                        ls -l ./cert.p12
+                        ls -l ./conf/cert.p12
                         sed -i -e 's@KEYSTOREVARIABLE@'"cert.p12"'@; s@KEYSTOREPASSWORD@'"${CERTKEYPWD}"'@' ./conf/gatling.conf
                         cat ${TRUSTKEY} > ./conf/truststore.p12
-                        ls -l ./truststore.p12
+                        ls -l ./conf/truststore.p12
                         sed -i -e 's@TRUSTSTOREVARIABLE@'"truststore.p12"'@; s@TRUSTSTOREPASSWORD@'"${TRUSTKEYPWD}"'@' ./conf/gatling.conf
                         docker-compose run --rm testsuite 
                     """
