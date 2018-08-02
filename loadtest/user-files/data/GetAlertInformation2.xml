@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-16"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <ns3:LogicalAddress xmlns:ns3="urn:riv:itintegration:registry:1" xmlns:ns2="urn:riv:clinicalprocess:healthcond:description:2" xmlns="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2">${logicalAddress}</ns3:LogicalAddress>
+    </soap:Header>
+    <soap:Body>
+        <GetAlertInformation xmlns="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2" xmlns:ns2="urn:riv:clinicalprocess:healthcond:description:2" xmlns:ns3="urn:riv:itintegration:registry:1">
+            <patientId>
+                <ns2:id>${patientId2}</ns2:id>
+                <ns2:type>1.2.752.129.2.1.3.1</ns2:type>
+            </patientId>
+            <timePeriod>
+                <ns2:start>20100101</ns2:start>
+                <ns2:end>20150915</ns2:end>
+            </timePeriod>
+        </GetAlertInformation>
+    </soap:Body>
+</soap:Envelope>
