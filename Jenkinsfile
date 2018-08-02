@@ -13,7 +13,7 @@ pipeline {
                         cd soaptest 
                         cat ${CERTKEY} > ./cert.p12 
                         ls -l ./cert.p12
-                        sed -i -e 's@KEYSTOREVARIABLE@'"cert.p12"'@; s@KEYSTOREPASSWORD@'"${KEYPWD}"'@' soapui-settings.xml
+                        sed -i -e 's@KEYSTOREVARIABLE@'"cert.p12"'@; s@KEYSTOREPASSWORD@'"${CERTKEYPWD}"'@' soapui-settings.xml
                         sed -i -e 's@SOURCESYSTEMHSA@'"${SOURCESYSTEMHSA}"'@' data.xml
                         cat data.xml
                         docker build -t testsuite .
