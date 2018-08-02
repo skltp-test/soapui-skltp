@@ -87,17 +87,17 @@ class RequestsNTjP extends Simulation {
   // Simulate NPÖ that requests patient data once per second
   // NOTE: Injections are run in parallell, stepts within an injection are sequencial
   setUp(
-    requestGetDiagnosis_2.inject(atOnceUsers(1)),
-    requestGetMedicationHistory_2.inject(atOnceUsers(1)),
-    requestGetImagingOutcome_1.inject(atOnceUsers(1)),
-    requestGetLaboratoryOrderOutcome_3.inject(atOnceUsers(1)),
-    requestGetReferralOutcome_3.inject(atOnceUsers(1)),
-    requestGetAlertInformation_2.inject(atOnceUsers(1)),
-    requestGetCareContacts_2.inject(atOnceUsers(1)),
-    requestGetCareDocumentation_2.inject(atOnceUsers(1)),
-    requestGetVaccinationHistory_2.inject(atOnceUsers(1)),
-    requestGetFunctionalStatus_2.inject(atOnceUsers(1)),
-    requestGetCarePlans_2.inject(atOnceUsers(1))
+    requestGetDiagnosis_2.inject(constantUsersPerSec(1) during(60 seconds)),
+    requestGetMedicationHistory_2.inject(constantUsersPerSec(1) during(60 seconds)),
+    requestGetImagingOutcome_1.inject(constantUsersPerSec(1) during(60 seconds)),
+    requestGetLaboratoryOrderOutcome_3.inject(constantUsersPerSec(1) during(60 seconds)),
+    requestGetReferralOutcome_3.inject(constantUsersPerSec(1) during(60 seconds)),
+    requestGetAlertInformation_2.inject(constantUsersPerSec(1) during(60 seconds)),
+    requestGetCareContacts_2.inject(constantUsersPerSec(1) during(60 seconds)),
+    requestGetCareDocumentation_2.inject(constantUsersPerSec(1) during(60 seconds)),
+    requestGetVaccinationHistory_2.inject(constantUsersPerSec(1) during(60 seconds)),
+    requestGetFunctionalStatus_2.inject(constantUsersPerSec(1) during(60 seconds)),
+    requestGetCarePlans_2.inject(constantUsersPerSec(1) during(60 seconds))
   ).protocols(httpConf)  
   
   
