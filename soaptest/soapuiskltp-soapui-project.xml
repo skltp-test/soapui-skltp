@@ -748,7 +748,7 @@
          <!--You may enter ANY elements at this point-->\r
       </urn1:GetCareDocumentation>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="6a3aff90-9de0-47b3-96e2-d8a865836130" name="Ursprunglig avsändare"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4d8a6e70-0b02-475f-ab2d-3ff29f2b2289" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.1.1 - Angränsande konsument skickar fråga via aggregerande tjänst" searchProperties="true"><con:description>	</con:description><con:settings/><con:testStep type="groovy" name="Read data" id="80d90f6d-39d9-4793-91c6-2353c60f6733"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="6a3aff90-9de0-47b3-96e2-d8a865836130" name="Ursprunglig avsändare"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4d8a6e70-0b02-475f-ab2d-3ff29f2b2289" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.1.1 Angränsande konsument skickar fråga via aggregerande tjänst" searchProperties="true"><con:description>	</con:description><con:settings/><con:testStep type="groovy" name="Read data" id="80d90f6d-39d9-4793-91c6-2353c60f6733"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -770,7 +770,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          </urn1:patientId>\r
       </urn1:GetCareDocumentation>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="e8cec593-1604-465b-be30-ef490d396272" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="319f5d43-c9d2-4461-b21a-e0897e29818f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.1.2 - Angränsande konsument skickar fråga via aggregerande tjänst (x-rivta-original-serviceconsumer-hsaid satt)" searchProperties="true"><con:description/><con:settings/><con:testStep type="groovy" name="Read data" id="771d427a-377f-4787-89a8-5572081c3c13"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="e8cec593-1604-465b-be30-ef490d396272" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="319f5d43-c9d2-4461-b21a-e0897e29818f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.1.2 Angränsande konsument skickar fråga via aggregerande tjänst (x-rivta-original-serviceconsumer-hsaid satt)" searchProperties="true"><con:description/><con:settings/><con:testStep type="groovy" name="Read data" id="771d427a-377f-4787-89a8-5572081c3c13"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -778,7 +778,7 @@ def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
 source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" id="d38f8dac-57b4-47c9-b3e4-8f65d6a985e8" name="GetCareDocumentation"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareDocumentationResponderBinding</con:interface><con:operation>GetCareDocumentation</con:operation><con:request name="GetCareDocumentation" id="adf3c3c3-1732-479d-bd00-5675f7d6268f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
-  &lt;con:entry key="x-rivta-original-serviceconsumer-hsaid" value="${#Project#TSTNMT2321000156-B02}"/>
+  &lt;con:entry key="x-rivta-original-serviceconsumer-hsaid" value="${#Project#HSA_KONSUMENT2}"/>
   &lt;con:entry key="x-mock-response" value="BasicResponse"/>
   &lt;con:entry key="x-soap-request" value="VS"/>
 &lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
@@ -793,7 +793,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          </urn1:patientId>\r
       </urn1:GetCareDocumentation>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="e8cec593-1604-465b-be30-ef490d396272" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="5976ba22-04d4-4116-a048-b9e8a7e0a1df" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.1.3 Konsument skickar fråga via regional TjP" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="b3e65bf5-89a3-4863-b3a2-6dbd8ef188d6"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="e8cec593-1604-465b-be30-ef490d396272" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="5976ba22-04d4-4116-a048-b9e8a7e0a1df" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.1.3 Avlägsen konsument skickar fråga via aggregerande tjänst" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="b3e65bf5-89a3-4863-b3a2-6dbd8ef188d6"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -816,7 +816,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          </urn1:patientId>\r
       </urn1:GetCareDocumentation>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="e8cec593-1604-465b-be30-ef490d396272" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e091caa1-8db0-4b79-8580-089ea6c0fdfd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.2.1 Konsument skickar direktaddresserad fråga" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="207b56a3-6cde-4f16-809b-771d5adc3e0e"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="e8cec593-1604-465b-be30-ef490d396272" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e091caa1-8db0-4b79-8580-089ea6c0fdfd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.2.1 Angränsande konsument skickar direktaddresserad fråga" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="207b56a3-6cde-4f16-809b-771d5adc3e0e"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -841,7 +841,80 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          <urn1:sourceSystemHSAid>${sourceSystemHSAId}</urn1:sourceSystemHSAid>\r
       </urn1:GetCareDocumentation>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="e8cec593-1604-465b-be30-ef490d396272" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="d32c4648-21af-40df-87e3-81eb42a3d8f8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.2.2 Konsument skickar direktaddresserad fråga, behörighet saknas" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="049e1c42-c2f8-47ad-b71c-be873df3f323"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="e8cec593-1604-465b-be30-ef490d396272" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="1e19e29d-83bd-4976-86b7-fea7f309858e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.2.2 Avlägsen konsument skickar direktaddresserad fråga" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="d6e86957-00fb-4196-8653-05589bbb50b7"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" id="b629d735-9312-4460-96b3-03c92c4212ee" name="GetCareDocumentation"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareDocumentationResponderBinding</con:interface><con:operation>GetCareDocumentation</con:operation><con:request name="GetCareDocumentation" id="adf3c3c3-1732-479d-bd00-5675f7d6268f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="x-rivta-original-serviceconsumer-hsaid" value="${#Project#TSTNMT2321000156-B02}"/>
+  <con:entry key="x-mock-response" value="BasicResponse"/>
+  <con:entry key="x-vp-sender-id" value="${#Project#HSA_RTJP}"/>
+  <con:entry key="x-soap-request" value="VS"/>
+</xml-fragment>]]></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCareDocumentation>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+         <urn1:sourceSystemHSAid>${sourceSystemHSAId}</urn1:sourceSystemHSAid>\r
+      </urn1:GetCareDocumentation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="e8cec593-1604-465b-be30-ef490d396272" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="0395e6b6-a832-46ed-8157-7b329c868765" name="Standardiserade felkoder"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="535f0c1c-c96a-46a0-ae41-8dc641aa3f14" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="2.1.1 Konsument anropar okänd tjänst" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="ab2a8edd-0919-4ee1-ae45-5c2f2b58a52e"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" id="c9f2357d-dbd4-4b24-a666-82d42f13fbb3" name="GetCareDocumentation"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareDocumentationResponderBinding</con:interface><con:operation>GetCareDocumentation</con:operation><con:request name="GetCareDocumentation" id="adf3c3c3-1732-479d-bd00-5675f7d6268f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="x-rivta-original-serviceconsumer-hsaid" value="${#Project#HSA_NTJP}"/>
+  <con:entry key="x-mock-response" value="BasicResponse"/>
+  <con:entry key="x-vp-sender-id" value="${#Project#HSA_RTJP}"/>
+  <con:entry key="x-soap-request" value="VS"/>
+</xml-fragment>]]></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlFaulty1}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCareDocumentation>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetCareDocumentation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="Invalid HTTP Status Codes" id="222aedf8-ee40-435f-8067-a410e3e74c54" name="Invalid HTTP Status Codes"><con:configuration><codes>404 Not Found</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="b1643488-6572-4944-874f-933cba50d980" name="Check fault message"><con:configuration><token>(?s),*Cannot bind to address.*(?s),*rivtabp20.*(?s),*No component registered on that endpoint.*</token><ignoreCase>false</ignoreCase><useRegEx>true</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="9c951598-308b-4971-9af8-eef71bceccef" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="2.3.1 Konsument anropar utan logisk adress (VP003)" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="40c9d040-39bf-4681-be1e-056b3220bcc7"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" id="300d4de0-27c7-45fc-a0b4-15782c38cf11" name="GetCareDocumentation"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareDocumentationResponderBinding</con:interface><con:operation>GetCareDocumentation</con:operation><con:request name="GetCareDocumentation" id="adf3c3c3-1732-479d-bd00-5675f7d6268f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="x-rivta-original-serviceconsumer-hsaid" value="${#Project#HSA_NTJP}"/>
+  <con:entry key="x-mock-response" value="BasicResponse"/>
+  <con:entry key="x-vp-sender-id" value="${#Project#HSA_RTJP}"/>
+  <con:entry key="x-soap-request" value="VS"/>
+</xml-fragment>]]></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress></urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCareDocumentation>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetCareDocumentation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="2e915ab0-7b74-4ea7-ac48-939afdce7c0d" name="SOAP Fault"/><con:assertion type="Simple Contains" id="b1643488-6572-4944-874f-933cba50d980" name="Contains VP003"><con:configuration><token>VP003</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="d32c4648-21af-40df-87e3-81eb42a3d8f8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="2.4.1 Konsument anropar okänd tjänsteproducent (VP004)" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="049e1c42-c2f8-47ad-b71c-be873df3f323"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -863,10 +936,58 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
             <urn2:id>${patientId}</urn2:id>\r
             <urn2:type>${patientIdType}</urn2:type>\r
          </urn1:patientId>\r
-         <urn1:sourceSystemHSAid>${sourceSystemHSAId}</urn1:sourceSystemHSAid>\r
+         <urn1:sourceSystemHSAid>${sourceSystemHSAId}</urn1:sourceSystemHSAid>
       </urn1:GetCareDocumentation>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="2e915ab0-7b74-4ea7-ac48-939afdce7c0d" name="SOAP Fault"/><con:assertion type="Simple Contains" id="b1643488-6572-4944-874f-933cba50d980" name="Contains VP004"><con:configuration><token>VP004</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="8d219be4-b153-4604-a77b-fab1ab33bde1" port="8088" path="/mockGetCareDocumentationResponderBinding" host="NMT028" name="GetCareDocumentationResponderBinding MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:startScript/><con:properties/><con:mockOperation name="GetCareDocumentation" id="b626c28d-e788-4741-a0c1-a3d8d3d726f0" interface="GetCareDocumentationResponderBinding" operation="GetCareDocumentation"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchPath>import com.eviware.soapui.support.XmlHolder
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="2e915ab0-7b74-4ea7-ac48-939afdce7c0d" name="SOAP Fault"/><con:assertion type="Simple Contains" id="b1643488-6572-4944-874f-933cba50d980" name="Contains VP004"><con:configuration><token>VP004</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="32493df9-333e-4c3b-9e01-6fc9c83a48d0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="2.7.1 Konsument anropar tjänsteproducent där samverkansbehörighet saknas (VP007)" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="2c9fe5e4-7d48-42ba-a3af-820e5dffcb76"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" id="3759a0d5-15cb-481c-b5ac-40a150975811" name="GetCareDocumentation"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareDocumentationResponderBinding</con:interface><con:operation>GetCareDocumentation</con:operation><con:request name="GetCareDocumentation" id="adf3c3c3-1732-479d-bd00-5675f7d6268f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="x-rivta-original-serviceconsumer-hsaid" value="${#Project#HSA_NTJP}"/>
+  <con:entry key="x-mock-response" value="BasicResponse"/>
+  <con:entry key="x-vp-sender-id" value="${#Project#HSA_RTJP}"/>
+  <con:entry key="x-soap-request" value="VS"/>
+</xml-fragment>]]></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCareDocumentation>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetCareDocumentation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="2e915ab0-7b74-4ea7-ac48-939afdce7c0d" name="SOAP Fault"/><con:assertion type="Simple Contains" id="b1643488-6572-4944-874f-933cba50d980" name="Contains VP007"><con:configuration><token>VP007</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="86bc615b-9250-4356-bfc6-7008a83f670a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="2.9.1 Konsument anropar tjänsteproducent som inte är kontaktbar (VP009)" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="4439ca57-9e5d-4737-bfdf-1c8520de5854"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" id="6d7fbbee-0896-4d1c-b772-742b640463f7" name="GetCareDocumentation"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareDocumentationResponderBinding</con:interface><con:operation>GetCareDocumentation</con:operation><con:request name="GetCareDocumentation" id="adf3c3c3-1732-479d-bd00-5675f7d6268f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="x-rivta-original-serviceconsumer-hsaid" value="${#Project#HSA_NTJP}"/>
+  <con:entry key="x-mock-response" value="BasicResponse"/>
+  <con:entry key="x-vp-sender-id" value="${#Project#HSA_RTJP}"/>
+  <con:entry key="x-soap-request" value="VS"/>
+</xml-fragment>]]></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCareDocumentation>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetCareDocumentation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="2e915ab0-7b74-4ea7-ac48-939afdce7c0d" name="SOAP Fault"/><con:assertion type="Simple Contains" id="b1643488-6572-4944-874f-933cba50d980" name="Contains VP009"><con:configuration><token>VP009</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="8d219be4-b153-4604-a77b-fab1ab33bde1" port="8088" path="/mockGetCareDocumentationResponderBinding" host="NMT028" name="GetCareDocumentationResponderBinding MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:startScript/><con:properties/><con:mockOperation name="GetCareDocumentation" id="b626c28d-e788-4741-a0c1-a3d8d3d726f0" interface="GetCareDocumentationResponderBinding" operation="GetCareDocumentation"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchPath>import com.eviware.soapui.support.XmlHolder
 import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlContext
 import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlValidator
 import com.eviware.soapui.impl.wsdl.panels.mockoperation.WsdlMockRequestMessageExchange

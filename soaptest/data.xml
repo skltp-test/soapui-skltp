@@ -23,8 +23,9 @@ under the License.
 	<contractName>GetCareDocumentation</contractName>
 	<description>Denna testsvit används för att verifiera releasekandidater av NTjP.</description>
 	<globaldata>
-		<!-- <webServiceUrl>https://test.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl> -->
-		<webServiceUrl>https://qa.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl>
+		<webServiceUrl>https://test.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl>
+		<webServiceUrlFaulty1>https://test.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp20</webServiceUrlFaulty1>
+		<!-- <webServiceUrl>https://qa.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl> -->
 		<!-- <webServiceUrl>http://localhost:8088/mockGetCareDocumentationResponderBinding</webServiceUrl> -->
 		<httpHeaderHsaId>112233</httpHeaderHsaId>
 		<logicalAddress>5565594230</logicalAddress>
@@ -36,10 +37,9 @@ under the License.
 		<logTestDataPath>C:/temp/SOAP-UI/</logTestDataPath>
 		<logTestDataFilesAllowed>500</logTestDataFilesAllowed>
 	</globaldata>	
-	<testcase id="1.1.1 - Angränsande konsument skickar fråga via aggregerande tjänst">
+	<testcase id="1.1.1 Angränsande konsument skickar fråga via aggregerande tjänst">
 		<description>
-			Testfall 1.1.1: 
-			KONSUMENT1 -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
+			(KONSUMENT1) -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
 			VP - Vårdsystemets request skickas vidare till AGP (x-rivta-original-serviceconsumer-hsaid saknas, HSA tas från certifikatet)
 			AGP(GCD) - Genererar en request mot EI för att kontrollera engagemang för patienten
 			VP - AGP's request skickas vidare internt till EI. (http, x-vp-sender-id satt)
@@ -47,6 +47,7 @@ under the License.
 			VP - AGP's request(er) skickas vidare externt till producent(er). (x-vp-sender-id satt, x-rivta-original-serviceconsumer-hsaid satt)
 			
 			Förväntat resultat:
+			x-vp-sender-id = (taget från certificatet)
 			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från x-vp-sender-id)
 		</description>
 		<data>
@@ -54,26 +55,26 @@ under the License.
 			<!-- <patientIdExtension></patientIdExtension> -->
 		</data>
 	</testcase>
-	<testcase id="1.1.2 - Angränsande konsument skickar fråga via aggregerande tjänst (x-rivta-original-serviceconsumer-hsaid satt)">
+	<testcase id="1.1.2 Angränsande konsument skickar fråga via aggregerande tjänst (x-rivta-original-serviceconsumer-hsaid satt)">
 		<description>
-			Testfall 1.1.2: 
-			KONSUMENT1 -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
-			VP - Vårdsystemets request skickas vidare till AGP (x-rivta-original-serviceconsumer-hsaid satt, HSA tas från x-rivta-original-serviceconsumer-hsaid)
+			(KONSUMENT1) -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
+			VP - Vårdsystemets request skickas vidare till AGP (x-rivta-original-serviceconsumer-hsaid satt, 
+			  HSA tas från x-rivta-original-serviceconsumer-hsaid)
 			I övrigt, se Testfall 1.1.1
 			
 			Förväntat resultat:
-			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från x-vp-sender-id)
+			x-vp-sender-id = (taget från certificatet)
+			x-rivta-original-serviceconsumer-hsaid = KONSUMENT2 (taget från x-vp-sender-id)
 		</description>
 		<data>
 			<!-- Avkommentera för att skriva över den globalt definierade parametern -->
 			<!-- <patientIdExtension></patientIdExtension> -->
 		</data>
 	</testcase>
-	<testcase id="1.1.3 Konsument skickar fråga via regional TjP">
+	<testcase id="1.1.3 Avlägsen konsument skickar fråga via aggregerande tjänst">
 		<description>
-			Testfall 1.1.3: 
-			KONSUMENT1 ->  RTJP -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
-			VP - Vårdsystemets request skickas vidare till AGP (x-rivta-original-serviceconsumer-hsaid satt, sklijer sig från x-vp-sender-id). 
+			(KONSUMENT1 ->  RTJP) -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
+			VP - Vårdsystemets request skickas vidare till AGP (x-rivta-original-serviceconsumer-hsaid satt, skiljer sig från x-vp-sender-id). 
 			I övrigt, se Testfall 1.1.1
 			
 			Förväntat resultat:
@@ -84,10 +85,9 @@ under the License.
 			<!-- <patientIdExtension></patientIdExtension> -->
 		</data>
 	</testcase>	
-	<testcase id="1.2.1 Konsument skickar direktaddresserad fråga">
+	<testcase id="1.2.1 Angränsande konsument skickar direktaddresserad fråga">
 		<description>
-			Testfall 1.2.1: 
-			KONSUMENT1 -> NTJP(SUT) -> PRODUCENT1
+			(KONSUMENT1) -> NTJP(SUT) -> PRODUCENT1
 			VP - Vårdsystemets request skickas vidare externt till PRODUCENT1
 			
 			Förväntat resultat:
@@ -97,19 +97,72 @@ under the License.
 			<logicalAddress>SOURCESYSTEMHSA</logicalAddress>
 		</data>
 	</testcase>
-	<testcase id="1.2.2 Konsument skickar direktaddresserad fråga, behörighet saknas">
+	<testcase id="1.2.2 Avlägsen konsument skickar direktaddresserad fråga">
 		<description>
-			Testfall 1.2.2: 
-			KONSUMENT1 -> NTJP(SUT)
+			(KONSUMENT1 ->  RTJP) -> NTJP(SUT) -> PRODUCENT1
+			VP - Vårdsystemets request skickas vidare externt till PRODUCENT1 (x-rivta-original-serviceconsumer-hsaid satt, skiljer sig från x-vp-sender-id)
+			
+			Förväntat resultat:
+			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från x-rivta-original-serviceconsumer-hsaid)
+		</description>
+		<data>
+			<logicalAddress>SOURCESYSTEMHSA</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="2.1.1 Konsument anropar okänd tjänst">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT)
 			VP - Vårdsystemets request skickas inte vidare
 			
 			Förväntat resultat:
-			VP007 returneras (anropsbehörighet saknas mot PRODUCENT4)
+			Felkod 404 returneras med felmeddelande.
+		</description>
+	</testcase>
+	<testcase id="2.3.1 Konsument anropar utan logisk adress (VP003)">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT)
+			VP - Vårdsystemets request skickas inte vidare
+			
+			Förväntat resultat:
+			VP003 returneras (ReceiverId ej ifylld i RivHeadern i inkommande meddelande.)
+		</description>
+	</testcase>	
+	<testcase id="2.4.1 Konsument anropar okänd tjänsteproducent (VP004)">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT)
+			VP - Vårdsystemets request skickas inte vidare
+			
+			Förväntat resultat:
+			VP004 returneras (Det finns ingen tjänsteproducent definierad i Tjänstekatalogen som matchar ReceiverId, Tjänstekontrakt och dagens datum.)
 		</description>
 		<data>
 			<logicalAddress>PRODUCENT4</logicalAddress>
 		        <sourceSystemHSAId>PRODUCENT4</sourceSystemHSAId>
 		</data>
 	</testcase>	
-	
+	<testcase id="2.7.1 Konsument anropar tjänsteproducent där samverkansbehörighet saknas (VP007)">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT)
+			VP - Vårdsystemets request skickas inte vidare
+			
+			Förväntat resultat:
+			VP007 returneras (Den finns ingen behörighet för den tjänstekomponent som anropar att samverka med tjänsteproducenten. 
+			  Avser behörigheter definierade i tjänstekatalogen.)
+		</description>
+		<data>
+			<logicalAddress>HSA-ID-1</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="2.9.1 Konsument anropar tjänsteproducent som inte är kontaktbar (VP009)">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT)
+			VP - Vårdsystemets request skickas inte vidare
+			
+			Förväntat resultat:
+			VP009 returneras (Fel vid kontakt med tjänsteproducenten.)
+		</description>
+		<data>
+			<logicalAddress>HSATEST2-CSD</logicalAddress>
+		</data>
+	</testcase>
 </testsuite>
