@@ -23,8 +23,8 @@ under the License.
 	<contractName>GetCareDocumentation</contractName>
 	<description>Denna testsvit används för att verifiera releasekandidater av NTjP.</description>
 	<globaldata>
-		<webServiceUrl>https://test.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl>
-		<webServiceUrlFaulty1>https://test.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp20</webServiceUrlFaulty1>
+		<webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl>
+		<webServiceUrlFaulty1>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp20</webServiceUrlFaulty1>
 		<!-- <webServiceUrl>https://qa.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl> -->
 		<!-- <webServiceUrl>http://localhost:8088/mockGetCareDocumentationResponderBinding</webServiceUrl> -->
 		<httpHeaderHsaId>112233</httpHeaderHsaId>
@@ -50,10 +50,6 @@ under the License.
 			x-vp-sender-id = (taget från certificatet)
 			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från x-vp-sender-id)
 		</description>
-		<data>
-			<!-- Avkommentera för att skriva över den globalt definierade parametern -->
-			<!-- <patientIdExtension></patientIdExtension> -->
-		</data>
 	</testcase>
 	<testcase id="1.1.2 Angränsande konsument skickar fråga via aggregerande tjänst (x-rivta-original-serviceconsumer-hsaid satt)">
 		<description>
@@ -66,10 +62,6 @@ under the License.
 			x-vp-sender-id = (taget från certificatet)
 			x-rivta-original-serviceconsumer-hsaid = KONSUMENT2 (taget från x-vp-sender-id)
 		</description>
-		<data>
-			<!-- Avkommentera för att skriva över den globalt definierade parametern -->
-			<!-- <patientIdExtension></patientIdExtension> -->
-		</data>
 	</testcase>
 	<testcase id="1.1.3 Avlägsen konsument skickar fråga via aggregerande tjänst">
 		<description>
@@ -80,10 +72,6 @@ under the License.
 			Förväntat resultat:
 			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från x-rivta-original-serviceconsumer-hsaid)
 		</description>
-		<data>
-			<!-- Avkommentera för att skriva över den globalt definierade parametern -->
-			<!-- <patientIdExtension></patientIdExtension> -->
-		</data>
 	</testcase>	
 	<testcase id="1.2.1 Angränsande konsument skickar direktaddresserad fråga">
 		<description>

@@ -8,16 +8,16 @@ pipeline {
                 withCredentials([certificate(credentialsId: 'TSTNMT2321000156-B02', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTKEYPWD')]) {
                     sh """
                         #! /bin/bash 
-                        echo "Tests will be run using the following url: ${TEST_ENV}"
+                        echo "Tests will be run against the following host: ${TARGETHOST}"
                         openssl pkcs12 -info -in ${CERTKEY} -passin pass:${CERTKEYPWD} -noout
                         cd soaptest 
                         cat ${CERTKEY} > ./cert.p12 
                         ls -l ./cert.p12
-                        sed -i -e 's@KEYSTOREVARIABLE@'"cert.p12"'@; s@KEYSTOREPASSWORD@'"${CERTKEYPWD}"'@' soapui-settings.xml
-                        sed -i -e 's@SOURCESYSTEMHSA@'"${SOURCESYSTEMHSA}"'@' data.xml
+                        sed -e 's@KEYSTOREVARIABLE@'"cert.p12"'@; s@KEYSTOREPASSWORD@'"${CERTKEYPWD}"'@' soapui-sed.xml > soapui-settings.xml
+                        sed -e 's@SOURCESYSTEMHSA@'"${SOURCESYSTEMHSA}"'@; s@TARGETHOST@'"${TARGETHOST}"'@'  data-sed.xml > data.xml
                         cat data.xml
                         docker build -t testsuite .
-                        docker run -v `pwd`:/usr/src/soapui --rm testsuite -e ${TEST_ENV}
+                        docker run -v `pwd`:/usr/src/soapui --rm testsuite
                     """
                 }
             }
@@ -28,7 +28,6 @@ pipeline {
                                  certificate(credentialsId: 'TSTNMT_TRUSTSTORE', keystoreVariable: 'TRUSTKEY', passwordVariable: 'TRUSTKEYPWD')]) {
                     sh """
                         #! /bin/bash
-                        echo "Loadtest will be run using the following url: ${TEST_ENV}"
                         keytool -list -keystore ${TRUSTKEY} -storepass ${TRUSTKEYPWD} -storetype pkcs12
                         cd loadtest
                         cat ${CERTKEY} > ./conf/cert.p12
