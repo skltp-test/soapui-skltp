@@ -12,7 +12,7 @@
         (for QA, use qa.esb.ntjp.se)
     - Certificate (path to a pkcs12 file)
     - Certificate password
-    - Source system (HSA, normally LOAD-MOCKS) 
+    - Source system (HSA, normally LOAD-MOCKS i SIT, JOL-MOCK i QA) 
 
 # Support to be run from SoapUI 
   (recommended is to run soaptest/soaptest_local.sh first. 
