@@ -25,6 +25,8 @@ under the License.
 	<globaldata>
 		<webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl>
 		<webServiceUrlFaulty1>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp20</webServiceUrlFaulty1>
+		<webServiceUrlFaulty2>https://TARGETHOST</webServiceUrlFaulty2>
+		<!-- .... vp/informationsecurity/auditing/log/GetAccessLogsForPatient/2/rivtabp21 -->
 		<!-- <webServiceUrl>https://qa.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl> -->
 		<!-- <webServiceUrl>http://localhost:8088/mockGetCareDocumentationResponderBinding</webServiceUrl> -->
 		<httpHeaderHsaId>112233</httpHeaderHsaId>
@@ -72,6 +74,18 @@ under the License.
 			Förväntat resultat:
 			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från x-rivta-original-serviceconsumer-hsaid)
 		</description>
+	</testcase>
+	<testcase id="1.1.4 Angränsande konsument skickar fråga via aggregerande tjänst (x-vp-sender-id satt)">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
+			VP - Vårdsystemets request skickas vidare till AGP (x-vp-sender-id satt, 
+			men ska ignoreras då sender-id tas från certifikatet)
+			I övrigt, se Testfall 1.1.1
+			
+			Förväntat resultat:
+			x-vp-sender-id = XVPSENDERID
+			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från certificatet)
+		</description>
 	</testcase>	
 	<testcase id="1.2.1 Angränsande konsument skickar direktaddresserad fråga">
 		<description>
@@ -98,6 +112,15 @@ under the License.
 		</data>
 	</testcase>
 	<testcase id="2.1.1 Konsument anropar okänd tjänst">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT)
+			VP - Vårdsystemets request skickas inte vidare
+			
+			Förväntat resultat:
+			Felkod 404 returneras med felmeddelande.
+		</description>
+	</testcase>
+	<testcase id="2.1.2 Konsument anropar hostname">
 		<description>
 			(KONSUMENT1) -> NTJP(SUT)
 			VP - Vårdsystemets request skickas inte vidare
