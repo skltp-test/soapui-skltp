@@ -31,7 +31,7 @@ under the License.
 		<!-- <webServiceUrl>http://localhost:8088/mockGetCareDocumentationResponderBinding</webServiceUrl> -->
 		<httpHeaderHsaId>112233</httpHeaderHsaId>
 		<logicalAddress>5565594230</logicalAddress>
-		<patientId>193601286499</patientId>
+		<patientId>196711222940</patientId>
 		<patientIdType>1.2.752.129.2.1.3.1</patientIdType>
 		<sourceSystemHSAId>SOURCESYSTEMHSA</sourceSystemHSAId>
 		<!-- Loggparametrar-->
@@ -175,5 +175,33 @@ under the License.
 		<data>
 			<logicalAddress>SE2321000131-E1002</logicalAddress>
 		</data>
+	</testcase>
+	
+	<!-- BASIC FLOWS -->
+	<!-- clinicalprocess/activityprescription/actoutcome -->
+	<testcase id="GetVaccinationHistory">
+		<description>Simple flow</description>
+		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/activityprescription/actoutcome/GetVaccinationHistory/1/rivtabp21</webServiceUrl></data>
+	</testcase>
+	<testcase id="GetMedicationHistory">
+		<description>Simple flow</description>
+		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/activityprescription/actoutcome/GetMedicationHistory/2/rivtabp21</webServiceUrl></data>
+	</testcase>
+	<!-- clinicalprocess/healthcond/description -->
+	<testcase id="GetAlertInformation">
+		<description>Simple flow</description>
+		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetAlertInformation/2/rivtabp21</webServiceUrl></data>
+	</testcase>
+	<testcase id="GetCareDocumentation">
+		<description>Simple flow</description>
+		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl></data>
+	</testcase>
+	<testcase id="GetDiagnosis">
+		<description>Simple flow</description>
+		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21</webServiceUrl></data>
+	</testcase>
+	<testcase id="GetFunctionalStatus">
+		<description>Simple flow</description>
+		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetFunctionalStatus/2/rivtabp21</webServiceUrl></data>
 	</testcase>
 </testsuite>
