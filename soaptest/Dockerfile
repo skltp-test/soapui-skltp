@@ -31,7 +31,4 @@ ENV PATH ${PATH}:/opt/soapui/bin
 COPY data.xml /. 
 COPY cert.p12 /. 
 
-# Prepare script that run all test suites
-RUN chmod a+x ./testrunner_all.sh
-
 ENTRYPOINT ["./testrunner_all.sh"]
