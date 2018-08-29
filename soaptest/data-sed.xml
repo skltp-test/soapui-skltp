@@ -36,7 +36,7 @@ under the License.
 		<sourceSystemHSAId>SOURCESYSTEMHSA</sourceSystemHSAId>
 		<!-- Loggparametrar-->
 		<logTestData>true</logTestData>
-		<logTestDataPath>C:/temp/SOAP-UI/</logTestDataPath>
+		<logTestDataPath>/temp/SOAP-UI/</logTestDataPath>
 		<logTestDataFilesAllowed>500</logTestDataFilesAllowed>
 	</globaldata>	
 	<testcase id="1.1.1 Angränsande konsument skickar fråga via aggregerande tjänst">

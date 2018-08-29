@@ -1,0 +1,2979 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="b0c9d84a-6a30-4e48-829b-bd6459642f91" activeEnvironment="Default" name="SKLTP-tillståndsbeskrivning" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="5707b2fb-0d57-4b9d-981e-912f21fa0caf" wsaVersion="NONE" name="GetFunctionalStatusResponderBinding_2.0" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatus:2:rivtabp21}GetFunctionalStatusResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../../../Users/fragru/Documents/rivta/AAA_Domains/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetFunctionalStatusInteraction/GetFunctionalStatusInteraction_2.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/fragru/Documents/rivta/AAA_Domains/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetFunctionalStatusInteraction/GetFunctionalStatusInteraction_2.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/Users/fragru/Documents/rivta/AAA_Domains/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetFunctionalStatusInteraction/GetFunctionalStatusInteraction_2.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<wsdl:definitions name="GetFunctionalStatusInteraction" targetNamespace="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatus:2:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2" xmlns:tjsi="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusInitiator:2" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatus:2:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1">
+  <xs:annotation>
+    <xs:documentation>Tjänsteinteraktionens namn: GetFunctionalStatusInteraction
+			 Beskrivning: 
+			  Request functional status for a subject of care
+			 Revisioner: 
+			 Tjänstedomän: clinicalprocess:healthcond:description
+			 Tjänsteinteraktionstyp: Fråga-Svar
+			 WS-profil: RIVTABP21
+			 Förvaltas av: Sveriges Kommuner och Landsting</xs:documentation>
+  </xs:annotation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatus:2:rivtabp21">
+      <xs:import schemaLocation="GetFunctionalStatusResponder_2.0.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetFunctionalStatusRequest">
+    <wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
+      <wsdl:documentation/>
+    </wsdl:part>
+    <wsdl:part name="parameters" element="tjsr:GetFunctionalStatus"/>
+  </wsdl:message>
+  <wsdl:message name="GetFunctionalStatusResponse">
+    <wsdl:part name="parameters" element="tjsr:GetFunctionalStatusResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="GetFunctionalStatusResponderInterface">
+    <wsdl:operation name="GetFunctionalStatus">
+      <wsdl:input message="tns:GetFunctionalStatusRequest"/>
+      <wsdl:output message="tns:GetFunctionalStatusResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetFunctionalStatusResponderBinding" type="tns:GetFunctionalStatusResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetFunctionalStatus">
+      <soap:operation soapAction="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2:GetFunctionalStatus" style="document"/>
+      <wsdl:input>
+        <soap:header use="literal" message="tns:GetFunctionalStatusRequest" part="LogicalAddress"/>
+        <soap:body use="literal" parts="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetFunctionalStatusResponderService">
+    <wsdl:port name="GetFunctionalStatusResponderPort" binding="tns:GetFunctionalStatusResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\fragru\Documents\rivta\AAA_Domains\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\interactions\GetFunctionalStatusInteraction\GetFunctionalStatusResponder_2.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2" xmlns:core="urn:riv:clinicalprocess:healthcond:description:2">
+  <xs:import schemaLocation="../../core_components/clinicalprocess_healthcond_description_2.1.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:2"/>
+  <xs:element name="GetFunctionalStatus" type="tns:GetFunctionalStatusType"/>
+  <xs:element name="GetFunctionalStatusResponse" type="tns:GetFunctionalStatusResponseType"/>
+  <xs:complexType name="GetFunctionalStatusType">
+    <xs:sequence>
+      <xs:element name="careUnitHSAId" type="core:HSAIdType" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="patientId" type="core:PersonIdType"/>
+      <xs:element name="datePeriod" type="core:DatePeriodType" minOccurs="0"/>
+      <xs:element name="sourceSystemHSAId" type="core:HSAIdType" minOccurs="0"/>
+      <xs:element name="careContactId" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetFunctionalStatusResponseType">
+    <xs:sequence>
+      <xs:element name="functionalStatusAssessment" type="core:FunctionalStatusAssessmentType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="result" type="core:ResultType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\fragru\Documents\rivta\AAA_Domains\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\core_components\clinicalprocess_healthcond_description_2.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:2" xmlns:codes="urn:riv:clinicalprocess:healthcond:description:enums:2">
+  <xs:import schemaLocation="./clinicalprocess_healthcond_description_enum_2.1.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:enums:2"/>
+  <xs:complexType name="CareDocumentationType">
+    <xs:sequence>
+      <xs:element name="careDocumentationHeader" type="tns:CPatientSummaryHeaderType"/>
+      <xs:element name="careDocumentationBody" type="tns:CareDocumentationBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CareDocumentationBodyType">
+    <xs:sequence>
+      <xs:element name="clinicalDocumentNote" type="tns:ClinicalDocumentNoteType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FunctionalStatusAssessmentType">
+    <xs:sequence>
+      <xs:element name="functionalStatusAssessmentHeader" type="tns:PatientSummaryHeaderType"/>
+      <xs:element name="functionalStatusAssessmentBody" type="tns:FunctionalStatusAssessmentBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FunctionalStatusAssessmentBodyType">
+    <xs:sequence>
+      <xs:element name="assessmentCategory" type="codes:AssessmentCategoryEnum"/>
+      <xs:element minOccurs="0" name="comment" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="padl" type="tns:PADLType"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="disability" type="tns:DisabilityType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--@TODO better names for clinicalDocumentNoteCode-->
+  <xs:complexType name="ClinicalDocumentNoteType">
+    <xs:sequence>
+      <xs:element name="clinicalDocumentNoteCode" type="codes:ClinicalDocumentNoteCodeEnum" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="clinicalDocumentTypeCode" type="codes:ClinicalDocumentTypeCodeEnum" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="clinicalDocumentNoteTitle" type="xs:string" minOccurs="0"/>
+      <xs:element name="clinicalDocumentNoteText" type="xs:string" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="multimediaEntry" type="tns:MultimediaType" minOccurs="0" maxOccurs="1"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="dissentintOpinion" type="tns:DissentingOpinionType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PatientSummaryHeaderType">
+    <xs:sequence>
+      <xs:element name="documentId" type="xs:string"/>
+      <xs:element name="sourceSystemHSAId" type="tns:HSAIdType"/>
+      <xs:element name="documentTitle" type="xs:string" minOccurs="0"/>
+      <xs:element name="documentTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="patientId" type="tns:PersonIdType"/>
+      <xs:element name="accountableHealthcareProfessional" type="tns:HealthcareProfessionalType"/>
+      <xs:element name="legalAuthenticator" type="tns:LegalAuthenticatorType" minOccurs="0"/>
+      <xs:element name="approvedForPatient" type="xs:boolean"/>
+      <xs:element name="careContactId" type="xs:string" minOccurs="0"/>
+      <xs:element minOccurs="0" name="nullified" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="nullifiedReason" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Only used here to keep backwards compatibility with GetCareDocumentation 2.0, must be removed in favour
+        of PatientSummaryHeaderType above when we go for the next major version-->
+  <xs:complexType name="CPatientSummaryHeaderType">
+    <xs:sequence>
+      <xs:element name="documentId" type="xs:string"/>
+      <xs:element name="sourceSystemHSAid" type="tns:HSAIdType"/>
+      <xs:element name="documentTitle" type="xs:string" minOccurs="0"/>
+      <xs:element name="documentTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="patientId" type="tns:PersonIdType"/>
+      <xs:element name="accountableHealthcareProfessional" type="tns:HealthcareProfessionalType"/>
+      <xs:element name="legalAuthenticator" type="tns:LegalAuthenticatorType" minOccurs="0"/>
+      <xs:element name="approvedForPatient" type="xs:boolean"/>
+      <xs:element name="careContactId" type="xs:string" minOccurs="0"/>
+      <xs:element minOccurs="0" name="nullified" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="nullifiedReason" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HealthcareProfessionalType">
+    <xs:sequence>
+      <xs:element name="authorTime" type="tns:TimeStampType"/>
+      <xs:element name="healthcareProfessionalHSAId" type="tns:HSAIdType" minOccurs="0"/>
+      <xs:element name="healthcareProfessionalName" type="xs:string" minOccurs="0"/>
+      <xs:element name="healthcareProfessionalRoleCode" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="healthcareProfessionalOrgUnit" type="tns:OrgUnitType" minOccurs="0"/>
+      <xs:element name="healthcareProfessionalCareUnitHSAId" type="tns:HSAIdType" minOccurs="0"/>
+      <xs:element minOccurs="0" name="healthcareProfessionalCareGiverHSAId" type="tns:HSAIdType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OrgUnitType">
+    <xs:sequence>
+      <xs:element name="orgUnitHSAId" type="tns:HSAIdType" minOccurs="1"/>
+      <xs:element name="orgUnitName" type="xs:string" minOccurs="1"/>
+      <xs:element name="orgUnitTelecom" type="xs:string" minOccurs="0"/>
+      <xs:element name="orgUnitEmail" type="xs:string" minOccurs="0"/>
+      <xs:element name="orgUnitAddress" type="xs:string" minOccurs="0"/>
+      <xs:element name="orgUnitLocation" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DiagnosisType">
+    <xs:sequence>
+      <xs:element name="diagnosisHeader" type="tns:PatientSummaryHeaderType"/>
+      <xs:element name="diagnosisBody" type="tns:DiagnosisBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DiagnosisBodyType">
+    <xs:sequence>
+      <xs:element name="typeOfDiagnosis" type="codes:DiagnosisTypeEnum"/>
+      <xs:element minOccurs="0" name="chronicDiagnosis" type="xs:boolean"/>
+      <xs:element name="diagnosisTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="diagnosisCode" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="relatedDiagnosis" type="tns:RelatedDiagnosisType" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlertInformationType">
+    <xs:sequence>
+      <xs:element name="alertInformationHeader" type="tns:PatientSummaryHeaderType"/>
+      <xs:element name="alertInformationBody" type="tns:AlertInformationBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RelatedDiagnosisType">
+    <xs:sequence>
+      <xs:element name="documentId" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlertInformationBodyType">
+    <xs:sequence>
+      <xs:element name="typeOfAlertInformation" type="tns:CVType"/>
+      <xs:element name="ascertainedDate" type="tns:DateType" minOccurs="0"/>
+      <xs:element name="verifiedTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="validityTimePeriod" type="tns:TimePeriodType"/>
+      <xs:element name="alertInformationComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="obsoleteTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="obsoleteComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="hypersensitivity" type="tns:HyperSensitivityType" minOccurs="0"/>
+      <xs:element name="seriousDisease" type="tns:SeriousDiseaseType" minOccurs="0"/>
+      <xs:element name="treatment" type="tns:TreatmentType" minOccurs="0"/>
+      <xs:element name="communicableDisease" type="tns:CommunicableDiseaseType" minOccurs="0"/>
+      <xs:element name="restrictionOfCare" minOccurs="0" type="tns:RestrictionOfCareType"/>
+      <xs:element name="unstructuredAlertInformation" minOccurs="0" type="tns:UnstructuredAlertInformationType"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="relatedAlertInformation" type="tns:RelatedAlertInformationType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HyperSensitivityType">
+    <xs:sequence>
+      <xs:element name="typeOfHypersensitivity" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="degreeOfSeverity" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="degreeOfCertainty" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="pharmaceuticalHypersensitivity" type="tns:PharmaceuticalHypersensitivityType" minOccurs="0"/>
+      <xs:element name="otherHypersensitivity" type="tns:OtherHypersensitivityType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PharmaceuticalHypersensitivityType">
+    <xs:sequence>
+      <xs:element name="atcSubstance" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="nonATCSubstance" type="xs:string" minOccurs="0"/>
+      <xs:element name="nonATCSubstanceComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="pharmaceuticalProductId" type="tns:CVType" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OtherHypersensitivityType">
+    <xs:sequence>
+      <xs:element name="hypersensitivityAgent" type="xs:string" minOccurs="0"/>
+      <xs:element name="hypersensitivityAgentCode" type="tns:CVType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SeriousDiseaseType">
+    <xs:sequence>
+      <xs:element name="disease" type="tns:CVType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TreatmentType">
+    <xs:sequence>
+      <xs:element name="treatmentDescription" type="xs:string"/>
+      <xs:element name="treatmentCode" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="pharmaceuticalTreatment" type="tns:CVType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CommunicableDiseaseType">
+    <xs:sequence>
+      <xs:element name="communicableDiseaseCode" type="tns:CVType"/>
+      <xs:element name="routeOfTransmission" type="tns:CVType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RestrictionOfCareType">
+    <xs:sequence>
+      <xs:element name="restrictionOfCareComment" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UnstructuredAlertInformationType">
+    <xs:sequence>
+      <xs:element name="unstructuredAlertInformationHeading" type="xs:string"/>
+      <xs:element name="unstructuredAlertInformationContent" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RelatedAlertInformationType">
+    <xs:sequence>
+      <xs:element name="typeOfAlertInformationRelationship" type="tns:CVType"/>
+      <xs:element name="relationComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="documentId" type="xs:string" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PADLType">
+    <xs:sequence>
+      <xs:element name="typeOfAssessment" type="tns:CVType"/>
+      <xs:element name="assessment" type="xs:string" minOccurs="1"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DisabilityType">
+    <xs:sequence>
+      <xs:element name="disabilityAssessment" type="tns:CVType"/>
+      <xs:element name="comment" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Below: only helper types allowed.
+        
+        A helper type is a type used in one ore more of the domain schema common types.
+        It can also be a type used in two or more service schemas.-->
+  <xs:complexType name="DatePeriodType">
+    <xs:annotation>
+      <xs:documentation>Används för att specificera ett datumintervall med hjälp av start-
+                och slutdatum. start: Startdatum på formatet ÅÅÅÅMMDD end: Slutdatum på formatet
+                ÅÅÅÅMMDD</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="start" type="tns:DateType"/>
+      <xs:element name="end" type="tns:DateType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--YYYYMMDD-->
+  <xs:simpleType name="DateType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--@TODO Should we have maxlength 64?-->
+  <xs:simpleType name="HSAIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="MultimediaType">
+    <xs:sequence>
+      <xs:element name="mediaType" type="codes:MediaTypeEnum"/>
+      <xs:element name="value" type="xs:base64Binary" minOccurs="0"/>
+      <xs:element name="reference" type="xs:anyURI" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TimePeriodType">
+    <xs:annotation>
+      <xs:documentation>Används för att specificera ett datumintervall med hjälp av start-
+                och slutdatum. start: Startdatum på formatet YYYYMMDDhhmmss end: Slutdatum på
+                formatet YYYYMMDDhhmmss</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="start" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="end" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TimeStampType">
+    <xs:annotation>
+      <xs:documentation>A quantity specifying a point on the axis of natural time. A point in
+                time is most often represented as a calendar expression. The time has the format
+                YYYYMMDDhhmmss</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])(0[0-9]|1[0-9]|2[0123])([0-5])([0-9])([0-5])([0-9])"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CVType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="code" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystem" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystemName" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystemVersion" type="xs:string" minOccurs="0"/>
+      <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+      <xs:element name="originalText" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LegalAuthenticatorType">
+    <xs:sequence>
+      <xs:element name="signatureTime" type="tns:TimeStampType"/>
+      <xs:element name="legalAuthenticatorHSAId" type="tns:HSAIdType" minOccurs="0"/>
+      <xs:element name="legalAuthenticatorName" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DissentingOpinionType">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="opinionId" type="tns:IIType" minOccurs="0"/>
+      <xs:element name="authorTime" type="tns:TimeStampType" minOccurs="1"/>
+      <xs:element name="opinion" type="xs:string"/>
+      <xs:element name="personId" type="tns:PersonIdType"/>
+      <xs:element name="personName" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PQType">
+    <xs:sequence>
+      <xs:element name="value" type="xs:double"/>
+      <xs:element name="unit" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IIType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="root" type="xs:string"/>
+      <xs:element name="extension" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonIdType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:string"/>
+      <xs:element name="type" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="communicableDisease" type="tns:CommunicableDiseaseType"/>
+  <xs:complexType name="ResultType">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="resultCode" type="codes:ResultCodeEnum"/>
+      <xs:element name="errorCode" type="codes:ErrorCodeEnum" minOccurs="0"/>
+      <xs:element name="logId" type="xs:string"/>
+      <xs:element minOccurs="0" name="subCode" type="xs:string"/>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\fragru\Documents\rivta\AAA_Domains\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\core_components\clinicalprocess_healthcond_description_enum_2.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:enums:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:enums:2">
+  <xs:simpleType name="ClinicalDocumentNoteCodeEnum">
+    <xs:annotation>
+      <xs:documentation>Kod för typ av anteckning.
+                Tillåtna värden från kodverk Anteckningstyp (1.2.752.129.2.2.2.11):</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="utr">
+        <xs:annotation>
+          <xs:documentation>Utredning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="atb">
+        <xs:annotation>
+          <xs:documentation>Åtgärd/Behandling</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sam">
+        <xs:annotation>
+          <xs:documentation>Sammanfattning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sao">
+        <xs:annotation>
+          <xs:documentation>Samordning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ins">
+        <xs:annotation>
+          <xs:documentation>Inskrivning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="slu">
+        <xs:annotation>
+          <xs:documentation>Slutanteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="auf">
+        <xs:annotation>
+          <xs:documentation>Anteckning utan fysiskt möte</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sva">
+        <xs:annotation>
+          <xs:documentation>Slutenvårdsanteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="bes">
+        <xs:annotation>
+          <xs:documentation>Besöksanteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MediaTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="application/dicom"/>
+      <xs:enumeration value="application/msword"/>
+      <xs:enumeration value="application/pdf"/>
+      <xs:enumeration value="audio/basic"/>
+      <xs:enumeration value="audio/k32adpcm"/>
+      <xs:enumeration value="audio/mpeg"/>
+      <xs:enumeration value="image/g3fax"/>
+      <xs:enumeration value="image/gif"/>
+      <xs:enumeration value="image/jpeg"/>
+      <xs:enumeration value="image/png"/>
+      <xs:enumeration value="image/tiff"/>
+      <xs:enumeration value="model/vrml"/>
+      <xs:enumeration value="multipart/x-hl7-cda-level1"/>
+      <xs:enumeration value="text/html"/>
+      <xs:enumeration value="text/plain"/>
+      <xs:enumeration value="text/rtf"/>
+      <xs:enumeration value="text/sgml"/>
+      <xs:enumeration value="text/x-hl7-ft"/>
+      <xs:enumeration value="text/xml"/>
+      <xs:enumeration value="video/mpeg"/>
+      <xs:enumeration value="video/x-avi"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ClinicalDocumentTypeCodeEnum">
+    <xs:annotation>
+      <xs:documentation>Kod för typ av anteckning.
+                Tillåtna värden från kodverk (?.?.?.?.?.?):</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="epi">
+        <xs:annotation>
+          <xs:documentation>Epikris</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="int">
+        <xs:annotation>
+          <xs:documentation>Intagninganteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="dag">
+        <xs:annotation>
+          <xs:documentation>Daganteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ova">
+        <xs:annotation>
+          <xs:documentation>Öppenvårdsanteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ovs">
+        <xs:annotation>
+          <xs:documentation>Öppenvårdssammanfattning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ovr">
+        <xs:annotation>
+          <xs:documentation>Övrigt dokument</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AssessmentCategoryEnum">
+    <xs:annotation>
+      <xs:documentation>Bedömningskategori.
+                Beskriver vilken kategori av bedömning som är gjord. Tillåtna värden är "pad-pad" (för PADL-bedömning) och "fun-fun" (för funktionsnedsättningsbedömningar).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="pad-pad">
+        <xs:annotation>
+          <xs:documentation>PADL-bedömning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fun-fun">
+        <xs:annotation>
+          <xs:documentation>funktionsnedsättningsbedömningar</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DiagnosisTypeEnum">
+    <xs:annotation>
+      <xs:documentation>Anges som "Huvuddiagnos", "Bidiagnos".</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Huvuddiagnos">
+        <xs:annotation>
+          <xs:documentation>Huvuddiagnos</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Bidiagnos">
+        <xs:annotation>
+          <xs:documentation>Bidiagnos</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ErrorCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INVALID_REQUEST"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\fragru\Documents\rivta\AAA_Domains\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\core_components\itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:itintegration:registry:1" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="c804817a-68c9-4b0e-82aa-12cf687a553f" isOneWay="false" action="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2:GetFunctionalStatus" name="GetFunctionalStatus" bindingOperationName="GetFunctionalStatus" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9d28141f-e920-4d1f-b6d2-6e18fbd6d89f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://tempuri.org</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>?</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetFunctionalStatus>\r
+         <!--Zero or more repetitions:-->\r
+         <urn1:careUnitHSAId>?</urn1:careUnitHSAId>\r
+         <urn1:patientId>\r
+            <urn2:id>?</urn2:id>\r
+            <urn2:type>?</urn2:type>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:patientId>\r
+         <!--Optional:-->\r
+         <urn1:datePeriod>\r
+            <urn2:start>?</urn2:start>\r
+            <urn2:end>?</urn2:end>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:datePeriod>\r
+         <!--Optional:-->\r
+         <urn1:sourceSystemHSAId>?</urn1:sourceSystemHSAId>\r
+         <!--Zero or more repetitions:-->\r
+         <urn1:careContactId>?</urn1:careContactId>\r
+         <!--You may enter ANY elements at this point-->\r
+      </urn1:GetFunctionalStatus>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2:GetFunctionalStatus"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="bc819222-4596-42ca-ac4d-aa9ec16ab110" wsaVersion="NONE" name="GetAlertInformationResponderBinding_2.0" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:description:GetAlertInformation:2:rivtabp21}GetAlertInformationResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../../../Users/fragru/Documents/rivta/AAA_Domains/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetAlertInformationInteraction/GetAlertInformationInteraction_2.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/fragru/Documents/rivta/AAA_Domains/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetAlertInformationInteraction/GetAlertInformationInteraction_2.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/Users/fragru/Documents/rivta/AAA_Domains/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetAlertInformationInteraction/GetAlertInformationInteraction_2.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<wsdl:definitions name="GetAlertInformationInteraction" targetNamespace="urn:riv:clinicalprocess:healthcond:description:GetAlertInformation:2:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2" xmlns:tjsi="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationInitiator:2" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:GetAlertInformation:2:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1">
+  <xs:annotation>
+    <xs:documentation>Tjänsteinteraktionens namn: GetAlertInformationInteraction
+			 Beskrivning: 
+			   Request alert information for a subject of care
+			 Revisioner: 
+			 Tjänstedomän: clinicalprocess:healthcond:description
+			 Tjänsteinteraktionstyp: Fråga-Svar
+			 WS-profil: RIVTABP21
+			 Förvaltas av: Sveriges Kommuner och Landsting</xs:documentation>
+  </xs:annotation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:GetAlertInformation:2:rivtabp21">
+      <xs:import schemaLocation="GetAlertInformationResponder_2.0.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAlertInformationRequest">
+    <wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
+      <wsdl:documentation>National: The HSA-id of Inera AB ("national" aggregation service)
+			Regional: The HSA-id of Inera AB (regional aggregation service)
+			Specific Source system: The HSA-id of the source system</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="parameters" element="tjsr:GetAlertInformation"/>
+  </wsdl:message>
+  <wsdl:message name="GetAlertInformationResponse">
+    <wsdl:part name="parameters" element="tjsr:GetAlertInformationResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="GetAlertInformationResponderInterface">
+    <wsdl:operation name="GetAlertInformation">
+      <wsdl:input message="tns:GetAlertInformationRequest"/>
+      <wsdl:output message="tns:GetAlertInformationResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetAlertInformationResponderBinding" type="tns:GetAlertInformationResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetAlertInformation">
+      <soap:operation soapAction="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2:GetAlertInformation" style="document"/>
+      <wsdl:input>
+        <soap:header use="literal" message="tns:GetAlertInformationRequest" part="LogicalAddress"/>
+        <soap:body use="literal" parts="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetAlertInformationResponderService">
+    <wsdl:port name="GetAlertInformationResponderPort" binding="tns:GetAlertInformationResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\fragru\Documents\rivta\AAA_Domains\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\interactions\GetAlertInformationInteraction\GetAlertInformationResponder_2.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2" xmlns:core="urn:riv:clinicalprocess:healthcond:description:2" xmlns:codes="urn:riv:clinicalprocess:healthcond:description:enums:2">
+  <xs:import schemaLocation="../../core_components/clinicalprocess_healthcond_description_2.1.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:2"/>
+  <xs:import schemaLocation="../../core_components/clinicalprocess_healthcond_description_enum_2.1.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:enums:2"/>
+  <xs:element name="GetAlertInformation" type="tns:GetAlertInformationType"/>
+  <xs:element name="GetAlertInformationResponse" type="tns:GetAlertInformationResponseType"/>
+  <xs:complexType name="GetAlertInformationType">
+    <xs:sequence>
+      <xs:element name="careUnitHSAId" type="core:HSAIdType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="patientId" type="core:PersonIdType"/>
+      <xs:element name="timePeriod" type="core:DatePeriodType" minOccurs="0"/>
+      <xs:element name="sourceSystemHSAId" type="core:HSAIdType" minOccurs="0"/>
+      <xs:element name="careContactId" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetAlertInformationResponseType">
+    <xs:annotation>
+      <xs:documentation>GetAlertInformation returnerar information om en patient som är av särskild vikt för hälso- och sjukvårdspersonal att veta, exempelvis överkänslighet mot läkemedel, allvarlig sjukdom eller vårdbegränsning. Informationsspecifikationen baseras på NPÖ RIV 2.2.0.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="alertInformation" type="core:AlertInformationType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element minOccurs="0" name="result" type="core:ResultType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\fragru\Documents\rivta\AAA_Domains\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\core_components\clinicalprocess_healthcond_description_2.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:2" xmlns:codes="urn:riv:clinicalprocess:healthcond:description:enums:2">
+  <xs:import schemaLocation="./clinicalprocess_healthcond_description_enum_2.1.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:enums:2"/>
+  <xs:complexType name="CareDocumentationType">
+    <xs:sequence>
+      <xs:element name="careDocumentationHeader" type="tns:CPatientSummaryHeaderType"/>
+      <xs:element name="careDocumentationBody" type="tns:CareDocumentationBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CareDocumentationBodyType">
+    <xs:sequence>
+      <xs:element name="clinicalDocumentNote" type="tns:ClinicalDocumentNoteType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FunctionalStatusAssessmentType">
+    <xs:sequence>
+      <xs:element name="functionalStatusAssessmentHeader" type="tns:PatientSummaryHeaderType"/>
+      <xs:element name="functionalStatusAssessmentBody" type="tns:FunctionalStatusAssessmentBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FunctionalStatusAssessmentBodyType">
+    <xs:sequence>
+      <xs:element name="assessmentCategory" type="codes:AssessmentCategoryEnum"/>
+      <xs:element minOccurs="0" name="comment" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="padl" type="tns:PADLType"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="disability" type="tns:DisabilityType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--@TODO better names for clinicalDocumentNoteCode-->
+  <xs:complexType name="ClinicalDocumentNoteType">
+    <xs:sequence>
+      <xs:element name="clinicalDocumentNoteCode" type="codes:ClinicalDocumentNoteCodeEnum" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="clinicalDocumentTypeCode" type="codes:ClinicalDocumentTypeCodeEnum" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="clinicalDocumentNoteTitle" type="xs:string" minOccurs="0"/>
+      <xs:element name="clinicalDocumentNoteText" type="xs:string" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="multimediaEntry" type="tns:MultimediaType" minOccurs="0" maxOccurs="1"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="dissentintOpinion" type="tns:DissentingOpinionType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PatientSummaryHeaderType">
+    <xs:sequence>
+      <xs:element name="documentId" type="xs:string"/>
+      <xs:element name="sourceSystemHSAId" type="tns:HSAIdType"/>
+      <xs:element name="documentTitle" type="xs:string" minOccurs="0"/>
+      <xs:element name="documentTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="patientId" type="tns:PersonIdType"/>
+      <xs:element name="accountableHealthcareProfessional" type="tns:HealthcareProfessionalType"/>
+      <xs:element name="legalAuthenticator" type="tns:LegalAuthenticatorType" minOccurs="0"/>
+      <xs:element name="approvedForPatient" type="xs:boolean"/>
+      <xs:element name="careContactId" type="xs:string" minOccurs="0"/>
+      <xs:element minOccurs="0" name="nullified" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="nullifiedReason" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Only used here to keep backwards compatibility with GetCareDocumentation 2.0, must be removed in favour
+        of PatientSummaryHeaderType above when we go for the next major version-->
+  <xs:complexType name="CPatientSummaryHeaderType">
+    <xs:sequence>
+      <xs:element name="documentId" type="xs:string"/>
+      <xs:element name="sourceSystemHSAid" type="tns:HSAIdType"/>
+      <xs:element name="documentTitle" type="xs:string" minOccurs="0"/>
+      <xs:element name="documentTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="patientId" type="tns:PersonIdType"/>
+      <xs:element name="accountableHealthcareProfessional" type="tns:HealthcareProfessionalType"/>
+      <xs:element name="legalAuthenticator" type="tns:LegalAuthenticatorType" minOccurs="0"/>
+      <xs:element name="approvedForPatient" type="xs:boolean"/>
+      <xs:element name="careContactId" type="xs:string" minOccurs="0"/>
+      <xs:element minOccurs="0" name="nullified" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="nullifiedReason" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HealthcareProfessionalType">
+    <xs:sequence>
+      <xs:element name="authorTime" type="tns:TimeStampType"/>
+      <xs:element name="healthcareProfessionalHSAId" type="tns:HSAIdType" minOccurs="0"/>
+      <xs:element name="healthcareProfessionalName" type="xs:string" minOccurs="0"/>
+      <xs:element name="healthcareProfessionalRoleCode" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="healthcareProfessionalOrgUnit" type="tns:OrgUnitType" minOccurs="0"/>
+      <xs:element name="healthcareProfessionalCareUnitHSAId" type="tns:HSAIdType" minOccurs="0"/>
+      <xs:element minOccurs="0" name="healthcareProfessionalCareGiverHSAId" type="tns:HSAIdType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OrgUnitType">
+    <xs:sequence>
+      <xs:element name="orgUnitHSAId" type="tns:HSAIdType" minOccurs="1"/>
+      <xs:element name="orgUnitName" type="xs:string" minOccurs="1"/>
+      <xs:element name="orgUnitTelecom" type="xs:string" minOccurs="0"/>
+      <xs:element name="orgUnitEmail" type="xs:string" minOccurs="0"/>
+      <xs:element name="orgUnitAddress" type="xs:string" minOccurs="0"/>
+      <xs:element name="orgUnitLocation" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DiagnosisType">
+    <xs:sequence>
+      <xs:element name="diagnosisHeader" type="tns:PatientSummaryHeaderType"/>
+      <xs:element name="diagnosisBody" type="tns:DiagnosisBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DiagnosisBodyType">
+    <xs:sequence>
+      <xs:element name="typeOfDiagnosis" type="codes:DiagnosisTypeEnum"/>
+      <xs:element minOccurs="0" name="chronicDiagnosis" type="xs:boolean"/>
+      <xs:element name="diagnosisTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="diagnosisCode" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="relatedDiagnosis" type="tns:RelatedDiagnosisType" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlertInformationType">
+    <xs:sequence>
+      <xs:element name="alertInformationHeader" type="tns:PatientSummaryHeaderType"/>
+      <xs:element name="alertInformationBody" type="tns:AlertInformationBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RelatedDiagnosisType">
+    <xs:sequence>
+      <xs:element name="documentId" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlertInformationBodyType">
+    <xs:sequence>
+      <xs:element name="typeOfAlertInformation" type="tns:CVType"/>
+      <xs:element name="ascertainedDate" type="tns:DateType" minOccurs="0"/>
+      <xs:element name="verifiedTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="validityTimePeriod" type="tns:TimePeriodType"/>
+      <xs:element name="alertInformationComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="obsoleteTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="obsoleteComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="hypersensitivity" type="tns:HyperSensitivityType" minOccurs="0"/>
+      <xs:element name="seriousDisease" type="tns:SeriousDiseaseType" minOccurs="0"/>
+      <xs:element name="treatment" type="tns:TreatmentType" minOccurs="0"/>
+      <xs:element name="communicableDisease" type="tns:CommunicableDiseaseType" minOccurs="0"/>
+      <xs:element name="restrictionOfCare" minOccurs="0" type="tns:RestrictionOfCareType"/>
+      <xs:element name="unstructuredAlertInformation" minOccurs="0" type="tns:UnstructuredAlertInformationType"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="relatedAlertInformation" type="tns:RelatedAlertInformationType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HyperSensitivityType">
+    <xs:sequence>
+      <xs:element name="typeOfHypersensitivity" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="degreeOfSeverity" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="degreeOfCertainty" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="pharmaceuticalHypersensitivity" type="tns:PharmaceuticalHypersensitivityType" minOccurs="0"/>
+      <xs:element name="otherHypersensitivity" type="tns:OtherHypersensitivityType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PharmaceuticalHypersensitivityType">
+    <xs:sequence>
+      <xs:element name="atcSubstance" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="nonATCSubstance" type="xs:string" minOccurs="0"/>
+      <xs:element name="nonATCSubstanceComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="pharmaceuticalProductId" type="tns:CVType" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OtherHypersensitivityType">
+    <xs:sequence>
+      <xs:element name="hypersensitivityAgent" type="xs:string" minOccurs="0"/>
+      <xs:element name="hypersensitivityAgentCode" type="tns:CVType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SeriousDiseaseType">
+    <xs:sequence>
+      <xs:element name="disease" type="tns:CVType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TreatmentType">
+    <xs:sequence>
+      <xs:element name="treatmentDescription" type="xs:string"/>
+      <xs:element name="treatmentCode" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="pharmaceuticalTreatment" type="tns:CVType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CommunicableDiseaseType">
+    <xs:sequence>
+      <xs:element name="communicableDiseaseCode" type="tns:CVType"/>
+      <xs:element name="routeOfTransmission" type="tns:CVType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RestrictionOfCareType">
+    <xs:sequence>
+      <xs:element name="restrictionOfCareComment" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UnstructuredAlertInformationType">
+    <xs:sequence>
+      <xs:element name="unstructuredAlertInformationHeading" type="xs:string"/>
+      <xs:element name="unstructuredAlertInformationContent" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RelatedAlertInformationType">
+    <xs:sequence>
+      <xs:element name="typeOfAlertInformationRelationship" type="tns:CVType"/>
+      <xs:element name="relationComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="documentId" type="xs:string" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PADLType">
+    <xs:sequence>
+      <xs:element name="typeOfAssessment" type="tns:CVType"/>
+      <xs:element name="assessment" type="xs:string" minOccurs="1"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DisabilityType">
+    <xs:sequence>
+      <xs:element name="disabilityAssessment" type="tns:CVType"/>
+      <xs:element name="comment" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Below: only helper types allowed.
+        
+        A helper type is a type used in one ore more of the domain schema common types.
+        It can also be a type used in two or more service schemas.-->
+  <xs:complexType name="DatePeriodType">
+    <xs:annotation>
+      <xs:documentation>Används för att specificera ett datumintervall med hjälp av start-
+                och slutdatum. start: Startdatum på formatet ÅÅÅÅMMDD end: Slutdatum på formatet
+                ÅÅÅÅMMDD</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="start" type="tns:DateType"/>
+      <xs:element name="end" type="tns:DateType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--YYYYMMDD-->
+  <xs:simpleType name="DateType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--@TODO Should we have maxlength 64?-->
+  <xs:simpleType name="HSAIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="MultimediaType">
+    <xs:sequence>
+      <xs:element name="mediaType" type="codes:MediaTypeEnum"/>
+      <xs:element name="value" type="xs:base64Binary" minOccurs="0"/>
+      <xs:element name="reference" type="xs:anyURI" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TimePeriodType">
+    <xs:annotation>
+      <xs:documentation>Används för att specificera ett datumintervall med hjälp av start-
+                och slutdatum. start: Startdatum på formatet YYYYMMDDhhmmss end: Slutdatum på
+                formatet YYYYMMDDhhmmss</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="start" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="end" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TimeStampType">
+    <xs:annotation>
+      <xs:documentation>A quantity specifying a point on the axis of natural time. A point in
+                time is most often represented as a calendar expression. The time has the format
+                YYYYMMDDhhmmss</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])(0[0-9]|1[0-9]|2[0123])([0-5])([0-9])([0-5])([0-9])"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CVType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="code" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystem" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystemName" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystemVersion" type="xs:string" minOccurs="0"/>
+      <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+      <xs:element name="originalText" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LegalAuthenticatorType">
+    <xs:sequence>
+      <xs:element name="signatureTime" type="tns:TimeStampType"/>
+      <xs:element name="legalAuthenticatorHSAId" type="tns:HSAIdType" minOccurs="0"/>
+      <xs:element name="legalAuthenticatorName" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DissentingOpinionType">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="opinionId" type="tns:IIType" minOccurs="0"/>
+      <xs:element name="authorTime" type="tns:TimeStampType" minOccurs="1"/>
+      <xs:element name="opinion" type="xs:string"/>
+      <xs:element name="personId" type="tns:PersonIdType"/>
+      <xs:element name="personName" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PQType">
+    <xs:sequence>
+      <xs:element name="value" type="xs:double"/>
+      <xs:element name="unit" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IIType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="root" type="xs:string"/>
+      <xs:element name="extension" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonIdType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:string"/>
+      <xs:element name="type" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="communicableDisease" type="tns:CommunicableDiseaseType"/>
+  <xs:complexType name="ResultType">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="resultCode" type="codes:ResultCodeEnum"/>
+      <xs:element name="errorCode" type="codes:ErrorCodeEnum" minOccurs="0"/>
+      <xs:element name="logId" type="xs:string"/>
+      <xs:element minOccurs="0" name="subCode" type="xs:string"/>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\fragru\Documents\rivta\AAA_Domains\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\core_components\clinicalprocess_healthcond_description_enum_2.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:enums:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:enums:2">
+  <xs:simpleType name="ClinicalDocumentNoteCodeEnum">
+    <xs:annotation>
+      <xs:documentation>Kod för typ av anteckning.
+                Tillåtna värden från kodverk Anteckningstyp (1.2.752.129.2.2.2.11):</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="utr">
+        <xs:annotation>
+          <xs:documentation>Utredning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="atb">
+        <xs:annotation>
+          <xs:documentation>Åtgärd/Behandling</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sam">
+        <xs:annotation>
+          <xs:documentation>Sammanfattning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sao">
+        <xs:annotation>
+          <xs:documentation>Samordning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ins">
+        <xs:annotation>
+          <xs:documentation>Inskrivning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="slu">
+        <xs:annotation>
+          <xs:documentation>Slutanteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="auf">
+        <xs:annotation>
+          <xs:documentation>Anteckning utan fysiskt möte</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sva">
+        <xs:annotation>
+          <xs:documentation>Slutenvårdsanteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="bes">
+        <xs:annotation>
+          <xs:documentation>Besöksanteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MediaTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="application/dicom"/>
+      <xs:enumeration value="application/msword"/>
+      <xs:enumeration value="application/pdf"/>
+      <xs:enumeration value="audio/basic"/>
+      <xs:enumeration value="audio/k32adpcm"/>
+      <xs:enumeration value="audio/mpeg"/>
+      <xs:enumeration value="image/g3fax"/>
+      <xs:enumeration value="image/gif"/>
+      <xs:enumeration value="image/jpeg"/>
+      <xs:enumeration value="image/png"/>
+      <xs:enumeration value="image/tiff"/>
+      <xs:enumeration value="model/vrml"/>
+      <xs:enumeration value="multipart/x-hl7-cda-level1"/>
+      <xs:enumeration value="text/html"/>
+      <xs:enumeration value="text/plain"/>
+      <xs:enumeration value="text/rtf"/>
+      <xs:enumeration value="text/sgml"/>
+      <xs:enumeration value="text/x-hl7-ft"/>
+      <xs:enumeration value="text/xml"/>
+      <xs:enumeration value="video/mpeg"/>
+      <xs:enumeration value="video/x-avi"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ClinicalDocumentTypeCodeEnum">
+    <xs:annotation>
+      <xs:documentation>Kod för typ av anteckning.
+                Tillåtna värden från kodverk (?.?.?.?.?.?):</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="epi">
+        <xs:annotation>
+          <xs:documentation>Epikris</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="int">
+        <xs:annotation>
+          <xs:documentation>Intagninganteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="dag">
+        <xs:annotation>
+          <xs:documentation>Daganteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ova">
+        <xs:annotation>
+          <xs:documentation>Öppenvårdsanteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ovs">
+        <xs:annotation>
+          <xs:documentation>Öppenvårdssammanfattning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ovr">
+        <xs:annotation>
+          <xs:documentation>Övrigt dokument</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AssessmentCategoryEnum">
+    <xs:annotation>
+      <xs:documentation>Bedömningskategori.
+                Beskriver vilken kategori av bedömning som är gjord. Tillåtna värden är "pad-pad" (för PADL-bedömning) och "fun-fun" (för funktionsnedsättningsbedömningar).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="pad-pad">
+        <xs:annotation>
+          <xs:documentation>PADL-bedömning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fun-fun">
+        <xs:annotation>
+          <xs:documentation>funktionsnedsättningsbedömningar</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DiagnosisTypeEnum">
+    <xs:annotation>
+      <xs:documentation>Anges som "Huvuddiagnos", "Bidiagnos".</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Huvuddiagnos">
+        <xs:annotation>
+          <xs:documentation>Huvuddiagnos</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Bidiagnos">
+        <xs:annotation>
+          <xs:documentation>Bidiagnos</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ErrorCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INVALID_REQUEST"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\fragru\Documents\rivta\AAA_Domains\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\core_components\itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:itintegration:registry:1" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="7b73ac98-f59b-482a-8e72-395671027d78" isOneWay="false" action="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2:GetAlertInformation" name="GetAlertInformation" bindingOperationName="GetAlertInformation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3e9b57d4-dd2c-4d79-852f-f53e0dcbf3e8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://tempuri.org</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>?</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <!--Zero or more repetitions:-->\r
+         <urn1:careUnitHSAId>?</urn1:careUnitHSAId>\r
+         <urn1:patientId>\r
+            <urn2:id>?</urn2:id>\r
+            <urn2:type>?</urn2:type>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:patientId>\r
+         <!--Optional:-->\r
+         <urn1:timePeriod>\r
+            <urn2:start>?</urn2:start>\r
+            <urn2:end>?</urn2:end>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:timePeriod>\r
+         <!--Optional:-->\r
+         <urn1:sourceSystemHSAId>?</urn1:sourceSystemHSAId>\r
+         <!--Zero or more repetitions:-->\r
+         <urn1:careContactId>?</urn1:careContactId>\r
+         <!--You may enter ANY elements at this point-->\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2:GetAlertInformation"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="96e35dd6-e650-49f4-a3fa-91ffe5909ace" wsaVersion="NONE" name="GetCareDocumentationResponderBinding_2.1" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:description:GetCareDocumentation:2:rivtabp21}GetCareDocumentationResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../schemas/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetCareDocumentationInteraction/GetCareDocumentationInteraction_2.1_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\VBShare\schemas\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\interactions\GetCareDocumentationInteraction\GetCareDocumentationInteraction_2.1_RIVTABP21.wsdl"><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\interactions\GetCareDocumentationInteraction\GetCareDocumentationInteraction_2.1_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<wsdl:definitions name="GetCareDocumentationInteraction" targetNamespace="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentation:2:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:tjsi="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationInitiator:2" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentation:2:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1">
+  <xs:annotation>
+    <xs:documentation>Tjänsteinteraktionens namn: GetCareDocumentationInteraction
+			 Beskrivning: 
+			   Request care documentation for a subject of care
+			 Revisioner: 
+			 Tjänstedomän: clinicalprocess:healthcond:description
+			 Tjänsteinteraktionstyp: Fråga-Svar
+			 WS-profil: RIVTABP21
+			 Förvaltas av: Sveriges Kommuner och Landsting</xs:documentation>
+  </xs:annotation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentation:2:rivtabp21">
+      <xs:import schemaLocation="GetCareDocumentationResponder_2.1.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCareDocumentationRequest">
+    <wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
+      <wsdl:documentation>National: The HSA-id of Inera AB ("national" aggregation service)
+			Regional: The HSA-id of Inera AB (regional aggregation service)
+			Specific Source system: The HSA-id of the source system</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="parameters" element="tjsr:GetCareDocumentation"/>
+  </wsdl:message>
+  <wsdl:message name="GetCareDocumentationResponse">
+    <wsdl:part name="parameters" element="tjsr:GetCareDocumentationResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="GetCareDocumentationResponderInterface">
+    <wsdl:operation name="GetCareDocumentation">
+      <wsdl:input message="tns:GetCareDocumentationRequest"/>
+      <wsdl:output message="tns:GetCareDocumentationResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetCareDocumentationResponderBinding" type="tns:GetCareDocumentationResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetCareDocumentation">
+      <soap:operation soapAction="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" style="document"/>
+      <wsdl:input>
+        <soap:header use="literal" message="tns:GetCareDocumentationRequest" part="LogicalAddress"/>
+        <soap:body use="literal" parts="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetCareDocumentationResponderService">
+    <wsdl:port name="GetCareDocumentationResponderPort" binding="tns:GetCareDocumentationResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\interactions\GetCareDocumentationInteraction\GetCareDocumentationResponder_2.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:core="urn:riv:clinicalprocess:healthcond:description:2" xmlns:codes="urn:riv:clinicalprocess:healthcond:description:enums:2" xmlns:m1="urn:riv:clinicalprocess:healthcond:description:2.1">
+  <xs:import schemaLocation="../../core_components/clinicalprocess_healthcond_description_2.1.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:2"/>
+  <xs:import schemaLocation="../../core_components/clinicalprocess_healthcond_description_enum_2.1.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:enums:2"/>
+  <xs:import namespace="urn:riv:clinicalprocess:healthcond:description:2.1" schemaLocation="../../core_components/clinicalprocess_healthcond_description_2.1_ext.xsd"/>
+  <xs:element name="GetCareDocumentation" type="tns:GetCareDocumentationType"/>
+  <xs:element name="GetCareDocumentationResponse" type="tns:GetCareDocumentationResponseType"/>
+  <xs:complexType name="GetCareDocumentationType">
+    <xs:sequence>
+      <xs:element name="careUnitHSAid" type="core:HSAIdType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="patientId" type="core:PersonIdType"/>
+      <xs:element name="timePeriod" type="core:DatePeriodType" minOccurs="0"/>
+      <xs:element name="sourceSystemHSAid" type="core:HSAIdType" minOccurs="0"/>
+      <xs:element name="careContactId" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetCareDocumentationResponseType">
+    <xs:annotation>
+      <xs:documentation>careDocumentation: 
+					De vårddokument som matchar begäran.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="careDocumentation" type="core:CareDocumentationType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="m1:result" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\core_components\clinicalprocess_healthcond_description_2.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:2" xmlns:codes="urn:riv:clinicalprocess:healthcond:description:enums:2">
+  <xs:import schemaLocation="./clinicalprocess_healthcond_description_enum_2.1.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:enums:2"/>
+  <xs:complexType name="CareDocumentationType">
+    <xs:sequence>
+      <xs:element name="careDocumentationHeader" type="tns:CPatientSummaryHeaderType"/>
+      <xs:element name="careDocumentationBody" type="tns:CareDocumentationBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CareDocumentationBodyType">
+    <xs:sequence>
+      <xs:element name="clinicalDocumentNote" type="tns:ClinicalDocumentNoteType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FunctionalStatusAssessmentType">
+    <xs:sequence>
+      <xs:element name="functionalStatusAssessmentHeader" type="tns:PatientSummaryHeaderType"/>
+      <xs:element name="functionalStatusAssessmentBody" type="tns:FunctionalStatusAssessmentBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FunctionalStatusAssessmentBodyType">
+    <xs:sequence>
+      <xs:element name="assessmentCategory" type="codes:AssessmentCategoryEnum"/>
+      <xs:element minOccurs="0" name="comment" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="padl" type="tns:PADLType"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="disability" type="tns:DisabilityType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--@TODO better names for clinicalDocumentNoteCode-->
+  <xs:complexType name="ClinicalDocumentNoteType">
+    <xs:sequence>
+      <xs:element name="clinicalDocumentNoteCode" type="codes:ClinicalDocumentNoteCodeEnum" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="clinicalDocumentTypeCode" type="codes:ClinicalDocumentTypeCodeEnum" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="clinicalDocumentNoteTitle" type="xs:string" minOccurs="0"/>
+      <xs:element name="clinicalDocumentNoteText" type="xs:string" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="multimediaEntry" type="tns:MultimediaType" minOccurs="0" maxOccurs="1"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="dissentintOpinion" type="tns:DissentingOpinionType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PatientSummaryHeaderType">
+    <xs:sequence>
+      <xs:element name="documentId" type="xs:string"/>
+      <xs:element name="sourceSystemHSAId" type="tns:HSAIdType"/>
+      <xs:element name="documentTitle" type="xs:string" minOccurs="0"/>
+      <xs:element name="documentTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="patientId" type="tns:PersonIdType"/>
+      <xs:element name="accountableHealthcareProfessional" type="tns:HealthcareProfessionalType"/>
+      <xs:element name="legalAuthenticator" type="tns:LegalAuthenticatorType" minOccurs="0"/>
+      <xs:element name="approvedForPatient" type="xs:boolean"/>
+      <xs:element name="careContactId" type="xs:string" minOccurs="0"/>
+      <xs:element minOccurs="0" name="nullified" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="nullifiedReason" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Only used here to keep backwards compatibility with GetCareDocumentation 2.0, must be removed in favour
+        of PatientSummaryHeaderType above when we go for the next major version-->
+  <xs:complexType name="CPatientSummaryHeaderType">
+    <xs:sequence>
+      <xs:element name="documentId" type="xs:string"/>
+      <xs:element name="sourceSystemHSAid" type="tns:HSAIdType"/>
+      <xs:element name="documentTitle" type="xs:string" minOccurs="0"/>
+      <xs:element name="documentTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="patientId" type="tns:PersonIdType"/>
+      <xs:element name="accountableHealthcareProfessional" type="tns:HealthcareProfessionalType"/>
+      <xs:element name="legalAuthenticator" type="tns:LegalAuthenticatorType" minOccurs="0"/>
+      <xs:element name="approvedForPatient" type="xs:boolean"/>
+      <xs:element name="careContactId" type="xs:string" minOccurs="0"/>
+      <xs:element minOccurs="0" name="nullified" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="nullifiedReason" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HealthcareProfessionalType">
+    <xs:sequence>
+      <xs:element name="authorTime" type="tns:TimeStampType"/>
+      <xs:element name="healthcareProfessionalHSAId" type="tns:HSAIdType" minOccurs="0"/>
+      <xs:element name="healthcareProfessionalName" type="xs:string" minOccurs="0"/>
+      <xs:element name="healthcareProfessionalRoleCode" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="healthcareProfessionalOrgUnit" type="tns:OrgUnitType" minOccurs="0"/>
+      <xs:element name="healthcareProfessionalCareUnitHSAId" type="tns:HSAIdType" minOccurs="0"/>
+      <xs:element minOccurs="0" name="healthcareProfessionalCareGiverHSAId" type="tns:HSAIdType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OrgUnitType">
+    <xs:sequence>
+      <xs:element name="orgUnitHSAId" type="tns:HSAIdType" minOccurs="1"/>
+      <xs:element name="orgUnitName" type="xs:string" minOccurs="1"/>
+      <xs:element name="orgUnitTelecom" type="xs:string" minOccurs="0"/>
+      <xs:element name="orgUnitEmail" type="xs:string" minOccurs="0"/>
+      <xs:element name="orgUnitAddress" type="xs:string" minOccurs="0"/>
+      <xs:element name="orgUnitLocation" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DiagnosisType">
+    <xs:sequence>
+      <xs:element name="diagnosisHeader" type="tns:PatientSummaryHeaderType"/>
+      <xs:element name="diagnosisBody" type="tns:DiagnosisBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DiagnosisBodyType">
+    <xs:sequence>
+      <xs:element name="typeOfDiagnosis" type="codes:DiagnosisTypeEnum"/>
+      <xs:element minOccurs="0" name="chronicDiagnosis" type="xs:boolean"/>
+      <xs:element name="diagnosisTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="diagnosisCode" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="relatedDiagnosis" type="tns:RelatedDiagnosisType" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlertInformationType">
+    <xs:sequence>
+      <xs:element name="alertInformationHeader" type="tns:PatientSummaryHeaderType"/>
+      <xs:element name="alertInformationBody" type="tns:AlertInformationBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RelatedDiagnosisType">
+    <xs:sequence>
+      <xs:element name="documentId" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlertInformationBodyType">
+    <xs:sequence>
+      <xs:element name="typeOfAlertInformation" type="tns:CVType"/>
+      <xs:element name="ascertainedDate" type="tns:DateType" minOccurs="0"/>
+      <xs:element name="verifiedTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="validityTimePeriod" type="tns:TimePeriodType"/>
+      <xs:element name="alertInformationComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="obsoleteTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="obsoleteComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="hypersensitivity" type="tns:HyperSensitivityType" minOccurs="0"/>
+      <xs:element name="seriousDisease" type="tns:SeriousDiseaseType" minOccurs="0"/>
+      <xs:element name="treatment" type="tns:TreatmentType" minOccurs="0"/>
+      <xs:element name="communicableDisease" type="tns:CommunicableDiseaseType" minOccurs="0"/>
+      <xs:element name="restrictionOfCare" minOccurs="0" type="tns:RestrictionOfCareType"/>
+      <xs:element name="unstructuredAlertInformation" minOccurs="0" type="tns:UnstructuredAlertInformationType"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="relatedAlertInformation" type="tns:RelatedAlertInformationType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HyperSensitivityType">
+    <xs:sequence>
+      <xs:element name="typeOfHypersensitivity" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="degreeOfSeverity" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="degreeOfCertainty" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="pharmaceuticalHypersensitivity" type="tns:PharmaceuticalHypersensitivityType" minOccurs="0"/>
+      <xs:element name="otherHypersensitivity" type="tns:OtherHypersensitivityType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PharmaceuticalHypersensitivityType">
+    <xs:sequence>
+      <xs:element name="atcSubstance" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="nonATCSubstance" type="xs:string" minOccurs="0"/>
+      <xs:element name="nonATCSubstanceComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="pharmaceuticalProductId" type="tns:CVType" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OtherHypersensitivityType">
+    <xs:sequence>
+      <xs:element name="hypersensitivityAgent" type="xs:string" minOccurs="0"/>
+      <xs:element name="hypersensitivityAgentCode" type="tns:CVType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SeriousDiseaseType">
+    <xs:sequence>
+      <xs:element name="disease" type="tns:CVType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TreatmentType">
+    <xs:sequence>
+      <xs:element name="treatmentDescription" type="xs:string"/>
+      <xs:element name="treatmentCode" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="pharmaceuticalTreatment" type="tns:CVType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CommunicableDiseaseType">
+    <xs:sequence>
+      <xs:element name="communicableDiseaseCode" type="tns:CVType"/>
+      <xs:element name="routeOfTransmission" type="tns:CVType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RestrictionOfCareType">
+    <xs:sequence>
+      <xs:element name="restrictionOfCareComment" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UnstructuredAlertInformationType">
+    <xs:sequence>
+      <xs:element name="unstructuredAlertInformationHeading" type="xs:string"/>
+      <xs:element name="unstructuredAlertInformationContent" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RelatedAlertInformationType">
+    <xs:sequence>
+      <xs:element name="typeOfAlertInformationRelationship" type="tns:CVType"/>
+      <xs:element name="relationComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="documentId" type="xs:string" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PADLType">
+    <xs:sequence>
+      <xs:element name="typeOfAssessment" type="tns:CVType"/>
+      <xs:element name="assessment" type="xs:string" minOccurs="1"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DisabilityType">
+    <xs:sequence>
+      <xs:element name="disabilityAssessment" type="tns:CVType"/>
+      <xs:element name="comment" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Below: only helper types allowed.
+        
+        A helper type is a type used in one ore more of the domain schema common types.
+        It can also be a type used in two or more service schemas.-->
+  <xs:complexType name="DatePeriodType">
+    <xs:annotation>
+      <xs:documentation>Används för att specificera ett datumintervall med hjälp av start-
+                och slutdatum. start: Startdatum på formatet ÅÅÅÅMMDD end: Slutdatum på formatet
+                ÅÅÅÅMMDD</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="start" type="tns:DateType"/>
+      <xs:element name="end" type="tns:DateType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--YYYYMMDD-->
+  <xs:simpleType name="DateType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--@TODO Should we have maxlength 64?-->
+  <xs:simpleType name="HSAIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="MultimediaType">
+    <xs:sequence>
+      <xs:element name="mediaType" type="codes:MediaTypeEnum"/>
+      <xs:element name="value" type="xs:base64Binary" minOccurs="0"/>
+      <xs:element name="reference" type="xs:anyURI" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TimePeriodType">
+    <xs:annotation>
+      <xs:documentation>Används för att specificera ett datumintervall med hjälp av start-
+                och slutdatum. start: Startdatum på formatet YYYYMMDDhhmmss end: Slutdatum på
+                formatet YYYYMMDDhhmmss</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="start" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="end" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TimeStampType">
+    <xs:annotation>
+      <xs:documentation>A quantity specifying a point on the axis of natural time. A point in
+                time is most often represented as a calendar expression. The time has the format
+                YYYYMMDDhhmmss</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])(0[0-9]|1[0-9]|2[0123])([0-5])([0-9])([0-5])([0-9])"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CVType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="code" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystem" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystemName" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystemVersion" type="xs:string" minOccurs="0"/>
+      <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+      <xs:element name="originalText" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LegalAuthenticatorType">
+    <xs:sequence>
+      <xs:element name="signatureTime" type="tns:TimeStampType"/>
+      <xs:element name="legalAuthenticatorHSAId" type="tns:HSAIdType" minOccurs="0"/>
+      <xs:element name="legalAuthenticatorName" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DissentingOpinionType">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="opinionId" type="tns:IIType" minOccurs="0"/>
+      <xs:element name="authorTime" type="tns:TimeStampType" minOccurs="1"/>
+      <xs:element name="opinion" type="xs:string"/>
+      <xs:element name="personId" type="tns:PersonIdType"/>
+      <xs:element name="personName" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PQType">
+    <xs:sequence>
+      <xs:element name="value" type="xs:double"/>
+      <xs:element name="unit" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IIType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="root" type="xs:string"/>
+      <xs:element name="extension" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonIdType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:string"/>
+      <xs:element name="type" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="communicableDisease" type="tns:CommunicableDiseaseType"/>
+  <xs:complexType name="ResultType">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="resultCode" type="codes:ResultCodeEnum"/>
+      <xs:element name="errorCode" type="codes:ErrorCodeEnum" minOccurs="0"/>
+      <xs:element name="logId" type="xs:string"/>
+      <xs:element minOccurs="0" name="subCode" type="xs:string"/>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\core_components\clinicalprocess_healthcond_description_enum_2.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:enums:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:enums:2">
+  <xs:simpleType name="ClinicalDocumentNoteCodeEnum">
+    <xs:annotation>
+      <xs:documentation>Kod för typ av anteckning.
+                Tillåtna värden från kodverk Anteckningstyp (1.2.752.129.2.2.2.11):</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="utr">
+        <xs:annotation>
+          <xs:documentation>Utredning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="atb">
+        <xs:annotation>
+          <xs:documentation>Åtgärd/Behandling</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sam">
+        <xs:annotation>
+          <xs:documentation>Sammanfattning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sao">
+        <xs:annotation>
+          <xs:documentation>Samordning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ins">
+        <xs:annotation>
+          <xs:documentation>Inskrivning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="slu">
+        <xs:annotation>
+          <xs:documentation>Slutanteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="auf">
+        <xs:annotation>
+          <xs:documentation>Anteckning utan fysiskt möte</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sva">
+        <xs:annotation>
+          <xs:documentation>Slutenvårdsanteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="bes">
+        <xs:annotation>
+          <xs:documentation>Besöksanteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MediaTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="application/dicom"/>
+      <xs:enumeration value="application/msword"/>
+      <xs:enumeration value="application/pdf"/>
+      <xs:enumeration value="audio/basic"/>
+      <xs:enumeration value="audio/k32adpcm"/>
+      <xs:enumeration value="audio/mpeg"/>
+      <xs:enumeration value="image/g3fax"/>
+      <xs:enumeration value="image/gif"/>
+      <xs:enumeration value="image/jpeg"/>
+      <xs:enumeration value="image/png"/>
+      <xs:enumeration value="image/tiff"/>
+      <xs:enumeration value="model/vrml"/>
+      <xs:enumeration value="multipart/x-hl7-cda-level1"/>
+      <xs:enumeration value="text/html"/>
+      <xs:enumeration value="text/plain"/>
+      <xs:enumeration value="text/rtf"/>
+      <xs:enumeration value="text/sgml"/>
+      <xs:enumeration value="text/x-hl7-ft"/>
+      <xs:enumeration value="text/xml"/>
+      <xs:enumeration value="video/mpeg"/>
+      <xs:enumeration value="video/x-avi"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ClinicalDocumentTypeCodeEnum">
+    <xs:annotation>
+      <xs:documentation>Kod för typ av anteckning.
+                Tillåtna värden från kodverk (?.?.?.?.?.?):</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="epi">
+        <xs:annotation>
+          <xs:documentation>Epikris</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="int">
+        <xs:annotation>
+          <xs:documentation>Intagninganteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="dag">
+        <xs:annotation>
+          <xs:documentation>Daganteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ova">
+        <xs:annotation>
+          <xs:documentation>Öppenvårdsanteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ovs">
+        <xs:annotation>
+          <xs:documentation>Öppenvårdssammanfattning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ovr">
+        <xs:annotation>
+          <xs:documentation>Övrigt dokument</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AssessmentCategoryEnum">
+    <xs:annotation>
+      <xs:documentation>Bedömningskategori.
+                Beskriver vilken kategori av bedömning som är gjord. Tillåtna värden är "pad-pad" (för PADL-bedömning) och "fun-fun" (för funktionsnedsättningsbedömningar).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="pad-pad">
+        <xs:annotation>
+          <xs:documentation>PADL-bedömning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fun-fun">
+        <xs:annotation>
+          <xs:documentation>funktionsnedsättningsbedömningar</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DiagnosisTypeEnum">
+    <xs:annotation>
+      <xs:documentation>Anges som "Huvuddiagnos", "Bidiagnos".</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Huvuddiagnos">
+        <xs:annotation>
+          <xs:documentation>Huvuddiagnos</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Bidiagnos">
+        <xs:annotation>
+          <xs:documentation>Bidiagnos</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ErrorCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INVALID_REQUEST"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\core_components\clinicalprocess_healthcond_description_2.1_ext.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:2.1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:m1="urn:riv:clinicalprocess:healthcond:description:2.1" xmlns:codes="urn:riv:clinicalprocess:healthcond:description:enums:2">
+  <xs:import schemaLocation="clinicalprocess_healthcond_description_enum_2.1.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:enums:2"/>
+  <xs:element name="result">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="resultCode" type="codes:ResultCodeEnum"/>
+        <xs:element name="errorCode" type="codes:ErrorCodeEnum" minOccurs="0"/>
+        <xs:element name="logId" type="xs:string"/>
+        <xs:element minOccurs="0" name="subCode" type="xs:string"/>
+        <xs:element name="message" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\core_components\itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:itintegration:registry:1" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://NMT028:8088/mockGetCareDocumentationResponderBinding</con:endpoint><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="8d26060e-e0eb-4385-a94c-02aa0468f6b5" isOneWay="false" action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" name="GetCareDocumentation" bindingOperationName="GetCareDocumentation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="12f53cb2-d1a5-4cd7-a26b-d1e89fd19b27" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8088//mockGetCareDocumentationResponderBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>?</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCareDocumentation>\r
+         <!--Zero or more repetitions:-->\r
+         <urn1:careUnitHSAid>?</urn1:careUnitHSAid>\r
+         <urn1:patientId>\r
+            <urn2:id>?</urn2:id>\r
+            <urn2:type>?</urn2:type>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:patientId>\r
+         <!--Optional:-->\r
+         <urn1:timePeriod>\r
+            <urn2:start>?</urn2:start>\r
+            <urn2:end>?</urn2:end>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:timePeriod>\r
+         <!--Optional:-->\r
+         <urn1:sourceSystemHSAid>?</urn1:sourceSystemHSAid>\r
+         <!--Zero or more repetitions:-->\r
+         <urn1:careContactId>?</urn1:careContactId>\r
+         <!--You may enter ANY elements at this point-->\r
+      </urn1:GetCareDocumentation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="b2fde00d-f54a-4a76-abb6-d2b413740f78" wsaVersion="NONE" name="GetDiagnosisResponderBinding_2.0" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:description:GetDiagnosis:2:rivtabp21}GetDiagnosisResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../../../Users/fragru/Documents/rivta/AAA_Domains/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetDiagnosisInteraction/GetDiagnosisInteraction_2.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/fragru/Documents/rivta/AAA_Domains/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetDiagnosisInteraction/GetDiagnosisInteraction_2.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/Users/fragru/Documents/rivta/AAA_Domains/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetDiagnosisInteraction/GetDiagnosisInteraction_2.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<wsdl:definitions name="GetDiagnosisInteraction" targetNamespace="urn:riv:clinicalprocess:healthcond:description:GetDiagnosis:2:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:tjsi="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisInitiator:2" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:GetDiagnosis:2:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1">
+  <xs:annotation>
+    <xs:documentation>Tjänsteinteraktionens namn: GetDiagnosisInteraction
+			 Beskrivning: 
+			   Request care documentation for a subject of care
+			 Revisioner: 
+			 Tjänstedomän: clinicalprocess:healthcond:description
+			 Tjänsteinteraktionstyp: Fråga-Svar
+			 WS-profil: RIVTABP21
+			 Förvaltas av: Sveriges Kommuner och Landsting</xs:documentation>
+  </xs:annotation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:GetDiagnosis:2:rivtabp21">
+      <xs:import schemaLocation="GetDiagnosisResponder_2.0.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDiagnosisRequest">
+    <wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
+      <wsdl:documentation>National: The HSA-id of Inera AB ("national" aggregation service)
+			Regional: The HSA-id of Inera AB (regional aggregation service)
+			Specific Source system: The HSA-id of the source system</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="parameters" element="tjsr:GetDiagnosis"/>
+  </wsdl:message>
+  <wsdl:message name="GetDiagnosisResponse">
+    <wsdl:part name="parameters" element="tjsr:GetDiagnosisResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="GetDiagnosisResponderInterface">
+    <wsdl:operation name="GetDiagnosis">
+      <wsdl:input message="tns:GetDiagnosisRequest"/>
+      <wsdl:output message="tns:GetDiagnosisResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetDiagnosisResponderBinding" type="tns:GetDiagnosisResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetDiagnosis">
+      <soap:operation soapAction="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2:GetDiagnosis" style="document"/>
+      <wsdl:input>
+        <soap:header use="literal" message="tns:GetDiagnosisRequest" part="LogicalAddress"/>
+        <soap:body use="literal" parts="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetDiagnosisResponderService">
+    <wsdl:port name="GetDiagnosisResponderPort" binding="tns:GetDiagnosisResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\fragru\Documents\rivta\AAA_Domains\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\interactions\GetDiagnosisInteraction\GetDiagnosisResponder_2.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:core="urn:riv:clinicalprocess:healthcond:description:2" xmlns:codes="urn:riv:clinicalprocess:healthcond:description:enums:2">
+  <xs:import schemaLocation="../../core_components/clinicalprocess_healthcond_description_2.1.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:2"/>
+  <xs:import schemaLocation="../../core_components/clinicalprocess_healthcond_description_enum_2.1.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:enums:2"/>
+  <xs:element name="GetDiagnosis" type="tns:GetDiagnosisType"/>
+  <xs:element name="GetDiagnosisResponse" type="tns:GetDiagnosisResponseType"/>
+  <xs:complexType name="GetDiagnosisType">
+    <xs:sequence>
+      <xs:element name="careUnitHSAId" type="core:HSAIdType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="patientId" type="core:PersonIdType"/>
+      <xs:element name="timePeriod" type="core:DatePeriodType" minOccurs="0"/>
+      <xs:element name="sourceSystemHSAId" type="core:HSAIdType" minOccurs="0"/>
+      <xs:element name="careContactId" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetDiagnosisResponseType">
+    <xs:annotation>
+      <xs:documentation>careDocumentation: 
+					De vårddokument som matchar begäran.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="diagnosis" type="core:DiagnosisType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element minOccurs="0" name="result" type="core:ResultType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\fragru\Documents\rivta\AAA_Domains\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\core_components\clinicalprocess_healthcond_description_2.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:2" xmlns:codes="urn:riv:clinicalprocess:healthcond:description:enums:2">
+  <xs:import schemaLocation="./clinicalprocess_healthcond_description_enum_2.1.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:enums:2"/>
+  <xs:complexType name="CareDocumentationType">
+    <xs:sequence>
+      <xs:element name="careDocumentationHeader" type="tns:CPatientSummaryHeaderType"/>
+      <xs:element name="careDocumentationBody" type="tns:CareDocumentationBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CareDocumentationBodyType">
+    <xs:sequence>
+      <xs:element name="clinicalDocumentNote" type="tns:ClinicalDocumentNoteType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FunctionalStatusAssessmentType">
+    <xs:sequence>
+      <xs:element name="functionalStatusAssessmentHeader" type="tns:PatientSummaryHeaderType"/>
+      <xs:element name="functionalStatusAssessmentBody" type="tns:FunctionalStatusAssessmentBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FunctionalStatusAssessmentBodyType">
+    <xs:sequence>
+      <xs:element name="assessmentCategory" type="codes:AssessmentCategoryEnum"/>
+      <xs:element minOccurs="0" name="comment" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="padl" type="tns:PADLType"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="disability" type="tns:DisabilityType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--@TODO better names for clinicalDocumentNoteCode-->
+  <xs:complexType name="ClinicalDocumentNoteType">
+    <xs:sequence>
+      <xs:element name="clinicalDocumentNoteCode" type="codes:ClinicalDocumentNoteCodeEnum" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="clinicalDocumentTypeCode" type="codes:ClinicalDocumentTypeCodeEnum" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="clinicalDocumentNoteTitle" type="xs:string" minOccurs="0"/>
+      <xs:element name="clinicalDocumentNoteText" type="xs:string" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="multimediaEntry" type="tns:MultimediaType" minOccurs="0" maxOccurs="1"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="dissentintOpinion" type="tns:DissentingOpinionType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PatientSummaryHeaderType">
+    <xs:sequence>
+      <xs:element name="documentId" type="xs:string"/>
+      <xs:element name="sourceSystemHSAId" type="tns:HSAIdType"/>
+      <xs:element name="documentTitle" type="xs:string" minOccurs="0"/>
+      <xs:element name="documentTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="patientId" type="tns:PersonIdType"/>
+      <xs:element name="accountableHealthcareProfessional" type="tns:HealthcareProfessionalType"/>
+      <xs:element name="legalAuthenticator" type="tns:LegalAuthenticatorType" minOccurs="0"/>
+      <xs:element name="approvedForPatient" type="xs:boolean"/>
+      <xs:element name="careContactId" type="xs:string" minOccurs="0"/>
+      <xs:element minOccurs="0" name="nullified" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="nullifiedReason" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Only used here to keep backwards compatibility with GetCareDocumentation 2.0, must be removed in favour
+        of PatientSummaryHeaderType above when we go for the next major version-->
+  <xs:complexType name="CPatientSummaryHeaderType">
+    <xs:sequence>
+      <xs:element name="documentId" type="xs:string"/>
+      <xs:element name="sourceSystemHSAid" type="tns:HSAIdType"/>
+      <xs:element name="documentTitle" type="xs:string" minOccurs="0"/>
+      <xs:element name="documentTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="patientId" type="tns:PersonIdType"/>
+      <xs:element name="accountableHealthcareProfessional" type="tns:HealthcareProfessionalType"/>
+      <xs:element name="legalAuthenticator" type="tns:LegalAuthenticatorType" minOccurs="0"/>
+      <xs:element name="approvedForPatient" type="xs:boolean"/>
+      <xs:element name="careContactId" type="xs:string" minOccurs="0"/>
+      <xs:element minOccurs="0" name="nullified" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="nullifiedReason" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HealthcareProfessionalType">
+    <xs:sequence>
+      <xs:element name="authorTime" type="tns:TimeStampType"/>
+      <xs:element name="healthcareProfessionalHSAId" type="tns:HSAIdType" minOccurs="0"/>
+      <xs:element name="healthcareProfessionalName" type="xs:string" minOccurs="0"/>
+      <xs:element name="healthcareProfessionalRoleCode" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="healthcareProfessionalOrgUnit" type="tns:OrgUnitType" minOccurs="0"/>
+      <xs:element name="healthcareProfessionalCareUnitHSAId" type="tns:HSAIdType" minOccurs="0"/>
+      <xs:element minOccurs="0" name="healthcareProfessionalCareGiverHSAId" type="tns:HSAIdType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OrgUnitType">
+    <xs:sequence>
+      <xs:element name="orgUnitHSAId" type="tns:HSAIdType" minOccurs="1"/>
+      <xs:element name="orgUnitName" type="xs:string" minOccurs="1"/>
+      <xs:element name="orgUnitTelecom" type="xs:string" minOccurs="0"/>
+      <xs:element name="orgUnitEmail" type="xs:string" minOccurs="0"/>
+      <xs:element name="orgUnitAddress" type="xs:string" minOccurs="0"/>
+      <xs:element name="orgUnitLocation" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DiagnosisType">
+    <xs:sequence>
+      <xs:element name="diagnosisHeader" type="tns:PatientSummaryHeaderType"/>
+      <xs:element name="diagnosisBody" type="tns:DiagnosisBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DiagnosisBodyType">
+    <xs:sequence>
+      <xs:element name="typeOfDiagnosis" type="codes:DiagnosisTypeEnum"/>
+      <xs:element minOccurs="0" name="chronicDiagnosis" type="xs:boolean"/>
+      <xs:element name="diagnosisTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="diagnosisCode" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="relatedDiagnosis" type="tns:RelatedDiagnosisType" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlertInformationType">
+    <xs:sequence>
+      <xs:element name="alertInformationHeader" type="tns:PatientSummaryHeaderType"/>
+      <xs:element name="alertInformationBody" type="tns:AlertInformationBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RelatedDiagnosisType">
+    <xs:sequence>
+      <xs:element name="documentId" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlertInformationBodyType">
+    <xs:sequence>
+      <xs:element name="typeOfAlertInformation" type="tns:CVType"/>
+      <xs:element name="ascertainedDate" type="tns:DateType" minOccurs="0"/>
+      <xs:element name="verifiedTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="validityTimePeriod" type="tns:TimePeriodType"/>
+      <xs:element name="alertInformationComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="obsoleteTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="obsoleteComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="hypersensitivity" type="tns:HyperSensitivityType" minOccurs="0"/>
+      <xs:element name="seriousDisease" type="tns:SeriousDiseaseType" minOccurs="0"/>
+      <xs:element name="treatment" type="tns:TreatmentType" minOccurs="0"/>
+      <xs:element name="communicableDisease" type="tns:CommunicableDiseaseType" minOccurs="0"/>
+      <xs:element name="restrictionOfCare" minOccurs="0" type="tns:RestrictionOfCareType"/>
+      <xs:element name="unstructuredAlertInformation" minOccurs="0" type="tns:UnstructuredAlertInformationType"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="relatedAlertInformation" type="tns:RelatedAlertInformationType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HyperSensitivityType">
+    <xs:sequence>
+      <xs:element name="typeOfHypersensitivity" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="degreeOfSeverity" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="degreeOfCertainty" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="pharmaceuticalHypersensitivity" type="tns:PharmaceuticalHypersensitivityType" minOccurs="0"/>
+      <xs:element name="otherHypersensitivity" type="tns:OtherHypersensitivityType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PharmaceuticalHypersensitivityType">
+    <xs:sequence>
+      <xs:element name="atcSubstance" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="nonATCSubstance" type="xs:string" minOccurs="0"/>
+      <xs:element name="nonATCSubstanceComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="pharmaceuticalProductId" type="tns:CVType" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OtherHypersensitivityType">
+    <xs:sequence>
+      <xs:element name="hypersensitivityAgent" type="xs:string" minOccurs="0"/>
+      <xs:element name="hypersensitivityAgentCode" type="tns:CVType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SeriousDiseaseType">
+    <xs:sequence>
+      <xs:element name="disease" type="tns:CVType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TreatmentType">
+    <xs:sequence>
+      <xs:element name="treatmentDescription" type="xs:string"/>
+      <xs:element name="treatmentCode" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="pharmaceuticalTreatment" type="tns:CVType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CommunicableDiseaseType">
+    <xs:sequence>
+      <xs:element name="communicableDiseaseCode" type="tns:CVType"/>
+      <xs:element name="routeOfTransmission" type="tns:CVType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RestrictionOfCareType">
+    <xs:sequence>
+      <xs:element name="restrictionOfCareComment" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UnstructuredAlertInformationType">
+    <xs:sequence>
+      <xs:element name="unstructuredAlertInformationHeading" type="xs:string"/>
+      <xs:element name="unstructuredAlertInformationContent" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RelatedAlertInformationType">
+    <xs:sequence>
+      <xs:element name="typeOfAlertInformationRelationship" type="tns:CVType"/>
+      <xs:element name="relationComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="documentId" type="xs:string" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PADLType">
+    <xs:sequence>
+      <xs:element name="typeOfAssessment" type="tns:CVType"/>
+      <xs:element name="assessment" type="xs:string" minOccurs="1"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DisabilityType">
+    <xs:sequence>
+      <xs:element name="disabilityAssessment" type="tns:CVType"/>
+      <xs:element name="comment" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Below: only helper types allowed.
+        
+        A helper type is a type used in one ore more of the domain schema common types.
+        It can also be a type used in two or more service schemas.-->
+  <xs:complexType name="DatePeriodType">
+    <xs:annotation>
+      <xs:documentation>Används för att specificera ett datumintervall med hjälp av start-
+                och slutdatum. start: Startdatum på formatet ÅÅÅÅMMDD end: Slutdatum på formatet
+                ÅÅÅÅMMDD</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="start" type="tns:DateType"/>
+      <xs:element name="end" type="tns:DateType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--YYYYMMDD-->
+  <xs:simpleType name="DateType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--@TODO Should we have maxlength 64?-->
+  <xs:simpleType name="HSAIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="MultimediaType">
+    <xs:sequence>
+      <xs:element name="mediaType" type="codes:MediaTypeEnum"/>
+      <xs:element name="value" type="xs:base64Binary" minOccurs="0"/>
+      <xs:element name="reference" type="xs:anyURI" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TimePeriodType">
+    <xs:annotation>
+      <xs:documentation>Används för att specificera ett datumintervall med hjälp av start-
+                och slutdatum. start: Startdatum på formatet YYYYMMDDhhmmss end: Slutdatum på
+                formatet YYYYMMDDhhmmss</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="start" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="end" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TimeStampType">
+    <xs:annotation>
+      <xs:documentation>A quantity specifying a point on the axis of natural time. A point in
+                time is most often represented as a calendar expression. The time has the format
+                YYYYMMDDhhmmss</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])(0[0-9]|1[0-9]|2[0123])([0-5])([0-9])([0-5])([0-9])"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CVType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="code" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystem" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystemName" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystemVersion" type="xs:string" minOccurs="0"/>
+      <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+      <xs:element name="originalText" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LegalAuthenticatorType">
+    <xs:sequence>
+      <xs:element name="signatureTime" type="tns:TimeStampType"/>
+      <xs:element name="legalAuthenticatorHSAId" type="tns:HSAIdType" minOccurs="0"/>
+      <xs:element name="legalAuthenticatorName" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DissentingOpinionType">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="opinionId" type="tns:IIType" minOccurs="0"/>
+      <xs:element name="authorTime" type="tns:TimeStampType" minOccurs="1"/>
+      <xs:element name="opinion" type="xs:string"/>
+      <xs:element name="personId" type="tns:PersonIdType"/>
+      <xs:element name="personName" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PQType">
+    <xs:sequence>
+      <xs:element name="value" type="xs:double"/>
+      <xs:element name="unit" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IIType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="root" type="xs:string"/>
+      <xs:element name="extension" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonIdType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:string"/>
+      <xs:element name="type" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="communicableDisease" type="tns:CommunicableDiseaseType"/>
+  <xs:complexType name="ResultType">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="resultCode" type="codes:ResultCodeEnum"/>
+      <xs:element name="errorCode" type="codes:ErrorCodeEnum" minOccurs="0"/>
+      <xs:element name="logId" type="xs:string"/>
+      <xs:element minOccurs="0" name="subCode" type="xs:string"/>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\fragru\Documents\rivta\AAA_Domains\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\core_components\clinicalprocess_healthcond_description_enum_2.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:enums:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:enums:2">
+  <xs:simpleType name="ClinicalDocumentNoteCodeEnum">
+    <xs:annotation>
+      <xs:documentation>Kod för typ av anteckning.
+                Tillåtna värden från kodverk Anteckningstyp (1.2.752.129.2.2.2.11):</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="utr">
+        <xs:annotation>
+          <xs:documentation>Utredning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="atb">
+        <xs:annotation>
+          <xs:documentation>Åtgärd/Behandling</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sam">
+        <xs:annotation>
+          <xs:documentation>Sammanfattning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sao">
+        <xs:annotation>
+          <xs:documentation>Samordning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ins">
+        <xs:annotation>
+          <xs:documentation>Inskrivning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="slu">
+        <xs:annotation>
+          <xs:documentation>Slutanteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="auf">
+        <xs:annotation>
+          <xs:documentation>Anteckning utan fysiskt möte</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sva">
+        <xs:annotation>
+          <xs:documentation>Slutenvårdsanteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="bes">
+        <xs:annotation>
+          <xs:documentation>Besöksanteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MediaTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="application/dicom"/>
+      <xs:enumeration value="application/msword"/>
+      <xs:enumeration value="application/pdf"/>
+      <xs:enumeration value="audio/basic"/>
+      <xs:enumeration value="audio/k32adpcm"/>
+      <xs:enumeration value="audio/mpeg"/>
+      <xs:enumeration value="image/g3fax"/>
+      <xs:enumeration value="image/gif"/>
+      <xs:enumeration value="image/jpeg"/>
+      <xs:enumeration value="image/png"/>
+      <xs:enumeration value="image/tiff"/>
+      <xs:enumeration value="model/vrml"/>
+      <xs:enumeration value="multipart/x-hl7-cda-level1"/>
+      <xs:enumeration value="text/html"/>
+      <xs:enumeration value="text/plain"/>
+      <xs:enumeration value="text/rtf"/>
+      <xs:enumeration value="text/sgml"/>
+      <xs:enumeration value="text/x-hl7-ft"/>
+      <xs:enumeration value="text/xml"/>
+      <xs:enumeration value="video/mpeg"/>
+      <xs:enumeration value="video/x-avi"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ClinicalDocumentTypeCodeEnum">
+    <xs:annotation>
+      <xs:documentation>Kod för typ av anteckning.
+                Tillåtna värden från kodverk (?.?.?.?.?.?):</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="epi">
+        <xs:annotation>
+          <xs:documentation>Epikris</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="int">
+        <xs:annotation>
+          <xs:documentation>Intagninganteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="dag">
+        <xs:annotation>
+          <xs:documentation>Daganteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ova">
+        <xs:annotation>
+          <xs:documentation>Öppenvårdsanteckning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ovs">
+        <xs:annotation>
+          <xs:documentation>Öppenvårdssammanfattning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ovr">
+        <xs:annotation>
+          <xs:documentation>Övrigt dokument</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AssessmentCategoryEnum">
+    <xs:annotation>
+      <xs:documentation>Bedömningskategori.
+                Beskriver vilken kategori av bedömning som är gjord. Tillåtna värden är "pad-pad" (för PADL-bedömning) och "fun-fun" (för funktionsnedsättningsbedömningar).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="pad-pad">
+        <xs:annotation>
+          <xs:documentation>PADL-bedömning</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fun-fun">
+        <xs:annotation>
+          <xs:documentation>funktionsnedsättningsbedömningar</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DiagnosisTypeEnum">
+    <xs:annotation>
+      <xs:documentation>Anges som "Huvuddiagnos", "Bidiagnos".</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Huvuddiagnos">
+        <xs:annotation>
+          <xs:documentation>Huvuddiagnos</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Bidiagnos">
+        <xs:annotation>
+          <xs:documentation>Bidiagnos</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ErrorCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INVALID_REQUEST"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\fragru\Documents\rivta\AAA_Domains\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\core_components\itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:itintegration:registry:1" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="1bc71c26-e28b-46c1-88c6-4fd121480699" isOneWay="false" action="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2:GetDiagnosis" name="GetDiagnosis" bindingOperationName="GetDiagnosis" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5486f1b5-bafb-41a3-9f50-b9634c0f085a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://tempuri.org</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>?</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetDiagnosis>\r
+         <!--Zero or more repetitions:-->\r
+         <urn1:careUnitHSAId>?</urn1:careUnitHSAId>\r
+         <urn1:patientId>\r
+            <urn2:id>?</urn2:id>\r
+            <urn2:type>?</urn2:type>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:patientId>\r
+         <!--Optional:-->\r
+         <urn1:timePeriod>\r
+            <urn2:start>?</urn2:start>\r
+            <urn2:end>?</urn2:end>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:timePeriod>\r
+         <!--Optional:-->\r
+         <urn1:sourceSystemHSAId>?</urn1:sourceSystemHSAId>\r
+         <!--Zero or more repetitions:-->\r
+         <urn1:careContactId>?</urn1:careContactId>\r
+         <!--You may enter ANY elements at this point-->\r
+      </urn1:GetDiagnosis>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2:GetDiagnosis"/></con:call></con:operation></con:interface><con:testSuite id="c83e7720-17f5-41cc-b6bc-c55dc3d8dfeb" name="clinicalprocess_healthcond_description"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="8c777f03-215c-4af0-b985-abf0cfebb1e6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetAlertInformation" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="46f41784-5523-4dcd-a6d2-5da304c3c271"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="b287bb8e-8e7a-44f1-9820-6b424ecb5be6"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_2.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="2.0" id="e836766f-0f00-4aea-9389-e324211ee4f2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f6fa2542-9332-4e9e-9e36-72d08f990096"/><con:assertion type="Schema Compliance" id="962ce0cd-c2b5-4b36-8efa-cf49529b514a"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="32da1281-3f64-4a52-8d1f-c0a473af5bf1"/><con:assertion type="Simple Contains" id="eca89c25-0e35-44be-b6e5-a3ea03821cbf" name="Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="0bc2bd6e-e4a8-4947-a9ee-dba93ecf4440" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetCareDocumentation" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="9f980352-09df-4c7b-b274-3c5675071255"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.1" id="ee508678-5c20-436a-ac6e-67483a411ee2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareDocumentationResponderBinding_2.1</con:interface><con:operation>GetCareDocumentation</con:operation><con:request name="2.1" id="e6d5aa4a-f4dd-488b-8d32-7d7d852c6864"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCareDocumentation>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetCareDocumentation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="991abf66-86b6-4bd8-9946-c707ec148d7b"/><con:assertion type="Schema Compliance" id="b6eb9619-01dc-4f67-b255-f72b35a6ebe3"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="a1575630-3200-41c9-b5d8-f840fcba0490"/><con:assertion type="Simple Contains" id="b584bce2-0ebc-48d5-83fb-4b6a9ac989a7" name="Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="a964862c-54e2-4a50-b6da-6bda94547178" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetDiagnosis" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="91f19c53-2e26-4907-9435-ec80607870b0"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="899d142f-982a-4417-9b4e-7ee0aac0d100"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding_2.0</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="2.0" id="2c26f7ce-7995-4245-9fb6-fb80f3e7c3d5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetDiagnosis>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetDiagnosis>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5dcc9225-157e-4e1c-836c-1df5776657af"/><con:assertion type="Schema Compliance" id="f456d0b4-dde4-47e9-9d86-bb8249cf6c78"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="2ffda80a-46c7-4a48-90ea-2ffc151e5632"/><con:assertion type="Simple Contains" id="7e89e678-bc44-4952-9101-e236e49d800d" name="Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="71e6491d-6314-4785-8498-214001b67efa" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetFunctionalStatus" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="ac3d12ef-bcff-4bdb-aefb-800c75c84d8d"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="6acb6faf-86e9-4d5b-9366-e45297261768"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetFunctionalStatusResponderBinding_2.0</con:interface><con:operation>GetFunctionalStatus</con:operation><con:request name="2.0" id="faa21cdc-2cb2-4755-a4e6-6b8df69ea0a1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetFunctionalStatus>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetFunctionalStatus>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6c7e2e00-4962-47c7-9978-17ccfa90ddc4"/><con:assertion type="Schema Compliance" id="e3952b2a-e4d2-467a-8284-ab65cc41a80d"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="83f14ed1-1c24-4a1f-9aea-870a0b481f48"/><con:assertion type="Simple Contains" id="fe777203-2d18-4544-9009-dd22eef4e758" name="Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

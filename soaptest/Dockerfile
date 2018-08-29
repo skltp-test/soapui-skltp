@@ -33,4 +33,5 @@ COPY cert.p12 /.
 
 # -j: Output jUnit XML report
 # -r: Pretty print the result at the end of the run.
-ENTRYPOINT ["/opt/soapui/bin/testrunner.sh", "soapuiskltp-soapui-project.xml", "-j", "-r"]
+#ENTRYPOINT ["/opt/soapui/bin/testrunner.sh", "soapuiskltp-soapui-project.xml", "-j", "-r"]
+ENTRYPOINT ["./testrunner_all.sh"]
