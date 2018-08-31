@@ -1,0 +1,1381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="fd1695e4-16da-4f3f-8019-3933c4be79da" activeEnvironment="Default" name="SKLTP-SÄK" resourceRoot="${projectDir}" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:description>180831: These tests are temporary setup (hard coded) against one another TjP for IP test purposes.
+</con:description><con:settings/><con:interface xsi:type="con:WsdlInterface" id="2142bd87-baed-4793-8958-e25f053aaf92" wsaVersion="NONE" name="GetBlocksResponderBinding" type="wsdl" bindingName="{urn:riv:ehr:blocking:querying:GetBlocks:2:rivtabp21}GetBlocksResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../../devops/releasepaket/ServiceContracts_ehr_blocking_3.2.2/schemas/interactions/querying/GetBlocksInteraction/GetBlocksInteraction_2.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\nmt-relaterat\devops\releasepaket\ServiceContracts_ehr_blocking_3.2.2\schemas\interactions\querying\GetBlocksInteraction\GetBlocksInteraction_2.0_RIVTABP21.wsdl"><con:part><con:url>file:\C:\nmt-relaterat\devops\releasepaket\ServiceContracts_ehr_blocking_3.2.2\schemas\interactions\querying\GetBlocksInteraction\GetBlocksInteraction_2.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<wsdl:definitions name="GetBlocksInteraction" targetNamespace="urn:riv:ehr:blocking:querying:GetBlocks:2:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:ehr:blocking:querying:GetBlocksResponder:2" xmlns:itr="urn:riv:itintegration:registry:1" xmlns:tns="urn:riv:ehr:blocking:querying:GetBlocks:2:rivtabp21">
+  <wsdl:documentation xml:lang="sv">Tjänsteinteraktionens namn: GetBlocks
+		 Beskrivning: 
+		   Tjänst som läser alla registrerade spärrar för en viss organisation. Endast aktiva spärrar returneras (ej makulerade eller permanent hävda). Varje spärr kompletteras också med aktiva tillfälliga hävningar om sådana finns. 
+		   Konsumerande system anger vilken vårdgivare som skall omfattas av sökningen.
+		   Det går även att ange ett datum (CreatedOnOrAfter) från när man önskar inhämta nyare uppgifter och på så sätt undvika att inhämta data som redan hämtats vid ett tidigare tillfälle. Detta inkluderar även tillfälliga hävningar som skett efter angivet datum. Här avses datum då spärruppgiften lagrades i tjänsten.
+		   Tjänsten realiseras på lokal nivå.
+		 Revisioner: 
+		 Tjänstedomän: blocking:querying
+		 Tjänsteinteraktionstyp: Fråga-Svar
+		 WS-profil: RIVTABP21
+		 Förvaltas av: Inera AB</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:ehr:blocking:querying:GetBlocks:2:rivtabp21">
+      <xs:import schemaLocation="GetBlocksResponder_2.0.xsd" namespace="urn:riv:ehr:blocking:querying:GetBlocksResponder:2"/>
+      <xs:import schemaLocation="../../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBlocksRequest">
+    <wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
+      <wsdl:documentation xml:lang="sv">Som logisk adress anges det HSA-id för den vårdgivaren som spärrar skall hämtas för.</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="parameters" element="tjsr:GetBlocksRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetBlocksResponse">
+    <wsdl:part name="parameters" element="tjsr:GetBlocksResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="GetBlocksResponderInterface">
+    <wsdl:operation name="GetBlocks">
+      <wsdl:input message="tns:GetBlocksRequest"/>
+      <wsdl:output message="tns:GetBlocksResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetBlocksResponderBinding" type="tns:GetBlocksResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetBlocks">
+      <soap:operation soapAction="urn:riv:ehr:blocking:querying:GetBlocksResponder:2:GetBlocks" style="document"/>
+      <wsdl:input>
+        <soap:header use="literal" message="tns:GetBlocksRequest" part="LogicalAddress"/>
+        <soap:body use="literal" parts="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetBlocksResponderService">
+    <wsdl:port name="GetBlocksResponderPort" binding="tns:GetBlocksResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\nmt-relaterat\devops\releasepaket\ServiceContracts_ehr_blocking_3.2.2\schemas\interactions\querying\GetBlocksInteraction\GetBlocksResponder_2.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:ehr:blocking:querying:GetBlocksResponder:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:ehr:blocking:querying:GetBlocksResponder:2" xmlns:blocking="urn:riv:ehr:blocking:2">
+  <xs:import schemaLocation="../../../core_components/ehr_blocking_2.0.xsd" namespace="urn:riv:ehr:blocking:2"/>
+  <xs:element name="GetBlocksRequest" type="tns:GetBlocksRequestType"/>
+  <xs:complexType name="GetBlocksRequestType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Tjänst som läser alla registrerade spärrar för en viss organisation. Endast aktiva spärrar returneras (ej makulerade eller permanent hävda). Varje spärr kompletteras också med aktiva tillfälliga hävningar om sådana finns. 
+		        Konsumerande system anger vilken vårdgivare som skall omfattas av sökningen.
+		        Det går även att ange ett datum (CreatedOnOrAfter) från när man önskar inhämta nyare uppgifter och på så sätt undvika att inhämta data som redan hämtats vid ett tidigare tillfälle. Detta inkluderar även tillfälliga hävningar som skett efter angivet datum. Här avses datum då spärruppgiften lagrades i tjänsten.
+		        Tjänsten realiseras på lokal nivå.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CareProviderId" type="blocking:HsaId"/>
+      <xs:element name="CreatedOnOrAfter" type="xs:dateTime" minOccurs="0"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetBlocksResponse" type="tns:GetBlocksResponseType"/>
+  <xs:complexType name="GetBlocksResponseType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Tjänst som läser alla registrerade spärrar för en viss organisation. Endast aktiva spärrar returneras (ej makulerade eller permanent hävda). Varje spärr kompletteras också med aktiva tillfälliga hävningar om sådana finns. 
+		        Konsumerande system anger vilken vårdgivare som skall omfattas av sökningen.
+		        Det går även att ange ett datum (CreatedOnOrAfter) från när man önskar inhämta nyare uppgifter och på så sätt undvika att inhämta data som redan hämtats vid ett tidigare tillfälle. Detta inkluderar även tillfälliga hävningar som skett efter angivet datum. Här avses datum då spärruppgiften lagrades i tjänsten.
+		        Tjänsten realiseras på lokal nivå.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="BlockHeaderType" type="blocking:BlockHeaderType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\nmt-relaterat\devops\releasepaket\ServiceContracts_ehr_blocking_3.2.2\schemas\core_components\ehr_blocking_2.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:ehr:blocking:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:ehr:blocking:2">
+  <xs:simpleType name="ResultCodeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Enumerationsvärde som anger de svarskoder som finns.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Transaktionen har utförts enligt uppdraget.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INFO">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Transaktionen har utförts enligt begäran, men det finns ett meddelande som konsumenten måste visa upp för användaren (om tillämpbart). Exempel på detta kan vara &amp;quot;kom fastande&amp;quot;.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERROR">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Transaktionen har INTE kunnat utföras p.g.a ett logiskt fel. Det finns ett meddelande som konsumenten måste visa upp. Exempel på detta kan vara &amp;quot;tiden har bokats av annan patient&amp;quot;.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VALIDATIONERROR">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">En eller flera inparametrar innehåller felaktiga värden. Angiven tjänst utfördes ej.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ACCESSDENIED">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Behörighet saknas för att utföra begärd tjänst. Angiven tjänst utfördes ej.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NOTFOUND">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Angiven artifakt finns ej. Angiven tjänst utfördes ej.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ALREADYEXISTS">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Angiven artifakt finns redan. Angiven tjänst utfördes ej.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INVALIDSTATE">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Angiven tjänst utfördes ej då tjänsten eller artifakten var i ett felaktigt tillstånd.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TemporaryRevokeReasonType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Enumerationsvärde som anger orsaken/anledningen till en tillfällig hävning.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PatientsConsent">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Patienten har givit sitt samtycke till en tillfällig hävning.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Emergency">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Nödsituation föreligger. Patientens samtycke för en tillfällig hävning kunde ej inhämtas.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BlockTypeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Enumerationsvärde som anger typ av spärr.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Inner">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Representerar en inre spärr (inom vårdenhet).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Outer">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Representerar en yttre spärr (inom vårdgivare).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ReasonText">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar en orsak eller anledning till en viss åtgärd.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1024"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AssignmentNameType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar namn på medarbetaruppdrag.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="256"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Id">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar ett unikt identifikationsnummer enligt formatet för UUID (Universally Unique Identifier).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="36"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PersonIdValue">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar ett personnummer, samordningsnummer eller ett reservnummer.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OwnerId">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som identifierar systemet som registrerade/skapade artifakten. Används endast för tekniskt bruk för t.ex. uppföljning och spårning.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="512"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="HsaId">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar det unika nummer som identifierar en anställd, uppdragstagare, strukturenhet eller en HCC funktion (HSA-id).
+		        Specificerat enligt HSA-schema tjänsteträdet version 3.9.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="32"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InformationTypeIdValue">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som används för att ange informationstyper.
+		        Giltiga värden är endast:
+		        Typ     Beskrivning
+		        lak     Läkemedel - Ordination/förskrivning
+		        upp     Uppmärksamhetsinformation</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="6"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InformationTypeDescription">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som används för att ange en beskrivning på en informationstyp.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="64"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ResultType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som returneras som ett generellt svar från alla förändrande tjänster, t.ex. skapa, radera, etc. 
+		        En tjänstekonsument skall alltid kontrollera att resultatkoden inte innehåller fel för att på så sätt veta om anropet lyckades. 
+		        Alla svarskoder förutom OK och INFO betyder att åtgärden inte genomfördes.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ResultCode" type="tns:ResultCodeType"/>
+      <xs:element name="ResultText" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActorType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som identifierar en medarbetare/person.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="EmployeeId" type="tns:HsaId"/>
+      <xs:element name="AssignmentId" type="tns:HsaId" minOccurs="0"/>
+      <xs:element name="AssignmentName" type="tns:AssignmentNameType" minOccurs="0"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AccessingActorType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som identifierar en medarbetare/person som vill ha åtkomst till specifik information.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="EmployeeId" type="tns:HsaId"/>
+      <xs:element name="CareProviderId" type="tns:HsaId"/>
+      <xs:element name="CareUnitId" type="tns:HsaId"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActionType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar den eller de aktörer/personer som begärt och/eller utfört en åtgärd med
+		        en möjlig orsak/anledning angivet som fritext.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="RequestDate" type="xs:dateTime"/>
+      <xs:element name="RequestedBy" type="tns:ActorType"/>
+      <xs:element name="RegistrationDate" type="xs:dateTime"/>
+      <xs:element name="RegisteredBy" type="tns:ActorType"/>
+      <xs:element name="ReasonText" type="tns:ReasonText" minOccurs="0"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InformationTypeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar de Informationstyper som kan undantas från att spärras.
+		        En spärr gäller normalt alla informationstyper.
+		        Denna lista utgör de informationstyper som kan undantas från att spärras. 
+		        Om försök görs att registrera en spärr innehållandes en okänd informationstyp skall spärrtjänsten att neka detta.
+		        lak     Läkemedel - Ordination/förskrivning
+		        upp     Uppmärksamhetsinformation</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="InfoTypeId" type="tns:InformationTypeIdValue"/>
+      <xs:element name="InfoTypeDescription" type="tns:InformationTypeDescription"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BlockType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar en existerande spärr med alla dess attribut. Datatypen beskriver grundformatet för en spärr.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="BlockId" type="tns:Id"/>
+      <xs:element name="BlockType" type="tns:BlockTypeType"/>
+      <xs:element name="PatientId" type="tns:PersonIdValue"/>
+      <xs:element name="InformationStartDate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="InformationEndDate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="InformationCareUnitId" type="tns:HsaId" minOccurs="0"/>
+      <xs:element name="InformationCareProviderId" type="tns:HsaId"/>
+      <xs:element name="ExcludedInformationTypes" type="tns:InformationTypeType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="TemporaryRevokes" type="tns:TemporaryRevokeType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="OwnerId" type="tns:OwnerId" minOccurs="0"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TemporaryRevokeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar en tillfällig hävning för en spärr med alla dess attribut. En tillfällig hävning tillhör alltid en spärr. 
+		        Datatypen beskriver grundformatet för en tillfällig hävning.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="TemporaryRevokeId" type="tns:Id"/>
+      <xs:element name="EndDate" type="xs:dateTime"/>
+      <xs:element name="RevokedForCareUnitId" type="tns:HsaId"/>
+      <xs:element name="RevokedForEmployeeId" type="tns:HsaId" minOccurs="0"/>
+      <xs:element name="OwnerId" type="tns:OwnerId" minOccurs="0"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TemporaryRevokeRegistrationType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar en registrering av en tillfällig hävning med de attribut som behövs.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="TemporaryRevokeId" type="tns:Id"/>
+      <xs:element name="BlockId" type="tns:Id"/>
+      <xs:element name="EndDate" type="xs:dateTime"/>
+      <xs:element name="RevokedForCareUnitId" type="tns:HsaId"/>
+      <xs:element name="RevokedForEmployeeId" type="tns:HsaId" minOccurs="0"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BlockHeaderType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar spärrdata, antingen innehållandes endast spärrdata, eller spärrdata tillsammans med avregistrerade spärrar, beroende på hur klienten efterfrågat data.
+		        Datatypen utökar datatypen Result.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Result" type="tns:ResultType"/>
+      <xs:element name="Blocks" type="tns:BlockType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="NextCreatedOnOrAfter" type="xs:dateTime"/>
+      <xs:element name="LatestCancellation" type="xs:dateTime"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InformationEntityType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar den information som behövs vid en kontroll om spärr föreligger.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="InformationStartDate" type="xs:dateTime"/>
+      <xs:element name="InformationEndDate" type="xs:dateTime"/>
+      <xs:element name="InformationCareUnitId" type="tns:HsaId"/>
+      <xs:element name="InformationCareProviderId" type="tns:HsaId"/>
+      <xs:element name="InformationType" type="tns:InformationTypeIdValue" minOccurs="0"/>
+      <xs:element name="RowNumber" type="xs:int"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CheckResultType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar ett svar från kontrollen av åtkomst till information.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Blocked" type="xs:boolean"/>
+      <xs:element name="RowNumber" type="xs:int"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CheckBlocksResultType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som innehåller resultatet från tjänsten CheckBlocks.
+		        Datatypen utökar datatypen Result.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Result" type="tns:ResultType"/>
+      <xs:element name="CheckResults" type="tns:CheckResultType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\nmt-relaterat\devops\releasepaket\ServiceContracts_ehr_blocking_3.2.2\schemas\core_components\itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:itintegration:registry:1" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractNamespaceType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="HsaIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint><con:endpoint>https://appl.sak1.saab.nordicmedtest.se:8080/blockingLocalService/GetBlocks/2/rivtabp21</con:endpoint><con:endpoint>https://tjp.nordicmedtest.se/karesuando/vp/ehr/blocking/querying/GetBlocks/2/rivtabp21</con:endpoint></con:endpoints><con:operation id="34c84a42-44fb-430e-98dd-1a30b1adda55" isOneWay="false" action="urn:riv:ehr:blocking:querying:GetBlocksResponder:2:GetBlocks" name="GetBlocks" bindingOperationName="GetBlocks" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="75257abd-0bcf-4559-a11f-70e216577480" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://tempuri.org</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:ehr:blocking:querying:GetBlocksResponder:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>?</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetBlocksRequest>\r
+         <urn1:CareProviderId>?</urn1:CareProviderId>\r
+         <!--Optional:-->\r
+         <urn1:CreatedOnOrAfter>?</urn1:CreatedOnOrAfter>\r
+         <!--You may enter ANY elements at this point-->\r
+      </urn1:GetBlocksRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:ehr:blocking:querying:GetBlocksResponder:2:GetBlocks"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="64eef039-53a2-4861-8446-0b9b28ad2957" wsaVersion="NONE" name="CheckBlocksResponderBinding" type="wsdl" bindingName="{urn:riv:ehr:blocking:accesscontrol:CheckBlocks:3:rivtabp21}CheckBlocksResponderBinding" soapVersion="1_1" anonymous="optional" definition="http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/accesscontrol/CheckBlocks/3/rivtabp21?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/accesscontrol/CheckBlocks/3/rivtabp21?wsdl"><con:part><con:url>http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/accesscontrol/CheckBlocks/3/rivtabp21?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="CheckBlocksInteraction" targetNamespace="urn:riv:ehr:blocking:accesscontrol:CheckBlocks:3:rivtabp21" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="urn:riv:ehr:blocking:accesscontrol:CheckBlocks:3:rivtabp21" xmlns:tjsr="urn:riv:ehr:blocking:accesscontrol:CheckBlocksResponder:3" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:itr="urn:riv:itintegration:registry:1">
+  <wsdl:documentation xml:lang="sv">Tjänsteinteraktionens namn: CheckBlocks
+		 Beskrivning: 
+		   Tjänst som kontrollerar om given information är spärrad eller inte. Den utvärderar alla spärrar som finns i tjänsten och om någon spärr är helt applicerbar för given information och tillfälle kommer tjänsten att markera den informationen som spärrad. 
+		   Om det finns minst en tillfällig hävning för spärren som applicerar på den angivna aktören blir informationen ospärrad.
+		   Denna tjänst kan användas då tjänstekonsumenten inte själv kan avgöra/kontrollera om information är spärrad eller inte. Tjänsten stödjer kontroll av flertal informationsmängder i ett och samma anrop.
+		   Evalueringen av huruvida informationen är spärrad eller ej görs enligt följande:
+		   - Om spärr föreligger (inre eller yttre) blir informationen spärrad. 
+		   - Om undantag av spärr för &amp;apos;lak&amp;apos; och/eller &amp;apos;upp&amp;apos; har angivets blir denna informationen EJ spärrad.
+		   - Om spärren inte innehåller någon giltighetstid blir informationen spärrad.
+		   - Om tidsspannet för informationen ligger inom spärrens giltighetstid blir informationen spärrad.
+		   - Om spärrens giltighetstid delvis överlappar tidsspannet (start- eller sluttid) för informationen blir informationen spärrad.
+		   - Om tidsspannet för informationen ligger helt utanför spärrens giltighetstid blir informationen EJ spärrad.    
+		   Tjänsten realiseras både på lokal och nationell nivå.
+		   Tjänster på nationell nivå kräver ett komplett spärrunderlag.
+		 Revisioner: 
+		 Tjänstedomän: blocking:accesscontrol
+		 Tjänsteinteraktionstyp: Fråga-Svar
+		 WS-profil: RIVTABP21
+		 Förvaltas av: Inera AB</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:ehr:blocking:accesscontrol:CheckBlocks:3:rivtabp21">
+      <xs:import namespace="urn:riv:ehr:blocking:accesscontrol:CheckBlocksResponder:3" schemaLocation="http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/accesscontrol/CheckBlocks/3/rivtabp21?xsd=CheckBlocksResponder_3.0.xsd"/>
+      <xs:import namespace="urn:riv:itintegration:registry:1" schemaLocation="http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/accesscontrol/CheckBlocks/3/rivtabp21?xsd=../../../core_components/itintegration_registry_1.0.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="CheckBlocksResponse">
+    <wsdl:part element="tjsr:CheckBlocksResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CheckBlocksRequest">
+    <wsdl:part element="itr:LogicalAddress" name="LogicalAddress">
+      <wsdl:documentation xml:lang="sv">Om anropet sker på nationell nivå används SE165565594230-1000, i annat fall anges HSA-id för den organisation vars tjänst adresseras (t ex HSA-id för Region Skåne).</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part element="tjsr:CheckBlocksRequest" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CheckBlocksResponderInterface">
+    <wsdl:operation name="CheckBlocks">
+      <wsdl:input message="tns:CheckBlocksRequest"></wsdl:input>
+      <wsdl:output message="tns:CheckBlocksResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CheckBlocksResponderBinding" type="tns:CheckBlocksResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CheckBlocks">
+      <soap:operation soapAction="urn:riv:ehr:blocking:accesscontrol:CheckBlocksResponder:3:CheckBlocks" style="document"/>
+      <wsdl:input>
+        <soap:header message="tns:CheckBlocksRequest" part="LogicalAddress" use="literal"></soap:header>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CheckBlocksResponderService">
+    <wsdl:port binding="tns:CheckBlocksResponderBinding" name="CheckBlocksResponderPort">
+      <soap:address location="http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/accesscontrol/CheckBlocks/3/rivtabp21"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/accesscontrol/CheckBlocks/3/rivtabp21?xsd=CheckBlocksResponder_3.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:ehr:blocking:accesscontrol:CheckBlocksResponder:3" version="3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:ehr:blocking:accesscontrol:CheckBlocksResponder:3" xmlns:blockingaccesscontrol="urn:riv:ehr:blocking:accesscontrol:3">
+  <xs:import namespace="urn:riv:ehr:blocking:accesscontrol:3" schemaLocation="http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/accesscontrol/CheckBlocks/3/rivtabp21?xsd=../../../core_components/accesscontrol/ehr_blockingaccesscontrol_3.0.xsd"/>
+  <xs:element name="CheckBlocksRequest" type="tns:CheckBlocksRequestType"/>
+  <xs:complexType name="CheckBlocksRequestType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Tjänst som kontrollerar om given information är spärrad eller inte. Den utvärderar alla spärrar som finns i tjänsten och om någon spärr är helt applicerbar för given information och tillfälle kommer tjänsten att markera den informationen som spärrad. 
+		        Om det finns minst en tillfällig hävning för spärren som applicerar på den angivna aktören blir informationen ospärrad.
+		        Denna tjänst kan användas då tjänstekonsumenten inte själv kan avgöra/kontrollera om information är spärrad eller inte. Tjänsten stödjer kontroll av flertal informationsmängder i ett och samma anrop.
+		        Evalueringen av huruvida informationen är spärrad eller ej görs enligt följande:
+		        - Om spärr föreligger (inre eller yttre) blir informationen spärrad. 
+		        - Om undantag av spärr för &amp;apos;lak&amp;apos; och/eller &amp;apos;upp&amp;apos; har angivets blir denna informationen EJ spärrad.
+		        - Om spärren inte innehåller någon giltighetstid blir informationen spärrad.
+		        - Om tidsspannet för informationen ligger inom spärrens giltighetstid blir informationen spärrad.
+		        - Om spärrens giltighetstid delvis överlappar tidsspannet (start- eller sluttid) för informationen blir informationen spärrad.
+		        - Om tidsspannet för informationen ligger helt utanför spärrens giltighetstid blir informationen EJ spärrad.    
+		        Tjänsten realiseras både på lokal och nationell nivå.
+		        Tjänster på nationell nivå kräver ett komplett spärrunderlag.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="AccessingActor" type="blockingaccesscontrol:AccessingActorType"/>
+      <xs:element name="PatientId" type="blockingaccesscontrol:PersonIdValue"/>
+      <xs:element maxOccurs="unbounded" name="InformationEntities" type="blockingaccesscontrol:InformationEntityType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CheckBlocksResponse" type="tns:CheckBlocksResponseType"/>
+  <xs:complexType name="CheckBlocksResponseType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Tjänst som kontrollerar om given information är spärrad eller inte. Den utvärderar alla spärrar som finns i tjänsten och om någon spärr är helt applicerbar för given information och tillfälle kommer tjänsten att markera den informationen som spärrad. 
+		        Om det finns minst en tillfällig hävning för spärren som applicerar på den angivna aktören blir informationen ospärrad.
+		        Denna tjänst kan användas då tjänstekonsumenten inte själv kan avgöra/kontrollera om information är spärrad eller inte. Tjänsten stödjer kontroll av flertal informationsmängder i ett och samma anrop.
+		        Evalueringen av huruvida informationen är spärrad eller ej görs enligt följande:
+		        - Om spärr föreligger (inre eller yttre) blir informationen spärrad. 
+		        - Om undantag av spärr för &amp;apos;lak&amp;apos; och/eller &amp;apos;upp&amp;apos; har angivets blir denna informationen EJ spärrad.
+		        - Om spärren inte innehåller någon giltighetstid blir informationen spärrad.
+		        - Om tidsspannet för informationen ligger inom spärrens giltighetstid blir informationen spärrad.
+		        - Om spärrens giltighetstid delvis överlappar tidsspannet (start- eller sluttid) för informationen blir informationen spärrad.
+		        - Om tidsspannet för informationen ligger helt utanför spärrens giltighetstid blir informationen EJ spärrad.    
+		        Tjänsten realiseras både på lokal och nationell nivå.
+		        Tjänster på nationell nivå kräver ett komplett spärrunderlag.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CheckBlocksResultType" type="blockingaccesscontrol:CheckBlocksResultType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/accesscontrol/CheckBlocks/3/rivtabp21?xsd=../../../core_components/accesscontrol/ehr_blockingaccesscontrol_3.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:ehr:blocking:accesscontrol:3" version="3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:ehr:blocking:accesscontrol:3">
+  <xs:annotation>
+    <xs:documentation xml:lang="sv"></xs:documentation>
+  </xs:annotation>
+  <xs:simpleType name="ResultCodeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Enumerationsvärde som anger de svarskoder som finns.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Transaktionen har utförts enligt uppdraget.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INFO">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Transaktionen har utförts enligt begäran, men det finns ett meddelande som konsumenten måste visa upp för användaren (om tillämpbart). Exempel på detta kan vara &amp;quot;kom fastande&amp;quot;.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERROR">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Transaktionen har INTE kunnat utföras p.g.a ett logiskt fel. Det finns ett meddelande som konsumenten måste visa upp. Exempel på detta kan vara &amp;quot;tiden har bokats av annan patient&amp;quot;.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VALIDATIONERROR">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">En eller flera inparametrar innehåller felaktiga värden. Angiven tjänst utfördes ej.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ACCESSDENIED">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Behörighet saknas för att utföra begärd tjänst. Angiven tjänst utfördes ej.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NOTFOUND">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Angiven artifakt finns ej. Angiven tjänst utfördes ej.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ALREADYEXISTS">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Angiven artifakt finns redan. Angiven tjänst utfördes ej.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INVALIDSTATE">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Angiven tjänst utfördes ej då tjänsten eller artifakten var i ett felaktigt tillstånd.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CheckStatusType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Enumerationsvärde som anger de svarskoder som finns.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Information är ej spärrad.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BLOCKED">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Informationen är spärrad.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VALIDATIONERROR">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">En eller flera inparametrar innehåller felaktiga värden. Kontroll av spärr utfördes ej för denna informationsresurs.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="HsaId">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar det unika nummer som identifierar en anställd, uppdragstagare, strukturenhet eller en HCC funktion (HSA-id).
+		        Specificerat enligt HSA-schema tjänsteträdet version 3.9.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="32"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PersonIdValue">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar ett personnummer, samordningsnummer eller ett reservnummer.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InformationTypeIdValue">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som används för att ange informationstyper.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="6"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InformationTypeDescription">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som används för att ange en beskrivning på en informationstyp.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="64"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ResultType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som returneras som ett generellt svar från alla förändrande tjänster, t.ex. skapa, radera, etc. 
+		        En tjänstekonsument skall alltid kontrollera att resultatkoden inte innehåller fel för att på så sätt veta om anropet lyckades. 
+		        Alla svarskoder förutom OK och INFO betyder att åtgärden inte genomfördes.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ResultCode" type="tns:ResultCodeType"/>
+      <xs:element name="ResultText" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AccessingActorType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som identifierar en medarbetare/person som vill ha åtkomst till specifik information.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="EmployeeId" type="tns:HsaId"/>
+      <xs:element name="CareProviderId" type="tns:HsaId"/>
+      <xs:element name="CareUnitId" type="tns:HsaId"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InformationEntityType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatypen representerar en patientuppgift som önskas kontrolleras mot patientens spärrar. Om informationstyp anges tar tjänsten hänsyn till om det finns undantag satta i spärren för den informationstypen.
+		        Informationstypen anges i fältet informationType.    
+		        En patientuppgift har ett start- och slutdatum (inklusivedatum) som specificerar att händelsen/informationen ägt rum/existerar under en viss period. Detta används för att kunna styra åtkomst till information för en viss tidsperiod.
+		        Start- och slutdatum anges i fälten informationStartDate och informationEndDate.
+		        En patientuppgift ägs/utfördes av en vårdgivare som anges i fältet informationCareProviderId.
+		        En patientuppgift ägs/utfördes av en vårdenhet som anges i fältet informationCareUnitId.
+		        Giltiga värden för informationstyp som kan undantas från spärr är:
+		        Typ		Beskrivning
+		        lak		Läkemedel - Ordination/förskrivning
+		        upp		Uppmärksamhetsinformation (fd. uppmärksamhetssignal)</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="InformationStartDate" type="xs:dateTime"/>
+      <xs:element name="InformationEndDate" type="xs:dateTime"/>
+      <xs:element name="InformationCareUnitId" type="tns:HsaId"/>
+      <xs:element name="InformationCareProviderId" type="tns:HsaId"/>
+      <xs:element minOccurs="0" name="InformationType" type="tns:InformationTypeIdValue"/>
+      <xs:element name="RowNumber" type="xs:int"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CheckResultType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar ett svar från kontrollen av åtkomst till information.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Status" type="tns:CheckStatusType"/>
+      <xs:element name="RowNumber" type="xs:int"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CheckBlocksResultType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som innehåller resultatet från tjänsten CheckBlocks.
+		        Datatypen utökar datatypen Result.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Result" type="tns:ResultType"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="CheckResults" type="tns:CheckResultType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/accesscontrol/CheckBlocks/3/rivtabp21?xsd=../../../core_components/itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="urn:riv:itintegration:registry:1" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:riv:itintegration:registry:1">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractNamespaceType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="HsaIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/accesscontrol/CheckBlocks/3/rivtabp21</con:endpoint></con:endpoints><con:operation id="5b67a76b-53e4-4ba2-9d18-1422cc1ca9fb" isOneWay="false" action="urn:riv:ehr:blocking:accesscontrol:CheckBlocksResponder:3:CheckBlocks" name="CheckBlocks" bindingOperationName="CheckBlocks" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="93fb8bb7-278c-4d6f-a4a6-4c7608afe6f3" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/accesscontrol/CheckBlocks/3/rivtabp21</con:endpoint><con:request><![CDATA[<?xml version='1.0' encoding='UTF-8'?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Header>
+        <h:LogicalAddress xmlns:h="urn:riv:itintegration:registry:1" xmlns="urn:riv:itintegration:registry:1">SE165565594230-1000</h:LogicalAddress>
+    </s:Header>
+    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <CheckBlocksRequest xmlns="urn:riv:ehr:blocking:accesscontrol:CheckBlocksResponder:3">
+            <AccessingActor>
+                <EmployeeId xmlns="urn:riv:ehr:blocking:accesscontrol:3">LTH4444000115-101J</EmployeeId>
+                <CareProviderId xmlns="urn:riv:ehr:blocking:accesscontrol:3">TST5560360793-1200</CareProviderId>
+                <CareUnitId xmlns="urn:riv:ehr:blocking:accesscontrol:3">TST5560360793-1201</CareUnitId>
+            </AccessingActor>
+            <PatientId>190404040404</PatientId>
+            <InformationEntities>
+                <InformationStartDate xmlns="urn:riv:ehr:blocking:accesscontrol:3">2016-01-01T10:00:30</InformationStartDate>
+                <InformationEndDate xmlns="urn:riv:ehr:blocking:accesscontrol:3">2016-01-01T11:00:30</InformationEndDate>
+                <InformationCareUnitId xmlns="urn:riv:ehr:blocking:accesscontrol:3">TST5560360793-1101</InformationCareUnitId>
+                <InformationCareProviderId xmlns="urn:riv:ehr:blocking:accesscontrol:3">TST5560360793-1100</InformationCareProviderId>
+                <RowNumber xmlns="urn:riv:ehr:blocking:accesscontrol:3">0</RowNumber>
+            </InformationEntities>
+        </CheckBlocksRequest>
+    </s:Body>
+</s:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:ehr:blocking:accesscontrol:CheckBlocksResponder:3:CheckBlocks"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="87fa949f-5d7c-4603-a91f-2844bea19496" wsaVersion="NONE" name="RegisterTemporaryExtendedRevokeResponderBinding" type="wsdl" bindingName="{urn:riv:ehr:blocking:administration:RegisterTemporaryExtendedRevoke:2:rivtabp21}RegisterTemporaryExtendedRevokeResponderBinding" soapVersion="1_1" anonymous="optional" definition="http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/administration/RegisterTemporaryExtendedRevoke/2/rivtabp21?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/administration/RegisterTemporaryExtendedRevoke/2/rivtabp21?wsdl"><con:part><con:url>http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/administration/RegisterTemporaryExtendedRevoke/2/rivtabp21?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="RegisterTemporaryExtendedRevokeInteraction" targetNamespace="urn:riv:ehr:blocking:administration:RegisterTemporaryExtendedRevoke:2:rivtabp21" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="urn:riv:ehr:blocking:administration:RegisterTemporaryExtendedRevoke:2:rivtabp21" xmlns:tjsr="urn:riv:ehr:blocking:administration:RegisterTemporaryExtendedRevokeResponder:2" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:itr="urn:riv:itintegration:registry:1">
+  <wsdl:documentation xml:lang="sv">Tjänsteinteraktionens namn: RegisterTemporaryExtendedRevoke
+		 Beskrivning: 
+		   Tjänst som häver en spärr tillfälligt i den lokala spärrtjänsten, om spärren finns. En spärr kan ha flera tillfälliga hävningar (gällande olika personal).
+		   Tjänsten registrerar även den tillfälliga hävningen på nationell nivå.
+		   Tjänsten realiseras på lokal nivå.
+		 Revisioner: 
+		 Tjänstedomän: blocking:administration
+		 Tjänsteinteraktionstyp: Fråga-Svar
+		 WS-profil: RIVTABP21
+		 Förvaltas av: Inera AB</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:ehr:blocking:administration:RegisterTemporaryExtendedRevoke:2:rivtabp21">
+      <xs:import namespace="urn:riv:ehr:blocking:administration:RegisterTemporaryExtendedRevokeResponder:2" schemaLocation="http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/administration/RegisterTemporaryExtendedRevoke/2/rivtabp21?xsd=RegisterTemporaryExtendedRevokeResponder_2.0.xsd"/>
+      <xs:import namespace="urn:riv:itintegration:registry:1" schemaLocation="http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/administration/RegisterTemporaryExtendedRevoke/2/rivtabp21?xsd=../../../core_components/itintegration_registry_1.0.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="RegisterTemporaryExtendedRevokeResponse">
+    <wsdl:part element="tjsr:RegisterTemporaryExtendedRevokeResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RegisterTemporaryExtendedRevokeRequest">
+    <wsdl:part element="itr:LogicalAddress" name="LogicalAddress">
+      <wsdl:documentation xml:lang="sv">Som logisk adress anges HSA-id för vårdgivaren som spärren gäller för.</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part element="tjsr:RegisterTemporaryExtendedRevokeRequest" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RegisterTemporaryExtendedRevokeResponderInterface">
+    <wsdl:operation name="RegisterTemporaryExtendedRevoke">
+      <wsdl:input message="tns:RegisterTemporaryExtendedRevokeRequest"></wsdl:input>
+      <wsdl:output message="tns:RegisterTemporaryExtendedRevokeResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RegisterTemporaryExtendedRevokeResponderBinding" type="tns:RegisterTemporaryExtendedRevokeResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RegisterTemporaryExtendedRevoke">
+      <soap:operation soapAction="urn:riv:ehr:blocking:administration:RegisterTemporaryExtendedRevokeResponder:2:RegisterTemporaryExtendedRevoke" style="document"/>
+      <wsdl:input>
+        <soap:header message="tns:RegisterTemporaryExtendedRevokeRequest" part="LogicalAddress" use="literal"></soap:header>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RegisterTemporaryExtendedRevokeResponderService">
+    <wsdl:port binding="tns:RegisterTemporaryExtendedRevokeResponderBinding" name="RegisterTemporaryExtendedRevokeResponderPort">
+      <soap:address location="http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/administration/RegisterTemporaryExtendedRevoke/2/rivtabp21"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/administration/RegisterTemporaryExtendedRevoke/2/rivtabp21?xsd=RegisterTemporaryExtendedRevokeResponder_2.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:ehr:blocking:administration:RegisterTemporaryExtendedRevokeResponder:2" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:ehr:blocking:administration:RegisterTemporaryExtendedRevokeResponder:2" xmlns:blocking="urn:riv:ehr:blocking:2">
+  <xs:import namespace="urn:riv:ehr:blocking:2" schemaLocation="http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/administration/RegisterTemporaryExtendedRevoke/2/rivtabp21?xsd=../../../core_components/ehr_blocking_2.0.xsd"/>
+  <xs:element name="RegisterTemporaryExtendedRevokeRequest" type="tns:RegisterTemporaryExtendedRevokeRequestType"/>
+  <xs:complexType name="RegisterTemporaryExtendedRevokeRequestType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Tjänst som häver en spärr tillfälligt i den lokala spärrtjänsten, om spärren finns. En spärr kan ha flera tillfälliga hävningar (gällande olika personal).
+		        Tjänsten registrerar även den tillfälliga hävningen på nationell nivå.
+		        Tjänsten realiseras på lokal nivå.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="TemporaryRevokeId" type="blocking:Id"/>
+      <xs:element name="BlockId" type="blocking:Id"/>
+      <xs:element name="EndDate" type="xs:dateTime"/>
+      <xs:element name="RevokedForCareUnitId" type="blocking:HsaId"/>
+      <xs:element minOccurs="0" name="RevokedForEmployeeId" type="blocking:HsaId"/>
+      <xs:element name="RegisterAction" type="blocking:ActionType"/>
+      <xs:element name="RevokeReason" type="blocking:TemporaryRevokeReasonType"/>
+      <xs:element minOccurs="0" name="RevokeReasonText" type="blocking:ReasonText"/>
+      <xs:element name="ReplicationTimeout" type="xs:int"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegisterTemporaryExtendedRevokeResponse" type="tns:RegisterTemporaryExtendedRevokeResponseType"/>
+  <xs:complexType name="RegisterTemporaryExtendedRevokeResponseType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Tjänst som häver en spärr tillfälligt i den lokala spärrtjänsten, om spärren finns. En spärr kan ha flera tillfälliga hävningar (gällande olika personal).
+		        Tjänsten registrerar även den tillfälliga hävningen på nationell nivå.
+		        Tjänsten realiseras på lokal nivå.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ResultType" type="blocking:ResultType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/administration/RegisterTemporaryExtendedRevoke/2/rivtabp21?xsd=../../../core_components/ehr_blocking_2.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:riv:ehr:blocking:2" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:ehr:blocking:2">
+  <xs:simpleType name="ResultCodeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Enumerationsvärde som anger de svarskoder som finns.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Transaktionen har utförts enligt uppdraget.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INFO">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Transaktionen har utförts enligt begäran, men det finns ett meddelande som konsumenten måste visa upp för användaren (om tillämpbart). Exempel på detta kan vara &amp;quot;kom fastande&amp;quot;.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERROR">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Transaktionen har INTE kunnat utföras p.g.a ett logiskt fel. Det finns ett meddelande som konsumenten måste visa upp. Exempel på detta kan vara &amp;quot;tiden har bokats av annan patient&amp;quot;.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VALIDATIONERROR">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">En eller flera inparametrar innehåller felaktiga värden. Angiven tjänst utfördes ej.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ACCESSDENIED">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Behörighet saknas för att utföra begärd tjänst. Angiven tjänst utfördes ej.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NOTFOUND">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Angiven artifakt finns ej. Angiven tjänst utfördes ej.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ALREADYEXISTS">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Angiven artifakt finns redan. Angiven tjänst utfördes ej.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INVALIDSTATE">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Angiven tjänst utfördes ej då tjänsten eller artifakten var i ett felaktigt tillstånd.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TemporaryRevokeReasonType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Enumerationsvärde som anger orsaken/anledningen till en tillfällig hävning.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PatientsConsent">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Patienten har givit sitt samtycke till en tillfällig hävning.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Emergency">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Nödsituation föreligger. Patientens samtycke för en tillfällig hävning kunde ej inhämtas.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BlockTypeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Enumerationsvärde som anger typ av spärr.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Inner">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Representerar en inre spärr (inom vårdenhet).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Outer">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Representerar en yttre spärr (inom vårdgivare).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ReasonText">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar en orsak eller anledning till en viss åtgärd.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1024"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AssignmentNameType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar namn på medarbetaruppdrag.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="256"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Id">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar ett unikt identifikationsnummer enligt formatet för UUID (Universally Unique Identifier).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="36"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PersonIdValue">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar ett personnummer, samordningsnummer eller ett reservnummer.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OwnerId">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som identifierar systemet som registrerade/skapade artifakten. Används endast för tekniskt bruk för t.ex. uppföljning och spårning.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="512"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="HsaId">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar det unika nummer som identifierar en anställd, uppdragstagare, strukturenhet eller en HCC funktion (HSA-id).
+		        Specificerat enligt HSA-schema tjänsteträdet version 3.9.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="32"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InformationTypeIdValue">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som används för att ange informationstyper.
+		        Giltiga värden är endast:
+		        Typ     Beskrivning
+		        lak     Läkemedel - Ordination/förskrivning
+		        upp     Uppmärksamhetsinformation</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="6"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InformationTypeDescription">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som används för att ange en beskrivning på en informationstyp.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="64"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ResultType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som returneras som ett generellt svar från alla förändrande tjänster, t.ex. skapa, radera, etc. 
+		        En tjänstekonsument skall alltid kontrollera att resultatkoden inte innehåller fel för att på så sätt veta om anropet lyckades. 
+		        Alla svarskoder förutom OK och INFO betyder att åtgärden inte genomfördes.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ResultCode" type="tns:ResultCodeType"/>
+      <xs:element name="ResultText" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActorType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som identifierar en medarbetare/person.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="EmployeeId" type="tns:HsaId"/>
+      <xs:element minOccurs="0" name="AssignmentId" type="tns:HsaId"/>
+      <xs:element minOccurs="0" name="AssignmentName" type="tns:AssignmentNameType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AccessingActorType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som identifierar en medarbetare/person som vill ha åtkomst till specifik information.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="EmployeeId" type="tns:HsaId"/>
+      <xs:element name="CareProviderId" type="tns:HsaId"/>
+      <xs:element name="CareUnitId" type="tns:HsaId"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActionType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar den eller de aktörer/personer som begärt och/eller utfört en åtgärd med
+		        en möjlig orsak/anledning angivet som fritext.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="RequestDate" type="xs:dateTime"/>
+      <xs:element name="RequestedBy" type="tns:ActorType"/>
+      <xs:element name="RegistrationDate" type="xs:dateTime"/>
+      <xs:element name="RegisteredBy" type="tns:ActorType"/>
+      <xs:element minOccurs="0" name="ReasonText" type="tns:ReasonText"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InformationTypeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar de Informationstyper som kan undantas från att spärras.
+		        En spärr gäller normalt alla informationstyper.
+		        Denna lista utgör de informationstyper som kan undantas från att spärras. 
+		        Om försök görs att registrera en spärr innehållandes en okänd informationstyp skall spärrtjänsten att neka detta.
+		        lak     Läkemedel - Ordination/förskrivning
+		        upp     Uppmärksamhetsinformation</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="InfoTypeId" type="tns:InformationTypeIdValue"/>
+      <xs:element name="InfoTypeDescription" type="tns:InformationTypeDescription"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BlockType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar en existerande spärr med alla dess attribut. Datatypen beskriver grundformatet för en spärr.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="BlockId" type="tns:Id"/>
+      <xs:element name="BlockType" type="tns:BlockTypeType"/>
+      <xs:element name="PatientId" type="tns:PersonIdValue"/>
+      <xs:element minOccurs="0" name="InformationStartDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="InformationEndDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="InformationCareUnitId" type="tns:HsaId"/>
+      <xs:element name="InformationCareProviderId" type="tns:HsaId"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ExcludedInformationTypes" type="tns:InformationTypeType"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="TemporaryRevokes" type="tns:TemporaryRevokeType"/>
+      <xs:element minOccurs="0" name="OwnerId" type="tns:OwnerId"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TemporaryRevokeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar en tillfällig hävning för en spärr med alla dess attribut. En tillfällig hävning tillhör alltid en spärr. 
+		        Datatypen beskriver grundformatet för en tillfällig hävning.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="TemporaryRevokeId" type="tns:Id"/>
+      <xs:element name="EndDate" type="xs:dateTime"/>
+      <xs:element name="RevokedForCareUnitId" type="tns:HsaId"/>
+      <xs:element minOccurs="0" name="RevokedForEmployeeId" type="tns:HsaId"/>
+      <xs:element minOccurs="0" name="OwnerId" type="tns:OwnerId"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TemporaryRevokeRegistrationType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar en registrering av en tillfällig hävning med de attribut som behövs.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="TemporaryRevokeId" type="tns:Id"/>
+      <xs:element name="BlockId" type="tns:Id"/>
+      <xs:element name="EndDate" type="xs:dateTime"/>
+      <xs:element name="RevokedForCareUnitId" type="tns:HsaId"/>
+      <xs:element minOccurs="0" name="RevokedForEmployeeId" type="tns:HsaId"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BlockHeaderType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar spärrdata, antingen innehållandes endast spärrdata, eller spärrdata tillsammans med avregistrerade spärrar, beroende på hur klienten efterfrågat data.
+		        Datatypen utökar datatypen Result.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Result" type="tns:ResultType"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Blocks" type="tns:BlockType"/>
+      <xs:element name="NextCreatedOnOrAfter" type="xs:dateTime"/>
+      <xs:element name="LatestCancellation" type="xs:dateTime"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InformationEntityType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar den information som behövs vid en kontroll om spärr föreligger.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="InformationStartDate" type="xs:dateTime"/>
+      <xs:element name="InformationEndDate" type="xs:dateTime"/>
+      <xs:element name="InformationCareUnitId" type="tns:HsaId"/>
+      <xs:element name="InformationCareProviderId" type="tns:HsaId"/>
+      <xs:element minOccurs="0" name="InformationType" type="tns:InformationTypeIdValue"/>
+      <xs:element name="RowNumber" type="xs:int"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CheckResultType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som representerar ett svar från kontrollen av åtkomst till information.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Blocked" type="xs:boolean"/>
+      <xs:element name="RowNumber" type="xs:int"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CheckBlocksResultType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som innehåller resultatet från tjänsten CheckBlocks.
+		        Datatypen utökar datatypen Result.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Result" type="tns:ResultType"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="CheckResults" type="tns:CheckResultType"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/administration/RegisterTemporaryExtendedRevoke/2/rivtabp21?xsd=../../../core_components/itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="urn:riv:itintegration:registry:1" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:riv:itintegration:registry:1">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractNamespaceType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="HsaIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://karesuando.nordicmedtest.se:8080/vp/ehr/blocking/administration/RegisterTemporaryExtendedRevoke/2/rivtabp21</con:endpoint></con:endpoints><con:operation id="f6c61b41-be64-4b23-a9f1-f7897c2095ee" isOneWay="false" action="urn:riv:ehr:blocking:administration:RegisterTemporaryExtendedRevokeResponder:2:RegisterTemporaryExtendedRevoke" name="RegisterTemporaryExtendedRevoke" bindingOperationName="RegisterTemporaryExtendedRevoke" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a5a0fc0f-68bc-4720-aaa3-e59ee4a95bc3" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://tjp.nordicmedtest.se/karesuando/vp/ehr/blocking/administration/RegisterTemporaryExtendedRevoke/2/rivtabp21</con:endpoint><con:request><![CDATA[<?xml version='1.0' encoding='UTF-8'?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Header>
+        <h:LogicalAddress xmlns:h="urn:riv:itintegration:registry:1" xmlns="urn:riv:itintegration:registry:1">SE165565594230-1000</h:LogicalAddress>
+    </s:Header>
+    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <RegisterTemporaryExtendedRevokeRequest xmlns="urn:riv:ehr:blocking:administration:RegisterTemporaryExtendedRevokeResponder:2">
+            <TemporaryRevokeId>e6cfe14f-fe12-401d-8e09-7a9cf69ffa25</TemporaryRevokeId>
+            <BlockId>0a5b8267-71b5-4a50-920c-35f21a06a079</BlockId>
+            <EndDate>2017-09-20T11:46:36.476+02:00</EndDate>
+            <RevokedForCareUnitId>TST5560360793-1102</RevokedForCareUnitId>
+            <RevokedForEmployeeId>LTH4444000115-101J</RevokedForEmployeeId>
+            <RegisterAction>
+                <RequestDate xmlns="urn:riv:ehr:blocking:2">2017-09-20T11:31:36.4921943+02:00</RequestDate>
+                <RequestedBy xmlns="urn:riv:ehr:blocking:2">
+                    <EmployeeId>LTH4444000115-101J</EmployeeId>
+                </RequestedBy>
+                <RegistrationDate xmlns="urn:riv:ehr:blocking:2">2017-09-20T11:31:36.4921943+02:00</RegistrationDate>
+                <RegisteredBy xmlns="urn:riv:ehr:blocking:2">
+                    <EmployeeId>LTH4444000115-101J</EmployeeId>
+                </RegisteredBy>
+            </RegisterAction>
+            <RevokeReason>Emergency</RevokeReason>
+            <ReplicationTimeout>0</ReplicationTimeout>
+        </RegisterTemporaryExtendedRevokeRequest>
+    </s:Body>
+</s:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:ehr:blocking:administration:RegisterTemporaryExtendedRevokeResponder:2:RegisterTemporaryExtendedRevoke"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="d2e842b8-511f-4aa3-abc3-c3cc2d45e6b3" name="TestSuite SAK"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="c9b55f9f-fdba-4066-a071-2edd7ee7cf6b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetBlocks" searchProperties="true"><con:settings/><con:testStep type="request" name="Get all blocks for careGiver" id="a7a0f778-3ff7-4e6b-8da5-9d611814d268"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetBlocksResponderBinding</con:interface><con:operation>GetBlocks</con:operation><con:request name="Get all blocks for careGiver" id="5c36d102-eb3a-4508-adc8-0cedd1d77e4f" sslKeystore="TSTNMT2321000156-B02.p12"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://tjp.nordicmedtest.se/karesuando/vp/ehr/blocking/querying/GetBlocks/2/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:ehr:blocking:querying:GetBlocksResponder:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>SE165565594230-1000</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetBlocksRequest>\r
+         <urn1:CareProviderId>TST-12345</urn1:CareProviderId>\r
+      </urn1:GetBlocksRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2a75b6b8-50e6-44f7-b7a3-37c7b8d84f2e"/><con:assertion type="Schema Compliance" id="3c8c88e5-b15a-4c2b-96e7-eb6f0b5b7ee1" disabled="true"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="0fb846a3-3395-451d-b593-97d59e015e4a"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="b428fe99-236f-4752-a063-e35e1844cfe5" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CheckBlocks" searchProperties="true"><con:settings/><con:testStep type="request" name="CheckBlocks" id="0d0ca1ed-73f7-4efe-86da-6b4bd19d968f"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetBlocksResponderBinding</con:interface><con:operation>GetBlocks</con:operation><con:request name="CheckBlocks" id="5c36d102-eb3a-4508-adc8-0cedd1d77e4f" sslKeystore="TSTNMT2321000156-B02.p12"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://tjp.nordicmedtest.se/karesuando/vp/ehr/blocking/accesscontrol/CheckBlocks/3/rivtabp21</con:endpoint><con:request><![CDATA[<?xml version='1.0' encoding='UTF-8'?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Header>
+        <h:LogicalAddress xmlns:h="urn:riv:itintegration:registry:1" xmlns="urn:riv:itintegration:registry:1">SE165565594230-1000</h:LogicalAddress>
+    </s:Header>
+    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <CheckBlocksRequest xmlns="urn:riv:ehr:blocking:accesscontrol:CheckBlocksResponder:3">
+            <AccessingActor>
+                <EmployeeId xmlns="urn:riv:ehr:blocking:accesscontrol:3">LTH4444000115-101J</EmployeeId>
+                <CareProviderId xmlns="urn:riv:ehr:blocking:accesscontrol:3">TST5560360793-1200</CareProviderId>
+                <CareUnitId xmlns="urn:riv:ehr:blocking:accesscontrol:3">TST5560360793-1201</CareUnitId>
+            </AccessingActor>
+            <PatientId>190404040404</PatientId>
+            <InformationEntities>
+                <InformationStartDate xmlns="urn:riv:ehr:blocking:accesscontrol:3">2016-01-01T10:00:30</InformationStartDate>
+                <InformationEndDate xmlns="urn:riv:ehr:blocking:accesscontrol:3">2016-01-01T11:00:30</InformationEndDate>
+                <InformationCareUnitId xmlns="urn:riv:ehr:blocking:accesscontrol:3">TST5560360793-1101</InformationCareUnitId>
+                <InformationCareProviderId xmlns="urn:riv:ehr:blocking:accesscontrol:3">TST5560360793-1100</InformationCareProviderId>
+                <RowNumber xmlns="urn:riv:ehr:blocking:accesscontrol:3">0</RowNumber>
+            </InformationEntities>
+        </CheckBlocksRequest>
+    </s:Body>
+</s:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2a75b6b8-50e6-44f7-b7a3-37c7b8d84f2e"/><con:assertion type="Schema Compliance" id="3c8c88e5-b15a-4c2b-96e7-eb6f0b5b7ee1" disabled="true"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="0fb846a3-3395-451d-b593-97d59e015e4a"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="d23976b1-b7db-417e-9018-b55f00dc0636" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="RegisterTemporaryExtendedRevoke" searchProperties="true"><con:settings/><con:testStep type="request" name="RegisterTemporaryExtendedRevoke" id="0695f894-3355-4c05-b4f2-634a4b723c53"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetBlocksResponderBinding</con:interface><con:operation>GetBlocks</con:operation><con:request name="RegisterTemporaryExtendedRevoke" id="5c36d102-eb3a-4508-adc8-0cedd1d77e4f" sslKeystore="TSTNMT2321000156-B02.p12"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://tjp.nordicmedtest.se/karesuando/vp/ehr/blocking/administration/RegisterTemporaryExtendedRevoke/2/rivtabp21</con:endpoint><con:request><![CDATA[<?xml version='1.0' encoding='UTF-8'?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Header>
+        <h:LogicalAddress xmlns:h="urn:riv:itintegration:registry:1" xmlns="urn:riv:itintegration:registry:1">SE165565594230-1000</h:LogicalAddress>
+    </s:Header>
+    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <RegisterTemporaryExtendedRevokeRequest xmlns="urn:riv:ehr:blocking:administration:RegisterTemporaryExtendedRevokeResponder:2">
+            <TemporaryRevokeId>e6cfe14f-fe12-401d-8e09-7a9cf69ffa25</TemporaryRevokeId>
+            <BlockId>0a5b8267-71b5-4a50-920c-35f21a06a079</BlockId>
+            <EndDate>2017-09-20T11:46:36.476+02:00</EndDate>
+            <RevokedForCareUnitId>TST5560360793-1102</RevokedForCareUnitId>
+            <RevokedForEmployeeId>LTH4444000115-101J</RevokedForEmployeeId>
+            <RegisterAction>
+                <RequestDate xmlns="urn:riv:ehr:blocking:2">2017-09-20T11:31:36.4921943+02:00</RequestDate>
+                <RequestedBy xmlns="urn:riv:ehr:blocking:2">
+                    <EmployeeId>LTH4444000115-101J</EmployeeId>
+                </RequestedBy>
+                <RegistrationDate xmlns="urn:riv:ehr:blocking:2">2017-09-20T11:31:36.4921943+02:00</RegistrationDate>
+                <RegisteredBy xmlns="urn:riv:ehr:blocking:2">
+                    <EmployeeId>LTH4444000115-101J</EmployeeId>
+                </RegisteredBy>
+            </RegisterAction>
+            <RevokeReason>Emergency</RevokeReason>
+            <ReplicationTimeout>0</ReplicationTimeout>
+        </RegisterTemporaryExtendedRevokeRequest>
+    </s:Body>
+</s:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2a75b6b8-50e6-44f7-b7a3-37c7b8d84f2e"/><con:assertion type="Schema Compliance" id="3c8c88e5-b15a-4c2b-96e7-eb6f0b5b7ee1" disabled="true"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="0fb846a3-3395-451d-b593-97d59e015e4a"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
