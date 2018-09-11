@@ -1,11 +1,12 @@
 # soapui-skltp
 
-#--------------------------------------------------------
-# Soap test (FT)
-#--------------------------------------------------------
-# Support to be run from Jenkins (see Jenkinsfile which is read by Jenkins project)
+Test destined to be ran from Jenkins toward different SKLTP deployments.
 
-# Support to be run locally (CLI) using testrunner (see soaptest/soaptest_local.sh)
+## Soap test (FT)
+
+There is support to run tests from Jenkins (see Jenkinsfile which is read by Jenkins project).
+
+There is support to run tests locally (CLI) using testrunner (see soaptest/soaptest_local.sh).
   Input parameters:
     - Hostname 
         (for SIT, use test.esb.njtp.se)
@@ -14,14 +15,12 @@
     - Certificate password
     - Source system (HSA, normally LOAD-MOCKS i SIT, JOL-MOCK i QA) 
 
-# Support to be run from SoapUI 
+There is support to run tests from SoapUI 
   (recommended is to run soaptest/soaptest_local.sh first. 
    The script will prepare(sed) the neccessary files)
 
+## Load test (Gatling)
 
-#--------------------------------------------------------
-# Load test (Gatling)
-#--------------------------------------------------------
-# Support to be run from Jenkins (see Jenkinsfile which is read by Jenkins project)
+There is support to run tests from Jenkins (see Jenkinsfile which is read by Jenkins project)
 
-# TBD - Look over loadtest so it can more easily be ran also locally
+TBD - Look over loadtest so it can more easily be ran also locally
