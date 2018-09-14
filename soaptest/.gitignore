@@ -1,3 +1,10 @@
 TEST*.xml
 *.log
 readme.txt
+truststore.p12
+file.crt.pem
+file.key.pem
+*.scala.swp
+cert.p12
+data.xml
+soapui-settings.xml
