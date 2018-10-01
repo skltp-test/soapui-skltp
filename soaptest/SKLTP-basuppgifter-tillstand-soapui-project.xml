@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="e3f608b5-f644-497b-8641-e91ef1c32830" activeEnvironment="Default" name="SKLTP-basuppgifter tillstånd" resourceRoot="" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="c3467d77-a502-45e5-bc31-1febe6259bd7" wsaVersion="NONE" name="GetObservationsResponderBinding_1.0" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:basic:GetObservations:1:rivtabp21}GetObservationsResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_healthcond_basic_1.0.5/schemas/interactions/GetObservationsInteraction/GetObservationsInteraction_1.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_healthcond_basic_1.0.5/schemas/interactions/GetObservationsInteraction/GetObservationsInteraction_1.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_healthcond_basic_1.0.5/schemas/interactions/GetObservationsInteraction/GetObservationsInteraction_1.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+<con:soapui-project id="e3f608b5-f644-497b-8641-e91ef1c32830" activeEnvironment="Default" name="SKLTP-basuppgifter tillstånd" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="c3467d77-a502-45e5-bc31-1febe6259bd7" wsaVersion="NONE" name="GetObservationsResponderBinding_1.0" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:basic:GetObservations:1:rivtabp21}GetObservationsResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_healthcond_basic_1.0.5/schemas/interactions/GetObservationsInteraction/GetObservationsInteraction_1.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_healthcond_basic_1.0.5/schemas/interactions/GetObservationsInteraction/GetObservationsInteraction_1.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_healthcond_basic_1.0.5/schemas/interactions/GetObservationsInteraction/GetObservationsInteraction_1.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements. See the NOTICE file
  distributed with this work for additional information
  regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
@@ -1780,14 +1780,300 @@
          <categorization>chb-o</categorization>
       </urn1:FindContent>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:FindContentResponder:1:FindContent"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="7c54a9cb-9801-4b46-83c5-310dadfddb7d" name="clinicalprocess_healthcond_basic"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="ed7a5520-96ea-4062-b046-4b278398aff0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.15.2 (GO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="30b22313-4cf6-48f0-850f-8b656bbf2565"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:FindContentResponder:1:FindContent"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="269e0b79-8c61-4bb0-a206-b47c24d612b5" wsaVersion="NONE" name="UpdateResponderBinding" type="wsdl" bindingName="{urn:riv:itintegration:engagementindex:Update:1:rivtabp21}UpdateResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/VBShare/schemas/ServiceContracts_itintegration_engagementindex_1.0.5/schemas/interactions/UpdateInteraction/UpdateInteraction_1.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/VBShare/schemas/ServiceContracts_itintegration_engagementindex_1.0.5/schemas/interactions/UpdateInteraction/UpdateInteraction_1.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/VBShare/schemas/ServiceContracts_itintegration_engagementindex_1.0.5/schemas/interactions/UpdateInteraction/UpdateInteraction_1.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<wsdl:definitions name="UpdateInteraction" targetNamespace="urn:riv:itintegration:engagementindex:Update:1:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:tjsi="urn:riv:itintegration:engagementindex:UpdateInitiator:1" xmlns:tns="urn:riv:itintegration:engagementindex:Update:1:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1">
+  <xs:annotation>
+    <xs:documentation>Tjänsteinteraktionens namn: UpdateInteraction
+			 Beskrivning: 
+			   Service for adding, updating and removing content to/from engagement index
+			 Revisioner: 
+			 Tjänstedomän: itintegration:engagementindex
+			 Tjänsteinteraktionstyp: Fråga-Svar
+			 WS-profil: RIVTABP21
+			 Förvaltas av: Sveriges Kommuner och Landsting</xs:documentation>
+  </xs:annotation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:itintegration:engagementindex:Update:1:rivtabp21">
+      <xs:import schemaLocation="UpdateResponder_1.0.xsd" namespace="urn:riv:itintegration:engagementindex:UpdateResponder:1"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateRequest">
+    <wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
+      <wsdl:documentation>The organisation number of the organization owning the targeted engagement index</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="parameters" element="tjsr:Update"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateResponse">
+    <wsdl:part name="parameters" element="tjsr:UpdateResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="UpdateResponderInterface">
+    <wsdl:operation name="Update">
+      <wsdl:input message="tns:UpdateRequest"/>
+      <wsdl:output message="tns:UpdateResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UpdateResponderBinding" type="tns:UpdateResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update" style="document"/>
+      <wsdl:input>
+        <soap:header use="literal" message="tns:UpdateRequest" part="LogicalAddress"/>
+        <soap:body use="literal" parts="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UpdateResponderService">
+    <wsdl:port name="UpdateResponderPort" binding="tns:UpdateResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_itintegration_engagementindex_1.0.5\schemas\interactions\UpdateInteraction\UpdateResponder_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:itintegration:engagementindex:UpdateResponder:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:core="urn:riv:itintegration:engagementindex:1">
+  <xs:import schemaLocation="../../core_components/itintegration_engagementindex_1.0.xsd" namespace="urn:riv:itintegration:engagementindex:1"/>
+  <xs:element name="Update" type="tns:UpdateType"/>
+  <xs:element name="UpdateResponse" type="tns:UpdateResponseType"/>
+  <xs:complexType name="UpdateType">
+    <xs:sequence>
+      <xs:element name="engagementTransaction" type="core:EngagementTransactionType" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UpdateResponseType">
+    <xs:sequence>
+      <xs:element name="ResultCode" type="core:ResultCodeEnum"/>
+      <xs:element name="comment" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_itintegration_engagementindex_1.0.5\schemas\core_components\itintegration_engagementindex_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:itintegration:engagementindex:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:itintegration:engagementindex:1">
+  <xs:complexType name="EngagementTransactionType">
+    <xs:sequence>
+      <xs:element name="deleteFlag" type="xs:boolean"/>
+      <xs:element name="engagement" type="tns:EngagementType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EngagementType">
+    <xs:sequence>
+      <xs:element name="registeredResidentIdentification" type="tns:RegisteredResidentIdentificationType"/>
+      <xs:element name="serviceDomain" type="xs:anyURI"/>
+      <xs:element name="categorization" type="xs:string"/>
+      <xs:element name="logicalAddress" type="xs:string"/>
+      <xs:element name="businessObjectInstanceIdentifier" type="xs:string"/>
+      <xs:element name="clinicalProcessInterestId" type="tns:ClinicalProcessInterestIdType" minOccurs="1"/>
+      <xs:element name="mostRecentContent" type="tns:TS" minOccurs="0"/>
+      <xs:element name="sourceSystem" type="tns:HsaIdType"/>
+      <xs:element name="creationTime" type="tns:TS" minOccurs="0"/>
+      <xs:element name="updateTime" type="tns:TS" minOccurs="0"/>
+      <xs:element name="dataController" type="tns:OrgNoType"/>
+      <xs:element name="owner" type="tns:HsaIdType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="HsaIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="OrgNoType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="ClinicalProcessInterestIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="RegisteredResidentIdentificationType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{8}[0-9A-Zptf]{4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TS">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})([0-1]{1}[0-9]{1}|2[0-3]{1})[0-5]{1}[0-9]{1}[0-5]{1}[0-9]{1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DT">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_itintegration_engagementindex_1.0.5\schemas\core_components\itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:itintegration:registry:1" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundl��ggande informationsobjekt f��r dom��nen itintegration:registry (adressering av tj��nster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			F��rfattare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="b71c3b5f-b01f-4645-853d-9658423e5403" isOneWay="false" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update" name="Update" bindingOperationName="Update" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0b68ef4f-2a24-4166-b78c-a3c5d21f430c" name="GO_PatientId1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://test.esb.ntjp.se/vp/Update/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>5565594230</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:Update>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001209814</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:basic</urn2:serviceDomain>
+               <urn2:categorization>chb-o</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001150312</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:creationTime>20181001150312</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001209814</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:basic</urn2:serviceDomain>
+               <urn2:categorization>chb-o</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001150312</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:creationTime>20181001150312</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001209814</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:basic</urn2:serviceDomain>
+               <urn2:categorization>chb-o</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001150312</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:creationTime>20181001150312</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+
+      </urn1:Update>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="7c54a9cb-9801-4b46-83c5-310dadfddb7d" name="clinicalprocess_healthcond_basic"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="47380575-dfa6-41de-8db1-60ee9548a00c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.15.1 (GO) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="8300ebf5-ecd7-450f-b4b0-4b8091a59ad2"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
-source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="0c76f423-ff93-499f-af71-dd0efc3d0198"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetObservationsResponderBinding_1.0</con:interface><con:operation>GetObservations</con:operation><con:request name="1.0" id="81bf7b33-0752-4d9e-a910-35a4d0fb739f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:1" xmlns:urn2="urn:riv:clinicalprocess:healthcond:basic:1">\r
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="09493fc3-9c6f-4e6b-ac12-a0d727a4a1ac"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetObservationsResponderBinding_1.0</con:interface><con:operation>GetObservations</con:operation><con:request name="1.0" id="81bf7b33-0752-4d9e-a910-35a4d0fb739f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGO}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:1" xmlns:urn2="urn:riv:clinicalprocess:healthcond:basic:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetObservations>\r
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientIdNoEngagements}</urn2:extension>\r
+         </urn1:patientId>\r
+         <urn1:interactionAgreementId>2866a7c4-9c60-433f-9035-a4d779ffe7a1</urn1:interactionAgreementId>\r
+      </urn1:GetObservations>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="526d0cb7-7351-49b1-8671-6106cb3f8125"/><con:assertion type="Schema Compliance" id="bc5a283f-9c6b-458e-876f-c3bf21f8ce48"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="d78ee410-21e9-40c2-b9b3-89cffd847122"/><con:assertion type="Simple NotContains" id="813a0c30-84d1-45d9-badc-6fd4cf0513dd" name="Not Contains"><con:configuration><token>extension</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="2.0" id="405dac7a-f20d-4e90-af22-46c80d4975f1" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetObservationsResponderBinding_2.0</con:interface><con:operation>GetObservations</con:operation><con:request name="2.0" id="50121622-3aac-438a-8cd7-df7a98977ece"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGO}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:basic:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetObservations>\r
+         <urn1:personPatientId>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientIdNoEngagements}</urn2:extension>
+         </urn1:personPatientId>\r
+      </urn1:GetObservations>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="ac3d0d86-be60-4889-82a7-f0caf2ffa19d"/><con:assertion type="Schema Compliance" id="51cb8d4c-21ef-4daf-97c5-8399f39c391f"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="f3fa32be-178f-4f09-a385-f1bfdcbd4d55"/><con:assertion type="Simple NotContains" id="59bd5079-19a2-40bf-9c6b-4d2edb7e07c0" name="Not Contains"><con:configuration><token>extension</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="ed7a5520-96ea-4062-b046-4b278398aff0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.15.2 (GO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="30b22313-4cf6-48f0-850f-8b656bbf2565"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="0c76f423-ff93-499f-af71-dd0efc3d0198"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetObservationsResponderBinding_1.0</con:interface><con:operation>GetObservations</con:operation><con:request name="1.0" id="81bf7b33-0752-4d9e-a910-35a4d0fb739f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGO}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:1" xmlns:urn2="urn:riv:clinicalprocess:healthcond:basic:1">\r
    <soapenv:Header>\r
       <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
    </soapenv:Header>\r
@@ -1800,7 +2086,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          <urn1:interactionAgreementId>2866a7c4-9c60-433f-9035-a4d779ffe7a1</urn1:interactionAgreementId>\r
       </urn1:GetObservations>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="526d0cb7-7351-49b1-8671-6106cb3f8125"/><con:assertion type="Schema Compliance" id="bc5a283f-9c6b-458e-876f-c3bf21f8ce48"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="d78ee410-21e9-40c2-b9b3-89cffd847122"/><con:assertion type="Simple Contains" id="4588c293-4ee5-43bf-a8c3-fb487f8246b4" name="Contains"><con:configuration><token>extension</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="2.0" id="dc76df93-bedf-44a1-85fa-8c523fced7e7" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetObservationsResponderBinding_2.0</con:interface><con:operation>GetObservations</con:operation><con:request name="2.0" id="50121622-3aac-438a-8cd7-df7a98977ece"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:basic:2">\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="526d0cb7-7351-49b1-8671-6106cb3f8125"/><con:assertion type="Schema Compliance" id="bc5a283f-9c6b-458e-876f-c3bf21f8ce48"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="d78ee410-21e9-40c2-b9b3-89cffd847122"/><con:assertion type="Simple Contains" id="4588c293-4ee5-43bf-a8c3-fb487f8246b4" name="Contains"><con:configuration><token>extension</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="2.0" id="dc76df93-bedf-44a1-85fa-8c523fced7e7" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetObservationsResponderBinding_2.0</con:interface><con:operation>GetObservations</con:operation><con:request name="2.0" id="50121622-3aac-438a-8cd7-df7a98977ece"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGO}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:basic:2">\r
    <soapenv:Header>\r
       <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
    </soapenv:Header>\r
@@ -1809,6 +2095,38 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          <urn1:personPatientId>\r
             <urn2:root>${patientIdType}</urn2:root>\r
             <urn2:extension>${patientId}</urn2:extension>
+         </urn1:personPatientId>\r
+      </urn1:GetObservations>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="ac3d0d86-be60-4889-82a7-f0caf2ffa19d"/><con:assertion type="Schema Compliance" id="51cb8d4c-21ef-4daf-97c5-8399f39c391f"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="f3fa32be-178f-4f09-a385-f1bfdcbd4d55"/><con:assertion type="Simple Contains" id="782c549c-294f-4b52-b3c9-b5dcdc3d4211" name="Contains"><con:configuration><token>extension</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e6e44d0a-1980-41e6-9e78-fcb39eb2b533" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.15.3 (GO) Patient med engagemang hos tre producenter med vardera 1 post" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="f598e54d-7a45-483c-b20b-26209804c153"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="c07092ad-0c0a-4d44-b868-a53f292a952f"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetObservationsResponderBinding_1.0</con:interface><con:operation>GetObservations</con:operation><con:request name="1.0" id="81bf7b33-0752-4d9e-a910-35a4d0fb739f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGO}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:1" xmlns:urn2="urn:riv:clinicalprocess:healthcond:basic:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetObservations>\r
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientId1}</urn2:extension>\r
+         </urn1:patientId>\r
+         <urn1:interactionAgreementId>2866a7c4-9c60-433f-9035-a4d779ffe7a1</urn1:interactionAgreementId>\r
+      </urn1:GetObservations>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="526d0cb7-7351-49b1-8671-6106cb3f8125"/><con:assertion type="Schema Compliance" id="bc5a283f-9c6b-458e-876f-c3bf21f8ce48"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="d78ee410-21e9-40c2-b9b3-89cffd847122"/><con:assertion type="Simple Contains" id="4588c293-4ee5-43bf-a8c3-fb487f8246b4" name="Contains"><con:configuration><token>extension</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="2.0" id="c651b73e-35b0-4111-9878-f65332209d02" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetObservationsResponderBinding_2.0</con:interface><con:operation>GetObservations</con:operation><con:request name="2.0" id="50121622-3aac-438a-8cd7-df7a98977ece"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGO}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:basic:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetObservations>\r
+         <urn1:personPatientId>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientId1}</urn2:extension>
          </urn1:personPatientId>\r
       </urn1:GetObservations>\r
    </soapenv:Body>\r

@@ -23,15 +23,46 @@ under the License.
 	<contractName>GetCareDocumentation</contractName>
 	<description>Denna testsvit används för att verifiera releasekandidater av NTjP.</description>
 	<globaldata>
+		<webServiceUrlEI>https://TARGETHOST/vp/Update/1/rivtabp21</webServiceUrlEI>
 		<webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl>
 		<webServiceUrlFaulty1>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp20</webServiceUrlFaulty1>
 		<webServiceUrlFaulty2>https://TARGETHOST</webServiceUrlFaulty2>
+		
+		<webServiceUrlGAI>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetAlertInformation/2/rivtabp21</webServiceUrlGAI>
+		<webServiceUrlGCD>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrlGCD>
+		<webServiceUrlGD>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21</webServiceUrlGD>
+		<webServiceUrlGFS>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetFunctionalStatus/2/rivtabp21</webServiceUrlGFS>
+		<webServiceUrlGVH>https://TARGETHOST/vp/clinicalprocess/activityprescription/actoutcome/GetVaccinationHistory/1/rivtabp21</webServiceUrlGVH>
+		<webServiceUrlGMH>https://TARGETHOSTo/vp/clinicalprocess/activityprescription/actoutcome/GetMedicationHistory/2/rivtabp21</webServiceUrlGMH>
+		<webServiceUrlGCC>https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCareContacts/2/rivtabp21</webServiceUrlGCC>
+		<webServiceUrlGCP>https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCarePlans/2/rivtabp21</webServiceUrlGCP>
+		<webServiceUrlGCS>https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCareServices/2/rivtabp21</webServiceUrlGCS>
+		<webServiceUrlGECGO>hhttps://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetECGOutcome/1/rivtabp21</webServiceUrlGECGO>
+		<webServiceUrlGIO>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetImagingOutcome/1/rivtabp21</webServiceUrlGIO>
+		<webServiceUrlGLOO>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetLaboratoryOrderOutcome/3/rivtabp21</webServiceUrlGLOO>
+		<webServiceUrlGMMH>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetMaternityMedicalHistory/3/rivtabp21</webServiceUrlGMMH>
+		<webServiceUrlGRO>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetReferralOutcome/3/rivtabp21</webServiceUrlGRO>
+		<webServiceUrlGO>https://TARGETHOST/vp/clinicalprocess/healthcond/basic/GetObservations/1/rivtabp21</webServiceUrlGO>
+		<webServiceUrlGA>https://TARGETHOST/vp/clinicalprocess/activity/actions/GetActivities/1/rivtabp21</webServiceUrlGA>
+		<webServiceUrlGRA>https://TARGETHOST/vp/crm/requeststatus/GetRequestActivities/1/rivtabp21</webServiceUrlGRA>
+		<!-- <webServiceUrlGSOCS>https://TARGETHOSTe/vp/crm/scheduling/GetSubjectOfCareSchedule/1/rivtabp21</webServiceUrlGSOCS> -->
+		<webServiceUrlGSOCS>https://TARGETHOST/vp/GetSubjectOfCareSchedule/1/rivtabp21</webServiceUrlGSOCS>
+		
 		<!-- .... vp/informationsecurity/auditing/log/GetAccessLogsForPatient/2/rivtabp21 -->
 		<!-- <webServiceUrl>https://qa.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl> -->
 		<!-- <webServiceUrl>http://localhost:8088/mockGetCareDocumentationResponderBinding</webServiceUrl> -->
 		<httpHeaderHsaId>112233</httpHeaderHsaId>
 		<logicalAddress>5565594230</logicalAddress>
 		<patientId>196711222940</patientId>
+		<patientId1>191001209814</patientId1>
+		<patientId2>191001229812</patientId2>
+		<patientId3>191001239803</patientId3>
+		<patientId4>191001249810</patientId4>
+		<patientId5>191001259827</patientId5>
+		<patientId6>191001269818</patientId6>
+		<patientId7>191001279809</patientId7>
+		<patientId8>191001289816</patientId8>
+		<patientIdNoEngagements>191001219805</patientIdNoEngagements>
 		<patientIdType>1.2.752.129.2.1.3.1</patientIdType>
 		<sourceSystemHSAId>SOURCESYSTEMHSA</sourceSystemHSAId>
 		<!-- Loggparametrar-->
@@ -179,83 +210,78 @@ under the License.
 	
 	<!-- BASIC FLOWS -->
 	<!-- clinicalprocess/healthcond/description -->
-	<testcase id="4.1.2 (GAI) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetAlertInformation/2/rivtabp21</webServiceUrl></data>
-	</testcase>
-	<testcase id="4.2.2 (GCD) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl></data>
-	</testcase>
-	<testcase id="4.3.2 (GD) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21</webServiceUrl></data>
-	</testcase>
-	<testcase id="4.4.2 (GFS) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetFunctionalStatus/2/rivtabp21</webServiceUrl></data>
-	</testcase>
+	<testcase id="4.1.1 (GAI) Patient utan engagemang"></testcase>
+	<testcase id="4.1.2 (GAI) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.1.3 (GAI) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.2.1 (GCD) Patient utan engagemang"></testcase>
+	<testcase id="4.2.2 (GCD) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.2.3 (GCD) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.3.1 (GD) Patient utan engagemang"></testcase>
+	<testcase id="4.3.2 (GD) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.3.3 (GD) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.4.1 (GFS) Patient utan engagemang"></testcase>
+	<testcase id="4.4.2 (GFS) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.4.3 (GFS) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	
 	<!-- clinicalprocess/activityprescription/actoutcome -->
-	<testcase id="4.5.2 (GVH) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/activityprescription/actoutcome/GetVaccinationHistory/1/rivtabp21</webServiceUrl></data>
-	</testcase>
-	<testcase id="4.6.2 (GMH) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/activityprescription/actoutcome/GetMedicationHistory/2/rivtabp21</webServiceUrl></data>
-	</testcase>
+	<testcase id="4.5.1 (GVH) Patient utan engagemang"></testcase>
+	<testcase id="4.5.2 (GVH) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.5.3 (GVH) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.6.1 (GMH) Patient utan engagemang"></testcase>
+	<testcase id="4.6.2 (GMH) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.6.3 (GMH) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	
+
 	<!-- clinicalprocess/logistics/logistics -->
-	<testcase id="4.7.2 (GCC) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCareContacts/3/rivtabp21</webServiceUrl></data>
-	</testcase>
-	<testcase id="4.8.2 (GCP) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCarePlans/2/rivtabp21</webServiceUrl></data>
-	</testcase>
-	<testcase id="4.9.2 (GCS) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCareServices/2/rivtabp21</webServiceUrl></data>
-	</testcase>
+	<testcase id="4.7.1 (GCC) Patient utan engagemang"></testcase>
+	<testcase id="4.7.2 (GCC) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.7.3 (GCC) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.8.1 (GCP) Patient utan engagemang"></testcase>
+	<testcase id="4.8.2 (GCP) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.8.3 (GCP) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.9.1 (GCS) Patient utan engagemang"></testcase>
+	<testcase id="4.9.2 (GCS) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.9.3 (GCS) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	
+
 	<!-- clinicalprocess/healthcond/actoutcome -->
-	<testcase id="4.10.2 (GECGO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetECGOutcome/1/rivtabp21</webServiceUrl></data>
-	</testcase>
-	<testcase id="4.11.2 (GIO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetImagingOutcome/1/rivtabp21</webServiceUrl></data>
-	</testcase>
-	<testcase id="4.12.2 (GLOO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetLaboratoryOrderOutcome/2/rivtabp21</webServiceUrl></data>
-	</testcase>
-	<testcase id="4.13.2 (GMMH) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetMaternityMedicalHistory/3/rivtabp21</webServiceUrl></data>
-	</testcase>
-	<testcase id="4.14.2 (GRO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetReferralOutcome/2/rivtabp21</webServiceUrl></data>
-	</testcase>
+	<testcase id="4.10.1 (GECGO) Patient utan engagemang"></testcase>
+	<testcase id="4.10.2 (GECGO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.10.3 (GECGO) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.11.1 (GIO) Patient utan engagemang"></testcase>
+	<testcase id="4.11.2 (GIO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.11.3 (GIO) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.12.1 (GLOO) Patient utan engagemang"></testcase>
+	<testcase id="4.12.2 (GLOO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.12.3 (GLOO) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.13.1 (GMMH) Patient utan engagemang"></testcase>
+	<testcase id="4.13.2 (GMMH) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.13.3 (GMMH) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.14.1 (GRO) Patient utan engagemang"></testcase>
+	<testcase id="4.14.2 (GRO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.14.3 (GRO) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	
+
 	<!-- clinicalprocess/healthcond/basic -->
-	<testcase id="4.15.2 (GO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/basic/GetObservations/1/rivtabp21</webServiceUrl></data>
-	</testcase>
+	<testcase id="4.15.1 (GO) Patient utan engagemang"></testcase>
+	<testcase id="4.15.2 (GO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.15.3 (GO) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	
+
 	<!-- clinicalprocess/activity/actions -->
-	<testcase id="4.16.2 (GA) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/clinicalprocess/activity/actions/GetActivities/1/rivtabp21</webServiceUrl></data>
-	</testcase>
+	<testcase id="4.16.1 (GA) Patient utan engagemang"></testcase>
+	<testcase id="4.16.2 (GA) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.16.3 (GA) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	
+
 	<!-- crm/requeststatus -->
-	<testcase id="4.17.2 (GRA) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/crm/requeststatus/GetRequestActivities/1/rivtabp21</webServiceUrl></data>
-	</testcase>
+	<testcase id="4.17.1 (GRA) Patient utan engagemang"></testcase>
+	<testcase id="4.17.2 (GRA) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.17.3 (GRA) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	
+
 	<!-- crm/scheduling -->
-	<testcase id="4.18.2 (GSOCS) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster">
-		<description>Simple flow</description>
-		<data><webServiceUrl>https://TARGETHOST/vp/GetSubjectOfCareSchedule/1/rivtabp21</webServiceUrl></data>
-	</testcase>
+	<testcase id="4.18.1 (GSOCS) Patient utan engagemang"></testcase>
+	<testcase id="4.18.2 (GSOCS) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.18.3 (GSOCS) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
 </testsuite>

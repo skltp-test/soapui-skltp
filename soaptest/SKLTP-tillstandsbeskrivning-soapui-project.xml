@@ -3318,14 +3318,249 @@
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="3fe36736-28f8-44c0-8cea-0fd1a5b23f7e" isOneWay="false" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update" name="Update" bindingOperationName="Update" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/></con:operation></con:interface><con:testSuite id="c83e7720-17f5-41cc-b6bc-c55dc3d8dfeb" name="clinicalprocess_healthcond_description"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="8c777f03-215c-4af0-b985-abf0cfebb1e6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.2 (GAI) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="46f41784-5523-4dcd-a6d2-5da304c3c271"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="3fe36736-28f8-44c0-8cea-0fd1a5b23f7e" isOneWay="false" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update" name="Update" bindingOperationName="Update" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5ae62224-d6cb-4eb2-8826-6e15ad3a75c5" name="GAI_PatientId1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://test.esb.ntjp.se/vp/Update/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>5565594230</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:Update>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001209814</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
+               <urn2:categorization>upp</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:creationTime>20181001105012</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001209814</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
+               <urn2:categorization>upp</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:creationTime>20181001105012</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001209814</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
+               <urn2:categorization>upp</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:creationTime>20181001105012</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+
+      </urn1:Update>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call><con:call id="b5f088c1-a5b0-4536-a2db-974e328603f2" name="GCD_PatientId1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://test.esb.ntjp.se/vp/Update/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>5565594230</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:Update>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001209814</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
+               <urn2:categorization>voo</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:creationTime>20181001105012</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001209814</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
+               <urn2:categorization>voo</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:creationTime>20181001105012</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001209814</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
+               <urn2:categorization>voo</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:creationTime>20181001105012</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+
+      </urn1:Update>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call><con:call id="577e46a3-931f-4f4f-bf34-dea988931759" name="GD_PatientId1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://test.esb.ntjp.se/vp/Update/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>5565594230</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:Update>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001209814</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
+               <urn2:categorization>dia</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:creationTime>20181001105012</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001209814</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
+               <urn2:categorization>dia</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:creationTime>20181001105012</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001209814</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
+               <urn2:categorization>dia</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:creationTime>20181001105012</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+
+      </urn1:Update>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call><con:call id="bd31861c-f1e1-4e48-8c56-a86b0f4b9e1a" name="GFS_PatientId1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://test.esb.ntjp.se/vp/Update/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>5565594230</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:Update>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001209814</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
+               <urn2:categorization>fun-fun</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:creationTime>20181001105012</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001209814</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
+               <urn2:categorization>pad-pad</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:creationTime>20181001105012</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001209814</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
+               <urn2:categorization>fun-fun</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:creationTime>20181001105012</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+
+      </urn1:Update>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="c83e7720-17f5-41cc-b6bc-c55dc3d8dfeb" name="clinicalprocess_healthcond_description"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="f81bb999-6744-4c3f-ac0b-4bffe060e933" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.1 (GAI) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="cbcca86e-8d3f-4ba0-aabf-33c22a28e9aa"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
-source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="b287bb8e-8e7a-44f1-9820-6b424ecb5be6"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_2.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="2.0" id="e836766f-0f00-4aea-9389-e324211ee4f2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="aee327d4-e3e5-45e4-ade3-a42038c700ca"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_2.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="2.0" id="e836766f-0f00-4aea-9389-e324211ee4f2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGAI}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientIdNoEngagements}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f6fa2542-9332-4e9e-9e36-72d08f990096"/><con:assertion type="Schema Compliance" id="962ce0cd-c2b5-4b36-8efa-cf49529b514a"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="32da1281-3f64-4a52-8d1f-c0a473af5bf1"/><con:assertion type="Simple NotContains" id="324b7db5-2848-48a0-a88c-e0be0ed2e3ac" name="Not Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8c777f03-215c-4af0-b985-abf0cfebb1e6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.2 (GAI) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="46f41784-5523-4dcd-a6d2-5da304c3c271"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="b287bb8e-8e7a-44f1-9820-6b424ecb5be6"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_2.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="2.0" id="e836766f-0f00-4aea-9389-e324211ee4f2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGAI}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
    <soapenv:Header>\r
       <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
    </soapenv:Header>\r
@@ -3337,14 +3572,52 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          </urn1:patientId>\r
       </urn1:GetAlertInformation>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f6fa2542-9332-4e9e-9e36-72d08f990096"/><con:assertion type="Schema Compliance" id="962ce0cd-c2b5-4b36-8efa-cf49529b514a"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="32da1281-3f64-4a52-8d1f-c0a473af5bf1"/><con:assertion type="Simple Contains" id="eca89c25-0e35-44be-b6e5-a3ea03821cbf" name="Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="0bc2bd6e-e4a8-4947-a9ee-dba93ecf4440" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.2.2 (GCD) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="9f980352-09df-4c7b-b274-3c5675071255"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f6fa2542-9332-4e9e-9e36-72d08f990096"/><con:assertion type="Schema Compliance" id="962ce0cd-c2b5-4b36-8efa-cf49529b514a"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="32da1281-3f64-4a52-8d1f-c0a473af5bf1"/><con:assertion type="Simple Contains" id="eca89c25-0e35-44be-b6e5-a3ea03821cbf" name="Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="0a279173-faf3-485a-9337-43f511ceb472" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.3 (GAI) Patient med engagemang hos tre producenter med vardera 1 post" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="f9b5c74d-9cfc-4a29-931e-76c629ad53a6"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
-source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.1" id="ee508678-5c20-436a-ac6e-67483a411ee2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareDocumentationResponderBinding_2.1</con:interface><con:operation>GetCareDocumentation</con:operation><con:request name="2.1" id="e6d5aa4a-f4dd-488b-8d32-7d7d852c6864"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="c3cd55e1-cc8d-459c-a5d4-163f6683de32"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_2.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="2.0" id="e836766f-0f00-4aea-9389-e324211ee4f2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGAI}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId1}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f6fa2542-9332-4e9e-9e36-72d08f990096"/><con:assertion type="Schema Compliance" id="962ce0cd-c2b5-4b36-8efa-cf49529b514a"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="32da1281-3f64-4a52-8d1f-c0a473af5bf1"/><con:assertion type="Simple Contains" id="eca89c25-0e35-44be-b6e5-a3ea03821cbf" name="Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="89ab2e2c-df9b-486c-8be3-f9bbe5c48be6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.2.1 (GCD) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="8e8e16bd-884b-404a-9406-b77affbafb04"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.1" id="db61248b-b0e0-402d-b3c4-8ccba78760cd"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareDocumentationResponderBinding_2.1</con:interface><con:operation>GetCareDocumentation</con:operation><con:request name="2.1" id="e6d5aa4a-f4dd-488b-8d32-7d7d852c6864"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGCD}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCareDocumentation>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientIdNoEngagements}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetCareDocumentation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="991abf66-86b6-4bd8-9946-c707ec148d7b"/><con:assertion type="Schema Compliance" id="b6eb9619-01dc-4f67-b255-f72b35a6ebe3"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="a1575630-3200-41c9-b5d8-f840fcba0490"/><con:assertion type="Simple NotContains" id="f87ea945-aa69-4e36-9eae-81e77aa792df" name="Not Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="0bc2bd6e-e4a8-4947-a9ee-dba93ecf4440" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.2.2 (GCD) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="9f980352-09df-4c7b-b274-3c5675071255"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.1" id="ee508678-5c20-436a-ac6e-67483a411ee2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareDocumentationResponderBinding_2.1</con:interface><con:operation>GetCareDocumentation</con:operation><con:request name="2.1" id="e6d5aa4a-f4dd-488b-8d32-7d7d852c6864"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGCD}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
    <soapenv:Header>\r
       <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
    </soapenv:Header>\r
@@ -3356,14 +3629,52 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          </urn1:patientId>\r
       </urn1:GetCareDocumentation>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="991abf66-86b6-4bd8-9946-c707ec148d7b"/><con:assertion type="Schema Compliance" id="b6eb9619-01dc-4f67-b255-f72b35a6ebe3"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="a1575630-3200-41c9-b5d8-f840fcba0490"/><con:assertion type="Simple Contains" id="b584bce2-0ebc-48d5-83fb-4b6a9ac989a7" name="Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="a964862c-54e2-4a50-b6da-6bda94547178" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.3.2 (GD) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="91f19c53-2e26-4907-9435-ec80607870b0"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="991abf66-86b6-4bd8-9946-c707ec148d7b"/><con:assertion type="Schema Compliance" id="b6eb9619-01dc-4f67-b255-f72b35a6ebe3"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="a1575630-3200-41c9-b5d8-f840fcba0490"/><con:assertion type="Simple Contains" id="b584bce2-0ebc-48d5-83fb-4b6a9ac989a7" name="Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="a13e1755-a7d7-452b-a70b-6954bb4285c4" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.2.3 (GCD) Patient med engagemang hos tre producenter med vardera 1 post" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="1ef79e55-ed77-47e6-a00a-5cf2846ee29a"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
-source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="899d142f-982a-4417-9b4e-7ee0aac0d100"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding_2.0</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="2.0" id="2c26f7ce-7995-4245-9fb6-fb80f3e7c3d5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.1" id="70519689-c5e5-4233-b40b-70c5112aed14"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareDocumentationResponderBinding_2.1</con:interface><con:operation>GetCareDocumentation</con:operation><con:request name="2.1" id="e6d5aa4a-f4dd-488b-8d32-7d7d852c6864"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGCD}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCareDocumentation>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId1}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetCareDocumentation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="991abf66-86b6-4bd8-9946-c707ec148d7b"/><con:assertion type="Schema Compliance" id="b6eb9619-01dc-4f67-b255-f72b35a6ebe3"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="a1575630-3200-41c9-b5d8-f840fcba0490"/><con:assertion type="Simple Contains" id="b584bce2-0ebc-48d5-83fb-4b6a9ac989a7" name="Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="5bdbed68-ca73-45e8-9978-8fdb5950ebe3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.3.1 (GD) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="2ac1458d-9dae-49df-9111-3c99f3b73592"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="43ff8b7e-9805-4158-a96f-4d66e7e52b8b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding_2.0</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="2.0" id="2c26f7ce-7995-4245-9fb6-fb80f3e7c3d5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGD}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetDiagnosis>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientIdNoEngagements}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetDiagnosis>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5dcc9225-157e-4e1c-836c-1df5776657af"/><con:assertion type="Schema Compliance" id="f456d0b4-dde4-47e9-9d86-bb8249cf6c78"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="2ffda80a-46c7-4a48-90ea-2ffc151e5632"/><con:assertion type="Simple NotContains" id="37c2a714-157e-4bab-be30-5017a9063a44" name="Not Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="a964862c-54e2-4a50-b6da-6bda94547178" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.3.2 (GD) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="91f19c53-2e26-4907-9435-ec80607870b0"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="899d142f-982a-4417-9b4e-7ee0aac0d100"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding_2.0</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="2.0" id="2c26f7ce-7995-4245-9fb6-fb80f3e7c3d5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGD}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
    <soapenv:Header>\r
       <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
    </soapenv:Header>\r
@@ -3375,14 +3686,52 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          </urn1:patientId>\r
       </urn1:GetDiagnosis>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5dcc9225-157e-4e1c-836c-1df5776657af"/><con:assertion type="Schema Compliance" id="f456d0b4-dde4-47e9-9d86-bb8249cf6c78"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="2ffda80a-46c7-4a48-90ea-2ffc151e5632"/><con:assertion type="Simple Contains" id="7e89e678-bc44-4952-9101-e236e49d800d" name="Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="71e6491d-6314-4785-8498-214001b67efa" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.4.2 (GFS) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="ac3d12ef-bcff-4bdb-aefb-800c75c84d8d"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5dcc9225-157e-4e1c-836c-1df5776657af"/><con:assertion type="Schema Compliance" id="f456d0b4-dde4-47e9-9d86-bb8249cf6c78"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="2ffda80a-46c7-4a48-90ea-2ffc151e5632"/><con:assertion type="Simple Contains" id="7e89e678-bc44-4952-9101-e236e49d800d" name="Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6acfdf26-6aef-451e-8ea7-e3ab7d54a907" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.3.3 (GD) Patient med engagemang hos tre producenter med vardera 1 post" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="25fcca7d-9c84-4690-ae22-e1ca2c23eb4b"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
-source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="6acb6faf-86e9-4d5b-9366-e45297261768"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetFunctionalStatusResponderBinding_2.0</con:interface><con:operation>GetFunctionalStatus</con:operation><con:request name="2.0" id="faa21cdc-2cb2-4755-a4e6-6b8df69ea0a1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="1e14c927-1ddf-47df-b0b0-8fbfe0f5e8c0"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding_2.0</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="2.0" id="2c26f7ce-7995-4245-9fb6-fb80f3e7c3d5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGD}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetDiagnosis>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId1}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetDiagnosis>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5dcc9225-157e-4e1c-836c-1df5776657af"/><con:assertion type="Schema Compliance" id="f456d0b4-dde4-47e9-9d86-bb8249cf6c78"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="2ffda80a-46c7-4a48-90ea-2ffc151e5632"/><con:assertion type="Simple Contains" id="7e89e678-bc44-4952-9101-e236e49d800d" name="Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e2018992-934d-4bcf-bf52-dc4b5227f2c1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.4.1 (GFS) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="5c3e180d-8284-4520-9e15-954d6737d51d"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="953657a5-c682-4592-a28a-ffa4e245d977"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetFunctionalStatusResponderBinding_2.0</con:interface><con:operation>GetFunctionalStatus</con:operation><con:request name="2.0" id="faa21cdc-2cb2-4755-a4e6-6b8df69ea0a1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGFS}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetFunctionalStatus>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientIdNoEngagements}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetFunctionalStatus>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6c7e2e00-4962-47c7-9978-17ccfa90ddc4"/><con:assertion type="Schema Compliance" id="e3952b2a-e4d2-467a-8284-ab65cc41a80d"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="83f14ed1-1c24-4a1f-9aea-870a0b481f48"/><con:assertion type="Simple NotContains" id="adb3eeaf-d1b1-4595-ac09-191a4284e623" name="Not Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="71e6491d-6314-4785-8498-214001b67efa" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.4.2 (GFS) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="ac3d12ef-bcff-4bdb-aefb-800c75c84d8d"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="6acb6faf-86e9-4d5b-9366-e45297261768"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetFunctionalStatusResponderBinding_2.0</con:interface><con:operation>GetFunctionalStatus</con:operation><con:request name="2.0" id="faa21cdc-2cb2-4755-a4e6-6b8df69ea0a1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGFS}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
    <soapenv:Header>\r
       <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
    </soapenv:Header>\r
@@ -3390,6 +3739,25 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
       <urn1:GetFunctionalStatus>\r
          <urn1:patientId>\r
             <urn2:id>${patientId}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetFunctionalStatus>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6c7e2e00-4962-47c7-9978-17ccfa90ddc4"/><con:assertion type="Schema Compliance" id="e3952b2a-e4d2-467a-8284-ab65cc41a80d"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="83f14ed1-1c24-4a1f-9aea-870a0b481f48"/><con:assertion type="Simple Contains" id="fe777203-2d18-4544-9009-dd22eef4e758" name="Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="9187f39f-51c7-4cd8-840c-be9dda4d5d09" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.4.3 (GFS) Patient med engagemang hos tre producenter med vardera 1 post" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="5a99c3ce-ca48-4f32-96ee-8def5cd0d8af"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="c6a960bb-b8fa-4feb-8ff2-9da7c7dabd0f"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetFunctionalStatusResponderBinding_2.0</con:interface><con:operation>GetFunctionalStatus</con:operation><con:request name="2.0" id="faa21cdc-2cb2-4755-a4e6-6b8df69ea0a1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGFS}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetFunctionalStatus>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId1}</urn2:id>\r
             <urn2:type>${patientIdType}</urn2:type>\r
          </urn1:patientId>\r
       </urn1:GetFunctionalStatus>\r
