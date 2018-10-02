@@ -33,7 +33,7 @@ under the License.
 		<webServiceUrlGD>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21</webServiceUrlGD>
 		<webServiceUrlGFS>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetFunctionalStatus/2/rivtabp21</webServiceUrlGFS>
 		<webServiceUrlGVH>https://TARGETHOST/vp/clinicalprocess/activityprescription/actoutcome/GetVaccinationHistory/1/rivtabp21</webServiceUrlGVH>
-		<webServiceUrlGMH>https://TARGETHOSTo/vp/clinicalprocess/activityprescription/actoutcome/GetMedicationHistory/2/rivtabp21</webServiceUrlGMH>
+		<webServiceUrlGMH>https://TARGETHOST/vp/clinicalprocess/activityprescription/actoutcome/GetMedicationHistory/2/rivtabp21</webServiceUrlGMH>
 		<webServiceUrlGCC>https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCareContacts/2/rivtabp21</webServiceUrlGCC>
 		<webServiceUrlGCP>https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCarePlans/2/rivtabp21</webServiceUrlGCP>
 		<webServiceUrlGCS>https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCareServices/2/rivtabp21</webServiceUrlGCS>
