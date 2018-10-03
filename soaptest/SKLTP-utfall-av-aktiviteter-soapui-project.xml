@@ -8666,8 +8666,8 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    <soapenv:Body>\r
       <urn1:GetLaboratoryOrderOutcome>\r
          <urn1:patientId>\r
-            <urn2:root>${patientIdNoEngagements}</urn2:root>\r
-            <urn2:extension>${patientIdType}</urn2:extension>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientIdNoEngagements}</urn2:extension>\r
          </urn1:patientId>\r
       </urn1:GetLaboratoryOrderOutcome>\r
    </soapenv:Body>\r
@@ -8697,8 +8697,8 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    <soapenv:Body>\r
       <urn1:GetLaboratoryOrderOutcome>\r
          <urn1:patientId>\r
-            <urn2:root>${patientId}</urn2:root>\r
-            <urn2:extension>${patientIdType}</urn2:extension>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientId}</urn2:extension>\r
          </urn1:patientId>\r
       </urn1:GetLaboratoryOrderOutcome>\r
    </soapenv:Body>\r
@@ -8728,8 +8728,8 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    <soapenv:Body>\r
       <urn1:GetLaboratoryOrderOutcome>\r
          <urn1:patientId>\r
-            <urn2:root>${patientId1}</urn2:root>\r
-            <urn2:extension>${patientIdType}</urn2:extension>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientId1}</urn2:extension>\r
          </urn1:patientId>\r
       </urn1:GetLaboratoryOrderOutcome>\r
    </soapenv:Body>\r
