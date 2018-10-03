@@ -37,7 +37,7 @@ under the License.
 		<webServiceUrlGCC>https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCareContacts/2/rivtabp21</webServiceUrlGCC>
 		<webServiceUrlGCP>https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCarePlans/2/rivtabp21</webServiceUrlGCP>
 		<webServiceUrlGCS>https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCareServices/2/rivtabp21</webServiceUrlGCS>
-		<webServiceUrlGECGO>hhttps://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetECGOutcome/1/rivtabp21</webServiceUrlGECGO>
+		<webServiceUrlGECGO>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetECGOutcome/1/rivtabp21</webServiceUrlGECGO>
 		<webServiceUrlGIO>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetImagingOutcome/1/rivtabp21</webServiceUrlGIO>
 		<webServiceUrlGLOO>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetLaboratoryOrderOutcome/3/rivtabp21</webServiceUrlGLOO>
 		<webServiceUrlGMMH>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetMaternityMedicalHistory/3/rivtabp21</webServiceUrlGMMH>
