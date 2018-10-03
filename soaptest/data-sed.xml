@@ -204,7 +204,7 @@ under the License.
 			VP009 returneras (Fel vid kontakt med tjänsteproducenten.)
 		</description>
 		<data>
-			<logicalAddress>SE2321000131-E1002</logicalAddress>
+			<logicalAddress>PRODUCER-NOT-AVAILABLE</logicalAddress>
 		</data>
 	</testcase>
 	
