@@ -272,6 +272,7 @@ under the License.
 	<testcase id="4.16.1 (GA) Patient utan engagemang"></testcase>
 	<testcase id="4.16.2 (GA) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
 	<testcase id="4.16.3 (GA) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.16.4 (GA) Patient med engagemang hos en producent med 1000 poster"></testcase>
 	
 
 	<!-- crm/requeststatus -->
