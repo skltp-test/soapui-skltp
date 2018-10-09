@@ -866,6 +866,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -878,6 +881,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -890,6 +896,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -902,6 +911,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -914,6 +926,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -926,6 +941,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -938,6 +956,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -950,6 +971,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
 		  <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -962,6 +986,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -974,6 +1001,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -986,6 +1016,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -998,6 +1031,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -1010,6 +1046,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -1022,6 +1061,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -1034,6 +1076,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -1046,6 +1091,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -1058,6 +1106,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -1070,6 +1121,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
 		  <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -1082,6 +1136,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:crm:requeststatus</urn2:serviceDomain>
@@ -1178,4 +1235,45 @@ ca.assertNonEmptyResponse()
 ca.assertExactNumberOfRecords(1000)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="edb73a41-3dfe-420b-b92e-e45b7659e165" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gra1:requestActivity/urn1:subjectOfCareId', context.patientId2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>xmlns:gra1</con:name><con:value>urn:riv:crm:requeststatus:GetRequestActivitiesResponder:1</con:value></con:property><con:property><con:name>xmlns:urn1</con:name><con:value>urn:riv:crm:requeststatus:1</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gra1:requestActivity</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+ca.assertSpecificValueInAllRecords('/gra1:requestActivity/urn1:subjectOfCareId', context.patientId2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="de521ccc-07f4-4609-a1c3-583cc2dd2249" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.17.5 (GRA) Patient med engagemang hos 20 producenter med vardera 5 poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="d98d52a5-7dd3-4786-9399-77dd615b5119"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="2a8df6c3-3c70-457a-9dd2-f8206c117ce1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetRequestActivitiesResponderBinding_1.0</con:interface><con:operation>GetRequestActivities</con:operation><con:request name="1.0" id="f79c9124-ceac-434a-81c1-3fa38d20e1fb"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGRA}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:crm:requeststatus:GetRequestActivitiesResponder:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetRequestActivities>\r
+         <urn1:subjectOfCareId>${patientId3}</urn1:subjectOfCareId>\r
+      </urn1:GetRequestActivities>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="7caccfa3-581c-481a-9ac2-3c5fc1685d6e"/><con:assertion type="Schema Compliance" id="a7d6a74d-77a0-4aac-95bc-d5a52d62d213" disabled="true"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="281c924e-a288-4d98-87a6-047a09bc5590"/><con:assertion type="GroovyScriptAssertion" id="78abcba3-d0cc-4388-a424-a8f2975a42b0" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK02")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK03")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK04")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK05")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK06")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK07")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK08")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK09")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK10")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK11")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK12")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK13")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK14")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK15")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK16")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK17")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK18")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK19")
+ca.assertSpecificValueInAnyRecord('/gra1:requestActivity/urn1:logicalSystemId', "SKLTP-MOCK20")</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="edb73a41-3dfe-420b-b92e-e45b7659e165" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gra1:requestActivity/urn1:subjectOfCareId', context.patientId3)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>xmlns:gra1</con:name><con:value>urn:riv:crm:requeststatus:GetRequestActivitiesResponder:1</con:value></con:property><con:property><con:name>xmlns:urn1</con:name><con:value>urn:riv:crm:requeststatus:1</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gra1:requestActivity</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

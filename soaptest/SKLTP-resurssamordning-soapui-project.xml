@@ -2473,6 +2473,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2485,6 +2488,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2497,6 +2503,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2509,6 +2518,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2521,6 +2533,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2533,6 +2548,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2545,6 +2563,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2557,6 +2578,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
 		  <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2569,6 +2593,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2581,6 +2608,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2593,6 +2623,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2605,6 +2638,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2617,6 +2653,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2629,6 +2668,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2641,6 +2683,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2653,6 +2698,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2665,6 +2713,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2677,6 +2728,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
 		  <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2689,6 +2743,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2724,6 +2781,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2736,6 +2796,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2748,6 +2811,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2760,6 +2826,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2772,6 +2841,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2784,6 +2856,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2796,6 +2871,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2808,6 +2886,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
 		  <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2820,6 +2901,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2832,6 +2916,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2844,6 +2931,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2856,6 +2946,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2868,6 +2961,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2880,6 +2976,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2892,6 +2991,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2904,6 +3006,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2916,6 +3021,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2928,6 +3036,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
 		  <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2940,6 +3051,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2964,7 +3078,6 @@
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
-            <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
                <urn2:categorization>cll-cs</urn2:categorization>
@@ -2976,6 +3089,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -2988,6 +3104,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3000,6 +3119,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3012,6 +3134,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3024,6 +3149,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3036,6 +3164,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3048,6 +3179,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3060,6 +3194,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
 		  <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3072,6 +3209,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3084,6 +3224,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3096,6 +3239,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3108,6 +3254,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3120,6 +3269,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3132,6 +3284,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3144,6 +3299,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3156,6 +3314,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3168,6 +3329,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3180,6 +3344,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
 		  <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3192,6 +3359,9 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
+            </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
                <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
@@ -3365,7 +3535,88 @@ ca.assertNonEmptyResponse()
 ca.assertExactNumberOfRecords(1000)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="d0c8b1cc-ae04-4d2e-96b5-96795df6ce36" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gcc3:careContact/urn3:careContactHeader/urn3:patientId/urn3:id', context.patientId2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="83e09eb1-0651-4508-a22d-6c3d942aeb66" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.8.1 (GCP) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="9dc7bc89-87cd-430c-8b97-a26c85263309"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gcc3:careContact/urn3:careContactHeader/urn3:patientId/urn3:id', context.patientId2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="b7a2c976-acd6-43d7-84bc-0ec188183cd2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.7.5 (GCC) Patient med engagemang hos 20 producenter med vardera 5 poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="09d61ae9-40e8-4bd9-a811-404211ca29c4"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Set data GCC2" id="60c70966-aed0-4659-af44-328f8ab42bf7"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gcc2:careContact")</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="20246e63-0572-41ba-ad6a-a740c09c6998"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareContactsResponderBinding_2.0</con:interface><con:operation>GetCareContacts</con:operation><con:request name="2.0" id="d5d4e795-522d-49f1-9972-3c837aeb768b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGCC}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:2" xmlns:urn2="urn:riv:clinicalprocess:logistics:logistics:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCareContacts>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId3}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetCareContacts>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1f0e8cbb-800f-4a92-ae00-c0900df9b0ca"/><con:assertion type="Schema Compliance" id="6b57fcb7-ab08-42bc-abb8-bc60842699e2"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="bec99e7e-9e77-478e-9bc2-017d523af9fa"/><con:assertion type="GroovyScriptAssertion" id="f849cfa3-17ea-4fc4-9fed-5df4b409f334" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK02")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK03")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK04")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK05")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK06")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK07")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK08")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK09")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK10")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK11")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK12")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK13")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK14")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK15")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK16")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK17")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK18")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK19")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK20")</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="db2fcd2c-8ada-41ee-af89-98b1a678196e" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gcc2:careContact/urn2:careContactHeader/urn2:patientId/urn2:id', context.patientId3)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Set data GCC3" id="777acbfe-4101-4af3-9c1c-d5d1bcc47516"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gcc3:careContact")</script></con:config></con:testStep><con:testStep type="request" name="3.0" id="e01cc02c-4625-407f-8268-236096b56f3c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareContactsResponderBinding_3.0</con:interface><con:operation>GetCareContacts</con:operation><con:request name="3.0" id="e82b2647-9d09-432c-b383-cd8aaded1fdb"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGCC}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3" xmlns:urn2="urn:riv:clinicalprocess:logistics:logistics:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCareContacts>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId3}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetCareContacts>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="bd13dd6b-a44c-40e7-b1cb-1bb0254714dc"/><con:assertion type="Schema Compliance" id="4eea73b7-8a7b-4d1d-9071-b069c71a0ac6"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="98abf52b-5521-4db2-bbba-59bd2964de80"/><con:assertion type="GroovyScriptAssertion" id="b2580d3b-e6df-4e57-927c-8bcf7ea50d1d" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK02")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK03")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK04")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK05")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK06")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK07")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK08")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK09")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK10")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK11")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK12")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK13")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK14")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK15")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK16")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK17")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK18")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK19")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK20")</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="d0c8b1cc-ae04-4d2e-96b5-96795df6ce36" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gcc3:careContact/urn3:careContactHeader/urn3:patientId/urn3:id', context.patientId3)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="83e09eb1-0651-4508-a22d-6c3d942aeb66" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.8.1 (GCP) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="9dc7bc89-87cd-430c-8b97-a26c85263309"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -3458,7 +3709,51 @@ ca.assertNonEmptyResponse()
 ca.assertExactNumberOfRecords(1000)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="5244629a-70a4-456d-b1b4-66d79fd5adf1" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gcp2:carePlan/urn3:carePlanHeader/urn3:patientId/urn3:id', context.patientId2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="fd2a1681-71eb-480f-9505-c4bd8d8acee7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.9.1 (GCS) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="11af0de7-c27d-4649-8dd9-5d03f5ba2897"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gcp2:carePlan/urn3:carePlanHeader/urn3:patientId/urn3:id', context.patientId2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e388e06a-7ba6-47e5-ba16-b550a940518f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.8.5 (GCP) Patient med engagemang hos 20 producenter med vardera 5 poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="eca9fbf6-3839-44a8-b48d-540571d14dbf"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Set data GCP2" id="6de9898d-c105-4c3b-982b-29121c7c5c1c"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gcp2:carePlan")</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="7718299d-bf3b-49b0-a599-70b319def60d"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCarePlansResponderBinding_2.0</con:interface><con:operation>GetCarePlans</con:operation><con:request name="2.0" id="3e57dee8-5dd8-4928-9ea3-fa1fe88dcf4a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGCP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:logistics:logistics:GetCarePlansResponder:2" xmlns:urn2="urn:riv:clinicalprocess:logistics:logistics:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCarePlans>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId3}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetCarePlans>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="24ea37e1-24ac-4cd4-b815-66e330bfac42"/><con:assertion type="Schema Compliance" id="209e2a91-92fa-4ed8-9845-1311ebe683d7"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="5996defc-c5f6-49fd-9114-0cd05bc3f9d5"/><con:assertion type="GroovyScriptAssertion" id="830d8a66-0d09-4f8f-895c-65f32b5027b2" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK02")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK03")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK04")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK05")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK06")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK07")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK08")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK09")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK10")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK11")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK12")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK13")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK14")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK15")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK16")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK17")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK18")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK19")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK20")</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="5244629a-70a4-456d-b1b4-66d79fd5adf1" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gcp2:carePlan/urn3:carePlanHeader/urn3:patientId/urn3:id', context.patientId3)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="fd2a1681-71eb-480f-9505-c4bd8d8acee7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.9.1 (GCS) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="11af0de7-c27d-4649-8dd9-5d03f5ba2897"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -3551,7 +3846,51 @@ ca.assertNonEmptyResponse()
 ca.assertExactNumberOfRecords(1000)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="e62c833e-f366-49df-a51c-786bd9f6d991" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gcs2:careService/urn3:careServiceHeader/urn3:patientId/urn3:id', context.patientId2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="79b9e6fb-15f8-4d3f-9ca9-fb188a81c7b7" port="8088" path="/mockGetCareServicesResponderBinding_2.0" host="NMT028" name="GetCareServicesResponderBinding_2.0 MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetCareServices" id="92bed2f0-7ede-4ad7-ad9c-e8d4c9a8fe01" interface="GetCareServicesResponderBinding_2.0" operation="GetCareServices"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="756d78f8-6a68-49c3-ba6d-bb2565544c94" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:clinicalprocess:logistics:logistics:GetCareServicesResponder:2" xmlns:urn1="urn:riv:clinicalprocess:logistics:logistics:3">
+ca.assertSpecificValueInAllRecords('/gcs2:careService/urn3:careServiceHeader/urn3:patientId/urn3:id', context.patientId2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="97c94034-8889-423e-9310-ddb8041498c4" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.9.5 (GCS) Patient med engagemang hos 20 producenter med vardera 5 poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="d3aa84e0-7866-4ada-bcd0-f3a8e4ef6b90"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Set data GCS2" id="471ffe3a-47bf-4c00-8709-d5af2041e95d"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gcs2:careService")</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="d4d7cf29-4a39-4624-845e-d09e421ffd33"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareServicesResponderBinding_2.0</con:interface><con:operation>GetCareServices</con:operation><con:request name="2.0" id="fa842175-ddf1-4a92-9986-638f580461fd"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGCS}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:logistics:logistics:GetCareServicesResponder:2" xmlns:urn2="urn:riv:clinicalprocess:logistics:logistics:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCareServices>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId3}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetCareServices>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4bb7e254-ff1f-406e-9505-e6264dd19bb1"/><con:assertion type="Schema Compliance" id="73b83834-d64b-45cd-b5d7-dbec846cefe9"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="15a7a7d7-f64d-4eb0-aec9-c024d8b7de50"/><con:assertion type="GroovyScriptAssertion" id="80351051-89fb-48b8-9b98-2113e0824256" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK02")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK03")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK04")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK05")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK06")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK07")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK08")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK09")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK10")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK11")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK12")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK13")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK14")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK15")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK16")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK17")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK18")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK19")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK20")</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="e62c833e-f366-49df-a51c-786bd9f6d991" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gcs2:careService/urn3:careServiceHeader/urn3:patientId/urn3:id', context.patientId3)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="79b9e6fb-15f8-4d3f-9ca9-fb188a81c7b7" port="8088" path="/mockGetCareServicesResponderBinding_2.0" host="NMT028" name="GetCareServicesResponderBinding_2.0 MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetCareServices" id="92bed2f0-7ede-4ad7-ad9c-e8d4c9a8fe01" interface="GetCareServicesResponderBinding_2.0" operation="GetCareServices"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="756d78f8-6a68-49c3-ba6d-bb2565544c94" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:clinicalprocess:logistics:logistics:GetCareServicesResponder:2" xmlns:urn1="urn:riv:clinicalprocess:logistics:logistics:3">
    <soapenv:Header/>
    <soapenv:Body>
       <urn:GetCareServicesResponse>
