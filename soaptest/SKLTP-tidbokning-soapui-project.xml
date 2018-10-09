@@ -730,6 +730,29 @@
          </urn1:engagementTransaction>
       </urn1:Update>
    </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call><con:call id="69468b79-6dc8-449e-a67e-4b8efac5ea7b" name="GSOCS_PatientId2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://test.esb.ntjp.se/vp/Update/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>5565594230</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:Update>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001229812</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:crm:scheduling</urn2:serviceDomain>
+               <urn2:categorization>NA</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181009075700</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:creationTime>20181009075700</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+      </urn1:Update>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="402515d3-3a10-4f2a-adce-76a041b3b8c6" name="crm_scheduling"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="2a16536a-d4b7-4ece-b6db-2d5da590f193" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.18.1 (GSOCS) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="22d1eac0-5482-442b-b338-303f379763a0"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
@@ -804,7 +827,34 @@ ca.assertSpecificValueInAnyRecord('/gsocs1:timeslotDetail/urn1:healthcare_facili
 ca.assertSpecificValueInAnyRecord('/gsocs1:timeslotDetail/urn1:healthcare_facility', "SKLTP-MOCK03")</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="9684a375-3992-4083-b1ce-b6ce23071c2d" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gsocs1:timeslotDetail/urn1:subject_of_care', context.patientId1)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="1a2a8b3d-232b-4838-9e51-4ec2853309b3" port="8088" path="/mockGetSubjectOfCareScheduleResponderBinding_1.1" host="NMT028" name="GetSubjectOfCareScheduleResponderBinding_1.1 MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetSubjectOfCareSchedule" id="d83409ef-265e-47e1-b3fb-5e4ec106ef79" interface="GetSubjectOfCareScheduleResponderBinding_1.1" operation="GetSubjectOfCareSchedule"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="33158260-4ab4-4f6e-9fcf-b675db2c55c9" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1" xmlns:urn1="urn:riv:crm:scheduling:1" xmlns:urn2="urn:riv:crm:scheduling:1.1">
+ca.assertSpecificValueInAllRecords('/gsocs1:timeslotDetail/urn1:subject_of_care', context.patientId1)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="64922c74-71e7-415b-874e-34be55d1a9b3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.18.4 (GSOCS) Patient med engagemang hos en producent med 1000 poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="642db457-d79b-4c08-8e6a-a829914f8f24"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.1" id="de52669e-b1ad-4aa0-85ba-157199bb8360"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetSubjectOfCareScheduleResponderBinding_1.1</con:interface><con:operation>GetSubjectOfCareSchedule</con:operation><con:request name="1.1" id="e389513f-fc72-4851-a675-49288cb6a6c7"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="discardResponse">true</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGSOCS}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1">\r
+   <soapenv:Header>\r
+      <urn:Actor>\r
+         <urn:actorId>${patientId2}</urn:actorId>\r
+         <urn:actorType>subject_of_care</urn:actorType>\r
+      </urn:Actor>\r
+      <urn1:LogicalAddress>${logicalAddress}</urn1:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn2:GetSubjectOfCareSchedule>\r
+         <urn2:healthcare_facility>HSAIDTYPE</urn2:healthcare_facility>\r
+         <urn2:subject_of_care>${patientId2}</urn2:subject_of_care>\r
+      </urn2:GetSubjectOfCareSchedule>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1003bd6f-5e93-4ee2-98b1-ac37a0dfdac8"/><con:assertion type="Schema Compliance" id="bccb34aa-a93b-4b3d-999d-16693d396008"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="9deed632-c436-4fbb-ae01-f284ddd1b1fe"/><con:assertion type="GroovyScriptAssertion" id="6aada59c-d5ec-4c54-9476-c3755c0055f6" name="Assert numRecords"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertExactNumberOfRecords(1000)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="9684a375-3992-4083-b1ce-b6ce23071c2d" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gsocs1:timeslotDetail/urn1:subject_of_care', context.patientId2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="1a2a8b3d-232b-4838-9e51-4ec2853309b3" port="8088" path="/mockGetSubjectOfCareScheduleResponderBinding_1.1" host="NMT028" name="GetSubjectOfCareScheduleResponderBinding_1.1 MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetSubjectOfCareSchedule" id="d83409ef-265e-47e1-b3fb-5e4ec106ef79" interface="GetSubjectOfCareScheduleResponderBinding_1.1" operation="GetSubjectOfCareSchedule"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="33158260-4ab4-4f6e-9fcf-b675db2c55c9" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1" xmlns:urn1="urn:riv:crm:scheduling:1" xmlns:urn2="urn:riv:crm:scheduling:1.1">
    <soapenv:Header/>
    <soapenv:Body>
       <urn:GetSubjectOfCareScheduleResponse>

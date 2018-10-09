@@ -1927,93 +1927,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          <urn1:interactionAgreementId>2866a7c4-9c60-433f-9035-a4d779ffe7a1</urn1:interactionAgreementId>\r
       </urn1:GetActivities>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="8d89e01d-606d-474d-84c9-86662ce81b15"/><con:assertion type="Schema Compliance" id="670592fe-acb1-4aa0-9c4d-5d90e0c7a74f"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="c1a50ad2-b013-4606-96cc-9962fee1981c"/><con:assertion type="XPath Match" id="60fd8b02-e19d-4279-af5a-145f781c664e" name="XPath Match"><con:configuration><path>declare namespace ns2="urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1";
-//ns2:activityGroup[1]</path><content><![CDATA[<ns2:activityGroup xmlns:ns2="urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1" xmlns="urn:riv:clinicalprocess:activity:actions:1" xmlns:ns3="urn:riv:interoperability:headers:1" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1">
-  <patient>
-    <id>
-      <root>1.2.752.129.2.1.3.1</root>
-      <extension>191001209814</extension>
-    </id>
-    <dateOfBirth>19671122</dateOfBirth>
-    <gender>
-      <code>9</code>
-      <codeSystem>1.2.752.129.2.2.1.1</codeSystem>
-    </gender>
-  </patient>
-  <performerRole>
-    <id>
-      <root>1.2.752.129.2.1.4.1</root>
-      <extension>TST-1274362876</extension>
-    </id>
-    <code>
-      <code>expectedPerformerRoleCode</code>
-      <codeSystem>ÅÄÖP)"N#/YT"!ON#YT</codeSystem>
-    </code>
-    <careUnit>
-      <id>
-        <root>12345</root>
-        <extension>SE-123245</extension>
-      </id>
-      <careGiver>
-        <id>
-          <root>12345</root>
-          <extension>SKLTP-MOCK01</extension>
-        </id>
-      </careGiver>
-    </careUnit>
-  </performerRole>
-  <legalAuthenticator>
-    <id>
-      <root>12345</root>
-      <extension>SE-123245</extension>
-    </id>
-    <time>
-      <format>YYYYMMDDhhmmss</format>
-      <value>20151201131313</value>
-    </time>
-    <name>?legalAuthenticatorName</name>
-  </legalAuthenticator>
-  <sourceSystem>
-    <id>
-      <root>1.2.752.129.2.1.4.1</root>
-      <extension>SKLTP-MOCK01</extension>
-    </id>
-  </sourceSystem>
-  <activity>
-    <id>
-      <root>expectedActivityIdRoot</root>
-      <extension>expectedActivityIdExtension</extension>
-    </id>
-    <status>
-      <code>397943006</code>
-      <codeSystem>1.2.752.116.2.1.1</codeSystem>
-    </status>
-    <code>
-      <code>activityCode</code>
-      <codeSystem>activityCodeSystem</codeSystem>
-    </code>
-    <time>
-      <start>
-        <format>YYYYMMDDhhmmss</format>
-        <value>20160101120000</value>
-      </start>
-      <end>
-        <format>YYYYMMDDhhmmss</format>
-        <value>20160101120000</value>
-      </end>
-    </time>
-    <method>
-      <code>methodcode</code>
-      <codeSystem>methodcodeSystem</codeSystem>
-      <codeSystemName>methodcodeSystemName</codeSystemName>
-      <codeSystemVersion>methodcodeSystemVersion</codeSystemVersion>
-      <displayName>methoddisplayName</displayName>
-    </method>
-    <description>description</description>
-    <approvedForPatient>true</approvedForPatient>
-    <registrationTime>20151201131313</registrationTime>
-  </activity>
-</ns2:activityGroup>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="341dcd0b-9e23-4308-bca2-74bcec84dd05" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="8d89e01d-606d-474d-84c9-86662ce81b15"/><con:assertion type="Schema Compliance" id="670592fe-acb1-4aa0-9c4d-5d90e0c7a74f"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="c1a50ad2-b013-4606-96cc-9962fee1981c"/><con:assertion type="GroovyScriptAssertion" id="341dcd0b-9e23-4308-bca2-74bcec84dd05" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
 ca.assertSpecificValueInAnyRecord('/urn:activityGroup/urn1:sourceSystem/urn1:id/urn1:extension', "SKLTP-MOCK01")
@@ -2048,7 +1962,7 @@ def utils = new GroovyUtils(context)
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
-source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="493c65c3-619f-4035-b064-6d080549532d"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetActivitiesResponderBinding_1.0</con:interface><con:operation>GetActivities</con:operation><con:request name="1.0" id="5e6d25d3-39d7-42f1-8781-4c220390626a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGA}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1" xmlns:urn2="urn:riv:clinicalprocess:activity:actions:1">\r
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="493c65c3-619f-4035-b064-6d080549532d"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetActivitiesResponderBinding_1.0</con:interface><con:operation>GetActivities</con:operation><con:request name="1.0" id="5e6d25d3-39d7-42f1-8781-4c220390626a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="discardResponse">true</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGA}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1" xmlns:urn2="urn:riv:clinicalprocess:activity:actions:1">\r
    <soapenv:Header>\r
       <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
    </soapenv:Header>\r
