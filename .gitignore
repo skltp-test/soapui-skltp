@@ -1,5 +1,5 @@
+*-FAILED.txt
 TEST*.xml
-Testsuite*.txt
 *.log
 readme.txt
 truststore.p12
