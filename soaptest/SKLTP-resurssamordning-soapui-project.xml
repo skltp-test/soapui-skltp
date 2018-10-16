@@ -3078,7 +3078,7 @@
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
-               <urn2:registeredResidentIdentification>191001249810</urn2:registeredResidentIdentification>
+               <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
                <urn2:categorization>cll-cs</urn2:categorization>
                <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
@@ -3093,7 +3093,7 @@
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
-               <urn2:registeredResidentIdentification>191001249810</urn2:registeredResidentIdentification>
+               <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
                <urn2:categorization>cll-cs</urn2:categorization>
                <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
@@ -3108,7 +3108,7 @@
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
-               <urn2:registeredResidentIdentification>191001249810</urn2:registeredResidentIdentification>
+               <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
                <urn2:categorization>cll-cs</urn2:categorization>
                <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
@@ -3217,6 +3217,218 @@
                <urn2:registeredResidentIdentification>191001249810</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
                <urn2:categorization>cll-cp</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:creationTime>20181005162712</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+      </urn1:Update>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call><con:call id="8ef49419-b52b-4d32-8b93-a5d6874ae74f" name="GCC_PatientId5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://test.esb.ntjp.se/vp/Update/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>5565594230</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:Update>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001259827</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
+               <urn2:categorization>vko</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:creationTime>20181005162712</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001259827</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
+               <urn2:categorization>vko</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:creationTime>20181005162712</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001259827</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
+               <urn2:categorization>vko</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:creationTime>20181005162712</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+      </urn1:Update>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call><con:call id="32960b8d-6176-4519-b097-c2e0b4118547" name="GCP_PatientId5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://test.esb.ntjp.se/vp/Update/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>5565594230</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:Update>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001259827</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
+               <urn2:categorization>cll-cp</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:creationTime>20181005162712</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001259827</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
+               <urn2:categorization>cll-cp</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:creationTime>20181005162712</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001259827</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
+               <urn2:categorization>cll-cp</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:creationTime>20181005162712</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+      </urn1:Update>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call><con:call id="14737a8f-bc89-4ac2-b405-b096aeff6974" name="GCS_PatientId4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://test.esb.ntjp.se/vp/Update/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>5565594230</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:Update>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001249810</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
+               <urn2:categorization>cll-cs</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:creationTime>20181005162712</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001249810</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
+               <urn2:categorization>cll-cs</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:creationTime>20181005162712</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001249810</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
+               <urn2:categorization>cll-cs</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:creationTime>20181005162712</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+      </urn1:Update>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call><con:call id="f2510cce-f7a8-4c3f-853c-a68aef939181" name="GCS_PatientId5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://test.esb.ntjp.se/vp/Update/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>5565594230</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:Update>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001259827</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
+               <urn2:categorization>cll-cs</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:creationTime>20181005162712</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001259827</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
+               <urn2:categorization>cll-cs</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:creationTime>20181005162712</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001259827</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
+               <urn2:categorization>cll-cs</urn2:categorization>
                <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
@@ -3514,7 +3726,54 @@ ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3
 ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="d0c8b1cc-ae04-4d2e-96b5-96795df6ce36" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gcc3:careContact/urn3:careContactHeader/urn3:patientId/urn3:id', context.patientId4)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="83e09eb1-0651-4508-a22d-6c3d942aeb66" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.8.1 (GCP) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="9dc7bc89-87cd-430c-8b97-a26c85263309"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gcc3:careContact/urn3:careContactHeader/urn3:patientId/urn3:id', context.patientId4)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="3a5e46b9-568d-44a3-bdf3-e2d3f9397bc6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.7.9 (GCC) Logiskt fel från en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="563b3cb9-c0ee-44eb-b882-ebda355f5ff5"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Set data GCC2" id="9d50c0aa-319a-477c-91a5-0f6f35065db7"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gcc2:careContact")</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="dbc2f421-adfa-4081-8ebf-d64bb480318b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareContactsResponderBinding_2.0</con:interface><con:operation>GetCareContacts</con:operation><con:request name="2.0" id="d5d4e795-522d-49f1-9972-3c837aeb768b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGCC}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:2" xmlns:urn2="urn:riv:clinicalprocess:logistics:logistics:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCareContacts>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId5}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetCareContacts>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1f0e8cbb-800f-4a92-ae00-c0900df9b0ca"/><con:assertion type="Schema Compliance" id="6b57fcb7-ab08-42bc-abb8-bc60842699e2"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="bec99e7e-9e77-478e-9bc2-017d523af9fa"/><con:assertion type="GroovyScriptAssertion" id="f849cfa3-17ea-4fc4-9fed-5df4b409f334" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gcc2:careContact/urn2:careContactHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK03")
+ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="db2fcd2c-8ada-41ee-af89-98b1a678196e" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gcc2:careContact/urn2:careContactHeader/urn2:patientId/urn2:id', context.patientId5)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Set data GCC3" id="9a8938d6-85bc-4a6e-a94d-74699f6d6747"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gcc3:careContact")</script></con:config></con:testStep><con:testStep type="request" name="3.0" id="b7b13fba-2fde-4b20-b35a-3a8850c500e1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareContactsResponderBinding_3.0</con:interface><con:operation>GetCareContacts</con:operation><con:request name="3.0" id="e82b2647-9d09-432c-b383-cd8aaded1fdb"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGCC}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3" xmlns:urn2="urn:riv:clinicalprocess:logistics:logistics:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCareContacts>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId5}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetCareContacts>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="bd13dd6b-a44c-40e7-b1cb-1bb0254714dc"/><con:assertion type="Schema Compliance" id="4eea73b7-8a7b-4d1d-9071-b069c71a0ac6"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="98abf52b-5521-4db2-bbba-59bd2964de80"/><con:assertion type="GroovyScriptAssertion" id="b2580d3b-e6df-4e57-927c-8bcf7ea50d1d" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gcc3:careContact/urn3:careContactHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK03")
+ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="d0c8b1cc-ae04-4d2e-96b5-96795df6ce36" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gcc3:careContact/urn3:careContactHeader/urn3:patientId/urn3:id', context.patientId5)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="83e09eb1-0651-4508-a22d-6c3d942aeb66" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.8.1 (GCP) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="9dc7bc89-87cd-430c-8b97-a26c85263309"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -3678,7 +3937,34 @@ ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourc
 ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="5244629a-70a4-456d-b1b4-66d79fd5adf1" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gcp2:carePlan/urn3:carePlanHeader/urn3:patientId/urn3:id', context.patientId4)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="fd2a1681-71eb-480f-9505-c4bd8d8acee7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.9.1 (GCS) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="11af0de7-c27d-4649-8dd9-5d03f5ba2897"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gcp2:carePlan/urn3:carePlanHeader/urn3:patientId/urn3:id', context.patientId4)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="ecf78f2a-d139-4503-9140-4fb0ab7ae9a5" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.8.9 (GCP) Logiskt fel från en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="5d59d35d-70cf-4d81-b56a-912438915882"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Set data GCP2" id="c420adee-c5c9-4616-a02b-c82f90a5b4b4"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gcp2:carePlan")</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="0f3bae50-376b-49ab-83d1-44edef9f49cc"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCarePlansResponderBinding_2.0</con:interface><con:operation>GetCarePlans</con:operation><con:request name="2.0" id="3e57dee8-5dd8-4928-9ea3-fa1fe88dcf4a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGCP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:logistics:logistics:GetCarePlansResponder:2" xmlns:urn2="urn:riv:clinicalprocess:logistics:logistics:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCarePlans>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId5}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetCarePlans>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="24ea37e1-24ac-4cd4-b815-66e330bfac42"/><con:assertion type="Schema Compliance" id="209e2a91-92fa-4ed8-9845-1311ebe683d7"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="5996defc-c5f6-49fd-9114-0cd05bc3f9d5"/><con:assertion type="GroovyScriptAssertion" id="830d8a66-0d09-4f8f-895c-65f32b5027b2" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gcp2:carePlan/urn3:carePlanHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK02")
+ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="5244629a-70a4-456d-b1b4-66d79fd5adf1" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gcp2:carePlan/urn3:carePlanHeader/urn3:patientId/urn3:id', context.patientId5)</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="a3631930-500e-4237-85a7-cdb5b6d6a6f0" name="Assert resultCode"><con:configuration><token>&lt;resultCode>INFO&lt;/resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="fd2a1681-71eb-480f-9505-c4bd8d8acee7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.9.1 (GCS) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="11af0de7-c27d-4649-8dd9-5d03f5ba2897"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -3842,7 +4128,34 @@ ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3
 ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="e62c833e-f366-49df-a51c-786bd9f6d991" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gcs2:careService/urn3:careServiceHeader/urn3:patientId/urn3:id', context.patientId4)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="79b9e6fb-15f8-4d3f-9ca9-fb188a81c7b7" port="8088" path="/mockGetCareServicesResponderBinding_2.0" host="NMT028" name="GetCareServicesResponderBinding_2.0 MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetCareServices" id="92bed2f0-7ede-4ad7-ad9c-e8d4c9a8fe01" interface="GetCareServicesResponderBinding_2.0" operation="GetCareServices"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="756d78f8-6a68-49c3-ba6d-bb2565544c94" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:clinicalprocess:logistics:logistics:GetCareServicesResponder:2" xmlns:urn1="urn:riv:clinicalprocess:logistics:logistics:3">
+ca.assertSpecificValueInAllRecords('/gcs2:careService/urn3:careServiceHeader/urn3:patientId/urn3:id', context.patientId4)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="b6132f42-550d-4f7e-9df1-cde651bcc33b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.9.9 (GCS) Logiskt fel från en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="ec61f9d5-2b9e-4f05-94e7-59bdd02b07d1"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Set data GCS2" id="8c5261a1-9f7c-4dee-ab69-5eacb826f133"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gcs2:careService")</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="aaefb81f-3909-4c73-8629-9a90401a7edf"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareServicesResponderBinding_2.0</con:interface><con:operation>GetCareServices</con:operation><con:request name="2.0" id="fa842175-ddf1-4a92-9986-638f580461fd"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGCS}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:logistics:logistics:GetCareServicesResponder:2" xmlns:urn2="urn:riv:clinicalprocess:logistics:logistics:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetCareServices>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId5}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetCareServices>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4bb7e254-ff1f-406e-9505-e6264dd19bb1"/><con:assertion type="Schema Compliance" id="73b83834-d64b-45cd-b5d7-dbec846cefe9"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="15a7a7d7-f64d-4eb0-aec9-c024d8b7de50"/><con:assertion type="GroovyScriptAssertion" id="80351051-89fb-48b8-9b98-2113e0824256" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gcs2:careService/urn3:careServiceHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK02")
+ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="e62c833e-f366-49df-a51c-786bd9f6d991" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gcs2:careService/urn3:careServiceHeader/urn3:patientId/urn3:id', context.patientId5)</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="856e8f00-2211-49cd-87cd-ec46a4fb763b" name="Assert resultCode"><con:configuration><token>&lt;resultCode>INFO&lt;/resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="79b9e6fb-15f8-4d3f-9ca9-fb188a81c7b7" port="8088" path="/mockGetCareServicesResponderBinding_2.0" host="NMT028" name="GetCareServicesResponderBinding_2.0 MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetCareServices" id="92bed2f0-7ede-4ad7-ad9c-e8d4c9a8fe01" interface="GetCareServicesResponderBinding_2.0" operation="GetCareServices"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="756d78f8-6a68-49c3-ba6d-bb2565544c94" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:clinicalprocess:logistics:logistics:GetCareServicesResponder:2" xmlns:urn1="urn:riv:clinicalprocess:logistics:logistics:3">
    <soapenv:Header/>
    <soapenv:Body>
       <urn:GetCareServicesResponse>
@@ -3890,4 +4203,4 @@ ca.assertSpecificValueInAllRecords('/gcs2:careService/urn3:careServiceHeader/urn
          </urn:result>
       </urn:GetCareServicesResponse>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:logistics:GetCareServicesResponder:2:GetCareServices"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties><con:property><con:name>xmlns:gcc2</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:2</con:value></con:property><con:property><con:name>xmlns:urn2</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:2</con:value></con:property><con:property><con:name>xmlns:gcp2</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCarePlansResponder:2</con:value></con:property><con:property><con:name>xmlns:urn3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:3</con:value></con:property><con:property><con:name>xmlns:gcc3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3</con:value></con:property><con:property><con:name>xmlns:gcs2</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareServicesResponder:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gcs2:careService</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:logistics:GetCareServicesResponder:2:GetCareServices"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties><con:property><con:name>xmlns:gcc2</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:2</con:value></con:property><con:property><con:name>xmlns:urn2</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:2</con:value></con:property><con:property><con:name>xmlns:gcp2</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCarePlansResponder:2</con:value></con:property><con:property><con:name>xmlns:urn3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:3</con:value></con:property><con:property><con:name>xmlns:gcc3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3</con:value></con:property><con:property><con:name>xmlns:gcs2</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareServicesResponder:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gcp2:carePlan</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

@@ -218,8 +218,8 @@ under the License.
 	<testcase id="4.1.6 (GAI) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.1.7 (GAI) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.1.8 (GAI) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.1.9 (GAI) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.1.10 (GAI) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.1.9 (GAI) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.1.10 (GAI) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.1.11 (GAI) Exception från en av tre producenter"></testcase>
 	<testcase id="4.1.12 (GAI) Exception från samtliga producenter"></testcase>	
 	
@@ -231,8 +231,8 @@ under the License.
 	<testcase id="4.2.6 (GCD) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.2.7 (GCD) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.2.8 (GCD) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.2.9 (GCD) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.2.10 (GCD) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.2.9 (GCD) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.2.10 (GCD) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.2.11 (GCD) Exception från en av tre producenter"></testcase>
 	<testcase id="4.2.12 (GCD) Exception från samtliga producenter"></testcase>	
 	
@@ -244,8 +244,8 @@ under the License.
 	<testcase id="4.3.6 (GD) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.3.7 (GD) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.3.8 (GD) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.3.9 (GD) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.3.10 (GD) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.3.9 (GD) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.3.10 (GD) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.3.11 (GD) Exception från en av tre producenter"></testcase>
 	<testcase id="4.3.12 (GD) Exception från samtliga producenter"></testcase>	
 	
@@ -257,8 +257,8 @@ under the License.
 	<testcase id="4.4.6 (GFS) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.4.7 (GFS) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.4.8 (GFS) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.4.9 (GFS) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.4.10 (GFS) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.4.9 (GFS) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.4.10 (GFS) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.4.11 (GFS) Exception från en av tre producenter"></testcase>
 	<testcase id="4.4.12 (GFS) Exception från samtliga producenter"></testcase>	
 	
@@ -271,8 +271,8 @@ under the License.
 	<testcase id="4.5.6 (GVH) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.5.7 (GVH) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.5.8 (GVH) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.5.9 (GVH) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.5.10 (GVH) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.5.9 (GVH) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.5.10 (GVH) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.5.11 (GVH) Exception från en av tre producenter"></testcase>
 	<testcase id="4.5.12 (GVH) Exception från samtliga producenter"></testcase>	
 	
@@ -284,8 +284,8 @@ under the License.
 	<testcase id="4.6.6 (GMH) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.6.7 (GMH) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.6.8 (GMH) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.6.9 (GMH) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.6.10 (GMH) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.6.9 (GMH) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.6.10 (GMH) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.6.11 (GMH) Exception från en av tre producenter"></testcase>
 	<testcase id="4.6.12 (GMH) Exception från samtliga producenter"></testcase>	
 	´
@@ -299,8 +299,8 @@ under the License.
 	<testcase id="4.7.6 (GCC) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.7.7 (GCC) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.7.8 (GCC) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.7.9 (GCC) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.7.10 (GCC) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.7.9 (GCC) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.7.10 (GCC) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.7.11 (GCC) Exception från en av tre producenter"></testcase>
 	<testcase id="4.7.12 (GCC) Exception från samtliga producenter"></testcase>	
 	
@@ -312,8 +312,8 @@ under the License.
 	<testcase id="4.8.6 (GCP) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.8.7 (GCP) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.8.8 (GCP) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.8.9 (GCP) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.8.10 (GCP) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.8.9 (GCP) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.8.10 (GCP) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.8.11 (GCP) Exception från en av tre producenter"></testcase>
 	<testcase id="4.8.12 (GCP) Exception från samtliga producenter"></testcase>	
 	
@@ -325,8 +325,8 @@ under the License.
 	<testcase id="4.9.6 (GCS) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.9.7 (GCS) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.9.8 (GCS) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.9.9 (GCS) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.9.10 (GCS) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.9.9 (GCS) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.9.10 (GCS) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.9.11 (GCS) Exception från en av tre producenter"></testcase>
 	<testcase id="4.9.12 (GCS) Exception från samtliga producenter"></testcase>	
 	
@@ -340,8 +340,8 @@ under the License.
 	<testcase id="4.10.6 (GECGO) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.10.7 (GECGO) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.10.8 (GECGO) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.10.9 (GECGO) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.10.10 (GECGO) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.10.9 (GECGO) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.10.10 (GECGO) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.10.11 (GECGO) Exception från en av tre producenter"></testcase>
 	<testcase id="4.10.12 (GECGO) Exception från samtliga producenter"></testcase>	
 	
@@ -353,8 +353,8 @@ under the License.
 	<testcase id="4.11.6 (GIO) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.11.7 (GIO) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.11.8 (GIO) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.11.9 (GIO) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.11.10 (GIO) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.11.9 (GIO) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.11.10 (GIO) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.11.11 (GIO) Exception från en av tre producenter"></testcase>
 	<testcase id="4.11.12 (GIO) Exception från samtliga producenter"></testcase>	
 	
@@ -366,8 +366,8 @@ under the License.
 	<testcase id="4.12.6 (GLOO) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.12.7 (GLOO) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.12.8 (GLOO) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.12.9 (GLOO) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.12.10 (GLOO) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.12.9 (GLOO) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.12.10 (GLOO) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.12.11 (GLOO) Exception från en av tre producenter"></testcase>
 	<testcase id="4.12.12 (GLOO) Exception från samtliga producenter"></testcase>	
 	
@@ -379,8 +379,8 @@ under the License.
 	<testcase id="4.13.6 (GMMH) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.13.7 (GMMH) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.13.8 (GMMH) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.13.9 (GMMH) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.13.10 (GMMH) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.13.9 (GMMH) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.13.10 (GMMH) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.13.11 (GMMH) Exception från en av tre producenter"></testcase>
 	<testcase id="4.13.12 (GMMH) Exception från samtliga producenter"></testcase>	
 	
@@ -392,8 +392,8 @@ under the License.
 	<testcase id="4.14.6 (GRO) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.14.7 (GRO) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.14.8 (GRO) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.14.9 (GRO) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.14.10 (GRO) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.14.9 (GRO) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.14.10 (GRO) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.14.11 (GRO) Exception från en av tre producenter"></testcase>
 	<testcase id="4.14.12 (GRO) Exception från samtliga producenter"></testcase>	
 	
@@ -407,8 +407,8 @@ under the License.
 	<testcase id="4.15.6 (GO) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.15.7 (GO) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.15.8 (GO) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.15.9 (GO) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.15.10 (GO) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.15.9 (GO) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.15.10 (GO) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.15.11 (GO) Exception från en av tre producenter"></testcase>
 	<testcase id="4.15.12 (GO) Exception från samtliga producenter"></testcase>
 
@@ -422,8 +422,8 @@ under the License.
 	<testcase id="4.16.6 (GA) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.16.7 (GA) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.16.8 (GA) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.16.9 (GA) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.16.10 (GA) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.16.9 (GA) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.16.10 (GA) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.16.11 (GA) Exception från en av tre producenter"></testcase>
 	<testcase id="4.16.12 (GA) Exception från samtliga producenter"></testcase>
 
@@ -437,8 +437,8 @@ under the License.
 	<testcase id="4.17.6 (GRA) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.17.7 (GRA) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.17.8 (GRA) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.17.9 (GRA) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.17.10 (GRA) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.17.9 (GRA) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.17.10 (GRA) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.17.11 (GRA) Exception från en av tre producenter"></testcase>
 	<testcase id="4.17.12 (GRA) Exception från samtliga producenter"></testcase>
 
@@ -451,8 +451,8 @@ under the License.
 	<testcase id="4.18.6 (GSOCS) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.18.7 (GSOCS) Timeout mot en av tre producenter"></testcase>
 	<testcase id="4.18.8 (GSOCS) Timeout mot samtliga producenter"></testcase>
-	<testcase id="4.18.9 (GSOCS) Tekniskt fel från en av tre producenter"></testcase>
-	<testcase id="4.18.10 (GSOCS) Tekniskt fel från samtliga producenter"></testcase>
+	<testcase id="4.18.9 (GSOCS) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.18.10 (GSOCS) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.18.11 (GSOCS) Exception från en av tre producenter"></testcase>
 	<testcase id="4.18.12 (GSOCS) Exception från samtliga producenter"></testcase>
 </testsuite>
