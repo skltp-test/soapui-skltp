@@ -5980,7 +5980,7 @@
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
-               <urn2:registeredResidentIdentification>191001279809</urn2:registeredResidentIdentification>
+               <urn2:registeredResidentIdentification>191001299807</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
                <urn2:categorization>voo</urn2:categorization>
                <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
@@ -5995,7 +5995,7 @@
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
-               <urn2:registeredResidentIdentification>191001279809</urn2:registeredResidentIdentification>
+               <urn2:registeredResidentIdentification>191001299807</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
                <urn2:categorization>voo</urn2:categorization>
                <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
@@ -6010,7 +6010,7 @@
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
-               <urn2:registeredResidentIdentification>191001279809</urn2:registeredResidentIdentification>
+               <urn2:registeredResidentIdentification>191001299807</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
                <urn2:categorization>voo</urn2:categorization>
                <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
@@ -6033,7 +6033,7 @@
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
-               <urn2:registeredResidentIdentification>191001279809</urn2:registeredResidentIdentification>
+               <urn2:registeredResidentIdentification>191001299807</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
                <urn2:categorization>dia</urn2:categorization>
                <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
@@ -6048,7 +6048,7 @@
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
-               <urn2:registeredResidentIdentification>191001279809</urn2:registeredResidentIdentification>
+               <urn2:registeredResidentIdentification>191001299807</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
                <urn2:categorization>dia</urn2:categorization>
                <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
@@ -6063,7 +6063,7 @@
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
-               <urn2:registeredResidentIdentification>191001279809</urn2:registeredResidentIdentification>
+               <urn2:registeredResidentIdentification>191001299807</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
                <urn2:categorization>dia</urn2:categorization>
                <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
@@ -6086,7 +6086,7 @@
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
-               <urn2:registeredResidentIdentification>191001279809</urn2:registeredResidentIdentification>
+               <urn2:registeredResidentIdentification>191001299807</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
                <urn2:categorization>fun-fun</urn2:categorization>
                <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
@@ -6101,7 +6101,7 @@
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
-               <urn2:registeredResidentIdentification>191001279809</urn2:registeredResidentIdentification>
+               <urn2:registeredResidentIdentification>191001299807</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
                <urn2:categorization>fun-fun</urn2:categorization>
                <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
@@ -6116,7 +6116,7 @@
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
-               <urn2:registeredResidentIdentification>191001279809</urn2:registeredResidentIdentification>
+               <urn2:registeredResidentIdentification>191001299807</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:healthcond:description</urn2:serviceDomain>
                <urn2:categorization>fun-fun</urn2:categorization>
                <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
@@ -6528,8 +6528,13 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f6fa2542-9332-4e9e-9e36-72d08f990096"/><con:assertion type="Schema Compliance" id="962ce0cd-c2b5-4b36-8efa-cf49529b514a"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="32da1281-3f64-4a52-8d1f-c0a473af5bf1"/><con:assertion type="GroovyScriptAssertion" id="05e6d3fa-2cd9-492f-8d8f-06b4ed54cdf4" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertExactNumberOfRecords(0)
-</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="abdc9297-33f6-4314-80ed-2980c407abdd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.8 (GAI) Timeout mot samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="eaad126d-76cc-4aa3-9c3a-c10c84e1b086"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gai2:alertInformation/urn2:alertInformationHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gai2:alertInformation/urn2:alertInformationHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK02")
+ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="a853716f-1112-468c-966c-fac7b8fb10dd" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId9)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="abdc9297-33f6-4314-80ed-2980c407abdd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.8 (GAI) Timeout mot samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="eaad126d-76cc-4aa3-9c3a-c10c84e1b086"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -6834,7 +6839,13 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="991abf66-86b6-4bd8-9946-c707ec148d7b"/><con:assertion type="Schema Compliance" id="b6eb9619-01dc-4f67-b255-f72b35a6ebe3"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="a1575630-3200-41c9-b5d8-f840fcba0490"/><con:assertion type="GroovyScriptAssertion" id="2da8c777-f78f-429d-8274-b741669f47af" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e1d57216-0277-4630-854e-c693b1517029" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.2.8 (GCD) Timeout mot samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="bf89d06a-cc39-4fe7-8c1d-af185e757a7b"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gcd2:careDocumentation/urn2:careDocumentationHeader/urn2:sourceSystemHSAid', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gcd2:careDocumentation/urn2:careDocumentationHeader/urn2:sourceSystemHSAid', "SKLTP-MOCK02")
+ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="d4c2190d-6808-4b40-ade5-3e48df1335ed" name="Assert patientID"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gcd2:careDocumentation/urn2:careDocumentationHeader/urn2:patientId/urn2:id', context.patientId9)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e1d57216-0277-4630-854e-c693b1517029" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.2.8 (GCD) Timeout mot samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="bf89d06a-cc39-4fe7-8c1d-af185e757a7b"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -6930,7 +6941,7 @@ ca.assertSpecificValueInAnyRecord('/gcd2:careDocumentation/urn2:careDocumentatio
 ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="e10fbb3b-af7a-4bc2-ac35-58e552f2ab06" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gcd2:careDocumentation/urn2:careDocumentationHeader/urn2:patientId/urn2:id', context.patientId7)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="dabe04ec-27fb-4895-908d-9e1e6eaf683e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.2.12 (GCD) Exception från samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="e86ad26c-443e-404d-8993-a1f491d237ff"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gcd2:careDocumentation/urn2:careDocumentationHeader/urn2:patientId/urn2:id', context.patientId7)</scriptText></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="79e900b8-67e0-4ed6-ac13-6284b090b34b" name="Assert no resultCode"><con:configuration><token>resultCode</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="dabe04ec-27fb-4895-908d-9e1e6eaf683e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.2.12 (GCD) Exception från samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="e86ad26c-443e-404d-8993-a1f491d237ff"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -6951,7 +6962,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="991abf66-86b6-4bd8-9946-c707ec148d7b"/><con:assertion type="Schema Compliance" id="b6eb9619-01dc-4f67-b255-f72b35a6ebe3"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="a1575630-3200-41c9-b5d8-f840fcba0490"/><con:assertion type="GroovyScriptAssertion" id="2da8c777-f78f-429d-8274-b741669f47af" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="5bdbed68-ca73-45e8-9978-8fdb5950ebe3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.3.1 (GD) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="2ac1458d-9dae-49df-9111-3c99f3b73592"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="dec1be1a-e676-41d1-a246-ae89fb4e393d" name="Assert no resultCode"><con:configuration><token>resultCode</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="5bdbed68-ca73-45e8-9978-8fdb5950ebe3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.3.1 (GD) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="2ac1458d-9dae-49df-9111-3c99f3b73592"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -7136,7 +7147,13 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5dcc9225-157e-4e1c-836c-1df5776657af"/><con:assertion type="Schema Compliance" id="f456d0b4-dde4-47e9-9d86-bb8249cf6c78"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="2ffda80a-46c7-4a48-90ea-2ffc151e5632"/><con:assertion type="GroovyScriptAssertion" id="dec5a69b-0006-4a0d-82e8-e7ae2f14d97f" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="05282ba1-1678-42bb-bf25-6c7f741d9ff0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.3.8 (GD) Timeout mot samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="ba611320-248a-440f-9c2e-4281d1ad1a80"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gd2:diagnosis/urn2:diagnosisHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gd2:diagnosis/urn2:diagnosisHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK02")
+ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="4bf9e89c-8241-4cda-accc-ff16e84c0a64" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gd2:diagnosis/urn2:diagnosisHeader/urn2:patientId/urn2:id', context.patientId9)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="05282ba1-1678-42bb-bf25-6c7f741d9ff0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.3.8 (GD) Timeout mot samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="ba611320-248a-440f-9c2e-4281d1ad1a80"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -7232,7 +7249,7 @@ ca.assertSpecificValueInAnyRecord('/gd2:diagnosis/urn2:diagnosisHeader/urn2:sour
 ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="66b096ec-bf0f-4098-a382-76d4acebf5de" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gd2:diagnosis/urn2:diagnosisHeader/urn2:patientId/urn2:id', context.patientId7)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="48ad7ece-2a55-4d70-9309-3b2fb07b0cd0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.3.12 (GD) Exception från samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="5a3ad7d1-d9cd-4188-b3e5-2d3ae169e3f2"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gd2:diagnosis/urn2:diagnosisHeader/urn2:patientId/urn2:id', context.patientId7)</scriptText></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="dc47f2c5-7613-4dee-8408-e702afa704f6" name="Assert no resultCode"><con:configuration><token>resultCode</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="48ad7ece-2a55-4d70-9309-3b2fb07b0cd0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.3.12 (GD) Exception från samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="5a3ad7d1-d9cd-4188-b3e5-2d3ae169e3f2"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -7253,7 +7270,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5dcc9225-157e-4e1c-836c-1df5776657af"/><con:assertion type="Schema Compliance" id="f456d0b4-dde4-47e9-9d86-bb8249cf6c78"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="2ffda80a-46c7-4a48-90ea-2ffc151e5632"/><con:assertion type="GroovyScriptAssertion" id="dec5a69b-0006-4a0d-82e8-e7ae2f14d97f" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e2018992-934d-4bcf-bf52-dc4b5227f2c1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.4.1 (GFS) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="5c3e180d-8284-4520-9e15-954d6737d51d"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="b40cabc9-77b1-4b05-b0f7-0fd6330823dd" name="Assert no resultCode"><con:configuration><token>resultCode</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e2018992-934d-4bcf-bf52-dc4b5227f2c1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.4.1 (GFS) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="5c3e180d-8284-4520-9e15-954d6737d51d"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -7438,7 +7455,13 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6c7e2e00-4962-47c7-9978-17ccfa90ddc4"/><con:assertion type="Schema Compliance" id="e3952b2a-e4d2-467a-8284-ab65cc41a80d"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="83f14ed1-1c24-4a1f-9aea-870a0b481f48"/><con:assertion type="GroovyScriptAssertion" id="b8d46100-cc78-45c5-856d-2e499fb951d0" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="ec7d8500-8f90-4810-9bf7-28b4cdafe308" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.4.8 (GFS) Timeout mot samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="c3c377c3-a1d3-4d74-8878-4e070788a51a"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gfs2:functionalStatusAssessment/urn2:functionalStatusAssessmentHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gfs2:functionalStatusAssessment/urn2:functionalStatusAssessmentHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK02")
+ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="13ae2140-867d-4df0-92f1-399ec696740c" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gfs2:functionalStatusAssessment/urn2:functionalStatusAssessmentHeader/urn2:patientId/urn2:id', context.patientId9)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="ec7d8500-8f90-4810-9bf7-28b4cdafe308" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.4.8 (GFS) Timeout mot samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="c3c377c3-a1d3-4d74-8878-4e070788a51a"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -7534,7 +7557,7 @@ ca.assertSpecificValueInAnyRecord('/gfs2:functionalStatusAssessment/urn2:functio
 ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="8a4b4246-f7af-4b45-ae9d-571bdc775e0a" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gfs2:functionalStatusAssessment/urn2:functionalStatusAssessmentHeader/urn2:patientId/urn2:id', context.patientId7)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="9922c854-338e-4eda-a984-1a73eb2f21e3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.4.12 (GFS) Exception från samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="66152894-d4f9-416f-9c2a-bfec94af29e0"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gfs2:functionalStatusAssessment/urn2:functionalStatusAssessmentHeader/urn2:patientId/urn2:id', context.patientId7)</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="4bc62b4a-2bd7-4b36-b904-1006b3f44ee0" name="Assert resultCode"><con:configuration><token>&lt;resultCode>INFO&lt;/resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="9922c854-338e-4eda-a984-1a73eb2f21e3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.4.12 (GFS) Exception från samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="66152894-d4f9-416f-9c2a-bfec94af29e0"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -7555,4 +7578,4 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6c7e2e00-4962-47c7-9978-17ccfa90ddc4"/><con:assertion type="Schema Compliance" id="e3952b2a-e4d2-467a-8284-ab65cc41a80d"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="83f14ed1-1c24-4a1f-9aea-870a0b481f48"/><con:assertion type="GroovyScriptAssertion" id="b8d46100-cc78-45c5-856d-2e499fb951d0" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>xmlns:gai2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2</con:value></con:property><con:property><con:name>xmlns:urn2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:2</con:value></con:property><con:property><con:name>xmlns:gcd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:gd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2</con:value></con:property><con:property><con:name>xmlns:gfs2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gfs2:functionalStatusAssessment</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d268bd6c-48f4-40c3-89e7-0cd0af5bc7ef" name="Assert resultCode"><con:configuration><token>&lt;resultCode>INFO&lt;/resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>xmlns:gai2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2</con:value></con:property><con:property><con:name>xmlns:urn2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:2</con:value></con:property><con:property><con:name>xmlns:gcd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:gd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2</con:value></con:property><con:property><con:name>xmlns:gfs2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gd2:diagnosis</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
