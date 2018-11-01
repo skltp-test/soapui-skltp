@@ -507,7 +507,10 @@ under the License.
 	<testcase id="5.2.2 Uppdatera engagemang till tre olika producenter"></testcase>
 	<testcase id="5.2.3 Uppdatera engagemang ytterligare en gång till två av tre producenter"></testcase>
 	<testcase id="5.2.4 Ta bort engagemang till tre olika producenter"></testcase>
+	<testcase id="5.2.5 Ta bort engagemang (som inte existerar)"></testcase>
 	<testcase id="5.3.1 Grundladdning (add) 2003 poster"></testcase>
 	<testcase id="5.3.2 Grundladdning (delete) 2003 poster"></testcase>
+	<testcase id="5.4.1 Skicka Update med två identiska poster"></testcase>
+	<testcase id="5.4.2 Skicka Update med för många poster"></testcase>
 	
 </testsuite>
