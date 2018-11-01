@@ -24,6 +24,7 @@ under the License.
 	<description>Denna testsvit används för att verifiera releasekandidater av NTjP.</description>
 	<globaldata>
 		<webServiceUrlEI>https://TARGETHOST/vp/Update/1/rivtabp21</webServiceUrlEI>
+		<webServiceUrlFC>https://TARGETHOST/vp/FindContent/1/rivtabp21</webServiceUrlFC>
 		<webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl>
 		<webServiceUrlFaulty1>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp20</webServiceUrlFaulty1>
 		<webServiceUrlFaulty2>https://TARGETHOST</webServiceUrlFaulty2>
@@ -48,6 +49,9 @@ under the License.
 		<!-- <webServiceUrlGSOCS>https://TARGETHOSTe/vp/crm/scheduling/GetSubjectOfCareSchedule/1/rivtabp21</webServiceUrlGSOCS> -->
 		<webServiceUrlGSOCS>https://TARGETHOST/vp/GetSubjectOfCareSchedule/1/rivtabp21</webServiceUrlGSOCS>
 		
+		<webServiceUrlFindAllQuestions20>https://TARGETHOST/vp/FindAllQuestions/1/rivtabp20</webServiceUrlFindAllQuestions20>
+		<webServiceUrlFindAllQuestions21>https://TARGETHOST/vp/FindAllQuestions/1/rivtabp21</webServiceUrlFindAllQuestions21>
+				
 		<!-- .... vp/informationsecurity/auditing/log/GetAccessLogsForPatient/2/rivtabp21 -->
 		<!-- <webServiceUrl>https://qa.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl> -->
 		<!-- <webServiceUrl>http://localhost:8088/mockGetCareDocumentationResponderBinding</webServiceUrl> -->
@@ -64,6 +68,7 @@ under the License.
 		<patientId8>191001289816</patientId8>
 		<patientId9>191001299807</patientId9>
 		<patientId10>191001309812</patientId10>
+		<patientId11>191001319803</patientId11>
 		<patientIdNoEngagements>191001219805</patientIdNoEngagements>
 		<patientIdType>1.2.752.129.2.1.3.1</patientIdType>
 		<sourceSystemHSAId>SOURCESYSTEMHSA</sourceSystemHSAId>
@@ -209,6 +214,41 @@ under the License.
 			<logicalAddress>PRODUCER-NOT-AVAILABLE</logicalAddress>
 		</data>
 	</testcase>
+	
+	<testcase id="3.1.1 Konsument rivtabp20 mot producent rivtabp20">
+		<description>
+			(KONSUMENT1 RIVTABP20) -> NTJP(SUT) -> (PRODUCENT RIVTABP20)
+			VP - Bibehåller headern:
+				To (från namespace http://www.w3.org/2005/08/addressing)
+			
+			Tjänstekontraktet FindAllQuestions används.
+			
+			Förväntat resultat:
+			OK (RTjP och mocken förväntar RIVTABP20 format på FindAllQuestions)
+		</description>
+		<data>
+			<logicalAddress>SKLTP-MOCK01</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="3.1.2 Konsument rivtabp21 mot producent rivtabp20">
+			<description>
+			(KONSUMENT1 RIVTABP21) -> NTJP(SUT) -> (PRODUCENT RIVTABP20)
+			VP - Omvandlar headern:
+				LogicalAdress (från namespace urn:riv:itintegration:registry:1) till
+				To (från namespace http://www.w3.org/2005/08/addressing)
+			
+			Tjänstekontraktet FindAllQuestions används.
+			
+			Förväntat resultat:
+			OK (RTjP och mocken förväntar RIVTABP20 format på FindAllQuestions)
+			NTjP genomför konverteringen			
+		</description>
+		<data>
+			<logicalAddress>SKLTP-MOCK01</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="3.1.3 Konsument rivtabp20 mot producent rivtabp21"></testcase>
+	<testcase id="3.1.4 Konsument rivtabp21 mot producent rivtabp21"></testcase>
 	
 	<!-- BASIC FLOWS -->
 	<!-- clinicalprocess/healthcond/description -->
@@ -457,4 +497,17 @@ under the License.
 	<testcase id="4.18.10 (GSOCS) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.18.11 (GSOCS) Exception från en av tre producenter"></testcase>
 	<testcase id="4.18.12 (GSOCS) Exception från samtliga producenter"></testcase>
+	
+	<testcase id="5.0.1 PRE - Rensa engagemang"></testcase>
+	<testcase id="5.0.2 PRE - Rensa prenumeranter av ProcessNotifications"></testcase>
+	
+	<testcase id="5.1.1 Lägg till ett engagemang till en producent"></testcase>
+	<testcase id="5.1.2 Ta bort ett engagemang till en producent"></testcase>
+	<testcase id="5.2.1 Lägg till engagemang till tre olika producenter"></testcase>
+	<testcase id="5.2.2 Uppdatera engagemang till tre olika producenter"></testcase>
+	<testcase id="5.2.3 Uppdatera engagemang ytterligare en gång till två av tre producenter"></testcase>
+	<testcase id="5.2.4 Ta bort engagemang till tre olika producenter"></testcase>
+	<testcase id="5.3.1 Grundladdning (add) 2003 poster"></testcase>
+	<testcase id="5.3.2 Grundladdning (delete) 2003 poster"></testcase>
+	
 </testsuite>
