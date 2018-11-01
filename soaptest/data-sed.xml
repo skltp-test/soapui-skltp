@@ -199,7 +199,7 @@ under the License.
 			  Avser behörigheter definierade i tjänstekatalogen.)
 		</description>
 		<data>
-			<logicalAddress>HSA-ID-1</logicalAddress>
+			<logicalAddress>Test</logicalAddress>
 		</data>
 	</testcase>
 	<testcase id="2.9.1 Konsument anropar tjänsteproducent som inte är kontaktbar (VP009)">
