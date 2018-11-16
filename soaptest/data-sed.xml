@@ -25,6 +25,7 @@ under the License.
 	<globaldata>
 		<webServiceUrlEI>https://TARGETHOST/vp/Update/1/rivtabp21</webServiceUrlEI>
 		<webServiceUrlFC>https://TARGETHOST/vp/FindContent/1/rivtabp21</webServiceUrlFC>
+		<webServiceUrlPN>https://TARGETHOST/vp/ProcessNotification/1/rivtabp21</webServiceUrlPN>
 		<webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl>
 		<webServiceUrlFaulty1>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp20</webServiceUrlFaulty1>
 		<webServiceUrlFaulty2>https://TARGETHOST</webServiceUrlFaulty2>
@@ -46,17 +47,23 @@ under the License.
 		<webServiceUrlGO>https://TARGETHOST/vp/clinicalprocess/healthcond/basic/GetObservations/1/rivtabp21</webServiceUrlGO>
 		<webServiceUrlGA>https://TARGETHOST/vp/clinicalprocess/activity/actions/GetActivities/1/rivtabp21</webServiceUrlGA>
 		<webServiceUrlGRA>https://TARGETHOST/vp/crm/requeststatus/GetRequestActivities/1/rivtabp21</webServiceUrlGRA>
-		<!-- <webServiceUrlGSOCS>https://TARGETHOSTe/vp/crm/scheduling/GetSubjectOfCareSchedule/1/rivtabp21</webServiceUrlGSOCS> -->
 		<webServiceUrlGSOCS>https://TARGETHOST/vp/GetSubjectOfCareSchedule/1/rivtabp21</webServiceUrlGSOCS>
 		
 		<webServiceUrlFindAllQuestions20>https://TARGETHOST/vp/FindAllQuestions/1/rivtabp20</webServiceUrlFindAllQuestions20>
 		<webServiceUrlFindAllQuestions21>https://TARGETHOST/vp/FindAllQuestions/1/rivtabp21</webServiceUrlFindAllQuestions21>
+		<webServiceUrlKontrolleraSamtycke>https://TARGETHOST/vp/KontrolleraSamtycke/1/rivtabp21</webServiceUrlKontrolleraSamtycke>
+		<webServiceUrlKontrolleraForskrivarbehorighet>https://TARGETHOST/vp/KontrolleraForskrivarbehorighet/1/rivtabp20</webServiceUrlKontrolleraForskrivarbehorighet>
 				
 		<!-- .... vp/informationsecurity/auditing/log/GetAccessLogsForPatient/2/rivtabp21 -->
 		<!-- <webServiceUrl>https://qa.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl> -->
 		<!-- <webServiceUrl>http://localhost:8088/mockGetCareDocumentationResponderBinding</webServiceUrl> -->
 		<httpHeaderHsaId>112233</httpHeaderHsaId>
 		<logicalAddress>5565594230</logicalAddress>
+		<owner>SE-NMT-OWNER</owner>
+		<owner1>SE-NMT-SKLTP-MOCK01</owner1>
+		<owner2>SE-NMT-SKLTP-MOCK02</owner2>
+		<owner3>SE-NMT-SKLTP-MOCK03</owner3>
+		
 		<patientId>196711222940</patientId>
 		<patientId1>191001209814</patientId1>
 		<patientId2>191001229812</patientId2>
@@ -247,8 +254,16 @@ under the License.
 			<logicalAddress>SKLTP-MOCK01</logicalAddress>
 		</data>
 	</testcase>
-	<testcase id="3.1.3 Konsument rivtabp20 mot producent rivtabp21"></testcase>
-	<testcase id="3.1.4 Konsument rivtabp21 mot producent rivtabp21"></testcase>
+	<testcase id="3.1.3 Konsument rivtabp20 mot producent rivtabp21">
+		<data>
+			<logicalAddress>SKLTP-MOCK01</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="3.1.4 Konsument rivtabp21 mot producent rivtabp21">
+		<data>
+			<logicalAddress>SKLTP-MOCK01</logicalAddress>
+		</data>
+	</testcase>
 	
 	<!-- BASIC FLOWS -->
 	<!-- clinicalprocess/healthcond/description -->
@@ -512,5 +527,12 @@ under the License.
 	<testcase id="5.3.2 Grundladdning (delete) 2003 poster"></testcase>
 	<testcase id="5.4.1 Skicka Update med två identiska poster"></testcase>
 	<testcase id="5.4.2 Skicka Update med för många poster"></testcase>
+	
+	<testcase id="5.6.1 Förändra ägarskap för poster från Ineras HSA till regionalt HSA"></testcase>
+	<testcase id="5.6.2 Förändra ägarskap för en post, namnbyte av regional owner"></testcase>
+	<testcase id="5.6.3 Förändra ägarskap för poster från regionalt HSA till Ineras HSA"></testcase>
+	<testcase id="5.6.4 Förändra ägarskapet till tre olika producenter"></testcase>
+	<testcase id="5.6.5 Skicka Update för en post där ägarskap är ett regionalt HSA"></testcase>
+
 	
 </testsuite>

@@ -453,7 +453,23 @@
       <xs:enumeration value="other"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://NMT028:8088/mockGetSubjectOfCareScheduleResponderBinding_1.1</con:endpoint><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="43ce6da2-af17-4c8f-a3db-261ec1ce65d6" isOneWay="false" action="urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1:GetSubjectOfCareSchedule" name="GetSubjectOfCareSchedule" bindingOperationName="GetSubjectOfCareSchedule" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="d6e08384-9ba6-456b-b040-1c0edb435d49" wsaVersion="NONE" name="UpdateResponderBinding" type="wsdl" bindingName="{urn:riv:itintegration:engagementindex:Update:1:rivtabp21}UpdateResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/VBShare/schemas/ServiceContracts_itintegration_engagementindex_1.0.5/schemas/interactions/UpdateInteraction/UpdateInteraction_1.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/VBShare/schemas/ServiceContracts_itintegration_engagementindex_1.0.5/schemas/interactions/UpdateInteraction/UpdateInteraction_1.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/VBShare/schemas/ServiceContracts_itintegration_engagementindex_1.0.5/schemas/interactions/UpdateInteraction/UpdateInteraction_1.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://NMT028:8088/mockGetSubjectOfCareScheduleResponderBinding_1.1</con:endpoint><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="43ce6da2-af17-4c8f-a3db-261ec1ce65d6" isOneWay="false" action="urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1:GetSubjectOfCareSchedule" name="GetSubjectOfCareSchedule" bindingOperationName="GetSubjectOfCareSchedule" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="36273979-fda4-4909-ab1f-801c025640aa" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://NMT028:8088/mockGetSubjectOfCareScheduleResponderBinding_1.1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:interoperability:headers:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1">\r
+   <soapenv:Header>\r
+      <urn:Actor>\r
+         <urn:actorId>?</urn:actorId>\r
+         <urn:actorType>?</urn:actorType>\r
+         <!--You may enter ANY elements at this point-->\r
+      </urn:Actor>\r
+      <urn1:LogicalAddress>?</urn1:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn2:GetSubjectOfCareSchedule>\r
+         <urn2:healthcare_facility>?</urn2:healthcare_facility>\r
+         <urn2:subject_of_care>?</urn2:subject_of_care>\r
+         <!--You may enter ANY elements at this point-->\r
+      </urn2:GetSubjectOfCareSchedule>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1:GetSubjectOfCareSchedule"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="d6e08384-9ba6-456b-b040-1c0edb435d49" wsaVersion="NONE" name="UpdateResponderBinding" type="wsdl" bindingName="{urn:riv:itintegration:engagementindex:Update:1:rivtabp21}UpdateResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/VBShare/schemas/ServiceContracts_itintegration_engagementindex_1.0.5/schemas/interactions/UpdateInteraction/UpdateInteraction_1.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/VBShare/schemas/ServiceContracts_itintegration_engagementindex_1.0.5/schemas/interactions/UpdateInteraction/UpdateInteraction_1.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/VBShare/schemas/ServiceContracts_itintegration_engagementindex_1.0.5/schemas/interactions/UpdateInteraction/UpdateInteraction_1.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements. See the NOTICE file
  distributed with this work for additional information
  regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
@@ -1610,6 +1626,55 @@ ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion
    <soapenv:Header/>
    <soapenv:Body>
       <urn:GetSubjectOfCareScheduleResponse>
+      </urn:GetSubjectOfCareScheduleResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1:GetSubjectOfCareSchedule"/></con:response><con:response name="Response 2" id="0d0d1ffb-70b9-487d-87a1-cb05bfa176c1" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1" xmlns:urn1="urn:riv:crm:scheduling:1" xmlns:urn2="urn:riv:crm:scheduling:1.1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:GetSubjectOfCareScheduleResponse>
+         <!--Zero or more repetitions:-->
+         <urn:timeslotDetail>
+            <!--Optional:-->
+            <urn1:startTimeInclusive>?</urn1:startTimeInclusive>
+            <!--Optional:-->
+            <urn1:endTimeExclusive>?</urn1:endTimeExclusive>
+            <urn1:healthcare_facility>?</urn1:healthcare_facility>
+            <!--Optional:-->
+            <urn1:performer>?</urn1:performer>
+            <!--Optional:-->
+            <urn1:bookingId>?</urn1:bookingId>
+            <!--Optional:-->
+            <urn1:subject_of_care>?</urn1:subject_of_care>
+            <!--Optional:-->
+            <urn1:purpose>?</urn1:purpose>
+            <!--Optional:-->
+            <urn1:reason>?</urn1:reason>
+            <!--Optional:-->
+            <urn1:resourceName>?</urn1:resourceName>
+            <!--Optional:-->
+            <urn1:healthcare_facility_name>?</urn1:healthcare_facility_name>
+            <!--Optional:-->
+            <urn1:performerName>?</urn1:performerName>
+            <!--Optional:-->
+            <urn1:resourceID>?</urn1:resourceID>
+            <!--Optional:-->
+            <urn1:timeTypeName>?</urn1:timeTypeName>
+            <!--Optional:-->
+            <urn1:timeTypeID>?</urn1:timeTypeID>
+            <!--Optional:-->
+            <urn1:careTypeName>?</urn1:careTypeName>
+            <!--Optional:-->
+            <urn1:careTypeID>?</urn1:careTypeID>
+            <!--Optional:-->
+            <urn1:cancel_booking_allowed>?</urn1:cancel_booking_allowed>
+            <!--Optional:-->
+            <urn1:rebooking_allowed>?</urn1:rebooking_allowed>
+            <!--Optional:-->
+            <urn1:message_allowed>?</urn1:message_allowed>
+            <!--Optional:-->
+            <urn2:isInvitation>?</urn2:isInvitation>
+         </urn:timeslotDetail>
+         <!--You may enter ANY elements at this point-->
       </urn:GetSubjectOfCareScheduleResponse>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1:GetSubjectOfCareSchedule"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties><con:property><con:name>xmlns:gsocs1</con:name><con:value>urn:riv:crm:scheduling:GetSubjectOfCareScheduleResponder:1</con:value></con:property><con:property><con:name>xmlns:urn1</con:name><con:value>urn:riv:crm:scheduling:1</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gsocs1:timeslotDetail</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
