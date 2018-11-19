@@ -525,8 +525,11 @@ under the License.
 	<testcase id="5.2.5 Ta bort engagemang (som inte existerar)"></testcase>
 	<testcase id="5.3.1 Grundladdning (add) 2003 poster"></testcase>
 	<testcase id="5.3.2 Grundladdning (delete) 2003 poster"></testcase>
-	<testcase id="5.4.1 Skicka Update med två identiska poster"></testcase>
+	<testcase id="5.4.1 Skicka Update med två identiska poster (R1)"></testcase>
 	<testcase id="5.4.2 Skicka Update med för många poster"></testcase>
+	<testcase id="5.4.3 Skicka Update med EI's reserverade logiska adress (R7)"></testcase>
+	<testcase id="5.4.4 Skicka Update med tre engagemang, ett engagemang bryter mot schemat"></testcase>
+	<testcase id="5.5.1 Lägg till engagemang(Update), kontrollera notifieringar"></testcase>
 	
 	<testcase id="5.6.1 Förändra ägarskap för poster från Ineras HSA till regionalt HSA"></testcase>
 	<testcase id="5.6.2 Förändra ägarskap för en post, namnbyte av regional owner"></testcase>
