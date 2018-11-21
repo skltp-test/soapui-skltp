@@ -7,11 +7,11 @@ pipeline {
             steps {
                 withCredentials([certificate(credentialsId: 'TSTNMT2321000156-B02', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTKEYPWD')]) {
                     sh """
-                        #! /bin/bash 
+                        #! /bin/bash
                         echo "Tests will be run against the following host: ${TARGETHOST}"
                         openssl pkcs12 -info -in ${CERTKEY} -passin pass:${CERTKEYPWD} -noout
-                        cd soaptest 
-                        cat ${CERTKEY} > ./cert.p12 
+                        cd soaptest
+                        cat ${CERTKEY} > ./cert.p12
                         ls -l ./cert.p12
                         sed -e 's@KEYSTOREVARIABLE@'"cert.p12"'@; s@KEYSTOREPASSWORD@'"${CERTKEYPWD}"'@' soapui-sed.xml > soapui-settings.xml
                         sed -e 's@SOURCESYSTEMHSA@'"${SOURCESYSTEMHSA}"'@; s@TARGETHOST@'"${TARGETHOST}"'@'  data-sed.xml > data.xml
@@ -26,10 +26,10 @@ pipeline {
 
     post {
         always {
-            
+            // Change ownership of output files to Jenkins user
+            sh 'cd webtest && docker-compose run --rm --entrypoint ./chown-files testsuite'
             // Archive soaptest results
-            junit healthScaleFactor: 100.0, testResults: 'soaptest/TEST*.xml'
-            
+            junit healthScaleFactor: 100.0, testResults: 'soaptest/TEST*.xml'            
         }
     }
 }
