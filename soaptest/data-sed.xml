@@ -531,11 +531,13 @@ under the License.
 	<testcase id="5.4.4 Skicka Update med tre engagemang, ett engagemang bryter mot schemat"></testcase>
 	<testcase id="5.5.1 Lägg till engagemang(Update), kontrollera notifieringar"></testcase>
 	
-	<testcase id="5.6.1 Förändra ägarskap för poster från Ineras HSA till regionalt HSA"></testcase>
-	<testcase id="5.6.2 Förändra ägarskap för en post, namnbyte av regional owner"></testcase>
-	<testcase id="5.6.3 Förändra ägarskap för poster från regionalt HSA till Ineras HSA"></testcase>
-	<testcase id="5.6.4 Förändra ägarskapet till tre olika producenter"></testcase>
-	<testcase id="5.6.5 Skicka Update för en post där ägarskap är ett regionalt HSA"></testcase>
+	<testcase id="5.6.1 Uppdatera engagemang med ProcessNotification till tre olika producenter"></testcase>
+	<testcase id="5.6.2 Ta bort engagemang med ProcessNotification till tre olika producenter"></testcase>
+	<testcase id="5.6.3 Förändra ägarskap för poster från Ineras HSA till regionalt HSA"></testcase>
+	<testcase id="5.6.4 Förändra ägarskap för en post, namnbyte av regional owner"></testcase>
+	<testcase id="5.6.5 Förändra ägarskap för poster från regionalt HSA till Ineras HSA"></testcase>
+	<testcase id="5.6.6 Förändra ägarskapet till tre olika producenter"></testcase>
+	<testcase id="5.6.7 Skicka Update för en post där ägarskap är ett regionalt HSA"></testcase>
 
 	
 </testsuite>
