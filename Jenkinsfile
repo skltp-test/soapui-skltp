@@ -26,8 +26,6 @@ pipeline {
 
     post {
         always {
-            // Change ownership of output files to Jenkins user
-            sh 'cd webtest && docker-compose run --rm --entrypoint ./chown-files testsuite'
             // Archive soaptest results
             junit healthScaleFactor: 100.0, testResults: 'soaptest/TEST*.xml'            
         }
