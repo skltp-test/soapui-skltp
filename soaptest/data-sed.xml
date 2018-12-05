@@ -78,7 +78,7 @@ under the License.
 		<patientId11>191001319803</patientId11>
 		<patientIdNoEngagements>191001219805</patientIdNoEngagements>
 		<patientIdType>1.2.752.129.2.1.3.1</patientIdType>
-		<sourceSystemHSAId>SOURCESYSTEMHSA</sourceSystemHSAId>
+		<sourceSystemHSAId>LOAD-MOCKS</sourceSystemHSAId>
 		<!-- Loggparametrar-->
 		<logTestData>true</logTestData>
 		<logTestDataPath>/temp/SOAP-UI/</logTestDataPath>
@@ -529,6 +529,14 @@ under the License.
 	<testcase id="5.4.2 Skicka Update med för många poster"></testcase>
 	<testcase id="5.4.3 Skicka Update med EI's reserverade logiska adress (R7)"></testcase>
 	<testcase id="5.4.4 Skicka Update med tre engagemang, ett engagemang bryter mot schemat"></testcase>
+	<testcase id="5.4.5 Skicka ProcessNotification med tre engagemang, ett engagemang bryter mot schemat"></testcase>
+	<testcase id="5.4.6 Skicka ProcessNotification med två identiska poster"></testcase>
+	<testcase id="5.4.7 Skicka ProcessNotification med för många poster"></testcase>
+	<testcase id="5.4.8 Skicka ProcessNotification felaktigt med EI's reserverade logiska adress"></testcase>
+	<testcase id="5.4.9 Skicka FindContent med samtliga optionella element"></testcase>
+	<testcase id="5.4.10 Skicka FindContent utan optionella element"></testcase>
+	<testcase id="5.4.11 Skicka FindContent som är felaktig"></testcase>	
+	<testcase id="5.4.12 Skicka Update använd FindContent för samtliga optionella element"></testcase>	
 	<testcase id="5.5.1 Lägg till engagemang(Update), kontrollera notifieringar"></testcase>
 	
 	<testcase id="5.6.1 Uppdatera engagemang med ProcessNotification till tre olika producenter"></testcase>
