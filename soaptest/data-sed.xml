@@ -523,8 +523,11 @@ under the License.
 	<testcase id="5.2.3 Uppdatera engagemang ytterligare en gång till två av tre producenter"></testcase>
 	<testcase id="5.2.4 Ta bort engagemang till tre olika producenter"></testcase>
 	<testcase id="5.2.5 Ta bort engagemang (som inte existerar)"></testcase>
+	<testcase id="5.2.6 Hantera engagemang där mostRecentContent saknas"></testcase>
+	
 	<testcase id="5.3.1 Grundladdning (add) 2003 poster"></testcase>
 	<testcase id="5.3.2 Grundladdning (delete) 2003 poster"></testcase>
+	
 	<testcase id="5.4.1 Skicka Update med två identiska poster (R1)"></testcase>
 	<testcase id="5.4.2 Skicka Update med för många poster"></testcase>
 	<testcase id="5.4.3 Skicka Update med EI's reserverade logiska adress (R7)"></testcase>
@@ -533,10 +536,9 @@ under the License.
 	<testcase id="5.4.6 Skicka ProcessNotification med två identiska poster"></testcase>
 	<testcase id="5.4.7 Skicka ProcessNotification med för många poster"></testcase>
 	<testcase id="5.4.8 Skicka ProcessNotification felaktigt med EI's reserverade logiska adress"></testcase>
-	<testcase id="5.4.9 Skicka FindContent med samtliga optionella element"></testcase>
-	<testcase id="5.4.10 Skicka FindContent utan optionella element"></testcase>
-	<testcase id="5.4.11 Skicka FindContent som är felaktig"></testcase>	
-	<testcase id="5.4.12 Skicka Update använd FindContent för samtliga optionella element"></testcase>	
+	<testcase id="5.4.9 Skicka FindContent som är felaktig"></testcase>	
+	<testcase id="5.4.10 Skicka en andra Update med äldre mostRecentContent"></testcase>
+	
 	<testcase id="5.5.1 Lägg till engagemang(Update), kontrollera notifieringar"></testcase>
 	
 	<testcase id="5.6.1 Uppdatera engagemang med ProcessNotification till tre olika producenter"></testcase>
@@ -545,7 +547,11 @@ under the License.
 	<testcase id="5.6.4 Förändra ägarskap för en post, namnbyte av regional owner"></testcase>
 	<testcase id="5.6.5 Förändra ägarskap för poster från regionalt HSA till Ineras HSA"></testcase>
 	<testcase id="5.6.6 Förändra ägarskapet till tre olika producenter"></testcase>
-	<testcase id="5.6.7 Skicka Update för en post där ägarskap är ett regionalt HSA"></testcase>
+	<testcase id="5.6.7 Hantera engagemang med ProcessNotification där mostRecentContent saknas"></testcase>
+	
+	<testcase id="5.7.1 Skicka FindContent utan optionella element"></testcase>
+	<testcase id="5.7.2 Skicka Update använd FindContent för samtliga optionella element"></testcase>
+	<testcase id="5.7.3 Skicka FindContent med samtliga optionella element"></testcase>
 
 	
 </testsuite>
