@@ -553,5 +553,175 @@ under the License.
 	<testcase id="5.7.2 Skicka Update använd FindContent för samtliga optionella element"></testcase>
 	<testcase id="5.7.3 Skicka FindContent med samtliga optionella element"></testcase>
 
+	<testcase id="NTP-775.1 Direktadresserad GRO, finns endast SB och SV">
+		<description>
+			Konsument skickar direktadresserad GRO till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
+			Syfte: Säkerställ att det går att hantera routing när enbart standardbehörigheter och standardvägval är konfigurerat
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-10K5</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.2 Direktadresserad GCC, vägval baseras på TAK">
+		<description>
+			Konsument skickar direktadresserad GCC till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
+			Syfte: Säkerställ att adresseringsordningen prioriterar TAK 
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-10K5</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.3 Direktadresserad GCC, vägval baseras på HSA">
+		<description>
+			Konsument skickar direktadresserad GCC till SKLTP-MOCK02 (TSTNMT2321000156-10K6)
+			Syfte: Säkerställ att adresseringsordningen prioriterar HSA om TAK saknas. TAK för "ICC Test" kommer användas.
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-10K6</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.4 Direktadresserad GCC, vägval baseras SB och SV">
+		<description>
+			Konsument skickar direktadresserad GCC till SKLTP-MOCK100 (TSTNMT2321000156-9999)
+			Syfte: Säkerställ att adresseringsordningen nyttjar Standardbehörighet samt standardvägval.
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-9999</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.5 Direktadresserad GO, vägval baseras på SB och TAK-vägval">
+		<description>
+			Konsument skickar direktadresserad GO till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
+			Syfte: Säkerställ att standardbehörighet kan användas tillsammans med TAKat vägval.
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-10K5</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.6 Direktadresserad GIO, SB finns men vägval saknas">
+		<description>
+			Konsument skickar direktadresserad GIO till SKLTP-MOCK100 (TSTNMT2321000156-9999)
+			Syfte: Säkerställ att riktig felhantering om standardbehörighet använts, men det saknas vägval.
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-9999</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.7 Direktadresserad GA, vägval baseras på TAK-anropsbehörighet och SV">
+		<description>
+			Konsument skickar direktadresserad GA till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
+			Syfte: Säkerställ att konsumenten kan använda TAKad anropsbehörighet tillsammans med standardvägval
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-10K5</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.8 Direktadresserad GD, SV finns men anropsbehörighet saknas">
+		<description>
+			Konsument skickar direktadresserad GD till SKLTP-MOCK100 (TSTNMT2321000156-9999)
+			Syfte: Säkerställ att konsumenten inte kommer åt standardvägvalet
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-9999</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.21 GRO till AGP, finns endast SB och SV">
+		<description>
+			Konsument skickar GRO till AGP, engagemang finns till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
+			Syfte: Säkerställ att det går att hantera routing när enbart standardbehörigheter och standardvägval är konfigurerat
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-772.22 GCC till AGP, vägval baseras på TAK">
+		<description>
+			Konsument skickar GCC till AGP, engagemang finns till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
+			Syfte: Säkerställ att AGPs adresseringsordning prioriterar TAK
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.23 GCC till AGP, vägval baseras på HSA">
+		<description>
+			Konsument skickar GCC till AGP, engagemang finns till SKLTP (TSTNMT2321000156-10K6) (inget engagemang till SKLTP-MOCK01)
+			Syfte: Säkerställ att AGPs adresseringsordning prioriterar HSA om TAK saknas. TAK för "ICC Test" kommer användas.
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.24 GCC till AGP, vägval baseras på SB och SV">
+		<description>
+			Konsument skickar GCC till AGP, engagemang finns till SKLTP-MOCK100 (TSTNMT2321000156-9999) (inget till SKLTP, SKLTP-MOCK01) 
+			Syfte: Säkerställ att AGPs adresseringsordning nyttjar Standardbehörighet samt standardvägval.
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.25 GO till AGP, vägval baseras på SB och TAK-vägval">
+		<description>
+			Konsument skickar GO till AGP, där engagemang finns till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
+			Syfte: Säkerställ att standardbehörighet kan användas tillsammans med TAKat vägval.
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.26 GIO tll AGP, SB finns men vägval saknas">
+		<description>
+			Konsument skickar GIO till AGP, engagemang finns till SKLTP-MOCK100 (TSTNMT2321000156-9999)
+			Syfte: Säkerställ att riktig felhantering om standardbehörighet använts, men det saknas vägval.
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.27 GA till AGP, vägval baseras på TAK-anropsbehörighet och SV">
+		<description>
+			Konsument skickar GA till AGP, där engagemang finns till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
+			Syfte: Säkerställ att konsumenten kan använda TAKad anropsbehörighet tillsammans med standardvägval
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.28 GD till AGP, SV finns men anropsbehörighet saknas">
+		<description>
+			Konsument skickar GD till AGP, engagemang finns till SKLTP-MOCK100 (TSTNMT2321000156-9999)
+			Syfte: Säkerställ att konsumenten inte kommer åt standardvägvalet
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.41 GD med default routing, vägval baseras på VG">
+		<description>
+			Konsument skickar direktadresserad GD med logicalAdress satt till LOAD-MOCKS#TSTNMT2321000156-9999 (VG#VE)
+			Syfte: Säkerställ att default routing fortsatt fungerar (routing på "VG"-nivå om behörighet saknas på "VE"-nivå).
+		</description>
+		<data>
+			<logicalAddress>LOAD-MOCKS#TSTNMT2321000156-9999</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.42 GCC med default routing, vägval baseras på VG fast SB och SV finns">
+		<description>
+			Konsument skickar direktadresserad GCC med logicalAdress satt till LOAD-MOCKS#TSTNMT2321000156-9999 (VG#VE)
+			Syfte: Notera om default routing används innan standardbehörigheter och standardvägval (dafault routing borde användas innan HSA-klättring)
+		</description>
+		<data>
+			<logicalAddress>LOAD-MOCKS#TSTNMT2321000156-9999</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.43 GD med default routing, anropsbehörighet saknas">
+		<description>
+			Syfte: Säkerställ att default routing hanterar avsaknad av anropsbehörighet på "VG" nivå på korrekt sätt.
+		</description>
+		<data>
+			<logicalAddress>HSA-ID-1#TSTNMT2321000156-9999</logicalAddress>
+		</data>
+	</testcase>	
 	
 </testsuite>
