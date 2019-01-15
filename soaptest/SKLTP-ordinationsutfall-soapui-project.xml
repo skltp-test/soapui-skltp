@@ -4417,6 +4417,30 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          </urn1:patientId>\r
       </urn1:GetVaccinationHistory>\r
    </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="12cb0f75-3bd5-43d5-b261-326eb0b50416"/><con:assertion type="Schema Compliance" id="bf1817dc-b149-41d9-9ef2-fdec777b8633"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="cb7dc6b6-b60b-4811-94ab-0857753cd04c"/><con:assertion type="Simple NotContains" id="99964d38-8635-4d6b-b2ae-fb0e92d5263a" name="Not Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Copy of 1.0" id="44bd550f-a713-46b1-ac5e-de84686e59bc" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetVaccinationHistoryResponderBinding_1.0</con:interface><con:operation>GetVaccinationHistory</con:operation><con:request name="Copy of 1.0" id="0fc7757b-6db8-4072-8b77-6622a115ddb9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGVH}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:activityprescription:actoutcome:GetVaccinationHistoryResponder:1" xmlns:urn2="urn:riv:clinicalprocess:activityprescription:actoutcome:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>SE2321000065-TEST0008</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetVaccinationHistory>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientIdNoEngagements}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetVaccinationHistory>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="fa6d33f3-7b59-497d-bbc1-9ebc44e7d00b"/><con:assertion type="Schema Compliance" id="3e70c70f-9f03-48dc-87a8-d4692f63ea4b"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="99c32de8-b1f4-4a89-929e-7cca49d01cc4"/><con:assertion type="Simple NotContains" id="7da895ee-2b92-4b91-b7e9-855c6375a4f0" name="Not Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Copy of 2.0" id="04dd7c5c-d1e9-426f-b3df-2fff5b30eb18"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetVaccinationHistoryResponderBinding_2.0</con:interface><con:operation>GetVaccinationHistory</con:operation><con:request name="Copy of 2.0" id="4d8f2b34-350f-4c59-9eca-f782accaaddc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGVH}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:activityprescription:actoutcome:GetVaccinationHistoryResponder:2" xmlns:urn2="urn:riv:clinicalprocess:activityprescription:actoutcome:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>SE2321000065-TEST0008</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetVaccinationHistory>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientIdNoEngagements}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetVaccinationHistory>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="12cb0f75-3bd5-43d5-b261-326eb0b50416"/><con:assertion type="Schema Compliance" id="bf1817dc-b149-41d9-9ef2-fdec777b8633"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="cb7dc6b6-b60b-4811-94ab-0857753cd04c"/><con:assertion type="Simple NotContains" id="99964d38-8635-4d6b-b2ae-fb0e92d5263a" name="Not Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="057e2726-8c3f-4422-b506-f99cf13bacb1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.5.2 (GVH) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="1c462e87-6fc5-4088-9dfa-06ef0c946e1a"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
