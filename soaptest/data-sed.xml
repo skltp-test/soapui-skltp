@@ -26,6 +26,7 @@ under the License.
 		<webServiceUrlEI>https://TARGETHOST/vp/Update/1/rivtabp21</webServiceUrlEI>
 		<webServiceUrlFC>https://TARGETHOST/vp/FindContent/1/rivtabp21</webServiceUrlFC>
 		<webServiceUrlPN>https://TARGETHOST/vp/ProcessNotification/1/rivtabp21</webServiceUrlPN>
+		<webServiceUrlSubscriberFC>https://TARGETHOST/vp/itintegration/engagementindex/FindContent/1/rivtabp21</webServiceUrlSubscriberFC>
 		<webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl>
 		<webServiceUrlFaulty1>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp20</webServiceUrlFaulty1>
 		<webServiceUrlFaulty2>https://TARGETHOST</webServiceUrlFaulty2>
@@ -59,6 +60,7 @@ under the License.
 		<!-- <webServiceUrl>http://localhost:8088/mockGetCareDocumentationResponderBinding</webServiceUrl> -->
 		<httpHeaderHsaId>112233</httpHeaderHsaId>
 		<logicalAddress>5565594230</logicalAddress>
+		<subscriberEI>SKLTP-MOCK-EI</subscriberEI>
 		<owner>SE-NMT-OWNER</owner>
 		<owner1>SE-NMT-SKLTP-MOCK01</owner1>
 		<owner2>SE-NMT-SKLTP-MOCK02</owner2>
@@ -514,7 +516,7 @@ under the License.
 	<testcase id="4.18.12 (GSOCS) Exception från samtliga producenter"></testcase>
 	
 	<testcase id="5.0.1 PRE - Rensa engagemang"></testcase>
-	<testcase id="5.0.2 PRE - Rensa prenumeranter av ProcessNotifications"></testcase>
+	<testcase id="5.0.2 PRE - Rensa engagemang med ProcessNotifications"></testcase>
 	
 	<testcase id="5.1.1 Lägg till ett engagemang till en producent"></testcase>
 	<testcase id="5.1.2 Ta bort ett engagemang till en producent"></testcase>
@@ -539,7 +541,15 @@ under the License.
 	<testcase id="5.4.9 Skicka FindContent som är felaktig"></testcase>	
 	<testcase id="5.4.10 Skicka en andra Update med äldre mostRecentContent"></testcase>
 	
-	<testcase id="5.5.1 Lägg till engagemang(Update), kontrollera notifieringar"></testcase>
+	<testcase id="5.5.1 Lägg till ett engagemang(Update), kontrollera notifieringar"></testcase>
+	<testcase id="5.5.2 Lägg till flera engagemang(Update), kontrollera notifieringar"></testcase>
+	<testcase id="5.5.3 Uppdatera engagemang till tre olika producenter, kontrollera notifieringar"></testcase>
+	<testcase id="5.5.4 Ta bort engagemang till tre olika producenter, kontrollera notifieringar"></testcase>
+	<testcase id="5.5.5 Hantera engagemang där mostRecentContent saknas, kontrollera notifieringar"></testcase>
+	<testcase id="5.5.6 Uppdatera engagemang med ProcessNotification, kontrollera notifieringar"></testcase>
+	<testcase id="5.5.7 Ta bort engagemang med ProcessNotification, kontrollera notifieringar"></testcase>
+	<testcase id="5.5.8 Förändra ägarskap för en post, namnbyte av regional owner, kontrollera notifieringar"></testcase>
+	<testcase id="5.5.9 Förändra ägarskap för poster från regionalt HSA till Ineras HSA, kontrollera notifieringar"></testcase>
 	
 	<testcase id="5.6.1 Uppdatera engagemang med ProcessNotification till tre olika producenter"></testcase>
 	<testcase id="5.6.2 Ta bort engagemang med ProcessNotification till tre olika producenter"></testcase>
