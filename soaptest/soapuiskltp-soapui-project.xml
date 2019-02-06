@@ -8953,7 +8953,1223 @@ Obligatorisk som indata dock ej som utdata.</xs:documentation>
          <!--You may enter ANY elements at this point-->\r
       </urn1:GetDiagnosis>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2:GetDiagnosis"/></con:call></con:operation></con:interface><con:testSuite id="6a3aff90-9de0-47b3-96e2-d8a865836130" name="Ursprunglig avsändare"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4d8a6e70-0b02-475f-ab2d-3ff29f2b2289" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.1.1 Angränsande konsument skickar fråga via aggregerande tjänst" searchProperties="true"><con:description>	</con:description><con:settings/><con:testStep type="groovy" name="Read data" id="80d90f6d-39d9-4793-91c6-2353c60f6733"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2:GetDiagnosis"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="a462057e-787d-4545-9465-69eaa8a0b748" wsaVersion="NONE" name="ReceiveMedicalCertificateQuestionResponderBinding" type="wsdl" bindingName="{urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateQuestion:1:rivtabp20}ReceiveMedicalCertificateQuestionResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../../schemas/ServiceContracts_insuranceprocess_healthreporting_3.1.1/schemas/interactions/ReceiveMedicalCertificateQuestionInteraction/ReceiveMedicalCertificateQuestionInteraction_1.0_rivtabp20.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/VBShare/schemas/ServiceContracts_insuranceprocess_healthreporting_3.1.1/schemas/interactions/ReceiveMedicalCertificateQuestionInteraction/ReceiveMedicalCertificateQuestionInteraction_1.0_rivtabp20.wsdl"><con:part><con:url>file:/C:/VBShare/schemas/ServiceContracts_insuranceprocess_healthreporting_3.1.1/schemas/interactions/ReceiveMedicalCertificateQuestionInteraction/ReceiveMedicalCertificateQuestionInteraction_1.0_rivtabp20.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<wsdl:definitions name="ReceiveMedicalCertificateQuestionInteraction" targetNamespace="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateQuestion:1:rivtabp20" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:tjs="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateQuestionResponder:1" xmlns:tns="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateQuestion:1:rivtabp20">
+  <xs:annotation>
+    <xs:documentation>Tjänsteinteraktionens namn: ReceiveMedicalCertificateQuestionInteraction
+			Beskrivning: 
+				Interaction to receive a question for a previous mdical certiificate
+			Revisioner: 2009-12-04 Version 1.0, Mats Ekhammar - Callista Enterprise AB
+			Tjänstedomän: insuranceprocess:healthreporting
+			Tjänsteinteraktionstyp: Fråga-svar
+			RIV Teknisk Anvisning: Basic Profile 2.0
+			Förvaltas av: xxx</xs:documentation>
+  </xs:annotation>
+  <wsdl:types>
+    <xs:schema>
+      <xs:import schemaLocation="ReceiveMedicalCertificateQuestionResponder_1.0.xsd" namespace="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateQuestionResponder:1"/>
+    </xs:schema>
+    <xs:schema>
+      <xs:import schemaLocation="../../core_components/ws-addressing-1.0.xsd" namespace="http://www.w3.org/2005/08/addressing"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ReceiveMedicalCertificateQuestionRequest">
+    <xs:annotation>
+      <xs:documentation>LogicalAddress is the organization id for "vårdenhet".</xs:documentation>
+    </xs:annotation>
+    <wsdl:part name="LogicalAddress" element="wsa:To"/>
+    <wsdl:part name="parameters" element="tjs:ReceiveMedicalCertificateQuestion"/>
+  </wsdl:message>
+  <wsdl:message name="ReceiveMedicalCertificateQuestionResponse">
+    <wsdl:part name="parameters" element="tjs:ReceiveMedicalCertificateQuestionResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ReceiveMedicalCertificateQuestionResponderInterface">
+    <wsdl:operation name="ReceiveMedicalCertificateQuestion">
+      <wsdl:input message="tns:ReceiveMedicalCertificateQuestionRequest"/>
+      <wsdl:output message="tns:ReceiveMedicalCertificateQuestionResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ReceiveMedicalCertificateQuestionResponderBinding" type="tns:ReceiveMedicalCertificateQuestionResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ReceiveMedicalCertificateQuestion">
+      <soap:operation soapAction="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateQuestionResponder:1"/>
+      <wsdl:input>
+        <soap:header use="literal" message="tns:ReceiveMedicalCertificateQuestionRequest" part="LogicalAddress"/>
+        <soap:body use="literal" parts="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceiveMedicalCertificateQuestionResponderService">
+    <wsdl:port name="ReceiveMedicalCertificateQuestionResponderPort" binding="tns:ReceiveMedicalCertificateQuestionResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_insuranceprocess_healthreporting_3.1.1\schemas\interactions\ReceiveMedicalCertificateQuestionInteraction\ReceiveMedicalCertificateQuestionResponder_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateQuestionResponder:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:qa="urn:riv:insuranceprocess:healthreporting:medcertqa:1" xmlns:core="urn:riv:insuranceprocess:healthreporting:2" xmlns:tns="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateQuestionResponder:1">
+  <xs:import namespace="urn:riv:insuranceprocess:healthreporting:medcertqa:1" schemaLocation="../../core_components/MedicalCertificateQuestionsAnswers_1.0.xsd"/>
+  <xs:import namespace="urn:riv:insuranceprocess:healthreporting:2" schemaLocation="../../core_components/Insuranceprocess_healthreporting_2.0.xsd"/>
+  <xs:element name="ReceiveMedicalCertificateQuestion" type="tns:ReceiveMedicalCertificateQuestionType"/>
+  <xs:element name="ReceiveMedicalCertificateQuestionResponse" type="tns:ReceiveMedicalCertificateQuestionResponseType"/>
+  <xs:element name="Question" type="tns:QuestionFromFkType"/>
+  <xs:complexType name="ReceiveMedicalCertificateQuestionType">
+    <xs:sequence>
+      <xs:element ref="tns:Question"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReceiveMedicalCertificateQuestionResponseType">
+    <xs:sequence>
+      <xs:element name="result" type="core:ResultOfCall" minOccurs="0" maxOccurs="1"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QuestionFromFkType">
+    <xs:sequence>
+      <xs:element name="fkReferens-id" type="xs:string"/>
+      <xs:element name="amne" type="qa:Amnetyp"/>
+      <xs:element name="fraga" type="qa:innehallType"/>
+      <xs:element name="avsantTidpunkt" type="xs:dateTime"/>
+      <xs:element name="fkKontaktInfo" type="qa:fkKontaktType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="adressVard" type="qa:vardAdresseringsType"/>
+      <xs:element name="fkMeddelanderubrik" type="xs:string" minOccurs="0"/>
+      <xs:element name="fkKomplettering" type="qa:kompletteringType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="fkSistaDatumForSvar" type="xs:date" minOccurs="0"/>
+      <xs:element name="lakarutlatande" type="qa:lakarutlatandeEnkelType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_insuranceprocess_healthreporting_3.1.1\schemas\core_components\MedicalCertificateQuestionsAnswers_1.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:insuranceprocess:healthreporting:medcertqa:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:core="urn:riv:insuranceprocess:healthreporting:2" xmlns:tns="urn:riv:insuranceprocess:healthreporting:medcertqa:1">
+  <xs:import namespace="urn:riv:insuranceprocess:healthreporting:2" schemaLocation="Insuranceprocess_healthreporting_2.0.xsd"/>
+  <xs:simpleType name="Amnetyp">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Komplettering_av_lakarintyg"/>
+      <xs:enumeration value="Makulering_av_lakarintyg"/>
+      <xs:enumeration value="Avstamningsmote"/>
+      <xs:enumeration value="Kontakt"/>
+      <xs:enumeration value="Arbetstidsforlaggning"/>
+      <xs:enumeration value="Paminnelse"/>
+      <xs:enumeration value="Ovrigt"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--<xs:complexType name="meddelandeType">
+		<xs:sequence>
+			<xs:element name="vardReferens-id" type="xs:string" minOccurs="0"/>
+			<xs:element name="fkReferens-id" type="xs:string" minOccurs="0"/>
+			<xs:element name="amne" type="tns:Amnetyp"/>
+			<xs:element name="fraga" type="tns:innehallType" minOccurs="0" />
+			<xs:element name="svar" type="tns:innehallType" minOccurs="0" />
+			<xs:element name="avsantTidpunkt" type="xs:dateTime"/>
+ 			<xs:element name="fkAdressFK" type="tns:fkAdresseringsType" minOccurs="0"/>
+			<xs:element name="adressVard" type="tns:vardAdresseringsType"/>
+			<xs:element name="fkMeddelanderubrik" type="xs:string" minOccurs="0" />
+			<xs:element name="fkKomplettering" type="tns:kompletteringType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="fkSistaDatumForSvar" type="xs:date" minOccurs="0"/>
+			<xs:element name="lakarutlatande" type="tns:lakarutlatandeEnkelType"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>			
+		</xs:sequence>
+	</xs:complexType>-->
+  <xs:complexType name="fkKontaktType">
+    <xs:sequence>
+      <xs:element name="kontakt" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="vardAdresseringsType">
+    <xs:sequence>
+      <xs:element name="hosPersonal" type="core:hosPersonalType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lakarutlatandeEnkelType">
+    <xs:sequence>
+      <xs:element name="lakarutlatande-id" type="xs:string"/>
+      <xs:element name="signeringsTidpunkt" type="xs:dateTime"/>
+      <xs:element name="patient" type="core:patientType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="kompletteringType">
+    <xs:sequence>
+      <xs:element name="falt" type="xs:string"/>
+      <xs:element name="text" type="xs:string"/>
+      <!--Skall denna vara minOccurs=0-->
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="innehallType">
+    <xs:sequence>
+      <xs:element name="meddelandeText" type="xs:string"/>
+      <xs:element name="signeringsTidpunkt" type="xs:dateTime"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_insuranceprocess_healthreporting_3.1.1\schemas\core_components\Insuranceprocess_healthreporting_2.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+	or more contributor license agreements. See the NOTICE file
+	distributed with this work for additional information
+	regarding copyright ownership. The ASF licenses this file
+	to you under the Apache License, Version 2.0 (the
+	"License"); you may not use this file except in compliance
+	with the License. You may obtain a copy of the License at
+	
+	http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing,
+	software distributed under the License is distributed on an
+	"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	KIND, either express or implied. See the License for the
+	specific language governing permissions and limitations
+	under the License.-->
+<xs:schema targetNamespace="urn:riv:insuranceprocess:healthreporting:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:riv:insuranceprocess:healthreporting:2" xmlns:iso="urn:iso:21090:dt:1">
+  <xs:import namespace="urn:iso:21090:dt:1" schemaLocation="ISO_dt_subset_1.0.xsd"/>
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Gemensamma element för insuranceprocess_healthreporting
+			Revisioner: 
+			2010-05-20: Release version 1.0 mats.ekhammar@callistaenterprise.se.
+			2010-11-17: Version 2.0 Upprensning och förenkling av mats ekhammar</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="hosPersonalType">
+    <xs:sequence>
+      <xs:element name="personal-id" type="iso:II">
+        <xs:annotation>
+          <xs:documentation>HSA-id, o.i.d för HSA-id är 1.2.752.129.2.1.4.1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="fullstandigtNamn" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Förnamn +  efternamn sammanslaget.
+					Är tomt om personen har en skyddad identitet.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--Skyddad identitet-->
+      <xs:element name="forskrivarkod" type="xs:string" minOccurs="0"/>
+      <xs:element name="enhet" type="enhetType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="enhetType">
+    <xs:sequence>
+      <xs:element name="enhets-id" type="iso:II">
+        <xs:annotation>
+          <xs:documentation>HSA-id, o.i.d för HSA-id är 1.2.752.129.2.1.4.1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="arbetsplatskod" type="iso:II" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>o.i.d för arbetsplatskod är 1.2.752.29.4.71</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="enhetsnamn" type="xs:string"/>
+      <xs:element name="postadress" type="xs:string" minOccurs="0"/>
+      <xs:element name="postnummer" type="xs:string" minOccurs="0"/>
+      <xs:element name="postort" type="xs:string" minOccurs="0"/>
+      <xs:element name="telefonnummer" type="xs:string" minOccurs="0"/>
+      <xs:element name="epost" type="xs:string" minOccurs="0"/>
+      <xs:element name="vardgivare" type="vardgivareType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="vardgivareType">
+    <xs:sequence>
+      <xs:element name="vardgivare-id" type="iso:II">
+        <xs:annotation>
+          <xs:documentation>HSA-id, o.i.d för HSA-id är 1.2.752.129.2.1.4.1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="vardgivarnamn" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="patientType">
+    <xs:sequence>
+      <xs:element name="person-id" type="iso:II">
+        <xs:annotation>
+          <xs:documentation>Personnummer eller samordningsnummer.
+						o.i.d för personnummer är 1.2.752.129.2.1.3.1.
+						o.i.d för samordningsnummer är 1.2.752.129.2.1.3.3</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="fullstandigtNamn" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Förnamn +  efternamn sammanslaget.
+					Är tomt om personen har en skyddad identitet.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ResultOfCall">
+    <xs:annotation>
+      <xs:documentation>Holds information about the success of the call. If INFO is set the field infoText should contain more information.
+				If ERROR is set the fields errorId and errorText will contain information about the error.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="resultCode" type="ResultCodeEnum" minOccurs="1"/>
+      <xs:element name="infoText" type="xs:string" minOccurs="0"/>
+      <xs:element name="errorId" type="ErrorIdEnum" minOccurs="0"/>
+      <xs:element name="errorText" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ErrorIdEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="VALIDATION_ERROR"/>
+      <xs:enumeration value="TRANSFORMATION_ERROR"/>
+      <xs:enumeration value="APPLICATION_ERROR"/>
+      <xs:enumeration value="TECHNICAL_ERROR"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_insuranceprocess_healthreporting_3.1.1\schemas\core_components\ISO_dt_subset_1.0.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:iso:21090:dt:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://www.ascc.net/xml/schematron" xmlns="urn:iso:21090:dt:1">
+  <xsd:annotation>
+    <xsd:documentation>Subset of original iso_dt.xsd file.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleType name="Uid">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="IdentifierScope">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="BUSN"/>
+      <xsd:enumeration value="OBJ"/>
+      <xsd:enumeration value="VER"/>
+      <xsd:enumeration value="VW"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="IdentifierReliability">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ISS"/>
+      <xsd:enumeration value="VER"/>
+      <xsd:enumeration value="UNV"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NullFlavor">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="NI"/>
+      <xsd:enumeration value="INV"/>
+      <xsd:enumeration value="OTH"/>
+      <xsd:enumeration value="NINF"/>
+      <xsd:enumeration value="PINF"/>
+      <xsd:enumeration value="UNC"/>
+      <xsd:enumeration value="DER"/>
+      <xsd:enumeration value="UNK"/>
+      <xsd:enumeration value="ASKU"/>
+      <xsd:enumeration value="NAV"/>
+      <xsd:enumeration value="QS"/>
+      <xsd:enumeration value="NASK"/>
+      <xsd:enumeration value="TRC"/>
+      <xsd:enumeration value="MSK"/>
+      <xsd:enumeration value="NA"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="UpdateMode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="A"/>
+      <xsd:enumeration value="AU"/>
+      <xsd:enumeration value="U"/>
+      <xsd:enumeration value="R"/>
+      <xsd:enumeration value="I"/>
+      <xsd:enumeration value="D"/>
+      <xsd:enumeration value="K"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="HXIT" abstract="true">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <sch:pattern name="extension requires root">
+          <sch:rule abstract="true" id="HXIT-0">
+            <sch:assert test="not(@controlActExtension) or @controlActRoot"/>
+          </sch:rule>
+        </sch:pattern>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:attribute name="validTimeLow" type="xsd:string" use="optional"/>
+    <xsd:attribute name="validTimeHigh" type="xsd:string" use="optional"/>
+    <xsd:attribute name="controlActRoot" type="Uid" use="optional"/>
+    <xsd:attribute name="controlActExtension" type="xsd:string" use="optional"/>
+  </xsd:complexType>
+  <xsd:complexType name="ANY">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <sch:pattern name="no ANY unless null">
+          <sch:rule abstract="true" id="ANY-0">
+            <sch:assert test="todo"/>
+          </sch:rule>
+        </sch:pattern>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="HXIT">
+        <xsd:attribute name="nullFlavor" type="NullFlavor" use="optional"/>
+        <xsd:attribute name="flavorId" type="xsd:string" use="optional"/>
+        <xsd:attribute name="updateMode" type="UpdateMode" use="optional"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="II">
+    <xsd:complexContent>
+      <xsd:extension base="ANY">
+        <xsd:attribute name="root" type="Uid" use="optional"/>
+        <xsd:attribute name="extension" type="xsd:string" use="optional"/>
+        <xsd:attribute name="identifierName" type="xsd:string" use="optional"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CD">
+    <xsd:complexContent>
+      <xsd:extension base="ANY">
+        <xsd:attribute name="code" type="xsd:string" use="optional"/>
+        <xsd:attribute name="codeSystem" type="Uid" use="optional"/>
+        <xsd:attribute name="codeSystemName" type="xsd:string" use="optional"/>
+        <xsd:attribute name="codeSystemVersion" type="xsd:string" use="optional"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_insuranceprocess_healthreporting_3.1.1\schemas\core_components\ws-addressing-1.0.xsd</con:url><con:content><![CDATA[<!--W3C XML Schema defined in the Web Services Addressing 1.0 specification
+    http://www.w3.org/TR/ws-addr-core
+
+   Copyright © 2005 World Wide Web Consortium,
+
+   (Massachusetts Institute of Technology, European Research Consortium for
+   Informatics and Mathematics, Keio University). All Rights Reserved. This
+   work is distributed under the W3C® Software License [1] in the hope that
+   it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+   warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+   [1] http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231
+
+   $Id: ws-addr.xsd,v 1.4 2008/07/14 18:48:47 plehegar Exp $-->
+<xs:schema targetNamespace="http://www.w3.org/2005/08/addressing" blockDefault="#all" elementFormDefault="qualified" finalDefault="" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.w3.org/2005/08/addressing">
+  <!--Constructs from the WS-Addressing Core-->
+  <xs:element name="EndpointReference" type="tns:EndpointReferenceType"/>
+  <xs:complexType name="EndpointReferenceType" mixed="false">
+    <xs:sequence>
+      <xs:element name="Address" type="tns:AttributedURIType"/>
+      <xs:element name="ReferenceParameters" type="tns:ReferenceParametersType" minOccurs="0"/>
+      <xs:element ref="tns:Metadata" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:complexType name="ReferenceParametersType" mixed="false">
+    <xs:sequence>
+      <xs:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:element name="Metadata" type="tns:MetadataType"/>
+  <xs:complexType name="MetadataType" mixed="false">
+    <xs:sequence>
+      <xs:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:element name="MessageID" type="tns:AttributedURIType"/>
+  <xs:element name="RelatesTo" type="tns:RelatesToType"/>
+  <xs:complexType name="RelatesToType" mixed="false">
+    <xs:simpleContent>
+      <xs:extension base="xs:anyURI">
+        <xs:attribute name="RelationshipType" type="tns:RelationshipTypeOpenEnum" use="optional" default="http://www.w3.org/2005/08/addressing/reply"/>
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="RelationshipTypeOpenEnum">
+    <xs:union memberTypes="tns:RelationshipType xs:anyURI"/>
+  </xs:simpleType>
+  <xs:simpleType name="RelationshipType">
+    <xs:restriction base="xs:anyURI">
+      <xs:enumeration value="http://www.w3.org/2005/08/addressing/reply"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReplyTo" type="tns:EndpointReferenceType"/>
+  <xs:element name="From" type="tns:EndpointReferenceType"/>
+  <xs:element name="FaultTo" type="tns:EndpointReferenceType"/>
+  <xs:element name="To" type="tns:AttributedURIType"/>
+  <xs:element name="Action" type="tns:AttributedURIType"/>
+  <xs:complexType name="AttributedURIType" mixed="false">
+    <xs:simpleContent>
+      <xs:extension base="xs:anyURI">
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <!--Constructs from the WS-Addressing SOAP binding-->
+  <xs:attribute name="IsReferenceParameter" type="xs:boolean"/>
+  <xs:simpleType name="FaultCodesOpenEnumType">
+    <xs:union memberTypes="tns:FaultCodesType xs:QName"/>
+  </xs:simpleType>
+  <xs:simpleType name="FaultCodesType">
+    <xs:restriction base="xs:QName">
+      <xs:enumeration value="tns:InvalidAddressingHeader"/>
+      <xs:enumeration value="tns:InvalidAddress"/>
+      <xs:enumeration value="tns:InvalidEPR"/>
+      <xs:enumeration value="tns:InvalidCardinality"/>
+      <xs:enumeration value="tns:MissingAddressInEPR"/>
+      <xs:enumeration value="tns:DuplicateMessageID"/>
+      <xs:enumeration value="tns:ActionMismatch"/>
+      <xs:enumeration value="tns:MessageAddressingHeaderRequired"/>
+      <xs:enumeration value="tns:DestinationUnreachable"/>
+      <xs:enumeration value="tns:ActionNotSupported"/>
+      <xs:enumeration value="tns:EndpointUnavailable"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RetryAfter" type="tns:AttributedUnsignedLongType"/>
+  <xs:complexType name="AttributedUnsignedLongType" mixed="false">
+    <xs:simpleContent>
+      <xs:extension base="xs:unsignedLong">
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="ProblemHeaderQName" type="tns:AttributedQNameType"/>
+  <xs:complexType name="AttributedQNameType" mixed="false">
+    <xs:simpleContent>
+      <xs:extension base="xs:QName">
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="ProblemHeader" type="tns:AttributedAnyType"/>
+  <xs:complexType name="AttributedAnyType" mixed="false">
+    <xs:sequence>
+      <xs:any namespace="##any" processContents="lax" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:element name="ProblemIRI" type="tns:AttributedURIType"/>
+  <xs:element name="ProblemAction" type="tns:ProblemActionType"/>
+  <xs:complexType name="ProblemActionType" mixed="false">
+    <xs:sequence>
+      <xs:element ref="tns:Action" minOccurs="0"/>
+      <xs:element name="SoapAction" minOccurs="0" type="xs:anyURI"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="44afdd1a-d4fb-4356-b3fb-4bbe0a7988f2" isOneWay="false" action="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateQuestionResponder:1" name="ReceiveMedicalCertificateQuestion" bindingOperationName="ReceiveMedicalCertificateQuestion" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="31d44aed-9ee3-423b-bd7c-ed760c23b143" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://tempuri.org</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:add="http://www.w3.org/2005/08/addressing" xmlns:urn="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateQuestionResponder:1" xmlns:urn1="urn:riv:insuranceprocess:healthreporting:medcertqa:1" xmlns:urn2="urn:riv:insuranceprocess:healthreporting:2">\r
+   <soapenv:Header>\r
+      <add:To>?</add:To>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn:ReceiveMedicalCertificateQuestion>\r
+         <urn:Question>\r
+            <urn:fkReferens-id>?</urn:fkReferens-id>\r
+            <urn:amne>?</urn:amne>\r
+            <urn:fraga>\r
+               <urn1:meddelandeText>?</urn1:meddelandeText>\r
+               <urn1:signeringsTidpunkt>?</urn1:signeringsTidpunkt>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn:fraga>\r
+            <urn:avsantTidpunkt>?</urn:avsantTidpunkt>\r
+            <!--Zero or more repetitions:-->\r
+            <urn:fkKontaktInfo>\r
+               <urn1:kontakt>?</urn1:kontakt>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn:fkKontaktInfo>\r
+            <urn:adressVard>\r
+               <urn1:hosPersonal>\r
+                  <urn2:personal-id validTimeLow="?" validTimeHigh="?" controlActRoot="?" controlActExtension="?" nullFlavor="?" flavorId="?" updateMode="?" root="?" extension="?" identifierName="?"/>\r
+                  <!--Optional:-->\r
+                  <urn2:fullstandigtNamn>?</urn2:fullstandigtNamn>\r
+                  <!--Optional:-->\r
+                  <urn2:forskrivarkod>?</urn2:forskrivarkod>\r
+                  <urn2:enhet>\r
+                     <urn2:enhets-id validTimeLow="?" validTimeHigh="?" controlActRoot="?" controlActExtension="?" nullFlavor="?" flavorId="?" updateMode="?" root="?" extension="?" identifierName="?"/>\r
+                     <!--Optional:-->\r
+                     <urn2:arbetsplatskod validTimeLow="?" validTimeHigh="?" controlActRoot="?" controlActExtension="?" nullFlavor="?" flavorId="?" updateMode="?" root="?" extension="?" identifierName="?"/>\r
+                     <urn2:enhetsnamn>?</urn2:enhetsnamn>\r
+                     <!--Optional:-->\r
+                     <urn2:postadress>?</urn2:postadress>\r
+                     <!--Optional:-->\r
+                     <urn2:postnummer>?</urn2:postnummer>\r
+                     <!--Optional:-->\r
+                     <urn2:postort>?</urn2:postort>\r
+                     <!--Optional:-->\r
+                     <urn2:telefonnummer>?</urn2:telefonnummer>\r
+                     <!--Optional:-->\r
+                     <urn2:epost>?</urn2:epost>\r
+                     <!--Optional:-->\r
+                     <urn2:vardgivare>\r
+                        <urn2:vardgivare-id validTimeLow="?" validTimeHigh="?" controlActRoot="?" controlActExtension="?" nullFlavor="?" flavorId="?" updateMode="?" root="?" extension="?" identifierName="?"/>\r
+                        <urn2:vardgivarnamn>?</urn2:vardgivarnamn>\r
+                        <!--You may enter ANY elements at this point-->\r
+                     </urn2:vardgivare>\r
+                     <!--You may enter ANY elements at this point-->\r
+                  </urn2:enhet>\r
+                  <!--You may enter ANY elements at this point-->\r
+               </urn1:hosPersonal>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn:adressVard>\r
+            <!--Optional:-->\r
+            <urn:fkMeddelanderubrik>?</urn:fkMeddelanderubrik>\r
+            <!--Zero or more repetitions:-->\r
+            <urn:fkKomplettering>\r
+               <urn1:falt>?</urn1:falt>\r
+               <urn1:text>?</urn1:text>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn:fkKomplettering>\r
+            <!--Optional:-->\r
+            <urn:fkSistaDatumForSvar>?</urn:fkSistaDatumForSvar>\r
+            <urn:lakarutlatande>\r
+               <urn1:lakarutlatande-id>?</urn1:lakarutlatande-id>\r
+               <urn1:signeringsTidpunkt>?</urn1:signeringsTidpunkt>\r
+               <urn1:patient>\r
+                  <urn2:person-id validTimeLow="?" validTimeHigh="?" controlActRoot="?" controlActExtension="?" nullFlavor="?" flavorId="?" updateMode="?" root="?" extension="?" identifierName="?"/>\r
+                  <!--Optional:-->\r
+                  <urn2:fullstandigtNamn>?</urn2:fullstandigtNamn>\r
+                  <!--You may enter ANY elements at this point-->\r
+               </urn1:patient>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn:lakarutlatande>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn:Question>\r
+         <!--You may enter ANY elements at this point-->\r
+      </urn:ReceiveMedicalCertificateQuestion>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateQuestionResponder:1"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="fb424e6c-12de-4ae0-abb4-00d7e795d65e" wsaVersion="NONE" name="ReceiveMedicalCertificateAnswerResponderBinding" type="wsdl" bindingName="{urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateAnswer:1:rivtabp20}ReceiveMedicalCertificateAnswerResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../../schemas/ServiceContracts_insuranceprocess_healthreporting_3.1.1/schemas/interactions/ReceiveMedicalCertificateAnswerInteraction/ReceiveMedicalCertificateAnswerInteraction_1.0_rivtabp20.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/VBShare/schemas/ServiceContracts_insuranceprocess_healthreporting_3.1.1/schemas/interactions/ReceiveMedicalCertificateAnswerInteraction/ReceiveMedicalCertificateAnswerInteraction_1.0_rivtabp20.wsdl"><con:part><con:url>file:/C:/VBShare/schemas/ServiceContracts_insuranceprocess_healthreporting_3.1.1/schemas/interactions/ReceiveMedicalCertificateAnswerInteraction/ReceiveMedicalCertificateAnswerInteraction_1.0_rivtabp20.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<wsdl:definitions name="ReceiveMedicalCertificateAnswerInteraction" targetNamespace="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateAnswer:1:rivtabp20" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:tjs="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateAnswerResponder:1" xmlns:tns="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateAnswer:1:rivtabp20">
+  <xs:annotation>
+    <xs:documentation>Tjänsteinteraktionens namn: ReceiveMedicalCertificateAnswerInteraction
+			Beskrivning: 
+				Interaction to receive an answer to a previous question
+			Revisioner: 2010-05-18 Version 1.0, Mats Ekhammar - Callista Enterprise AB
+			Tjänstedomän: insuranceprocess:healthreporting
+			Tjänsteinteraktionstyp: Fråga-svar
+			RIV Teknisk Anvisning: Basic Profile 2.0
+			Förvaltas av: xxx</xs:documentation>
+  </xs:annotation>
+  <wsdl:types>
+    <xs:schema>
+      <xs:import schemaLocation="ReceiveMedicalCertificateAnswerResponder_1.0.xsd" namespace="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateAnswerResponder:1"/>
+    </xs:schema>
+    <xs:schema>
+      <xs:import schemaLocation="../../core_components/ws-addressing-1.0.xsd" namespace="http://www.w3.org/2005/08/addressing"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ReceiveMedicalCertificateAnswerRequest">
+    <xs:annotation>
+      <xs:documentation>LogicalAddress is the organization id for a "vårdenhet".</xs:documentation>
+    </xs:annotation>
+    <wsdl:part name="LogicalAddress" element="wsa:To"/>
+    <wsdl:part name="parameters" element="tjs:ReceiveMedicalCertificateAnswer"/>
+  </wsdl:message>
+  <wsdl:message name="ReceiveMedicalCertificateAnswerResponse">
+    <wsdl:part name="parameters" element="tjs:ReceiveMedicalCertificateAnswerResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ReceiveMedicalCertificateAnswerResponderInterface">
+    <wsdl:operation name="ReceiveMedicalCertificateAnswer">
+      <wsdl:input message="tns:ReceiveMedicalCertificateAnswerRequest"/>
+      <wsdl:output message="tns:ReceiveMedicalCertificateAnswerResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ReceiveMedicalCertificateAnswerResponderBinding" type="tns:ReceiveMedicalCertificateAnswerResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ReceiveMedicalCertificateAnswer">
+      <soap:operation soapAction="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateAnswerResponder:1"/>
+      <wsdl:input>
+        <soap:header use="literal" message="tns:ReceiveMedicalCertificateAnswerRequest" part="LogicalAddress"/>
+        <soap:body use="literal" parts="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceiveMedicalCertificateAnswerResponderService">
+    <wsdl:port name="ReceiveMedicalCertificateAnswerResponderPort" binding="tns:ReceiveMedicalCertificateAnswerResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_insuranceprocess_healthreporting_3.1.1\schemas\interactions\ReceiveMedicalCertificateAnswerInteraction\ReceiveMedicalCertificateAnswerResponder_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateAnswerResponder:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:qa="urn:riv:insuranceprocess:healthreporting:medcertqa:1" xmlns:core="urn:riv:insuranceprocess:healthreporting:2" xmlns:tns="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateAnswerResponder:1">
+  <xs:import namespace="urn:riv:insuranceprocess:healthreporting:medcertqa:1" schemaLocation="../../core_components/MedicalCertificateQuestionsAnswers_1.0.xsd"/>
+  <xs:import namespace="urn:riv:insuranceprocess:healthreporting:2" schemaLocation="../../core_components/Insuranceprocess_healthreporting_2.0.xsd"/>
+  <xs:element name="ReceiveMedicalCertificateAnswer" type="tns:ReceiveMedicalCertificateAnswerType"/>
+  <xs:element name="ReceiveMedicalCertificateAnswerResponse" type="tns:ReceiveMedicalCertificateAnswerResponseType"/>
+  <xs:element name="Answer" type="tns:AnswerFromFkType"/>
+  <xs:complexType name="ReceiveMedicalCertificateAnswerType">
+    <xs:sequence>
+      <xs:element ref="tns:Answer"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReceiveMedicalCertificateAnswerResponseType">
+    <xs:sequence>
+      <xs:element name="result" type="core:ResultOfCall" minOccurs="0" maxOccurs="1"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AnswerFromFkType">
+    <xs:sequence>
+      <xs:element name="vardReferens-id" type="xs:string"/>
+      <xs:element name="fkReferens-id" type="xs:string" minOccurs="0"/>
+      <xs:element name="amne" type="qa:Amnetyp"/>
+      <xs:element name="fraga" type="qa:innehallType"/>
+      <xs:element name="svar" type="qa:innehallType"/>
+      <xs:element name="avsantTidpunkt" type="xs:dateTime"/>
+      <xs:element name="fkKontaktInfo" type="qa:fkKontaktType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="adressVard" type="qa:vardAdresseringsType"/>
+      <xs:element name="lakarutlatande" type="qa:lakarutlatandeEnkelType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_insuranceprocess_healthreporting_3.1.1\schemas\core_components\MedicalCertificateQuestionsAnswers_1.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:insuranceprocess:healthreporting:medcertqa:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:core="urn:riv:insuranceprocess:healthreporting:2" xmlns:tns="urn:riv:insuranceprocess:healthreporting:medcertqa:1">
+  <xs:import namespace="urn:riv:insuranceprocess:healthreporting:2" schemaLocation="Insuranceprocess_healthreporting_2.0.xsd"/>
+  <xs:simpleType name="Amnetyp">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Komplettering_av_lakarintyg"/>
+      <xs:enumeration value="Makulering_av_lakarintyg"/>
+      <xs:enumeration value="Avstamningsmote"/>
+      <xs:enumeration value="Kontakt"/>
+      <xs:enumeration value="Arbetstidsforlaggning"/>
+      <xs:enumeration value="Paminnelse"/>
+      <xs:enumeration value="Ovrigt"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--<xs:complexType name="meddelandeType">
+		<xs:sequence>
+			<xs:element name="vardReferens-id" type="xs:string" minOccurs="0"/>
+			<xs:element name="fkReferens-id" type="xs:string" minOccurs="0"/>
+			<xs:element name="amne" type="tns:Amnetyp"/>
+			<xs:element name="fraga" type="tns:innehallType" minOccurs="0" />
+			<xs:element name="svar" type="tns:innehallType" minOccurs="0" />
+			<xs:element name="avsantTidpunkt" type="xs:dateTime"/>
+ 			<xs:element name="fkAdressFK" type="tns:fkAdresseringsType" minOccurs="0"/>
+			<xs:element name="adressVard" type="tns:vardAdresseringsType"/>
+			<xs:element name="fkMeddelanderubrik" type="xs:string" minOccurs="0" />
+			<xs:element name="fkKomplettering" type="tns:kompletteringType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="fkSistaDatumForSvar" type="xs:date" minOccurs="0"/>
+			<xs:element name="lakarutlatande" type="tns:lakarutlatandeEnkelType"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>			
+		</xs:sequence>
+	</xs:complexType>-->
+  <xs:complexType name="fkKontaktType">
+    <xs:sequence>
+      <xs:element name="kontakt" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="vardAdresseringsType">
+    <xs:sequence>
+      <xs:element name="hosPersonal" type="core:hosPersonalType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lakarutlatandeEnkelType">
+    <xs:sequence>
+      <xs:element name="lakarutlatande-id" type="xs:string"/>
+      <xs:element name="signeringsTidpunkt" type="xs:dateTime"/>
+      <xs:element name="patient" type="core:patientType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="kompletteringType">
+    <xs:sequence>
+      <xs:element name="falt" type="xs:string"/>
+      <xs:element name="text" type="xs:string"/>
+      <!--Skall denna vara minOccurs=0-->
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="innehallType">
+    <xs:sequence>
+      <xs:element name="meddelandeText" type="xs:string"/>
+      <xs:element name="signeringsTidpunkt" type="xs:dateTime"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_insuranceprocess_healthreporting_3.1.1\schemas\core_components\Insuranceprocess_healthreporting_2.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+	or more contributor license agreements. See the NOTICE file
+	distributed with this work for additional information
+	regarding copyright ownership. The ASF licenses this file
+	to you under the Apache License, Version 2.0 (the
+	"License"); you may not use this file except in compliance
+	with the License. You may obtain a copy of the License at
+	
+	http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing,
+	software distributed under the License is distributed on an
+	"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	KIND, either express or implied. See the License for the
+	specific language governing permissions and limitations
+	under the License.-->
+<xs:schema targetNamespace="urn:riv:insuranceprocess:healthreporting:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:riv:insuranceprocess:healthreporting:2" xmlns:iso="urn:iso:21090:dt:1">
+  <xs:import namespace="urn:iso:21090:dt:1" schemaLocation="ISO_dt_subset_1.0.xsd"/>
+  <xs:annotation>
+    <xs:documentation>Beskrivning: Gemensamma element för insuranceprocess_healthreporting
+			Revisioner: 
+			2010-05-20: Release version 1.0 mats.ekhammar@callistaenterprise.se.
+			2010-11-17: Version 2.0 Upprensning och förenkling av mats ekhammar</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="hosPersonalType">
+    <xs:sequence>
+      <xs:element name="personal-id" type="iso:II">
+        <xs:annotation>
+          <xs:documentation>HSA-id, o.i.d för HSA-id är 1.2.752.129.2.1.4.1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="fullstandigtNamn" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Förnamn +  efternamn sammanslaget.
+					Är tomt om personen har en skyddad identitet.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--Skyddad identitet-->
+      <xs:element name="forskrivarkod" type="xs:string" minOccurs="0"/>
+      <xs:element name="enhet" type="enhetType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="enhetType">
+    <xs:sequence>
+      <xs:element name="enhets-id" type="iso:II">
+        <xs:annotation>
+          <xs:documentation>HSA-id, o.i.d för HSA-id är 1.2.752.129.2.1.4.1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="arbetsplatskod" type="iso:II" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>o.i.d för arbetsplatskod är 1.2.752.29.4.71</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="enhetsnamn" type="xs:string"/>
+      <xs:element name="postadress" type="xs:string" minOccurs="0"/>
+      <xs:element name="postnummer" type="xs:string" minOccurs="0"/>
+      <xs:element name="postort" type="xs:string" minOccurs="0"/>
+      <xs:element name="telefonnummer" type="xs:string" minOccurs="0"/>
+      <xs:element name="epost" type="xs:string" minOccurs="0"/>
+      <xs:element name="vardgivare" type="vardgivareType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="vardgivareType">
+    <xs:sequence>
+      <xs:element name="vardgivare-id" type="iso:II">
+        <xs:annotation>
+          <xs:documentation>HSA-id, o.i.d för HSA-id är 1.2.752.129.2.1.4.1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="vardgivarnamn" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="patientType">
+    <xs:sequence>
+      <xs:element name="person-id" type="iso:II">
+        <xs:annotation>
+          <xs:documentation>Personnummer eller samordningsnummer.
+						o.i.d för personnummer är 1.2.752.129.2.1.3.1.
+						o.i.d för samordningsnummer är 1.2.752.129.2.1.3.3</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="fullstandigtNamn" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Förnamn +  efternamn sammanslaget.
+					Är tomt om personen har en skyddad identitet.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ResultOfCall">
+    <xs:annotation>
+      <xs:documentation>Holds information about the success of the call. If INFO is set the field infoText should contain more information.
+				If ERROR is set the fields errorId and errorText will contain information about the error.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="resultCode" type="ResultCodeEnum" minOccurs="1"/>
+      <xs:element name="infoText" type="xs:string" minOccurs="0"/>
+      <xs:element name="errorId" type="ErrorIdEnum" minOccurs="0"/>
+      <xs:element name="errorText" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ErrorIdEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="VALIDATION_ERROR"/>
+      <xs:enumeration value="TRANSFORMATION_ERROR"/>
+      <xs:enumeration value="APPLICATION_ERROR"/>
+      <xs:enumeration value="TECHNICAL_ERROR"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_insuranceprocess_healthreporting_3.1.1\schemas\core_components\ISO_dt_subset_1.0.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:iso:21090:dt:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://www.ascc.net/xml/schematron" xmlns="urn:iso:21090:dt:1">
+  <xsd:annotation>
+    <xsd:documentation>Subset of original iso_dt.xsd file.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleType name="Uid">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="IdentifierScope">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="BUSN"/>
+      <xsd:enumeration value="OBJ"/>
+      <xsd:enumeration value="VER"/>
+      <xsd:enumeration value="VW"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="IdentifierReliability">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ISS"/>
+      <xsd:enumeration value="VER"/>
+      <xsd:enumeration value="UNV"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NullFlavor">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="NI"/>
+      <xsd:enumeration value="INV"/>
+      <xsd:enumeration value="OTH"/>
+      <xsd:enumeration value="NINF"/>
+      <xsd:enumeration value="PINF"/>
+      <xsd:enumeration value="UNC"/>
+      <xsd:enumeration value="DER"/>
+      <xsd:enumeration value="UNK"/>
+      <xsd:enumeration value="ASKU"/>
+      <xsd:enumeration value="NAV"/>
+      <xsd:enumeration value="QS"/>
+      <xsd:enumeration value="NASK"/>
+      <xsd:enumeration value="TRC"/>
+      <xsd:enumeration value="MSK"/>
+      <xsd:enumeration value="NA"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="UpdateMode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="A"/>
+      <xsd:enumeration value="AU"/>
+      <xsd:enumeration value="U"/>
+      <xsd:enumeration value="R"/>
+      <xsd:enumeration value="I"/>
+      <xsd:enumeration value="D"/>
+      <xsd:enumeration value="K"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="HXIT" abstract="true">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <sch:pattern name="extension requires root">
+          <sch:rule abstract="true" id="HXIT-0">
+            <sch:assert test="not(@controlActExtension) or @controlActRoot"/>
+          </sch:rule>
+        </sch:pattern>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:attribute name="validTimeLow" type="xsd:string" use="optional"/>
+    <xsd:attribute name="validTimeHigh" type="xsd:string" use="optional"/>
+    <xsd:attribute name="controlActRoot" type="Uid" use="optional"/>
+    <xsd:attribute name="controlActExtension" type="xsd:string" use="optional"/>
+  </xsd:complexType>
+  <xsd:complexType name="ANY">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <sch:pattern name="no ANY unless null">
+          <sch:rule abstract="true" id="ANY-0">
+            <sch:assert test="todo"/>
+          </sch:rule>
+        </sch:pattern>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="HXIT">
+        <xsd:attribute name="nullFlavor" type="NullFlavor" use="optional"/>
+        <xsd:attribute name="flavorId" type="xsd:string" use="optional"/>
+        <xsd:attribute name="updateMode" type="UpdateMode" use="optional"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="II">
+    <xsd:complexContent>
+      <xsd:extension base="ANY">
+        <xsd:attribute name="root" type="Uid" use="optional"/>
+        <xsd:attribute name="extension" type="xsd:string" use="optional"/>
+        <xsd:attribute name="identifierName" type="xsd:string" use="optional"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CD">
+    <xsd:complexContent>
+      <xsd:extension base="ANY">
+        <xsd:attribute name="code" type="xsd:string" use="optional"/>
+        <xsd:attribute name="codeSystem" type="Uid" use="optional"/>
+        <xsd:attribute name="codeSystemName" type="xsd:string" use="optional"/>
+        <xsd:attribute name="codeSystemVersion" type="xsd:string" use="optional"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_insuranceprocess_healthreporting_3.1.1\schemas\core_components\ws-addressing-1.0.xsd</con:url><con:content><![CDATA[<!--W3C XML Schema defined in the Web Services Addressing 1.0 specification
+    http://www.w3.org/TR/ws-addr-core
+
+   Copyright © 2005 World Wide Web Consortium,
+
+   (Massachusetts Institute of Technology, European Research Consortium for
+   Informatics and Mathematics, Keio University). All Rights Reserved. This
+   work is distributed under the W3C® Software License [1] in the hope that
+   it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+   warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+   [1] http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231
+
+   $Id: ws-addr.xsd,v 1.4 2008/07/14 18:48:47 plehegar Exp $-->
+<xs:schema targetNamespace="http://www.w3.org/2005/08/addressing" blockDefault="#all" elementFormDefault="qualified" finalDefault="" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.w3.org/2005/08/addressing">
+  <!--Constructs from the WS-Addressing Core-->
+  <xs:element name="EndpointReference" type="tns:EndpointReferenceType"/>
+  <xs:complexType name="EndpointReferenceType" mixed="false">
+    <xs:sequence>
+      <xs:element name="Address" type="tns:AttributedURIType"/>
+      <xs:element name="ReferenceParameters" type="tns:ReferenceParametersType" minOccurs="0"/>
+      <xs:element ref="tns:Metadata" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:complexType name="ReferenceParametersType" mixed="false">
+    <xs:sequence>
+      <xs:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:element name="Metadata" type="tns:MetadataType"/>
+  <xs:complexType name="MetadataType" mixed="false">
+    <xs:sequence>
+      <xs:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:element name="MessageID" type="tns:AttributedURIType"/>
+  <xs:element name="RelatesTo" type="tns:RelatesToType"/>
+  <xs:complexType name="RelatesToType" mixed="false">
+    <xs:simpleContent>
+      <xs:extension base="xs:anyURI">
+        <xs:attribute name="RelationshipType" type="tns:RelationshipTypeOpenEnum" use="optional" default="http://www.w3.org/2005/08/addressing/reply"/>
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="RelationshipTypeOpenEnum">
+    <xs:union memberTypes="tns:RelationshipType xs:anyURI"/>
+  </xs:simpleType>
+  <xs:simpleType name="RelationshipType">
+    <xs:restriction base="xs:anyURI">
+      <xs:enumeration value="http://www.w3.org/2005/08/addressing/reply"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReplyTo" type="tns:EndpointReferenceType"/>
+  <xs:element name="From" type="tns:EndpointReferenceType"/>
+  <xs:element name="FaultTo" type="tns:EndpointReferenceType"/>
+  <xs:element name="To" type="tns:AttributedURIType"/>
+  <xs:element name="Action" type="tns:AttributedURIType"/>
+  <xs:complexType name="AttributedURIType" mixed="false">
+    <xs:simpleContent>
+      <xs:extension base="xs:anyURI">
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <!--Constructs from the WS-Addressing SOAP binding-->
+  <xs:attribute name="IsReferenceParameter" type="xs:boolean"/>
+  <xs:simpleType name="FaultCodesOpenEnumType">
+    <xs:union memberTypes="tns:FaultCodesType xs:QName"/>
+  </xs:simpleType>
+  <xs:simpleType name="FaultCodesType">
+    <xs:restriction base="xs:QName">
+      <xs:enumeration value="tns:InvalidAddressingHeader"/>
+      <xs:enumeration value="tns:InvalidAddress"/>
+      <xs:enumeration value="tns:InvalidEPR"/>
+      <xs:enumeration value="tns:InvalidCardinality"/>
+      <xs:enumeration value="tns:MissingAddressInEPR"/>
+      <xs:enumeration value="tns:DuplicateMessageID"/>
+      <xs:enumeration value="tns:ActionMismatch"/>
+      <xs:enumeration value="tns:MessageAddressingHeaderRequired"/>
+      <xs:enumeration value="tns:DestinationUnreachable"/>
+      <xs:enumeration value="tns:ActionNotSupported"/>
+      <xs:enumeration value="tns:EndpointUnavailable"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RetryAfter" type="tns:AttributedUnsignedLongType"/>
+  <xs:complexType name="AttributedUnsignedLongType" mixed="false">
+    <xs:simpleContent>
+      <xs:extension base="xs:unsignedLong">
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="ProblemHeaderQName" type="tns:AttributedQNameType"/>
+  <xs:complexType name="AttributedQNameType" mixed="false">
+    <xs:simpleContent>
+      <xs:extension base="xs:QName">
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="ProblemHeader" type="tns:AttributedAnyType"/>
+  <xs:complexType name="AttributedAnyType" mixed="false">
+    <xs:sequence>
+      <xs:any namespace="##any" processContents="lax" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:element name="ProblemIRI" type="tns:AttributedURIType"/>
+  <xs:element name="ProblemAction" type="tns:ProblemActionType"/>
+  <xs:complexType name="ProblemActionType" mixed="false">
+    <xs:sequence>
+      <xs:element ref="tns:Action" minOccurs="0"/>
+      <xs:element name="SoapAction" minOccurs="0" type="xs:anyURI"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="c19c91c8-5881-4aa5-beae-3b87b8cf1f92" isOneWay="false" action="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateAnswerResponder:1" name="ReceiveMedicalCertificateAnswer" bindingOperationName="ReceiveMedicalCertificateAnswer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3b2ce2e4-cfdd-404f-a6a1-bd73896b43fe" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://tempuri.org</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:add="http://www.w3.org/2005/08/addressing" xmlns:urn="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateAnswerResponder:1" xmlns:urn1="urn:riv:insuranceprocess:healthreporting:medcertqa:1" xmlns:urn2="urn:riv:insuranceprocess:healthreporting:2">\r
+   <soapenv:Header>\r
+      <add:To>?</add:To>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn:ReceiveMedicalCertificateAnswer>\r
+         <urn:Answer>\r
+            <urn:vardReferens-id>?</urn:vardReferens-id>\r
+            <!--Optional:-->\r
+            <urn:fkReferens-id>?</urn:fkReferens-id>\r
+            <urn:amne>?</urn:amne>\r
+            <urn:fraga>\r
+               <urn1:meddelandeText>?</urn1:meddelandeText>\r
+               <urn1:signeringsTidpunkt>?</urn1:signeringsTidpunkt>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn:fraga>\r
+            <urn:svar>\r
+               <urn1:meddelandeText>?</urn1:meddelandeText>\r
+               <urn1:signeringsTidpunkt>?</urn1:signeringsTidpunkt>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn:svar>\r
+            <urn:avsantTidpunkt>?</urn:avsantTidpunkt>\r
+            <!--Zero or more repetitions:-->\r
+            <urn:fkKontaktInfo>\r
+               <urn1:kontakt>?</urn1:kontakt>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn:fkKontaktInfo>\r
+            <urn:adressVard>\r
+               <urn1:hosPersonal>\r
+                  <urn2:personal-id validTimeLow="?" validTimeHigh="?" controlActRoot="?" controlActExtension="?" nullFlavor="?" flavorId="?" updateMode="?" root="?" extension="?" identifierName="?"/>\r
+                  <!--Optional:-->\r
+                  <urn2:fullstandigtNamn>?</urn2:fullstandigtNamn>\r
+                  <!--Optional:-->\r
+                  <urn2:forskrivarkod>?</urn2:forskrivarkod>\r
+                  <urn2:enhet>\r
+                     <urn2:enhets-id validTimeLow="?" validTimeHigh="?" controlActRoot="?" controlActExtension="?" nullFlavor="?" flavorId="?" updateMode="?" root="?" extension="?" identifierName="?"/>\r
+                     <!--Optional:-->\r
+                     <urn2:arbetsplatskod validTimeLow="?" validTimeHigh="?" controlActRoot="?" controlActExtension="?" nullFlavor="?" flavorId="?" updateMode="?" root="?" extension="?" identifierName="?"/>\r
+                     <urn2:enhetsnamn>?</urn2:enhetsnamn>\r
+                     <!--Optional:-->\r
+                     <urn2:postadress>?</urn2:postadress>\r
+                     <!--Optional:-->\r
+                     <urn2:postnummer>?</urn2:postnummer>\r
+                     <!--Optional:-->\r
+                     <urn2:postort>?</urn2:postort>\r
+                     <!--Optional:-->\r
+                     <urn2:telefonnummer>?</urn2:telefonnummer>\r
+                     <!--Optional:-->\r
+                     <urn2:epost>?</urn2:epost>\r
+                     <!--Optional:-->\r
+                     <urn2:vardgivare>\r
+                        <urn2:vardgivare-id validTimeLow="?" validTimeHigh="?" controlActRoot="?" controlActExtension="?" nullFlavor="?" flavorId="?" updateMode="?" root="?" extension="?" identifierName="?"/>\r
+                        <urn2:vardgivarnamn>?</urn2:vardgivarnamn>\r
+                        <!--You may enter ANY elements at this point-->\r
+                     </urn2:vardgivare>\r
+                     <!--You may enter ANY elements at this point-->\r
+                  </urn2:enhet>\r
+                  <!--You may enter ANY elements at this point-->\r
+               </urn1:hosPersonal>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn:adressVard>\r
+            <urn:lakarutlatande>\r
+               <urn1:lakarutlatande-id>?</urn1:lakarutlatande-id>\r
+               <urn1:signeringsTidpunkt>?</urn1:signeringsTidpunkt>\r
+               <urn1:patient>\r
+                  <urn2:person-id validTimeLow="?" validTimeHigh="?" controlActRoot="?" controlActExtension="?" nullFlavor="?" flavorId="?" updateMode="?" root="?" extension="?" identifierName="?"/>\r
+                  <!--Optional:-->\r
+                  <urn2:fullstandigtNamn>?</urn2:fullstandigtNamn>\r
+                  <!--You may enter ANY elements at this point-->\r
+               </urn1:patient>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn:lakarutlatande>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn:Answer>\r
+         <!--You may enter ANY elements at this point-->\r
+      </urn:ReceiveMedicalCertificateAnswer>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateAnswerResponder:1"/></con:call></con:operation></con:interface><con:testSuite id="6a3aff90-9de0-47b3-96e2-d8a865836130" name="Ursprunglig avsändare"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4d8a6e70-0b02-475f-ab2d-3ff29f2b2289" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.1.1 Angränsande konsument skickar fråga via aggregerande tjänst" searchProperties="true"><con:description>	</con:description><con:settings/><con:testStep type="groovy" name="Read data" id="80d90f6d-39d9-4793-91c6-2353c60f6733"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -9707,67 +10923,176 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="07c15999-7cda-45e3-a79c-a69110dcefa8"/><con:assertion type="Schema Compliance" id="674d325a-7485-413f-8f84-087503086e62"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="a277f4a4-8a4d-40a9-9385-4fc6084e6ce9"/><con:assertion type="GroovyScriptAssertion" id="433e14fa-648a-4c61-943d-2ee5e80fd7df" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/go1:observationGroup/hburn1:patient/hburn1:id/hburn1:extension', context.patientId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="568b7c7f-6c6c-4745-aeca-237dd8d75f2c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.41 GD med default routing, vägval baseras på VG" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="7a2deb79-13cf-4a02-85b6-67b87df91279"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/go1:observationGroup/hburn1:patient/hburn1:id/hburn1:extension', context.patientId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2c293619-29a8-4752-922d-fb74432c2cbc" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.41 RMCQ med default routing, vägval baseras på VG" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="48c8843c-eb4b-400d-a863-4d386d077c18"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
-source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Set data GD2" id="d6b62715-f9d4-4d3a-a742-79bffcd82121"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gd2:diagnosis")</script></con:config></con:testStep><con:testStep type="request" name="GD2" id="71473396-9040-4878-870b-4272445f638a"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="GD2" id="e2f595c5-fd81-47a7-9adb-72e9fdc88361"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGD}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="RMCQ1" id="15ec8fa0-68df-44f3-a1bd-1dfab65bd3ee"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ReceiveMedicalCertificateQuestionResponderBinding</con:interface><con:operation>ReceiveMedicalCertificateQuestion</con:operation><con:request name="RMCQ1" id="e21240c6-cda1-4ff9-9e6c-cdb086e41bc1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlRMCQ}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+  xmlns:add="http://www.w3.org/2005/08/addressing" 
+  xmlns:urn="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateQuestionResponder:1" 
+  xmlns:urn1="urn:riv:insuranceprocess:healthreporting:medcertqa:1" 
+  xmlns:urn2="urn:riv:insuranceprocess:healthreporting:2">\r
    <soapenv:Header>\r
-      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+      <add:To>${logicalAddress}</add:To>\r
    </soapenv:Header>\r
-   <soapenv:Body>\r
-      <urn1:GetDiagnosis>\r
-         <urn1:patientId>\r
-            <urn2:id>${patientId}</urn2:id>\r
-            <urn2:type>${patientIdType}</urn2:type>\r
-         </urn1:patientId>\r
-      </urn1:GetDiagnosis>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a69cd850-cf7b-4008-b474-e371dbb8da83"/><con:assertion type="Schema Compliance" id="2ef7ad07-3e5f-4e10-8f75-53b5d80d12dd"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="c8cbd884-67ee-4343-8d27-848572e9c2ac"/><con:assertion type="GroovyScriptAssertion" id="764a911e-c212-4c4c-ad37-1842c3a5c325" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
-def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gd2:diagnosis/hdurn2:diagnosisHeader/hdurn2:patientId/hdurn2:id', context.patientId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="db3390a4-92f6-4ebb-9e15-1f3ce0e68ada" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.42 GCC med default routing, vägval baseras på VG fast SB och SV finns" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="c5482661-190a-40d8-bed8-6cd5541d2397"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+<soapenv:Body>
+      <urn:ReceiveMedicalCertificateQuestion>
+         <urn:Question>
+            <urn:fkReferens-id>1435261254312</urn:fkReferens-id>
+            <urn:amne>Komplettering_av_lakarintyg</urn:amne>
+            <urn:fraga>
+               <urn1:meddelandeText>Ny testfråga för att kolla så att allt är ok</urn1:meddelandeText>
+               <urn1:signeringsTidpunkt>2017-05-03T15:24:52</urn1:signeringsTidpunkt>
+            </urn:fraga>
+            <urn:avsantTidpunkt>2019-01-30T15:50:52</urn:avsantTidpunkt>
+            <urn:fkKontaktInfo>
+               <urn1:kontakt>NMT ICC</urn1:kontakt>
+            </urn:fkKontaktInfo>
+            <urn:adressVard>
+               <urn1:hosPersonal>
+                  <urn2:personal-id root="1.2.752.129.2.1.4.1" extension="TSTNMT2321000156-100L"/>
+                  <urn2:fullstandigtNamn>Åsa Svensson</urn2:fullstandigtNamn>
+                  <urn2:enhet>
+                     <urn2:enhets-id extension="TSTNMT2321000156-1077" root="1.2.752.129.2.1.4.1"/>
+                     <urn2:enhetsnamn>alfa-enheten</urn2:enhetsnamn>
+                     <urn2:vardgivare>
+                             <urn2:vardgivare-id extension="TSTNMT2321000156-102Q" root="1.2.752.129.2.1.4.1"/>
+                             <urn2:vardgivarnamn>nmt_vg3</urn2:vardgivarnamn>
+                     </urn2:vardgivare>
+                  </urn2:enhet>
+               </urn1:hosPersonal>
+            </urn:adressVard>
+            <urn:fkMeddelanderubrik>Testkontakt</urn:fkMeddelanderubrik>
+            <urn:fkKomplettering>
+               <urn1:falt>ICC TEST</urn1:falt>
+               <urn1:text>ICC TEST NTP-775.41</urn1:text>
+            </urn:fkKomplettering>
+            <urn:fkSistaDatumForSvar>2099-02-24</urn:fkSistaDatumForSvar>
+            <urn:lakarutlatande>
+               <urn1:lakarutlatande-id>2d34e40a-fb65-4b6b-a67b-38c65a70678a</urn1:lakarutlatande-id>
+               <urn1:signeringsTidpunkt>2017-05-03T15:24:52.000</urn1:signeringsTidpunkt>
+               <urn1:patient>
+                <urn2:person-id extension="${patientIdLong}" root="1.2.752.129.2.1.3.1"/>
+                    <urn2:fullstandigtNamn>ICC TEST</urn2:fullstandigtNamn>
+               </urn1:patient>
+            </urn:lakarutlatande>
+         </urn:Question>
+      </urn:ReceiveMedicalCertificateQuestion>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="359db784-2dd4-40be-89d6-1e1526c4384f"/><con:assertion type="SOAP Fault Assertion" id="17ebcef4-a305-486f-a0e5-6cbbdc8b5764" name="Not SOAP Fault"/><con:assertion type="Simple Contains" id="82699956-0e33-43f3-ac4e-7be2fc9f0a8a" name="Contains"><con:configuration><token>&lt;ns3:resultCode>OK&lt;/ns3:resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="644654c0-362c-4a3f-a55c-3bad26b4ec30" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.42 RMCA med default routing, vägval baseras på VG fast SB och SV finns" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="e445e791-7054-4c44-913f-706b357a82c1"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
-source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Set data GCC3" id="9ec82d82-e95f-418a-93ec-17c29b701ba9"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gcc3:careContact")</script></con:config></con:testStep><con:testStep type="request" name="GCC3" id="ebb08d20-20b1-438b-a49c-cca6d7e95599"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareContactsResponderBinding</con:interface><con:operation>GetCareContacts</con:operation><con:request name="GCC3" id="cccfb8c2-8ca4-4981-bd02-9d4c5c9ecc82"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGCC}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3" xmlns:urn2="urn:riv:clinicalprocess:logistics:logistics:3">\r
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="RMCA1" id="fcd25902-1775-4391-8d0e-2667d182237c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ReceiveMedicalCertificateAnswerResponderBinding</con:interface><con:operation>ReceiveMedicalCertificateAnswer</con:operation><con:request name="RMCA1" id="89786b4a-9941-468c-96de-3e6177f1e488"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlRMCA}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:add="http://www.w3.org/2005/08/addressing" xmlns:urn="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateAnswerResponder:1" xmlns:urn1="urn:riv:insuranceprocess:healthreporting:medcertqa:1" xmlns:urn2="urn:riv:insuranceprocess:healthreporting:2">\r
    <soapenv:Header>\r
-      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+      <add:To>${logicalAddress}</add:To>\r
    </soapenv:Header>\r
-   <soapenv:Body>\r
-      <urn1:GetCareContacts>\r
-         <urn1:patientId>\r
-            <urn2:id>${patientId}</urn2:id>\r
-            <urn2:type>${patientIdType}</urn2:type>\r
-         </urn1:patientId>\r
-      </urn1:GetCareContacts>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6fde8911-84be-4d46-891c-e362054e4912"/><con:assertion type="Schema Compliance" id="5ed29d9a-4f80-4182-b551-cfbbd535b294"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="14766947-a7b5-4812-bc48-ef3db0142615"/><con:assertion type="GroovyScriptAssertion" id="9720f51c-9a40-4d2a-a264-2e3b9aaa1104" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
-def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gcc3:careContact/llurn3:careContactHeader/llurn3:patientId/llurn3:id', context.patientId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2c60c63d-e97b-4819-903c-91aba2507f0d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.43 GD med default routing, anropsbehörighet saknas" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="df02fe8f-fc52-423d-9060-7cf544f5bc83"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+<soapenv:Body>
+      <urn:ReceiveMedicalCertificateAnswer>
+         <urn:Answer>
+            <urn:vardReferens-id>38356</urn:vardReferens-id>
+            <urn:fkReferens-id>37203</urn:fkReferens-id>
+            <urn:amne>Ovrigt</urn:amne>
+            <urn:fraga>
+               <urn1:meddelandeText>Övrigt</urn1:meddelandeText>
+               <urn1:signeringsTidpunkt>2018-03-03T15:23:09.000</urn1:signeringsTidpunkt>
+            </urn:fraga>
+            <urn:svar>
+               <urn1:meddelandeText>ICC har svarat</urn1:meddelandeText>
+               <urn1:signeringsTidpunkt>2018-03-03T15:20:09.000</urn1:signeringsTidpunkt>
+            </urn:svar>
+            <urn:avsantTidpunkt>2019-01-30T15:42:09.000</urn:avsantTidpunkt>
+            <urn:fkKontaktInfo>
+               <urn1:kontakt>NMT ICC</urn1:kontakt>
+            </urn:fkKontaktInfo>
+            <urn:adressVard>
+               <urn1:hosPersonal>
+                  <urn2:personal-id root="1.2.752.129.2.1.4.1" extension="TSTNMT2321000156-100L"/>
+                  <urn2:fullstandigtNamn>Åsa Svensson</urn2:fullstandigtNamn>
+                  <urn2:enhet>
+                     <urn2:enhets-id root="1.2.752.129.2.1.4.1" extension="TSTNMT2321000156-1077"/>
+                     <urn2:enhetsnamn>alfa-enheten</urn2:enhetsnamn>
+                     <urn2:vardgivare>
+                        <urn2:vardgivare-id root="1.2.752.129.2.1.4.1" extension="TSTNMT2321000156-102Q"/>
+                        <urn2:vardgivarnamn>nmt_vg3</urn2:vardgivarnamn>
+                     </urn2:vardgivare>
+                  </urn2:enhet>
+               </urn1:hosPersonal>
+            </urn:adressVard>
+            <urn:lakarutlatande>
+               <urn1:lakarutlatande-id>2d34e40a-fb65-4b6b-a67b-38c65a70678a</urn1:lakarutlatande-id>
+               <urn1:signeringsTidpunkt>2018-03-03T15:20:09.000</urn1:signeringsTidpunkt>
+               <urn1:patient>
+                  <urn2:person-id root="1.2.752.129.2.1.3.1" extension="${patientIdLong}"/>
+                  <urn2:fullstandigtNamn>ICC TEST</urn2:fullstandigtNamn>
+               </urn1:patient>
+            </urn:lakarutlatande>
+         </urn:Answer>
+      </urn:ReceiveMedicalCertificateAnswer>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="e988b4f7-9000-4092-afb2-ec46a7a80460"/><con:assertion type="Simple Contains" id="21d06574-1513-43c2-acb6-ff87c32f48f6" name="Contains"><con:configuration><token>VP004</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="b69f9eb1-8a46-4d60-a905-3606c1979de8" name="SOAP Fault"/><con:assertion type="Simple Contains"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6aae3325-3130-4977-9dfe-5a5fe38d6d1c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.43 RMCQ med default routing, logisk adress saknas" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="4b0bc36e-99ee-49b5-8a75-7ba0e2d07c0b"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
-source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Set data GD2" id="6baa4e48-d9d6-455c-959a-501adbc7a5c1"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gd2:diagnosis")</script></con:config></con:testStep><con:testStep type="request" name="GD2" id="659c51b0-b48a-4374-84d4-7dd428a0a15c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="GD2" id="e2f595c5-fd81-47a7-9adb-72e9fdc88361"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGD}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
-   <soapenv:Header>\r
-      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
-   </soapenv:Header>\r
-   <soapenv:Body>\r
-      <urn1:GetDiagnosis>\r
-         <urn1:patientId>\r
-            <urn2:id>${patientId}</urn2:id>\r
-            <urn2:type>${patientIdType}</urn2:type>\r
-         </urn1:patientId>\r
-      </urn1:GetDiagnosis>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a69cd850-cf7b-4008-b474-e371dbb8da83"/><con:assertion type="Schema Compliance" id="2ef7ad07-3e5f-4e10-8f75-53b5d80d12dd"><con:configuration/></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="a36a422d-901f-447d-ba9f-559215796b05" name="SOAP Fault"/><con:assertion type="Simple Contains" id="32d31ced-9395-4d13-9586-4a826278272b" name="Contains"><con:configuration><token>VP007</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>HSA_NTJP</con:name><con:value>HSASERVICES-NTJP</con:value></con:property><con:property><con:name>HSA_RTJP</con:name><con:value>HSASERVICES-RTJP</con:value></con:property><con:property><con:name>HSA_KONSUMENT1</con:name><con:value>TSTNMT2321000156-B02</con:value></con:property><con:property><con:name>HSA_PRODUCENT1</con:name><con:value>LOAD-MOCKS</con:value></con:property><con:property><con:name>HSA_PRODUCENT2</con:name><con:value>PRODUCENT2</con:value></con:property><con:property><con:name>HSA_PRODUCENT3</con:name><con:value>PRODUCENT3</con:value></con:property><con:property><con:name>HSA_PRODUCENT4</con:name><con:value>PRODUCENT4</con:value></con:property><con:property><con:name>HSA_KONSUMENT2</con:name><con:value>KONSUMENT2</con:value></con:property><con:property><con:name>ENV_SIT</con:name><con:value>https://test.esb.ntjp.se</con:value></con:property><con:property><con:name>ENV_QA</con:name><con:value>https://qa.esb.ntjp.se</con:value></con:property><con:property><con:name>xmlns:urn</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:hdurn2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gd2:diagnosis</con:value></con:property><con:property><con:name>xmlns:gcd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:gro3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetReferralOutcomeResponder:3</con:value></con:property><con:property><con:name>xmlns:haurn3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:3</con:value></con:property><con:property><con:name>xmlns:gcc3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3</con:value></con:property><con:property><con:name>xmlns:llurn3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:3</con:value></con:property><con:property><con:name>xmlns:go1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:1</con:value></con:property><con:property><con:name>xmlns:hburn1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:1</con:value></con:property><con:property><con:name>xmlns:gio1</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetImagingOutcomeResponder:1</con:value></con:property><con:property><con:name>xmlns:ga1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1</con:value></con:property><con:property><con:name>xmlns:aaurn1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:1</con:value></con:property><con:property><con:name>xmlns:gd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2</con:value></con:property></con:properties><con:afterLoadScript/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="RMCQ1" id="27d15e0a-224e-4451-bf6b-fc753ce1a3aa"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ReceiveMedicalCertificateQuestionResponderBinding</con:interface><con:operation>ReceiveMedicalCertificateQuestion</con:operation><con:request name="RMCQ1" id="32a2494d-fe60-41b3-a77c-e66e7794f19e"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlRMCQ}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+  xmlns:add="http://www.w3.org/2005/08/addressing" 
+  xmlns:urn="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateQuestionResponder:1" 
+  xmlns:urn1="urn:riv:insuranceprocess:healthreporting:medcertqa:1" 
+  xmlns:urn2="urn:riv:insuranceprocess:healthreporting:2">
+   <soapenv:Header>
+      <add:To>${logicalAddress}</add:To>
+   </soapenv:Header>
+<soapenv:Body>
+      <urn:ReceiveMedicalCertificateQuestion>
+         <urn:Question>
+            <urn:fkReferens-id>1435261254312</urn:fkReferens-id>
+            <urn:amne>Komplettering_av_lakarintyg</urn:amne>
+            <urn:fraga>
+               <urn1:meddelandeText>Ny testfråga för att kolla så att allt är ok</urn1:meddelandeText>
+               <urn1:signeringsTidpunkt>2017-05-03T15:24:52</urn1:signeringsTidpunkt>
+            </urn:fraga>
+            <urn:avsantTidpunkt>2019-01-30T15:50:52</urn:avsantTidpunkt>
+            <urn:fkKontaktInfo>
+               <urn1:kontakt>NMT ICC</urn1:kontakt>
+            </urn:fkKontaktInfo>
+            <urn:adressVard>
+               <urn1:hosPersonal>
+                  <urn2:personal-id root="1.2.752.129.2.1.4.1" extension="TSTNMT2321000156-100L"/>
+                  <urn2:fullstandigtNamn>Åsa Svensson</urn2:fullstandigtNamn>
+                  <urn2:enhet>
+                     <urn2:enhets-id extension="TSTNMT2321000156-1077" root="1.2.752.129.2.1.4.1"/>
+                     <urn2:enhetsnamn>alfa-enheten</urn2:enhetsnamn>
+                     <urn2:vardgivare>
+                             <urn2:vardgivare-id extension="TSTNMT2321000156-102Q" root="1.2.752.129.2.1.4.1"/>
+                             <urn2:vardgivarnamn>nmt_vg3</urn2:vardgivarnamn>
+                     </urn2:vardgivare>
+                  </urn2:enhet>
+               </urn1:hosPersonal>
+            </urn:adressVard>
+            <urn:fkMeddelanderubrik>Testkontakt</urn:fkMeddelanderubrik>
+            <urn:fkKomplettering>
+               <urn1:falt>ICC TEST</urn1:falt>
+               <urn1:text>ICC TEST NTP-775.43</urn1:text>
+            </urn:fkKomplettering>
+            <urn:fkSistaDatumForSvar>2099-02-24</urn:fkSistaDatumForSvar>
+            <urn:lakarutlatande>
+               <urn1:lakarutlatande-id>2d34e40a-fb65-4b6b-a67b-38c65a70678a</urn1:lakarutlatande-id>
+               <urn1:signeringsTidpunkt>2017-05-03T15:24:52.000</urn1:signeringsTidpunkt>
+               <urn1:patient>
+                <urn2:person-id extension="${patientIdLong}" root="1.2.752.129.2.1.3.1"/>
+                    <urn2:fullstandigtNamn>ICC TEST</urn2:fullstandigtNamn>
+               </urn1:patient>
+            </urn:lakarutlatande>
+         </urn:Question>
+      </urn:ReceiveMedicalCertificateQuestion>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2cf94f97-3c73-45cb-82ee-bc3c9284d39a"/><con:assertion type="Not SOAP Fault Assertion" id="b68156b4-1b03-4b31-94cd-c1851f1e25b0" name="SOAP Fault"/><con:assertion type="Simple Contains" id="b2962af5-0065-492f-8285-5a54fc310be1" name="Contains"><con:configuration><token>VP004</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>HSA_NTJP</con:name><con:value>HSASERVICES-NTJP</con:value></con:property><con:property><con:name>HSA_RTJP</con:name><con:value>HSASERVICES-RTJP</con:value></con:property><con:property><con:name>HSA_KONSUMENT1</con:name><con:value>TSTNMT2321000156-B02</con:value></con:property><con:property><con:name>HSA_PRODUCENT1</con:name><con:value>LOAD-MOCKS</con:value></con:property><con:property><con:name>HSA_PRODUCENT2</con:name><con:value>PRODUCENT2</con:value></con:property><con:property><con:name>HSA_PRODUCENT3</con:name><con:value>PRODUCENT3</con:value></con:property><con:property><con:name>HSA_PRODUCENT4</con:name><con:value>PRODUCENT4</con:value></con:property><con:property><con:name>HSA_KONSUMENT2</con:name><con:value>KONSUMENT2</con:value></con:property><con:property><con:name>ENV_SIT</con:name><con:value>https://test.esb.ntjp.se</con:value></con:property><con:property><con:name>ENV_QA</con:name><con:value>https://qa.esb.ntjp.se</con:value></con:property><con:property><con:name>xmlns:urn</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:hdurn2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gd2:diagnosis</con:value></con:property><con:property><con:name>xmlns:gcd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:gro3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetReferralOutcomeResponder:3</con:value></con:property><con:property><con:name>xmlns:haurn3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:3</con:value></con:property><con:property><con:name>xmlns:gcc3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3</con:value></con:property><con:property><con:name>xmlns:llurn3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:3</con:value></con:property><con:property><con:name>xmlns:go1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:1</con:value></con:property><con:property><con:name>xmlns:hburn1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:1</con:value></con:property><con:property><con:name>xmlns:gio1</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetImagingOutcomeResponder:1</con:value></con:property><con:property><con:name>xmlns:ga1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1</con:value></con:property><con:property><con:name>xmlns:aaurn1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:1</con:value></con:property><con:property><con:name>xmlns:gd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2</con:value></con:property></con:properties><con:afterLoadScript/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

@@ -49,6 +49,8 @@ under the License.
 		<webServiceUrlGA>https://TARGETHOST/vp/clinicalprocess/activity/actions/GetActivities/1/rivtabp21</webServiceUrlGA>
 		<webServiceUrlGRA>https://TARGETHOST/vp/crm/requeststatus/GetRequestActivities/1/rivtabp21</webServiceUrlGRA>
 		<webServiceUrlGSOCS>https://TARGETHOST/vp/GetSubjectOfCareSchedule/1/rivtabp21</webServiceUrlGSOCS>
+		<webServiceUrlRMCQ>https://TARGETHOST/vp/ReceiveMedicalCertificateQuestion/1/rivtabp20</webServiceUrlRMCQ>
+		<webServiceUrlRMCA>https://TARGETHOST/vp/ReceiveMedicalCertificateAnswer/1/rivtabp20</webServiceUrlRMCA>
 		
 		<webServiceUrlFindAllQuestions20>https://TARGETHOST/vp/FindAllQuestions/1/rivtabp20</webServiceUrlFindAllQuestions20>
 		<webServiceUrlFindAllQuestions21>https://TARGETHOST/vp/FindAllQuestions/1/rivtabp21</webServiceUrlFindAllQuestions21>
@@ -67,6 +69,7 @@ under the License.
 		<owner3>SE-NMT-SKLTP-MOCK03</owner3>
 		
 		<patientId>196711222940</patientId>
+		<patientIdLong>19671122-2940</patientIdLong>
 		<patientId1>191001209814</patientId1>
 		<patientId2>191001229812</patientId2>
 		<patientId3>191001239803</patientId3>
@@ -707,25 +710,26 @@ under the License.
 			<logicalAddress>5565594230</logicalAddress>
 		</data>
 	</testcase>
-	<testcase id="NTP-775.41 GD med default routing, vägval baseras på VG">
+	<testcase id="NTP-775.41 RMCQ med default routing, vägval baseras på VG">
 		<description>
-			Konsument skickar direktadresserad GD med logicalAdress satt till LOAD-MOCKS#TSTNMT2321000156-9999 (VG#VE)
+			Konsument skickar direktadresserad RMCQ med logicalAdress satt till SKLTP-MOCK01#TSTNMT2321000156-9999 (VG#VE)
 			Syfte: Säkerställ att default routing fortsatt fungerar (routing på "VG"-nivå om behörighet saknas på "VE"-nivå).
 		</description>
 		<data>
-			<logicalAddress>LOAD-MOCKS#TSTNMT2321000156-9999</logicalAddress>
+			<logicalAddress>SKLTP-MOCK01#TSTNMT2321000156-9999</logicalAddress>
 		</data>
 	</testcase>
-	<testcase id="NTP-775.42 GCC med default routing, vägval baseras på VG fast SB och SV finns">
+	<testcase id="NTP-775.42 RMCA med default routing, vägval baseras på VG fast SB och SV finns">
 		<description>
-			Konsument skickar direktadresserad GCC med logicalAdress satt till LOAD-MOCKS#TSTNMT2321000156-9999 (VG#VE)
+			Konsument skickar direktadresserad RMCA med logicalAdress satt till SKLTP-MOCK01#TSTNMT2321000156-9999 (VG#VE)
 			Syfte: Notera om default routing används innan standardbehörigheter och standardvägval (dafault routing borde användas innan HSA-klättring)
+			Om default routing struktur används, så görs ingen ytterligare kontroll mot SV och SB.
 		</description>
 		<data>
-			<logicalAddress>LOAD-MOCKS#TSTNMT2321000156-9999</logicalAddress>
+			<logicalAddress>SKLTP-MOCK01#TSTNMT2321000156-9999</logicalAddress>
 		</data>
 	</testcase>
-	<testcase id="NTP-775.43 GD med default routing, anropsbehörighet saknas">
+	<testcase id="NTP-775.43 RMCQ med default routing, logisk adress saknas">
 		<description>
 			Syfte: Säkerställ att default routing hanterar avsaknad av anropsbehörighet på "VG" nivå på korrekt sätt.
 		</description>
