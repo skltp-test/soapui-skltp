@@ -638,6 +638,15 @@ under the License.
 			<logicalAddress>TSTNMT2321000156-9999</logicalAddress>
 		</data>
 	</testcase>
+	<testcase id="NTP-775.9 Direktadresserad GO, vägval baseras på SB och HSA-klättring">
+		<description>
+			Konsument skickar direktadresserad GO till SKLTP-MOCK02 (TSTNMT2321000156-10K6)
+			Syfte: Säkerställ att HSA-klättring används.
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-10K6</logicalAddress>
+		</data>
+	</testcase>
 	<testcase id="NTP-775.21 GRO till AGP, finns endast SB och SV">
 		<description>
 			Konsument skickar GRO till AGP, engagemang finns till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
@@ -705,6 +714,15 @@ under the License.
 		<description>
 			Konsument skickar GD till AGP, engagemang finns till SKLTP-MOCK100 (TSTNMT2321000156-9999)
 			Syfte: Säkerställ att konsumenten inte kommer åt standardvägvalet
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.29 GO till AGP, vägval baseras på SB och HSA-klättring">
+		<description>
+			Konsument skickar GO till AGP, där engagemang finns till SKLTP-MOCK02 (TSTNMT2321000156-10K6)
+			Syfte: Säkerställ att HSA-klättring används.
 		</description>
 		<data>
 			<logicalAddress>5565594230</logicalAddress>
