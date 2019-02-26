@@ -26,7 +26,8 @@ under the License.
 		<webServiceUrlEI>https://TARGETHOST/vp/Update/1/rivtabp21</webServiceUrlEI>
 		<webServiceUrlFC>https://TARGETHOST/vp/FindContent/1/rivtabp21</webServiceUrlFC>
 		<webServiceUrlPN>https://TARGETHOST/vp/ProcessNotification/1/rivtabp21</webServiceUrlPN>
-		<webServiceUrlSubscriberFC>https://tjp.nordicmedtest.se/skaulo/vp/itintegration/engagementindex/FindContent/1/rivtabp21</webServiceUrlSubscriberFC>
+		<!-- <webServiceUrlSubscriberFC>https://tjp.nordicmedtest.se/skaulo/vp/itintegration/engagementindex/FindContent/1/rivtabp21</webServiceUrlSubscriberFC> -->
+		<webServiceUrlSubscriberFC>https://TARGETHOST/vp/FindContent/1/rivtabp21</webServiceUrlSubscriberFC>
 		<webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl>
 		<webServiceUrlFaulty1>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp20</webServiceUrlFaulty1>
 		<webServiceUrlFaulty2>https://TARGETHOST</webServiceUrlFaulty2>
