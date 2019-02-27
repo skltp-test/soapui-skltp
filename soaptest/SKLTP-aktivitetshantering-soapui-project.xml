@@ -2416,6 +2416,21 @@
    </soapenv:Header>\r
    <soapenv:Body>\r
       <urn1:Update>\r
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>196711222940</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:activity:actions</urn2:serviceDomain>
+               <urn2:categorization>caa-ga</urn2:categorization>
+               <urn2:logicalAddress>LOAD-MOCKS</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>LOAD-MOCKS</urn2:sourceSystem>
+               <urn2:creationTime>20181001092712</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
          <urn1:engagementTransaction>\r
             <urn2:deleteFlag>false</urn2:deleteFlag>\r
             <urn2:engagement>\r

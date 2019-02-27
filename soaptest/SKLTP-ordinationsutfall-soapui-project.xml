@@ -4395,6 +4395,21 @@
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
+               <urn2:registeredResidentIdentification>196711222940</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:activityprescription:actoutcome</urn2:serviceDomain>
+               <urn2:categorization>caa-gmh</urn2:categorization>
+               <urn2:logicalAddress>LOAD-MOCKS</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001111912</urn2:mostRecentContent>
+               <urn2:sourceSystem>LOAD-MOCKS</urn2:sourceSystem>
+               <urn2:creationTime>20181001111912</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
                <urn2:registeredResidentIdentification>191001209814</urn2:registeredResidentIdentification>
                <urn2:serviceDomain>riv:clinicalprocess:activityprescription:actoutcome</urn2:serviceDomain>
                <urn2:categorization>caa-gmh</urn2:categorization>
@@ -5076,6 +5091,21 @@
    </soapenv:Header>
    <soapenv:Body>
       <urn1:Update>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>196711222940</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:activityprescription:actoutcome</urn2:serviceDomain>
+               <urn2:categorization>caa-gvh</urn2:categorization>
+               <urn2:logicalAddress>LOAD-MOCKS</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001111912</urn2:mostRecentContent>
+               <urn2:sourceSystem>LOAD-MOCKS</urn2:sourceSystem>
+               <urn2:creationTime>20181001111912</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
@@ -6790,4 +6820,4 @@ ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="50742341-4544-4b9d-9be3-ff50477d6b43"/><con:assertion type="Schema Compliance" id="94ae926b-51e6-422e-9818-9cbddfd77158"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="ade92d5b-107c-499a-98c9-416bdec3dfbe"/><con:assertion type="GroovyScriptAssertion" id="f3adf5e9-0bff-4ecb-ba94-085ce52a6c57" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="ff842717-9ccf-4564-afe7-1b4e29512d78" name="Assert errorCode"><con:configuration><token>&lt;resultCode>INFO&lt;/resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>RecordElementPath</con:name><con:value>//urn:vaccinationMedicalRecord</con:value></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>xmlns:gvh1</con:name><con:value>urn:riv:clinicalprocess:activityprescription:actoutcome:GetVaccinationHistoryResponder:1</con:value></con:property><con:property><con:name>xmlns:urn1</con:name><con:value>urn:riv:clinicalprocess:activityprescription:actoutcome:1</con:value></con:property><con:property><con:name>xmlns:gvh2</con:name><con:value>urn:riv:clinicalprocess:activityprescription:actoutcome:GetVaccinationHistoryResponder:2</con:value></con:property><con:property><con:name>xmlns:urn2</con:name><con:value>urn:riv:clinicalprocess:activityprescription:actoutcome:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gmh2:medicationMedicalRecord</con:value></con:property><con:property><con:name>xmlns:gmh2</con:name><con:value>urn:riv:clinicalprocess:activityprescription:actoutcome:GetMedicationHistoryResponder:2</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="ff842717-9ccf-4564-afe7-1b4e29512d78" name="Assert errorCode"><con:configuration><token>&lt;resultCode>INFO&lt;/resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>RecordElementPath</con:name><con:value>//urn:vaccinationMedicalRecord</con:value></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>xmlns:gvh1</con:name><con:value>urn:riv:clinicalprocess:activityprescription:actoutcome:GetVaccinationHistoryResponder:1</con:value></con:property><con:property><con:name>xmlns:urn1</con:name><con:value>urn:riv:clinicalprocess:activityprescription:actoutcome:1</con:value></con:property><con:property><con:name>xmlns:gvh2</con:name><con:value>urn:riv:clinicalprocess:activityprescription:actoutcome:GetVaccinationHistoryResponder:2</con:value></con:property><con:property><con:name>xmlns:urn2</con:name><con:value>urn:riv:clinicalprocess:activityprescription:actoutcome:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gvh2:vaccinationMedicalRecord</con:value></con:property><con:property><con:name>xmlns:gmh2</con:name><con:value>urn:riv:clinicalprocess:activityprescription:actoutcome:GetMedicationHistoryResponder:2</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
