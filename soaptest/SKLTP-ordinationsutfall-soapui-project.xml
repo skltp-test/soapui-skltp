@@ -5091,6 +5091,53 @@
    </soapenv:Header>
    <soapenv:Body>
       <urn1:Update>
+
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>true</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001249810</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:activityprescription:actoutcome</urn2:serviceDomain>
+               <urn2:categorization>caa-gvh</urn2:categorization>
+               <urn2:logicalAddress>LOAD-MOCKS</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>LOAD-MOCKS</urn2:sourceSystem>
+               <urn2:creationTime>20181005162712</urn2:creationTime>
+               <urn2:dataController>SE-NMT1234</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>true</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001229812</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:activityprescription:actoutcome</urn2:serviceDomain>
+               <urn2:categorization>caa-gvh</urn2:categorization>
+               <urn2:logicalAddress>LOAD-MOCKS</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>LOAD-MOCKS</urn2:sourceSystem>
+               <urn2:creationTime>20181005162712</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>true</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>191001239803</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:activityprescription:actoutcome</urn2:serviceDomain>
+               <urn2:categorization>caa-gvh</urn2:categorization>
+               <urn2:logicalAddress>LOAD-MOCKS</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
+               <urn2:sourceSystem>LOAD-MOCKS</urn2:sourceSystem>
+               <urn2:creationTime>20181005162712</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+      
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
@@ -5465,7 +5512,7 @@
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>            
-         </urn1:engagementTransaction>
+         </urn1:engagementTransaction>     
          <urn1:engagementTransaction>
             <urn2:deleteFlag>false</urn2:deleteFlag>
             <urn2:engagement>
