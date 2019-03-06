@@ -5871,7 +5871,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK04</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -5886,7 +5886,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK05</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -5901,7 +5901,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK06</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -5916,7 +5916,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK07</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -5931,7 +5931,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK08</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -5946,7 +5946,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK09</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -5961,7 +5961,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK10</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -5976,7 +5976,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK11</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -5991,7 +5991,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK12</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -6006,7 +6006,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK13</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -6021,7 +6021,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK14</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -6036,7 +6036,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK15</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -6051,7 +6051,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK16</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -6066,7 +6066,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK17</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -6081,7 +6081,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK18</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -6096,7 +6096,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK19</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -6111,7 +6111,7 @@
                <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
                <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
                <urn2:mostRecentContent>20181001092712</urn2:mostRecentContent>
-               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:sourceSystem>SKLTP-MOCK20</urn2:sourceSystem>
                <urn2:creationTime>20181005162712</urn2:creationTime>
                <urn2:dataController>SE-NMT123</urn2:dataController>
             </urn2:engagement>
@@ -7482,4 +7482,4 @@ ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion
          </urn:result>
       </urn:GetCareServicesResponse>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:logistics:GetCareServicesResponder:2:GetCareServices"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties><con:property><con:name>xmlns:gcc2</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:2</con:value></con:property><con:property><con:name>xmlns:urn2</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:2</con:value></con:property><con:property><con:name>xmlns:gcp2</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCarePlansResponder:2</con:value></con:property><con:property><con:name>xmlns:urn3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:3</con:value></con:property><con:property><con:name>xmlns:gcc3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3</con:value></con:property><con:property><con:name>xmlns:gcs2</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareServicesResponder:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gcc3:careContact</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:logistics:GetCareServicesResponder:2:GetCareServices"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties><con:property><con:name>xmlns:gcc2</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:2</con:value></con:property><con:property><con:name>xmlns:urn2</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:2</con:value></con:property><con:property><con:name>xmlns:gcp2</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCarePlansResponder:2</con:value></con:property><con:property><con:name>xmlns:urn3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:3</con:value></con:property><con:property><con:name>xmlns:gcc3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3</con:value></con:property><con:property><con:name>xmlns:gcs2</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareServicesResponder:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gcs2:careService</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

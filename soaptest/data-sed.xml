@@ -212,7 +212,7 @@ under the License.
 			  Avser behörigheter definierade i tjänstekatalogen.)
 		</description>
 		<data>
-			<logicalAddress>Test</logicalAddress>
+			<logicalAddress>SKLTP-MOCK02</logicalAddress>
 		</data>
 	</testcase>
 	<testcase id="2.9.1 Konsument anropar tjänsteproducent som inte är kontaktbar (VP009)">
@@ -623,11 +623,11 @@ under the License.
 	</testcase>
 	<testcase id="NTP-775.7 Direktadresserad GA, vägval baseras på TAK-anropsbehörighet och SV">
 		<description>
-			Konsument skickar direktadresserad GA till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
+			Konsument skickar direktadresserad GA till SKLTP-MOCK01
 			Syfte: Säkerställ att konsumenten kan använda TAKad anropsbehörighet tillsammans med standardvägval
 		</description>
 		<data>
-			<logicalAddress>TSTNMT2321000156-10K5</logicalAddress>
+			<logicalAddress>SKLTP-MOCK01</logicalAddress>
 		</data>
 	</testcase>
 	<testcase id="NTP-775.8 Direktadresserad GD, SV finns men anropsbehörighet saknas">
