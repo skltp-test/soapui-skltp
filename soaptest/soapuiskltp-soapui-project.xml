@@ -10169,7 +10169,308 @@ Obligatorisk som indata dock ej som utdata.</xs:documentation>
          <!--You may enter ANY elements at this point-->\r
       </urn:ReceiveMedicalCertificateAnswer>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateAnswerResponder:1"/></con:call></con:operation></con:interface><con:testSuite id="6a3aff90-9de0-47b3-96e2-d8a865836130" name="Ursprunglig avsändare"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4d8a6e70-0b02-475f-ab2d-3ff29f2b2289" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.1.1 Angränsande konsument skickar fråga via aggregerande tjänst" searchProperties="true"><con:description>	</con:description><con:settings/><con:testStep type="groovy" name="Read data" id="80d90f6d-39d9-4793-91c6-2353c60f6733"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:insuranceprocess:healthreporting:ReceiveMedicalCertificateAnswerResponder:1"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="503bb925-f854-4713-b1a6-84cdfef3450e" wsaVersion="NONE" name="UpdateResponderBinding" type="wsdl" bindingName="{urn:riv:itintegration:engagementindex:Update:1:rivtabp21}UpdateResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/VBShare/schemas/ServiceContracts_itintegration_engagementindex_1.0.5/schemas/interactions/UpdateInteraction/UpdateInteraction_1.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\VBShare\schemas\ServiceContracts_itintegration_engagementindex_1.0.5\schemas\interactions\UpdateInteraction\UpdateInteraction_1.0_RIVTABP21.wsdl"><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_itintegration_engagementindex_1.0.5\schemas\interactions\UpdateInteraction\UpdateInteraction_1.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<wsdl:definitions name="UpdateInteraction" targetNamespace="urn:riv:itintegration:engagementindex:Update:1:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:tjsi="urn:riv:itintegration:engagementindex:UpdateInitiator:1" xmlns:tns="urn:riv:itintegration:engagementindex:Update:1:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1">
+  <xs:annotation>
+    <xs:documentation>Tjänsteinteraktionens namn: UpdateInteraction
+			 Beskrivning:
+			   Service for adding, updating and removing content to/from engagement index
+			 Revisioner:
+			 Tjänstedomän: itintegration:engagementindex
+			 Tjänsteinteraktionstyp: Fråga-Svar
+			 WS-profil: RIVTABP21
+			 Förvaltas av: Sveriges Kommuner och Landsting</xs:documentation>
+  </xs:annotation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:itintegration:engagementindex:Update:1:rivtabp21">
+      <xs:import schemaLocation="UpdateResponder_1.0.xsd" namespace="urn:riv:itintegration:engagementindex:UpdateResponder:1"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateRequest">
+    <wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
+      <wsdl:documentation>The organisation number of the organization owning the targeted engagement index</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="parameters" element="tjsr:Update"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateResponse">
+    <wsdl:part name="parameters" element="tjsr:UpdateResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="UpdateResponderInterface">
+    <wsdl:operation name="Update">
+      <wsdl:input message="tns:UpdateRequest"/>
+      <wsdl:output message="tns:UpdateResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UpdateResponderBinding" type="tns:UpdateResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update" style="document"/>
+      <wsdl:input>
+        <soap:header use="literal" message="tns:UpdateRequest" part="LogicalAddress"/>
+        <soap:body use="literal" parts="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UpdateResponderService">
+    <wsdl:port name="UpdateResponderPort" binding="tns:UpdateResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_itintegration_engagementindex_1.0.5\schemas\interactions\UpdateInteraction\UpdateResponder_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:itintegration:engagementindex:UpdateResponder:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:core="urn:riv:itintegration:engagementindex:1">
+  <xs:import schemaLocation="../../core_components/itintegration_engagementindex_1.0.xsd" namespace="urn:riv:itintegration:engagementindex:1"/>
+  <xs:element name="Update" type="tns:UpdateType"/>
+  <xs:element name="UpdateResponse" type="tns:UpdateResponseType"/>
+  <xs:complexType name="UpdateType">
+    <xs:sequence>
+      <xs:element name="engagementTransaction" type="core:EngagementTransactionType" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UpdateResponseType">
+    <xs:sequence>
+      <xs:element name="ResultCode" type="core:ResultCodeEnum"/>
+      <xs:element name="comment" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_itintegration_engagementindex_1.0.5\schemas\core_components\itintegration_engagementindex_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:itintegration:engagementindex:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:itintegration:engagementindex:1">
+  <xs:complexType name="EngagementTransactionType">
+    <xs:sequence>
+      <xs:element name="deleteFlag" type="xs:boolean"/>
+      <xs:element name="engagement" type="tns:EngagementType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EngagementType">
+    <xs:sequence>
+      <xs:element name="registeredResidentIdentification" type="tns:RegisteredResidentIdentificationType"/>
+      <xs:element name="serviceDomain" type="xs:anyURI"/>
+      <xs:element name="categorization" type="xs:string"/>
+      <xs:element name="logicalAddress" type="xs:string"/>
+      <xs:element name="businessObjectInstanceIdentifier" type="xs:string"/>
+      <xs:element name="clinicalProcessInterestId" type="tns:ClinicalProcessInterestIdType" minOccurs="1"/>
+      <xs:element name="mostRecentContent" type="tns:TS" minOccurs="0"/>
+      <xs:element name="sourceSystem" type="tns:HsaIdType"/>
+      <xs:element name="creationTime" type="tns:TS" minOccurs="0"/>
+      <xs:element name="updateTime" type="tns:TS" minOccurs="0"/>
+      <xs:element name="dataController" type="tns:OrgNoType"/>
+      <xs:element name="owner" type="tns:HsaIdType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="HsaIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="OrgNoType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="ClinicalProcessInterestIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="RegisteredResidentIdentificationType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{8}[0-9A-Zptf]{4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TS">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})([0-1]{1}[0-9]{1}|2[0-3]{1})[0-5]{1}[0-9]{1}[0-5]{1}[0-9]{1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DT">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_itintegration_engagementindex_1.0.5\schemas\core_components\itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:itintegration:registry:1" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundl��ggande informationsobjekt f��r dom��nen itintegration:registry (adressering av tj��nster)
+
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			F��rfattare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="707396d6-3336-4320-9f63-4fb58b87f8a4" isOneWay="false" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update" name="Update" bindingOperationName="Update" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="350a1c9f-b639-4055-b9fb-97aa6b0fa8c3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://tempuri.org</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>?</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:Update>\r
+         <!--1 or more repetitions:-->\r
+         <urn1:engagementTransaction>\r
+            <urn2:deleteFlag>?</urn2:deleteFlag>\r
+            <urn2:engagement>\r
+               <urn2:registeredResidentIdentification>?</urn2:registeredResidentIdentification>\r
+               <urn2:serviceDomain>?</urn2:serviceDomain>\r
+               <urn2:categorization>?</urn2:categorization>\r
+               <urn2:logicalAddress>?</urn2:logicalAddress>\r
+               <urn2:businessObjectInstanceIdentifier>?</urn2:businessObjectInstanceIdentifier>\r
+               <urn2:clinicalProcessInterestId>?</urn2:clinicalProcessInterestId>\r
+               <!--Optional:-->\r
+               <urn2:mostRecentContent>?</urn2:mostRecentContent>\r
+               <urn2:sourceSystem>?</urn2:sourceSystem>\r
+               <!--Optional:-->\r
+               <urn2:creationTime>?</urn2:creationTime>\r
+               <!--Optional:-->\r
+               <urn2:updateTime>?</urn2:updateTime>\r
+               <urn2:dataController>?</urn2:dataController>\r
+               <!--Optional:-->\r
+               <urn2:owner>?</urn2:owner>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn2:engagement>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:engagementTransaction>\r
+         <!--You may enter ANY elements at this point-->\r
+      </urn1:Update>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call><con:call id="6cd16ff6-9a10-43b0-aef8-0c9bd30f66f0" name="SKAULO_EI"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.13.241:8081/skltp-ei/update-service/v1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>SKLTP-MOCK-EI</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:Update>\r
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>196711222940</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
+               <urn2:categorization>vko</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>196711222940</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
+               <urn2:categorization>vko</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+      </urn1:Update>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call><con:call id="1e7eea92-757e-43fc-9ccb-a1681440ef51" name="SKAULO_EI (via VP)"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://skaulo.nordicmedtest.se/vp/itintegration/engagementindex/Update/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>SKLTP-MOCK-EI</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:Update>\r
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>196711222940</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
+               <urn2:categorization>vko</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>196711222940</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:logistics:logistics</urn2:serviceDomain>
+               <urn2:categorization>vko</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+      </urn1:Update>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="6a3aff90-9de0-47b3-96e2-d8a865836130" name="Ursprunglig avsändare"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4d8a6e70-0b02-475f-ab2d-3ff29f2b2289" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.1.1 Angränsande konsument skickar fråga via aggregerande tjänst" searchProperties="true"><con:description>	</con:description><con:settings/><con:testStep type="groovy" name="Read data" id="80d90f6d-39d9-4793-91c6-2353c60f6733"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -10734,9 +11035,10 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
             <urn2:id>${patientId}</urn2:id>\r
             <urn2:type>${patientIdType}</urn2:type>\r
          </urn1:patientId>\r
+         <urn1:sourceSystemHSAid>${sourceSystemHSAId}</urn1:sourceSystemHSAid>
       </urn1:GetDiagnosis>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a69cd850-cf7b-4008-b474-e371dbb8da83"/><con:assertion type="Schema Compliance" id="2ef7ad07-3e5f-4e10-8f75-53b5d80d12dd"><con:configuration/></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="7ea4ed59-5229-420c-a0be-19e4cce9d84c" name="SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="5af1c5fe-8c2a-47c2-af39-ea4a658e12d5" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.9 Direktadresserad GO, vägval baseras på SB och HSA-klättring" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="5181d029-9172-4d5a-a0eb-6ea322000f5a"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a69cd850-cf7b-4008-b474-e371dbb8da83"/><con:assertion type="Schema Compliance" id="2ef7ad07-3e5f-4e10-8f75-53b5d80d12dd"><con:configuration/></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="7ea4ed59-5229-420c-a0be-19e4cce9d84c" name="SOAP Fault"/><con:assertion type="Simple Contains" id="bf9416f1-8225-4fb7-bad8-a75277b6789d" name="Contains"><con:configuration><token>VP007 Authorization missing for serviceNamespace: urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2, receiverId: TSTNMT2321000156-9999, senderId: TSTNMT2321000156-B02</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="5af1c5fe-8c2a-47c2-af39-ea4a658e12d5" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.9 Direktadresserad GO, vägval baseras på SB och HSA-klättring" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="5181d029-9172-4d5a-a0eb-6ea322000f5a"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -10774,7 +11076,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    <soapenv:Body>\r
       <urn1:GetReferralOutcome>\r
          <urn1:patientId>\r
-            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:id>${patientId13}</urn2:id>\r
             <urn2:type>${patientIdType}</urn2:type>\r
          </urn1:patientId>\r
       </urn1:GetReferralOutcome>\r
@@ -10782,7 +11084,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="43ff4b60-3be8-43ed-b3f0-90c79cd9610a"/><con:assertion type="Schema Compliance" id="de78c828-83cd-4795-b2c2-4bf75331270a"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="b221294b-8113-41e6-8a62-135085d77a39"/><con:assertion type="GroovyScriptAssertion" id="e8248c86-764b-4e3d-b5a8-f89d0a712572" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gro3:referralOutcome/haurn3:referralOutcomeHeader/haurn3:patientId/haurn3:id', context.patientId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="95708837-2d82-4883-bb18-2a7852e0ff7c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-772.22 GCC till AGP, vägval baseras på TAK" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="94704ea8-c042-4bd9-a444-7ec22b2a98c6"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gro3:referralOutcome/haurn3:referralOutcomeHeader/haurn3:patientId/haurn3:id', context.patientId13)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="95708837-2d82-4883-bb18-2a7852e0ff7c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-772.22 GCC till AGP, vägval baseras på TAK" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="94704ea8-c042-4bd9-a444-7ec22b2a98c6"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -10796,7 +11098,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    <soapenv:Body>\r
       <urn1:GetCareContacts>\r
          <urn1:patientId>\r
-            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:id>${patientId13}</urn2:id>\r
             <urn2:type>${patientIdType}</urn2:type>\r
          </urn1:patientId>\r
       </urn1:GetCareContacts>\r
@@ -10804,7 +11106,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6fde8911-84be-4d46-891c-e362054e4912"/><con:assertion type="Schema Compliance" id="5ed29d9a-4f80-4182-b551-cfbbd535b294"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="14766947-a7b5-4812-bc48-ef3db0142615"/><con:assertion type="GroovyScriptAssertion" id="9720f51c-9a40-4d2a-a264-2e3b9aaa1104" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gcc3:careContact/llurn3:careContactHeader/llurn3:patientId/llurn3:id', context.patientId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="a00ca899-6ff2-4405-aa10-ad11e38a3e27" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.23 GCC till AGP, vägval baseras på HSA" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="95a95ff5-9bc9-49bb-a2fd-664a335a6709"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gcc3:careContact/llurn3:careContactHeader/llurn3:patientId/llurn3:id', context.patientId13)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="a00ca899-6ff2-4405-aa10-ad11e38a3e27" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.23 GCC till AGP, vägval baseras på HSA" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="95a95ff5-9bc9-49bb-a2fd-664a335a6709"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -10818,16 +11120,15 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    <soapenv:Body>\r
       <urn1:GetCareContacts>\r
          <urn1:patientId>\r
-            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:id>${patientId14}</urn2:id>\r
             <urn2:type>${patientIdType}</urn2:type>\r
          </urn1:patientId>\r
-         <urn1:sourceSystemHSAid>${sourceSystemHSAId}</urn1:sourceSystemHSAid>
       </urn1:GetCareContacts>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6fde8911-84be-4d46-891c-e362054e4912"/><con:assertion type="Schema Compliance" id="5ed29d9a-4f80-4182-b551-cfbbd535b294"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="14766947-a7b5-4812-bc48-ef3db0142615"/><con:assertion type="GroovyScriptAssertion" id="9720f51c-9a40-4d2a-a264-2e3b9aaa1104" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gcc3:careContact/llurn3:careContactHeader/llurn3:patientId/llurn3:id', context.patientId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="4f41adc7-1011-47d8-9312-ecdb58f23bae" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.24 GCC till AGP, vägval baseras på SB och SV" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="76da5285-c055-42c7-8137-41922686e815"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gcc3:careContact/llurn3:careContactHeader/llurn3:patientId/llurn3:id', context.patientId14)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="4f41adc7-1011-47d8-9312-ecdb58f23bae" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.24 GCC till AGP, vägval baseras på SB och SV" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="76da5285-c055-42c7-8137-41922686e815"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -10841,16 +11142,15 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    <soapenv:Body>\r
       <urn1:GetCareContacts>\r
          <urn1:patientId>\r
-            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:id>${patientId15}</urn2:id>\r
             <urn2:type>${patientIdType}</urn2:type>\r
          </urn1:patientId>\r
-         <urn1:sourceSystemHSAid>${sourceSystemHSAId}</urn1:sourceSystemHSAid>
       </urn1:GetCareContacts>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6fde8911-84be-4d46-891c-e362054e4912"/><con:assertion type="Schema Compliance" id="5ed29d9a-4f80-4182-b551-cfbbd535b294"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="14766947-a7b5-4812-bc48-ef3db0142615"/><con:assertion type="GroovyScriptAssertion" id="9720f51c-9a40-4d2a-a264-2e3b9aaa1104" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gcc3:careContact/llurn3:careContactHeader/llurn3:patientId/llurn3:id', context.patientId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="1fabc786-85e3-4951-a33d-613ed6ec63f1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.25 GO till AGP, vägval baseras på SB och TAK-vägval" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="0a3b24aa-c21e-40c1-a33b-6a2a7fa0362d"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gcc3:careContact/llurn3:careContactHeader/llurn3:patientId/llurn3:id', context.patientId15)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="1fabc786-85e3-4951-a33d-613ed6ec63f1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.25 GO till AGP, vägval baseras på SB och TAK-vägval" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="0a3b24aa-c21e-40c1-a33b-6a2a7fa0362d"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -10865,16 +11165,15 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
       <urn1:GetObservations>\r
          <urn1:patientId>\r
             <urn2:root>${patientIdType}</urn2:root>\r
-            <urn2:extension>${patientId}</urn2:extension>\r
+            <urn2:extension>${patientId13}</urn2:extension>\r
          </urn1:patientId>\r       
          <urn1:interactionAgreementId>2866a7c4-9c60-433f-9035-a4d779ffe7a1</urn1:interactionAgreementId>\r
-         <urn1:sourceSystemHSAId>${sourceSystemHSAId}</urn1:sourceSystemHSAId>
       </urn1:GetObservations>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="07c15999-7cda-45e3-a79c-a69110dcefa8"/><con:assertion type="Schema Compliance" id="674d325a-7485-413f-8f84-087503086e62"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="a277f4a4-8a4d-40a9-9385-4fc6084e6ce9"/><con:assertion type="GroovyScriptAssertion" id="433e14fa-648a-4c61-943d-2ee5e80fd7df" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/go1:observationGroup/hburn1:patient/hburn1:id/hburn1:extension', context.patientId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="f219e8a1-a66d-4b31-beb4-8481956c2f52" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.26 GIO tll AGP, SB finns men vägval saknas" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="b3dba190-a346-44d9-a60c-5d1e02732ce9"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/go1:observationGroup/hburn1:patient/hburn1:id/hburn1:extension', context.patientId13)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="f219e8a1-a66d-4b31-beb4-8481956c2f52" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.26 GIO tll AGP, SB finns men vägval saknas" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="b3dba190-a346-44d9-a60c-5d1e02732ce9"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -10888,16 +11187,13 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    <soapenv:Body>\r
       <urn1:GetImagingOutcome>\r
          <urn1:patientId>\r
-            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:id>${patientId15}</urn2:id>\r
             <urn2:type>${patientIdType}</urn2:type>\r
          </urn1:patientId>\r
          <urn1:sourceSystemHSAid>${sourceSystemHSAId}</urn1:sourceSystemHSAid>
       </urn1:GetImagingOutcome>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="da2ec8f3-844a-49b8-be93-dc4d41a8da67"/><con:assertion type="Schema Compliance" id="90462ca2-5b77-4db9-a8d3-30311442cf7e"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="60e5e015-c882-4f66-afb0-9215df6e4809"/><con:assertion type="GroovyScriptAssertion" id="aafb6031-5305-4fd5-b420-ff4ce1e791b6" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
-def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gio1:imagingOutcome/haurn3:imagingOutcomeHeader/haurn3:patientId/haurn3:id', context.patientId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2c575743-3cf2-4eb4-8c2d-4bccf2ae1f88" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.27 GA till AGP, vägval baseras på TAK-anropsbehörighet och SV" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="4f0b0bb9-3802-4295-a9bd-e4cd4bea4a18"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="da2ec8f3-844a-49b8-be93-dc4d41a8da67"/><con:assertion type="Schema Compliance" id="90462ca2-5b77-4db9-a8d3-30311442cf7e"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="60e5e015-c882-4f66-afb0-9215df6e4809"/><con:assertion type="Simple Contains" id="fa601e3c-4eed-477a-8a62-3acda9c5a943" name="Contains"><con:configuration><token>VP004 No receiverId (logical address) found for serviceNamespace:urn:riv:clinicalprocess:healthcond:actoutcome:GetImagingOutcomeResponder:1, receiverId:TSTNMT2321000156-9999, RivVersion:RIVTABP21, From:</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2c575743-3cf2-4eb4-8c2d-4bccf2ae1f88" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.27 GA till AGP, vägval baseras på TAK-anropsbehörighet och SV" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="4f0b0bb9-3802-4295-a9bd-e4cd4bea4a18"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -10915,10 +11211,6 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
             <urn2:extension>${patientId}</urn2:extension>\r
          </urn1:patientId>\r
          <urn1:interactionAgreementId>2866a7c4-9c60-433f-9035-a4d779ffe7a1</urn1:interactionAgreementId>
-         <urn1:sourceSystemId>
-            <urn2:root>1.2.752.129.2.1.4.1</urn2:root>
-            <urn2:extension>${sourceSystemHSAId}</urn2:extension>
-         </urn1:sourceSystemId>
       </urn1:GetActivities>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="ff12aca7-42d8-4be3-8f40-f08abbf959e3"/><con:assertion type="Schema Compliance" id="0609f339-6936-400e-8089-2802c89d95e0"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="2afcba87-cc6d-4780-848b-fc44fba0f58d"/><con:assertion type="GroovyScriptAssertion" id="2d7e5a05-57cb-4788-bd09-7d074ef812b0" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
@@ -10938,15 +11230,12 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    <soapenv:Body>\r
       <urn1:GetDiagnosis>\r
          <urn1:patientId>\r
-            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:id>${patientId15}</urn2:id>\r
             <urn2:type>${patientIdType}</urn2:type>\r
          </urn1:patientId>\r
       </urn1:GetDiagnosis>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a69cd850-cf7b-4008-b474-e371dbb8da83"/><con:assertion type="Schema Compliance" id="2ef7ad07-3e5f-4e10-8f75-53b5d80d12dd"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="c8cbd884-67ee-4343-8d27-848572e9c2ac"/><con:assertion type="GroovyScriptAssertion" id="764a911e-c212-4c4c-ad37-1842c3a5c325" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
-def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gd2:diagnosis/hdurn2:diagnosisHeader/hdurn2:patientId/hdurn2:id', context.patientId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8efd817e-f5f4-41a8-bc2a-c419965f1797" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.29 GO till AGP, vägval baseras på SB och HSA-klättring" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="ffd78801-db31-4b54-9146-513d10136a9b"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a69cd850-cf7b-4008-b474-e371dbb8da83"/><con:assertion type="Schema Compliance" id="2ef7ad07-3e5f-4e10-8f75-53b5d80d12dd"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="c8cbd884-67ee-4343-8d27-848572e9c2ac"/><con:assertion type="Simple Contains" id="cd517c97-7c02-4c99-b945-a5093b0a03d2" name="Contains"><con:configuration><token>VP007 Authorization missing for serviceNamespace: urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2, receiverId: TSTNMT2321000156-9999, senderId: TSTNMT2321000156-B02</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8efd817e-f5f4-41a8-bc2a-c419965f1797" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.29 GO till AGP, vägval baseras på SB och HSA-klättring" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="ffd78801-db31-4b54-9146-513d10136a9b"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -10961,16 +11250,15 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
       <urn1:GetObservations>\r
          <urn1:patientId>\r
             <urn2:root>${patientIdType}</urn2:root>\r
-            <urn2:extension>${patientId}</urn2:extension>\r
+            <urn2:extension>${patientId14}</urn2:extension>\r
          </urn1:patientId>\r       
          <urn1:interactionAgreementId>2866a7c4-9c60-433f-9035-a4d779ffe7a1</urn1:interactionAgreementId>\r
-         <urn1:sourceSystemHSAId>${sourceSystemHSAId}</urn1:sourceSystemHSAId>
       </urn1:GetObservations>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="07c15999-7cda-45e3-a79c-a69110dcefa8"/><con:assertion type="Schema Compliance" id="674d325a-7485-413f-8f84-087503086e62"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="a277f4a4-8a4d-40a9-9385-4fc6084e6ce9"/><con:assertion type="GroovyScriptAssertion" id="433e14fa-648a-4c61-943d-2ee5e80fd7df" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/go1:observationGroup/hburn1:patient/hburn1:id/hburn1:extension', context.patientId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2c293619-29a8-4752-922d-fb74432c2cbc" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.41 RMCQ med default routing, vägval baseras på VG" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="48c8843c-eb4b-400d-a863-4d386d077c18"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/go1:observationGroup/hburn1:patient/hburn1:id/hburn1:extension', context.patientId14)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2c293619-29a8-4752-922d-fb74432c2cbc" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.41 RMCQ med default routing, vägval baseras på VG" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="48c8843c-eb4b-400d-a863-4d386d077c18"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -11142,4 +11430,4 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          </urn:Question>
       </urn:ReceiveMedicalCertificateQuestion>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2cf94f97-3c73-45cb-82ee-bc3c9284d39a"/><con:assertion type="Not SOAP Fault Assertion" id="b68156b4-1b03-4b31-94cd-c1851f1e25b0" name="SOAP Fault"/><con:assertion type="Simple Contains" id="b2962af5-0065-492f-8285-5a54fc310be1" name="Contains"><con:configuration><token>VP004</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>HSA_NTJP</con:name><con:value>HSASERVICES-NTJP</con:value></con:property><con:property><con:name>HSA_RTJP</con:name><con:value>HSASERVICES-RTJP</con:value></con:property><con:property><con:name>HSA_KONSUMENT1</con:name><con:value>TSTNMT2321000156-B02</con:value></con:property><con:property><con:name>HSA_PRODUCENT1</con:name><con:value>LOAD-MOCKS</con:value></con:property><con:property><con:name>HSA_PRODUCENT2</con:name><con:value>PRODUCENT2</con:value></con:property><con:property><con:name>HSA_PRODUCENT3</con:name><con:value>PRODUCENT3</con:value></con:property><con:property><con:name>HSA_PRODUCENT4</con:name><con:value>PRODUCENT4</con:value></con:property><con:property><con:name>HSA_KONSUMENT2</con:name><con:value>KONSUMENT2</con:value></con:property><con:property><con:name>ENV_SIT</con:name><con:value>https://test.esb.ntjp.se</con:value></con:property><con:property><con:name>ENV_QA</con:name><con:value>https://qa.esb.ntjp.se</con:value></con:property><con:property><con:name>xmlns:urn</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:hdurn2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//go1:observationGroup</con:value></con:property><con:property><con:name>xmlns:gcd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:gro3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetReferralOutcomeResponder:3</con:value></con:property><con:property><con:name>xmlns:haurn3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:3</con:value></con:property><con:property><con:name>xmlns:gcc3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3</con:value></con:property><con:property><con:name>xmlns:llurn3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:3</con:value></con:property><con:property><con:name>xmlns:go1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:1</con:value></con:property><con:property><con:name>xmlns:hburn1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:1</con:value></con:property><con:property><con:name>xmlns:gio1</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetImagingOutcomeResponder:1</con:value></con:property><con:property><con:name>xmlns:ga1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1</con:value></con:property><con:property><con:name>xmlns:aaurn1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:1</con:value></con:property><con:property><con:name>xmlns:gd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2</con:value></con:property></con:properties><con:afterLoadScript/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2cf94f97-3c73-45cb-82ee-bc3c9284d39a"/><con:assertion type="Not SOAP Fault Assertion" id="b68156b4-1b03-4b31-94cd-c1851f1e25b0" name="SOAP Fault"/><con:assertion type="Simple Contains" id="b2962af5-0065-492f-8285-5a54fc310be1" name="Contains"><con:configuration><token>VP004</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>HSA_NTJP</con:name><con:value>HSASERVICES-NTJP</con:value></con:property><con:property><con:name>HSA_RTJP</con:name><con:value>HSASERVICES-RTJP</con:value></con:property><con:property><con:name>HSA_KONSUMENT1</con:name><con:value>TSTNMT2321000156-B02</con:value></con:property><con:property><con:name>HSA_PRODUCENT1</con:name><con:value>LOAD-MOCKS</con:value></con:property><con:property><con:name>HSA_PRODUCENT2</con:name><con:value>PRODUCENT2</con:value></con:property><con:property><con:name>HSA_PRODUCENT3</con:name><con:value>PRODUCENT3</con:value></con:property><con:property><con:name>HSA_PRODUCENT4</con:name><con:value>PRODUCENT4</con:value></con:property><con:property><con:name>HSA_KONSUMENT2</con:name><con:value>KONSUMENT2</con:value></con:property><con:property><con:name>ENV_SIT</con:name><con:value>https://test.esb.ntjp.se</con:value></con:property><con:property><con:name>ENV_QA</con:name><con:value>https://qa.esb.ntjp.se</con:value></con:property><con:property><con:name>xmlns:urn</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:hdurn2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gd2:diagnosis</con:value></con:property><con:property><con:name>xmlns:gcd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:gro3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetReferralOutcomeResponder:3</con:value></con:property><con:property><con:name>xmlns:haurn3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:3</con:value></con:property><con:property><con:name>xmlns:gcc3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3</con:value></con:property><con:property><con:name>xmlns:llurn3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:3</con:value></con:property><con:property><con:name>xmlns:go1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:1</con:value></con:property><con:property><con:name>xmlns:hburn1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:1</con:value></con:property><con:property><con:name>xmlns:gio1</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetImagingOutcomeResponder:1</con:value></con:property><con:property><con:name>xmlns:ga1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1</con:value></con:property><con:property><con:name>xmlns:aaurn1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:1</con:value></con:property><con:property><con:name>xmlns:gd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2</con:value></con:property></con:properties><con:afterLoadScript/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

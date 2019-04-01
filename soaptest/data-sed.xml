@@ -83,6 +83,11 @@ under the License.
 		<patientId10>191001309812</patientId10>
 		<patientId11>191001319803</patientId11>
 		<patientId12>189001039800</patientId12>
+		<patientId13>191003219811</patientId13>
+		<patientId14>191003229802</patientId14>
+		<patientId15>191003239819</patientId15>
+		<patientId16>191003249800</patientId16>
+		<patientId17>191003259817</patientId17>
 		<patientIdNoEngagements>191001219805</patientIdNoEngagements>
 		<patientIdType>1.2.752.129.2.1.3.1</patientIdType>
 		<sourceSystemHSAId>LOAD-MOCKS</sourceSystemHSAId>
@@ -575,6 +580,7 @@ under the License.
 		</description>
 		<data>
 			<logicalAddress>TSTNMT2321000156-10K5</logicalAddress>
+			<sourceSystemHSAId>TSTNMT2321000156-10K5</sourceSystemHSAId>
 		</data>
 	</testcase>
 	<testcase id="NTP-775.2 Direktadresserad GCC, vägval baseras på TAK">
@@ -584,6 +590,7 @@ under the License.
 		</description>
 		<data>
 			<logicalAddress>TSTNMT2321000156-10K5</logicalAddress>
+			<sourceSystemHSAId>TSTNMT2321000156-10K5</sourceSystemHSAId>
 		</data>
 	</testcase>
 	<testcase id="NTP-775.3 Direktadresserad GCC, vägval baseras på HSA">
@@ -593,6 +600,7 @@ under the License.
 		</description>
 		<data>
 			<logicalAddress>TSTNMT2321000156-10K6</logicalAddress>
+			<sourceSystemHSAId>TSTNMT2321000156-10K6</sourceSystemHSAId>
 		</data>
 	</testcase>
 	<testcase id="NTP-775.4 Direktadresserad GCC, vägval baseras SB och SV">
@@ -602,6 +610,7 @@ under the License.
 		</description>
 		<data>
 			<logicalAddress>TSTNMT2321000156-9999</logicalAddress>
+			<sourceSystemHSAId>TSTNMT2321000156-9999</sourceSystemHSAId>
 		</data>
 	</testcase>
 	<testcase id="NTP-775.5 Direktadresserad GO, vägval baseras på SB och TAK-vägval">
@@ -610,7 +619,8 @@ under the License.
 			Syfte: Säkerställ att standardbehörighet kan användas tillsammans med TAKat vägval.
 		</description>
 		<data>
-			<logicalAddress>SKLTP-MOCK01</logicalAddress>
+			<logicalAddress>TSTNMT2321000156-10K5</logicalAddress>
+			<sourceSystemHSAId>TSTNMT2321000156-10K5</sourceSystemHSAId>
 		</data>
 	</testcase>
 	<testcase id="NTP-775.6 Direktadresserad GIO, SB finns men vägval saknas">
@@ -620,6 +630,7 @@ under the License.
 		</description>
 		<data>
 			<logicalAddress>TSTNMT2321000156-9999</logicalAddress>
+			<sourceSystemHSAId>TSTNMT2321000156-9999</sourceSystemHSAId>
 		</data>
 	</testcase>
 	<testcase id="NTP-775.7 Direktadresserad GA, vägval baseras på TAK-anropsbehörighet och SV">
@@ -629,6 +640,7 @@ under the License.
 		</description>
 		<data>
 			<logicalAddress>SKLTP-MOCK01</logicalAddress>
+			<sourceSystemHSAId>SKLTP-MOCK01</sourceSystemHSAId>
 		</data>
 	</testcase>
 	<testcase id="NTP-775.8 Direktadresserad GD, SV finns men anropsbehörighet saknas">
@@ -638,6 +650,7 @@ under the License.
 		</description>
 		<data>
 			<logicalAddress>TSTNMT2321000156-9999</logicalAddress>
+			<sourceSystemHSAId>TSTNMT2321000156-9999</sourceSystemHSAId>
 		</data>
 	</testcase>
 	<testcase id="NTP-775.9 Direktadresserad GO, vägval baseras på SB och HSA-klättring">
