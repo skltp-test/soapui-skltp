@@ -195,6 +195,11 @@ under the License.
 			VP003 returneras (ReceiverId ej ifylld i RivHeadern i inkommande meddelande.)
 		</description>
 	</testcase>	
+	<testcase id="2.3.2 Konsument anropar utan logisk adress (VP003) (GD)">
+		<description>
+			Kompletterade test för att kontrollera ytterligare tjänstekontrakt
+		</description>
+	</testcase>	
 	<testcase id="2.4.1 Konsument anropar okänd tjänsteproducent (VP004)">
 		<description>
 			(KONSUMENT1) -> NTJP(SUT)
@@ -317,6 +322,7 @@ under the License.
 	<testcase id="4.3.10 (GD) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.3.11 (GD) Exception från en av tre producenter"></testcase>
 	<testcase id="4.3.12 (GD) Exception från samtliga producenter"></testcase>	
+	<testcase id="4.3.13 (GD) VP007 för en av fyra producenter"></testcase>	
 	
 	<testcase id="4.4.1 (GFS) Patient utan engagemang"></testcase>
 	<testcase id="4.4.2 (GFS) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
@@ -451,7 +457,12 @@ under the License.
 	<testcase id="4.13.9 (GMMH) Logiskt fel från en av tre producenter"></testcase>
 	<testcase id="4.13.10 (GMMH) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.13.11 (GMMH) Exception från en av tre producenter"></testcase>
-	<testcase id="4.13.12 (GMMH) Exception från samtliga producenter"></testcase>	
+	<testcase id="4.13.12 (GMMH) Exception från samtliga producenter"></testcase>
+	<testcase id="4.3.13 (GD) VP007 för en av fem producenter filtreras bort">
+		<description>
+			Förväntat resultat: VP007 filtreras bort av AGP
+		</description>
+	</testcase>	
 	
 	<testcase id="4.14.1 (GRO) Patient utan engagemang"></testcase>
 	<testcase id="4.14.2 (GRO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
