@@ -780,6 +780,14 @@ under the License.
 		<data>
 			<logicalAddress>HSA-ID-1#TSTNMT2321000156-9999</logicalAddress>
 		</data>
-	</testcase>	
+	</testcase>
+	<testcase id="SKLTP-1239.1 RMCQ med default routing, med samma hsa-id vid VG#VE adressering">
+		<description>
+			Syfte: Säkerställ att default routing hanterar routing där VG och VE är identiska (routing på "VG"-nivå om behörighet finns på "VG och VE"-nivå).
+		</description>
+		<data>
+			<logicalAddress>SKLTP-MOCK01#SKLTP-MOCK01</logicalAddress>
+		</data>
+	</testcase>
 	
 </testsuite>
