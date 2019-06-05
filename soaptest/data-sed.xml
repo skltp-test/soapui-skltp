@@ -171,10 +171,13 @@ under the License.
 	<testcase id="2.1.1 Konsument anropar okänd tjänst">
 		<description>
 			(KONSUMENT1) -> NTJP(SUT)
-			VP - Vårdsystemets request skickas inte vidare
+			VP - NTjP kontroller inte URL'en, utan väljer tjänst att anropa baserat på SOAPAction.
+			Vårdsystemets request skickas vidare
+			
+			(beteendet förändrades i asmband med byte till Camel.)
 			
 			Förväntat resultat:
-			Felkod 404 returneras med felmeddelande.
+			OK response
 		</description>
 	</testcase>
 	<testcase id="2.1.2 Konsument anropar hostname">
