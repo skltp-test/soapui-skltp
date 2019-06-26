@@ -168,6 +168,22 @@ under the License.
 			<logicalAddress>SOURCESYSTEMHSA</logicalAddress>
 		</data>
 	</testcase>
+	<testcase id="1.3.1 Angränsande konsument skickar fråga via aggregerande tjänst (x-skltp-correlation-id satt)">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
+			VP - Vårdsystemets request skickas vidare till AGP (x-skltp-correlation-id satt, 
+			  HSA tas från x-rivta-original-serviceconsumer-hsaid)
+			I övrigt, se Testfall 1.1.1
+			
+			Förväntat resultat:
+			x-skltp-correlation-id returneras i response
+			x-rivta-original-serviceconsumer-hsaid = KONSUMENT2 (taget från x-vp-sender-id)
+		</description>
+	</testcase>	
+	<testcase id="1.3.2a Identiska Correlation Id">
+	</testcase>
+	<testcase id="1.3.2b Identiska Correlation Id">
+	</testcase>	
 	<testcase id="2.1.1 Konsument anropar okänd tjänst">
 		<description>
 			(KONSUMENT1) -> NTJP(SUT)
