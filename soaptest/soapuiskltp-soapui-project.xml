@@ -10615,12 +10615,10 @@ def utils = new GroovyUtils(context)
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
-source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Set data GCD2" id="0a2e32e0-81fd-4cdf-901f-e3fe6a8bc94f"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gcd2:careDocumentation")</script></con:config></con:testStep><con:testStep type="request" id="a24a2cfb-ee92-4d4e-9414-c8f0df341afa" name="GetCareDocumentation"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareDocumentationResponderBinding_2.1</con:interface><con:operation>GetCareDocumentation</con:operation><con:request name="GetCareDocumentation" id="adf3c3c3-1732-479d-bd00-5675f7d6268f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
-  <con:entry key="x-rivta-original-serviceconsumer-hsaid" value="${#Project#HSA_NTJP}"/>
-  <con:entry key="x-mock-response" value="BasicResponse"/>
-  <con:entry key="x-vp-sender-id" value="${#Project#HSA_RTJP}"/>
-  <con:entry key="x-soap-request" value="VS"/>
-</xml-fragment>]]></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Set data GCD2" id="0a2e32e0-81fd-4cdf-901f-e3fe6a8bc94f"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gcd2:careDocumentation")</script></con:config></con:testStep><con:testStep type="request" id="a24a2cfb-ee92-4d4e-9414-c8f0df341afa" name="GetCareDocumentation"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareDocumentationResponderBinding_2.1</con:interface><con:operation>GetCareDocumentation</con:operation><con:request name="GetCareDocumentation" id="adf3c3c3-1732-479d-bd00-5675f7d6268f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="x-mock-response" value="BasicResponse"/>
+  &lt;con:entry key="x-soap-request" value="VS"/>
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
    <soapenv:Header>\r
       <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
    </soapenv:Header>\r
@@ -10658,7 +10656,7 @@ def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
 source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Set data GCD2" id="70f25254-4a0d-43a4-8bc5-b7f3393e6601"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gcd2:careDocumentation")</script></con:config></con:testStep><con:testStep type="request" id="b629d735-9312-4460-96b3-03c92c4212ee" name="GetCareDocumentation"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareDocumentationResponderBinding_2.1</con:interface><con:operation>GetCareDocumentation</con:operation><con:request name="GetCareDocumentation" id="adf3c3c3-1732-479d-bd00-5675f7d6268f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
-  <con:entry key="x-rivta-original-serviceconsumer-hsaid" value="${#Project#TSTNMT2321000156-B02}"/>
+  <con:entry key="x-rivta-original-serviceconsumer-hsaid" value="${#Project#HSA_KONSUMENT2}"/>
   <con:entry key="x-mock-response" value="BasicResponse"/>
   <con:entry key="x-vp-sender-id" value="${#Project#HSA_RTJP}"/>
   <con:entry key="x-soap-request" value="VS"/>
