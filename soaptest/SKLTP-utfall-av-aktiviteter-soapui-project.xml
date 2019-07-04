@@ -17966,6 +17966,75 @@
          </urn1:engagementTransaction>
       </urn1:Update>
    </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call><con:call id="7509cf72-4ffa-4ef7-9760-f33b0b2ec78d" name="GIO_PatientIdLoadDelay"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://qa.esb.ntjp.se/vp/Update/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>5565594230</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:Update>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>189310229803</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:actoutcome</urn2:serviceDomain>
+               <urn2:categorization>und-bdi-ure</urn2:categorization>
+               <urn2:logicalAddress>LOAD-MOCKS</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001124612</urn2:mostRecentContent>
+               <urn2:sourceSystem>LOAD-MOCKS</urn2:sourceSystem>
+               <urn2:creationTime>20181001124612</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+      </urn1:Update>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call><con:call id="55953cd6-684e-4272-bbb2-b482853aa3b8" name="GLOO_PatientIdLoadDelay"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://qa.esb.ntjp.se/vp/Update/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>5565594230</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:Update>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>189310229803</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:actoutcome</urn2:serviceDomain>
+               <urn2:categorization>und-kkm-ure</urn2:categorization>
+               <urn2:logicalAddress>LOAD-MOCKS</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001124612</urn2:mostRecentContent>
+               <urn2:sourceSystem>LOAD-MOCKS</urn2:sourceSystem>
+               <urn2:creationTime>20181001124612</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+      </urn1:Update>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call><con:call id="4febb4b3-b41f-466b-ad58-c6c15bc4c20b" name="GRO_PatientIdLoadDelay"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://qa.esb.ntjp.se/vp/Update/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>5565594230</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:Update>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>189310229803</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:healthcond:actoutcome</urn2:serviceDomain>
+               <urn2:categorization>und-kon-ure</urn2:categorization>
+               <urn2:logicalAddress>LOAD-MOCKS</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>20181001124612</urn2:mostRecentContent>
+               <urn2:sourceSystem>LOAD-MOCKS</urn2:sourceSystem>
+               <urn2:creationTime>20181001124612</urn2:creationTime>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+      </urn1:Update>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="91b2cb4e-696b-4f59-9a29-8ce145efbaf8" wsaVersion="NONE" name="GetMaternityMedicalHistoryResponderBinding_2.0" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:actoutcome:GetMaternityMedicalHistory:2:rivtabp21}GetMaternityMedicalHistoryResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/VBShare/schemas/SC_clinicalprocess.healthcond.actoutcome_2.0.2/rivta-domains-riv.clinicalprocess.healthcond.actoutcome-478b7b4e12c0/schemas/interactions/GetMaternityMedicalHistoryInteraction/GetMaternityMedicalHistoryInteraction_2.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/VBShare/schemas/SC_clinicalprocess.healthcond.actoutcome_2.0.2/rivta-domains-riv.clinicalprocess.healthcond.actoutcome-478b7b4e12c0/schemas/interactions/GetMaternityMedicalHistoryInteraction/GetMaternityMedicalHistoryInteraction_2.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/VBShare/schemas/SC_clinicalprocess.healthcond.actoutcome_2.0.2/rivta-domains-riv.clinicalprocess.healthcond.actoutcome-478b7b4e12c0/schemas/interactions/GetMaternityMedicalHistoryInteraction/GetMaternityMedicalHistoryInteraction_2.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements. See the NOTICE file
  distributed with this work for additional information
@@ -19271,7 +19340,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    <soapenv:Body>\r
       <urn1:GetImagingOutcome>\r
          <urn1:patientId>\r
-            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:id>189310229803</urn2:id>\r
             <urn2:type>${patientIdType}</urn2:type>\r
          </urn1:patientId>\r
       </urn1:GetImagingOutcome>\r
@@ -19591,7 +19660,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    <soapenv:Body>\r
       <urn1:GetLaboratoryOrderOutcome>\r
          <urn1:patientId>\r
-            <urn2:id>${patientId}</urn2:id>\r
+            <urn2:id>189310229803</urn2:id>\r
             <urn2:type>${patientIdType}</urn2:type>\r
          </urn1:patientId>\r
       </urn1:GetLaboratoryOrderOutcome>\r

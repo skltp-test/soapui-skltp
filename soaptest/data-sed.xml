@@ -57,10 +57,12 @@ under the License.
 		<webServiceUrlFindAllQuestions21>https://TARGETHOST/vp/FindAllQuestions/1/rivtabp21</webServiceUrlFindAllQuestions21>
 		<webServiceUrlKontrolleraSamtycke>https://TARGETHOST/vp/KontrolleraSamtycke/1/rivtabp21</webServiceUrlKontrolleraSamtycke>
 		<webServiceUrlKontrolleraForskrivarbehorighet>https://TARGETHOST/vp/KontrolleraForskrivarbehorighet/1/rivtabp20</webServiceUrlKontrolleraForskrivarbehorighet>
+		
+		<webServiceUrlGSSC1>https://TARGETHOST/vp/GetSupportedServiceContracts/1/rivtabp21</webServiceUrlGSSC1>
+		<webServiceUrlGSSC2>https://TARGETHOST/vp/GetSupportedServiceContracts/2/rivtabp21</webServiceUrlGSSC2>
+		<webServiceUrlGLABSC>https://TARGETHOST/vp/infrastructure/itintegration/registry/GetLogicalAddresseesByServiceContract/2/rivtabp21</webServiceUrlGLABSC>
 				
-		<!-- .... vp/informationsecurity/auditing/log/GetAccessLogsForPatient/2/rivtabp21 -->
-		<!-- <webServiceUrl>https://qa.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl> -->
-		<!-- <webServiceUrl>http://localhost:8088/mockGetCareDocumentationResponderBinding</webServiceUrl> -->
+		<serviceConsumerHsaId>TSTNMT2321000156-B02</serviceConsumerHsaId>
 		<httpHeaderHsaId>112233</httpHeaderHsaId>
 		<logicalAddress>5565594230</logicalAddress>
 		<subscriberEI>SKLTP-MOCK-EI</subscriberEI>
@@ -95,7 +97,8 @@ under the License.
 		<logTestData>true</logTestData>
 		<logTestDataPath>/temp/SOAP-UI/</logTestDataPath>
 		<logTestDataFilesAllowed>500</logTestDataFilesAllowed>
-	</globaldata>	
+	</globaldata>
+
 	<testcase id="1.1.1 Angränsande konsument skickar fråga via aggregerande tjänst">
 		<description>
 			(KONSUMENT1) -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
@@ -143,7 +146,7 @@ under the License.
 			x-vp-sender-id = XVPSENDERID
 			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från certificatet)
 		</description>
-	</testcase>	
+	</testcase>
 	<testcase id="1.2.1 Angränsande konsument skickar direktaddresserad fråga">
 		<description>
 			(KONSUMENT1) -> NTJP(SUT) -> PRODUCENT1
@@ -153,7 +156,7 @@ under the License.
 			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från x-vp-sender-id)
 		</description>
 		<data>
-			<logicalAddress>SOURCESYSTEMHSA</logicalAddress>
+			<logicalAddress>LOAD-MOCKS</logicalAddress>
 		</data>
 	</testcase>
 	<testcase id="1.2.2 Avlägsen konsument skickar direktaddresserad fråga">
@@ -165,7 +168,7 @@ under the License.
 			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från x-rivta-original-serviceconsumer-hsaid)
 		</description>
 		<data>
-			<logicalAddress>SOURCESYSTEMHSA</logicalAddress>
+			<logicalAddress>LOAD-MOCKS</logicalAddress>
 		</data>
 	</testcase>
 	<testcase id="1.3.1 Angränsande konsument skickar fråga via aggregerande tjänst (x-skltp-correlation-id satt)">
@@ -179,11 +182,11 @@ under the License.
 			x-skltp-correlation-id returneras i response
 			x-rivta-original-serviceconsumer-hsaid = KONSUMENT2 (taget från x-vp-sender-id)
 		</description>
-	</testcase>	
+	</testcase>
 	<testcase id="1.3.2a Identiska Correlation Id">
 	</testcase>
 	<testcase id="1.3.2b Identiska Correlation Id">
-	</testcase>	
+	</testcase>
 	<testcase id="2.1.1 Konsument anropar okänd tjänst">
 		<description>
 			(KONSUMENT1) -> NTJP(SUT)
@@ -213,12 +216,12 @@ under the License.
 			Förväntat resultat:
 			VP003 returneras (ReceiverId ej ifylld i RivHeadern i inkommande meddelande.)
 		</description>
-	</testcase>	
+	</testcase>
 	<testcase id="2.3.2 Konsument anropar utan logisk adress (VP003) (GD)">
 		<description>
 			Kompletterade test för att kontrollera ytterligare tjänstekontrakt
 		</description>
-	</testcase>	
+	</testcase>
 	<testcase id="2.4.1 Konsument anropar okänd tjänsteproducent (VP004)">
 		<description>
 			(KONSUMENT1) -> NTJP(SUT)
@@ -231,7 +234,7 @@ under the License.
 			<logicalAddress>PRODUCENT4</logicalAddress>
 		        <sourceSystemHSAId>PRODUCENT4</sourceSystemHSAId>
 		</data>
-	</testcase>	
+	</testcase>
 	<testcase id="2.7.1 Konsument anropar tjänsteproducent där samverkansbehörighet saknas (VP007)">
 		<description>
 			(KONSUMENT1) -> NTJP(SUT)
@@ -341,7 +344,11 @@ under the License.
 	<testcase id="4.3.10 (GD) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.3.11 (GD) Exception från en av tre producenter"></testcase>
 	<testcase id="4.3.12 (GD) Exception från samtliga producenter"></testcase>	
-	<testcase id="4.3.13 (GD) VP007 för en av fyra producenter"></testcase>	
+	<testcase id="4.3.13 (GD) VP007 för en av fem producenter filtreras bort">
+		<description>
+			Förväntat resultat: VP007 filtreras bort av AGP
+		</description>
+	</testcase>
 	
 	<testcase id="4.4.1 (GFS) Patient utan engagemang"></testcase>
 	<testcase id="4.4.2 (GFS) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
@@ -477,12 +484,7 @@ under the License.
 	<testcase id="4.13.10 (GMMH) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.13.11 (GMMH) Exception från en av tre producenter"></testcase>
 	<testcase id="4.13.12 (GMMH) Exception från samtliga producenter"></testcase>
-	<testcase id="4.3.13 (GD) VP007 för en av fem producenter filtreras bort">
-		<description>
-			Förväntat resultat: VP007 filtreras bort av AGP
-		</description>
-	</testcase>	
-	
+
 	<testcase id="4.14.1 (GRO) Patient utan engagemang"></testcase>
 	<testcase id="4.14.2 (GRO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
 	<testcase id="4.14.3 (GRO) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
@@ -690,6 +692,7 @@ under the License.
 		</description>
 		<data>
 			<logicalAddress>TSTNMT2321000156-10K6</logicalAddress>
+			<sourceSystemHSAId>TSTNMT2321000156-10K6</sourceSystemHSAId>
 		</data>
 	</testcase>
 	<testcase id="NTP-775.21 GRO till AGP, finns endast SB och SV">
@@ -800,6 +803,26 @@ under the License.
 			<logicalAddress>HSA-ID-1#TSTNMT2321000156-9999</logicalAddress>
 		</data>
 	</testcase>
+	<testcase id="NTP-805.1 GSSC all">
+		<description>
+			Syfte: Säkerställ att SKLTP kan hantera GetSupportedServiceContracts anrop utan filter
+		</description>
+	</testcase>
+	<testcase id="NTP-805.2 GSSC filter on serviceConsumerHsaId">
+		<description>
+			Syfte: Säkerställ att SKLTP kan hantera GetSupportedServiceContracts anrop med filter på serviceConsumerHsaId
+		</description>
+	</testcase>
+	<testcase id="NTP-805.3 GLABSC (inget filter)">
+		<description>
+			Syfte: Säkerställ att SKLTP kan hantera GetLogicalAddresseesByServiceContract anrop utan filter (filter regel 1)
+		</description>
+	</testcase>
+	<testcase id="NTP-805.4 GLABSC (filter)">
+		<description>
+			Syfte: Säkerställ att SKLTP kan hantera GetLogicalAddresseesByServiceContract enligt filter regel 2, 4 och 5
+		</description>
+	</testcase>
 	<testcase id="SKLTP-1239.1 RMCQ med default routing, med samma hsa-id vid VG#VE adressering">
 		<description>
 			Syfte: Säkerställ att default routing hanterar routing där VG och VE är identiska (routing på "VG"-nivå om behörighet finns på "VG och VE"-nivå).
@@ -808,5 +831,5 @@ under the License.
 			<logicalAddress>SKLTP-MOCK01#SKLTP-MOCK01</logicalAddress>
 		</data>
 	</testcase>
-	
+
 </testsuite>
