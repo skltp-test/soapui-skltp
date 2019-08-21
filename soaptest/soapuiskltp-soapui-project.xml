@@ -10520,19 +10520,33 @@ def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertSpecificValueInAllRecords('/urn:careDocumentation/hdurn2:careDocumentationHeader/hdurn2:patientId/hdurn2:id', context.patientId)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="5fe67f0d-8097-441b-9e9b-863c5b657f71" name="Assert Headers"><con:configuration><scriptText>def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
 def httpResponseHeaders = messageExchange.getResponseHeaders() 
 assert httpResponseHeaders.keySet().contains("x-skltp-prt")
-// Other
+
+// Asserts common for Mule and Camel
 assert httpResponseHeaders.keySet().contains("Keep-Alive")
-assert httpResponseHeaders.keySet().contains("Transfer-Encoding")
 assert httpResponseHeaders.keySet().contains("Server")
 assert httpResponseHeaders.keySet().contains("Connection")
 assert httpResponseHeaders.keySet().contains("Date")
 assert httpResponseHeaders.keySet().contains("Via")
-assert httpResponseHeaders.keySet().contains("http.status")
-assert httpResponseHeaders.keySet().contains("Content-Type")
 
 // Check content
-assert httpResponseHeaders["http.status"].contains("200")
-assert httpResponseHeaders["Content-Type"].contains("text/xml; charset=UTF-8")</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="319f5d43-c9d2-4461-b21a-e0897e29818f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.1.2 Angränsande konsument skickar fråga via aggregerande tjänst (x-rivta-original-serviceconsumer-hsaid satt)" searchProperties="true"><con:description/><con:settings/><con:testStep type="groovy" name="Read data" id="771d427a-377f-4787-89a8-5572081c3c13"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+// Implementation dependent asserts
+// Mule
+if (httpResponseHeaders.keySet().contains("Transfer-Encoding")) {
+	assert httpResponseHeaders.keySet().contains("http.status")
+	assert httpResponseHeaders["http.status"].contains("200")
+	assert httpResponseHeaders["Content-Type"].contains("text/xml; charset=UTF-8")
+} 
+// Camel
+else if (httpResponseHeaders.keySet().contains("content-length")) {
+	assert httpResponseHeaders.keySet().contains("#status#")
+	assert httpResponseHeaders["#status#"].contains("HTTP/1.1 200 OK")
+	assert httpResponseHeaders["content-type"].contains("text/xml; charset=UTF-8")
+	//assert httpResponseHeaders["x-skltp-correlation-id"].contains(context.expand('${#Project#xskltpcorrelationid}'))
+}
+// Other
+else {
+	assert false
+}</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="319f5d43-c9d2-4461-b21a-e0897e29818f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.1.2 Angränsande konsument skickar fråga via aggregerande tjänst (x-rivta-original-serviceconsumer-hsaid satt)" searchProperties="true"><con:description/><con:settings/><con:testStep type="groovy" name="Read data" id="771d427a-377f-4787-89a8-5572081c3c13"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -10636,19 +10650,33 @@ def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertSpecificValueInAllRecords('/urn:careDocumentation/hdurn2:careDocumentationHeader/hdurn2:patientId/hdurn2:id', context.patientId)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="e27bc393-2426-4d80-9399-4b55033a1619" name="Assert Headers"><con:configuration><scriptText>def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
 def httpResponseHeaders = messageExchange.getResponseHeaders() 
 assert httpResponseHeaders.keySet().contains("x-skltp-prt")
-// Other
+
+// Asserts common for Mule and Camel
 assert httpResponseHeaders.keySet().contains("Keep-Alive")
-assert httpResponseHeaders.keySet().contains("Transfer-Encoding")
 assert httpResponseHeaders.keySet().contains("Server")
 assert httpResponseHeaders.keySet().contains("Connection")
 assert httpResponseHeaders.keySet().contains("Date")
 assert httpResponseHeaders.keySet().contains("Via")
-assert httpResponseHeaders.keySet().contains("http.status")
-assert httpResponseHeaders.keySet().contains("Content-Type")
 
 // Check content
-assert httpResponseHeaders["http.status"].contains("200")
-assert httpResponseHeaders["Content-Type"].contains("text/xml; charset=UTF-8")</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="1e19e29d-83bd-4976-86b7-fea7f309858e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.2.2 Avlägsen konsument skickar direktaddresserad fråga" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="d6e86957-00fb-4196-8653-05589bbb50b7"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+// Implementation dependent asserts
+// Mule
+if (httpResponseHeaders.keySet().contains("Transfer-Encoding")) {
+	assert httpResponseHeaders.keySet().contains("http.status")
+	assert httpResponseHeaders["http.status"].contains("200")
+	assert httpResponseHeaders["Content-Type"].contains("text/xml; charset=UTF-8")
+} 
+// Camel
+else if (httpResponseHeaders.keySet().contains("content-length")) {
+	assert httpResponseHeaders.keySet().contains("#status#")
+	assert httpResponseHeaders["#status#"].contains("HTTP/1.1 200 OK")
+	assert httpResponseHeaders["content-type"].contains("text/xml")
+	//assert httpResponseHeaders["x-skltp-correlation-id"].contains(context.expand('${#Project#xskltpcorrelationid}'))
+}
+// Other
+else {
+	assert false
+}</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="1e19e29d-83bd-4976-86b7-fea7f309858e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.2.2 Avlägsen konsument skickar direktaddresserad fråga" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="d6e86957-00fb-4196-8653-05589bbb50b7"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -10705,20 +10733,32 @@ ca.assertSpecificValueInAllRecords('/urn:careDocumentation/hdurn2:careDocumentat
 def httpResponseHeaders = messageExchange.getResponseHeaders() 
 assert httpResponseHeaders.keySet().contains("x-skltp-prt")
 
-// Other
+// Asserts common for Mule and Camel
 assert httpResponseHeaders.keySet().contains("Keep-Alive")
-assert httpResponseHeaders.keySet().contains("Transfer-Encoding")
 assert httpResponseHeaders.keySet().contains("Server")
 assert httpResponseHeaders.keySet().contains("Connection")
 assert httpResponseHeaders.keySet().contains("Date")
 assert httpResponseHeaders.keySet().contains("Via")
-assert httpResponseHeaders.keySet().contains("http.status")
-assert httpResponseHeaders.keySet().contains("Content-Type")
 
 // Check content
-assert httpResponseHeaders["http.status"].contains("200")
-assert httpResponseHeaders["Content-Type"].contains("text/xml; charset=UTF-8")
-assert httpResponseHeaders["x-skltp-correlation-id"].contains(context.expand('${#Project#xskltpcorrelationid}'))</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="0395e6b6-a832-46ed-8157-7b329c868765" name="Standardiserade felkoder"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="535f0c1c-c96a-46a0-ae41-8dc641aa3f14" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="2.1.1 Konsument anropar okänd tjänst" searchProperties="true"><con:description>Iom. bytet till Camel NTP-819 så tar inte NTjP längre hänsyn till extension delen av URL som anges i POST.
+// Implementation dependent asserts
+// Mule
+if (httpResponseHeaders.keySet().contains("Transfer-Encoding")) {
+	assert httpResponseHeaders.keySet().contains("http.status")
+	assert httpResponseHeaders["http.status"].contains("200")
+	assert httpResponseHeaders["Content-Type"].contains("text/xml; charset=UTF-8")
+} 
+// Camel
+else if (httpResponseHeaders.keySet().contains("content-length")) {
+	assert httpResponseHeaders.keySet().contains("#status#")
+	assert httpResponseHeaders["#status#"].contains("HTTP/1.1 200 OK")
+	assert httpResponseHeaders["content-type"].contains("text/xml; charset=UTF-8")
+	//assert httpResponseHeaders["x-skltp-correlation-id"].contains(context.expand('${#Project#xskltpcorrelationid}'))
+}
+// Other
+else {
+	assert false
+}</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="0395e6b6-a832-46ed-8157-7b329c868765" name="Standardiserade felkoder"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="535f0c1c-c96a-46a0-ae41-8dc641aa3f14" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="2.1.1 Konsument anropar okänd tjänst" searchProperties="true"><con:description>Iom. bytet till Camel NTP-819 så tar inte NTjP längre hänsyn till extension delen av URL som anges i POST.
 Det är SOAPAction som bestämmer vilken tjänst som ska anropas.
 Testfallet har modifierats för ovanstående.</con:description><con:settings/><con:testStep type="groovy" name="Read data" id="ab2a8edd-0919-4ee1-ae45-5c2f2b58a52e"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
@@ -11685,17 +11725,29 @@ ca.assertSpecificValueInAllRecords('/urn:careDocumentation/hdurn2:careDocumentat
 def httpResponseHeaders = messageExchange.getResponseHeaders() 
 assert httpResponseHeaders.keySet().contains("x-skltp-prt")
 
-// Other
+// Asserts common for Mule and Camel
 assert httpResponseHeaders.keySet().contains("Keep-Alive")
-assert httpResponseHeaders.keySet().contains("Transfer-Encoding")
 assert httpResponseHeaders.keySet().contains("Server")
 assert httpResponseHeaders.keySet().contains("Connection")
 assert httpResponseHeaders.keySet().contains("Date")
 assert httpResponseHeaders.keySet().contains("Via")
-assert httpResponseHeaders.keySet().contains("http.status")
-assert httpResponseHeaders.keySet().contains("Content-Type")
 
 // Check content
-assert httpResponseHeaders["http.status"].contains("200")
-assert httpResponseHeaders["Content-Type"].contains("text/xml; charset=UTF-8")
-assert httpResponseHeaders["x-skltp-correlation-id"].contains(context.expand('${#Project#xskltpcorrelationid}'))</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>HSA_NTJP</con:name><con:value>HSASERVICES-NTJP</con:value></con:property><con:property><con:name>HSA_RTJP</con:name><con:value>HSASERVICES-RTJP</con:value></con:property><con:property><con:name>HSA_KONSUMENT1</con:name><con:value>TSTNMT2321000156-B02</con:value></con:property><con:property><con:name>HSA_PRODUCENT1</con:name><con:value>LOAD-MOCKS</con:value></con:property><con:property><con:name>HSA_PRODUCENT2</con:name><con:value>PRODUCENT2</con:value></con:property><con:property><con:name>HSA_PRODUCENT3</con:name><con:value>PRODUCENT3</con:value></con:property><con:property><con:name>HSA_PRODUCENT4</con:name><con:value>PRODUCENT4</con:value></con:property><con:property><con:name>HSA_KONSUMENT2</con:name><con:value>KONSUMENT2</con:value></con:property><con:property><con:name>ENV_SIT</con:name><con:value>https://test.esb.ntjp.se</con:value></con:property><con:property><con:name>ENV_QA</con:name><con:value>https://qa.esb.ntjp.se</con:value></con:property><con:property><con:name>xmlns:urn</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:hdurn2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gro3:referralOutcome</con:value></con:property><con:property><con:name>xmlns:gcd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:gro3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetReferralOutcomeResponder:3</con:value></con:property><con:property><con:name>xmlns:haurn3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:3</con:value></con:property><con:property><con:name>xmlns:gcc3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3</con:value></con:property><con:property><con:name>xmlns:llurn3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:3</con:value></con:property><con:property><con:name>xmlns:go1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:1</con:value></con:property><con:property><con:name>xmlns:hburn1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:1</con:value></con:property><con:property><con:name>xmlns:gio1</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetImagingOutcomeResponder:1</con:value></con:property><con:property><con:name>xmlns:ga1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1</con:value></con:property><con:property><con:name>xmlns:aaurn1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:1</con:value></con:property><con:property><con:name>xmlns:gd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2</con:value></con:property><con:property><con:name>xskltpcorrelationid</con:name><con:value>1.3.1</con:value></con:property></con:properties><con:afterLoadScript/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+// Implementation dependent asserts
+// Mule
+if (httpResponseHeaders.keySet().contains("Transfer-Encoding")) {
+	assert httpResponseHeaders.keySet().contains("http.status")
+	assert httpResponseHeaders["http.status"].contains("200")
+	assert httpResponseHeaders["Content-Type"].contains("text/xml; charset=UTF-8")
+} 
+// Camel
+else if (httpResponseHeaders.keySet().contains("content-length")) {
+	assert httpResponseHeaders.keySet().contains("#status#")
+	assert httpResponseHeaders["#status#"].contains("HTTP/1.1 200 OK")
+	assert httpResponseHeaders["content-type"].contains("text/xml; charset=UTF-8")
+	//assert httpResponseHeaders["x-skltp-correlation-id"].contains(context.expand('${#Project#xskltpcorrelationid}'))
+}
+// Other
+else {
+	assert false
+}</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>HSA_NTJP</con:name><con:value>HSASERVICES-NTJP</con:value></con:property><con:property><con:name>HSA_RTJP</con:name><con:value>HSASERVICES-RTJP</con:value></con:property><con:property><con:name>HSA_KONSUMENT1</con:name><con:value>TSTNMT2321000156-B02</con:value></con:property><con:property><con:name>HSA_PRODUCENT1</con:name><con:value>LOAD-MOCKS</con:value></con:property><con:property><con:name>HSA_PRODUCENT2</con:name><con:value>PRODUCENT2</con:value></con:property><con:property><con:name>HSA_PRODUCENT3</con:name><con:value>PRODUCENT3</con:value></con:property><con:property><con:name>HSA_PRODUCENT4</con:name><con:value>PRODUCENT4</con:value></con:property><con:property><con:name>HSA_KONSUMENT2</con:name><con:value>KONSUMENT2</con:value></con:property><con:property><con:name>ENV_SIT</con:name><con:value>https://test.esb.ntjp.se</con:value></con:property><con:property><con:name>ENV_QA</con:name><con:value>https://qa.esb.ntjp.se</con:value></con:property><con:property><con:name>xmlns:urn</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:hdurn2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gcd2:careDocumentation</con:value></con:property><con:property><con:name>xmlns:gcd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:gro3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetReferralOutcomeResponder:3</con:value></con:property><con:property><con:name>xmlns:haurn3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:3</con:value></con:property><con:property><con:name>xmlns:gcc3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3</con:value></con:property><con:property><con:name>xmlns:llurn3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:3</con:value></con:property><con:property><con:name>xmlns:go1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:1</con:value></con:property><con:property><con:name>xmlns:hburn1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:1</con:value></con:property><con:property><con:name>xmlns:gio1</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetImagingOutcomeResponder:1</con:value></con:property><con:property><con:name>xmlns:ga1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1</con:value></con:property><con:property><con:name>xmlns:aaurn1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:1</con:value></con:property><con:property><con:name>xmlns:gd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2</con:value></con:property><con:property><con:name>xskltpcorrelationid</con:name><con:value>1.3.1</con:value></con:property></con:properties><con:afterLoadScript/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
