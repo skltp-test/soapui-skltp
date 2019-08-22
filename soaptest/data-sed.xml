@@ -183,9 +183,13 @@ under the License.
 			x-rivta-original-serviceconsumer-hsaid = KONSUMENT2 (taget från x-vp-sender-id)
 		</description>
 	</testcase>
-	<testcase id="1.3.2a Identiska Correlation Id">
-	</testcase>
-	<testcase id="1.3.2b Identiska Correlation Id">
+	<testcase id="1.3.2 Identiska Correlation Id">
+		<description>
+			Testfallet skickar två på varandra följande requester men använder samma x-skltp-correlation-id.
+			
+			Förväntat resultat:
+			x-skltp-correlation-id returneras i responsen i båda fallen (Note: Correlation-Id returneras inte i responsen i dagens inplementation.)
+		</description>
 	</testcase>
 	<testcase id="2.1.1 Konsument anropar okänd tjänst">
 		<description>
