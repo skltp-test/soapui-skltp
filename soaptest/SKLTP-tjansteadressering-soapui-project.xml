@@ -550,7 +550,7 @@ ca.assertNonEmptyResponse()
 
 log.info(ca.getContentRecords().size)
 
-ca.assertSpecificValueInAllRecords('/glabsc2:logicalAddressRecord/glabsc2:logicalAddress', context.subscriberEI)
-ca.assertSpecificValueInAllRecords('/glabsc2:logicalAddressRecord/glabsc2:filter/glabsc2:serviceDomain', "riv:clinicalprocess:logistics:logistics")
-ca.assertSpecificValueInAllRecords('/glabsc2:logicalAddressRecord/glabsc2:filter/glabsc2:categorization', "vko")
+ca.assertSpecificValueInAnyRecord('/glabsc2:logicalAddressRecord/glabsc2:logicalAddress', context.subscriberEI)
+ca.assertSpecificValueInAnyRecord('/glabsc2:logicalAddressRecord/glabsc2:filter/glabsc2:serviceDomain', "riv:clinicalprocess:logistics:logistics")
+ca.assertSpecificValueInAnyRecord('/glabsc2:logicalAddressRecord/glabsc2:filter/glabsc2:categorization', "vko")
 //ca.assertSpecificValueInAllRecords('/glabsc2:logicalAddressRecord/glabsc2:filter/glabsc2:serviceDomain', "riv:infrastructure:itintegration:registry")</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>ContentSize</con:name><con:value>36</con:value></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>RecordElementPath</con:name><con:value>//glabsc2:logicalAddressRecord</con:value></con:property><con:property><con:name>xmlns:gssc2</con:name><con:value>urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2</con:value></con:property><con:property><con:name>xmlns:glabsc2</con:name><con:value>urn:riv:infrastructure:itintegration:registry:GetLogicalAddresseesByServiceContractResponder:2</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
