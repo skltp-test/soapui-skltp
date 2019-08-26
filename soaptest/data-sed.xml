@@ -448,7 +448,8 @@ under the License.
 	<testcase id="4.10.9 (GECGO) Logiskt fel från en av tre producenter"></testcase>
 	<testcase id="4.10.10 (GECGO) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.10.11 (GECGO) Exception från en av tre producenter"></testcase>
-	<testcase id="4.10.12 (GECGO) Exception från samtliga producenter"></testcase>	
+	<testcase id="4.10.12 (GECGO) Exception från samtliga producenter"></testcase>
+	<testcase id="4.10.13 (GECGO) Patient med engagemang hos en producent med 200 poster direktadresserat anrop"></testcase>
 	
 	<testcase id="4.11.1 (GIO) Patient utan engagemang"></testcase>
 	<testcase id="4.11.2 (GIO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
