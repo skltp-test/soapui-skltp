@@ -19332,6 +19332,31 @@ ca.assertNonEmptyResponse()
 ca.assertExactNumberOfRecords(200)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="082f37bb-507b-4825-bb49-db3107ed4958" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gecgo1:ecgOutcome/urn3:ecgOutcomeHeader/urn3:patientId/urn3:id', context.patientId2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="delay" name="Delay" id="15b6f781-0e1d-4be3-902e-a918f3977e5f"><con:settings/><con:config><delay>2000</delay></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="17879909-6551-4530-a82f-512a0baef659" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.10.14 (GECGO) Patient med engagemang hos en producent med 200 poster direktadresserat (ej via RTjP)" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="80bb1774-e5ab-43ad-a7c8-c81958ad9753"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Set data GECGO1" id="66d40746-3a44-4b39-90d1-8e145ca05c4e"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gecgo1:ecgOutcome")</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="8aa661cd-7b56-4c87-a64a-c0fd10a734b6"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetECGOutcomeResponderBinding_1.0</con:interface><con:operation>GetECGOutcome</con:operation><con:request name="1.0" id="d0a79c73-854b-4428-aefc-1b2817482a65"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="discardResponse">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGECGO}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:actoutcome:GetECGOutcomeResponder:1" xmlns:urn2="urn:riv:clinicalprocess:healthcond:actoutcome:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetECGOutcome>\r
+         <urn1:patientId>\r
+            <urn2:id>${patientId2}</urn2:id>\r
+            <urn2:type>${patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+      </urn1:GetECGOutcome>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="13c491b4-eb0a-4587-a7e6-e83db0119589"/><con:assertion type="Schema Compliance" id="2a5dddfc-16f8-450c-8d7e-07262ead0c35"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="bc496a82-c96d-4388-b666-4c291b156394"/><con:assertion type="GroovyScriptAssertion" id="4f107793-b5f2-4223-b92d-b2b87da5e455" name="Assert numRecords"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertExactNumberOfRecords(200)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="082f37bb-507b-4825-bb49-db3107ed4958" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
 ca.assertSpecificValueInAllRecords('/gecgo1:ecgOutcome/urn3:ecgOutcomeHeader/urn3:patientId/urn3:id', context.patientId2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="87940836-041c-45ed-818b-99aba78eadd8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.11.1 (GIO) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="a330b36b-9368-4845-a402-ce102c042bb1"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
