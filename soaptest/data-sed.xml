@@ -454,6 +454,11 @@ under the License.
 			<logicalAddress>SKLTP-MOCK01</logicalAddress>
 		</data>
 	</testcase>
+	<testcase id="4.10.14 (GECGO) Patient med engagemang hos en producent med 200 poster direktadresserat (ej via RTjP)">
+		<data>
+			<logicalAddress>LOAD-MOCKS</logicalAddress>
+		</data>
+	</testcase>
 	
 	<testcase id="4.11.1 (GIO) Patient utan engagemang"></testcase>
 	<testcase id="4.11.2 (GIO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
