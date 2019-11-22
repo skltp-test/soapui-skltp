@@ -10670,7 +10670,7 @@ if (httpResponseHeaders.keySet().contains("Transfer-Encoding")) {
 else if (httpResponseHeaders.keySet().contains("content-length")) {
 	assert httpResponseHeaders.keySet().contains("#status#")
 	assert httpResponseHeaders["#status#"].contains("HTTP/1.1 200 OK")
-	assert httpResponseHeaders["content-type"].contains("text/xml")
+	assert httpResponseHeaders["content-type"].contains("text/xml; charset=UTF-8")
 	//assert httpResponseHeaders["x-skltp-correlation-id"].contains(context.expand('${#Project#xskltpcorrelationid}'))
 }
 // Other
