@@ -3,7 +3,7 @@ FROM java:openjdk-7-jdk
 
 #  Version
 ENV   SOAPUI_VERSION  5.4.0
-ENV   SOAPUI_SUPPORT_VERSION  1.5.7
+ENV   SOAPUI_SUPPORT_VERSION  1.7.0
 ENV   SOAPUI_PROJECT soapuiskltp-soapui-project.xml
 
 # Download and unarchive SoapUI
