@@ -1832,7 +1832,6 @@ Samtycke uppdateras genom att skapa eller ta bort konto i HKDB.
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
-log.info "projpath: " + utils.projectPath
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
@@ -1878,12 +1877,11 @@ context.httpResponse.responseContent = content</scriptText></con:configuration><
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:assertion type="GroovyScriptAssertion" id="d46c971c-9ae0-464f-b4b9-30cb3f4614b1" name="Script Assertion"><con:configuration><scriptText>import com.eviware.soapui.support.XmlHolder
 
-
 def holder = new XmlHolder( messageExchange.responseContentAsXml )
 
 holder.namespaces["req"] = "RequestDataNS"
 def requestDataNode = holder.getNodeValue("//req:requestdata[1]/req:data[1]")
-if (requestDataNode != null) {
+if (requestDataNode) {
 	if (context.httpResponse) {
 		context.httpResponse.responseContent = requestDataNode
 	}
@@ -1922,8 +1920,17 @@ if (requestDataNode != null) {
          </urn2:extension>\r
       </urn2:HamtaPatientInfo>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Fault Assertion" id="7b3b6536-14ab-4493-a31c-d1201eb63a35"/><con:assertion type="GroovyScriptAssertion" id="cb1b09ec-eed7-4c16-8b82-34ce0174ef16" name="Script Assertion"><con:configuration><scriptText>def content = context.httpResponse.responseContent
-context.httpResponse.responseContent = content</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="7e4e92ad-6110-4f18-99b1-0ffd6e58838c" name="Match argos header with saml attributes"><con:configuration><scriptText>import com.eviware.soapui.support.XmlHolder
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Fault Assertion" id="7b3b6536-14ab-4493-a31c-d1201eb63a35"/><con:assertion type="GroovyScriptAssertion" id="cb1b09ec-eed7-4c16-8b82-34ce0174ef16" name="Script Assertion"><con:configuration><scriptText>import com.eviware.soapui.support.XmlHolder
+
+def holder = new XmlHolder( messageExchange.responseContentAsXml )
+
+holder.namespaces["req"] = "RequestDataNS"
+def requestDataNode = holder.getNodeValue("//req:requestdata[1]/req:data[1]")
+if (requestDataNode) {
+	if (context.httpResponse) {
+		context.httpResponse.responseContent = requestDataNode
+	}
+}</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="7e4e92ad-6110-4f18-99b1-0ffd6e58838c" name="Match argos header with saml attributes"><con:configuration><scriptText>import com.eviware.soapui.support.XmlHolder
 
 def reqholder = new XmlHolder(messageExchange.requestContentAsXml)
 reqholder.namespaces["urn"] = "urn:riv:inera.se.apotekensservice:argos:1"
