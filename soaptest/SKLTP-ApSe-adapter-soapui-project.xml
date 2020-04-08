@@ -1817,7 +1817,7 @@ Samtycke uppdateras genom att skapa eller ta bort konto i HKDB.
          <urn:systemIp>?</urn:systemIp>\r
          <!--You may enter ANY elements at this point-->\r
       </urn:ArgosHeader>\r
-      <urn1:LogicalAddress>?</urn1:LogicalAddress>\r
+      <urn1:LogicalAddress>Test</urn1:LogicalAddress>\r
    </soapenv:Header>\r
    <soapenv:Body>\r
       <urn2:HamtaPatientInfo>\r
@@ -1832,6 +1832,7 @@ Samtycke uppdateras genom att skapa eller ta bort konto i HKDB.
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
+log.info "projpath: " + utils.projectPath
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
