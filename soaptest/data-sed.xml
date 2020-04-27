@@ -863,10 +863,10 @@ under the License.
         
 	<testcase id="SKLTP-ApSe">
 		<description>
-                    testar adapterns omvandling av argos-headrar till saml-aasserttion-attributes
+                    testar adapterns omvandling av argos-headrar till saml-aassertion-attributes
 		</description>
 		<data>
-			<logicalAddress>Test</logicalAddress>
+			<logicalAddress>5565594230</logicalAddress>
 		</data>
 	</testcase>
         
