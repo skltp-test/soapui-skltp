@@ -2637,7 +2637,306 @@
 
       </urn1:Update>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="d1e0acb5-379d-4227-a4f1-166f92799f97" name="crm_requeststatus"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="e76cf63d-34ec-4c8f-93a6-7d2d1178ece0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.17.1 (GRA) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="3a3b2888-a30d-43a5-83d2-090ad0e841e1"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="6ffce44f-f19b-47c9-b168-e4eb23deb4b5" wsaVersion="NONE" name="GetRequestActivitiesResponderBinding_2.0" type="wsdl" bindingName="{urn:riv:crm:requeststatus:GetRequestActivities:2:rivtabp21}GetRequestActivitiesResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/bpettersson/bitbucket/riv.crm.requeststatus/schemas/interactions/GetRequestActivitiesInteraction/GetRequestActivitiesInteraction_2.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/bpettersson/bitbucket/riv.crm.requeststatus/schemas/interactions/GetRequestActivitiesInteraction/GetRequestActivitiesInteraction_2.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/Users/bpettersson/bitbucket/riv.crm.requeststatus/schemas/interactions/GetRequestActivitiesInteraction/GetRequestActivitiesInteraction_2.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<wsdl:definitions name="GetRequestActivitiesInteraction" targetNamespace="urn:riv:crm:requeststatus:GetRequestActivities:2:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:crm:requeststatus:GetRequestActivitiesResponder:2" xmlns:tjsi="urn:riv:crm:requeststatus:GetRequestActivitiesInitiator:2" xmlns:tns="urn:riv:crm:requeststatus:GetRequestActivities:2:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1">
+  <wsdl:documentation>Tjänsteinteraktionens namn: GetRequestActivitiesInteraction
+        Beskrivning:
+        Retrieves a list of all activities recorded for a request/order/referral
+        Revisioner:
+        Tjänstedomän: crm:requeststatus
+        Tjänsteinteraktionstyp: Fråga-Svar
+        WS-profil: RIVTABP21
+        Förvaltas av: Sveriges Kommuner och Landsting</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:crm:requeststatus:GetRequestActivities:2:rivtabp21">
+      <xs:import schemaLocation="GetRequestActivitiesResponder_2.0.xsd" namespace="urn:riv:crm:requeststatus:GetRequestActivitiesResponder:2"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetRequestActivitiesRequest">
+    <wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
+      <wsdl:documentation>The HSA-id of the source system supporting the service consumer with data</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="parameters" element="tjsr:GetRequestActivities"/>
+  </wsdl:message>
+  <wsdl:message name="GetRequestActivitiesResponse">
+    <wsdl:part name="parameters" element="tjsr:GetRequestActivitiesResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="GetRequestActivitiesResponderInterface">
+    <wsdl:operation name="GetRequestActivities">
+      <wsdl:input message="tns:GetRequestActivitiesRequest"/>
+      <wsdl:output message="tns:GetRequestActivitiesResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetRequestActivitiesResponderBinding" type="tns:GetRequestActivitiesResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetRequestActivities">
+      <soap:operation soapAction="urn:riv:crm:requeststatus:GetRequestActivitiesResponder:2:GetRequestActivities" style="document"/>
+      <wsdl:input>
+        <soap:header use="literal" message="tns:GetRequestActivitiesRequest" part="LogicalAddress"/>
+        <soap:body use="literal" parts="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetRequestActivitiesResponderService">
+    <wsdl:port name="GetRequestActivitiesResponderPort" binding="tns:GetRequestActivitiesResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\bpettersson\bitbucket\riv.crm.requeststatus\schemas\interactions\GetRequestActivitiesInteraction\GetRequestActivitiesResponder_2.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:crm:requeststatus:GetRequestActivitiesResponder:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:crm:requeststatus:GetRequestActivitiesResponder:2" xmlns:core="urn:riv:crm:requeststatus:2">
+  <xs:import schemaLocation="../../core_components/crm_requeststatus_2.0.xsd" namespace="urn:riv:crm:requeststatus:2"/>
+  <xs:element name="GetRequestActivities" type="tns:GetRequestActivitiesType"/>
+  <xs:element name="GetRequestActivitiesResponse" type="tns:GetRequestActivitiesResponseType"/>
+  <xs:complexType name="GetRequestActivitiesType">
+    <xs:sequence>
+      <xs:element name="careUnitHSAId" type="core:IIType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="careGiverHSAId" type="core:IIType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="patientId" type="core:IIType"/>
+      <xs:element name="datePeriod" type="core:DatePeriodType" minOccurs="0"/>
+      <xs:element name="sourceSystemHSAId" type="core:IIType" minOccurs="0"/>
+      <xs:element name="careContactId" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="typeOfRequest" type="core:CVType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetRequestActivitiesResponseType">
+    <xs:sequence>
+      <xs:element name="requestActivity" type="core:RequestActivityType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\bpettersson\bitbucket\riv.crm.requeststatus\schemas\core_components\crm_requeststatus_2.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:crm:requeststatus:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:crm:requeststatus:2">
+  <!--Below: common header used in service contracts for JoL (Journal- och Läkemedel).
+
+         Version: JoL Header Fältregler_v1.2-->
+  <xs:complexType name="HeaderType">
+    <xs:sequence>
+      <xs:element name="accessControlHeader" type="tns:AccessControlHeaderType"/>
+      <xs:element name="sourceSystemId" type="tns:IIType"/>
+      <xs:element name="record" type="tns:RecordType"/>
+      <xs:element name="author" type="tns:AuthorType" minOccurs="0"/>
+      <xs:element name="signature" type="tns:AuthorType" minOccurs="0"/>
+      <xs:element name="cancellation" type="tns:AuthorType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AccessControlHeaderType">
+    <xs:sequence>
+      <xs:element name="accountableCareGiver" type="tns:IIType"/>
+      <xs:element name="accountableCareUnit" type="tns:IIType" minOccurs="0"/>
+      <xs:element name="originalPatientId" type="tns:IIType" minOccurs="0"/>
+      <xs:element name="careProcessId" type="tns:UUIDType" minOccurs="0"/>
+      <xs:element name="lockTime" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="blockComparisonTime" type="tns:TimeStampType"/>
+      <xs:element name="approvedForPatient" type="xs:boolean"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecordType">
+    <xs:sequence>
+      <xs:element name="id" type="tns:IIType"/>
+      <xs:element name="timestamp" type="tns:TimeStampType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AuthorType">
+    <xs:sequence>
+      <xs:element name="id" type="tns:IIType" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="timestamp" type="tns:TimeStampType"/>
+      <xs:element name="byRole" type="tns:CVType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Below: types used exclusively by service contract GetRequestActivities-->
+  <xs:complexType name="RequestActivityType">
+    <xs:sequence>
+      <xs:element name="header" type="tns:HeaderType"/>
+      <xs:element name="body" type="tns:RequestActivityBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RequestActivityBodyType">
+    <xs:sequence>
+      <xs:element name="statusCode" type="tns:CVType"/>
+      <xs:element name="eventTime" type="tns:TimeStampType"/>
+      <xs:element name="request" type="tns:RequestType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RequestType">
+    <xs:sequence>
+      <xs:element name="id" type="tns:IIType"/>
+      <xs:element name="type" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="medium" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="author" type="tns:RequestAuthorType" minOccurs="0"/>
+      <xs:element name="receivingOrganization" type="tns:OrganizationType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RequestAuthorType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="organization" type="tns:OrganizationType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OrganizationType">
+    <xs:sequence>
+      <xs:element name="id" type="tns:IIType" minOccurs="0"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Below: only helper types allowed.
+
+         A helper type is a type used in one ore more of the domain schema common types.
+         It can also be a type used in two or more service schemas.
+
+         Version: Gemensamma_typer_v8-->
+  <xs:complexType name="CVType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="code" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystem" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystemName" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystemVersion" type="xs:string" minOccurs="0"/>
+      <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+      <xs:element name="originalText" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IIType">
+    <xs:sequence>
+      <xs:element name="root" type="xs:string"/>
+      <xs:element name="extension" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TimeStampType">
+    <xs:annotation>
+      <xs:documentation>A quantity specifying a point on the axis of natural time.
+				A point in time is most often represented as a calendar
+				expression.
+
+				The time has the format YYYYMMDDhhmmss</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])(0[0-9]|1[0-9]|2[0123])([0-5])([0-9])([0-5])([0-9])"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UUIDType">
+    <xs:annotation>
+      <xs:documentation>Base type: restriction of xs:string Pattern:
+				[A-Fa-f0-9]{32}|(\{|\()?[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}(\}|\))?
+				This type is used by other XML schema attributes or elements that
+				will hold a universal unique identifier (UUID), commonly known as
+				either a globally unique identifier (GUID) or UUID. The regular
+				expression defined limits the contents of an attribute to either a
+				single 32-digit hexadecimal string or a 32-digit hex string patterned
+				as [8]-[4]-[4]-[4]-[12] digits.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Fa-f0-9]{32}|(\{|\()?[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}(\}|\))?"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DatePeriodType">
+    <xs:sequence>
+      <xs:element name="start" type="tns:DateType"/>
+      <xs:element name="end" type="tns:DateType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="DateType">
+    <xs:annotation>
+      <xs:documentation>YYYYMMDD</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\bpettersson\bitbucket\riv.crm.requeststatus\schemas\core_components\itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:itintegration:registry:1" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundl��ggande informationsobjekt f��r dom��nen itintegration:registry (adressering av tj��nster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			F��rfattare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="ca11e3cb-22be-487a-ab04-f5588f169fc1" isOneWay="false" action="urn:riv:crm:requeststatus:GetRequestActivitiesResponder:2:GetRequestActivities" name="GetRequestActivities" bindingOperationName="GetRequestActivities" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation></con:interface><con:testSuite id="d1e0acb5-379d-4227-a4f1-166f92799f97" name="crm_requeststatus"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="e76cf63d-34ec-4c8f-93a6-7d2d1178ece0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.17.1 (GRA) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="3a3b2888-a30d-43a5-83d2-090ad0e841e1"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
