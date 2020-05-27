@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="8231e382-9cb0-42d0-a3cd-deae045048b4" activeEnvironment="Default" name="SKLTP-utfall av aktiviteter" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="2890bd5f-a26d-4d51-a876-62c260013f89" wsaVersion="NONE" name="GetECGOutcomeResponderBinding_1.0" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:actoutcome:GetECGOutcome:1:rivtabp21}GetECGOutcomeResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_healthcond_actoutcome_3.1.6_RC1/schemas/interactions/GetECGOutcomeInteraction/GetECGOutcomeInteraction_1.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_healthcond_actoutcome_3.1.6_RC1/schemas/interactions/GetECGOutcomeInteraction/GetECGOutcomeInteraction_1.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_healthcond_actoutcome_3.1.6_RC1/schemas/interactions/GetECGOutcomeInteraction/GetECGOutcomeInteraction_1.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+<con:soapui-project id="8231e382-9cb0-42d0-a3cd-deae045048b4" activeEnvironment="Default" name="SKLTP-utfall av aktiviteter" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="&lt;all>"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:WsdlInterface" id="2890bd5f-a26d-4d51-a876-62c260013f89" wsaVersion="NONE" name="GetECGOutcomeResponderBinding_1.0" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:actoutcome:GetECGOutcome:1:rivtabp21}GetECGOutcomeResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_healthcond_actoutcome_3.1.6_RC1/schemas/interactions/GetECGOutcomeInteraction/GetECGOutcomeInteraction_1.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_healthcond_actoutcome_3.1.6_RC1/schemas/interactions/GetECGOutcomeInteraction/GetECGOutcomeInteraction_1.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_healthcond_actoutcome_3.1.6_RC1/schemas/interactions/GetECGOutcomeInteraction/GetECGOutcomeInteraction_1.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements. See the NOTICE file
  distributed with this work for additional information
  regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
@@ -19379,7 +19410,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          </urn1:patientId>\r
       </urn1:GetLaboratoryOrderOutcome>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5c4c5b59-2112-42f0-83d1-66eda3b5b3c5"/><con:assertion type="Schema Compliance" id="a003428a-d3e6-4d49-9df3-ab22f02a6a55"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="954702e3-6fb6-4a3f-bd9c-f1563e3e1f3e"/><con:assertion type="Simple NotContains" id="4e81fbc9-8552-4e5f-8a2f-604928e72302" name="Not Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="0a24e6d1-ce6e-4573-a85c-5944e11c8b68" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.12.2 (GLOO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="8adde8e0-1bf1-4915-9280-2add6d02a3ca"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5c4c5b59-2112-42f0-83d1-66eda3b5b3c5"/><con:assertion type="Schema Compliance" id="a003428a-d3e6-4d49-9df3-ab22f02a6a55"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="954702e3-6fb6-4a3f-bd9c-f1563e3e1f3e"/><con:assertion type="Simple NotContains" id="4e81fbc9-8552-4e5f-8a2f-604928e72302" name="Not Contains"><con:configuration><token>accessControlHeader</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="0a24e6d1-ce6e-4573-a85c-5944e11c8b68" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.12.2 (GLOO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="8adde8e0-1bf1-4915-9280-2add6d02a3ca"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -19506,7 +19537,7 @@ ca.assertNonEmptyResponse()
 ca.assertExactNumberOfRecords(1000)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="2bb2f505-bb20-4911-9137-0707d3423a50" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:patientId/urn4:id', context.patientId2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="026993a3-76da-4e2c-82da-137b14540474" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.12.5 (GLOO) Patient med engagemang hos 20 producenter med vardera 5 poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="24dfadd8-b4f0-4690-bcc2-3dec122b43e9"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:accessControlHeader/urn4:originalPatientId/urn4:extension', context.patientId2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="026993a3-76da-4e2c-82da-137b14540474" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.12.5 (GLOO) Patient med engagemang hos 20 producenter med vardera 5 poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="24dfadd8-b4f0-4690-bcc2-3dec122b43e9"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -19565,29 +19596,29 @@ ca.assertSpecificValueInAllRecords('/gloo3:laboratoryOrderOutcome/urn3:laborator
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5c4c5b59-2112-42f0-83d1-66eda3b5b3c5"/><con:assertion type="Schema Compliance" id="a003428a-d3e6-4d49-9df3-ab22f02a6a55"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="954702e3-6fb6-4a3f-bd9c-f1563e3e1f3e"/><con:assertion type="GroovyScriptAssertion" id="9b65cbe8-b78e-4368-9c87-abe63664504e" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK01")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK02")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK03")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK04")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK05")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK06")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK07")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK08")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK09")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK10")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK11")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK12")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK13")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK14")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK15")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK16")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK17")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK18")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK19")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK20")</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="2bb2f505-bb20-4911-9137-0707d3423a50" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK02")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK03")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK04")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK05")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK06")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK07")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK08")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK09")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK10")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK11")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK12")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK13")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK14")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK15")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK16")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK17")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK18")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK19")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK20")</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="2bb2f505-bb20-4911-9137-0707d3423a50" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:patientId/urn4:id', context.patientId3)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="877b73bc-5cfd-4154-b453-e928f0cc934f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.12.6 (GLOO) Tomt svar från en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="098d4e52-d5e9-4158-9430-77476f8e7799"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:accessControlHeader/urn4:originalPatientId/urn4:extension', context.patientId3)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="877b73bc-5cfd-4154-b453-e928f0cc934f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.12.6 (GLOO) Tomt svar från en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="098d4e52-d5e9-4158-9430-77476f8e7799"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -19622,18 +19653,18 @@ ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion
       <urn1:GetLaboratoryOrderOutcome>\r
          <urn1:patientId>\r
             <urn2:root>${patientIdType}</urn2:root>\r
-            <urn2:extension>${patientId}</urn2:extension>\r
+            <urn2:extension>${patientId4}</urn2:extension>\r
          </urn1:patientId>\r
       </urn1:GetLaboratoryOrderOutcome>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5c4c5b59-2112-42f0-83d1-66eda3b5b3c5"/><con:assertion type="Schema Compliance" id="a003428a-d3e6-4d49-9df3-ab22f02a6a55"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="954702e3-6fb6-4a3f-bd9c-f1563e3e1f3e"/><con:assertion type="GroovyScriptAssertion" id="2e753989-3ae9-4884-aa57-d3c417e84e6c" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:patientId/urn4:id', context.patientId)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="bc02eac6-db13-40ed-b36d-7ed49a5707fd" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+ca.assertSpecificValueInAllRecords('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:accessControlHeader/urn4:originalPatientId/urn4:extension', context.patientId4)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="bc02eac6-db13-40ed-b36d-7ed49a5707fd" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK01")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK03")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK03")
 ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="ec68e04e-ecb2-4810-b7be-301fcbe18e04" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.12.7 (GLOO) Timeout mot en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="80d2b3a4-ceb2-4e52-bceb-932c9dfda281"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
@@ -19669,18 +19700,18 @@ ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion
       <urn1:GetLaboratoryOrderOutcome>\r
          <urn1:patientId>\r
             <urn2:root>${patientIdType}</urn2:root>\r
-            <urn2:extension>${patientId}</urn2:extension>\r
+            <urn2:extension>${patientId9}</urn2:extension>\r
          </urn1:patientId>\r
       </urn1:GetLaboratoryOrderOutcome>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5c4c5b59-2112-42f0-83d1-66eda3b5b3c5"/><con:assertion type="Schema Compliance" id="a003428a-d3e6-4d49-9df3-ab22f02a6a55"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="954702e3-6fb6-4a3f-bd9c-f1563e3e1f3e"/><con:assertion type="GroovyScriptAssertion" id="2e753989-3ae9-4884-aa57-d3c417e84e6c" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:patientId/urn4:id', context.patientId)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="bc02eac6-db13-40ed-b36d-7ed49a5707fd" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+ca.assertSpecificValueInAllRecords('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:accessControlHeader/urn4:originalPatientId/urn4:extension', context.patientId9)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="bc02eac6-db13-40ed-b36d-7ed49a5707fd" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK01")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK03")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK02")
 ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="79fb9d4a-adf1-41f8-82e1-59346026977e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.12.8 (GLOO) Timeout mot samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="e6ee8ea3-942e-41d5-b26c-9b08a89250ab"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
@@ -19710,19 +19741,13 @@ ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion
       <urn1:GetLaboratoryOrderOutcome>\r
          <urn1:patientId>\r
             <urn2:root>${patientIdType}</urn2:root>\r
-            <urn2:extension>${patientId}</urn2:extension>\r
+            <urn2:extension>${patientId10}</urn2:extension>\r
          </urn1:patientId>\r
       </urn1:GetLaboratoryOrderOutcome>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5c4c5b59-2112-42f0-83d1-66eda3b5b3c5"/><con:assertion type="Schema Compliance" id="a003428a-d3e6-4d49-9df3-ab22f02a6a55"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="954702e3-6fb6-4a3f-bd9c-f1563e3e1f3e"/><con:assertion type="GroovyScriptAssertion" id="2e753989-3ae9-4884-aa57-d3c417e84e6c" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5c4c5b59-2112-42f0-83d1-66eda3b5b3c5"/><con:assertion type="Schema Compliance" id="a003428a-d3e6-4d49-9df3-ab22f02a6a55"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="954702e3-6fb6-4a3f-bd9c-f1563e3e1f3e"/><con:assertion type="GroovyScriptAssertion" id="bc02eac6-db13-40ed-b36d-7ed49a5707fd" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:patientId/urn4:id', context.patientId)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="bc02eac6-db13-40ed-b36d-7ed49a5707fd" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
-def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK01")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK03")
-ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="28eb03c5-0a8b-46d1-af6e-0e39bc99548d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.12.9 (GLOO) Logiskt fel från en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="0ed8478f-0ce5-4d1f-a623-ad1ddf6b75cb"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="28eb03c5-0a8b-46d1-af6e-0e39bc99548d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.12.9 (GLOO) Logiskt fel från en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="0ed8478f-0ce5-4d1f-a623-ad1ddf6b75cb"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -19749,27 +19774,7 @@ def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
 ca.assertSpecificValueInAnyRecord('/gloo3:laboratoryOrderOutcome/urn3:laboratoryOrderOutcomeHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK01")
 ca.assertSpecificValueInAnyRecord('/gloo3:laboratoryOrderOutcome/urn3:laboratoryOrderOutcomeHeader/urn3:sourceSystemHSAId', "SKLTP-MOCK02")
-ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="a1714eba-cd2d-41ef-87ed-fd9594017248" name="Assert resultCode"><con:configuration><token>&lt;resultCode>INFO&lt;/resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Set data GLOO4" id="a2bfdf23-4710-40d3-ac69-25da2ee4e563"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gloo4:laboratoryOrderOutcome")</script></con:config></con:testStep><con:testStep type="request" name="4.0" id="8f40220b-56f2-49df-89d7-2e16eac33814"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetLaboratoryOrderOutcomeResponderBinding_4.0</con:interface><con:operation>GetLaboratoryOrderOutcome</con:operation><con:request name="4.0" id="10480eaa-9946-4b52-8fa5-00e2022fe5a3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGLOO}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:actoutcome:GetLaboratoryOrderOutcomeResponder:4" xmlns:urn2="urn:riv:clinicalprocess:healthcond:actoutcome:4">\r
-   <soapenv:Header>\r
-      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
-   </soapenv:Header>\r
-   <soapenv:Body>\r
-      <urn1:GetLaboratoryOrderOutcome>\r
-         <urn1:patientId>\r
-            <urn2:root>${patientIdType}</urn2:root>\r
-            <urn2:extension>${patientId}</urn2:extension>\r
-         </urn1:patientId>\r
-      </urn1:GetLaboratoryOrderOutcome>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5c4c5b59-2112-42f0-83d1-66eda3b5b3c5"/><con:assertion type="Schema Compliance" id="a003428a-d3e6-4d49-9df3-ab22f02a6a55"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="954702e3-6fb6-4a3f-bd9c-f1563e3e1f3e"/><con:assertion type="GroovyScriptAssertion" id="2e753989-3ae9-4884-aa57-d3c417e84e6c" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
-def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:patientId/urn4:id', context.patientId)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="bc02eac6-db13-40ed-b36d-7ed49a5707fd" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
-def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK01")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK03")
-ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="755330f6-8d4b-4e86-9a24-6629ebef6470" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.12.10 (GLOO) Logiskt fel från samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="51b38117-a4bf-4e97-b693-b4cb2857c5d7"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="a1714eba-cd2d-41ef-87ed-fd9594017248" name="Assert resultCode"><con:configuration><token>&lt;resultCode>INFO&lt;/resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="755330f6-8d4b-4e86-9a24-6629ebef6470" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.12.10 (GLOO) Logiskt fel från samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="51b38117-a4bf-4e97-b693-b4cb2857c5d7"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -19790,27 +19795,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f41857ce-6731-4309-b66f-f012d24c1753"/><con:assertion type="Schema Compliance" id="4af553ee-f8f5-46b8-b5b6-9a7e1a48a3c6"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="6b213dda-fe80-4822-924b-7005f910cf03"/><con:assertion type="GroovyScriptAssertion" id="0fa07f29-7218-458e-838a-7387146e4d4d" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="a1714eba-cd2d-41ef-87ed-fd9594017248" name="Assert resultCode"><con:configuration><token>&lt;resultCode>INFO&lt;/resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Set data GLOO4" id="024f6101-f592-4153-893c-fc59081e8ad3"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gloo4:laboratoryOrderOutcome")</script></con:config></con:testStep><con:testStep type="request" name="4.0" id="519c116b-45ea-4282-a5d7-89feeb0b2041"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetLaboratoryOrderOutcomeResponderBinding_4.0</con:interface><con:operation>GetLaboratoryOrderOutcome</con:operation><con:request name="4.0" id="10480eaa-9946-4b52-8fa5-00e2022fe5a3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGLOO}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:actoutcome:GetLaboratoryOrderOutcomeResponder:4" xmlns:urn2="urn:riv:clinicalprocess:healthcond:actoutcome:4">\r
-   <soapenv:Header>\r
-      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
-   </soapenv:Header>\r
-   <soapenv:Body>\r
-      <urn1:GetLaboratoryOrderOutcome>\r
-         <urn1:patientId>\r
-            <urn2:root>${patientIdType}</urn2:root>\r
-            <urn2:extension>${patientId}</urn2:extension>\r
-         </urn1:patientId>\r
-      </urn1:GetLaboratoryOrderOutcome>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5c4c5b59-2112-42f0-83d1-66eda3b5b3c5"/><con:assertion type="Schema Compliance" id="a003428a-d3e6-4d49-9df3-ab22f02a6a55"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="954702e3-6fb6-4a3f-bd9c-f1563e3e1f3e"/><con:assertion type="GroovyScriptAssertion" id="2e753989-3ae9-4884-aa57-d3c417e84e6c" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
-def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:patientId/urn4:id', context.patientId)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="bc02eac6-db13-40ed-b36d-7ed49a5707fd" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
-def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK01")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK03")
-ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="5c2989e1-1f7f-4986-9396-3df73588eb63" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.12.11 (GLOO) Exception från en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="e5715e16-73c5-43bc-93cc-72e5a48fdde1"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="a1714eba-cd2d-41ef-87ed-fd9594017248" name="Assert resultCode"><con:configuration><token>&lt;resultCode>INFO&lt;/resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="5c2989e1-1f7f-4986-9396-3df73588eb63" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.12.11 (GLOO) Exception från en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="e5715e16-73c5-43bc-93cc-72e5a48fdde1"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -19845,18 +19830,18 @@ ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion
       <urn1:GetLaboratoryOrderOutcome>\r
          <urn1:patientId>\r
             <urn2:root>${patientIdType}</urn2:root>\r
-            <urn2:extension>${patientId}</urn2:extension>\r
+            <urn2:extension>${patientId7}</urn2:extension>\r
          </urn1:patientId>\r
       </urn1:GetLaboratoryOrderOutcome>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5c4c5b59-2112-42f0-83d1-66eda3b5b3c5"/><con:assertion type="Schema Compliance" id="a003428a-d3e6-4d49-9df3-ab22f02a6a55"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="954702e3-6fb6-4a3f-bd9c-f1563e3e1f3e"/><con:assertion type="GroovyScriptAssertion" id="2e753989-3ae9-4884-aa57-d3c417e84e6c" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:patientId/urn4:id', context.patientId)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="bc02eac6-db13-40ed-b36d-7ed49a5707fd" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+ca.assertSpecificValueInAllRecords('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:accessControlHeader/urn4:originalPatientId/urn4:extension', context.patientId7)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="bc02eac6-db13-40ed-b36d-7ed49a5707fd" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK01")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK03")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:header/urn4:sourceSystemId/urn4:extension', "SKLTP-MOCK02")
 ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="9f70f40c-7b75-4a3f-a7e2-9270241f2815" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.12.12 (GLOO) Exception från samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="9942b664-5de8-48ee-9cdb-0ed8dc6a0257"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
@@ -19886,19 +19871,13 @@ ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion
       <urn1:GetLaboratoryOrderOutcome>\r
          <urn1:patientId>\r
             <urn2:root>${patientIdType}</urn2:root>\r
-            <urn2:extension>${patientId}</urn2:extension>\r
+            <urn2:extension>${patientId8}</urn2:extension>\r
          </urn1:patientId>\r
       </urn1:GetLaboratoryOrderOutcome>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5c4c5b59-2112-42f0-83d1-66eda3b5b3c5"/><con:assertion type="Schema Compliance" id="a003428a-d3e6-4d49-9df3-ab22f02a6a55"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="954702e3-6fb6-4a3f-bd9c-f1563e3e1f3e"/><con:assertion type="GroovyScriptAssertion" id="2e753989-3ae9-4884-aa57-d3c417e84e6c" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5c4c5b59-2112-42f0-83d1-66eda3b5b3c5"/><con:assertion type="Schema Compliance" id="a003428a-d3e6-4d49-9df3-ab22f02a6a55"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="954702e3-6fb6-4a3f-bd9c-f1563e3e1f3e"/><con:assertion type="GroovyScriptAssertion" id="bc02eac6-db13-40ed-b36d-7ed49a5707fd" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:patientId/urn4:id', context.patientId)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="bc02eac6-db13-40ed-b36d-7ed49a5707fd" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
-def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK01")
-ca.assertSpecificValueInAnyRecord('/gloo4:laboratoryOrderOutcome/urn4:laboratoryOrderOutcomeHeader/urn4:sourceSystemHSAId', "SKLTP-MOCK03")
-ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="68bba8bc-bb27-41fb-bb3b-995dde9b7087" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.13.1 (GMMH) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="54a81855-a8a7-4303-a233-1e4aca6e012d"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="68bba8bc-bb27-41fb-bb3b-995dde9b7087" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.13.1 (GMMH) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="54a81855-a8a7-4303-a233-1e4aca6e012d"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
