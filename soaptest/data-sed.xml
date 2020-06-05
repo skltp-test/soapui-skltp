@@ -869,5 +869,20 @@ under the License.
 			<logicalAddress>5565594230</logicalAddress>
 		</data>
 	</testcase>
-        
+        <testcase id="SKLTP-casebox-answers">
+                <description>
+                        funktionstester för casebox
+                </description>
+                <data>
+                        <logicalAddress>0123456777</logicalAddress>
+                </data>
+        </testcase>
+        <testcase id="SKLTP-casebox-questions">
+                <description>
+                        funktionstester för casebox
+                </description>
+                <data>
+                        <logicalAddress>0123456777</logicalAddress>
+                </data>
+        </testcase>        
 </testsuite>
