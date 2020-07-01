@@ -62,6 +62,9 @@ under the License.
 		<webServiceUrlGSSC1>https://TARGETHOST/vp/GetSupportedServiceContracts/1/rivtabp21</webServiceUrlGSSC1>
 		<webServiceUrlGSSC2>https://TARGETHOST/vp/GetSupportedServiceContracts/2/rivtabp21</webServiceUrlGSSC2>
 		<webServiceUrlGLABSC>https://TARGETHOST/vp/infrastructure/itintegration/registry/GetLogicalAddresseesByServiceContract/2/rivtabp21</webServiceUrlGLABSC>
+		
+		<webServiceUrlHamtaPatientInfo>https://TARGETHOST/vp/HamtaPatientInfo/5/rivtabp21</webServiceUrlHamtaPatientInfo>
+		<webServiceUrlHamtaAktuellaOrdinationer>https://TARGETHOST/vp/HamtaAktuellaOrdinationer/4/rivtabp21</webServiceUrlHamtaAktuellaOrdinationer>
 				
 		<serviceConsumerHsaId>TSTNMT2321000156-B02</serviceConsumerHsaId>
 		<httpHeaderHsaId>112233</httpHeaderHsaId>
@@ -861,12 +864,30 @@ under the License.
 		</data>
 	</testcase>
         
-	<testcase id="SKLTP-ApSe">
+	<testcase id="SKLTP-ApSe-Mock">
 		<description>
                     testar adapterns omvandling av argos-headrar till saml-aassertion-attributes
 		</description>
 		<data>
 			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="SKLTP-ApSe-AXS">
+		<description>
+                    E2E-test mot eHMs testmiljö, domän AXS
+		</description>
+		<data>
+			<logicalAddress>APO</logicalAddress>
+			<patientId>193603119045</patientId>
+		</data>
+	</testcase>
+	<testcase id="SKLTP-ApSe-OR">
+		<description>
+                    E2E-test mot eHMs testmiljö, domän OR
+		</description>
+		<data>
+			<logicalAddress>APO</logicalAddress>
+			<patientId>193603119045</patientId>
 		</data>
 	</testcase>
         <testcase id="SKLTP-casebox-answers">
