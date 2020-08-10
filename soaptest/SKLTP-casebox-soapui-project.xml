@@ -3422,7 +3422,8 @@ String randomString = RandomStringUtils.random(bdLen, charset.toCharArray())
 
 testRunner.testCase.setPropertyValue( "BigData", randomString )</script></con:config>
 			</con:testStep>
-			<con:testStep type="groovy" name="clear old answers" id="381fc939-54bc-4885-814e-f2c5181dd61b"><con:settings/><con:config><script>def count = 1
+			<con:testStep type="groovy" name="Skip if not SIT" id="0efca399-f462-41b7-b12f-2ee9bec3f3e8"><con:settings/><con:config><script>if (!context.VP.contains("test.esb.ntjp"))
+	testRunner.cancel( "Not supported for ${context.VP}, skipping!" )</script></con:config></con:testStep><con:testStep type="groovy" name="clear old answers" id="381fc939-54bc-4885-814e-f2c5181dd61b"><con:settings/><con:config><script>def count = 1
 while (count) {
   testRunner.runTestStepByName( "FindAnswersToDelete")
   count = Integer.parseInt(testRunner.testCase.properties['answersLeft'].value)
@@ -3430,7 +3431,8 @@ while (count) {
   	testRunner.runTestStepByName( "Transfer Answer ID")
   	testRunner.runTestStepByName( "DeleteAllAnswers")
   }
-}</script></con:config></con:testStep><con:testStep type="request" name="ReceiveMedCertAnswer special characters" id="c035c1d3-70f8-418d-aa2a-00ab5a5213a6">
+}</script></con:config></con:testStep>
+			<con:testStep type="request" name="ReceiveMedCertAnswer special characters" id="c035c1d3-70f8-418d-aa2a-00ab5a5213a6">
 				<con:settings/>
 				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 					<con:interface>ReceiveMedicalCertificateAnswerResponderBinding</con:interface>
@@ -4083,8 +4085,7 @@ declare namespace d='urn:riv:insuranceprocess:healthreporting:DeleteAnswersRespo
 					</con:transfers>
 				<con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>AnswersLeft</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>FindAnswersToDelete</con:sourceStep><con:sourcePath>declare namespace far="urn:riv:insuranceprocess:healthreporting:FindAllAnswersResponder:1";
 //far:answersLeft</con:sourcePath><con:targetType>answersLeft</con:targetType><con:targetStep>#TestCase#</con:targetStep><con:targetPath/><con:type>XPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config>
-			</con:testStep>
-			<con:testStep type="request" name="DeleteAllAnswers" id="2ecbd77d-187d-49d1-986d-440dd209fa70">
+			</con:testStep><con:testStep type="request" name="DeleteAllAnswers" id="2ecbd77d-187d-49d1-986d-440dd209fa70">
 				<con:settings/>
 				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 					<con:interface>DeleteAnswersResponderBinding</con:interface>
@@ -4199,6 +4200,8 @@ def source = new XmlDataReader(context, dataFile)
 source.load(testRunner.testCase.getName())</script>
 				</con:config>
 			</con:testStep>
+			<con:testStep type="groovy" name="Skip if not SIT" id="8afb8dd0-c83f-462b-98cc-1d92e35275d6"><con:settings/><con:config><script>if (!context.VP.contains("test.esb.ntjp"))
+	testRunner.cancel( "Not supported for ${context.VP}, skipping!" )</script></con:config></con:testStep>
 			<con:testStep type="request" name="ReceiveMedCertQuestion1" id="48720a97-f0e4-4e2c-907e-c6a8d658a59d">
 				<con:settings/>
 				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -5088,8 +5091,7 @@ count(//ns3:Question)</path>
 						<con:wsrmConfig version="1.2"/>
 					</con:request>
 				</con:config>
-			</con:testStep>
-			<con:properties/>
+			</con:testStep><con:properties/>
 		</con:testCase>
 		<con:properties/>
 	</con:testSuite>
