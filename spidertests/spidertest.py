@@ -124,4 +124,4 @@ def test_availible_endpoints(output):
         TestSuite.to_file(f, [ts])
 
 if __name__ == '__main__':
-    test_availible_endpoints("output.xml")
+    test_availible_endpoints("spideroutput.xml")
