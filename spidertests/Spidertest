@@ -18,7 +18,7 @@ pipeline {
                                -e CONSUMERHSAID=$CONSUMERHSAID \
                                -e SERVICEURL=$SERVICEURL \
                                -e WSDLURL=$WSDLURL \
-                               python:3 spidertest.py
+                               python:3 spidertests/spidertest.py
                     """
                 }
             }
