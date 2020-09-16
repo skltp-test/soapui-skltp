@@ -7,7 +7,7 @@ pipeline {
             steps {
                 withCredentials([certificate(credentialsId: 'TSTNMT2321000156-B02', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTKEYPWD')]) {
                     sh """
-                        openssl pkcs12 -nodes -out CRT.pem -passin pass:$CERTKEYPWD -in $CERTKEY
+                        openssl pkcs12 -nodes -out $WORKSPACE/CRT.pem -passin pass:$CERTKEYPWD -in $CERTKEY
                         echo "zeep junit-xml" > requirements.txt
                         docker run python:3 \
                                -v "$WORKSPACE":/usr/src/spider \
