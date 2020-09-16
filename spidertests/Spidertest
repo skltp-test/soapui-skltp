@@ -7,18 +7,18 @@ pipeline {
             steps {
                 withCredentials([certificate(credentialsId: 'TSTNMT2321000156-B02', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTKEYPWD')]) {
                     sh """
-                        openssl pkcs12 -nodes -out $WORKSPACE/CRT.pem -passin pass:$CERTKEYPWD -in $CERTKEY
-                        echo "zeep junit-xml" > requirements.txt
-                        docker run python:3 \
-                               -v "$WORKSPACE":/usr/src/spider \
-                               -w /usr/src/spider \
+                        openssl pkcs12 -nodes -out $"WORKSPACE//CRT.pem" -passin pass:"$CERTKEYPWD" -in $CERTKEY
+			docker build -t spidertests ./spidertests/
+                        docker run \
+                               -v "$WORKSPACE/spidertests":/usr/src/spidertests \
+                               -w /usr/src/spidertests \
                                -e CERTFILE=/usr/src/spider/CRT.pem \
                                -e PLATFORM=$PLATFORM \
                                -e ENVIRONMENT=$ENVIRONMENT \
                                -e CONSUMERHSAID=$CONSUMERHSAID \
                                -e SERVICEURL=$SERVICEURL \
                                -e WSDLURL=$WSDLURL \
-                               python:3 spidertests/spidertest.py
+                               python:3 spidertest.py
                     """
                 }
             }
