@@ -27,6 +27,7 @@ pipeline {
 
     post {
         always {
+            rm -f "$WORKSPACE/spidertests/CRT.pem"
             // Archive results
             junit healthScaleFactor: 100.0, testResults: 'spidertests/spideroutput.xml'
         }
