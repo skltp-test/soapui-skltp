@@ -7,12 +7,12 @@ pipeline {
             steps {
                 withCredentials([certificate(credentialsId: 'TSTNMT2321000156-B02', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTKEYPWD')]) {
                     sh """
-                        openssl pkcs12 -nodes -out "$WORKSPACE/CRT.pem" -passin pass:"$CERTKEYPWD" -in "$CERTKEY"
+                        openssl pkcs12 -nodes -out "$WORKSPACE/spidertests/CRT.pem" -passin pass:"$CERTKEYPWD" -in "$CERTKEY"
 			docker build -t spidertests ./spidertests/
                         docker run \
                                -v "$WORKSPACE/spidertests":/usr/src/spidertests \
                                -w /usr/src/spidertests \
-                               -e CERTFILE=/usr/src/spider/CRT.pem \
+                               -e CERTFILE=/usr/src/spidertests/CRT.pem \
                                -e PLATFORM=$PLATFORM \
                                -e ENVIRONMENT=$ENVIRONMENT \
                                -e CONSUMERHSAID=$CONSUMERHSAID \
