@@ -53,6 +53,7 @@ under the License.
 		<webServiceUrlGSOCS>https://TARGETHOST/vp/GetSubjectOfCareSchedule/1/rivtabp21</webServiceUrlGSOCS>
 		<webServiceUrlRMCQ>https://TARGETHOST/vp/ReceiveMedicalCertificateQuestion/1/rivtabp20</webServiceUrlRMCQ>
 		<webServiceUrlRMCA>https://TARGETHOST/vp/ReceiveMedicalCertificateAnswer/1/rivtabp20</webServiceUrlRMCA>
+		<webServiceUrlRES>https://TARGETHOST/vp/financial/patientfees/exemption/RequestExemptionStatuses/1/rivtabp21</webServiceUrlRES>
 		
 		<webServiceUrlFindAllQuestions20>https://TARGETHOST/vp/FindAllQuestions/1/rivtabp20</webServiceUrlFindAllQuestions20>
 		<webServiceUrlFindAllQuestions21>https://TARGETHOST/vp/FindAllQuestions/1/rivtabp21</webServiceUrlFindAllQuestions21>
@@ -582,6 +583,19 @@ under the License.
 	<testcase id="4.18.10 (GSOCS) Logiskt fel från samtliga producenter"></testcase>
 	<testcase id="4.18.11 (GSOCS) Exception från en av tre producenter"></testcase>
 	<testcase id="4.18.12 (GSOCS) Exception från samtliga producenter"></testcase>
+	
+	<!-- financial/patientfees/exemption -->
+	<testcase id="4.19.1 (RES) Patient utan engagemang"></testcase>
+	<testcase id="4.19.2 (RES) Patient med engagemang hos en producent(LOAD-MOCKS) uppdaterat senaste 12 månaderna"></testcase>
+	<testcase id="4.19.3 (RES) Patient med engagemang hos tre producenter uppdaterat senaste 12 månaderna"></testcase>
+	<testcase id="4.19.4 (RES) Patient med engagemang hos en producent äldre än 12 månader"></testcase>
+	<testcase id="4.19.5 (RES) Patient med engagemang hos 20 producenter uppdaterat senaste 12 månaderna"></testcase>
+	<testcase id="4.19.6 (RES) Äldre engagemangspost hos en av tre producenter"></testcase>
+	<testcase id="4.19.7 (RES) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.19.8 (RES) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.19.11 (RES) Exception från en av tre producenter"></testcase>
+	<testcase id="4.19.12 (RES) Exception från samtliga producenter"></testcase>
+	
 	
 	<testcase id="5.0.1 PRE - Rensa engagemang"></testcase>
 	<testcase id="5.0.2 PRE - Rensa engagemang med ProcessNotifications"></testcase>

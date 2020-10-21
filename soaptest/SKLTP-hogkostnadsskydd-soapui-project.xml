@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="5b088aa9-3e54-4477-85a8-530e5ccf4e17" activeEnvironment="Default" name="SKLTP-högkostnadsskydd" resourceRoot="${projectDir}" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="ea027792-6d60-4834-b2e8-f5237df33b3a" wsaVersion="NONE" name="RequestExemptionStatusesResponderBinding" type="wsdl" bindingName="{urn:riv:financial:patientfees:exemption:RequestExemptionStatuses:1:rivtabp21}RequestExemptionStatusesResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../../bitbucket/riv.financial.patientfees.exemption/schemas/interactions/RequestExemptionStatusesInteraction/RequestExemptionStatusesInteraction_1.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\Users\bpettersson\bitbucket\riv.financial.patientfees.exemption\schemas\interactions\RequestExemptionStatusesInteraction\RequestExemptionStatusesInteraction_1.0_RIVTABP21.wsdl"><con:part><con:url>file:\C:\Users\bpettersson\bitbucket\riv.financial.patientfees.exemption\schemas\interactions\RequestExemptionStatusesInteraction\RequestExemptionStatusesInteraction_1.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<wsdl:definitions name="RequestExemptionStatusesInteraction" targetNamespace="urn:riv:financial:patientfees:exemption:RequestExemptionStatuses:1:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:tjsi="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesInitiator:1" xmlns:tns="urn:riv:financial:patientfees:exemption:RequestExemptionStatuses:1:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1">
+  <wsdl:documentation>Tjänsteinteraktionens namn: RequestExemptionStatusesInteraction
+		Beskrivning: 
+		  Hantera högkostnadsskydd
+		Revisioner: 
+		Tjänstedomän: financial:patientfees:exemption 
+		Tjänsteinteraktionstyp: Fråga-Svar
+		WS-profil: RIVTABP21
+		Förvaltas av: Sveriges Kommuner och Landsting</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:financial:patientfees:exemption:RequestExemptionStatuses:1:rivtabp21">
+      <xs:import schemaLocation="RequestExemptionStatusesResponder_1.0.xsd" namespace="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="RequestExemptionStatusesRequest">
+    <wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
+      <wsdl:documentation>The organisation number of the receiving insurance institution</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="parameters" element="tjsr:RequestExemptionStatuses"/>
+  </wsdl:message>
+  <wsdl:message name="RequestExemptionStatusesResponse">
+    <wsdl:part name="parameters" element="tjsr:RequestExemptionStatusesResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="RequestExemptionStatusesResponderInterface">
+    <wsdl:operation name="RequestExemptionStatuses">
+      <wsdl:input message="tns:RequestExemptionStatusesRequest"/>
+      <wsdl:output message="tns:RequestExemptionStatusesResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RequestExemptionStatusesResponderBinding" type="tns:RequestExemptionStatusesResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RequestExemptionStatuses">
+      <soap:operation soapAction="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1:RequestExemptionStatuses" style="document"/>
+      <wsdl:input>
+        <soap:header use="literal" message="tns:RequestExemptionStatusesRequest" part="LogicalAddress"/>
+        <soap:body use="literal" parts="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RequestExemptionStatusesResponderService">
+    <wsdl:port name="RequestExemptionStatusesResponderPort" binding="tns:RequestExemptionStatusesResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\bpettersson\bitbucket\riv.financial.patientfees.exemption\schemas\interactions\RequestExemptionStatusesInteraction\RequestExemptionStatusesResponder_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:core="urn:riv:financial:patientfees:exemption:1" xmlns:codes="urn:riv:financial:patientfees:exemption:enums:1">
+  <xs:import schemaLocation="../../core_components/financial_patientfees_exemption_1.0.xsd" namespace="urn:riv:financial:patientfees:exemption:1"/>
+  <xs:import schemaLocation="../../core_components/financial_patientfees_exemption_enum_1.0.xsd" namespace="urn:riv:financial:patientfees:exemption:enums:1"/>
+  <xs:element name="RequestExemptionStatuses" type="tns:RequestExemptionStatusesType"/>
+  <xs:element name="RequestExemptionStatusesResponse" type="tns:RequestExemptionStatusesResponseType"/>
+  <xs:complexType name="RequestExemptionStatusesType">
+    <xs:sequence>
+      <xs:element name="requestId" type="core:IIType"/>
+      <xs:element name="patientId" type="core:IIType"/>
+      <xs:element name="actor" type="core:ActorType"/>
+      <xs:element name="responseLogicalAddress" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RequestExemptionStatusesResponseType">
+    <xs:sequence>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\bpettersson\bitbucket\riv.financial.patientfees.exemption\schemas\core_components\financial_patientfees_exemption_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one or more contributor 
+	license agreements. See the NOTICE file distributed with this work for additional 
+	information regarding copyright ownership. Sveriges Kommuner och Landsting 
+	licenses this file to you under the Apache License, Version 2.0 (the "License"); 
+	you may not use this file except in compliance with the License. You may 
+	obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License.-->
+<xs:schema targetNamespace="urn:riv:financial:patientfees:exemption:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:codes="urn:riv:financial:patientfees:exemption:enums:1" xmlns:tns="urn:riv:financial:patientfees:exemption:1">
+  <xs:import schemaLocation="financial_patientfees_exemption_enum_1.0.xsd" namespace="urn:riv:financial:patientfees:exemption:enums:1"/>
+  <xs:complexType name="FeeExemptionType">
+    <xs:sequence>
+      <xs:element name="patientId" type="tns:IIType"/>
+      <xs:element name="transactions" type="tns:TransactionType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="exemptions" type="tns:ExemptionType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExemptionType">
+    <xs:sequence>
+      <xs:element name="highCostProtectionPeriod" type="tns:DatePeriodType"/>
+      <xs:element name="exemptionPeriod" type="tns:DatePeriodType"/>
+      <xs:element name="typeOfExemption" type="codes:TypeOfExemtionEnum"/>
+      <xs:element name="region" type="tns:IIType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="HSAIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="PersonIdType">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TransactionType">
+    <xs:sequence>
+      <xs:element name="fee" type="tns:AmountType" maxOccurs="1" minOccurs="0"/>
+      <xs:element name="dateOfVisit" type="tns:DateType" minOccurs="0"/>
+      <xs:element name="timeOfRegistration" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="typeOfFee" type="codes:TypeOfExemtionEnum"/>
+      <xs:element name="careGiver" type="tns:IIType" minOccurs="0"/>
+      <xs:element name="careUnit" type="tns:IIType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OrgUnitType">
+    <xs:sequence>
+      <xs:element name="orgUnitHSAId" type="tns:HSAIdType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="orgUnitName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="orgUnitTelecom" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="orgUnitEmail" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="orgUnitAddress" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="orgUnitLocation" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TimePeriodType">
+    <xs:annotation>
+      <xs:documentation>Används för att specificera ett datumintervall
+				med
+				hjälp av start- och slutdatum.
+
+				start:
+				Startdatum på formatet
+				YYYYMMDDhhmmss
+				end:
+				Slutdatum på formatet YYYYMMDDhhmmss</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="start" type="tns:TimeType"/>
+      <xs:element name="end" type="tns:TimeType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DatePeriodType">
+    <xs:sequence>
+      <xs:element name="start" type="tns:DateType" minOccurs="0"/>
+      <xs:element name="end" type="tns:DateType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TimeType">
+    <xs:annotation>
+      <xs:documentation>The time has the format hhmmss</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(0[0-9]|1[0-9]|2[0123])([0-5])([0-9])([0-5])([0-9])"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DateType">
+    <xs:annotation>
+      <xs:documentation>YYYYMMDD</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TimeStampType">
+    <xs:annotation>
+      <xs:documentation>A quantity specifying a point on the axis of natural time. A point in time
+        is most often represented as a calendar expression. The time has the format YYYYMMDDhhmmss</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])(0[0-9]|1[0-9]|2[0123])([0-5])([0-9])([0-5])([0-9])"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AmountType">
+    <xs:sequence>
+      <xs:element name="amount" type="xs:decimal"/>
+      <xs:element name="currency" type="tns:CVType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CVType">
+    <xs:sequence>
+      <xs:element name="code" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystem" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystemName" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystemVersion" type="xs:string" minOccurs="0"/>
+      <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+      <xs:element name="originalText" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IIType">
+    <xs:sequence>
+      <xs:element name="root" type="xs:string"/>
+      <xs:element name="extension" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActorType">
+    <xs:sequence>
+      <xs:element name="actorTypeEnum" type="codes:ActorTypeEnum"/>
+      <xs:element name="actorId" type="tns:IIType"/>
+      <xs:element name="careGiverId" type="tns:IIType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\bpettersson\bitbucket\riv.financial.patientfees.exemption\schemas\core_components\financial_patientfees_exemption_enum_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one or more contributor 
+	license agreements. See the NOTICE file distributed with this work for additional 
+	information regarding copyright ownership. Sveriges Kommuner och Landsting 
+	licenses this file to you under the Apache License, Version 2.0 (the "License"); 
+	you may not use this file except in compliance with the License. You may 
+	obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License.-->
+<xs:schema targetNamespace="urn:riv:financial:patientfees:exemption:enums:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:financial:patientfees:exemption:enums:1">
+  <xs:simpleType name="TypeOfExemtionEnum">
+    <xs:annotation>
+      <xs:documentation>CARE_VISIT - Öppen sjukvård
+				TECHNICAL_AID - Tekniska hjälpmedel
+				TRANSPORTATION - Sjukresor</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CARE_VISIT"/>
+      <xs:enumeration value="TECHNICAL_AID"/>
+      <xs:enumeration value="TRANSPORTATION"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TypeOfExemptionStatusEnum">
+    <xs:annotation>
+      <xs:documentation>TRUE - Ja har frikort
+				FALSE - Nej har ej frikort
+				PRELIMINARY - Har preliminiärt frikort</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TRUE"/>
+      <xs:enumeration value="FALSE"/>
+      <xs:enumeration value="PRELIMINARY"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ActorTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CITIZEN"/>
+      <xs:enumeration value="GUARDIAN"/>
+      <xs:enumeration value="CAREGIVER"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\bpettersson\bitbucket\riv.financial.patientfees.exemption\schemas\core_components\itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:itintegration:registry:1" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundl��ggande informationsobjekt f��r dom��nen itintegration:registry (adressering av tj��nster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			F��rfattare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="bc8148eb-3d1f-44c2-8821-1bd175cf066b" isOneWay="false" action="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1:RequestExemptionStatuses" name="RequestExemptionStatuses" bindingOperationName="RequestExemptionStatuses" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="13cdcdb3-ad3e-4a39-aaae-9298a5b5e6fd" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://load-mocks.sm.nordicmedtest.se/RequestExemptionStatuses</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>?</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:RequestExemptionStatuses>\r
+         <urn1:requestId>\r
+            <urn2:root>?</urn2:root>\r
+            <urn2:extension>?</urn2:extension>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:requestId>\r
+         <urn1:patientId>\r
+            <urn2:root>?</urn2:root>\r
+            <urn2:extension>?</urn2:extension>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:patientId>\r
+         <urn1:actor>\r
+            <urn2:actorTypeEnum>?</urn2:actorTypeEnum>\r
+            <urn2:actorId>\r
+               <urn2:root>?</urn2:root>\r
+               <urn2:extension>?</urn2:extension>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn2:actorId>\r
+            <urn2:careGiverId>\r
+               <urn2:root>?</urn2:root>\r
+               <urn2:extension>?</urn2:extension>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn2:careGiverId>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:actor>\r
+         <urn1:responseLogicalAddress>?</urn1:responseLogicalAddress>\r
+         <!--You may enter ANY elements at this point-->\r
+      </urn1:RequestExemptionStatuses>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1:RequestExemptionStatuses"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="adc89b16-1589-4e66-a55d-b2b45dbf61b4" wsaVersion="NONE" name="UpdateResponderBinding" type="wsdl" bindingName="{urn:riv:itintegration:engagementindex:Update:1:rivtabp21}UpdateResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../../bitbucket/riv.itintegration.engagementindex/schemas/interactions/UpdateInteraction/UpdateInteraction_1.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/bpettersson/bitbucket/riv.itintegration.engagementindex/schemas/interactions/UpdateInteraction/UpdateInteraction_1.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/Users/bpettersson/bitbucket/riv.itintegration.engagementindex/schemas/interactions/UpdateInteraction/UpdateInteraction_1.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<wsdl:definitions name="UpdateInteraction" targetNamespace="urn:riv:itintegration:engagementindex:Update:1:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:tjsi="urn:riv:itintegration:engagementindex:UpdateInitiator:1" xmlns:tns="urn:riv:itintegration:engagementindex:Update:1:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1">
+  <wsdl:documentation>Tjänsteinteraktionens namn: UpdateInteraction
+			 Beskrivning: 
+			   Service for adding, updating and removing content to/from engagement index
+			 Revisioner: 
+			 Tjänstedomän: itintegration:engagementindex
+			 Tjänsteinteraktionstyp: Fråga-Svar
+			 WS-profil: RIVTABP21
+			 Förvaltas av: Sveriges Kommuner och Landsting</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:itintegration:engagementindex:Update:1:rivtabp21">
+      <xs:import schemaLocation="UpdateResponder_1.0.xsd" namespace="urn:riv:itintegration:engagementindex:UpdateResponder:1"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateRequest">
+    <wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
+      <wsdl:documentation>The organisation number of the organization owning the targeted engagement index</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="parameters" element="tjsr:Update"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateResponse">
+    <wsdl:part name="parameters" element="tjsr:UpdateResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="UpdateResponderInterface">
+    <wsdl:operation name="Update">
+      <wsdl:input message="tns:UpdateRequest"/>
+      <wsdl:output message="tns:UpdateResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UpdateResponderBinding" type="tns:UpdateResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update" style="document"/>
+      <wsdl:input>
+        <soap:header use="literal" message="tns:UpdateRequest" part="LogicalAddress"/>
+        <soap:body use="literal" parts="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UpdateResponderService">
+    <wsdl:port name="UpdateResponderPort" binding="tns:UpdateResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\bpettersson\bitbucket\riv.itintegration.engagementindex\schemas\interactions\UpdateInteraction\UpdateResponder_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:itintegration:engagementindex:UpdateResponder:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:core="urn:riv:itintegration:engagementindex:1">
+  <xs:import schemaLocation="../../core_components/itintegration_engagementindex_1.0.xsd" namespace="urn:riv:itintegration:engagementindex:1"/>
+  <xs:element name="Update" type="tns:UpdateType"/>
+  <xs:element name="UpdateResponse" type="tns:UpdateResponseType"/>
+  <xs:complexType name="UpdateType">
+    <xs:sequence>
+      <xs:element name="engagementTransaction" type="core:EngagementTransactionType" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UpdateResponseType">
+    <xs:sequence>
+      <xs:element name="ResultCode" type="core:ResultCodeEnum"/>
+      <xs:element name="comment" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\bpettersson\bitbucket\riv.itintegration.engagementindex\schemas\core_components\itintegration_engagementindex_1.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:itintegration:engagementindex:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:itintegration:engagementindex:1">
+  <xs:complexType name="EngagementTransactionType">
+    <xs:sequence>
+      <xs:element name="deleteFlag" type="xs:boolean"/>
+      <xs:element name="engagement" type="tns:EngagementType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EngagementType">
+    <xs:sequence>
+      <xs:element name="registeredResidentIdentification" type="tns:RegisteredResidentIdentificationType"/>
+      <xs:element name="serviceDomain" type="xs:anyURI"/>
+      <xs:element name="categorization" type="xs:string"/>
+      <xs:element name="logicalAddress" type="xs:string"/>
+      <xs:element name="businessObjectInstanceIdentifier" type="xs:string"/>
+      <xs:element name="clinicalProcessInterestId" type="tns:ClinicalProcessInterestIdType" minOccurs="1"/>
+      <xs:element name="mostRecentContent" type="tns:TS" minOccurs="0"/>
+      <xs:element name="sourceSystem" type="tns:HsaIdType"/>
+      <xs:element name="creationTime" type="tns:TS" minOccurs="0"/>
+      <xs:element name="updateTime" type="tns:TS" minOccurs="0"/>
+      <xs:element name="dataController" type="tns:OrgNoType"/>
+      <xs:element name="owner" type="tns:HsaIdType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="HsaIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="OrgNoType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="ClinicalProcessInterestIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="RegisteredResidentIdentificationType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{8}[0-9A-Zptf]{4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TS">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})([0-1]{1}[0-9]{1}|2[0-3]{1})[0-5]{1}[0-9]{1}[0-5]{1}[0-9]{1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DT">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9]{1}[0-9]{3}(0[1-9]{1}|1[0-2]{1})([0-2]{1}[0-9]{1}|3[0-1]{1})"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\bpettersson\bitbucket\riv.itintegration.engagementindex\schemas\core_components\itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:itintegration:registry:1" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundl��ggande informationsobjekt f��r dom��nen itintegration:registry (adressering av tj��nster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			F��rfattare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="dac95962-4398-4972-be41-fb7534fa58e8" isOneWay="false" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update" name="Update" bindingOperationName="Update" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="217eee45-fa38-40b8-a5b9-35ae0a2ec18d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://tempuri.org</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>?</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:Update>\r
+         <!--1 or more repetitions:-->\r
+         <urn1:engagementTransaction>\r
+            <urn2:deleteFlag>?</urn2:deleteFlag>\r
+            <urn2:engagement>\r
+               <urn2:registeredResidentIdentification>?</urn2:registeredResidentIdentification>\r
+               <urn2:serviceDomain>?</urn2:serviceDomain>\r
+               <urn2:categorization>?</urn2:categorization>\r
+               <urn2:logicalAddress>?</urn2:logicalAddress>\r
+               <urn2:businessObjectInstanceIdentifier>?</urn2:businessObjectInstanceIdentifier>\r
+               <urn2:clinicalProcessInterestId>?</urn2:clinicalProcessInterestId>\r
+               <!--Optional:-->\r
+               <urn2:mostRecentContent>?</urn2:mostRecentContent>\r
+               <urn2:sourceSystem>?</urn2:sourceSystem>\r
+               <!--Optional:-->\r
+               <urn2:creationTime>?</urn2:creationTime>\r
+               <!--Optional:-->\r
+               <urn2:updateTime>?</urn2:updateTime>\r
+               <urn2:dataController>?</urn2:dataController>\r
+               <!--Optional:-->\r
+               <urn2:owner>?</urn2:owner>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn2:engagement>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:engagementTransaction>\r
+         <!--You may enter ANY elements at this point-->\r
+      </urn1:Update>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/></con:call></con:operation></con:interface><con:testSuite id="595e162c-7396-4741-80bc-4914a57c165d" name="financial_patientfees_exemption"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="15ad9320-7de2-47ab-b097-4e1c4e141047" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.1 (RES) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="92216b00-543f-4d50-9a7d-5f6ed71da6cc"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="92be6fcb-a868-4595-8313-905b06dcaced"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RequestExemptionStatusesResponderBinding</con:interface><con:operation>RequestExemptionStatuses</con:operation><con:request name="1.0" id="42297b8c-2cca-47b8-b474-e20349954789"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlRES}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:RequestExemptionStatuses>\r
+         <urn1:requestId>\r
+            <urn2:root>?</urn2:root>\r
+            <urn2:extension>?</urn2:extension>\r
+         </urn1:requestId>\r
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientIdNoEngagements}</urn2:extension>\r
+         </urn1:patientId>\r
+         <urn1:actor>\r
+            <urn2:actorTypeEnum>CITIZEN</urn2:actorTypeEnum>\r
+            <urn2:actorId>\r
+               <urn2:root>${patientIdType}</urn2:root>\r
+               <urn2:extension>${patientIdNoEngagements}</urn2:extension>\r
+            </urn2:actorId>\r
+            <urn2:careGiverId>\r
+               <urn2:root>?</urn2:root>\r
+               <urn2:extension>?</urn2:extension>\r
+            </urn2:careGiverId>\r
+         </urn1:actor>\r
+         <urn1:responseLogicalAddress>RESPONSE_LOGICAL_ADDRESS</urn1:responseLogicalAddress>\r
+      </urn1:RequestExemptionStatuses>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="06a6362b-fe91-4d79-8d9f-f9cfef410877"/><con:assertion type="Schema Compliance" id="74d0669b-0c56-471f-a878-8854a338ac74"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="f764727e-f643-4bb7-a4b0-4ddbb93317a6"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>xmlns:rih1</con:name><con:value>urn:riv:interoperability:headers:1</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//rih1:ProcessingStatusList</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
