@@ -586,7 +586,38 @@
          <!--You may enter ANY elements at this point-->\r
       </urn1:Update>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/></con:call></con:operation></con:interface><con:testSuite id="595e162c-7396-4741-80bc-4914a57c165d" name="financial_patientfees_exemption"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="15ad9320-7de2-47ab-b097-4e1c4e141047" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.1 (RES) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="92216b00-543f-4d50-9a7d-5f6ed71da6cc"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/></con:call></con:operation></con:interface><con:testSuite id="6721d7ec-2e35-4888-a4fa-aa2a6388c07d" name="PRE"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="d1d67e80-1728-49e5-a2db-bd452949a39f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.0 PRE - Sätt engagemang till känd ålder" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="4ecb15e0-6965-417e-b5a5-9b1590de8b0b"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Calculate times" id="23915d44-881c-4e4c-a997-2352d9ce8b62"><con:settings/><con:config><script>def now = new Date().format("yyyyMMddHHmmss")
+context.now = now</script></con:config></con:testStep><con:testStep type="request" name="Update" id="be899d0c-2f10-4518-b670-001513d8bec7"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>UpdateResponderBinding</con:interface><con:operation>Update</con:operation><con:request name="Update" id="e36c472a-dcb2-450e-942e-7f13a1fa385d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlEI}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:Update>\r
+         <!--1 or more repetitions:-->\r
+         <urn1:engagementTransaction>\r
+            <urn2:deleteFlag>false</urn2:deleteFlag>\r
+            <urn2:engagement>\r
+               <urn2:registeredResidentIdentification>${patientId}</urn2:registeredResidentIdentification>\r
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>\r
+               <urn2:categorization>fpe-es</urn2:categorization>\r
+               <urn2:logicalAddress>LOAD-MOCKS</urn2:logicalAddress>\r
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>\r
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>\r
+               <urn2:mostRecentContent>${now}</urn2:mostRecentContent>\r
+               <urn2:sourceSystem>LOAD-MOCKS</urn2:sourceSystem>\r
+               <urn2:dataController>SE-NMT123</urn2:dataController>\r
+            </urn2:engagement>\r
+         </urn1:engagementTransaction>\r
+      </urn1:Update>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="92b9e414-68e9-49ac-8659-5ebc53ce1aed"/><con:assertion type="Schema Compliance" id="f9b67db9-a7a6-4d47-b4d0-64a75fa1fc9c"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="ab543500-1ba1-4bb5-81c4-aa7338aaee67"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="595e162c-7396-4741-80bc-4914a57c165d" name="financial_patientfees_exemption"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="15ad9320-7de2-47ab-b097-4e1c4e141047" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.1 (RES) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="92216b00-543f-4d50-9a7d-5f6ed71da6cc"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -599,10 +630,10 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    </soapenv:Header>\r
    <soapenv:Body>\r
       <urn1:RequestExemptionStatuses>\r
-         <urn1:requestId>\r
-            <urn2:root>?</urn2:root>\r
-            <urn2:extension>?</urn2:extension>\r
-         </urn1:requestId>\r
+         <urn1:requestId>
+            <urn2:root>REQUEST_ID_ROOT</urn2:root>
+            <urn2:extension>${=java.util.UUID.randomUUID()}</urn2:extension>
+         </urn1:requestId>
          <urn1:patientId>\r
             <urn2:root>${patientIdType}</urn2:root>\r
             <urn2:extension>${patientIdNoEngagements}</urn2:extension>\r
@@ -617,4 +648,39 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          <urn1:responseLogicalAddress>RESPONSE_LOGICAL_ADDRESS</urn1:responseLogicalAddress>\r
       </urn1:RequestExemptionStatuses>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="06a6362b-fe91-4d79-8d9f-f9cfef410877"/><con:assertion type="Schema Compliance" id="74d0669b-0c56-471f-a878-8854a338ac74"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="f764727e-f643-4bb7-a4b0-4ddbb93317a6"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>xmlns:rih1</con:name><con:value>urn:riv:interoperability:headers:1</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//rih1:ProcessingStatusList</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="06a6362b-fe91-4d79-8d9f-f9cfef410877"/><con:assertion type="Schema Compliance" id="74d0669b-0c56-471f-a878-8854a338ac74"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="f764727e-f643-4bb7-a4b0-4ddbb93317a6"/><con:assertion type="GroovyScriptAssertion" id="0a0cc1fc-52a5-4c83-b0fc-fe8bba67c3d2" name="Assert ProcessingStatus"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="b0fa0e81-a7c8-4cc9-850d-182948c6018b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.2 (RES) Patient med engagemang hos en producent(LOAD-MOCKS) uppdaterat senaste 12 månaderna" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="c6ad474d-524a-47a4-9ef8-1686cffebc09"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="8c26f348-4247-4bbd-9914-1ba86bdc4cdc"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RequestExemptionStatusesResponderBinding</con:interface><con:operation>RequestExemptionStatuses</con:operation><con:request name="1.0" id="42297b8c-2cca-47b8-b474-e20349954789"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlRES}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:RequestExemptionStatuses>\r
+         <urn1:requestId>\r
+            <urn2:root>REQUEST_ID_ROOT</urn2:root>\r
+            <urn2:extension>${=java.util.UUID.randomUUID()}</urn2:extension>\r
+         </urn1:requestId>\r
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientId}</urn2:extension>\r
+         </urn1:patientId>\r
+         <urn1:actor>\r
+            <urn2:actorTypeEnum>CITIZEN</urn2:actorTypeEnum>\r
+            <urn2:actorId>\r
+               <urn2:root>${patientIdType}</urn2:root>\r
+               <urn2:extension>${patientId}</urn2:extension>\r
+            </urn2:actorId>\r
+         </urn1:actor>\r
+         <urn1:responseLogicalAddress>RESPONSE_LOGICAL_ADDRESS</urn1:responseLogicalAddress>\r
+      </urn1:RequestExemptionStatuses>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="06a6362b-fe91-4d79-8d9f-f9cfef410877"/><con:assertion type="Schema Compliance" id="74d0669b-0c56-471f-a878-8854a338ac74"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="f764727e-f643-4bb7-a4b0-4ddbb93317a6"/><con:assertion type="GroovyScriptAssertion" id="0a0cc1fc-52a5-4c83-b0fc-fe8bba67c3d2" name="Assert ProcessingStatus"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>xmlns:rih1</con:name><con:value>urn:riv:interoperability:headers:1</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//rih1:ProcessingStatusList</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

@@ -585,6 +585,8 @@ under the License.
 	<testcase id="4.18.12 (GSOCS) Exception från samtliga producenter"></testcase>
 	
 	<!-- financial/patientfees/exemption -->
+	
+	<testcase id="4.19.0 PRE - Sätt engagemang till känd ålder"></testcase>
 	<testcase id="4.19.1 (RES) Patient utan engagemang"></testcase>
 	<testcase id="4.19.2 (RES) Patient med engagemang hos en producent(LOAD-MOCKS) uppdaterat senaste 12 månaderna"></testcase>
 	<testcase id="4.19.3 (RES) Patient med engagemang hos tre producenter uppdaterat senaste 12 månaderna"></testcase>
