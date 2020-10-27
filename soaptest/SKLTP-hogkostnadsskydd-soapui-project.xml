@@ -593,14 +593,16 @@ def utils = new GroovyUtils(context)
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
-source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Calculate times" id="23915d44-881c-4e4c-a997-2352d9ce8b62"><con:settings/><con:config><script>def now = new Date().format("yyyyMMddHHmmss")
-context.now = now</script></con:config></con:testStep><con:testStep type="request" name="Update" id="be899d0c-2f10-4518-b670-001513d8bec7"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>UpdateResponderBinding</con:interface><con:operation>Update</con:operation><con:request name="Update" id="e36c472a-dcb2-450e-942e-7f13a1fa385d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlEI}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">\r
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Calculate times" id="23915d44-881c-4e4c-a997-2352d9ce8b62"><con:settings/><con:config><script>def now = new Date()
+context.now = now.format("yyyyMMddHHmmss")
+context.oneWeekAgo = now.minus(8).format("yyyyMMddHHmmss")
+context.oneYearAgo = now.minus(367).format("yyyyMMddHHmmss")</script></con:config></con:testStep><con:testStep type="request" name="Update" id="be899d0c-2f10-4518-b670-001513d8bec7"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>UpdateResponderBinding</con:interface><con:operation>Update</con:operation><con:request name="Update" id="e36c472a-dcb2-450e-942e-7f13a1fa385d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlEI}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">\r
    <soapenv:Header>\r
       <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
    </soapenv:Header>\r
    <soapenv:Body>\r
       <urn1:Update>\r
-         <!--1 or more repetitions:-->\r
+         <!-- patientId -->
          <urn1:engagementTransaction>\r
             <urn2:deleteFlag>false</urn2:deleteFlag>\r
             <urn2:engagement>\r
@@ -615,6 +617,568 @@ context.now = now</script></con:config></con:testStep><con:testStep type="reques
                <urn2:dataController>SE-NMT123</urn2:dataController>\r
             </urn2:engagement>\r
          </urn1:engagementTransaction>\r
+
+         <!-- patientId1 -->
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId1}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${now}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId1}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${now}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId1}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${now}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+
+         <!-- patientId2 -->
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId2}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneYearAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+
+         <!-- patientId3 -->
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK04</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK04</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK05</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK05</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK06</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK06</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK07</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK07</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK08</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK08</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK09</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK09</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK10</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK10</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK11</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK11</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK12</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK12</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK13</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK13</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK14</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK14</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK15</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK15</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK16</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK16</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK17</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK17</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK18</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK18</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK19</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK19</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId3}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK20</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK20</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+
+         <!-- patientId4 -->
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId4}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${now}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId4}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneYearAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId4}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+
+         <!-- patientId7 -->
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId7}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId7}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId7}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+
+         <!-- patientId8 -->
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId8}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId8}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId8}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+
+         <!-- patientId9 -->
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId9}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId9}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId9}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+
+         <!-- patientId10 -->
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId10}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK01</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK01</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId10}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK02</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK02</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${patientId10}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>
+               <urn2:categorization>fpe-es</urn2:categorization>
+               <urn2:logicalAddress>SKLTP-MOCK03</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:mostRecentContent>${oneWeekAgo}</urn2:mostRecentContent>
+               <urn2:sourceSystem>SKLTP-MOCK03</urn2:sourceSystem>
+               <urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
       </urn1:Update>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="92b9e414-68e9-49ac-8659-5ebc53ce1aed"/><con:assertion type="Schema Compliance" id="f9b67db9-a7a6-4d47-b4d0-64a75fa1fc9c"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="ab543500-1ba1-4bb5-81c4-aa7338aaee67"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="595e162c-7396-4741-80bc-4914a57c165d" name="financial_patientfees_exemption"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="15ad9320-7de2-47ab-b097-4e1c4e141047" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.1 (RES) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="92216b00-543f-4d50-9a7d-5f6ed71da6cc"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
@@ -683,4 +1247,309 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="06a6362b-fe91-4d79-8d9f-f9cfef410877"/><con:assertion type="Schema Compliance" id="74d0669b-0c56-471f-a878-8854a338ac74"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="f764727e-f643-4bb7-a4b0-4ddbb93317a6"/><con:assertion type="GroovyScriptAssertion" id="0a0cc1fc-52a5-4c83-b0fc-fe8bba67c3d2" name="Assert ProcessingStatus"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertNonEmptyResponse()</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>xmlns:rih1</con:name><con:value>urn:riv:interoperability:headers:1</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//rih1:ProcessingStatusList</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "LOAD-MOCKS")
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="23282785-4803-40af-a5fb-e30edb11a788" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.3 (RES) Patient med engagemang hos tre producenter uppdaterat senaste 12 månaderna" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="36564769-357b-4e54-b3e6-e9c4548c2261"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="c74e50e0-8101-4471-8154-4cd10b4de2fe"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RequestExemptionStatusesResponderBinding</con:interface><con:operation>RequestExemptionStatuses</con:operation><con:request name="1.0" id="42297b8c-2cca-47b8-b474-e20349954789"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlRES}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:RequestExemptionStatuses>\r
+         <urn1:requestId>
+            <urn2:root>REQUEST_ID_ROOT</urn2:root>
+            <urn2:extension>${=java.util.UUID.randomUUID()}</urn2:extension>
+         </urn1:requestId>
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientId1}</urn2:extension>\r
+         </urn1:patientId>\r
+         <urn1:actor>\r
+            <urn2:actorTypeEnum>CITIZEN</urn2:actorTypeEnum>\r
+            <urn2:actorId>\r
+               <urn2:root>${patientIdType}</urn2:root>\r
+               <urn2:extension>${patientId1}</urn2:extension>\r
+            </urn2:actorId>\r
+         </urn1:actor>\r
+         <urn1:responseLogicalAddress>RESPONSE_LOGICAL_ADDRESS</urn1:responseLogicalAddress>\r
+      </urn1:RequestExemptionStatuses>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="06a6362b-fe91-4d79-8d9f-f9cfef410877"/><con:assertion type="Schema Compliance" id="74d0669b-0c56-471f-a878-8854a338ac74"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="f764727e-f643-4bb7-a4b0-4ddbb93317a6"/><con:assertion type="GroovyScriptAssertion" id="0a0cc1fc-52a5-4c83-b0fc-fe8bba67c3d2" name="Assert ProcessingStatus"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK02")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK03")</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="239eec33-05b0-4f32-9d5b-3325867af1da" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.4 (RES) Patient med engagemang hos en producent äldre än 12 månader" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="07c3eddf-50ec-4f91-b248-9c1c58d087d7"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="d93359c8-57f2-4dba-b93b-146b2b3ccc52"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RequestExemptionStatusesResponderBinding</con:interface><con:operation>RequestExemptionStatuses</con:operation><con:request name="1.0" id="42297b8c-2cca-47b8-b474-e20349954789"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlRES}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:RequestExemptionStatuses>\r
+         <urn1:requestId>
+            <urn2:root>REQUEST_ID_ROOT</urn2:root>
+            <urn2:extension>${=java.util.UUID.randomUUID()}</urn2:extension>
+         </urn1:requestId>
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientId2}</urn2:extension>\r
+         </urn1:patientId>\r
+         <urn1:actor>\r
+            <urn2:actorTypeEnum>CITIZEN</urn2:actorTypeEnum>\r
+            <urn2:actorId>\r
+               <urn2:root>${patientIdType}</urn2:root>\r
+               <urn2:extension>${patientId2}</urn2:extension>\r
+            </urn2:actorId>\r
+         </urn1:actor>\r
+         <urn1:responseLogicalAddress>RESPONSE_LOGICAL_ADDRESS</urn1:responseLogicalAddress>\r
+      </urn1:RequestExemptionStatuses>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="06a6362b-fe91-4d79-8d9f-f9cfef410877"/><con:assertion type="Schema Compliance" id="74d0669b-0c56-471f-a878-8854a338ac74"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="f764727e-f643-4bb7-a4b0-4ddbb93317a6"/><con:assertion type="GroovyScriptAssertion" id="0a0cc1fc-52a5-4c83-b0fc-fe8bba67c3d2" name="Assert ProcessingStatus"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2cbf6a10-c0a8-453f-b6b7-734e30d7677c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.5 (RES) Patient med engagemang hos 20 producenter uppdaterat senaste 12 månaderna" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="ad733943-d05c-44b9-9bfe-09af550b6d04"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="4f024214-dc5b-452c-b8a7-38771626aeb4"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RequestExemptionStatusesResponderBinding</con:interface><con:operation>RequestExemptionStatuses</con:operation><con:request name="1.0" id="42297b8c-2cca-47b8-b474-e20349954789"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlRES}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:RequestExemptionStatuses>\r
+         <urn1:requestId>
+            <urn2:root>REQUEST_ID_ROOT</urn2:root>
+            <urn2:extension>${=java.util.UUID.randomUUID()}</urn2:extension>
+         </urn1:requestId>
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientId3}</urn2:extension>\r
+         </urn1:patientId>\r
+         <urn1:actor>\r
+            <urn2:actorTypeEnum>CITIZEN</urn2:actorTypeEnum>\r
+            <urn2:actorId>\r
+               <urn2:root>${patientIdType}</urn2:root>\r
+               <urn2:extension>${patientId3}</urn2:extension>\r
+            </urn2:actorId>\r
+         </urn1:actor>\r
+         <urn1:responseLogicalAddress>RESPONSE_LOGICAL_ADDRESS</urn1:responseLogicalAddress>\r
+      </urn1:RequestExemptionStatuses>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="06a6362b-fe91-4d79-8d9f-f9cfef410877"/><con:assertion type="Schema Compliance" id="74d0669b-0c56-471f-a878-8854a338ac74"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="f764727e-f643-4bb7-a4b0-4ddbb93317a6"/><con:assertion type="GroovyScriptAssertion" id="0a0cc1fc-52a5-4c83-b0fc-fe8bba67c3d2" name="Assert ProcessingStatus"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK02")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK03")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK04")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK05")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK06")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK07")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK08")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK09")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK10")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK11")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK12")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK13")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK14")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK15")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK16")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK17")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK18")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK19")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK20")</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2dba8edc-9a9c-45f1-8782-8d7373a36d8b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.6 (RES) Äldre engagemangspost hos en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="463d6f91-9e5d-4796-933f-05a9ebac86ec"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="96f37f4a-9a84-47c9-a20b-8f0b06233c9b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RequestExemptionStatusesResponderBinding</con:interface><con:operation>RequestExemptionStatuses</con:operation><con:request name="1.0" id="42297b8c-2cca-47b8-b474-e20349954789"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlRES}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:RequestExemptionStatuses>\r
+         <urn1:requestId>
+            <urn2:root>REQUEST_ID_ROOT</urn2:root>
+            <urn2:extension>${=java.util.UUID.randomUUID()}</urn2:extension>
+         </urn1:requestId>
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientId4}</urn2:extension>\r
+         </urn1:patientId>\r
+         <urn1:actor>\r
+            <urn2:actorTypeEnum>CITIZEN</urn2:actorTypeEnum>\r
+            <urn2:actorId>\r
+               <urn2:root>${patientIdType}</urn2:root>\r
+               <urn2:extension>${patientId4}</urn2:extension>\r
+            </urn2:actorId>\r
+         </urn1:actor>\r
+         <urn1:responseLogicalAddress>RESPONSE_LOGICAL_ADDRESS</urn1:responseLogicalAddress>\r
+      </urn1:RequestExemptionStatuses>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="06a6362b-fe91-4d79-8d9f-f9cfef410877"/><con:assertion type="Schema Compliance" id="74d0669b-0c56-471f-a878-8854a338ac74"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="f764727e-f643-4bb7-a4b0-4ddbb93317a6"/><con:assertion type="GroovyScriptAssertion" id="0a0cc1fc-52a5-4c83-b0fc-fe8bba67c3d2" name="Assert ProcessingStatus"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="231c7c5b-ee3e-4970-9591-85295a95cc15" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.7 (RES) Timeout mot en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="57c24a7e-a920-4b6f-8db5-c2928cc3a988"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="a538ce48-b28e-4747-8b65-03ae0d19d33d"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RequestExemptionStatusesResponderBinding</con:interface><con:operation>RequestExemptionStatuses</con:operation><con:request name="1.0" id="42297b8c-2cca-47b8-b474-e20349954789"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlRES}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:RequestExemptionStatuses>\r
+         <urn1:requestId>
+            <urn2:root>REQUEST_ID_ROOT</urn2:root>
+            <urn2:extension>${=java.util.UUID.randomUUID()}</urn2:extension>
+         </urn1:requestId>
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientId9}</urn2:extension>\r
+         </urn1:patientId>\r
+         <urn1:actor>\r
+            <urn2:actorTypeEnum>CITIZEN</urn2:actorTypeEnum>\r
+            <urn2:actorId>\r
+               <urn2:root>${patientIdType}</urn2:root>\r
+               <urn2:extension>${patientId9}</urn2:extension>\r
+            </urn2:actorId>\r
+         </urn1:actor>\r
+         <urn1:responseLogicalAddress>RESPONSE_LOGICAL_ADDRESS</urn1:responseLogicalAddress>\r
+      </urn1:RequestExemptionStatuses>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="06a6362b-fe91-4d79-8d9f-f9cfef410877"/><con:assertion type="Schema Compliance" id="74d0669b-0c56-471f-a878-8854a338ac74"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="f764727e-f643-4bb7-a4b0-4ddbb93317a6"/><con:assertion type="GroovyScriptAssertion" id="0a0cc1fc-52a5-4c83-b0fc-fe8bba67c3d2" name="Assert ProcessingStatus"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK02")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK03")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:statusCode', "NoDataSynchFailed")</scriptText></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="9dd5c3c1-fda0-4bba-9ecd-cf458fd551b9" name="Response SLA"><con:configuration><SLA>32000</SLA></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="80536b94-e4ed-4063-8896-e4279a5323ae" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.8 (RES) Timeout mot samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="c2474cee-107f-4925-a075-ca32451ab652"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="c9f5bc4d-ed0a-4d84-b64a-d3d4fbcf3232"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RequestExemptionStatusesResponderBinding</con:interface><con:operation>RequestExemptionStatuses</con:operation><con:request name="1.0" id="42297b8c-2cca-47b8-b474-e20349954789"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlRES}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:RequestExemptionStatuses>\r
+         <urn1:requestId>
+            <urn2:root>REQUEST_ID_ROOT</urn2:root>
+            <urn2:extension>${=java.util.UUID.randomUUID()}</urn2:extension>
+         </urn1:requestId>
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientId10}</urn2:extension>\r
+         </urn1:patientId>\r
+         <urn1:actor>\r
+            <urn2:actorTypeEnum>CITIZEN</urn2:actorTypeEnum>\r
+            <urn2:actorId>\r
+               <urn2:root>${patientIdType}</urn2:root>\r
+               <urn2:extension>${patientId10}</urn2:extension>\r
+            </urn2:actorId>\r
+         </urn1:actor>\r
+         <urn1:responseLogicalAddress>RESPONSE_LOGICAL_ADDRESS</urn1:responseLogicalAddress>\r
+      </urn1:RequestExemptionStatuses>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="06a6362b-fe91-4d79-8d9f-f9cfef410877"/><con:assertion type="Schema Compliance" id="74d0669b-0c56-471f-a878-8854a338ac74"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="f764727e-f643-4bb7-a4b0-4ddbb93317a6"/><con:assertion type="GroovyScriptAssertion" id="0a0cc1fc-52a5-4c83-b0fc-fe8bba67c3d2" name="Assert ProcessingStatus"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK02")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK03")
+ca.assertSpecificValueInAllRecords('/rih1:ProcessingStatusList/rih1:statusCode', "NoDataSynchFailed")</scriptText></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="c6c7121b-9f04-4ed0-a5b7-c31fa921d7c6" name="Response SLA"><con:configuration><SLA>32000</SLA></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="bcf2cc16-e4d3-4b51-986f-c5269a7bc776" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.11 (RES) Exception från en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="d9fc37ee-5332-4953-bc1b-b6bdfb399b1e"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="bdb261eb-4653-44cb-8c1e-3593367741b7"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RequestExemptionStatusesResponderBinding</con:interface><con:operation>RequestExemptionStatuses</con:operation><con:request name="1.0" id="42297b8c-2cca-47b8-b474-e20349954789"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlRES}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:RequestExemptionStatuses>\r
+         <urn1:requestId>
+            <urn2:root>REQUEST_ID_ROOT</urn2:root>
+            <urn2:extension>${=java.util.UUID.randomUUID()}</urn2:extension>
+         </urn1:requestId>
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientId7}</urn2:extension>\r
+         </urn1:patientId>\r
+         <urn1:actor>\r
+            <urn2:actorTypeEnum>CITIZEN</urn2:actorTypeEnum>\r
+            <urn2:actorId>\r
+               <urn2:root>${patientIdType}</urn2:root>\r
+               <urn2:extension>${patientId7}</urn2:extension>\r
+            </urn2:actorId>\r
+         </urn1:actor>\r
+         <urn1:responseLogicalAddress>RESPONSE_LOGICAL_ADDRESS</urn1:responseLogicalAddress>\r
+      </urn1:RequestExemptionStatuses>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="06a6362b-fe91-4d79-8d9f-f9cfef410877"/><con:assertion type="Schema Compliance" id="74d0669b-0c56-471f-a878-8854a338ac74"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="f764727e-f643-4bb7-a4b0-4ddbb93317a6"/><con:assertion type="GroovyScriptAssertion" id="0a0cc1fc-52a5-4c83-b0fc-fe8bba67c3d2" name="Assert ProcessingStatus"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK02")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK03")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:statusCode', "NoDataSynchFailed")</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="86c7a0bb-bd86-4d6d-9f48-832e1a84c8c6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.12 (RES) Exception från samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="a853330b-183f-4373-9857-31f0cde38320"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="1.0" id="8fe2695a-2d09-4e09-899b-a26ffa20fc67"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RequestExemptionStatusesResponderBinding</con:interface><con:operation>RequestExemptionStatuses</con:operation><con:request name="1.0" id="42297b8c-2cca-47b8-b474-e20349954789"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlRES}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:RequestExemptionStatuses>\r
+         <urn1:requestId>
+            <urn2:root>REQUEST_ID_ROOT</urn2:root>
+            <urn2:extension>${=java.util.UUID.randomUUID()}</urn2:extension>
+         </urn1:requestId>
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>\r
+            <urn2:extension>${patientId8}</urn2:extension>\r
+         </urn1:patientId>\r
+         <urn1:actor>\r
+            <urn2:actorTypeEnum>CITIZEN</urn2:actorTypeEnum>\r
+            <urn2:actorId>\r
+               <urn2:root>${patientIdType}</urn2:root>\r
+               <urn2:extension>${patientId8}</urn2:extension>\r
+            </urn2:actorId>\r
+         </urn1:actor>\r
+         <urn1:responseLogicalAddress>RESPONSE_LOGICAL_ADDRESS</urn1:responseLogicalAddress>\r
+      </urn1:RequestExemptionStatuses>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="06a6362b-fe91-4d79-8d9f-f9cfef410877"/><con:assertion type="Schema Compliance" id="74d0669b-0c56-471f-a878-8854a338ac74"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="f764727e-f643-4bb7-a4b0-4ddbb93317a6"/><con:assertion type="GroovyScriptAssertion" id="0a0cc1fc-52a5-4c83-b0fc-fe8bba67c3d2" name="Assert ProcessingStatus"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK02")
+ca.assertSpecificValueInAnyRecord('/rih1:ProcessingStatusList/rih1:logicalAddress', "SKLTP-MOCK03")
+ca.assertSpecificValueInAllRecords('/rih1:ProcessingStatusList/rih1:statusCode', "NoDataSynchFailed")</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>xmlns:rih1</con:name><con:value>urn:riv:interoperability:headers:1</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//rih1:ProcessingStatusList</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
