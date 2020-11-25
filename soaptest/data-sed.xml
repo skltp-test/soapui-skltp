@@ -104,6 +104,7 @@ under the License.
 		<logTestDataFilesAllowed>500</logTestDataFilesAllowed>
 	</globaldata>
 
+        <testcase id="general test data"/>
 	<testcase id="1.1.1 Angränsande konsument skickar fråga via aggregerande tjänst">
 		<description>
 			(KONSUMENT1) -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
