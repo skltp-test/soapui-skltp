@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="5b088aa9-3e54-4477-85a8-530e5ccf4e17" activeEnvironment="Default" name="SKLTP-högkostnadsskydd" resourceRoot="${projectDir}" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="ea027792-6d60-4834-b2e8-f5237df33b3a" wsaVersion="NONE" name="RequestExemptionStatusesResponderBinding" type="wsdl" bindingName="{urn:riv:financial:patientfees:exemption:RequestExemptionStatuses:1:rivtabp21}RequestExemptionStatusesResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../../bitbucket/riv.financial.patientfees.exemption/schemas/interactions/RequestExemptionStatusesInteraction/RequestExemptionStatusesInteraction_1.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/bpettersson/bitbucket/riv.financial.patientfees.exemption/schemas/interactions/RequestExemptionStatusesInteraction/RequestExemptionStatusesInteraction_1.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/Users/bpettersson/bitbucket/riv.financial.patientfees.exemption/schemas/interactions/RequestExemptionStatusesInteraction/RequestExemptionStatusesInteraction_1.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+<con:soapui-project id="5b088aa9-3e54-4477-85a8-530e5ccf4e17" activeEnvironment="Default" name="SKLTP-högkostnadsskydd" resourceRoot="${projectDir}" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="ea027792-6d60-4834-b2e8-f5237df33b3a" wsaVersion="NONE" name="RequestExemptionStatusesResponderBinding" type="wsdl" bindingName="{urn:riv:financial:patientfees:exemption:RequestExemptionStatuses:1:rivtabp21}RequestExemptionStatusesResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../../bitbucket/riv.financial.patientfees.exemption/schemas/interactions/RequestExemptionStatusesInteraction/RequestExemptionStatusesInteraction_1.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/bpettersson/bitbucket/riv.financial.patientfees.exemption/schemas/interactions/RequestExemptionStatusesInteraction/RequestExemptionStatusesInteraction_1.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/Users/bpettersson/bitbucket/riv.financial.patientfees.exemption/schemas/interactions/RequestExemptionStatusesInteraction/RequestExemptionStatusesInteraction_1.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements. See the NOTICE file
  distributed with this work for additional information
  regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
@@ -586,7 +586,180 @@
          <!--You may enter ANY elements at this point-->\r
       </urn1:Update>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/></con:call></con:operation></con:interface><con:testSuite id="6721d7ec-2e35-4888-a4fa-aa2a6388c07d" name="PRE"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="d1d67e80-1728-49e5-a2db-bd452949a39f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.0 PRE - Sätt engagemang till känd ålder" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="4ecb15e0-6965-417e-b5a5-9b1590de8b0b"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="ba9c72b5-b65f-4996-95e6-11dedb548a1c" wsaVersion="NONE" name="GetSupportedServiceContractsResponderBinding_2.0" type="wsdl" bindingName="{urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContracts:2:rivtabp21}GetSupportedServiceContractsResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/VBShare/schemas/ServiceContracts_infrastructure_itintegration_registry_2.0_RC8/schemas/interactions/GetSupportedServiceContractsInteraction/GetSupportedServiceContractsInteraction_2.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/VBShare/schemas/ServiceContracts_infrastructure_itintegration_registry_2.0_RC8/schemas/interactions/GetSupportedServiceContractsInteraction/GetSupportedServiceContractsInteraction_2.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/VBShare/schemas/ServiceContracts_infrastructure_itintegration_registry_2.0_RC8/schemas/interactions/GetSupportedServiceContractsInteraction/GetSupportedServiceContractsInteraction_2.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<wsdl:definitions name="GetSupportedServiceContractsInteraction" targetNamespace="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContracts:2:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:riv="urn:riv:infrastructure:itintegration:registry:2" xmlns:tjsr="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2" xmlns:tns="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContracts:2:rivtabp21">
+  <wsdl:documentation>Tjänsteinteraktionens namn: GetSupportedServiceContractsInteraction
+			 Beskrivning: 
+			   Retrievs a list of supported service contracts for a given logical address.
+			 Revisioner: 
+			 Tjänstedomän: itintegration:registry
+			 Tjänsteinteraktionstyp: Fråga-Svar
+			 WS-profil: RIVTABP21
+			 Förvaltas av: Sveriges Kommuner och Landsting</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContracts:2:rivtabp21">
+      <xs:import schemaLocation="GetSupportedServiceContractsResponder_2.0.xsd" namespace="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_2.0.xsd" namespace="urn:riv:infrastructure:itintegration:registry:2"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSupportedServiceContractsRequest">
+    <wsdl:part name="LogicalAddress" element="riv:LogicalAddress">
+      <wsdl:documentation>The organisation number of the receiving organisation.</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="parameters" element="tjsr:GetSupportedServiceContracts"/>
+  </wsdl:message>
+  <wsdl:message name="GetSupportedServiceContractsResponse">
+    <wsdl:part name="parameters" element="tjsr:GetSupportedServiceContractsResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="GetSupportedServiceContractsResponderInterface">
+    <wsdl:operation name="GetSupportedServiceContracts">
+      <wsdl:input message="tns:GetSupportedServiceContractsRequest"/>
+      <wsdl:output message="tns:GetSupportedServiceContractsResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetSupportedServiceContractsResponderBinding" type="tns:GetSupportedServiceContractsResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetSupportedServiceContracts">
+      <soap:operation soapAction="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2:GetSupportedServiceContracts" style="document"/>
+      <wsdl:input>
+        <soap:header use="literal" message="tns:GetSupportedServiceContractsRequest" part="LogicalAddress"/>
+        <soap:body use="literal" parts="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetSupportedServiceContractsResponderService">
+    <wsdl:port name="GetSupportedServiceContractsResponderPort" binding="tns:GetSupportedServiceContractsResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_infrastructure_itintegration_registry_2.0_RC8\schemas\interactions\GetSupportedServiceContractsInteraction\GetSupportedServiceContractsResponder_2.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2" xmlns:core="urn:riv:infrastructure:itintegration:registry:2">
+  <xs:import schemaLocation="../../core_components/itintegration_registry_2.0.xsd" namespace="urn:riv:infrastructure:itintegration:registry:2"/>
+  <xs:element name="GetSupportedServiceContracts" type="tns:GetSupportedServiceContractsType"/>
+  <xs:element name="GetSupportedServiceContractsResponse" type="tns:GetSupportedServiceContractsResponseType"/>
+  <xs:complexType name="GetSupportedServiceContractsType">
+    <xs:sequence>
+      <xs:element name="serviceConsumerHsaId" type="core:HsaIdType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="logicalAdress" type="core:LogicalAddressType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetSupportedServiceContractsResponseType">
+    <xs:sequence>
+      <xs:element name="serviceContractNamespace" type="core:ServiceContractNamespaceType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_infrastructure_itintegration_registry_2.0_RC8\schemas\core_components\itintegration_registry_2.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:infrastructure:itintegration:registry:2" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:infrastructure:itintegration:registry:2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractNamespaceType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="HsaIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="5b244170-7052-43b1-a662-e1cf960bf2a7" isOneWay="false" action="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2:GetSupportedServiceContracts" name="GetSupportedServiceContracts" bindingOperationName="GetSupportedServiceContracts" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9fcee2e7-8dcc-4209-b837-a9c9a5355218" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://tempuri.org</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:infrastructure:itintegration:registry:2" xmlns:urn1="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>?</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetSupportedServiceContracts>\r
+         <!--Optional:-->\r
+         <urn1:serviceConsumerHsaId>?</urn1:serviceConsumerHsaId>\r
+         <urn1:logicalAdress>?</urn1:logicalAdress>\r
+         <!--You may enter ANY elements at this point-->\r
+      </urn1:GetSupportedServiceContracts>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2:GetSupportedServiceContracts"/></con:call></con:operation></con:interface><con:testSuite id="040de44c-9182-44b8-8ca0-5c810ff21cc7" name="Undersök målplattformens stöd för TK"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="177045a6-1578-4180-957c-d3571f8fec5f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="8c62767a-9ed6-4a63-952b-60fb5a8a4b89"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load("general test data")
+
+</script></con:config></con:testStep><con:testStep type="request" name="kontrollera plattformstöd" id="42f9b667-4524-48ec-8512-8c7c8c374d8e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetSupportedServiceContractsResponderBinding_2.0</con:interface><con:operation>GetSupportedServiceContracts</con:operation><con:request name="kontrollera plattformstöd" id="5fcc40ca-eb37-4a17-ae93-dd04a271f200"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:infrastructure:itintegration:registry:2" xmlns:urn1="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2">
+   <soapenv:Header>
+      <urn:LogicalAddress>5565594230</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:GetSupportedServiceContracts>
+         <urn1:logicalAdress>5565594230</urn1:logicalAdress>
+      </urn1:GetSupportedServiceContracts>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="146ba3e8-23d1-45e2-a389-ca4c8e04ae00"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="f8e53bdd-5b82-43a4-b477-21e9fe13b91a"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>RESR1</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>kontrollera plattformstöd</con:sourceStep><con:sourcePath>declare namespace ns='urn:riv:infrastructure:itintegration:registry:2';
+exists(//ns:ServiceContractNamespace[text()="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1"]/text())</con:sourcePath><con:targetType>target_supports_RESR1</con:targetType><con:targetStep>#TestSuite#</con:targetStep><con:targetPath/><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="groovy" name="inaktivera tester" id="5620833b-5fe4-4139-a7b2-6651a11a2d40"><con:settings/><con:config><script>def caseNamePatternsToDisable = []
+
+//Get the project object
+def project = context.testCase.testSuite.project
+
+if ('false' == testRunner.testCase.testSuite.getPropertyValue("target_supports_RESR1")){
+	caseNamePatternsToDisable &lt;&lt; "PRE"
+	caseNamePatternsToDisable &lt;&lt; "financial_patientfees_exemption"
+}
+
+project.testSuiteList.each { suite ->
+		log.info(suite.name.getClass())
+		suite.disabled = caseNamePatternsToDisable.any { suite.name.contains(it) }
+}
+</script></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>target_supports_RESR1</con:name><con:value>true</con:value></con:property></con:properties></con:testSuite><con:testSuite id="6721d7ec-2e35-4888-a4fa-aa2a6388c07d" name="PRE"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="d1d67e80-1728-49e5-a2db-bd452949a39f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.0 PRE - Sätt engagemang till känd ålder" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="4ecb15e0-6965-417e-b5a5-9b1590de8b0b"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
