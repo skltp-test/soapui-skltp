@@ -12653,7 +12653,7 @@ def utils = new GroovyUtils(context)
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
-source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Skip if not SIT" id="72fecdc5-b88d-45de-9d7c-98e1d8fb1393"><con:settings/><con:config><script>if (!context.VP.contains("test.esb.ntjp"))
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Skip if not DEV" id="72fecdc5-b88d-45de-9d7c-98e1d8fb1393"><con:settings/><con:config><script>if (!context.VP.contains("dev.esb.ntjp"))
 	testRunner.cancel( "Not supported for ${context.VP}, skipping!" )</script></con:config></con:testStep><con:testStep type="request" id="cc89320f-3966-4bb1-b194-0fde75304afd" name="HamtaPatientInfo"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HamtaPatientInfoResponderBinding</con:interface><con:operation>HamtaPatientInfo</con:operation><con:request name="HamtaPatientInfo" id="842eab1f-87b1-43b8-82c4-36f533b8ccb9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:inera.se.apotekensservice:argos:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6">\r
    <soapenv:Header>\r
       <urn:ArgosHeader>\r
