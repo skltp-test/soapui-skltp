@@ -29,5 +29,14 @@ pipeline {
             // Archive soaptest results
             junit healthScaleFactor: 100.0, testResults: 'soaptest/TEST*.xml'            
         }
+        unstable {
+            // Set failed when failed tests
+            currentBuild.result = 'FAILED'
+        }
+        failure {
+            mail to: 'bjorn.pettersson@nordicmedtest.se',
+            subject: "Fel vid test: ${currentBuild.fullDisplayName}",
+            body: "Se ${env.BUILD_URL}"
+        }
     }
 }
