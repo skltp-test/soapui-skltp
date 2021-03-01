@@ -31,7 +31,9 @@ pipeline {
         }
         unstable {
             // Set failed when failed tests
-            currentBuild.result = 'FAILED'
+            script {
+                currentBuild.result = 'FAILED'
+            }
         }
         failure {
             mail to: 'bjorn.pettersson@nordicmedtest.se',
