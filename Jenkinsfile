@@ -38,8 +38,8 @@ pipeline {
         failure {
 			script {
 				emailext (
-					body: '''${FAILED_TESTS}\n\nSe ${env.BUILD_URL}''', 
-					subject: 'Tester fallerade: ${currentBuild.fullDisplayName}', 
+					body: '''${FAILED_TESTS}\nSe ${BUILD_URL}''', 
+					subject: '''Felutfall: ${PROJECT_NAME}''', 
 					to: 'bjorn.pettersson@nordicmedtest.se'
 				)
 			}
