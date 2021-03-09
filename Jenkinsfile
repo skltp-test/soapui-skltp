@@ -40,7 +40,7 @@ pipeline {
 				emailext (
 					body: '''${FAILED_TESTS}\nSe ${BUILD_URL}''', 
 					subject: '''Felutfall: ${PROJECT_NAME}''', 
-					to: 'bjorn.pettersson@nordicmedtest.se'
+					to: 'bjorn.pettersson@nordicmedtest.se,jonas.mattsson@nordicmedtest.se'
 				)
 			}
         }
