@@ -36,10 +36,13 @@ pipeline {
             }
         }
         failure {
-			emailext
-				body: '''${FAILED_TESTS}\n\nSe ${env.BUILD_URL}''', 
-				subject: 'Tester fallerade: ${currentBuild.fullDisplayName}', 
-				to: 'bjorn.pettersson@nordicmedtest.se'
+			script {
+				emailext (
+					body: '''${FAILED_TESTS}\n\nSe ${env.BUILD_URL}''', 
+					subject: 'Tester fallerade: ${currentBuild.fullDisplayName}', 
+					to: 'bjorn.pettersson@nordicmedtest.se'
+				)
+			}
         }
     }
 }
