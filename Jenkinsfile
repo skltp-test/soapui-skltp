@@ -37,7 +37,7 @@ pipeline {
         }
         failure {
 			emailext
-				body: '''${TEST_COUNTS, var="fail"} av ${TEST_COUNTS, var="total"} tester fallerade.\nSe ${env.BUILD_URL}''', 
+				body: '''${FAILED_TESTS}\n\nSe ${env.BUILD_URL}''', 
 				subject: 'Tester fallerade: ${currentBuild.fullDisplayName}', 
 				to: 'bjorn.pettersson@nordicmedtest.se'
         }
