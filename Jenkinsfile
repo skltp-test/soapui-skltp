@@ -37,8 +37,8 @@ pipeline {
         }
         failure {
             mail to: 'bjorn.pettersson@nordicmedtest.se',
-            subject: "Fel vid test: ${currentBuild.fullDisplayName}",
-            body: "Se ${env.BUILD_URL}"
+            subject: "Tester fallerade: ${currentBuild.fullDisplayName}",
+            body: "${TEST_COUNTS, failed} av ${TEST_COUNTS, total} tester fallerade. \nSe ${env.BUILD_URL}"
         }
     }
 }
