@@ -6,7 +6,7 @@ ENV SOAPUI_VERSION=5.5.0 \
     SOAPUI_SUPPORT_VERSION=1.7.0 \
     SOAPUI_PROJECT=soapuiskltp-soapui-project.xml \
     SOAPUI_DIR=/opt/soapui
-ENV SUPPORTLIB_URL=https://ci.inera.se/job/Domains/job/servicedomain-test-framework/lastSuccessfulBuild/artifact/framework/soapui-support/build/libs/soapui-support-${SOAPUI_SUPPORT_VERSION}.jar
+ENV SUPPORTLIB_URL=https://rivta-tools.bitbucket.io/soapui-support/builds/soapui-support-${SOAPUI_SUPPORT_VERSION}.jar
 
 # Download and unarchive SoapUI
 RUN mkdir -p /opt && cd /opt \
