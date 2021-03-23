@@ -13,8 +13,11 @@ pipeline {
                         cd soaptest
                         cat ${CERTKEY} > ./cert.p12
                         ls -l ./cert.p12
+                        COOPERATION_URL=${COOPERATION_URL:-COOPERATION}
                         sed -e 's@KEYSTOREVARIABLE@'"cert.p12"'@; s@KEYSTOREPASSWORD@'"${CERTKEYPWD}"'@' soapui-sed.xml > soapui-settings.xml
-                        sed -e 's@SOURCESYSTEMHSA@'"${SOURCESYSTEMHSA}"'@; s@TARGETHOST@'"${TARGETHOST}"'@'  data-sed.xml > data.xml
+                        sed -e 's@SOURCESYSTEMHSA@'"${SOURCESYSTEMHSA}"'@; s@TARGETHOST@'"${TARGETHOST}"'@'  \
+                            -e  "s,COOPERATION,$COOPERATION_URL,"\
+                                 data-sed.xml > data.xml
                         cat data.xml
                         docker build -t testsuite .
                         docker run -v `pwd`:/usr/src/soapui --rm testsuite

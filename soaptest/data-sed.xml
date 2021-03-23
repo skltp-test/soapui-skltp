@@ -24,6 +24,7 @@ under the License.
 	<description>Denna testsvit används för att verifiera releasekandidater av NTjP.</description>
 	<globaldata>
 		<VP>https://TARGETHOST/vp/</VP>
+                <COOP>COOPERATION</COOP>
 		<webServiceUrlEI>https://TARGETHOST/vp/Update/1/rivtabp21</webServiceUrlEI>
 		<webServiceUrlFC>https://TARGETHOST/vp/FindContent/1/rivtabp21</webServiceUrlFC>
 		<webServiceUrlPN>https://TARGETHOST/vp/ProcessNotification/1/rivtabp21</webServiceUrlPN>
@@ -923,4 +924,5 @@ under the License.
                         <logicalAddress>0123456777</logicalAddress>
                 </data>
         </testcase>        
+	<testcase id="SKLTP-cooperation" />
 </testsuite>
