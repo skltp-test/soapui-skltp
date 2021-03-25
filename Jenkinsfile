@@ -1,7 +1,9 @@
 pipeline {
 
     agent any
-
+    parameters {
+        string(name: 'COOPERATION_URL', defaultValue: 'http://ind-ptjp-apache-api-vip.ind1.sth.basefarm.net', description: 'nod för takapi att testa, lämna tom för att stå över')
+    }
     stages {
        stage('SOAP testing') {
             steps {
@@ -13,10 +15,9 @@ pipeline {
                         cd soaptest
                         cat ${CERTKEY} > ./cert.p12
                         ls -l ./cert.p12
-                        COOPERATION_URL=${COOPERATION_URL:-COOPERATION}
                         sed -e 's@KEYSTOREVARIABLE@'"cert.p12"'@; s@KEYSTOREPASSWORD@'"${CERTKEYPWD}"'@' soapui-sed.xml > soapui-settings.xml
                         sed -e 's@SOURCESYSTEMHSA@'"${SOURCESYSTEMHSA}"'@; s@TARGETHOST@'"${TARGETHOST}"'@'  \
-                            -e  "s,COOPERATION,$COOPERATION_URL,"\
+                            -e  's,COOPERATION,'"${params.COOPERATION_URL}"','\
                                  data-sed.xml > data.xml
                         cat data.xml
                         docker build -t testsuite .
@@ -43,7 +44,7 @@ pipeline {
 				emailext (
 					body: '''${FAILED_TESTS}\nSe ${BUILD_URL}''', 
 					subject: '''Felutfall: ${PROJECT_NAME}''', 
-					to: 'bjorn.pettersson@nordicmedtest.se,jonas.mattsson@nordicmedtest.se'
+					to: ''
 				)
 			}
         }
