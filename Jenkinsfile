@@ -44,7 +44,7 @@ pipeline {
 				emailext (
 					body: '''${FAILED_TESTS}\nSe ${BUILD_URL}''', 
 					subject: '''Felutfall: ${PROJECT_NAME}''', 
-					to: ''
+					to: 'fd8ba3ec.inera.se@emea.teams.ms'
 				)
 			}
         }
