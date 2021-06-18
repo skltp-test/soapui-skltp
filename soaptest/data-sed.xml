@@ -256,7 +256,7 @@ under the License.
 			  Avser behörigheter definierade i tjänstekatalogen.)
 		</description>
 		<data>
-			<logicalAddress>SKLTP-MOCK02</logicalAddress>
+			<logicalAddress>PRODUCER-NO-AUTHORIZATION</logicalAddress>
 		</data>
 	</testcase>
 	<testcase id="2.9.1 Konsument anropar tjänsteproducent som inte är kontaktbar (VP009)">
@@ -271,6 +271,19 @@ under the License.
 			<logicalAddress>PRODUCER-NOT-AVAILABLE</logicalAddress>
 		</data>
 	</testcase>
+	<testcase id="2.10.1 Konsument anropar tjänsteproducent som svarar med SoapFault">
+		<description>
+			(KONSUMENT1 ->  RTJP) -> NTJP(SUT) -> PRODUCENT1
+			VP - Vårdsystemets request skickas vidare externt till PRODUCENT1
+			PRODUCENT1 svarar med SoapFault och http status 500
+			
+			Förväntat resultat:
+			VP vidarebefodrar SoapFault till KONSUMENT1 med oförändrad status 500
+		</description>
+		<data>
+			<logicalAddress>SKLTP-MOCK01</logicalAddress>
+		</data>
+	</testcase>
 	
 	<testcase id="3.1.1 Konsument rivtabp20 mot producent rivtabp20">
 		<description>
@@ -278,10 +291,10 @@ under the License.
 			VP - Bibehåller headern:
 				To (från namespace http://www.w3.org/2005/08/addressing)
 			
-			Tjänstekontraktet FindAllQuestions används.
+			Tjänstekontraktet KontrolleraSamtycke används.
 			
 			Förväntat resultat:
-			OK (RTjP och mocken förväntar RIVTABP20 format på FindAllQuestions)
+			OK (RTjP och mocken förväntar RIVTABP20 format på KontrolleraSamtycke)
 		</description>
 		<data>
 			<logicalAddress>SKLTP-MOCK01</logicalAddress>
@@ -294,10 +307,10 @@ under the License.
 				LogicalAdress (från namespace urn:riv:itintegration:registry:1) till
 				To (från namespace http://www.w3.org/2005/08/addressing)
 			
-			Tjänstekontraktet FindAllQuestions används.
+			Tjänstekontraktet KontrolleraSamtycke används.
 			
 			Förväntat resultat:
-			OK (RTjP och mocken förväntar RIVTABP20 format på FindAllQuestions)
+			OK (RTjP och mocken förväntar RIVTABP20 format på KontrolleraSamtycke)
 			NTjP genomför konverteringen			
 		</description>
 		<data>
