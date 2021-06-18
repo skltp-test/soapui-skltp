@@ -195,7 +195,7 @@ under the License.
 			Testfallet skickar två på varandra följande requester men använder samma x-skltp-correlation-id.
 			
 			Förväntat resultat:
-			x-skltp-correlation-id returneras i responsen i båda fallen (Note: Correlation-Id returneras inte i responsen i dagens inplementation.)
+			x-skltp-correlation-id returneras i responsen i båda fallen.
 		</description>
 	</testcase>
 	<testcase id="2.1.1 Konsument anropar okänd tjänst">
