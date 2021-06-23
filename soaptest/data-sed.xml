@@ -198,6 +198,33 @@ under the License.
 			x-skltp-correlation-id returneras i responsen i båda fallen.
 		</description>
 	</testcase>
+	<testcase id="1.4.1 Ursprunglig konsument skickar fråga (ingen tidigare anropskejda)">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT)
+			VP - Vårdsystemets request skickas vidare till AGP
+			
+			Förväntat resultat:
+			Headern x-rivta-routing-history returneras. 
+			Avsändaren betraktas som ursprunglig avsändare och dess identitet (HSA-ID) skall hämtas från inkommande klient 
+			certifikat och sättas först i http headern. Därefter skall tjänsteplattformens eget HSA-id adderas, 
+			där tecknet "#" används som avskiljare.
+		</description>
+	</testcase>
+	<testcase id="1.4.2 Fråga med tidigare anropskejda skickas vidare">
+		<description>
+			(KONSUMENT1 -> RTJP) -> NTJP(SUT) (x-rivta-routing-history satt)
+			VP - Vårdsystemets request skickas vidare till AGP
+			
+			Förväntat resultat:
+			Headern x-rivta-routing-history returneras. 
+			
+			Tjänsteplattformens eget HSA-id adderas till headern x-rivta-routing-history, tecknet "#" används som avskiljare.
+		</description>
+		<data>
+			<routingHistory>SE-CONSUMER-HSAID#SE-RTJP-HSAID</routingHistory>
+		</data>
+	</testcase>
+	
 	<testcase id="2.1.1 Konsument anropar okänd tjänst">
 		<description>
 			(KONSUMENT1) -> NTJP(SUT)
@@ -273,7 +300,7 @@ under the License.
 	</testcase>
 	<testcase id="2.10.1 Konsument anropar tjänsteproducent som svarar med SoapFault">
 		<description>
-			(KONSUMENT1 ->  RTJP) -> NTJP(SUT) -> PRODUCENT1
+			(KONSUMENT1) -> NTJP(SUT) -> PRODUCENT1
 			VP - Vårdsystemets request skickas vidare externt till PRODUCENT1
 			PRODUCENT1 svarar med SoapFault och http status 500
 			
@@ -283,6 +310,14 @@ under the License.
 		<data>
 			<logicalAddress>SKLTP-MOCK01</logicalAddress>
 		</data>
+	</testcase>
+	<testcase id="2.11.1 Rundgång mellan RTjP och NTjP (VP014)">
+		<description>
+			(RTJP) -> NTJP(SUT)
+						
+			Förväntat resultat:
+			VP014 returneras (Rundgång)
+		</description>
 	</testcase>
 	
 	<testcase id="3.1.1 Konsument rivtabp20 mot producent rivtabp20">
