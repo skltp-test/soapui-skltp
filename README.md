@@ -18,10 +18,12 @@ There is support to run tests locally (CLI) using testrunner (see soaptest/soapt
     - Source system (HSA, normally LOAD-MOCKS i SIT, JOL-MOCK i QA) 
 ```
 
-There is support to run tests from SoapUI.
+There is support to run tests from SoapUI. This requires the SoapUI installation to be configured 
+with the soapui-support library and a client certificate. Also run soaptest/soaptest_sed_data.sh 
+to prepare(sed) the needed data.xml file for the target NTjP environment.
 
 ```
-  Run soaptest/soaptest_sed_data.sh first.
-  The script will prepare(sed) the data file for the target NTjP environment.
+  Usage:
+  ./soaptest_sed_data.sh {dev|test|qa}
 ```
 
