@@ -19,11 +19,11 @@ There is support to run tests locally (CLI) using testrunner (see soaptest/soapt
 ```
 
 There is support to run tests from SoapUI. This requires the SoapUI installation to be configured 
-with the soapui-support library and a client certificate. Also run soaptest/soaptest_sed_data.sh 
-to prepare(sed) the needed data.xml file for the target NTjP environment.
+with the [soapui-support library](https://rivta-tools.bitbucket.io/soapui-support/) and a client certificate. 
+
+Also run soaptest/soaptest_sed_data.sh to prepare(sed) the needed data.xml file for the target NTjP environment. Usage:
 
 ```
-  Usage:
   ./soaptest_sed_data.sh {dev|test|qa}
 ```
 
