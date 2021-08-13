@@ -21,7 +21,7 @@ There is support to run tests locally (CLI) using testrunner (see soaptest/soapt
 There is support to run tests from SoapUI.
 
 ```
-  Run soaptest/soaptest_local.sh first.
-  The script will prepare(sed) the neccessary files
+  Run soaptest/soaptest_sed_data.sh first.
+  The script will prepare(sed) the data file for the target NTjP environment.
 ```
 
