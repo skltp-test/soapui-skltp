@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-workspace name="soapui-skltp" soapui-version="5.6.0" projectRoot="${workspaceDir}" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:project name="SKLTP-aktivitetshantering">SKLTP-aktivitetshantering-soapui-project.xml</con:project>
+  <con:project name="SKLTP - ApSe">SKLTP-ApSe-adapter-soapui-project.xml</con:project>
+  <con:project name="SKLTP-basuppgifter tillstånd">SKLTP-basuppgifter-tillstand-soapui-project.xml</con:project>
+  <con:project status="CLOSED" name="SKLTP-casebox-soapui-project.xml">SKLTP-casebox-soapui-project.xml</con:project>
+  <con:project name="SKLTP-EI">SKLTP-EI-soapui-project.xml</con:project>
+  <con:project name="SKLTP-högkostnadsskydd">SKLTP-hogkostnadsskydd-soapui-project.xml</con:project>
+  <con:project name="SKLTP-ordinationsutfall">SKLTP-ordinationsutfall-soapui-project.xml</con:project>
+  <con:project name="SKLTP-remisstatus">SKLTP-remisstatus-soapui-project.xml</con:project>
+  <con:project name="SKLTP-resurssamordning">SKLTP-resurssamordning-soapui-project.xml</con:project>
+  <con:project name="TAK API">SKLTP-takapi-soapui-project.xml</con:project>
+  <con:project name="SKLTP-tidbokning">SKLTP-tidbokning-soapui-project.xml</con:project>
+  <con:project name="SKLTP-tillståndsbeskrivning">SKLTP-tillstandsbeskrivning-soapui-project.xml</con:project>
+  <con:project name="SKLTP-tjansteadressering">SKLTP-tjansteadressering-soapui-project.xml</con:project>
+  <con:project name="SKLTP-utfall av aktiviteter">SKLTP-utfall-av-aktiviteter-soapui-project.xml</con:project>
+  <con:project name="SKLTP-Functionality">soapuiskltp-soapui-project.xml</con:project>
+  <con:collectInfoForSupport>false</con:collectInfoForSupport>
+</con:soapui-workspace>
