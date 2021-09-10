@@ -940,14 +940,14 @@ under the License.
 		<data>
 			<logicalAddress>SKLTP-MOCK01#SKLTP-MOCK01</logicalAddress>
 		</data>
-	</testcase>
-        
+	</testcase>       
 	<testcase id="SKLTP-ApSe-Mock">
 		<description>
                     testar adapterns omvandling av argos-headrar till saml-aassertion-attributes
 		</description>
 		<data>
-			<logicalAddress>5565594230</logicalAddress>
+			<!-- <logicalAddress>5565594230</logicalAddress> -->
+			<logicalAddress>APO-EXT12</logicalAddress>
 		</data>
 	</testcase>
 	<testcase id="SKLTP-ApSe-AXS">
@@ -955,7 +955,7 @@ under the License.
                     E2E-test mot eHMs testmiljö, domän AXS
 		</description>
 		<data>
-			<logicalAddress>APO</logicalAddress>
+			<logicalAddress>APO-EXT12</logicalAddress>
 			<patientId>193603119045</patientId>
 		</data>
 	</testcase>
@@ -964,7 +964,16 @@ under the License.
                     E2E-test mot eHMs testmiljö, domän OR
 		</description>
 		<data>
-			<logicalAddress>APO</logicalAddress>
+			<logicalAddress>APO-EXT12</logicalAddress>
+			<patientId>193603119045</patientId>
+		</data>
+	</testcase>
+	<testcase id="SKLTP-ApSe-LF">
+		<description>
+                    E2E-test mot eHMs testmiljö, domän LF
+		</description>
+		<data>
+			<logicalAddress>APO-EXT12</logicalAddress>
 			<patientId>193603119045</patientId>
 		</data>
 	</testcase>
