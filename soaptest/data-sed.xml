@@ -994,5 +994,15 @@ under the License.
                         <logicalAddress>0123456777</logicalAddress>
                 </data>
         </testcase>        
-	<testcase id="SKLTP-cooperation" />
+	<testcase id="SKLTP-cooperation" />	
+	<testcase id="SKLTP-Axel-SKV-register_certificate">
+		<data>
+			<logicalAddress>2021005448</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="SKLTP-Axel-SKV-revoke_certificate">
+		<data>
+			<logicalAddress>2021005448</logicalAddress>
+		</data>
+	</testcase>
 </testsuite>
