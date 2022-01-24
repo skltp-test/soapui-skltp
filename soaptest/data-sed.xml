@@ -960,6 +960,16 @@ under the License.
 			<patientId>193603119045</patientId>
 		</data>
 	</testcase>
+	<testcase id="SKLTP-ApSe-AXS-mock">
+		<description>
+                    E2E-test mot mock, domän AXS
+		</description>
+		<data>
+			<!-- <logicalAddress>5565594230</logicalAddress> -->
+			<logicalAddress>LOAD-MOCKS</logicalAddress>
+			<patientId>193603119045</patientId>
+		</data>
+	</testcase>
 	<testcase id="SKLTP-ApSe-OR">
 		<description>
                     E2E-test mot eHMs testmiljö, domän OR

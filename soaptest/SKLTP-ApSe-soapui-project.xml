@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="b529eb56-a4b3-4b60-aece-7b6dc7e4982a" activeEnvironment="Default" name="SKLTP - ApSe adapter" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="3a9441e6-682c-4ad4-aae1-82837124b0c5" wsaVersion="NONE" name="HamtaPatientInfoResponderBinding" type="wsdl" bindingName="{urn:riv:se.apotekensservice:axs:HamtaPatientInfo:6}HamtaPatientInfoResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/aneeri/Documents/NMT/NTjP_applikationsforvaltning/riv.se.apotekensservice.axs/schemas/interactions/HamtaPatientInfoInteraction/HamtaPatientInfoInteraction_6.0_rivtabp21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/aneeri/Documents/NMT/NTjP_applikationsforvaltning/riv.se.apotekensservice.axs/schemas/interactions/HamtaPatientInfoInteraction/HamtaPatientInfoInteraction_6.0_rivtabp21.wsdl"><con:part><con:url>file:/C:/Users/aneeri/Documents/NMT/NTjP_applikationsforvaltning/riv.se.apotekensservice.axs/schemas/interactions/HamtaPatientInfoInteraction/HamtaPatientInfoInteraction_6.0_rivtabp21.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="urn:riv:se.apotekensservice:axs:HamtaPatientInfo:6" name="HamtaPatientInfoInteraction" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:itr="urn:riv:itintegration:registry:1" xmlns:argos="urn:riv:inera.se.apotekensservice:argos:1" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns="urn:riv:se.apotekensservice:axs:HamtaPatientInfo:6" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:spdr="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6">
+<con:soapui-project id="b529eb56-a4b3-4b60-aece-7b6dc7e4982a" activeEnvironment="Default" name="SKLTP - ApSe adapter" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="3a9441e6-682c-4ad4-aae1-82837124b0c5" wsaVersion="NONE" name="HamtaPatientInfoResponderBinding" type="wsdl" bindingName="{urn:riv:se.apotekensservice:axs:HamtaPatientInfo:6}HamtaPatientInfoResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/aneeri/Documents/NMT/NTjP_applikationsforvaltning/riv.se.apotekensservice.axs/schemas/interactions/HamtaPatientInfoInteraction/HamtaPatientInfoInteraction_6.0_rivtabp21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/aneeri/Documents/NMT/NTjP_applikationsforvaltning/riv.se.apotekensservice.axs/schemas/interactions/HamtaPatientInfoInteraction/HamtaPatientInfoInteraction_6.0_rivtabp21.wsdl"><con:part><con:url>file:/C:/Users/aneeri/Documents/NMT/NTjP_applikationsforvaltning/riv.se.apotekensservice.axs/schemas/interactions/HamtaPatientInfoInteraction/HamtaPatientInfoInteraction_6.0_rivtabp21.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="urn:riv:se.apotekensservice:axs:HamtaPatientInfo:6" name="HamtaPatientInfoInteraction" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:itr="urn:riv:itintegration:registry:1" xmlns:argos="urn:riv:inera.se.apotekensservice:argos:1" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns="urn:riv:se.apotekensservice:axs:HamtaPatientInfo:6" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:spdr="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6">
   <xs:annotation>
     <xs:documentation>Tjänsteinteraktionens namn: HamtaPatientInfo.
             Beskrivning: Tjänstekontraktet som avser att konkretisera tillämpningen av RIV.
@@ -13033,7 +13033,61 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          </urn2:extension>
       </urn2:HamtaPatientInfo>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="Schema Compliance" id="5ea538a3-8637-436c-9d3b-e1c4a03febf7" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:assertion type="Simple Contains" id="4a251ccf-7282-47dc-aec2-683ef69c32fe"><con:configuration/></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="5046c934-60cc-4b8a-99f4-7c3a6674b099" name="SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6:HamtaPatientInfo" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="811029d3-9a9a-4947-aeb5-570ccadaaad9" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="SKLTP-ApSe-OR" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="0690ca1f-b968-472d-b969-28779068daff"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:assertion type="Schema Compliance" id="5ea538a3-8637-436c-9d3b-e1c4a03febf7" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:assertion type="Simple Contains" id="4a251ccf-7282-47dc-aec2-683ef69c32fe"><con:configuration/></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="5046c934-60cc-4b8a-99f4-7c3a6674b099" name="SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6:HamtaPatientInfo" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="5c63e2f2-6a8e-46ce-85e5-ce773fe8bf22" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="SKLTP-ApSe-AXS-mock" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="11a212f4-b205-4192-9e5c-efa11ad2dbf9"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())
+</script></con:config></con:testStep><con:testStep type="request" id="6b5336f5-ef09-4846-a30d-e5108b61ba4f" name="HamtaPatientInfo"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HamtaPatientInfoResponderBinding</con:interface><con:operation>HamtaPatientInfo</con:operation><con:request name="HamtaPatientInfo" id="6ba0ab08-48b0-4c9a-a32d-2d4e1064f8c1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:inera.se.apotekensservice:argos:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6">\r
+   <soapenv:Header>\r
+      <urn:ArgosHeader>
+         <!--Optional:-->
+         <urn:forskrivarkod>9001140</urn:forskrivarkod>
+ 			<urn:fornamn>Daniella</urn:fornamn>
+			<urn:efternamn>Jats</urn:efternamn>
+			<urn:yrkesgrupp>LK</urn:yrkesgrupp>
+			<urn:arbetsplatskod>4000000000000</urn:arbetsplatskod>
+			<urn:arbetsplatsnamn>Vårdcentralen FORSKR</urn:arbetsplatsnamn>
+			<urn:postort>Storstaden</urn:postort>
+			<urn:postadress>Adress FORSKR</urn:postadress>
+			<urn:postnummer>12345</urn:postnummer>
+			<urn:telefonnummer>111-1111111</urn:telefonnummer>
+			<urn:requestId>1629981832077</urn:requestId>
+			<urn:rollnamn>FORSKRIVARE</urn:rollnamn>
+			<urn:hsaID>SE01234567-8901</urn:hsaID>
+			<urn:systemnamn>SoapUI</urn:systemnamn>
+			<urn:systemversion>5.3.0</urn:systemversion>
+			<urn:systemIp>192.168.142.105</urn:systemIp>        
+      </urn:ArgosHeader>
+      <urn1:LogicalAddress>${logicalAddress}</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:HamtaPatientInfo>
+         <urn2:personnummer>${patientIdDos}</urn2:personnummer>
+         <!--Optional:-->
+         <urn2:extension>
+            <!--You may enter ANY elements at this point-->
+         </urn2:extension>
+      </urn2:HamtaPatientInfo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Fault Assertion" id="4a14b973-a91b-410a-8b4a-9b2286df3d8d" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="5ea538a3-8637-436c-9d3b-e1c4a03febf7" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="30f67fc9-9322-4684-b5e0-9c537af7ad5b" name="Script Assertion"><con:configuration><scriptText>def sentPatientId = context.getProperty( "patientIdDos")
+
+def responseContent = messageExchange.request.responseContent
+def parsedResponseEnvelope = new groovy.xml.XmlSlurper(true,true,false).parseText(responseContent)
+
+def cdataRequest = parsedResponseEnvelope.Body.HamtaPatientInfoResponse.extension.requestdata.data
+def cdataContent = cdataRequest[0] as String
+def parsedCdataContent = new groovy.xml.XmlSlurper(true, true, false).parseText(cdataContent)
+
+def x509Certificate = parsedCdataContent.Header.Security.Assertion.Signature.KeyInfo.X509Data.X509Certificate.toString()
+assert x509Certificate.length() > 100 : "Förväntat X509-certifikat ej hittat"
+
+def personNummer = parsedCdataContent.Body.HamtaPatientInfo.personnummer.toString()
+assert sentPatientId== personNummer : "Personnummer matchar inte"
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6:HamtaPatientInfo" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="811029d3-9a9a-4947-aeb5-570ccadaaad9" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="SKLTP-ApSe-OR" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="0690ca1f-b968-472d-b969-28779068daff"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
