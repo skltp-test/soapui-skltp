@@ -36,6 +36,7 @@ under the License.
 		
 		<webServiceUrlGAI>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetAlertInformation/2/rivtabp21</webServiceUrlGAI>
 		<webServiceUrlGCD>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrlGCD>
+		<webServiceUrlGCDwsdl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21?wsdl</webServiceUrlGCDwsdl>
 		<webServiceUrlGD>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21</webServiceUrlGD>
 		<webServiceUrlGFS>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetFunctionalStatus/2/rivtabp21</webServiceUrlGFS>
 		<webServiceUrlGVH>https://TARGETHOST/vp/clinicalprocess/activityprescription/actoutcome/GetVaccinationHistory/1/rivtabp21</webServiceUrlGVH>
@@ -375,6 +376,24 @@ under the License.
 			<logicalAddress>SKLTP-MOCK01</logicalAddress>
 		</data>
 	</testcase>
+	
+	
+	
+	
+	<testcase id="Hämta GetCareDocumentation wsdl">
+		<data>
+	<!--
+		<webServiceUrlGAI>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21?wsdl</webServiceUrlGAI>
+		<webServiceUrlGCDwsdl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21?wsdl</webServiceUrlGCDwsdl>
+		-->
+			<testedInterfaceName>GetCareDocumentationResponderBinding_2.1</testedInterfaceName>
+			<logicalAddress>SMURF</logicalAddress>
+		</data>
+	</testcase>
+	
+	
+	
+	
 	
 	<!-- BASIC FLOWS -->
 	<!-- clinicalprocess/healthcond/description -->
