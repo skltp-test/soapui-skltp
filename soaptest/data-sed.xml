@@ -1011,6 +1011,24 @@ under the License.
 			<patientId>193603119045</patientId>
 		</data>
 	</testcase>
+	<testcase id="SKLTP-ApSe-AXS-DB1">
+		<description>
+                    E2E-test mot eHMs testmiljö, domän AXS
+		</description>
+		<data>
+			<logicalAddress>APO-EXT12-DB1</logicalAddress>
+			<patientId>193603119045</patientId>
+		</data>
+	</testcase>
+	<testcase id="SKLTP-ApSe-AXS-DB2">
+		<description>
+                    E2E-test mot eHMs testmiljö, domän AXS
+		</description>
+		<data>
+			<logicalAddress>APO-EXT12-DB2</logicalAddress>
+			<patientId>193603119045</patientId>
+		</data>
+	</testcase>
 	<testcase id="SKLTP-ApSe-AXS-mock">
 		<description>
                     E2E-test mot mock, domän AXS

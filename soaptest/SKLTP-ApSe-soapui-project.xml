@@ -12968,7 +12968,7 @@ def utils = new GroovyUtils(context)
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
-source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Skip if not QA" id="9e6a7fed-df4c-444e-89a1-b4b3868fe15a"><con:settings/><con:config><script>if (!context.VP.contains("qa.esb.ntjp"))
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Skip if not QA or Test" id="9e6a7fed-df4c-444e-89a1-b4b3868fe15a"><con:settings/><con:config><script>if (!(context.VP.contains("test.esb.ntjp") || context.VP.contains("qa.esb.ntjp")))
 	testRunner.cancel( "Not supported for ${context.VP}, skipping!" )</script></con:config></con:testStep><con:testStep type="request" id="7c53830c-4032-493a-b8dc-32513a3574e2" name="HamtaPatientInfo"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HamtaPatientInfoResponderBinding</con:interface><con:operation>HamtaPatientInfo</con:operation><con:request name="HamtaPatientInfo" id="6ba0ab08-48b0-4c9a-a32d-2d4e1064f8c1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:inera.se.apotekensservice:argos:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6">\r
    <soapenv:Header>\r
       <urn:ArgosHeader>
@@ -13002,6 +13002,150 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
       </urn2:HamtaPatientInfo>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Fault Assertion" id="4a14b973-a91b-410a-8b4a-9b2286df3d8d" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="5ea538a3-8637-436c-9d3b-e1c4a03febf7" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6:HamtaPatientInfo" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="757778ae-7dd7-4dea-b903-e94c06e9319a" name="HamtaPatientInfo_Fel_Personnummer"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HamtaPatientInfoResponderBinding</con:interface><con:operation>HamtaPatientInfo</con:operation><con:request name="HamtaPatientInfo_Fel_Personnummer" id="6ba0ab08-48b0-4c9a-a32d-2d4e1064f8c1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:inera.se.apotekensservice:argos:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6">\r
+   <soapenv:Header>\r
+      <urn:ArgosHeader>
+         <!--Optional:-->
+         <urn:forskrivarkod>9001140</urn:forskrivarkod>
+ 			<urn:fornamn>Daniella</urn:fornamn>
+			<urn:efternamn>Jats</urn:efternamn>
+			<urn:yrkesgrupp>LK</urn:yrkesgrupp>
+			<urn:arbetsplatskod>4000000000000</urn:arbetsplatskod>
+			<urn:arbetsplatsnamn>Vårdcentralen FORSKR</urn:arbetsplatsnamn>
+			<urn:postort>Storstaden</urn:postort>
+			<urn:postadress>Adress FORSKR</urn:postadress>
+			<urn:postnummer>12345</urn:postnummer>
+			<urn:telefonnummer>111-1111111</urn:telefonnummer>
+			<urn:requestId>1629981832077</urn:requestId>
+			<urn:rollnamn>FORSKRIVARE</urn:rollnamn>
+			<urn:hsaID>SE01234567-8901</urn:hsaID>
+			<urn:systemnamn>SoapUI</urn:systemnamn>
+			<urn:systemversion>5.3.0</urn:systemversion>
+			<urn:systemIp>192.168.142.105</urn:systemIp>        
+      </urn:ArgosHeader>
+      <urn1:LogicalAddress>${logicalAddress}</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:HamtaPatientInfo>
+         <urn2:personnummer>${patientIdLong}</urn2:personnummer>
+         <!--Optional:-->
+         <urn2:extension>
+            <!--You may enter ANY elements at this point-->
+         </urn2:extension>
+      </urn2:HamtaPatientInfo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="Schema Compliance" id="5ea538a3-8637-436c-9d3b-e1c4a03febf7" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:assertion type="Simple Contains" id="4a251ccf-7282-47dc-aec2-683ef69c32fe"><con:configuration/></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="5046c934-60cc-4b8a-99f4-7c3a6674b099" name="SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6:HamtaPatientInfo" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="642d1ade-a73e-4f11-9e11-9fbccbec2653" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="SKLTP-ApSe-AXS-DB1" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="88635a02-f4b7-47c2-8a60-ef4785b294bc"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Skip if not QA or Test" id="628b10df-f133-4fe5-80d0-c1496056699d"><con:settings/><con:config><script>if (!(context.VP.contains("test.esb.ntjp") || context.VP.contains("qa.esb.ntjp")))
+	testRunner.cancel( "Not supported for ${context.VP}, skipping!" )</script></con:config></con:testStep><con:testStep type="request" id="5a6a9133-1358-4711-b49f-615d2473b3ea" name="HamtaPatientInfo"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HamtaPatientInfoResponderBinding</con:interface><con:operation>HamtaPatientInfo</con:operation><con:request name="HamtaPatientInfo" id="6ba0ab08-48b0-4c9a-a32d-2d4e1064f8c1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:inera.se.apotekensservice:argos:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6">\r
+   <soapenv:Header>\r
+      <urn:ArgosHeader>
+         <!--Optional:-->
+         <urn:forskrivarkod>9001140</urn:forskrivarkod>
+ 			<urn:fornamn>Daniella</urn:fornamn>
+			<urn:efternamn>Jats</urn:efternamn>
+			<urn:yrkesgrupp>LK</urn:yrkesgrupp>
+			<urn:arbetsplatskod>4000000000000</urn:arbetsplatskod>
+			<urn:arbetsplatsnamn>Vårdcentralen FORSKR</urn:arbetsplatsnamn>
+			<urn:postort>Storstaden</urn:postort>
+			<urn:postadress>Adress FORSKR</urn:postadress>
+			<urn:postnummer>12345</urn:postnummer>
+			<urn:telefonnummer>111-1111111</urn:telefonnummer>
+			<urn:requestId>1629981832077</urn:requestId>
+			<urn:rollnamn>FORSKRIVARE</urn:rollnamn>
+			<urn:hsaID>SE01234567-8901</urn:hsaID>
+			<urn:systemnamn>SoapUI</urn:systemnamn>
+			<urn:systemversion>5.3.0</urn:systemversion>
+			<urn:systemIp>192.168.142.105</urn:systemIp>        
+      </urn:ArgosHeader>
+      <urn1:LogicalAddress>${logicalAddress}</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:HamtaPatientInfo>
+         <urn2:personnummer>${patientIdDos}</urn2:personnummer>
+         <!--Optional:-->
+         <urn2:extension>
+            <!--You may enter ANY elements at this point-->
+         </urn2:extension>
+      </urn2:HamtaPatientInfo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Fault Assertion" id="4a14b973-a91b-410a-8b4a-9b2286df3d8d" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="5ea538a3-8637-436c-9d3b-e1c4a03febf7" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6:HamtaPatientInfo" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="ec48ab16-fcb5-4562-a483-24aa9d73a1e5" name="HamtaPatientInfo_Fel_Personnummer"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HamtaPatientInfoResponderBinding</con:interface><con:operation>HamtaPatientInfo</con:operation><con:request name="HamtaPatientInfo_Fel_Personnummer" id="6ba0ab08-48b0-4c9a-a32d-2d4e1064f8c1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:inera.se.apotekensservice:argos:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6">\r
+   <soapenv:Header>\r
+      <urn:ArgosHeader>
+         <!--Optional:-->
+         <urn:forskrivarkod>9001140</urn:forskrivarkod>
+ 			<urn:fornamn>Daniella</urn:fornamn>
+			<urn:efternamn>Jats</urn:efternamn>
+			<urn:yrkesgrupp>LK</urn:yrkesgrupp>
+			<urn:arbetsplatskod>4000000000000</urn:arbetsplatskod>
+			<urn:arbetsplatsnamn>Vårdcentralen FORSKR</urn:arbetsplatsnamn>
+			<urn:postort>Storstaden</urn:postort>
+			<urn:postadress>Adress FORSKR</urn:postadress>
+			<urn:postnummer>12345</urn:postnummer>
+			<urn:telefonnummer>111-1111111</urn:telefonnummer>
+			<urn:requestId>1629981832077</urn:requestId>
+			<urn:rollnamn>FORSKRIVARE</urn:rollnamn>
+			<urn:hsaID>SE01234567-8901</urn:hsaID>
+			<urn:systemnamn>SoapUI</urn:systemnamn>
+			<urn:systemversion>5.3.0</urn:systemversion>
+			<urn:systemIp>192.168.142.105</urn:systemIp>        
+      </urn:ArgosHeader>
+      <urn1:LogicalAddress>${logicalAddress}</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:HamtaPatientInfo>
+         <urn2:personnummer>${patientIdLong}</urn2:personnummer>
+         <!--Optional:-->
+         <urn2:extension>
+            <!--You may enter ANY elements at this point-->
+         </urn2:extension>
+      </urn2:HamtaPatientInfo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="Schema Compliance" id="5ea538a3-8637-436c-9d3b-e1c4a03febf7" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:assertion type="Simple Contains" id="4a251ccf-7282-47dc-aec2-683ef69c32fe"><con:configuration/></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="5046c934-60cc-4b8a-99f4-7c3a6674b099" name="SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6:HamtaPatientInfo" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="87731d80-1c0f-4bc8-a65a-0de101e79f38" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="SKLTP-ApSe-AXS-DB2" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="0fe6ac13-00b2-4232-85d1-3f6aa812aac4"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Skip if not QA or Test" id="8d09cad0-06e4-42a8-903f-f2e62088cc1f"><con:settings/><con:config><script>if (!(context.VP.contains("test.esb.ntjp") || context.VP.contains("qa.esb.ntjp")))
+	testRunner.cancel( "Not supported for ${context.VP}, skipping!" )</script></con:config></con:testStep><con:testStep type="request" id="8c1f0eec-2e95-42bc-b7d4-e9ae04af2202" name="HamtaPatientInfo"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HamtaPatientInfoResponderBinding</con:interface><con:operation>HamtaPatientInfo</con:operation><con:request name="HamtaPatientInfo" id="6ba0ab08-48b0-4c9a-a32d-2d4e1064f8c1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:inera.se.apotekensservice:argos:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6">\r
+   <soapenv:Header>\r
+      <urn:ArgosHeader>
+         <!--Optional:-->
+         <urn:forskrivarkod>9001140</urn:forskrivarkod>
+ 			<urn:fornamn>Daniella</urn:fornamn>
+			<urn:efternamn>Jats</urn:efternamn>
+			<urn:yrkesgrupp>LK</urn:yrkesgrupp>
+			<urn:arbetsplatskod>4000000000000</urn:arbetsplatskod>
+			<urn:arbetsplatsnamn>Vårdcentralen FORSKR</urn:arbetsplatsnamn>
+			<urn:postort>Storstaden</urn:postort>
+			<urn:postadress>Adress FORSKR</urn:postadress>
+			<urn:postnummer>12345</urn:postnummer>
+			<urn:telefonnummer>111-1111111</urn:telefonnummer>
+			<urn:requestId>1629981832077</urn:requestId>
+			<urn:rollnamn>FORSKRIVARE</urn:rollnamn>
+			<urn:hsaID>SE01234567-8901</urn:hsaID>
+			<urn:systemnamn>SoapUI</urn:systemnamn>
+			<urn:systemversion>5.3.0</urn:systemversion>
+			<urn:systemIp>192.168.142.105</urn:systemIp>        
+      </urn:ArgosHeader>
+      <urn1:LogicalAddress>${logicalAddress}</urn1:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn2:HamtaPatientInfo>
+         <urn2:personnummer>${patientIdDos}</urn2:personnummer>
+         <!--Optional:-->
+         <urn2:extension>
+            <!--You may enter ANY elements at this point-->
+         </urn2:extension>
+      </urn2:HamtaPatientInfo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Fault Assertion" id="4a14b973-a91b-410a-8b4a-9b2286df3d8d" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="5ea538a3-8637-436c-9d3b-e1c4a03febf7" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6:HamtaPatientInfo" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="5feb8ead-3465-494b-b55e-7270c845a48d" name="HamtaPatientInfo_Fel_Personnummer"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HamtaPatientInfoResponderBinding</con:interface><con:operation>HamtaPatientInfo</con:operation><con:request name="HamtaPatientInfo_Fel_Personnummer" id="6ba0ab08-48b0-4c9a-a32d-2d4e1064f8c1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:inera.se.apotekensservice:argos:1" xmlns:urn1="urn:riv:itintegration:registry:1" xmlns:urn2="urn:riv:se.apotekensservice:axs:HamtaPatientInfoResponder:6">\r
    <soapenv:Header>\r
       <urn:ArgosHeader>
          <!--Optional:-->
