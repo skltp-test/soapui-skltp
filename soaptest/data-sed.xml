@@ -36,7 +36,6 @@ under the License.
 		
 		<webServiceUrlGAI>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetAlertInformation/2/rivtabp21</webServiceUrlGAI>
 		<webServiceUrlGCD>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrlGCD>
-		<webServiceUrlGCDwsdl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21?wsdl</webServiceUrlGCDwsdl>
 		<webServiceUrlGD>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21</webServiceUrlGD>
 		<webServiceUrlGFS>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetFunctionalStatus/2/rivtabp21</webServiceUrlGFS>
 		<webServiceUrlGVH>https://TARGETHOST/vp/clinicalprocess/activityprescription/actoutcome/GetVaccinationHistory/1/rivtabp21</webServiceUrlGVH>
@@ -376,24 +375,57 @@ under the License.
 			<logicalAddress>SKLTP-MOCK01</logicalAddress>
 		</data>
 	</testcase>
-	
-	
-	
-	
-	<testcase id="Hämta GetCareDocumentation wsdl">
+
+	<testcase id="Hämta wsdl - deltest">
+		<description>
+			Detta test är främst tänkt att köras från testet "Hämta wsdl" med olika
+			parametrar, men kan även köras direkt (främst för felsökning).
+		</description>
 		<data>
-	<!--
-		<webServiceUrlGAI>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21?wsdl</webServiceUrlGAI>
-		<webServiceUrlGCDwsdl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21?wsdl</webServiceUrlGCDwsdl>
-		-->
+			<wsdlEndpoint>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21?wsdl</wsdlEndpoint>
 			<testedInterfaceName>GetCareDocumentationResponderBinding_2.1</testedInterfaceName>
-			<logicalAddress>SMURF</logicalAddress>
 		</data>
 	</testcase>
-	
-	
-	
-	
+
+	<testcase id="Hämta wsdl">
+		<description>
+			Hämtar WSDL för tjänstekontrakten nedan och jämför med lokalt lagrad wsdl för de olika interfacen
+		</description>
+		<data>
+			<wsdlEndpoints>
+				https://TARGETHOST/vp/FindAllQuestions/1/rivtabp20?wsdl;
+				https://TARGETHOST/vp/clinicalprocess/activity/actions/GetActivities/1/rivtabp21?wsdl;
+				https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCareContacts/3/rivtabp21?wsdl;
+				https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21?wsdl;
+				https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21?wsdl;
+				https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21?wsdl;
+				https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetImagingOutcome/1/rivtabp21?wsdl;			
+				https://TARGETHOST/vp/clinicalprocess/healthcond/basic/GetObservations/1/rivtabp21?wsdl;
+				https://TARGETHOST/vp/KontrolleraForskrivarbehorighet/1/rivtabp21?wsdl;
+				https://TARGETHOST/vp/KontrolleraSamtycke/1/rivtabp21?wsdl;
+				https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetReferralOutcome/3/rivtabp21?wsdl;
+				https://TARGETHOST/vp/ReceiveMedicalCertificateAnswer/1/rivtabp20?wsdl;
+				https://TARGETHOST/vp/ReceiveMedicalCertificateQuestion/1/rivtabp20?wsdl;
+				https://TARGETHOST/vp/Update/1/rivtabp21?wsdl
+			</wsdlEndpoints>
+			<interfaces>
+				FindAllQuestionsResponderBinding;
+				GetActivitiesResponderBinding;
+				GetCareContactsResponderBinding;
+				GetDiagnosisResponderBinding;
+				GetCareDocumentationResponderBinding_2.1;
+				GetDiagnosisResponderBinding;
+				GetImagingOutcomeResponderBinding;
+				GetObservationsResponderBinding;
+				KontrolleraForskrivarbehorighetResponderBinding;
+				KontrolleraSamtyckeResponderBinding;
+				GetReferralOutcomeResponderBinding;
+				ReceiveMedicalCertificateAnswerResponderBinding;
+				ReceiveMedicalCertificateQuestionResponderBinding;
+				UpdateResponderBinding
+			</interfaces>
+		</data>
+	</testcase>
 	
 	<!-- BASIC FLOWS -->
 	<!-- clinicalprocess/healthcond/description -->

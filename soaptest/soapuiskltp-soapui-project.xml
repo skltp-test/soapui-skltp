@@ -10188,9 +10188,9 @@ Obligatorisk som indata dock ej som utdata.</xs:documentation>
 <wsdl:definitions name="UpdateInteraction" targetNamespace="urn:riv:itintegration:engagementindex:Update:1:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:tjsi="urn:riv:itintegration:engagementindex:UpdateInitiator:1" xmlns:tns="urn:riv:itintegration:engagementindex:Update:1:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1">
   <xs:annotation>
     <xs:documentation>Tjänsteinteraktionens namn: UpdateInteraction
-			 Beskrivning:
+			 Beskrivning: 
 			   Service for adding, updating and removing content to/from engagement index
-			 Revisioner:
+			 Revisioner: 
 			 Tjänstedomän: itintegration:engagementindex
 			 Tjänsteinteraktionstyp: Fråga-Svar
 			 WS-profil: RIVTABP21
@@ -11929,14 +11929,20 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          </urn:Question>
       </urn:ReceiveMedicalCertificateQuestion>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="359db784-2dd4-40be-89d6-1e1526c4384f"/><con:assertion type="SOAP Fault Assertion" id="17ebcef4-a305-486f-a0e5-6cbbdc8b5764" name="Not SOAP Fault"/><con:assertion type="Simple Contains" id="82699956-0e33-43f3-ac4e-7be2fc9f0a8a" name="Contains"><con:configuration><token>&lt;ns3:resultCode>OK&lt;/ns3:resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="ee15b019-5e1c-4881-a56c-77153626b7c3" name="Hämta wsdl"><con:description>Testar att hämta WSDL via HTTP GET och jämför med den WSDL som finns lagrag lokalt i projektfilen.</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="333195f8-f1b6-4de1-a303-eeafb099fc4c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Hämta GetCareDocumentation wsdl" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="ef57b79d-bf35-4150-b0ae-74bdccc5c2c2"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="359db784-2dd4-40be-89d6-1e1526c4384f"/><con:assertion type="SOAP Fault Assertion" id="17ebcef4-a305-486f-a0e5-6cbbdc8b5764" name="Not SOAP Fault"/><con:assertion type="Simple Contains" id="82699956-0e33-43f3-ac4e-7be2fc9f0a8a" name="Contains"><con:configuration><token>&lt;ns3:resultCode>OK&lt;/ns3:resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="ee15b019-5e1c-4881-a56c-77153626b7c3" name="Hämta wsdl"><con:description>Testar att hämta WSDL via HTTP GET och jämför med den WSDL som finns lagrag lokalt i projektfilen.</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="333195f8-f1b6-4de1-a303-eeafb099fc4c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Hämta wsdl - deltest" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="ef57b79d-bf35-4150-b0ae-74bdccc5c2c2"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
+
+def endpoint = context.getProperty("wsdlEndpoint")
+if (endpoint != null) {
+	// Om detta körs som ett deltest är parametrar redan satta från anropande test och ska inte läsas in från fil
+	return
+}
 
 def utils = new GroovyUtils(context)
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
-source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="httprequest" name="HTTP-get" id="cb551ce2-aa07-4681-b2ba-4d1863b8a70b"><con:settings/><con:config method="GET" xsi:type="con:HttpRequest" id="3a9bf5b8-e537-4bc1-90f4-bb61288c5b3a" name="HTTP-get" postQueryString="false" mediaType="application/xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${webServiceUrlGCDwsdl}</con:endpoint><con:request/><con:assertion type="Valid HTTP Status Codes" id="3261420d-d281-4e6d-88d8-2ff2ac4c9397" name="HTTP OK"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="0fd4d325-51e5-4684-b86a-eefd79744510" name="CompareWsdl"><con:configuration><scriptText>def getCurrentProject() {
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="httprequest" name="HTTP-get" id="cb551ce2-aa07-4681-b2ba-4d1863b8a70b"><con:settings/><con:config method="GET" xsi:type="con:HttpRequest" id="3a9bf5b8-e537-4bc1-90f4-bb61288c5b3a" name="HTTP-get" postQueryString="false" mediaType="application/xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${wsdlEndpoint}</con:endpoint><con:request/><con:assertion type="Valid HTTP Status Codes" id="3261420d-d281-4e6d-88d8-2ff2ac4c9397" name="HTTP OK"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="0fd4d325-51e5-4684-b86a-eefd79744510" name="CompareWsdl"><con:configuration><scriptText><![CDATA[def getCurrentProject() {
 	return context.testCase.testSuite.project
 }
 
@@ -11985,20 +11991,31 @@ def xmlParserToXmlString(xmlParser) {
 	return xmlString.trim()
 }
 
-// Tar bort kommentarer och formattering
 // Ersätter attribut som inte ska jämföras med dummyvärden
-def getComparableWsdl(wsdlXml) {
-	def replacementString =  "THIS_VALUE_IS_REPLACED_BEFORE_COMPARISION"
-	def xmlParser = new XmlParser().parseText(wsdlXml)
-	
+def replaceXmlContentNotToBeCompared(xmlParser) {
+	def replacementString =  "THIS_VALUE_IS_REPLACED_BEFORE_COMPARISION"	
 	xmlParser."wsdl:types"."xs:schema"."xs:import".each {
 		it.attributes().schemaLocation = replacementString
-	}
-	
+	}	
 	xmlParser."wsdl:service"."wsdl:port"."soap:address".each {
 		it.attributes().location = replacementString
-	}
+	}	
+}
 
+def fixDocumentationElement(wsdlXml) {
+	if (wsdlXml.contains("<wsdl:documentation>")) {
+		wsdlXml = wsdlXml
+		.replace("<wsdl:documentation>", "<xs:annotation xmlns:xs=\"http://www.w3.org/2001/XMLSchema\"><xs:documentation>")
+		.replace("</wsdl:documentation>", "</xs:documentation></xs:annotation>")
+	}
+	return wsdlXml
+}
+
+// Tar bort kommentarer och formattering + gör vissa justeringar för att kunna jämföra
+def getComparableWsdl(wsdlXml) {
+	wsdlXml = fixDocumentationElement(wsdlXml)
+	def xmlParser = new XmlParser().parseText(wsdlXml)
+	replaceXmlContentNotToBeCompared(xmlParser)
 	return xmlParserToXmlString(xmlParser)
 }
 
@@ -12019,9 +12036,68 @@ def cleanedRetreivedWsdl = getComparableWsdl(retreivedWsdl)
 def cleanedCachedWsdl = getComparableWsdl(cachedWsdl)
 
 // Här ska båda vara lika
-assert cleanedRetreivedWsdl.equals(cleanedCachedWsdl) : "Oväntad skillnad mellan cachad och hämtad WSDL"
+def isWsdlEqual = cleanedRetreivedWsdl.equals(cleanedCachedWsdl)
+if (!isWsdlEqual) {
+	log.info "Hämtad wsdl överensstämmer inte med den förväntade!"
+	log.info "Hämtad (rensad) wsdl: " + cleanedRetreivedWsdl
+	log.info "Lokal (rensad) wsdl: " + cleanedCachedWsdl
+	assert false : "Hämtad wsdl överensstämmer inte med den förväntade!"
+}
 
 // Extra koll så att inte något gått snett vid parsningen och båda strängarna är tomma eller liknande
-assert cleanedRetreivedWsdl.startsWith("&lt;wsdl:definitions") : "Oväntad start på WSDL"
-assert cleanedRetreivedWsdl.endsWith("&lt;/wsdl:definitions>") : "Oväntat slut på WSDL"
-</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>HSA_NTJP</con:name><con:value>HSASERVICES-NTJP</con:value></con:property><con:property><con:name>HSA_RTJP</con:name><con:value>HSASERVICES-RTJP</con:value></con:property><con:property><con:name>HSA_KONSUMENT1</con:name><con:value>TSTNMT2321000156-B02</con:value></con:property><con:property><con:name>HSA_PRODUCENT1</con:name><con:value>LOAD-MOCKS</con:value></con:property><con:property><con:name>HSA_PRODUCENT2</con:name><con:value>PRODUCENT2</con:value></con:property><con:property><con:name>HSA_PRODUCENT3</con:name><con:value>PRODUCENT3</con:value></con:property><con:property><con:name>HSA_PRODUCENT4</con:name><con:value>PRODUCENT4</con:value></con:property><con:property><con:name>HSA_KONSUMENT2</con:name><con:value>KONSUMENT2</con:value></con:property><con:property><con:name>ENV_SIT</con:name><con:value>https://test.esb.ntjp.se</con:value></con:property><con:property><con:name>ENV_QA</con:name><con:value>https://qa.esb.ntjp.se</con:value></con:property><con:property><con:name>xmlns:urn</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:hdurn2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gcd2:careDocumentation</con:value></con:property><con:property><con:name>xmlns:gcd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:gro3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetReferralOutcomeResponder:3</con:value></con:property><con:property><con:name>xmlns:haurn3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:3</con:value></con:property><con:property><con:name>xmlns:gcc3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3</con:value></con:property><con:property><con:name>xmlns:llurn3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:3</con:value></con:property><con:property><con:name>xmlns:go1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:1</con:value></con:property><con:property><con:name>xmlns:hburn1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:1</con:value></con:property><con:property><con:name>xmlns:gio1</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetImagingOutcomeResponder:1</con:value></con:property><con:property><con:name>xmlns:ga1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1</con:value></con:property><con:property><con:name>xmlns:aaurn1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:1</con:value></con:property><con:property><con:name>xmlns:gd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2</con:value></con:property></con:properties><con:afterLoadScript/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+assert cleanedRetreivedWsdl.startsWith("<wsdl:definitions") : "Oväntad start på WSDL"
+assert cleanedRetreivedWsdl.endsWith("</wsdl:definitions>") : "Oväntat slut på WSDL"
+]]></scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:config></con:testStep><con:properties><con:property><con:name>smurfTest</con:name><con:value>TOMTE</con:value></con:property></con:properties></con:testCase><con:testCase id="157b7c7b-461b-4e77-b312-3f5868bd46c8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Hämta wsdl" searchProperties="true"><con:settings/><con:testStep type="groovy" name="TestAllInterfaces" id="19fa95f9-0e6d-46b1-abcd-04e466727391"><con:settings/><con:config><script>import  com.eviware.soapui.support.types.StringToObjectMap
+import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def loadPropertiesFromFile() {
+	def utils = new GroovyUtils(context)
+	def dataFile = new File(utils.projectPath + "/data.xml")
+	def source = new XmlDataReader(context, dataFile)
+	source.load(testRunner.testCase.getName())
+}
+
+def getOtherTestcase(testcaseName) {
+	def testcase = context.testCase.testSuite.getTestCaseByName(testcaseName)
+	assert testcase != null : String.format("Testfallet %s hittades inte", testcaseName)
+	return testcase
+}
+
+// Kör ett annat testfall (i samma svit) med givna properties
+def runOtherTestcase(testcaseName, properties) {
+	def testcase = getOtherTestcase(testcaseName) 
+	def runner = testcase.run(properties, false)
+	
+	if (runner.getStatus() != com.eviware.soapui.model.testsuite.TestRunner.Status.FINISHED) {
+		// Återrapportera felet i anropat testfall
+		// (Beroende på fel så blir det tyvärr ändå inte alltid ett tydligt felmeddelande.)
+		def errorMessage = String.format("Anropat testfall %s misslyckades, felet är: %s - %s", testcaseName, runner.getReason(), runner.getError().toString())
+		assert false : errorMessage
+	}
+}
+
+// Testa wsdl med angiven endpoint och interface
+def runGetWsdlTestcase(endpoint, interfaceName) {
+	def testcaseName = "Hämta wsdl - deltest"
+	def properties = new StringToObjectMap()
+	properties.put("wsdlEndpoint", endpoint)
+	properties.put("testedInterfaceName", interfaceName)
+	log.info String.format("Kör %s med endpoint %s och interface %s", testcaseName, endpoint, interfaceName)
+	runOtherTestcase(testcaseName, properties)
+}
+
+// Hämta parametrar
+loadPropertiesFromFile()
+def delimiter = ";"
+def endpoints = context.getProperty( "wsdlEndpoints").split(delimiter)
+def interfaces = context.getProperty( "interfaces").split(delimiter)
+assert endpoints.length == interfaces.length : "Felaktiga parametrar i datafil"
+
+// Testa alla interface
+for (int parameterIndex = 0; parameterIndex &lt; endpoints.length; parameterIndex++) {
+	def endpoint =  endpoints[parameterIndex].trim()
+	def interfaceName = interfaces[parameterIndex].trim()	
+	runGetWsdlTestcase(endpoint, interfaceName) 
+}
+</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>HSA_NTJP</con:name><con:value>HSASERVICES-NTJP</con:value></con:property><con:property><con:name>HSA_RTJP</con:name><con:value>HSASERVICES-RTJP</con:value></con:property><con:property><con:name>HSA_KONSUMENT1</con:name><con:value>TSTNMT2321000156-B02</con:value></con:property><con:property><con:name>HSA_PRODUCENT1</con:name><con:value>LOAD-MOCKS</con:value></con:property><con:property><con:name>HSA_PRODUCENT2</con:name><con:value>PRODUCENT2</con:value></con:property><con:property><con:name>HSA_PRODUCENT3</con:name><con:value>PRODUCENT3</con:value></con:property><con:property><con:name>HSA_PRODUCENT4</con:name><con:value>PRODUCENT4</con:value></con:property><con:property><con:name>HSA_KONSUMENT2</con:name><con:value>KONSUMENT2</con:value></con:property><con:property><con:name>ENV_SIT</con:name><con:value>https://test.esb.ntjp.se</con:value></con:property><con:property><con:name>ENV_QA</con:name><con:value>https://qa.esb.ntjp.se</con:value></con:property><con:property><con:name>xmlns:urn</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:hdurn2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gcd2:careDocumentation</con:value></con:property><con:property><con:name>xmlns:gcd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:gro3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetReferralOutcomeResponder:3</con:value></con:property><con:property><con:name>xmlns:haurn3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:3</con:value></con:property><con:property><con:name>xmlns:gcc3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3</con:value></con:property><con:property><con:name>xmlns:llurn3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:3</con:value></con:property><con:property><con:name>xmlns:go1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:1</con:value></con:property><con:property><con:name>xmlns:hburn1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:1</con:value></con:property><con:property><con:name>xmlns:gio1</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetImagingOutcomeResponder:1</con:value></con:property><con:property><con:name>xmlns:ga1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1</con:value></con:property><con:property><con:name>xmlns:aaurn1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:1</con:value></con:property><con:property><con:name>xmlns:gd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2</con:value></con:property></con:properties><con:afterLoadScript/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
