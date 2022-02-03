@@ -1,9 +1,8 @@
 FROM openjdk:11
 
 #  Version
-ENV SOAPUI_VERSION=5.6.1 \
+ENV SOAPUI_VERSION=5.7.0 \
     SOAPUI_SUPPORT_VERSION=1.8.0 \
-    SOAPUI_PROJECT=soapuiskltp-soapui-project.xml \
     SOAPUI_DIR=/opt/soapui
 ENV SUPPORTLIB_URL=https://rivta-tools.bitbucket.io/soapui-support/builds/soapui-support-${SOAPUI_SUPPORT_VERSION}.jar
 ENV SOAPUI_URL=https://s3.amazonaws.com/downloads.eviware/soapuios/${SOAPUI_VERSION}/SoapUI-${SOAPUI_VERSION}-linux-bin.tar.gz

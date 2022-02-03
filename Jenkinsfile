@@ -1,11 +1,16 @@
 pipeline {
-
     agent any
     parameters {
         string(name: 'COOPERATION_URL', defaultValue: 'http://ind-ptjp-apache-api-vip.ind1.sth.basefarm.net', description: 'nod för takapi att testa, lämna tom för att stå över')
+        string(name: 'EMAIL_ON_FAIL_DEST', defaultValue: 'fd8ba3ec.inera.se@emea.teams.ms', description: 'E-post att skicka meddelande om fel till')
+        booleanParam(name: 'RUN_CORE', defaultValue: true, description: 'Kör tester av kärnfunktionalitet')
+        booleanParam(name: 'RUN_EI', defaultValue: true, description: 'Kör EI-tester')
+        booleanParam(name: 'RUN_AGP', defaultValue: true, description: 'Kör tester för aggregerande tjänster')
+        booleanParam(name: 'RUN_REST', defaultValue: true, description: 'Kör REST-tester')
+        booleanParam(name: 'RUN_ADAPTER', defaultValue: true, description: 'Kör adapter-tester')
     }
     stages {
-       stage('SOAP testing') {
+       stage('Prepare SOAP testing') {
             steps {
                 withCredentials([certificate(credentialsId: 'TSTNMT2321000156-B02', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTKEYPWD')]) {
                     sh """
@@ -21,17 +26,72 @@ pipeline {
                                  data-sed.xml > data.xml
                         cat data.xml
                         docker build -t testsuite .
-                        docker run -v `pwd`:/usr/src/soapui --rm testsuite
                     """
                 }
             }
         }
+        stage('Run core tests') {
+             when {
+                expression { return params.RUN_CORE }
+            }
+            steps {
+                sh """
+                    cd soaptest
+                    docker run -v `pwd`:/usr/src/soapui --rm testsuite 'SKLTP-Core-*soapui-project.xml'
+                """
+            }
+        }
+        stage('Run EI tests') {
+            when {
+                expression { return params.RUN_EI }
+            }
+            steps {
+                sh """
+                    cd soaptest
+                    docker run -v `pwd`:/usr/src/soapui --rm testsuite 'SKLTP-EI-*soapui-project.xml'
+                """
+            }
+        }
+        stage('Run AgP tests') {
+            when {
+                expression { return params.RUN_AGP }
+            }
+            steps {
+                sh """
+                    cd soaptest
+                    docker run -v `pwd`:/usr/src/soapui --rm testsuite 'SKLTP-AgP-*soapui-project.xml'
+                """
+            }
+        }
+        stage('Run REST tests') {
+            when {
+                expression { return params.RUN_REST }
+            }
+            steps {
+                sh """
+                    cd soaptest
+                    docker run -v `pwd`:/usr/src/soapui --rm testsuite 'SKLTP-REST-*soapui-project.xml'
+                """
+            }
+        }
+        stage('Run adapter tests') {
+            when {
+                expression { return params.RUN_ADAPTER }
+            }
+            steps {
+                sh """
+                    cd soaptest
+                    docker run -v `pwd`:/usr/src/soapui --rm testsuite 'SKLTP-Adapter-*soapui-project.xml'
+                """
+            }
+        }
     }
-
     post {
         always {
             // Archive soaptest results
-            junit healthScaleFactor: 100.0, testResults: 'soaptest/TEST*.xml'            
+            junit healthScaleFactor: 100.0, testResults: 'soaptest/TEST*.xml'
+
+
         }
         unstable {
             // Set failed when failed tests
@@ -44,7 +104,7 @@ pipeline {
 				emailext (
 					body: '''${FAILED_TESTS}\nSe ${BUILD_URL}''', 
 					subject: '''Felutfall: ${PROJECT_NAME}''', 
-					to: 'fd8ba3ec.inera.se@emea.teams.ms'
+					to: "${params.EMAIL_ON_FAIL_DEST}"
 				)
 			}
         }

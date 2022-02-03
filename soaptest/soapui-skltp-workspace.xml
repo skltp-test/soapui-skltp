@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:soapui-workspace name="soapui-skltp" soapui-version="5.7.0" projectRoot="${workspaceDir}" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
-  <con:project name="SKLTP-aktivitetshantering">SKLTP-aktivitetshantering-soapui-project.xml</con:project>
-  <con:project name="SKLTP-basuppgifter tillstånd">SKLTP-basuppgifter-tillstand-soapui-project.xml</con:project>
+  <con:project name="SKLTP-Core-Functionality">SKLTP-Core-Functionality-soapui-project.xml</con:project>
+  <con:project name="SKLTP-Core-Tjänsteadressering">SKLTP-Core-Tjansteadressering-soapui-project.xml</con:project>
   <con:project name="SKLTP-EI">SKLTP-EI-soapui-project.xml</con:project>
-  <con:project name="SKLTP-högkostnadsskydd">SKLTP-hogkostnadsskydd-soapui-project.xml</con:project>
-  <con:project name="SKLTP-ordinationsutfall">SKLTP-ordinationsutfall-soapui-project.xml</con:project>
-  <con:project name="SKLTP-remisstatus">SKLTP-remisstatus-soapui-project.xml</con:project>
-  <con:project name="SKLTP-resurssamordning">SKLTP-resurssamordning-soapui-project.xml</con:project>
-  <con:project name="TAK API">SKLTP-takapi-soapui-project.xml</con:project>
-  <con:project name="SKLTP-tidbokning">SKLTP-tidbokning-soapui-project.xml</con:project>
-  <con:project name="SKLTP-tillståndsbeskrivning">SKLTP-tillstandsbeskrivning-soapui-project.xml</con:project>
-  <con:project name="SKLTP-tjansteadressering">SKLTP-tjansteadressering-soapui-project.xml</con:project>
-  <con:project name="SKLTP-utfall av aktiviteter">SKLTP-utfall-av-aktiviteter-soapui-project.xml</con:project>
-  <con:project name="SKLTP-Functionality">soapuiskltp-soapui-project.xml</con:project>
-  <con:project name="SKLTP - ApSe adapter">SKLTP-ApSe-soapui-project.xml</con:project>
-  <con:project name="SKLTP - Axel adapter">SKLTP-Axel-soapui-project.xml</con:project>
+  <con:project name="SKLTP-AgP-Aktivitetshantering">SKLTP-AgP-Aktivitetshantering-soapui-project.xml</con:project>
+  <con:project name="SKLTP-AgP-Högkostnadsskydd">SKLTP-AgP-Hogkostnadsskydd-soapui-project.xml</con:project>
+  <con:project name="SKLTP-AgP-Ordinationsutfall">SKLTP-AgP-Ordinationsutfall-soapui-project.xml</con:project>
+  <con:project name="SKLTP-AgP-Remisstatus">SKLTP-AgP-Remisstatus-soapui-project.xml</con:project>
+  <con:project name="SKLTP-AgP-Resurssamordning">SKLTP-AgP-Resurssamordning-soapui-project.xml</con:project>
+  <con:project name="SKLTP-AgP-Tidbokning">SKLTP-AgP-Tidbokning-soapui-project.xml</con:project>
+  <con:project name="SKLTP-AgP-Tillståndsbeskrivning">SKLTP-AgP-Tillstandsbeskrivning-soapui-project.xml</con:project>
+  <con:project name="SKLTP-AgP-Utfall-av-aktiviteter">SKLTP-AgP-Utfall-av-aktiviteter-soapui-project.xml</con:project>
+  <con:project name="SKLTP-AgP-Basuppgifter-tillstånd">SKLTP-AgP-Basuppgifter-tillstand-soapui-project.xml</con:project>
+  <con:project name="SKLTP-REST-Takapi">SKLTP-REST-Takapi-soapui-project.xml</con:project>
+  <con:project name="SKLTP-Adapter-ApSe">SKLTP-Adapter-ApSe-soapui-project.xml</con:project>
+  <con:project name="SKLTP-Adapter-Axel">SKLTP-Adapter-Axel-soapui-project.xml</con:project>
   <con:collectInfoForSupport>false</con:collectInfoForSupport>
 </con:soapui-workspace>
