@@ -445,7 +445,7 @@ under the License.
 	<testcase id="4.2.1 (GCD) Patient utan engagemang"></testcase>
 	<testcase id="4.2.2 (GCD) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
 	<testcase id="4.2.3 (GCD) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
-	<testcase id="4.2.4 (GCD) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.2.4 (GCD) Patient med engagemang hos en producent med 1000 poster (+GCD3 hasMore)"></testcase>
 	<testcase id="4.2.5 (GCD) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
 	<testcase id="4.2.6 (GCD) Tomt svar från en av tre producenter"></testcase>
 	<testcase id="4.2.7 (GCD) Timeout mot en av tre producenter"></testcase>
