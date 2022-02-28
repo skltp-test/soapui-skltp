@@ -1,0 +1,1326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="7e34a13d-43bb-441d-9243-06e6396f0d9a" activeEnvironment="Default" name="SKLTP-Adapter-FkCertProxy" resourceRoot="" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="df4b0251-e446-4473-a6f2-c8150d74af19" wsaVersion="NONE" name="RegisterCertificateResponderBinding" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:certificate:RegisterCertificate:3:rivtabp21}RegisterCertificateResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/Ronny/Documents/Projekt/NMT/repos/schemas/ServiceContracts_clinicalprocess_healthcond_certificate_4.0.5/schemas/interactions/RegisterCertificateInteraction/RegisterCertificateInteraction_3.1_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/Ronny/Documents/Projekt/NMT/repos/schemas/ServiceContracts_clinicalprocess_healthcond_certificate_4.0.5/schemas/interactions/RegisterCertificateInteraction/RegisterCertificateInteraction_3.1_RIVTABP21.wsdl"><con:part><con:url>file:/C:/Users/Ronny/Documents/Projekt/NMT/repos/schemas/ServiceContracts_clinicalprocess_healthcond_certificate_4.0.5/schemas/interactions/RegisterCertificateInteraction/RegisterCertificateInteraction_3.1_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one or more contributor 
+	license agreements. See the NOTICE file distributed with this work for additional 
+	information regarding copyright ownership. Sveriges Kommuner och Landsting 
+	licenses this file to you under the Apache License, Version 2.0 (the "License"); 
+	you may not use this file except in compliance with the License. You may 
+	obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License.-->
+<wsdl:definitions name="RegisterCertificateInteraction" targetNamespace="urn:riv:clinicalprocess:healthcond:certificate:RegisterCertificate:3:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:clinicalprocess:healthcond:certificate:RegisterCertificateResponder:3" xmlns:tns="urn:riv:clinicalprocess:healthcond:certificate:RegisterCertificate:3:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1">
+  <wsdl:documentation>Tjänsteinteraktionens namn: RegisterCertificateInteraction
+		Beskrivning:
+		Interaction to register a medical certificate.
+		Revisioner:
+		2013-11-20: Utkast Version 1.0, mats.ekhammar@callistaenterprise.se
+		2015-09-09 Version 2.0, johan.zetterstrom@callistaenterprise.se
+		2017-03-29 Version 3.0, peter.hernfalk@callistaenterprise.se
+		2018-06-14 Version 3.1, peter.hernfalk@callistaenterprise.se
+		Tjänstedomän: clinicalprocess:healthcond:certificate
+		Tjänsteinteraktionstyp: Fråga-svar
+		WS-profil: RIVTABP21</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:certificate:RegisterCertificate:3:rivtabp21">
+      <xs:import schemaLocation="RegisterCertificateResponder_3.1.xsd" namespace="urn:riv:clinicalprocess:healthcond:certificate:RegisterCertificateResponder:3"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="RegisterCertificateRequest">
+    <wsdl:part name="LogicalAddress" element="itr:LogicalAddress"></wsdl:part>
+    <wsdl:part name="parameters" element="tjsr:RegisterCertificate"/>
+  </wsdl:message>
+  <wsdl:message name="RegisterCertificateResponse">
+    <wsdl:part name="parameters" element="tjsr:RegisterCertificateResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="RegisterCertificateResponderInterface">
+    <wsdl:operation name="RegisterCertificate">
+      <wsdl:input message="tns:RegisterCertificateRequest"/>
+      <wsdl:output message="tns:RegisterCertificateResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RegisterCertificateResponderBinding" type="tns:RegisterCertificateResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RegisterCertificate">
+      <soap:operation soapAction="urn:riv:clinicalprocess:healthcond:certificate:RegisterCertificateResponder:3:RegisterCertificate" style="document"/>
+      <wsdl:input>
+        <soap:header use="literal" message="tns:RegisterCertificateRequest" part="LogicalAddress"/>
+        <soap:body use="literal" parts="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RegisterCertificateResponderService">
+    <wsdl:port name="RegisterCertificateResponderPort" binding="tns:RegisterCertificateResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\Ronny\Documents\Projekt\NMT\repos\schemas\ServiceContracts_clinicalprocess_healthcond_certificate_4.0.5\schemas\interactions\RegisterCertificateInteraction\RegisterCertificateResponder_3.1.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one or more contributor 
+	license agreements. See the NOTICE file distributed with this work for additional 
+	information regarding copyright ownership. The ASF licenses this file to 
+	you under the Apache License, Version 2.0 (the "License"); you may not use 
+	this file except in compliance with the License. You may obtain a copy of 
+	the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required 
+	by applicable law or agreed to in writing, software distributed under the 
+	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
+	OF ANY KIND, either express or implied. See the License for the specific 
+	language governing permissions and limitations under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:certificate:RegisterCertificateResponder:3" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:core="urn:riv:clinicalprocess:healthcond:certificate:3" xmlns:types="urn:riv:clinicalprocess:healthcond:certificate:types:3" xmlns:tns="urn:riv:clinicalprocess:healthcond:certificate:RegisterCertificateResponder:3">
+  <xs:import namespace="urn:riv:clinicalprocess:healthcond:certificate:3" schemaLocation="../../core_components/clinicalprocess_healthcond_certificate_3.2.xsd"/>
+  <xs:import namespace="urn:riv:clinicalprocess:healthcond:certificate:types:3" schemaLocation="../../core_components/clinicalprocess_healthcond_certificate_types_3.2.xsd"/>
+  <xs:element name="RegisterCertificate" type="tns:RegisterCertificateType"/>
+  <xs:element name="RegisterCertificateResponse" type="tns:RegisterCertificateResponseType"/>
+  <xs:complexType name="RegisterCertificateType">
+    <xs:sequence>
+      <xs:element name="svarPa" type="core:MeddelandeReferens" minOccurs="0"/>
+      <xs:element name="intyg" type="core:Intyg"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegisterCertificateResponseType">
+    <xs:sequence>
+      <xs:element name="result" type="core:ResultType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\Ronny\Documents\Projekt\NMT\repos\schemas\ServiceContracts_clinicalprocess_healthcond_certificate_4.0.5\schemas\core_components\clinicalprocess_healthcond_certificate_3.2.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:certificate:3" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:riv:clinicalprocess:healthcond:certificate:3" xmlns:types="urn:riv:clinicalprocess:healthcond:certificate:types:3" xmlns:m1="urn:riv:clinicalprocess:healthcond:certificate:3.2">
+  <xs:import namespace="urn:riv:clinicalprocess:healthcond:certificate:types:3" schemaLocation="clinicalprocess_healthcond_certificate_types_3.2.xsd"/>
+  <xs:import namespace="urn:riv:clinicalprocess:healthcond:certificate:3.2" schemaLocation="clinicalprocess_healthcond_certificate_3.2_ext.xsd"/>
+  <xs:complexType name="Intyg">
+    <xs:annotation>
+      <xs:documentation>Ett intyg.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="intygs-id" type="types:IntygId"/>
+      <xs:element name="mottagare" type="types:Part" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="typ" type="types:TypAvIntyg"/>
+      <xs:element name="version" type="xs:string"/>
+      <xs:element name="signeringstidpunkt" type="types:TimeStampType" minOccurs="0"/>
+      <xs:element name="skickatTidpunkt" type="types:TimeStampType" minOccurs="0"/>
+      <xs:element name="patient" type="Patient"/>
+      <xs:element name="skapadAv" type="HosPersonal"/>
+      <xs:element name="relation" type="Relation" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="status" type="IntygsStatus" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="svar" type="Svar" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="m1:underskrift" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HosPersonal">
+    <xs:sequence>
+      <xs:element name="personal-id" type="types:HsaId">
+        <xs:annotation>
+          <xs:documentation>HSA-id, o.i.d för HSA-id är 1.2.752.129.2.1.4.1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="fullstandigtNamn" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Förnamn + efternamn sammanslaget.
+						Är tomt om
+						personen har en skyddad identitet.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="forskrivarkod" type="xs:string" minOccurs="0"/>
+      <xs:element name="befattning" type="types:Befattning" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="enhet" type="Enhet"/>
+      <xs:element name="specialistkompetens" type="types:Specialistkompetens" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="m1:legitimeratYrke" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Enhet">
+    <xs:sequence>
+      <xs:element name="enhets-id" type="types:HsaId">
+        <xs:annotation>
+          <xs:documentation>HSA-id, o.i.d för HSA-id är 1.2.752.129.2.1.4.1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="arbetsplatskod" type="types:ArbetsplatsKod">
+        <xs:annotation>
+          <xs:documentation>o.i.d för arbetsplatskod är 1.2.752.29.4.71</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="enhetsnamn" type="xs:string"/>
+      <xs:element name="postadress" type="xs:string"/>
+      <xs:element name="postnummer" type="xs:string"/>
+      <xs:element name="postort" type="xs:string"/>
+      <xs:element name="telefonnummer" type="xs:string"/>
+      <xs:element name="epost" type="types:nonEmptyString" minOccurs="0"/>
+      <xs:element name="vardgivare" type="Vardgivare"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Vardgivare">
+    <xs:sequence>
+      <xs:element name="vardgivare-id" type="types:HsaId">
+        <xs:annotation>
+          <xs:documentation>HSA-id, o.i.d för HSA-id är 1.2.752.129.2.1.4.1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="vardgivarnamn" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Patient">
+    <xs:sequence>
+      <xs:element name="person-id" type="types:PersonId"/>
+      <xs:element name="fornamn" type="xs:string"/>
+      <xs:element name="efternamn" type="xs:string"/>
+      <xs:element name="mellannamn" type="xs:string" minOccurs="0"/>
+      <xs:element name="postadress" type="xs:string"/>
+      <xs:element name="postnummer" type="xs:string"/>
+      <xs:element name="postort" type="xs:string"/>
+      <xs:element ref="m1:kallaAdressuppgifter" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MeddelandeReferens">
+    <xs:annotation>
+      <xs:documentation>Referens till ett meddelande</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="meddelande-id" type="xs:string"/>
+      <xs:element name="referens-id" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Svar">
+    <xs:annotation>
+      <xs:documentation>Svar på en fråga</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="instans" type="xs:int" minOccurs="0"/>
+      <xs:element name="delsvar" maxOccurs="unbounded">
+        <xs:complexType mixed="true">
+          <xs:sequence>
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+          <xs:attribute name="id" type="DelfrageIdType" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="FrageIdType" use="required"/>
+  </xs:complexType>
+  <xs:simpleType name="FrageIdType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DelfrageIdType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]+\.[0-9]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ResultType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Datatyp som returneras
+				som ett generellt svar från alla förändrande tjänster, t.ex. skapa,
+				radera, etc.
+				En anropande klient skall alltid kontrollera att
+				resultatkoden inte innehåller fel för att på så sätt veta om anropet
+				lyckades.
+				Alla svarskoder förutom OK och INFO betyder att åtgärden
+				inte genomfördes.
+				Om svarskoden är INFO skall fältet resultText
+				innehålla mer information.
+				Om svarskorden är ERROR skall fältet
+				errorId innehålla en specifik felkod, och fältet resultText
+				innehålla mer information.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="resultCode" type="ResultCodeType"/>
+      <xs:element name="resultText" type="xs:string" minOccurs="0"/>
+      <xs:element name="errorId" type="ErrorIdType" minOccurs="0"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ResultCodeType">
+    <xs:annotation>
+      <xs:documentation xml:lang="sv">Enumerationsvärde som
+				anger de svarskoder som finns.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Transaktionen har
+						utförts enligt uppdraget.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INFO">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Transaktionen har
+						utförts enligt begäran, men det finns ett meddelande som
+						konsumenten bör visa upp.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERROR">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Transaktionen har INTE
+						kunnat utföras. Det finns en felkod som klassificerar
+						felet, samt
+						ett meddelande som konsumenten bör visa upp.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ErrorIdType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="VALIDATION_ERROR">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">En eller flera
+						inparametrar innehåller felaktiga värden. Angiven
+						tjänst utfördes
+						ej, och omsändning av
+						transaktionen är inte tillämpbart.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="APPLICATION_ERROR">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Transaktionen har INTE
+						kunnat utföras p.g.a ett logiskt fel. Det finns ett
+						meddelande som
+						konsumenten bör
+						visa upp. Då felet är logisk är omsändning av
+						transaktionen inte
+						tillämpbart.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TECHNICAL_ERROR">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Transaktionen har INTE
+						kunnat utföras p.g.a ett tekniskt fel. Det finns ett
+						meddelande som
+						konsumenten bör
+						visa upp. Felet kan vara intermittent, varför
+						omsändning av
+						transaktionen är tillämpbart.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="REVOKED">
+        <xs:annotation>
+          <xs:documentation xml:lang="sv">Den efterfrågade
+						informationen existerar men har rättats/dragits
+						tillbaka och är ej
+						längre giltig eller
+						tillgänglig. Angiven tjänst utfördes ej, och
+						omsändning av transaktionen är
+						inte tillämpbart.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="IntygsStatus">
+    <xs:sequence>
+      <xs:element name="part" type="types:Part"/>
+      <xs:element name="status" type="types:Statuskod"/>
+      <xs:element name="tidpunkt" type="types:TimeStampType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--typer som används vid integrerad intygsapplikation-->
+  <xs:complexType name="Handelse">
+    <xs:sequence>
+      <xs:element name="handelsekod" type="types:Handelsekod"/>
+      <xs:element name="tidpunkt" type="types:TimeStampMedMillisekunder"/>
+      <xs:element name="amne" type="types:Amneskod" minOccurs="0"/>
+      <xs:element name="sistaDatumForSvar" type="types:DateType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Arenden">
+    <!--Frågor och svar-->
+    <xs:sequence>
+      <xs:element name="totalt" type="xs:int"/>
+      <xs:element name="ejBesvarade" type="xs:int"/>
+      <xs:element name="besvarade" type="xs:int"/>
+      <xs:element name="hanterade" type="xs:int"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--slut typer som används vid integrerad intygsapplikation-->
+  <xs:complexType name="Relation">
+    <xs:sequence>
+      <xs:element name="typ" type="types:TypAvRelation"/>
+      <xs:element name="intygs-id" type="types:IntygId"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\Ronny\Documents\Projekt\NMT\repos\schemas\ServiceContracts_clinicalprocess_healthcond_certificate_4.0.5\schemas\core_components\clinicalprocess_healthcond_certificate_types_3.2.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:certificate:types:3" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:riv:clinicalprocess:healthcond:certificate:types:3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+  <xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema_0.1.xsd"/>
+  <xs:complexType name="IntygId">
+    <xs:complexContent>
+      <xs:restriction base="IIType">
+        <xs:sequence>
+          <xs:element name="root" type="xs:string"/>
+          <xs:element name="extension" type="xs:string"/>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TypAvIntyg">
+    <xs:complexContent>
+      <xs:restriction base="CVType">
+        <xs:sequence>
+          <xs:element name="code" type="xs:string"/>
+          <xs:element name="codeSystem" type="xs:string"/>
+          <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PersonId">
+    <xs:complexContent>
+      <xs:restriction base="IIType">
+        <xs:sequence>
+          <xs:element name="root" type="PersonIdRoot"/>
+          <xs:element name="extension" type="PersonIdExtension"/>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="PersonIdRoot">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1.2.752.129.2.1.3.1"/>
+      <xs:enumeration value="1.2.752.129.2.1.3.3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PersonIdExtension">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="HsaId">
+    <xs:complexContent>
+      <xs:restriction base="IIType">
+        <xs:sequence>
+          <xs:element name="root" type="xs:string" fixed="1.2.752.129.2.1.4.1"/>
+          <xs:element name="extension" type="nonEmptyString"/>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="nonEmptyString">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Befattning">
+    <xs:complexContent>
+      <xs:restriction base="CVType">
+        <xs:sequence>
+          <xs:element name="code" type="xs:string"/>
+          <xs:element name="codeSystem" type="xs:string" fixed="1.2.752.129.2.2.1.4"/>
+          <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Specialistkompetens">
+    <xs:sequence>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Handelsekod">
+    <xs:complexContent>
+      <xs:restriction base="CVType">
+        <xs:sequence>
+          <xs:element name="code" type="xs:string"/>
+          <xs:element name="codeSystem" type="xs:string" fixed="dfd7bbad-dbe5-4a2f-ba25-f7b9b2cc6b14"/>
+          <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArbetsplatsKod">
+    <xs:complexContent>
+      <xs:restriction base="IIType">
+        <xs:sequence>
+          <xs:element name="root" type="xs:string" fixed="1.2.752.29.4.71"/>
+          <xs:element name="extension" type="nonEmptyString"/>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Statuskod">
+    <xs:complexContent>
+      <xs:restriction base="CVType">
+        <xs:sequence>
+          <xs:element name="code" type="xs:string"/>
+          <xs:element name="codeSystem" type="xs:string" fixed="9871cd17-8755-4ed9-b894-ff3729e775a4"/>
+          <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Part">
+    <xs:complexContent>
+      <xs:restriction base="CVType">
+        <xs:sequence>
+          <xs:element name="code" type="xs:string"/>
+          <xs:element name="codeSystem" type="xs:string" fixed="769bb12b-bd9f-4203-a5cd-fd14f2eb3b80"/>
+          <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TypAvRelation">
+    <xs:complexContent>
+      <xs:restriction base="CVType">
+        <xs:sequence>
+          <xs:element name="code" type="xs:string"/>
+          <xs:element name="codeSystem" type="xs:string" fixed="c2362fcd-eda0-4f9a-bd13-b3bbaf7f2146"/>
+          <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Amneskod">
+    <xs:complexContent>
+      <xs:restriction base="CVType">
+        <xs:sequence>
+          <xs:element name="code" type="xs:string"/>
+          <xs:element name="codeSystem" type="xs:string" fixed="ffa59d8f-8d7e-46ae-ac9e-31804e8e8499"/>
+          <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="TimeStampMedMillisekunder">
+    <xs:annotation>
+      <xs:documentation>DateTime value is a string with the format
+				"YYYY-MM-DDThh:mm:ss"
+				that conforms to the constrained ISO 8601.
+				Fraction of seconds and timezone precision is not required.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime">
+      <xs:pattern value="\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d.\d{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TimeStampType">
+    <xs:annotation>
+      <xs:documentation>DateTime avgränsat till YYYY-MM-DDThh:mm:ss</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime">
+      <xs:pattern value="\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--YYYYMMDD-->
+  <xs:simpleType name="DateType">
+    <xs:annotation>
+      <xs:documentation>Date avgränsat till YYYY-MM-DD</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:date">
+      <xs:pattern value="\d{4}-\d\d-\d\d"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PartialDateType">
+    <xs:sequence>
+      <xs:element name="format" type="PartialDateTypeFormatEnum"/>
+      <xs:element name="value" type="PartialDateTypeValue"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PartialDateTypeFormatEnum">
+    <xs:annotation>
+      <xs:documentation>Value-delen av PartialDateType.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="YYYY-MM-DD"/>
+      <xs:enumeration value="YYYY-MM"/>
+      <xs:enumeration value="YYYY"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PartialDateTypeValue">
+    <xs:annotation>
+      <xs:documentation>PartialDate value is a string with the format
+				"YYYY[-MM[-DD]]" that
+				conforms to the constrained ISO 8601.
+				In contrast to the date type, this type also allows for year-only and
+				year-and-month values.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-2][0-9]{3,3}(-((0[1-9])|(1[0-2]))(-((0[1-9])|([1-2][0-9])|(3[0-1])))?)?"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--Best practice datatyper-->
+  <xs:complexType name="CVType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="codeSystem" type="xs:string"/>
+      <xs:element name="codeSystemName" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystemVersion" type="xs:string" minOccurs="0"/>
+      <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+      <xs:element name="originalText" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IIType">
+    <xs:sequence>
+      <xs:element name="root" type="xs:string"/>
+      <xs:element name="extension" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PQType">
+    <xs:sequence>
+      <xs:element name="value" type="xs:double"/>
+      <xs:element name="unit" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PQIntervalType">
+    <xs:sequence>
+      <xs:element name="low" type="xs:double" minOccurs="0"/>
+      <xs:element name="high" type="xs:double" minOccurs="0"/>
+      <xs:element name="unit" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DatePeriodType">
+    <xs:sequence>
+      <xs:element name="start" type="DateType" minOccurs="0"/>
+      <xs:element name="end" type="DateType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TimePeriodType">
+    <xs:sequence>
+      <xs:element name="start" type="TimeStampType" minOccurs="0"/>
+      <xs:element name="end" type="TimeStampType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="KallaAdressuppgifterType">
+    <xs:complexContent>
+      <xs:restriction base="CVType">
+        <xs:sequence>
+          <xs:element name="code" type="xs:string"/>
+          <xs:element name="codeSystem" type="xs:string" fixed="4ade8de2-effe-41d0-b177-fedc820e69fa"/>
+          <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LegitimeratYrkeType">
+    <xs:complexContent>
+      <xs:restriction base="CVType">
+        <xs:sequence>
+          <xs:element name="code" type="xs:string"/>
+          <xs:element name="codeSystem" type="xs:string" fixed="1.2.752.29.23.1.6"/>
+          <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="UnderskriftType">
+    <xs:sequence>
+      <xs:element ref="ds:Signature"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Element tillagda för att kunna hantera användning av datatyperna i any-tag-->
+  <xs:element name="timePeriod" type="TimePeriodType"/>
+  <xs:element name="datePeriod" type="DatePeriodType"/>
+  <xs:element name="pq" type="PQType"/>
+  <xs:element name="pqInterval" type="PQIntervalType"/>
+  <xs:element name="ii" type="IIType"/>
+  <xs:element name="cv" type="CVType"/>
+  <xs:element name="partialDate" type="PartialDateType"/>
+  <xs:element name="timestamp" type="TimeStampType"/>
+  <xs:element name="date" type="DateType"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\Ronny\Documents\Projekt\NMT\repos\schemas\ServiceContracts_clinicalprocess_healthcond_certificate_4.0.5\schemas\core_components\xmldsig-core-schema_0.1.xsd</con:url><con:content><![CDATA[<!--Schema for XML Signatures
+http://www.w3.org/2000/09/xmldsig#
+$Revision: 4 $ on $Date: 2004-12-16 12:08:17 -0500 (Thu, 16 Dec 2004) $ by $Author: marcgratacos $
+
+Copyright 2001 The Internet Society and W3C (Massachusetts Institute
+of Technology, Institut National de Recherche en Informatique et en
+Automatique, Keio University). All Rights Reserved.
+http://www.w3.org/Consortium/Legal/
+
+This document is governed by the W3C Software License [1] as described
+in the FAQ [2].
+
+[1] http://www.w3.org/Consortium/Legal/copyright-software-19980720
+[2] http://www.w3.org/Consortium/Legal/IPR-FAQ-20000620.html#DTD-->
+<schema elementFormDefault="qualified" targetNamespace="http://www.w3.org/2000/09/xmldsig#" version="0.1" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+  <!--Basic Types Defined for Signatures-->
+  <simpleType name="CryptoBinary">
+    <restriction base="base64Binary"/>
+  </simpleType>
+  <!--Start Signature-->
+  <element name="Signature" type="ds:SignatureType"/>
+  <complexType name="SignatureType">
+    <sequence>
+      <element ref="ds:SignedInfo"/>
+      <element ref="ds:SignatureValue"/>
+      <element minOccurs="0" ref="ds:KeyInfo"/>
+      <element maxOccurs="unbounded" minOccurs="0" ref="ds:Object"/>
+    </sequence>
+    <attribute name="Id" type="ID" use="optional"/>
+  </complexType>
+  <element name="SignatureValue" type="ds:SignatureValueType"/>
+  <complexType name="SignatureValueType">
+    <simpleContent>
+      <extension base="base64Binary">
+        <attribute name="Id" type="ID" use="optional"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+  <!--Start SignedInfo-->
+  <element name="SignedInfo" type="ds:SignedInfoType"/>
+  <complexType name="SignedInfoType">
+    <sequence>
+      <element ref="ds:CanonicalizationMethod"/>
+      <element ref="ds:SignatureMethod"/>
+      <element maxOccurs="unbounded" ref="ds:Reference"/>
+    </sequence>
+    <attribute name="Id" type="ID" use="optional"/>
+  </complexType>
+  <element name="CanonicalizationMethod" type="ds:CanonicalizationMethodType"/>
+  <complexType mixed="true" name="CanonicalizationMethodType">
+    <sequence>
+      <any maxOccurs="unbounded" minOccurs="0" namespace="##any"/>
+      <!--(0,unbounded) elements from (1,1) namespace-->
+    </sequence>
+    <attribute name="Algorithm" type="anyURI" use="required"/>
+  </complexType>
+  <element name="SignatureMethod" type="ds:SignatureMethodType"/>
+  <complexType mixed="true" name="SignatureMethodType">
+    <sequence>
+      <element minOccurs="0" name="HMACOutputLength" type="ds:HMACOutputLengthType"/>
+      <any maxOccurs="unbounded" minOccurs="0" namespace="##other"/>
+      <!--(0,unbounded) elements from (1,1) external namespace-->
+    </sequence>
+    <attribute name="Algorithm" type="anyURI" use="required"/>
+  </complexType>
+  <!--Start Reference-->
+  <element name="Reference" type="ds:ReferenceType"/>
+  <complexType name="ReferenceType">
+    <sequence>
+      <element minOccurs="0" ref="ds:Transforms"/>
+      <element ref="ds:DigestMethod"/>
+      <element ref="ds:DigestValue"/>
+    </sequence>
+    <attribute name="Id" type="ID" use="optional"/>
+    <attribute name="URI" type="anyURI" use="optional"/>
+    <attribute name="Type" type="anyURI" use="optional"/>
+  </complexType>
+  <element name="Transforms" type="ds:TransformsType"/>
+  <complexType name="TransformsType">
+    <sequence>
+      <element maxOccurs="unbounded" ref="ds:Transform"/>
+    </sequence>
+  </complexType>
+  <element name="Transform" type="ds:TransformType"/>
+  <complexType mixed="true" name="TransformType">
+    <choice maxOccurs="unbounded" minOccurs="0">
+      <any namespace="##other" processContents="lax"/>
+      <!--(1,1) elements from (0,unbounded) namespaces-->
+      <element name="XPath" type="string"/>
+    </choice>
+    <attribute name="Algorithm" type="anyURI" use="required"/>
+  </complexType>
+  <!--End Reference-->
+  <element name="DigestMethod" type="ds:DigestMethodType"/>
+  <complexType mixed="true" name="DigestMethodType">
+    <sequence>
+      <any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </sequence>
+    <attribute name="Algorithm" type="anyURI" use="required"/>
+  </complexType>
+  <element name="DigestValue" type="ds:DigestValueType"/>
+  <simpleType name="DigestValueType">
+    <restriction base="base64Binary"/>
+  </simpleType>
+  <!--End SignedInfo-->
+  <!--Start KeyInfo-->
+  <element name="KeyInfo" type="ds:KeyInfoType"/>
+  <complexType mixed="true" name="KeyInfoType">
+    <choice maxOccurs="unbounded">
+      <element ref="ds:KeyName"/>
+      <element ref="ds:KeyValue"/>
+      <element ref="ds:RetrievalMethod"/>
+      <element ref="ds:X509Data"/>
+      <element ref="ds:PGPData"/>
+      <element ref="ds:SPKIData"/>
+      <element ref="ds:MgmtData"/>
+      <any namespace="##other" processContents="lax"/>
+      <!--(1,1) elements from (0,unbounded) namespaces-->
+    </choice>
+    <attribute name="Id" type="ID" use="optional"/>
+  </complexType>
+  <element name="KeyName" type="string"/>
+  <element name="MgmtData" type="string"/>
+  <element name="KeyValue" type="ds:KeyValueType"/>
+  <complexType mixed="true" name="KeyValueType">
+    <choice>
+      <element ref="ds:DSAKeyValue"/>
+      <element ref="ds:RSAKeyValue"/>
+      <any namespace="##other" processContents="lax"/>
+    </choice>
+  </complexType>
+  <element name="RetrievalMethod" type="ds:RetrievalMethodType"/>
+  <complexType name="RetrievalMethodType">
+    <sequence>
+      <element minOccurs="0" ref="ds:Transforms"/>
+    </sequence>
+    <attribute name="URI" type="anyURI"/>
+    <attribute name="Type" type="anyURI" use="optional"/>
+  </complexType>
+  <!--Start X509Data-->
+  <element name="X509Data" type="ds:X509DataType"/>
+  <complexType name="X509DataType">
+    <sequence maxOccurs="unbounded">
+      <choice>
+        <element name="X509IssuerSerial" type="ds:X509IssuerSerialType"/>
+        <element name="X509SKI" type="base64Binary"/>
+        <element name="X509SubjectName" type="string"/>
+        <element name="X509Certificate" type="base64Binary"/>
+        <element name="X509CRL" type="base64Binary"/>
+        <any namespace="##other" processContents="lax"/>
+      </choice>
+    </sequence>
+  </complexType>
+  <complexType name="X509IssuerSerialType">
+    <sequence>
+      <element name="X509IssuerName" type="string"/>
+      <element name="X509SerialNumber" type="integer"/>
+    </sequence>
+  </complexType>
+  <!--End X509Data-->
+  <!--Begin PGPData-->
+  <element name="PGPData" type="ds:PGPDataType"/>
+  <complexType name="PGPDataType">
+    <choice>
+      <sequence>
+        <element name="PGPKeyID" type="base64Binary"/>
+        <element minOccurs="0" name="PGPKeyPacket" type="base64Binary"/>
+        <any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+      </sequence>
+      <sequence>
+        <element name="PGPKeyPacket" type="base64Binary"/>
+        <any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+      </sequence>
+    </choice>
+  </complexType>
+  <!--End PGPData-->
+  <!--Begin SPKIData-->
+  <element name="SPKIData" type="ds:SPKIDataType"/>
+  <complexType name="SPKIDataType">
+    <sequence maxOccurs="unbounded">
+      <element name="SPKISexp" type="base64Binary"/>
+      <any minOccurs="0" namespace="##other" processContents="lax"/>
+    </sequence>
+  </complexType>
+  <!--End SPKIData-->
+  <!--End KeyInfo-->
+  <!--Start Object (Manifest, SignatureProperty)-->
+  <element name="Object" type="ds:ObjectType"/>
+  <complexType mixed="true" name="ObjectType">
+    <sequence maxOccurs="unbounded" minOccurs="0">
+      <any namespace="##any" processContents="lax"/>
+    </sequence>
+    <attribute name="Id" type="ID" use="optional"/>
+    <attribute name="MimeType" type="string" use="optional"/>
+    <attribute name="Encoding" type="anyURI" use="optional"/>
+    <!--add a grep facet-->
+  </complexType>
+  <element name="Manifest" type="ds:ManifestType"/>
+  <complexType name="ManifestType">
+    <sequence>
+      <element maxOccurs="unbounded" ref="ds:Reference"/>
+    </sequence>
+    <attribute name="Id" type="ID" use="optional"/>
+  </complexType>
+  <element name="SignatureProperties" type="ds:SignaturePropertiesType"/>
+  <complexType name="SignaturePropertiesType">
+    <sequence>
+      <element maxOccurs="unbounded" ref="ds:SignatureProperty"/>
+    </sequence>
+    <attribute name="Id" type="ID" use="optional"/>
+  </complexType>
+  <element name="SignatureProperty" type="ds:SignaturePropertyType"/>
+  <complexType mixed="true" name="SignaturePropertyType">
+    <choice maxOccurs="unbounded">
+      <any namespace="##other" processContents="lax"/>
+      <!--(1,1) elements from (1,unbounded) namespaces-->
+    </choice>
+    <attribute name="Target" type="anyURI" use="required"/>
+    <attribute name="Id" type="ID" use="optional"/>
+  </complexType>
+  <!--End Object (Manifest, SignatureProperty)-->
+  <!--Start Algorithm Parameters-->
+  <simpleType name="HMACOutputLengthType">
+    <restriction base="integer"/>
+  </simpleType>
+  <!--Start KeyValue Element-types-->
+  <element name="DSAKeyValue" type="ds:DSAKeyValueType"/>
+  <complexType name="DSAKeyValueType">
+    <sequence>
+      <sequence minOccurs="0">
+        <element name="P" type="ds:CryptoBinary"/>
+        <element name="Q" type="ds:CryptoBinary"/>
+      </sequence>
+      <element minOccurs="0" name="G" type="ds:CryptoBinary"/>
+      <element name="Y" type="ds:CryptoBinary"/>
+      <element minOccurs="0" name="J" type="ds:CryptoBinary"/>
+      <sequence minOccurs="0">
+        <element name="Seed" type="ds:CryptoBinary"/>
+        <element name="PgenCounter" type="ds:CryptoBinary"/>
+      </sequence>
+    </sequence>
+  </complexType>
+  <element name="RSAKeyValue" type="ds:RSAKeyValueType"/>
+  <complexType name="RSAKeyValueType">
+    <sequence>
+      <element name="Modulus" type="ds:CryptoBinary"/>
+      <element name="Exponent" type="ds:CryptoBinary"/>
+    </sequence>
+  </complexType>
+  <!--End KeyValue Element-types-->
+  <!--End Signature-->
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\Ronny\Documents\Projekt\NMT\repos\schemas\ServiceContracts_clinicalprocess_healthcond_certificate_4.0.5\schemas\core_components\clinicalprocess_healthcond_certificate_3.2_ext.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:certificate:3.2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.2" xmlns:tns="urn:riv:clinicalprocess:healthcond:certificate:3.2" xmlns:types="urn:riv:clinicalprocess:healthcond:certificate:types:3" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="urn:riv:clinicalprocess:healthcond:certificate:types:3" schemaLocation="clinicalprocess_healthcond_certificate_types_3.2.xsd"/>
+  <xs:element name="underskrift" type="types:UnderskriftType"/>
+  <xs:element name="legitimeratYrke" type="types:LegitimeratYrkeType"/>
+  <xs:element name="kallaAdressuppgifter" type="types:KallaAdressuppgifterType"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\Ronny\Documents\Projekt\NMT\repos\schemas\ServiceContracts_clinicalprocess_healthcond_certificate_4.0.5\schemas\core_components\itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:itintegration:registry:1" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Typdefinition för logisk adress som skall användas i tjänstekontrakten 
+							från och med RIV-TA Basic Profile 2.1
+			
+			Revisionshistorik:
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="95c4b5c2-1327-44b4-ae72-6204d7487283" isOneWay="false" action="urn:riv:clinicalprocess:healthcond:certificate:RegisterCertificateResponder:3:RegisterCertificate" name="RegisterCertificate" bindingOperationName="RegisterCertificate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5cb9f5cd-c30a-4d63-80cb-e846a835c6c0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://tempuri.org</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:certificate:RegisterCertificateResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:certificate:3" xmlns:urn3="urn:riv:clinicalprocess:healthcond:certificate:types:3" xmlns:urn4="urn:riv:clinicalprocess:healthcond:certificate:3.2" xmlns:xd="http://www.w3.org/2000/09/xmldsig#">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>?</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:RegisterCertificate>\r
+         <!--Optional:-->\r
+         <urn1:svarPa>\r
+            <urn2:meddelande-id>?</urn2:meddelande-id>\r
+            <!--Optional:-->\r
+            <urn2:referens-id>?</urn2:referens-id>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:svarPa>\r
+         <urn1:intyg>\r
+            <urn2:intygs-id>\r
+               <urn3:root>?</urn3:root>\r
+               <urn3:extension>?</urn3:extension>\r
+            </urn2:intygs-id>\r
+            <!--Zero or more repetitions:-->\r
+            <urn2:mottagare>\r
+               <urn3:code>?</urn3:code>\r
+               <urn3:codeSystem>769bb12b-bd9f-4203-a5cd-fd14f2eb3b80</urn3:codeSystem>\r
+               <!--Optional:-->\r
+               <urn3:displayName>?</urn3:displayName>\r
+            </urn2:mottagare>\r
+            <urn2:typ>\r
+               <urn3:code>?</urn3:code>\r
+               <urn3:codeSystem>?</urn3:codeSystem>\r
+               <!--Optional:-->\r
+               <urn3:displayName>?</urn3:displayName>\r
+            </urn2:typ>\r
+            <urn2:version>?</urn2:version>\r
+            <!--Optional:-->\r
+            <urn2:signeringstidpunkt>?</urn2:signeringstidpunkt>\r
+            <!--Optional:-->\r
+            <urn2:skickatTidpunkt>?</urn2:skickatTidpunkt>\r
+            <urn2:patient>\r
+               <urn2:person-id>\r
+                  <urn3:root>?</urn3:root>\r
+                  <urn3:extension>?</urn3:extension>\r
+               </urn2:person-id>\r
+               <urn2:fornamn>?</urn2:fornamn>\r
+               <urn2:efternamn>?</urn2:efternamn>\r
+               <!--Optional:-->\r
+               <urn2:mellannamn>?</urn2:mellannamn>\r
+               <urn2:postadress>?</urn2:postadress>\r
+               <urn2:postnummer>?</urn2:postnummer>\r
+               <urn2:postort>?</urn2:postort>\r
+               <!--Optional:-->\r
+               <urn4:kallaAdressuppgifter>\r
+                  <urn3:code>?</urn3:code>\r
+                  <urn3:codeSystem>4ade8de2-effe-41d0-b177-fedc820e69fa</urn3:codeSystem>\r
+                  <!--Optional:-->\r
+                  <urn3:displayName>?</urn3:displayName>\r
+               </urn4:kallaAdressuppgifter>\r
+            </urn2:patient>\r
+            <urn2:skapadAv>\r
+               <urn2:personal-id>\r
+                  <urn3:root>1.2.752.129.2.1.4.1</urn3:root>\r
+                  <urn3:extension>?</urn3:extension>\r
+               </urn2:personal-id>\r
+               <urn2:fullstandigtNamn>?</urn2:fullstandigtNamn>\r
+               <!--Optional:-->\r
+               <urn2:forskrivarkod>?</urn2:forskrivarkod>\r
+               <!--Zero or more repetitions:-->\r
+               <urn2:befattning>\r
+                  <urn3:code>?</urn3:code>\r
+                  <urn3:codeSystem>1.2.752.129.2.2.1.4</urn3:codeSystem>\r
+                  <!--Optional:-->\r
+                  <urn3:displayName>?</urn3:displayName>\r
+               </urn2:befattning>\r
+               <urn2:enhet>\r
+                  <urn2:enhets-id>\r
+                     <urn3:root>1.2.752.129.2.1.4.1</urn3:root>\r
+                     <urn3:extension>?</urn3:extension>\r
+                  </urn2:enhets-id>\r
+                  <urn2:arbetsplatskod>\r
+                     <urn3:root>1.2.752.29.4.71</urn3:root>\r
+                     <urn3:extension>?</urn3:extension>\r
+                  </urn2:arbetsplatskod>\r
+                  <urn2:enhetsnamn>?</urn2:enhetsnamn>\r
+                  <urn2:postadress>?</urn2:postadress>\r
+                  <urn2:postnummer>?</urn2:postnummer>\r
+                  <urn2:postort>?</urn2:postort>\r
+                  <urn2:telefonnummer>?</urn2:telefonnummer>\r
+                  <!--Optional:-->\r
+                  <urn2:epost>?</urn2:epost>\r
+                  <urn2:vardgivare>\r
+                     <urn2:vardgivare-id>\r
+                        <urn3:root>1.2.752.129.2.1.4.1</urn3:root>\r
+                        <urn3:extension>?</urn3:extension>\r
+                     </urn2:vardgivare-id>\r
+                     <urn2:vardgivarnamn>?</urn2:vardgivarnamn>\r
+                     <!--You may enter ANY elements at this point-->\r
+                  </urn2:vardgivare>\r
+                  <!--You may enter ANY elements at this point-->\r
+               </urn2:enhet>\r
+               <!--Zero or more repetitions:-->\r
+               <urn2:specialistkompetens>\r
+                  <urn3:code>?</urn3:code>\r
+                  <!--Optional:-->\r
+                  <urn3:displayName>?</urn3:displayName>\r
+               </urn2:specialistkompetens>\r
+               <!--Zero or more repetitions:-->\r
+               <urn4:legitimeratYrke>\r
+                  <urn3:code>?</urn3:code>\r
+                  <urn3:codeSystem>1.2.752.29.23.1.6</urn3:codeSystem>\r
+                  <!--Optional:-->\r
+                  <urn3:displayName>?</urn3:displayName>\r
+               </urn4:legitimeratYrke>\r
+            </urn2:skapadAv>\r
+            <!--Zero or more repetitions:-->\r
+            <urn2:relation>\r
+               <urn2:typ>\r
+                  <urn3:code>?</urn3:code>\r
+                  <urn3:codeSystem>c2362fcd-eda0-4f9a-bd13-b3bbaf7f2146</urn3:codeSystem>\r
+                  <!--Optional:-->\r
+                  <urn3:displayName>?</urn3:displayName>\r
+               </urn2:typ>\r
+               <urn2:intygs-id>\r
+                  <urn3:root>?</urn3:root>\r
+                  <urn3:extension>?</urn3:extension>\r
+               </urn2:intygs-id>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn2:relation>\r
+            <!--Zero or more repetitions:-->\r
+            <urn2:status>\r
+               <urn2:part>\r
+                  <urn3:code>?</urn3:code>\r
+                  <urn3:codeSystem>769bb12b-bd9f-4203-a5cd-fd14f2eb3b80</urn3:codeSystem>\r
+                  <!--Optional:-->\r
+                  <urn3:displayName>?</urn3:displayName>\r
+               </urn2:part>\r
+               <urn2:status>\r
+                  <urn3:code>?</urn3:code>\r
+                  <urn3:codeSystem>9871cd17-8755-4ed9-b894-ff3729e775a4</urn3:codeSystem>\r
+                  <!--Optional:-->\r
+                  <urn3:displayName>?</urn3:displayName>\r
+               </urn2:status>\r
+               <urn2:tidpunkt>?</urn2:tidpunkt>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn2:status>\r
+            <!--Zero or more repetitions:-->\r
+            <urn2:svar id="?">\r
+               <!--Optional:-->\r
+               <urn2:instans>?</urn2:instans>\r
+               <!--1 or more repetitions:-->\r
+               <urn2:delsvar id="?">\r
+                  e\r
+                  <!--You may enter ANY elements at this point-->\r
+                  gero\r
+               </urn2:delsvar>\r
+               <!--You may enter ANY elements at this point-->\r
+            </urn2:svar>\r
+            <!--Optional:-->\r
+            <urn4:underskrift>\r
+               <xd:Signature Id="?">\r
+                  <xd:SignedInfo Id="?">\r
+                     <xd:CanonicalizationMethod Algorithm="?">\r
+                        cum\r
+                        <!--You may enter ANY elements at this point-->\r
+                        sonoras\r
+                     </xd:CanonicalizationMethod>\r
+                     <xd:SignatureMethod Algorithm="?">\r
+                        aeoliam\r
+                        <!--Optional:-->\r
+                        <xd:HMACOutputLength>?</xd:HMACOutputLength>\r
+                        quae\r
+                        <!--You may enter ANY elements at this point-->\r
+                        ventos\r
+                     </xd:SignatureMethod>\r
+                     <!--1 or more repetitions:-->\r
+                     <xd:Reference Id="?" URI="?" Type="?">\r
+                        <!--Optional:-->\r
+                        <xd:Transforms>\r
+                           <!--1 or more repetitions:-->\r
+                           <xd:Transform Algorithm="?">\r
+                              verrantque\r
+                              <!--You have a CHOICE of the next 2 items at this level-->\r
+                              <!--You may enter ANY elements at this point-->\r
+                              <xd:XPath>?</xd:XPath>\r
+                              temperat\r
+                           </xd:Transform>\r
+                        </xd:Transforms>\r
+                        <xd:DigestMethod Algorithm="?">\r
+                           per\r
+                           <!--You may enter ANY elements at this point-->\r
+                           turbine\r
+                        </xd:DigestMethod>\r
+                        <xd:DigestValue>cid:1405006721939</xd:DigestValue>\r
+                     </xd:Reference>\r
+                  </xd:SignedInfo>\r
+                  <xd:SignatureValue Id="?">cid:318993996021</xd:SignatureValue>\r
+                  <!--Optional:-->\r
+                  <xd:KeyInfo Id="?">\r
+                     circum\r
+                     <!--You have a CHOICE of the next 8 items at this level-->\r
+                     <xd:KeyName>?</xd:KeyName>\r
+                     <xd:KeyValue>\r
+                        regemque\r
+                        <!--You have a CHOICE of the next 3 items at this level-->\r
+                        <xd:DSAKeyValue>\r
+                           <xd:P>cid:711788827493</xd:P>\r
+                           <xd:Q>cid:1297358128792</xd:Q>\r
+                           <!--Optional:-->\r
+                           <xd:G>cid:76553335194</xd:G>\r
+                           <xd:Y>cid:79378499753</xd:Y>\r
+                           <!--Optional:-->\r
+                           <xd:J>cid:539179144808</xd:J>\r
+                           <xd:Seed>cid:1176832027860</xd:Seed>\r
+                           <xd:PgenCounter>cid:1119220250198</xd:PgenCounter>\r
+                        </xd:DSAKeyValue>\r
+                        <xd:RSAKeyValue>\r
+                           <xd:Modulus>cid:1643152404143</xd:Modulus>\r
+                           <xd:Exponent>cid:1323262449095</xd:Exponent>\r
+                        </xd:RSAKeyValue>\r
+                        <!--You may enter ANY elements at this point-->\r
+                        nimborum\r
+                     </xd:KeyValue>\r
+                     <xd:RetrievalMethod URI="?" Type="?">\r
+                        <!--Optional:-->\r
+                        <xd:Transforms>\r
+                           <!--1 or more repetitions:-->\r
+                           <xd:Transform Algorithm="?">\r
+                              fremunt\r
+                              <!--You have a CHOICE of the next 2 items at this level-->\r
+                              <!--You may enter ANY elements at this point-->\r
+                              <xd:XPath>?</xd:XPath>\r
+                              foedere\r
+                           </xd:Transform>\r
+                        </xd:Transforms>\r
+                     </xd:RetrievalMethod>\r
+                     <xd:X509Data>\r
+                        <!--You have a CHOICE of the next 6 items at this level-->\r
+                        <xd:X509IssuerSerial>\r
+                           <xd:X509IssuerName>?</xd:X509IssuerName>\r
+                           <xd:X509SerialNumber>?</xd:X509SerialNumber>\r
+                        </xd:X509IssuerSerial>\r
+                        <xd:X509SKI>cid:96326839353</xd:X509SKI>\r
+                        <xd:X509SubjectName>?</xd:X509SubjectName>\r
+                        <xd:X509Certificate>cid:1450473989201</xd:X509Certificate>\r
+                        <xd:X509CRL>cid:604619640471</xd:X509CRL>\r
+                        <!--You may enter ANY elements at this point-->\r
+                     </xd:X509Data>\r
+                     <xd:PGPData>\r
+                        <!--You have a CHOICE of the next 2 items at this level-->\r
+                        <xd:PGPKeyID>cid:1165973633901</xd:PGPKeyID>\r
+                        <!--Optional:-->\r
+                        <xd:PGPKeyPacket>cid:1613534953079</xd:PGPKeyPacket>\r
+                        <!--You may enter ANY elements at this point-->\r
+                        <xd:PGPKeyPacket>cid:1156408019854</xd:PGPKeyPacket>\r
+                        <!--You may enter ANY elements at this point-->\r
+                     </xd:PGPData>\r
+                     <xd:SPKIData>\r
+                        <xd:SPKISexp>cid:1458678609780</xd:SPKISexp>\r
+                        <!--You may enter ANY elements at this point-->\r
+                     </xd:SPKIData>\r
+                     <xd:MgmtData>?</xd:MgmtData>\r
+                     <!--You may enter ANY elements at this point-->\r
+                     ferant\r
+                  </xd:KeyInfo>\r
+                  <!--Zero or more repetitions:-->\r
+                  <xd:Object Id="?" MimeType="?" Encoding="?">\r
+                     profundum\r
+                     <!--You may enter ANY elements at this point-->\r
+                     sceptra\r
+                  </xd:Object>\r
+               </xd:Signature>\r
+            </urn4:underskrift>\r
+         </urn1:intyg>\r
+         <!--You may enter ANY elements at this point-->\r
+      </urn1:RegisterCertificate>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:healthcond:certificate:RegisterCertificateResponder:3:RegisterCertificate"/></con:call></con:operation></con:interface><con:testSuite id="12bf825d-25f8-4220-a68d-a2deddd0059c" name="fk_cert_proxy"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="aa389d4b-cc8e-4807-b662-ecf07f71731d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="FK CertProxy RegisterCertificate" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="d0fe79fa-478d-4c50-a2f1-08b5ce8d3593"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+import com.eviware.soapui.support.GroovyUtils
+
+def utils = new GroovyUtils(context)
+def dataFile = new File(utils.projectPath + "/data.xml")
+def source = new XmlDataReader(context, dataFile)
+
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Copy of Skip if not QA" id="64ca989f-9ce4-4efe-acfd-c98a170a3f09"><con:settings/><con:config><script>if (!context.VP.contains("qa.esb.ntjp"))
+	testRunner.cancel( "Not supported for ${context.VP}, skipping!" )</script></con:config></con:testStep><con:testStep type="request" id="add4958a-a728-4745-99e2-00d539415a1c" name="RegisterCertificate"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RegisterCertificateResponderBinding</con:interface><con:operation>RegisterCertificate</con:operation><con:request name="RegisterCertificate" id="f24be091-b6a0-4a0b-9fdb-7c1dfcafa02f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:certificate:RegisterCertificateResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:certificate:3" xmlns:urn3="urn:riv:clinicalprocess:healthcond:certificate:types:3" xmlns:urn4="urn:riv:clinicalprocess:healthcond:certificate:3.2" xmlns:xd="http://www.w3.org/2000/09/xmldsig#">
+   <soapenv:Header>
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:RegisterCertificate>
+         <urn1:intyg>
+            <urn2:intygs-id>
+               <urn3:root>123456789</urn3:root>
+               <urn3:extension>1234567</urn3:extension>
+            </urn2:intygs-id>
+            <urn2:typ>
+               <urn3:code>LISJP</urn3:code>
+               <urn3:codeSystem>b64ea353-e8f6-4832-b563-fc7d46f29548</urn3:codeSystem>
+               <urn3:displayName>Läkarintyg för sjukpenning</urn3:displayName>
+            </urn2:typ>
+            <urn2:version>1.2</urn2:version>
+            <urn2:signeringstidpunkt>2015-12-07T15:48:05</urn2:signeringstidpunkt>
+            <urn2:skickatTidpunkt>2015-12-07T15:48:05</urn2:skickatTidpunkt>
+            <urn2:patient>
+               <urn2:person-id>
+                  <urn3:root>1.2.752.129.2.1.3.1</urn3:root>
+                  <urn3:extension>192703104321</urn3:extension>
+               </urn2:person-id>
+               <urn2:fornamn>Bart</urn2:fornamn>
+               <urn2:efternamn>Simpson</urn2:efternamn>
+               <urn2:postadress>Storgatan 1</urn2:postadress>
+               <urn2:postnummer>12345</urn2:postnummer>
+               <urn2:postort>Springfield</urn2:postort>
+            </urn2:patient>
+            <urn2:skapadAv>
+               <urn2:personal-id>
+                  <urn3:root>1.2.752.129.2.1.4.1</urn3:root>
+                  <urn3:extension>19650708-1234</urn3:extension>
+               </urn2:personal-id>
+               <urn2:fullstandigtNamn>Karl Karlsson</urn2:fullstandigtNamn>
+               <urn2:forskrivarkod>09874321</urn2:forskrivarkod>
+               <urn2:befattning>
+                  <urn3:code>Klinikchef</urn3:code>
+                  <urn3:codeSystem>1.2.752.129.2.2.1.4</urn3:codeSystem>
+               </urn2:befattning>
+               <urn2:enhet>
+                  <urn2:enhets-id>
+                     <urn3:root>1.2.752.129.2.1.4.1</urn3:root>
+                     <urn3:extension>123456789</urn3:extension>
+                  </urn2:enhets-id>
+                  <urn2:arbetsplatskod>
+                     <urn3:root>1.2.752.29.4.71</urn3:root>
+                     <urn3:extension>45312</urn3:extension>
+                  </urn2:arbetsplatskod>
+                  <urn2:enhetsnamn>VE1</urn2:enhetsnamn>
+                  <urn2:postadress>Enhetsg. 1</urn2:postadress>
+                  <urn2:postnummer>100 10</urn2:postnummer>
+                  <urn2:postort>Stadby</urn2:postort>
+                  <urn2:telefonnummer>0812341234</urn2:telefonnummer>
+                  <urn2:epost>ve1@vg1.se</urn2:epost>
+                  <urn2:vardgivare>
+                     <urn2:vardgivare-id>
+                        <urn3:root>1.2.752.129.2.1.4.1</urn3:root>
+                        <urn3:extension>12345678</urn3:extension>
+                     </urn2:vardgivare-id>
+                     <urn2:vardgivarnamn>VG1</urn2:vardgivarnamn>
+                  </urn2:vardgivare>
+               </urn2:enhet>
+               <urn2:specialistkompetens>
+                  <urn3:code>Kirurg</urn3:code>
+                  <urn3:displayName>specialistkompetens-displayName</urn3:displayName>
+               </urn2:specialistkompetens>
+            </urn2:skapadAv>            
+            <urn2:svar id="1">
+               <urn2:instans>1</urn2:instans>
+               <urn2:delsvar id="1.1">
+                 <urn3:cv>
+                   <urn3:code>TELEFONKONTAKT</urn3:code>
+                   <urn3:codeSystem>KV_FKMU_0001</urn3:codeSystem>
+                 </urn3:cv>
+               </urn2:delsvar>
+               <urn2:delsvar id="1.2">2015-12-07 </urn2:delsvar>
+            </urn2:svar>            
+            <urn2:svar id="6">
+               <urn2:delsvar id="6.1">Klämskada skuldra</urn2:delsvar>
+               <urn2:delsvar id="6.2">
+                 <urn3:cv>
+                   <urn3:code>S47</urn3:code>
+                   <urn3:codeSystem>1.2.752.116.1.1.1.1.3</urn3:codeSystem>
+                 </urn3:cv>
+               </urn2:delsvar>
+            </urn2:svar>            
+            <urn2:svar id="17">
+               <urn2:delsvar id="17.1">Kommer inte in i bilen</urn2:delsvar>
+            </urn2:svar>            
+            <urn2:svar id="28">
+               <urn2:instans>1</urn2:instans>
+               <urn2:delsvar id="28.1">
+                 <urn3:cv>
+                   <urn3:code>NUVARANDE_ARBETE</urn3:code>
+                   <urn3:codeSystem>KV_FKMU_0002</urn3:codeSystem>
+                 </urn3:cv>
+               </urn2:delsvar>
+            </urn2:svar>            
+            <urn2:svar id="29">
+               <urn2:delsvar id="29.1">Smed</urn2:delsvar>
+            </urn2:svar>            
+            <urn2:svar id="32">
+               <urn2:instans>1</urn2:instans>
+               <urn2:delsvar id="32.1">
+                 <urn3:cv>
+                   <urn3:code>TRE_FJARDEDEL</urn3:code>
+                   <urn3:codeSystem>KV_FKMU_0003</urn3:codeSystem>
+                   <urn3:displayName>75%</urn3:displayName>
+                 </urn3:cv>
+               </urn2:delsvar>
+               <urn2:delsvar id="32.2">
+                 <urn3:datePeriod>
+                   <urn3:start>2015-12-12</urn3:start>
+                   <urn3:end>2015-12-14</urn3:end>
+                 </urn3:datePeriod>
+               </urn2:delsvar>
+            </urn2:svar>            
+            <urn2:svar id="33">
+               <urn2:delsvar id="33.1">true</urn2:delsvar>
+               <urn2:delsvar id="33.2">Kan bara jobba på nätterna.</urn2:delsvar>
+            </urn2:svar>            
+            <urn2:svar id="35">
+               <urn2:delsvar id="35.1">Haltar när han dansar</urn2:delsvar>
+            </urn2:svar>            
+            <urn2:svar id="39">
+               <urn2:delsvar id="39.1">
+                 <urn3:cv>
+                   <urn3:code>PROGNOS_OKLAR</urn3:code>
+                   <urn3:codeSystem>KV_FKMU_0006</urn3:codeSystem>
+                 </urn3:cv>
+               </urn2:delsvar>
+            </urn2:svar>            
+            <urn2:svar id="40">
+              <urn2:instans>1</urn2:instans>
+               <urn2:delsvar id="40.1">
+                 <urn3:cv>
+                   <urn3:code>OVRIGA_ATGARDER</urn3:code>
+                   <urn3:codeSystem>KV_FKMU_0004</urn3:codeSystem>
+                 </urn3:cv>
+               </urn2:delsvar>
+            </urn2:svar>            
+         </urn1:intyg>
+      </urn1:RegisterCertificate>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Fault Assertion" id="0800e612-6536-4f85-ba6a-5c67712cf8cd" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="46c1d29a-80d3-47f1-8e48-89a12341c833" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:assertion type="Simple Contains" id="8e9cdaed-ffc7-4a86-aa25-4783fa0f2ac0" name="Assert resultCode"><con:configuration><token>&lt;ns2:resultCode>OK&lt;/ns2:resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:certificate:RegisterCertificateResponder:3:RegisterCertificate" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

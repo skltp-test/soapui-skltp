@@ -1084,4 +1084,9 @@ under the License.
 			<logicalAddress>2021005448</logicalAddress>
 		</data>
 	</testcase>
+	<testcase id="FK CertProxy RegisterCertificate">
+		<data>
+			<logicalAddress>2021005521</logicalAddress>
+		</data>
+	</testcase>
 </testsuite>
