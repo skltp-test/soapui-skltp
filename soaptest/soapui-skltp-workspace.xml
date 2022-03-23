@@ -16,5 +16,6 @@
   <con:project name="SKLTP-REST-Takapi">SKLTP-REST-Takapi-soapui-project.xml</con:project>
   <con:project name="SKLTP-Adapter-ApSe">SKLTP-Adapter-ApSe-soapui-project.xml</con:project>
   <con:project name="SKLTP-Adapter-Axel">SKLTP-Adapter-Axel-soapui-project.xml</con:project>
+  <con:project name="SKLTP-Adapter-FkCertProxy">SKLTP-Adapter-FkCertProxy-soapui-project.xml</con:project>
   <con:collectInfoForSupport>false</con:collectInfoForSupport>
 </con:soapui-workspace>
