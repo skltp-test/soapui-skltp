@@ -13,4 +13,5 @@ chown -R $DIR_OWNER $DIR
 #-----------------------------------------
 # -j: Output jUnit XML report
 # -r: Pretty print the result at the end of the run.
-find . -maxdepth 1 -iname "$1" -exec echo {} \; -exec /opt/soapui/bin/testrunner.sh {} -j -r \;
+# -f: directory for report files
+find . -maxdepth 1 -iname "$1" -exec echo {} \; -exec /opt/soapui/bin/testrunner.sh {} -j -r -freport \;
