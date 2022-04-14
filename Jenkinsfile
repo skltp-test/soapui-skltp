@@ -25,6 +25,7 @@ pipeline {
                             -e  's,COOPERATION,'"${params.COOPERATION_URL}"','\
                                  data-sed.xml > data.xml
                         cat data.xml
+                        rm -f ./report/*
                         docker build -t testsuite .
                     """
                 }
