@@ -1,8 +1,6 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'COOPERATION_URL', defaultValue: 'http://ind-ptjp-apache-api-vip.ind1.sth.basefarm.net', description: 'nod för takapi att testa, lämna tom för att stå över')
-        string(name: 'EMAIL_ON_FAIL_DEST', defaultValue: 'fd8ba3ec.inera.se@emea.teams.ms', description: 'E-post att skicka meddelande om fel till')
         booleanParam(name: 'RUN_CORE', defaultValue: true, description: 'Kör tester av kärnfunktionalitet')
         booleanParam(name: 'RUN_EI', defaultValue: true, description: 'Kör EI-tester')
         booleanParam(name: 'RUN_AGP', defaultValue: true, description: 'Kör tester för aggregerande tjänster')
