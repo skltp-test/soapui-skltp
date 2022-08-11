@@ -24,7 +24,8 @@ under the License.
 	<description>Denna testsvit används för att verifiera releasekandidater av NTjP.</description>
 	<globaldata>
 		<VP>https://TARGETHOST/vp/</VP>
-                <COOP>COOPERATION</COOP>
+		<COOP>COOPERATION</COOP>
+		<COOP_AUTH>COOPAUTH</COOP_AUTH>
 		<webServiceUrlEI>https://TARGETHOST/vp/Update/1/rivtabp21</webServiceUrlEI>
 		<webServiceUrlFC>https://TARGETHOST/vp/FindContent/1/rivtabp21</webServiceUrlFC>
 		<webServiceUrlPN>https://TARGETHOST/vp/ProcessNotification/1/rivtabp21</webServiceUrlPN>

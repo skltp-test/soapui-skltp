@@ -10,7 +10,10 @@ pipeline {
     stages {
        stage('Prepare SOAP testing') {
             steps {
-                withCredentials([certificate(credentialsId: 'TSTNMT2321000156-B02', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTKEYPWD')]) {
+                withCredentials([
+                    certificate(credentialsId: 'TSTNMT2321000156-B02', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTKEYPWD')
+                    string(credentialsId: 'ntjp-cooperation-auth-header', variable: 'COOP_AUTH_HEADER')
+                ]) {
                     sh """
                         #! /bin/bash
                         echo "Tests will be run against the following host: ${TARGETHOST}"
@@ -20,9 +23,8 @@ pipeline {
                         ls -l ./cert.p12
                         sed -e 's@KEYSTOREVARIABLE@'"cert.p12"'@; s@KEYSTOREPASSWORD@'"${CERTKEYPWD}"'@' soapui-sed.xml > soapui-settings.xml
                         sed -e 's@SOURCESYSTEMHSA@'"${SOURCESYSTEMHSA}"'@; s@TARGETHOST@'"${TARGETHOST}"'@'  \
-                            -e  's,COOPERATION,'"${params.COOPERATION_URL}"','\
-                                 data-sed.xml > data.xml
-                        cat data.xml
+                            -e 's@COOPERATION@'"${params.COOPERATION_URL}"'@; s@COOPAUTH@'"${COOP_AUTH_HEADER}"'@' \
+                            data-sed.xml > data.xml
                         rm -f ./report/*
                         docker build -t testsuite .
                     """
