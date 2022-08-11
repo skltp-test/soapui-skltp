@@ -11,7 +11,7 @@ pipeline {
        stage('Prepare SOAP testing') {
             steps {
                 withCredentials([
-                    certificate(credentialsId: 'TSTNMT2321000156-B02', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTKEYPWD')
+                    certificate(credentialsId: 'TSTNMT2321000156-B02', keystoreVariable: 'CERTKEY', passwordVariable: 'CERTKEYPWD'),
                     string(credentialsId: 'ntjp-cooperation-auth-header', variable: 'COOP_AUTH_HEADER')
                 ]) {
                     sh """
