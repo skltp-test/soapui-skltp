@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements. See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+to you under the Apache License, Version 2.0 (the
+        "License"); you may not use this file except in compliance
+with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied. See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<?xml-stylesheet type="text/xsl" href="./../TK-doc-sv.xsl"?>
+<testsuite>
+	<id>NTjP</id>
+	<contractName>GetCareDocumentation</contractName>
+	<description>Denna testsvit används för att verifiera releasekandidater av NTjP.</description>
+	<globaldata>
+		<VP>https://TARGETHOST/vp/</VP>
+		<COOP>COOPERATION</COOP>
+		<COOP_AUTH>COOPAUTH</COOP_AUTH>
+		<webServiceUrlEI>https://TARGETHOST/vp/Update/1/rivtabp21</webServiceUrlEI>
+		<webServiceUrlFC>https://TARGETHOST/vp/FindContent/1/rivtabp21</webServiceUrlFC>
+		<webServiceUrlPN>https://TARGETHOST/vp/ProcessNotification/1/rivtabp21</webServiceUrlPN>
+		<!-- <webServiceUrlSubscriberFC>https://tjp.nordicmedtest.se/skaulo/vp/itintegration/engagementindex/FindContent/1/rivtabp21</webServiceUrlSubscriberFC> -->
+		<webServiceUrlSubscriberFC>https://TARGETHOST/vp/FindContent/1/rivtabp21</webServiceUrlSubscriberFC>
+		<webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl>
+		<webServiceUrlFaulty1>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp20</webServiceUrlFaulty1>
+		<webServiceUrlFaulty2>https://TARGETHOST</webServiceUrlFaulty2>
+		
+		<webServiceUrlGAI>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetAlertInformation/2/rivtabp21</webServiceUrlGAI>
+		<webServiceUrlGCD>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrlGCD>
+		<webServiceUrlGD>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21</webServiceUrlGD>
+		<webServiceUrlGFS>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetFunctionalStatus/2/rivtabp21</webServiceUrlGFS>
+		<webServiceUrlGVH>https://TARGETHOST/vp/clinicalprocess/activityprescription/actoutcome/GetVaccinationHistory/1/rivtabp21</webServiceUrlGVH>
+		<webServiceUrlGMH>https://TARGETHOST/vp/clinicalprocess/activityprescription/actoutcome/GetMedicationHistory/2/rivtabp21</webServiceUrlGMH>
+		<webServiceUrlGCC>https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCareContacts/2/rivtabp21</webServiceUrlGCC>
+		<webServiceUrlGCP>https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCarePlans/2/rivtabp21</webServiceUrlGCP>
+		<webServiceUrlGCS>https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCareServices/2/rivtabp21</webServiceUrlGCS>
+		<webServiceUrlGECGO>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetECGOutcome/1/rivtabp21</webServiceUrlGECGO>
+		<webServiceUrlGIO>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetImagingOutcome/1/rivtabp21</webServiceUrlGIO>
+		<webServiceUrlGLOO>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetLaboratoryOrderOutcome/3/rivtabp21</webServiceUrlGLOO>
+		<webServiceUrlGMMH>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetMaternityMedicalHistory/3/rivtabp21</webServiceUrlGMMH>
+		<webServiceUrlGRO>https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetReferralOutcome/3/rivtabp21</webServiceUrlGRO>
+		<webServiceUrlGO>https://TARGETHOST/vp/clinicalprocess/healthcond/basic/GetObservations/1/rivtabp21</webServiceUrlGO>
+		<webServiceUrlGA>https://TARGETHOST/vp/clinicalprocess/activity/actions/GetActivities/1/rivtabp21</webServiceUrlGA>
+		<webServiceUrlGRA>https://TARGETHOST/vp/crm/requeststatus/GetRequestActivities/1/rivtabp21</webServiceUrlGRA>
+		<webServiceUrlGSOCS>https://TARGETHOST/vp/GetSubjectOfCareSchedule/1/rivtabp21</webServiceUrlGSOCS>
+		<webServiceUrlRMCQ>https://TARGETHOST/vp/ReceiveMedicalCertificateQuestion/1/rivtabp20</webServiceUrlRMCQ>
+		<webServiceUrlRMCA>https://TARGETHOST/vp/ReceiveMedicalCertificateAnswer/1/rivtabp20</webServiceUrlRMCA>
+		<webServiceUrlRES>https://TARGETHOST/vp/financial/patientfees/exemption/RequestExemptionStatuses/1/rivtabp21</webServiceUrlRES>
+		
+		<webServiceUrlFindAllQuestions20>https://TARGETHOST/vp/FindAllQuestions/1/rivtabp20</webServiceUrlFindAllQuestions20>
+		<webServiceUrlFindAllQuestions21>https://TARGETHOST/vp/FindAllQuestions/1/rivtabp21</webServiceUrlFindAllQuestions21>
+		<webServiceUrlKontrolleraSamtycke>https://TARGETHOST/vp/KontrolleraSamtycke/1/rivtabp21</webServiceUrlKontrolleraSamtycke>
+		<webServiceUrlKontrolleraForskrivarbehorighet>https://TARGETHOST/vp/KontrolleraForskrivarbehorighet/1/rivtabp20</webServiceUrlKontrolleraForskrivarbehorighet>
+		
+		<webServiceUrlGSSC1>https://TARGETHOST/vp/GetSupportedServiceContracts/1/rivtabp21</webServiceUrlGSSC1>
+		<webServiceUrlGSSC2>https://TARGETHOST/vp/GetSupportedServiceContracts/2/rivtabp21</webServiceUrlGSSC2>
+		<webServiceUrlGLABSC>https://TARGETHOST/vp/infrastructure/itintegration/registry/GetLogicalAddresseesByServiceContract/2/rivtabp21</webServiceUrlGLABSC>
+		
+		<webServiceUrlHamtaPatientInfo>https://TARGETHOST/vp/HamtaPatientInfo/5/rivtabp21</webServiceUrlHamtaPatientInfo>
+		<webServiceUrlHamtaAktuellaOrdinationer>https://TARGETHOST/vp/HamtaAktuellaOrdinationer/4/rivtabp21</webServiceUrlHamtaAktuellaOrdinationer>
+				
+		<serviceConsumerHsaId>TSTNMT2321000156-B02</serviceConsumerHsaId>
+		<httpHeaderHsaId>112233</httpHeaderHsaId>
+		<logicalAddress>5565594230</logicalAddress>
+		<subscriberEI>SKLTP-MOCK-EI</subscriberEI>
+		<owner>SE-NMT-OWNER</owner>
+		<owner1>SE-NMT-SKLTP-MOCK01</owner1>
+		<owner2>SE-NMT-SKLTP-MOCK02</owner2>
+		<owner3>SE-NMT-SKLTP-MOCK03</owner3>
+		
+		<patientId>196711222940</patientId>
+		<patientIdLong>19671122-2940</patientIdLong>
+		<patientId1>191001209814</patientId1>
+		<patientId2>191001229812</patientId2>
+		<patientId3>191001239803</patientId3>
+		<patientId4>191001249810</patientId4>
+		<patientId5>191001259827</patientId5>
+		<patientId6>191001269818</patientId6>
+		<patientId7>191001279809</patientId7>
+		<patientId8>191001289816</patientId8>
+		<patientId9>191001299807</patientId9>
+		<patientId10>191001309812</patientId10>
+		<patientId11>191001319803</patientId11>
+		<patientId12>189001039800</patientId12>
+		<patientId13>191003219811</patientId13>
+		<patientId14>191003229802</patientId14>
+		<patientId15>191003239819</patientId15>
+		<patientId16>191003249800</patientId16>
+		<patientId17>191003259817</patientId17>
+		<patientIdDos>192907169193</patientIdDos>
+		<patientIdNoEngagements>191001219805</patientIdNoEngagements>
+		<patientIdType>1.2.752.129.2.1.3.1</patientIdType>
+		<sourceSystemHSAId>LOAD-MOCKS</sourceSystemHSAId>
+		<!-- Loggparametrar-->
+		<logTestData>true</logTestData>
+		<logTestDataPath>/temp/SOAP-UI/</logTestDataPath>
+		<logTestDataFilesAllowed>500</logTestDataFilesAllowed>
+	</globaldata>
+
+        <testcase id="general test data"/>
+	<testcase id="1.1.1 Angränsande konsument skickar fråga via aggregerande tjänst">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
+			VP - Vårdsystemets request skickas vidare till AGP (x-rivta-original-serviceconsumer-hsaid saknas, HSA tas från certifikatet)
+			AGP(GCD) - Genererar en request mot EI för att kontrollera engagemang för patienten
+			VP - AGP's request skickas vidare internt till EI. (http, x-vp-sender-id satt)
+			AGP(GCD) - Genererar request(er) baserat på ursprungsrequesten, direktaddresserat mot relevanta producenter
+			VP - AGP's request(er) skickas vidare externt till producent(er). (x-vp-sender-id satt, x-rivta-original-serviceconsumer-hsaid satt)
+			
+			Förväntat resultat:
+			x-vp-sender-id = (taget från certificatet)
+			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från x-vp-sender-id)
+		</description>
+	</testcase>
+	<testcase id="1.1.2 Angränsande konsument skickar fråga via aggregerande tjänst (x-rivta-original-serviceconsumer-hsaid satt)">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
+			VP - Vårdsystemets request skickas vidare till AGP (x-rivta-original-serviceconsumer-hsaid satt, 
+			  HSA tas från x-rivta-original-serviceconsumer-hsaid)
+			I övrigt, se Testfall 1.1.1
+			
+			Förväntat resultat:
+			x-vp-sender-id = (taget från certificatet)
+			x-rivta-original-serviceconsumer-hsaid = KONSUMENT2 (taget från x-vp-sender-id)
+		</description>
+	</testcase>
+	<testcase id="1.1.3 Avlägsen konsument skickar fråga via aggregerande tjänst">
+		<description>
+			(KONSUMENT1 ->  RTJP) -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
+			VP - Vårdsystemets request skickas vidare till AGP (x-rivta-original-serviceconsumer-hsaid satt, skiljer sig från x-vp-sender-id). 
+			I övrigt, se Testfall 1.1.1
+			
+			Förväntat resultat:
+			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från x-rivta-original-serviceconsumer-hsaid)
+		</description>
+	</testcase>
+	<testcase id="1.1.4 Angränsande konsument skickar fråga via aggregerande tjänst (x-vp-sender-id satt)">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
+			VP - Vårdsystemets request skickas vidare till AGP (x-vp-sender-id satt, 
+			men ska ignoreras då sender-id tas från certifikatet)
+			I övrigt, se Testfall 1.1.1
+			
+			Förväntat resultat:
+			x-vp-sender-id = XVPSENDERID
+			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från certificatet)
+		</description>
+	</testcase>
+	<testcase id="1.2.1 Angränsande konsument skickar direktaddresserad fråga">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT) -> PRODUCENT1
+			VP - Vårdsystemets request skickas vidare externt till PRODUCENT1
+			
+			Förväntat resultat:
+			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från x-vp-sender-id)
+		</description>
+		<data>
+			<logicalAddress>LOAD-MOCKS</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="1.2.2 Avlägsen konsument skickar direktaddresserad fråga">
+		<description>
+			(KONSUMENT1 ->  RTJP) -> NTJP(SUT) -> PRODUCENT1
+			VP - Vårdsystemets request skickas vidare externt till PRODUCENT1 (x-rivta-original-serviceconsumer-hsaid satt, skiljer sig från x-vp-sender-id)
+			
+			Förväntat resultat:
+			x-rivta-original-serviceconsumer-hsaid = HSA_KONSUMENT1 (taget från x-rivta-original-serviceconsumer-hsaid)
+		</description>
+		<data>
+			<logicalAddress>LOAD-MOCKS</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="1.3.1 Angränsande konsument skickar fråga via aggregerande tjänst (x-skltp-correlation-id satt)">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT) -> PRODUCENT1/PRODUCENT2
+			VP - Vårdsystemets request skickas vidare till AGP (x-skltp-correlation-id satt, 
+			  HSA tas från x-rivta-original-serviceconsumer-hsaid)
+			I övrigt, se Testfall 1.1.1
+			
+			Förväntat resultat:
+			x-skltp-correlation-id returneras i response
+			x-rivta-original-serviceconsumer-hsaid = KONSUMENT2 (taget från x-vp-sender-id)
+		</description>
+	</testcase>
+	<testcase id="1.3.2 Identiska Correlation Id">
+		<description>
+			Testfallet skickar två på varandra följande requester men använder samma x-skltp-correlation-id.
+			
+			Förväntat resultat:
+			x-skltp-correlation-id returneras i responsen i båda fallen.
+		</description>
+	</testcase>
+	<testcase id="1.3.3 Angränsande konsument skickar direktaddresserad fråga (x-skltp-correlation-id satt)">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT) -> PRODUCENT1
+			VP - Vårdsystemets request skickas vidare externt till PRODUCENT1
+			
+			Förväntat resultat:
+			x-skltp-correlation-id returneras i response, identiskt med skickat.
+		</description>
+		<data>
+			<logicalAddress>LOAD-MOCKS</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="1.4.1 Ursprunglig konsument skickar fråga (ingen tidigare anropskejda)">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT)
+			VP - Vårdsystemets request skickas vidare till AGP
+			
+			Förväntat resultat:
+			Headern x-rivta-routing-history returneras. 
+			Avsändaren betraktas som ursprunglig avsändare och dess identitet (HSA-ID) skall hämtas från inkommande klient 
+			certifikat och sättas först i http headern. Därefter skall tjänsteplattformens eget HSA-id adderas, 
+			där tecknet "#" används som avskiljare.
+		</description>
+	</testcase>
+	<testcase id="1.4.2 Fråga med tidigare anropskejda skickas vidare">
+		<description>
+			(KONSUMENT1 -> RTJP) -> NTJP(SUT) (x-rivta-routing-history satt)
+			VP - Vårdsystemets request skickas vidare till AGP
+			
+			Förväntat resultat:
+			Headern x-rivta-routing-history returneras. 
+			
+			Tjänsteplattformens eget HSA-id adderas till headern x-rivta-routing-history, tecknet "#" används som avskiljare.
+		</description>
+		<data>
+			<routingHistory>SE-CONSUMER-HSAID#SE-RTJP-HSAID</routingHistory>
+		</data>
+	</testcase>
+	
+	<testcase id="2.1.1 Konsument anropar okänd tjänst">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT)
+			VP - NTjP kontroller inte URL'en, utan väljer tjänst att anropa baserat på SOAPAction.
+			Vårdsystemets request skickas vidare
+			
+			(beteendet förändrades i asmband med byte till Camel.)
+			
+			Förväntat resultat:
+			OK response
+		</description>
+	</testcase>
+	<testcase id="2.1.2 Konsument anropar hostname">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT)
+			VP - Vårdsystemets request skickas inte vidare
+			
+			Förväntat resultat:
+			Felkod 404 returneras med felmeddelande.
+		</description>
+	</testcase>
+	<testcase id="2.3.1 Konsument anropar utan logisk adress (VP003)">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT)
+			VP - Vårdsystemets request skickas inte vidare
+			
+			Förväntat resultat:
+			VP003 returneras (ReceiverId ej ifylld i RivHeadern i inkommande meddelande.)
+		</description>
+	</testcase>
+	<testcase id="2.3.2 Konsument anropar utan logisk adress (VP003) (GD)">
+		<description>
+			Kompletterade test för att kontrollera ytterligare tjänstekontrakt
+		</description>
+	</testcase>
+	<testcase id="2.4.1 Konsument anropar okänd tjänsteproducent (VP004)">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT)
+			VP - Vårdsystemets request skickas inte vidare
+			
+			Förväntat resultat:
+			VP004 returneras (Det finns ingen tjänsteproducent definierad i Tjänstekatalogen som matchar ReceiverId, Tjänstekontrakt och dagens datum.)
+		</description>
+		<data>
+			<logicalAddress>PRODUCENT4</logicalAddress>
+		        <sourceSystemHSAId>PRODUCENT4</sourceSystemHSAId>
+		</data>
+	</testcase>
+	<testcase id="2.7.1 Konsument anropar tjänsteproducent där samverkansbehörighet saknas (VP007)">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT)
+			VP - Vårdsystemets request skickas inte vidare
+			
+			Förväntat resultat:
+			VP007 returneras (Den finns ingen behörighet för den tjänstekomponent som anropar att samverka med tjänsteproducenten. 
+			  Avser behörigheter definierade i tjänstekatalogen.)
+		</description>
+		<data>
+			<logicalAddress>PRODUCER-NO-AUTHORIZATION</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="2.9.1 Konsument anropar tjänsteproducent som inte är kontaktbar (VP009)">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT)
+			VP - Vårdsystemets request skickas inte vidare
+			
+			Förväntat resultat:
+			VP009 returneras (Fel vid kontakt med tjänsteproducenten.)
+		</description>
+		<data>
+			<logicalAddress>PRODUCER-NOT-AVAILABLE</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="2.10.1 Konsument anropar tjänsteproducent som svarar med SoapFault">
+		<description>
+			(KONSUMENT1) -> NTJP(SUT) -> PRODUCENT1
+			VP - Vårdsystemets request skickas vidare externt till PRODUCENT1
+			PRODUCENT1 svarar med SoapFault och http status 500
+			
+			Förväntat resultat:
+			VP vidarebefodrar SoapFault till KONSUMENT1 med oförändrad status 500
+		</description>
+		<data>
+			<logicalAddress>SKLTP-MOCK01</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="2.11.1 Rundgång mellan RTjP och NTjP (VP014)">
+		<description>
+			(RTJP) -> NTJP(SUT)
+						
+			Förväntat resultat:
+			VP014 returneras (Rundgång)
+		</description>
+	</testcase>
+	
+	<testcase id="3.1.1 Konsument rivtabp20 mot producent rivtabp20">
+		<description>
+			(KONSUMENT1 RIVTABP20) -> NTJP(SUT) -> (PRODUCENT RIVTABP20)
+			VP - Bibehåller headern:
+				To (från namespace http://www.w3.org/2005/08/addressing)
+			
+			Tjänstekontraktet KontrolleraSamtycke används.
+			
+			Förväntat resultat:
+			OK (RTjP och mocken förväntar RIVTABP20 format på KontrolleraSamtycke)
+		</description>
+		<data>
+			<logicalAddress>SKLTP-MOCK01</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="3.1.2 Konsument rivtabp21 mot producent rivtabp20">
+			<description>
+			(KONSUMENT1 RIVTABP21) -> NTJP(SUT) -> (PRODUCENT RIVTABP20)
+			VP - Omvandlar headern:
+				LogicalAdress (från namespace urn:riv:itintegration:registry:1) till
+				To (från namespace http://www.w3.org/2005/08/addressing)
+			
+			Tjänstekontraktet KontrolleraSamtycke används.
+			
+			Förväntat resultat:
+			OK (RTjP och mocken förväntar RIVTABP20 format på KontrolleraSamtycke)
+			NTjP genomför konverteringen			
+		</description>
+		<data>
+			<logicalAddress>SKLTP-MOCK01</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="3.1.3 Konsument rivtabp20 mot producent rivtabp21">
+		<data>
+			<logicalAddress>SKLTP-MOCK01</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="3.1.4 Konsument rivtabp21 mot producent rivtabp21">
+		<data>
+			<logicalAddress>SKLTP-MOCK01</logicalAddress>
+		</data>
+	</testcase>
+
+	<testcase id="Hämta wsdl - deltest">
+		<description>
+			Detta test är främst tänkt att köras från testet "Hämta wsdl" med olika
+			parametrar, men kan även köras direkt (främst för felsökning).
+		</description>
+		<data>
+			<wsdlEndpoint>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21?wsdl</wsdlEndpoint>
+			<testedInterfaceName>GetCareDocumentationResponderBinding_2.1</testedInterfaceName>
+		</data>
+	</testcase>
+
+	<testcase id="Hämta wsdl">
+		<description>
+			Hämtar WSDL för tjänstekontrakten nedan och jämför med lokalt lagrad wsdl för de olika interfacen
+		</description>
+		<data>
+			<wsdlEndpoints>
+				https://TARGETHOST/vp/FindAllQuestions/1/rivtabp20?wsdl;
+				https://TARGETHOST/vp/clinicalprocess/activity/actions/GetActivities/1/rivtabp21?wsdl;
+				https://TARGETHOST/vp/clinicalprocess/logistics/logistics/GetCareContacts/3/rivtabp21?wsdl;
+				https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21?wsdl;
+				https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21?wsdl;
+				https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21?wsdl;
+				https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetImagingOutcome/1/rivtabp21?wsdl;			
+				https://TARGETHOST/vp/clinicalprocess/healthcond/basic/GetObservations/1/rivtabp21?wsdl;
+				https://TARGETHOST/vp/KontrolleraForskrivarbehorighet/1/rivtabp21?wsdl;
+				https://TARGETHOST/vp/KontrolleraSamtycke/1/rivtabp21?wsdl;
+				https://TARGETHOST/vp/clinicalprocess/healthcond/actoutcome/GetReferralOutcome/3/rivtabp21?wsdl;
+				https://TARGETHOST/vp/ReceiveMedicalCertificateAnswer/1/rivtabp20?wsdl;
+				https://TARGETHOST/vp/ReceiveMedicalCertificateQuestion/1/rivtabp20?wsdl;
+				https://TARGETHOST/vp/Update/1/rivtabp21?wsdl
+			</wsdlEndpoints>
+			<interfaces>
+				FindAllQuestionsResponderBinding;
+				GetActivitiesResponderBinding;
+				GetCareContactsResponderBinding;
+				GetDiagnosisResponderBinding;
+				GetCareDocumentationResponderBinding_2.1;
+				GetDiagnosisResponderBinding;
+				GetImagingOutcomeResponderBinding;
+				GetObservationsResponderBinding;
+				KontrolleraForskrivarbehorighetResponderBinding;
+				KontrolleraSamtyckeResponderBinding;
+				GetReferralOutcomeResponderBinding;
+				ReceiveMedicalCertificateAnswerResponderBinding;
+				ReceiveMedicalCertificateQuestionResponderBinding;
+				UpdateResponderBinding
+			</interfaces>
+		</data>
+	</testcase>
+	
+	<!-- BASIC FLOWS -->
+	<!-- clinicalprocess/healthcond/description -->
+	<testcase id="4.1.1 (GAI) Patient utan engagemang"></testcase>
+	<testcase id="4.1.2 (GAI) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.1.3 (GAI) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.1.4 (GAI) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.1.5 (GAI) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.1.6 (GAI) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.1.7 (GAI) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.1.8 (GAI) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.1.9 (GAI) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.1.10 (GAI) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.1.11 (GAI) Exception från en av tre producenter"></testcase>
+	<testcase id="4.1.12 (GAI) Exception från samtliga producenter"></testcase>	
+	
+	<testcase id="4.2.1 (GCD) Patient utan engagemang"></testcase>
+	<testcase id="4.2.2 (GCD) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.2.3 (GCD) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.2.4 (GCD) Patient med engagemang hos en producent med 1000 poster (+GCD3 hasMore)"></testcase>
+	<testcase id="4.2.5 (GCD) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.2.6 (GCD) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.2.7 (GCD) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.2.8 (GCD) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.2.9 (GCD) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.2.10 (GCD) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.2.11 (GCD) Exception från en av tre producenter"></testcase>
+	<testcase id="4.2.12 (GCD) Exception från samtliga producenter"></testcase>	
+	
+	<testcase id="4.3.1 (GD) Patient utan engagemang"></testcase>
+	<testcase id="4.3.2 (GD) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.3.3 (GD) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.3.4 (GD) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.3.5 (GD) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.3.6 (GD) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.3.7 (GD) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.3.8 (GD) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.3.9 (GD) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.3.10 (GD) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.3.11 (GD) Exception från en av tre producenter"></testcase>
+	<testcase id="4.3.12 (GD) Exception från samtliga producenter"></testcase>	
+	<testcase id="4.3.13 (GD) Slagning mot AGP, engagemang finns för okänd logisk adress">
+		<description>
+			Förväntat resultat: Metadatafältet i responsen innehåller ingen information om den logiska adressen.
+			GD till logisk adress: TSTNMT2321000156-9999
+		</description>
+	</testcase>
+	<testcase id="4.3.14 (GD) Slagning mot AGP, engagemang finns för logisk adress där samverkansbehörighet saknas">
+		<description>
+			Förväntat resultat: Metadatafältet i responsen innehåller ingen information om den logiska adressen.
+			VP007 filtreras bort av AGP (SKLTP-762)
+			GD till logisk adress: HSA-ID-4
+		</description>
+	</testcase>
+	
+	<testcase id="4.4.1 (GFS) Patient utan engagemang"></testcase>
+	<testcase id="4.4.2 (GFS) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.4.3 (GFS) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.4.4 (GFS) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.4.5 (GFS) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.4.6 (GFS) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.4.7 (GFS) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.4.8 (GFS) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.4.9 (GFS) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.4.10 (GFS) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.4.11 (GFS) Exception från en av tre producenter"></testcase>
+	<testcase id="4.4.12 (GFS) Exception från samtliga producenter"></testcase>	
+	
+	<!-- clinicalprocess/activityprescription/actoutcome -->
+	<testcase id="4.5.1 (GVH) Patient utan engagemang"></testcase>
+	<testcase id="4.5.2 (GVH) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.5.3 (GVH) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.5.4 (GVH) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.5.5 (GVH) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.5.6 (GVH) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.5.7 (GVH) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.5.8 (GVH) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.5.9 (GVH) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.5.10 (GVH) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.5.11 (GVH) Exception från en av tre producenter"></testcase>
+	<testcase id="4.5.12 (GVH) Exception från samtliga producenter"></testcase>	
+	
+	<testcase id="4.6.1 (GMH) Patient utan engagemang"></testcase>
+	<testcase id="4.6.2 (GMH) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.6.3 (GMH) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.6.4 (GMH) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.6.5 (GMH) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.6.6 (GMH) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.6.7 (GMH) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.6.8 (GMH) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.6.9 (GMH) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.6.10 (GMH) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.6.11 (GMH) Exception från en av tre producenter"></testcase>
+	<testcase id="4.6.12 (GMH) Exception från samtliga producenter"></testcase>	
+	´
+	
+	<!-- clinicalprocess/logistics/logistics -->
+	<testcase id="4.7.1 (GCC) Patient utan engagemang"></testcase>
+	<testcase id="4.7.2 (GCC) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.7.3 (GCC) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.7.4 (GCC) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.7.5 (GCC) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.7.6 (GCC) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.7.7 (GCC) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.7.8 (GCC) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.7.9 (GCC) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.7.10 (GCC) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.7.11 (GCC) Exception från en av tre producenter"></testcase>
+	<testcase id="4.7.12 (GCC) Exception från samtliga producenter"></testcase>	
+	
+	<testcase id="4.8.1 (GCP) Patient utan engagemang"></testcase>
+	<testcase id="4.8.2 (GCP) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.8.3 (GCP) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.8.4 (GCP) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.8.5 (GCP) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.8.6 (GCP) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.8.7 (GCP) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.8.8 (GCP) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.8.9 (GCP) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.8.10 (GCP) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.8.11 (GCP) Exception från en av tre producenter"></testcase>
+	<testcase id="4.8.12 (GCP) Exception från samtliga producenter"></testcase>	
+	
+	<testcase id="4.9.1 (GCS) Patient utan engagemang"></testcase>
+	<testcase id="4.9.2 (GCS) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.9.3 (GCS) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.9.4 (GCS) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.9.5 (GCS) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.9.6 (GCS) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.9.7 (GCS) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.9.8 (GCS) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.9.9 (GCS) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.9.10 (GCS) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.9.11 (GCS) Exception från en av tre producenter"></testcase>
+	<testcase id="4.9.12 (GCS) Exception från samtliga producenter"></testcase>	
+	
+
+	<!-- clinicalprocess/healthcond/actoutcome -->
+	<testcase id="4.10.1 (GECGO) Patient utan engagemang"></testcase>
+	<testcase id="4.10.2 (GECGO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.10.3 (GECGO) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.10.4 (GECGO) Patient med engagemang hos en producent med 200 poster"></testcase>
+	<testcase id="4.10.5 (GECGO) Patient med engagemang hos 20 producenter med vardera 2 poster"></testcase>
+	<testcase id="4.10.6 (GECGO) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.10.7 (GECGO) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.10.8 (GECGO) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.10.9 (GECGO) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.10.10 (GECGO) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.10.11 (GECGO) Exception från en av tre producenter"></testcase>
+	<testcase id="4.10.12 (GECGO) Exception från samtliga producenter"></testcase>
+	<testcase id="4.10.13 (GECGO) Patient med engagemang hos en producent med 200 poster direktadresserat anrop">
+		<data>
+			<logicalAddress>SKLTP-MOCK01</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="4.10.14 (GECGO) Patient med engagemang hos en producent med 200 poster direktadresserat (ej via RTjP)">
+		<data>
+			<logicalAddress>LOAD-MOCKS</logicalAddress>
+		</data>
+	</testcase>
+	
+	<testcase id="4.11.1 (GIO) Patient utan engagemang"></testcase>
+	<testcase id="4.11.2 (GIO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.11.3 (GIO) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.11.4 (GIO) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.11.5 (GIO) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.11.6 (GIO) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.11.7 (GIO) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.11.8 (GIO) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.11.9 (GIO) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.11.10 (GIO) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.11.11 (GIO) Exception från en av tre producenter"></testcase>
+	<testcase id="4.11.12 (GIO) Exception från samtliga producenter"></testcase>	
+	
+	<testcase id="4.12.1 (GLOO) Patient utan engagemang"></testcase>
+	<testcase id="4.12.2 (GLOO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.12.3 (GLOO) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.12.4 (GLOO) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.12.5 (GLOO) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.12.6 (GLOO) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.12.7 (GLOO) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.12.8 (GLOO) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.12.9 (GLOO) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.12.10 (GLOO) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.12.11 (GLOO) Exception från en av tre producenter"></testcase>
+	<testcase id="4.12.12 (GLOO) Exception från samtliga producenter"></testcase>	
+	
+	<testcase id="4.13.1 (GMMH) Patient utan engagemang"></testcase>
+	<testcase id="4.13.2 (GMMH) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.13.3 (GMMH) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.13.4 (GMMH) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.13.5 (GMMH) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.13.6 (GMMH) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.13.7 (GMMH) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.13.8 (GMMH) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.13.9 (GMMH) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.13.10 (GMMH) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.13.11 (GMMH) Exception från en av tre producenter"></testcase>
+	<testcase id="4.13.12 (GMMH) Exception från samtliga producenter"></testcase>
+
+	<testcase id="4.14.1 (GRO) Patient utan engagemang"></testcase>
+	<testcase id="4.14.2 (GRO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.14.3 (GRO) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.14.4 (GRO) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.14.5 (GRO) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.14.6 (GRO) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.14.7 (GRO) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.14.8 (GRO) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.14.9 (GRO) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.14.10 (GRO) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.14.11 (GRO) Exception från en av tre producenter"></testcase>
+	<testcase id="4.14.12 (GRO) Exception från samtliga producenter"></testcase>	
+	
+
+	<!-- clinicalprocess/healthcond/basic -->
+	<testcase id="4.15.1 (GO) Patient utan engagemang"></testcase>
+	<testcase id="4.15.2 (GO) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.15.3 (GO) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.15.4 (GO) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.15.5 (GO) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.15.6 (GO) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.15.7 (GO) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.15.8 (GO) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.15.9 (GO) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.15.10 (GO) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.15.11 (GO) Exception från en av tre producenter"></testcase>
+	<testcase id="4.15.12 (GO) Exception från samtliga producenter"></testcase>
+
+
+	<!-- clinicalprocess/activity/actions -->
+	<testcase id="4.16.1 (GA) Patient utan engagemang"></testcase>
+	<testcase id="4.16.2 (GA) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.16.3 (GA) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.16.4 (GA) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.16.5 (GA) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.16.6 (GA) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.16.7 (GA) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.16.8 (GA) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.16.9 (GA) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.16.10 (GA) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.16.11 (GA) Exception från en av tre producenter"></testcase>
+	<testcase id="4.16.12 (GA) Exception från samtliga producenter"></testcase>
+
+
+	<!-- crm/requeststatus -->
+	<testcase id="4.17.1 (GRA) Patient utan engagemang"></testcase>
+	<testcase id="4.17.2 (GRA) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.17.3 (GRA) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.17.4 (GRA) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.17.5 (GRA) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.17.6 (GRA) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.17.7 (GRA) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.17.8 (GRA) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.17.9 (GRA) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.17.10 (GRA) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.17.11 (GRA) Exception från en av tre producenter"></testcase>
+	<testcase id="4.17.12 (GRA) Exception från samtliga producenter"></testcase>
+
+	<!-- crm/scheduling -->
+	<testcase id="4.18.1 (GSOCS) Patient utan engagemang"></testcase>
+	<testcase id="4.18.2 (GSOCS) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster"></testcase>
+	<testcase id="4.18.3 (GSOCS) Patient med engagemang hos tre producenter med vardera 1 post"></testcase>
+	<testcase id="4.18.4 (GSOCS) Patient med engagemang hos en producent med 1000 poster"></testcase>
+	<testcase id="4.18.5 (GSOCS) Patient med engagemang hos 20 producenter med vardera 5 poster"></testcase>
+	<testcase id="4.18.6 (GSOCS) Tomt svar från en av tre producenter"></testcase>
+	<testcase id="4.18.7 (GSOCS) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.18.8 (GSOCS) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.18.9 (GSOCS) Logiskt fel från en av tre producenter"></testcase>
+	<testcase id="4.18.10 (GSOCS) Logiskt fel från samtliga producenter"></testcase>
+	<testcase id="4.18.11 (GSOCS) Exception från en av tre producenter"></testcase>
+	<testcase id="4.18.12 (GSOCS) Exception från samtliga producenter"></testcase>
+	
+	<!-- financial/patientfees/exemption -->
+	
+	<testcase id="4.19.0 PRE - Sätt engagemang till känd ålder"></testcase>
+	<testcase id="4.19.1 (RES) Patient utan engagemang"></testcase>
+	<testcase id="4.19.2 (RES) Patient med engagemang hos en producent(LOAD-MOCKS) uppdaterat senaste 12 månaderna"></testcase>
+	<testcase id="4.19.3 (RES) Patient med engagemang hos tre producenter uppdaterat senaste 12 månaderna"></testcase>
+	<testcase id="4.19.4 (RES) Patient med engagemang hos en producent äldre än 12 månader"></testcase>
+	<testcase id="4.19.5 (RES) Patient med engagemang hos 20 producenter uppdaterat senaste 12 månaderna"></testcase>
+	<testcase id="4.19.6 (RES) Äldre engagemangspost hos en av tre producenter"></testcase>
+	<testcase id="4.19.7 (RES) Timeout mot en av tre producenter"></testcase>
+	<testcase id="4.19.8 (RES) Timeout mot samtliga producenter"></testcase>
+	<testcase id="4.19.11 (RES) Exception från en av tre producenter"></testcase>
+	<testcase id="4.19.12 (RES) Exception från samtliga producenter"></testcase>
+	
+	
+	<testcase id="5.0.1 PRE - Rensa engagemang"></testcase>
+	<testcase id="5.0.2 PRE - Rensa engagemang med ProcessNotifications"></testcase>
+	
+	<testcase id="5.1.1 Lägg till ett engagemang till en producent"></testcase>
+	<testcase id="5.1.2 Ta bort ett engagemang till en producent"></testcase>
+	<testcase id="5.2.1 Lägg till engagemang till tre olika producenter"></testcase>
+	<testcase id="5.2.2 Uppdatera engagemang till tre olika producenter"></testcase>
+	<testcase id="5.2.3 Uppdatera engagemang ytterligare en gång till två av tre producenter"></testcase>
+	<testcase id="5.2.4 Ta bort engagemang till tre olika producenter"></testcase>
+	<testcase id="5.2.5 Ta bort engagemang (som inte existerar)"></testcase>
+	<testcase id="5.2.6 Hantera engagemang där mostRecentContent saknas"></testcase>
+	
+	<testcase id="5.3.1 Grundladdning (add) 2003 poster"></testcase>
+	<testcase id="5.3.2 Grundladdning (delete) 2003 poster"></testcase>
+	
+	<testcase id="5.4.1 Skicka Update med två identiska poster (R1)"></testcase>
+	<testcase id="5.4.2 Skicka Update med för många poster"></testcase>
+	<testcase id="5.4.3 Skicka Update med EI's reserverade logiska adress (R7)"></testcase>
+	<testcase id="5.4.4 Skicka Update med tre engagemang, ett engagemang bryter mot schemat"></testcase>
+	<testcase id="5.4.5 Skicka ProcessNotification med tre engagemang, ett engagemang bryter mot schemat"></testcase>
+	<testcase id="5.4.6 Skicka ProcessNotification med två identiska poster"></testcase>
+	<testcase id="5.4.7 Skicka ProcessNotification med för många poster"></testcase>
+	<testcase id="5.4.8 Skicka ProcessNotification felaktigt med EI's reserverade logiska adress"></testcase>
+	<testcase id="5.4.9 Skicka FindContent som är felaktig"></testcase>	
+	<testcase id="5.4.10 Skicka en andra Update med äldre mostRecentContent"></testcase>
+	
+	<testcase id="5.5.1 Lägg till ett engagemang(Update), kontrollera notifieringar"></testcase>
+	<testcase id="5.5.2 Lägg till flera engagemang(Update), kontrollera notifieringar"></testcase>
+	<testcase id="5.5.3 Uppdatera engagemang till tre olika producenter, kontrollera notifieringar"></testcase>
+	<testcase id="5.5.4 Ta bort engagemang till tre olika producenter, kontrollera notifieringar"></testcase>
+	<testcase id="5.5.5 Hantera engagemang där mostRecentContent saknas, kontrollera notifieringar"></testcase>
+	<testcase id="5.5.6 Uppdatera engagemang med ProcessNotification, kontrollera notifieringar"></testcase>
+	<testcase id="5.5.7 Ta bort engagemang med ProcessNotification, kontrollera notifieringar"></testcase>
+	<testcase id="5.5.8 Förändra ägarskap för en post, namnbyte av regional owner, kontrollera notifieringar"></testcase>
+	<testcase id="5.5.9 Förändra ägarskap för poster från regionalt HSA till Ineras HSA, kontrollera notifieringar"></testcase>
+	
+	<testcase id="5.6.1 Uppdatera engagemang med ProcessNotification till tre olika producenter"></testcase>
+	<testcase id="5.6.2 Ta bort engagemang med ProcessNotification till tre olika producenter"></testcase>
+	<testcase id="5.6.3 Förändra ägarskap för poster från Ineras HSA till regionalt HSA"></testcase>
+	<testcase id="5.6.4 Förändra ägarskap för en post, namnbyte av regional owner"></testcase>
+	<testcase id="5.6.5 Förändra ägarskap för poster från regionalt HSA till Ineras HSA"></testcase>
+	<testcase id="5.6.6 Förändra ägarskapet till tre olika producenter"></testcase>
+	<testcase id="5.6.7 Hantera engagemang med ProcessNotification där mostRecentContent saknas"></testcase>
+	
+	<testcase id="5.7.1 Skicka FindContent utan optionella element"></testcase>
+	<testcase id="5.7.2 Skicka Update använd FindContent för samtliga optionella element"></testcase>
+	<testcase id="5.7.3 Skicka FindContent med samtliga optionella element"></testcase>
+
+<!-- Start NOTE(2020-03-02) : Kommenterar bort testfallen angående Standartvägval och Standartbehörighet, stöd saknas -->
+<!--
+	
+	<testcase id="NTP-775.1 Direktadresserad GRO, finns endast SB och SV">
+		<description>
+			Konsument skickar direktadresserad GRO till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
+			Syfte: Säkerställ att det går att hantera routing när enbart standardbehörigheter och standardvägval är konfigurerat
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-10K5</logicalAddress>
+			<sourceSystemHSAId>TSTNMT2321000156-10K5</sourceSystemHSAId>
+		</data> 
+	</testcase> 
+	<testcase id="NTP-775.2 Direktadresserad GCC, vägval baseras på TAK">
+		<description>
+			Konsument skickar direktadresserad GCC till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
+			Syfte: Säkerställ att adresseringsordningen prioriterar TAK 
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-10K5</logicalAddress>
+			<sourceSystemHSAId>TSTNMT2321000156-10K5</sourceSystemHSAId>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.3 Direktadresserad GCC, vägval baseras på HSA">
+		<description>
+			Konsument skickar direktadresserad GCC till SKLTP-MOCK02 (TSTNMT2321000156-10K6)
+			Syfte: Säkerställ att adresseringsordningen prioriterar HSA om TAK saknas. TAK för "ICC Test" kommer användas.
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-10K6</logicalAddress>
+			<sourceSystemHSAId>TSTNMT2321000156-10K6</sourceSystemHSAId>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.4 Direktadresserad GCC, vägval baseras SB och SV">
+		<description>
+			Konsument skickar direktadresserad GCC till SKLTP-MOCK100 (TSTNMT2321000156-9999)
+			Syfte: Säkerställ att adresseringsordningen nyttjar Standardbehörighet samt standardvägval.
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-9999</logicalAddress>
+			<sourceSystemHSAId>TSTNMT2321000156-9999</sourceSystemHSAId>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.5 Direktadresserad GO, vägval baseras på SB och TAK-vägval">
+		<description>
+			Konsument skickar direktadresserad GO till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
+			Syfte: Säkerställ att standardbehörighet kan användas tillsammans med TAKat vägval.
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-10K5</logicalAddress>
+			<sourceSystemHSAId>TSTNMT2321000156-10K5</sourceSystemHSAId>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.6 Direktadresserad GIO, SB finns men vägval saknas">
+		<description>
+			Konsument skickar direktadresserad GIO till SKLTP-MOCK100 (TSTNMT2321000156-9999)
+			Syfte: Säkerställ att riktig felhantering om standardbehörighet använts, men det saknas vägval.
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-9999</logicalAddress>
+			<sourceSystemHSAId>TSTNMT2321000156-9999</sourceSystemHSAId>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.7 Direktadresserad GA, vägval baseras på TAK-anropsbehörighet och SV">
+		<description>
+			Konsument skickar direktadresserad GA till SKLTP-MOCK01
+			Syfte: Säkerställ att konsumenten kan använda TAKad anropsbehörighet tillsammans med standardvägval
+		</description>
+		<data>
+			<logicalAddress>SKLTP-MOCK01</logicalAddress>
+			<sourceSystemHSAId>SKLTP-MOCK01</sourceSystemHSAId>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.8 Direktadresserad GD, SV finns men anropsbehörighet saknas">
+		<description>
+			Konsument skickar direktadresserad GD till SKLTP-MOCK100 (TSTNMT2321000156-9999)
+			Syfte: Säkerställ att konsumenten inte kommer åt standardvägvalet
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-9999</logicalAddress>
+			<sourceSystemHSAId>TSTNMT2321000156-9999</sourceSystemHSAId>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.9 Direktadresserad GO, vägval baseras på SB och HSA-klättring">
+		<description>
+			Konsument skickar direktadresserad GO till SKLTP-MOCK02 (TSTNMT2321000156-10K6)
+			Syfte: Säkerställ att HSA-klättring används.
+		</description>
+		<data>
+			<logicalAddress>TSTNMT2321000156-10K6</logicalAddress>
+			<sourceSystemHSAId>TSTNMT2321000156-10K6</sourceSystemHSAId>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.21 GRO till AGP, finns endast SB och SV">
+		<description>
+			Konsument skickar GRO till AGP, engagemang finns till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
+			Syfte: Säkerställ att det går att hantera routing när enbart standardbehörigheter och standardvägval är konfigurerat
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-772.22 GCC till AGP, vägval baseras på TAK">
+		<description>
+			Konsument skickar GCC till AGP, engagemang finns till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
+			Syfte: Säkerställ att AGPs adresseringsordning prioriterar TAK
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.23 GCC till AGP, vägval baseras på HSA">
+		<description>
+			Konsument skickar GCC till AGP, engagemang finns till SKLTP (TSTNMT2321000156-10K6) (inget engagemang till SKLTP-MOCK01)
+			Syfte: Säkerställ att AGPs adresseringsordning prioriterar HSA om TAK saknas. TAK för "ICC Test" kommer användas.
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.24 GCC till AGP, vägval baseras på SB och SV">
+		<description>
+			Konsument skickar GCC till AGP, engagemang finns till SKLTP-MOCK100 (TSTNMT2321000156-9999) (inget till SKLTP, SKLTP-MOCK01) 
+			Syfte: Säkerställ att AGPs adresseringsordning nyttjar Standardbehörighet samt standardvägval.
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.25 GO till AGP, vägval baseras på SB och TAK-vägval">
+		<description>
+			Konsument skickar GO till AGP, där engagemang finns till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
+			Syfte: Säkerställ att standardbehörighet kan användas tillsammans med TAKat vägval.
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.26 GIO tll AGP, SB finns men vägval saknas">
+		<description>
+			Konsument skickar GIO till AGP, engagemang finns till SKLTP-MOCK100 (TSTNMT2321000156-9999)
+			Syfte: Säkerställ att riktig felhantering om standardbehörighet använts, men det saknas vägval.
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.27 GA till AGP, vägval baseras på TAK-anropsbehörighet och SV">
+		<description>
+			Konsument skickar GA till AGP, där engagemang finns till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
+			Syfte: Säkerställ att konsumenten kan använda TAKad anropsbehörighet tillsammans med standardvägval
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.28 GD till AGP, SV finns men anropsbehörighet saknas">
+		<description>
+			Konsument skickar GD till AGP, engagemang finns till SKLTP-MOCK100 (TSTNMT2321000156-9999)
+			Syfte: Säkerställ att konsumenten inte kommer åt standardvägvalet
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.29 GO till AGP, vägval baseras på SB och HSA-klättring">
+		<description>
+			Konsument skickar GO till AGP, där engagemang finns till SKLTP-MOCK02 (TSTNMT2321000156-10K6)
+			Syfte: Säkerställ att HSA-klättring används.
+		</description>
+		<data>
+			<logicalAddress>5565594230</logicalAddress>
+		</data>
+	</testcase>
+-->
+<!--	End NOTE (2020-03-02) -->
+		
+	<testcase id="NTP-775.41 RMCQ med default routing, vägval baseras på VG">
+		<description>
+			Konsument skickar direktadresserad RMCQ med logicalAdress satt till SKLTP-MOCK01#TSTNMT2321000156-9999 (VG#VE)
+			Syfte: Säkerställ att default routing fortsatt fungerar (routing på "VG"-nivå om behörighet saknas på "VE"-nivå).
+		</description>
+		<data>
+			<logicalAddress>SKLTP-MOCK01#TSTNMT2321000156-9999</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.42 RMCA med default routing, vägval baseras på VG fast SB och SV finns">
+		<description>
+			Konsument skickar direktadresserad RMCA med logicalAdress satt till SKLTP-MOCK01#TSTNMT2321000156-9999 (VG#VE)
+			Syfte: Notera om default routing används innan standardbehörigheter och standardvägval (dafault routing borde användas innan HSA-klättring)
+			Om default routing struktur används, så görs ingen ytterligare kontroll mot SV och SB.
+		</description>
+		<data>
+			<logicalAddress>SKLTP-MOCK01#TSTNMT2321000156-9999</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-775.43 RMCQ med default routing, logisk adress saknas">
+		<description>
+			Syfte: Säkerställ att default routing hanterar avsaknad av anropsbehörighet på "VG" nivå på korrekt sätt.
+		</description>
+		<data>
+			<logicalAddress>HSA-ID-1#TSTNMT2321000156-9999</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="NTP-805.1 GSSC all">
+		<description>
+			Syfte: Säkerställ att SKLTP kan hantera GetSupportedServiceContracts anrop utan filter
+		</description>
+	</testcase>
+	<testcase id="NTP-805.2 GSSC filter on serviceConsumerHsaId">
+		<description>
+			Syfte: Säkerställ att SKLTP kan hantera GetSupportedServiceContracts anrop med filter på serviceConsumerHsaId
+		</description>
+	</testcase>
+	<testcase id="NTP-805.3 GLABSC (inget filter)">
+		<description>
+			Syfte: Säkerställ att SKLTP kan hantera GetLogicalAddresseesByServiceContract anrop utan filter (filter regel 1)
+		</description>
+	</testcase>
+	<testcase id="NTP-805.4 GLABSC (filter)">
+		<description>
+			Syfte: Säkerställ att SKLTP kan hantera GetLogicalAddresseesByServiceContract enligt filter regel 2, 4 och 5
+		</description>
+	</testcase>
+	<testcase id="SKLTP-1239.1 RMCQ med default routing, med samma hsa-id vid VG#VE adressering">
+		<description>
+			Syfte: Säkerställ att default routing hanterar routing där VG och VE är identiska (routing på "VG"-nivå om behörighet finns på "VG och VE"-nivå).
+		</description>
+		<data>
+			<logicalAddress>SKLTP-MOCK01#SKLTP-MOCK01</logicalAddress>
+		</data>
+	</testcase>       
+	<testcase id="SKLTP-ApSe-Mock">
+		<description>
+                    testar adapterns omvandling av argos-headrar till saml-aassertion-attributes
+		</description>
+		<data>
+			<!-- <logicalAddress>5565594230</logicalAddress> -->
+			<logicalAddress>APO-EXT12</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="SKLTP-ApSe-AXS">
+		<description>
+                    E2E-test mot eHMs testmiljö, domän AXS
+		</description>
+		<data>
+			<logicalAddress>APO-EXT12</logicalAddress>
+			<patientId>193603119045</patientId>
+		</data>
+	</testcase>
+	<testcase id="SKLTP-ApSe-AXS-DB1">
+		<description>
+                    E2E-test mot eHMs testmiljö, domän AXS
+		</description>
+		<data>
+			<logicalAddress>APO-EXT12-DB1</logicalAddress>
+			<patientId>193603119045</patientId>
+		</data>
+	</testcase>
+	<testcase id="SKLTP-ApSe-AXS-DB2">
+		<description>
+                    E2E-test mot eHMs testmiljö, domän AXS
+		</description>
+		<data>
+			<logicalAddress>APO-EXT12-DB2</logicalAddress>
+			<patientId>193603119045</patientId>
+		</data>
+	</testcase>
+	<testcase id="SKLTP-ApSe-AXS-mock">
+		<description>
+                    E2E-test mot mock, domän AXS
+		</description>
+		<data>
+			<!-- <logicalAddress>5565594230</logicalAddress> -->
+			<logicalAddress>LOAD-MOCKS</logicalAddress>
+			<patientId>193603119045</patientId>
+		</data>
+	</testcase>
+	<testcase id="SKLTP-ApSe-OR">
+		<description>
+                    E2E-test mot eHMs testmiljö, domän OR
+		</description>
+		<data>
+			<logicalAddress>APO-EXT12</logicalAddress>
+			<patientId>193603119045</patientId>
+		</data>
+	</testcase>
+	<testcase id="SKLTP-ApSe-LF">
+		<description>
+                    E2E-test mot eHMs testmiljö, domän LF
+		</description>
+		<data>
+			<logicalAddress>APO-EXT12</logicalAddress>
+			<patientId>193603119045</patientId>
+		</data>
+	</testcase>
+        <testcase id="SKLTP-casebox-answers">
+                <description>
+                        funktionstester för casebox
+                </description>
+                <data>
+                        <logicalAddress>0123456777</logicalAddress>
+                </data>
+        </testcase>
+        <testcase id="SKLTP-casebox-questions">
+                <description>
+                        funktionstester för casebox
+                </description>
+                <data>
+                        <logicalAddress>0123456777</logicalAddress>
+                </data>
+        </testcase>        
+	<testcase id="SKLTP-cooperation" />	
+	<testcase id="SKLTP-Axel-SKV-register_certificate">
+		<data>
+			<logicalAddress>2021005448</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="SKLTP-Axel-SKV-revoke_certificate">
+		<data>
+			<logicalAddress>2021005448</logicalAddress>
+		</data>
+	</testcase>
+	<testcase id="FK CertProxy RegisterCertificate">
+		<data>
+			<logicalAddress>2021005521</logicalAddress>
+		</data>
+	</testcase>
+</testsuite>
