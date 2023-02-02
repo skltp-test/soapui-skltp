@@ -12949,7 +12949,7 @@
          </urn1:engagementTransaction>
       </urn1:Update>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="4bdc0de2-4ad3-4951-b571-f64f8bae44b1" wsaVersion="NONE" name="GetCareDocumentationResponderBinding" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:description:GetCareDocumentation:3:rivtabp21}GetCareDocumentationResponderBinding" soapVersion="1_1" anonymous="optional" definition="C:/Users/bjopet/source/riv.clinicalprocess.healthcond.description/schemas/interactions/GetCareDocumentationInteraction/GetCareDocumentationInteraction_3.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/bjopet/source/riv.clinicalprocess.healthcond.description/schemas/interactions/GetCareDocumentationInteraction/GetCareDocumentationInteraction_3.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/Users/bjopet/source/riv.clinicalprocess.healthcond.description/schemas/interactions/GetCareDocumentationInteraction/GetCareDocumentationInteraction_3.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="4bdc0de2-4ad3-4951-b571-f64f8bae44b1" wsaVersion="NONE" name="GetCareDocumentationResponderBinding" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:description:GetCareDocumentation:3:rivtabp21}GetCareDocumentationResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/bjopet/source/riv.clinicalprocess.healthcond.description/schemas/interactions/GetCareDocumentationInteraction/GetCareDocumentationInteraction_3.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/bjopet/source/riv.clinicalprocess.healthcond.description/schemas/interactions/GetCareDocumentationInteraction/GetCareDocumentationInteraction_3.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/Users/bjopet/source/riv.clinicalprocess.healthcond.description/schemas/interactions/GetCareDocumentationInteraction/GetCareDocumentationInteraction_3.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements. See the NOTICE file
  distributed with this work for additional information
  regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
@@ -13094,7 +13094,7 @@
   </xs:complexType>
   <xs:complexType name="CareDocumentationBodyType">
     <xs:sequence>
-      <xs:element name="clinicalDocumentNoteCode" type="codes:ClinicalDocumentNoteCodeEnum"/>
+      <xs:element name="clinicalDocumentNoteCode" type="tns:CVType"/>
       <xs:element name="clinicalDocumentNoteTitle" type="xs:string" minOccurs="0"/>
       <xs:element name="clinicalDocumentNoteText" type="xs:string" minOccurs="0"/>
       <xs:element name="multimediaEntry" type="tns:MultimediaType" minOccurs="0"/>
@@ -13114,7 +13114,7 @@
   </xs:complexType>
   <!--Below: Common header used in service contracts for JoL (Journal- och Läkemedel).
 
-        Version: JoL Header Fältregler_v1.5-->
+        Version: JoL Header Fältregler_v2.2-->
   <xs:complexType name="HeaderType">
     <xs:sequence>
       <xs:element name="accessControlHeader" type="tns:AccessControlHeaderType"/>
@@ -13165,7 +13165,9 @@
   <!--Below: only helper types allowed.
         
         A helper type is a type used in one ore more of the domain schema common types.
-        It can also be a type used in two or more service schemas.-->
+        It can also be a type used in two or more service schemas.
+
+        Types are defined in version 17 of "De facto-konventioner för datatyper".-->
   <xs:complexType name="DatePeriodType">
     <xs:annotation>
       <xs:documentation>Används för att specificera ett datumintervall
@@ -13192,7 +13194,7 @@
   </xs:simpleType>
   <xs:complexType name="MultimediaType">
     <xs:sequence>
-      <xs:element name="mediaType" type="codes:MediaTypeEnum"/>
+      <xs:element name="mediaType" type="xs:string"/>
       <xs:element name="value" type="xs:base64Binary" minOccurs="0"/>
       <xs:element name="reference" type="xs:anyURI" minOccurs="0"/>
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
@@ -13266,122 +13268,6 @@
  specific language governing permissions and limitations
  under the License.-->
 <xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:enums:3" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:enums:3">
-  <xs:simpleType name="ClinicalDocumentNoteCodeEnum">
-    <xs:annotation>
-      <xs:documentation>Kod för typ av anteckning.
-                Tillåtna värden från kodverk Anteckningstyp (1.2.752.129.2.2.2.11):</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="utr">
-        <xs:annotation>
-          <xs:documentation>Utredning</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="atb">
-        <xs:annotation>
-          <xs:documentation>Åtgärd/Behandling</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="sam">
-        <xs:annotation>
-          <xs:documentation>Sammanfattning</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="sao">
-        <xs:annotation>
-          <xs:documentation>Samordning</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="ins">
-        <xs:annotation>
-          <xs:documentation>Inskrivning</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="slu">
-        <xs:annotation>
-          <xs:documentation>Slutanteckning</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="auf">
-        <xs:annotation>
-          <xs:documentation>Anteckning utan fysiskt möte</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="sva">
-        <xs:annotation>
-          <xs:documentation>Slutenvårdsanteckning</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="bes">
-        <xs:annotation>
-          <xs:documentation>Besöksanteckning</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="MediaTypeEnum">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="application/dicom"/>
-      <xs:enumeration value="application/msword"/>
-      <xs:enumeration value="application/pdf"/>
-      <xs:enumeration value="audio/basic"/>
-      <xs:enumeration value="audio/k32adpcm"/>
-      <xs:enumeration value="audio/mpeg"/>
-      <xs:enumeration value="image/g3fax"/>
-      <xs:enumeration value="image/gif"/>
-      <xs:enumeration value="image/jpeg"/>
-      <xs:enumeration value="image/png"/>
-      <xs:enumeration value="image/tiff"/>
-      <xs:enumeration value="model/vrml"/>
-      <xs:enumeration value="multipart/x-hl7-cda-level1"/>
-      <xs:enumeration value="text/html"/>
-      <xs:enumeration value="text/plain"/>
-      <xs:enumeration value="text/rtf"/>
-      <xs:enumeration value="text/sgml"/>
-      <xs:enumeration value="text/x-hl7-ft"/>
-      <xs:enumeration value="text/xml"/>
-      <xs:enumeration value="video/mpeg"/>
-      <xs:enumeration value="video/x-avi"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="ClinicalDocumentTypeCodeEnum">
-    <xs:annotation>
-      <xs:documentation>Kod för typ av anteckning.
-                Tillåtna värden från kodverk (?.?.?.?.?.?):</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="epi">
-        <xs:annotation>
-          <xs:documentation>Epikris</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="int">
-        <xs:annotation>
-          <xs:documentation>Intagninganteckning</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="dag">
-        <xs:annotation>
-          <xs:documentation>Daganteckning</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="ova">
-        <xs:annotation>
-          <xs:documentation>Öppenvårdsanteckning</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="ovs">
-        <xs:annotation>
-          <xs:documentation>Öppenvårdssammanfattning</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="ovr">
-        <xs:annotation>
-          <xs:documentation>Övrigt dokument</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
   <xs:simpleType name="ResultCodeEnum">
     <xs:restriction base="xs:string">
       <xs:enumeration value="OK"/>
