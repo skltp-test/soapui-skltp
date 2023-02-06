@@ -726,40 +726,7 @@
          <!--You may enter ANY elements at this point-->\r
       </urn1:GetSupportedServiceContracts>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2:GetSupportedServiceContracts"/></con:call></con:operation></con:interface><con:testSuite id="040de44c-9182-44b8-8ca0-5c810ff21cc7" name="Undersok malplattformens stod for TK"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="177045a6-1578-4180-957c-d3571f8fec5f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="8c62767a-9ed6-4a63-952b-60fb5a8a4b89"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
-import com.eviware.soapui.support.GroovyUtils
-
-def utils = new GroovyUtils(context)
-def dataFile = new File(utils.projectPath + "/data.xml")
-def source = new XmlDataReader(context, dataFile)
-
-source.load("general test data")
-
-</script></con:config></con:testStep><con:testStep type="request" name="kontrollera plattformstöd" id="42f9b667-4524-48ec-8512-8c7c8c374d8e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetSupportedServiceContractsResponderBinding_2.0</con:interface><con:operation>GetSupportedServiceContracts</con:operation><con:request name="kontrollera plattformstöd" id="5fcc40ca-eb37-4a17-ae93-dd04a271f200"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:infrastructure:itintegration:registry:2" xmlns:urn1="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2">
-   <soapenv:Header>
-      <urn:LogicalAddress>5565594230</urn:LogicalAddress>
-   </soapenv:Header>
-   <soapenv:Body>
-      <urn1:GetSupportedServiceContracts>
-         <urn1:logicalAdress>5565594230</urn1:logicalAdress>
-      </urn1:GetSupportedServiceContracts>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="146ba3e8-23d1-45e2-a389-ca4c8e04ae00"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="f8e53bdd-5b82-43a4-b477-21e9fe13b91a"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>RESR1</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>kontrollera plattformstöd</con:sourceStep><con:sourcePath>declare namespace ns='urn:riv:infrastructure:itintegration:registry:2';
-exists(//ns:ServiceContractNamespace[text()="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1"]/text())</con:sourcePath><con:targetType>target_supports_RESR1</con:targetType><con:targetStep>#TestSuite#</con:targetStep><con:targetPath/><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="groovy" name="inaktivera tester" id="5620833b-5fe4-4139-a7b2-6651a11a2d40"><con:settings/><con:config><script>def caseNamePatternsToDisable = []
-
-//Get the project object
-def project = context.testCase.testSuite.project
-
-if ('false' == testRunner.testCase.testSuite.getPropertyValue("target_supports_RESR1")){
-	caseNamePatternsToDisable &lt;&lt; "PRE"
-	caseNamePatternsToDisable &lt;&lt; "financial_patientfees_exemption"
-}
-
-project.testSuiteList.each { suite ->
-		log.info(suite.name.getClass())
-		suite.disabled = caseNamePatternsToDisable.any { suite.name.contains(it) }
-}
-</script></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>target_supports_RESR1</con:name><con:value>true</con:value></con:property></con:properties></con:testSuite><con:testSuite id="6721d7ec-2e35-4888-a4fa-aa2a6388c07d" name="PRE"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="d1d67e80-1728-49e5-a2db-bd452949a39f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.0 PRE - Sätt engagemang till känd ålder" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="4ecb15e0-6965-417e-b5a5-9b1590de8b0b"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2:GetSupportedServiceContracts"/></con:call></con:operation></con:interface><con:testSuite id="6721d7ec-2e35-4888-a4fa-aa2a6388c07d" name="PRE"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="d1d67e80-1728-49e5-a2db-bd452949a39f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.19.0 PRE - Sätt engagemang till känd ålder" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="4ecb15e0-6965-417e-b5a5-9b1590de8b0b"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
