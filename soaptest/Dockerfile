@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM eclipse-temurin:11
 
 #  Version
 ENV SOAPUI_VERSION=5.7.0 \
