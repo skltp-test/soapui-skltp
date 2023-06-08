@@ -43,7 +43,7 @@ source.load("general test data")
 DOMDBAPI_BASEURL=context.getProperty("COOP")
 //DOMDBAPI_AUTH=context.getProperty("COOP_AUTH")
 
-log.info "Testing on DomDB API on: ${DOMINFO_BASEURL}"
+log.info "Testing on DomDB API on: ${DOMDBAPI_BASEURL}"
 
 testRunner.testCase.testSuite.setPropertyValue("DOMDBAPI_BASEURL", DOMDBAPI_BASEURL)
 //testRunner.testCase.testSuite.setPropertyValue("DOMDBAPI_AUTH", DOMDBAPI_AUTH)
@@ -61,7 +61,7 @@ source.load("general test data")
 DOMDBADMINWEB_BASEURL=context.getProperty("COOP")
 //DOMDBADMINWEB_AUTH=context.getProperty("COOP_AUTH")
 
-log.info "Testing on DomDB API on: ${DOMINFO_BASEURL}"
+log.info "Testing on DomDB API on: ${DOMDBADMINWEB_BASEURL}"
 
 testRunner.testCase.testSuite.setPropertyValue("DOMDBADMINWEB_BASEURL", DOMDBADMINWEB_BASEURL)
 //testRunner.testCase.testSuite.setPropertyValue("DOMDBADMINWEB_AUTH", DOMDBADMINWEB_AUTH)
@@ -79,7 +79,7 @@ source.load("general test data")
 DOMDBAPI_BASEURL=context.getProperty("COOP")
 DOMDBAPI_AUTH=context.getProperty("COOP_AUTH")
 
-log.info "Testing on DomDB API on: ${DOMINFO_BASEURL}"
+log.info "Testing on DomDB API on: ${DOMDBAPI_BASEURL}"
 
 testRunner.testCase.testSuite.setPropertyValue("DOMDBAPI_BASEURL", DOMDBAPI_BASEURL)
 testRunner.testCase.testSuite.setPropertyValue("DOMDBAPI_AUTH", DOMDBAPI_AUTH)
