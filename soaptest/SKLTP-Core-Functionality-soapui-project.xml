@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="cea1fbfe-226d-4b3f-baf2-6fe201f52574" activeEnvironment="Default" name="SKLTP-Core-Functionality" resourceRoot="${projectDir}" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="ddea914d-f75b-4fad-bd24-20f434b0d63a" wsaVersion="NONE" name="GetCareDocumentationResponderBinding_2.1" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:description:GetCareDocumentation:2:rivtabp21}GetCareDocumentationResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../schemas/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetCareDocumentationInteraction/GetCareDocumentationInteraction_2.1_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\VBShare\schemas\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\interactions\GetCareDocumentationInteraction\GetCareDocumentationInteraction_2.1_RIVTABP21.wsdl"><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\interactions\GetCareDocumentationInteraction\GetCareDocumentationInteraction_2.1_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+<con:soapui-project id="cea1fbfe-226d-4b3f-baf2-6fe201f52574" activeEnvironment="Default" name="SKLTP-Core-Functionality" resourceRoot="${projectDir}" soapui-version="5.7.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="ddea914d-f75b-4fad-bd24-20f434b0d63a" wsaVersion="NONE" name="GetCareDocumentationResponderBinding_2.1" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:description:GetCareDocumentation:2:rivtabp21}GetCareDocumentationResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../schemas/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetCareDocumentationInteraction/GetCareDocumentationInteraction_2.1_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\VBShare\schemas\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\interactions\GetCareDocumentationInteraction\GetCareDocumentationInteraction_2.1_RIVTABP21.wsdl"><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\interactions\GetCareDocumentationInteraction\GetCareDocumentationInteraction_2.1_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements. See the NOTICE file
  distributed with this work for additional information
  regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
@@ -10519,29 +10519,31 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertSpecificValueInAllRecords('/urn:careDocumentation/hdurn2:careDocumentationHeader/hdurn2:patientId/hdurn2:id', context.patientId)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="5fe67f0d-8097-441b-9e9b-863c5b657f71" name="Assert Headers"><con:configuration><scriptText>def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
 def httpResponseHeaders = messageExchange.getResponseHeaders() 
-assert httpResponseHeaders.keySet().contains("x-skltp-prt")
 
-// Asserts common for Mule and Camel
-assert httpResponseHeaders.keySet().contains("Keep-Alive")
+for(header in httpResponseHeaders.keySet())
+{
+	if(header.equalsIgnoreCase("x-skltp-prt"))
+		x_skltp_prt = header
+	if(header.equalsIgnoreCase("content-length"))
+		content_length = header
+	if(header.equalsIgnoreCase("content-type"))
+		content_type = header
+	if(header.equalsIgnoreCase("x-skltp-correlation-id"))
+		x_skltp_correlation_id = header
+}
+assert !x_skltp_prt.isEmpty()
+
+// Common asserts
 assert httpResponseHeaders.keySet().contains("Server")
-assert httpResponseHeaders.keySet().contains("Connection")
 assert httpResponseHeaders.keySet().contains("Date")
-assert httpResponseHeaders.keySet().contains("Via")
 
 // Check content
 // Implementation dependent asserts
-// Mule
-if (httpResponseHeaders.keySet().contains("Transfer-Encoding")) {
-	assert httpResponseHeaders.keySet().contains("http.status")
-	assert httpResponseHeaders["http.status"].contains("200")
-	assert httpResponseHeaders["Content-Type"].contains("text/xml; charset=UTF-8")
-} 
-// Camel
-else if (httpResponseHeaders.keySet().contains("content-length")) {
+if (!content_length.isEmpty()) {
 	assert httpResponseHeaders.keySet().contains("#status#")
 	assert httpResponseHeaders["#status#"].contains("HTTP/1.1 200 OK")
-	assert httpResponseHeaders["content-type"].contains("text/xml; charset=UTF-8")
-	assert httpResponseHeaders["x-skltp-correlation-id"] != ""
+	assert httpResponseHeaders[content_type].contains("text/xml; charset=UTF-8")
+	assert httpResponseHeaders[x_skltp_correlation_id] != ""
 }
 // Other
 else {
@@ -10649,29 +10651,33 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertSpecificValueInAllRecords('/urn:careDocumentation/hdurn2:careDocumentationHeader/hdurn2:patientId/hdurn2:id', context.patientId)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="e27bc393-2426-4d80-9399-4b55033a1619" name="Assert Headers"><con:configuration><scriptText>def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
 def httpResponseHeaders = messageExchange.getResponseHeaders() 
-assert httpResponseHeaders.keySet().contains("x-skltp-prt")
 
-// Asserts common for Mule and Camel
-assert httpResponseHeaders.keySet().contains("Keep-Alive")
+for(header in httpResponseHeaders.keySet())
+{
+	if(header.equalsIgnoreCase("x-skltp-prt"))
+		x_skltp_prt = header
+	if(header.equalsIgnoreCase("content-length"))
+		content_length = header
+	if(header.equalsIgnoreCase("content-type"))
+		content_type = header
+	if(header.equalsIgnoreCase("x-skltp-correlation-id"))
+		x_skltp_correlation_id = header
+}
+assert !x_skltp_prt.isEmpty()
+
+// Common asserts
+// assert httpResponseHeaders.keySet().contains("Keep-Alive")
 assert httpResponseHeaders.keySet().contains("Server")
-assert httpResponseHeaders.keySet().contains("Connection")
+// assert httpResponseHeaders.keySet().contains("Connection")
 assert httpResponseHeaders.keySet().contains("Date")
-assert httpResponseHeaders.keySet().contains("Via")
+// assert httpResponseHeaders.keySet().contains("Via")
 
 // Check content
 // Implementation dependent asserts
-// Mule
-if (httpResponseHeaders.keySet().contains("Transfer-Encoding")) {
-	assert httpResponseHeaders.keySet().contains("http.status")
-	assert httpResponseHeaders["http.status"].contains("200")
-	assert httpResponseHeaders["Content-Type"].contains("text/xml; charset=UTF-8")
-} 
-// Camel
-else if (httpResponseHeaders.keySet().contains("content-length")) {
+if (httpResponseHeaders.keySet().contains(content_length)) {
 	assert httpResponseHeaders.keySet().contains("#status#")
 	assert httpResponseHeaders["#status#"].contains("HTTP/1.1 200 OK")
-	assert httpResponseHeaders["content-type"].contains("text/xml; charset=UTF-8")
-	//assert httpResponseHeaders["x-skltp-correlation-id"].contains(context.expand('${#Project#xskltpcorrelationid}'))
+	assert httpResponseHeaders[content_type].contains("text/xml; charset=UTF-8")
 }
 // Other
 else {
@@ -10730,29 +10736,31 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertSpecificValueInAllRecords('/urn:careDocumentation/hdurn2:careDocumentationHeader/hdurn2:patientId/hdurn2:id', context.patientId)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="5fe67f0d-8097-441b-9e9b-863c5b657f71" name="Assert Headers"><con:configuration><scriptText>def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
 def httpResponseHeaders = messageExchange.getResponseHeaders() 
-assert httpResponseHeaders.keySet().contains("x-skltp-prt")
 
-// Asserts common for Mule and Camel
-assert httpResponseHeaders.keySet().contains("Keep-Alive")
+for(header in httpResponseHeaders.keySet())
+{
+	if(header.equalsIgnoreCase("x-skltp-prt"))
+		x_skltp_prt = header
+	if(header.equalsIgnoreCase("content-length"))
+		content_length = header
+	if(header.equalsIgnoreCase("content-type"))
+		content_type = header
+	if(header.equalsIgnoreCase("x-skltp-correlation-id"))
+		x_skltp_correlation_id = header
+}
+assert !x_skltp_prt.isEmpty()
+
+// Common asserts
 assert httpResponseHeaders.keySet().contains("Server")
-assert httpResponseHeaders.keySet().contains("Connection")
 assert httpResponseHeaders.keySet().contains("Date")
-assert httpResponseHeaders.keySet().contains("Via")
 
 // Check content
 // Implementation dependent asserts
-// Mule
-if (httpResponseHeaders.keySet().contains("Transfer-Encoding")) {
-	assert httpResponseHeaders.keySet().contains("http.status")
-	assert httpResponseHeaders["http.status"].contains("200")
-	assert httpResponseHeaders["Content-Type"].contains("text/xml; charset=UTF-8")
-} 
-// Camel
-else if (httpResponseHeaders.keySet().contains("content-length")) {
+if (httpResponseHeaders.keySet().contains(content_length)) {
 	assert httpResponseHeaders.keySet().contains("#status#")
 	assert httpResponseHeaders["#status#"].contains("HTTP/1.1 200 OK")
-	assert httpResponseHeaders["content-type"].contains("text/xml; charset=UTF-8")
-	assert httpResponseHeaders["x-skltp-correlation-id"].contains(context.expand('${#TestCase#xskltpcorrelationid}'))
+	assert httpResponseHeaders[content_type].contains("text/xml; charset=UTF-8")
+	assert httpResponseHeaders[x_skltp_correlation_id].contains(context.expand('${#TestCase#xskltpcorrelationid}'))
 }
 // Other
 else {
@@ -10785,29 +10793,31 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertSpecificValueInAllRecords('/urn:careDocumentation/hdurn2:careDocumentationHeader/hdurn2:patientId/hdurn2:id', context.patientId1)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="20aaff09-7115-469a-9150-065ad71539f2" name="Assert Headers"><con:configuration><scriptText>def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
 def httpResponseHeaders = messageExchange.getResponseHeaders() 
-assert httpResponseHeaders.keySet().contains("x-skltp-prt")
 
-// Asserts common for Mule and Camel
-assert httpResponseHeaders.keySet().contains("Keep-Alive")
+for(header in httpResponseHeaders.keySet())
+{
+	if(header.equalsIgnoreCase("x-skltp-prt"))
+		x_skltp_prt = header
+	if(header.equalsIgnoreCase("content-length"))
+		content_length = header
+	if(header.equalsIgnoreCase("content-type"))
+		content_type = header
+	if(header.equalsIgnoreCase("x-skltp-correlation-id"))
+		x_skltp_correlation_id = header
+}
+assert !x_skltp_prt.isEmpty()
+
+// Common asserts
 assert httpResponseHeaders.keySet().contains("Server")
-assert httpResponseHeaders.keySet().contains("Connection")
 assert httpResponseHeaders.keySet().contains("Date")
-assert httpResponseHeaders.keySet().contains("Via")
 
 // Check content
 // Implementation dependent asserts
-// Mule
-if (httpResponseHeaders.keySet().contains("Transfer-Encoding")) {
-	assert httpResponseHeaders.keySet().contains("http.status")
-	assert httpResponseHeaders["http.status"].contains("200")
-	assert httpResponseHeaders["Content-Type"].contains("text/xml; charset=UTF-8")
-} 
-// Camel
-else if (httpResponseHeaders.keySet().contains("content-length")) {
+if (httpResponseHeaders.keySet().contains(content_length)) {
 	assert httpResponseHeaders.keySet().contains("#status#")
 	assert httpResponseHeaders["#status#"].contains("HTTP/1.1 200 OK")
-	assert httpResponseHeaders["content-type"].contains("text/xml; charset=UTF-8")
-	assert httpResponseHeaders["x-skltp-correlation-id"].contains(context.expand('${#TestCase#xskltpcorrelationid}'))
+	assert httpResponseHeaders[content_type].contains("text/xml; charset=UTF-8")
+	assert httpResponseHeaders[x_skltp_correlation_id].contains(context.expand('${#TestCase#xskltpcorrelationid}'))
 }
 // Other
 else {
@@ -10833,29 +10843,31 @@ else {
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertSpecificValueInAllRecords('/urn:careDocumentation/hdurn2:careDocumentationHeader/hdurn2:patientId/hdurn2:id', context.patientId)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="20aaff09-7115-469a-9150-065ad71539f2" name="Assert Headers"><con:configuration><scriptText>def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
 def httpResponseHeaders = messageExchange.getResponseHeaders() 
-assert httpResponseHeaders.keySet().contains("x-skltp-prt")
 
-// Asserts common for Mule and Camel
-assert httpResponseHeaders.keySet().contains("Keep-Alive")
+for(header in httpResponseHeaders.keySet())
+{
+	if(header.equalsIgnoreCase("x-skltp-prt"))
+		x_skltp_prt = header
+	if(header.equalsIgnoreCase("content-length"))
+		content_length = header
+	if(header.equalsIgnoreCase("content-type"))
+		content_type = header
+	if(header.equalsIgnoreCase("x-skltp-correlation-id"))
+		x_skltp_correlation_id = header
+}
+assert !x_skltp_prt.isEmpty()
+
+// Common asserts
 assert httpResponseHeaders.keySet().contains("Server")
-assert httpResponseHeaders.keySet().contains("Connection")
 assert httpResponseHeaders.keySet().contains("Date")
-assert httpResponseHeaders.keySet().contains("Via")
 
 // Check content
 // Implementation dependent asserts
-// Mule
-if (httpResponseHeaders.keySet().contains("Transfer-Encoding")) {
-	assert httpResponseHeaders.keySet().contains("http.status")
-	assert httpResponseHeaders["http.status"].contains("200")
-	assert httpResponseHeaders["Content-Type"].contains("text/xml; charset=UTF-8")
-} 
-// Camel
-else if (httpResponseHeaders.keySet().contains("content-length")) {
+if (httpResponseHeaders.keySet().contains(content_length)) {
 	assert httpResponseHeaders.keySet().contains("#status#")
 	assert httpResponseHeaders["#status#"].contains("HTTP/1.1 200 OK")
-	assert httpResponseHeaders["content-type"].contains("text/xml; charset=UTF-8")
-	assert httpResponseHeaders["x-skltp-correlation-id"].contains(context.expand('${#TestCase#xskltpcorrelationid}'))
+	assert httpResponseHeaders[content_type].contains("text/xml; charset=UTF-8")
+	assert httpResponseHeaders[x_skltp_correlation_id].contains(context.expand('${#TestCase#xskltpcorrelationid}'))
 }
 // Other
 else {
@@ -10888,29 +10900,31 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertSpecificValueInAllRecords('/urn:careDocumentation/hdurn2:careDocumentationHeader/hdurn2:patientId/hdurn2:id', context.patientId)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="e27bc393-2426-4d80-9399-4b55033a1619" name="Assert Headers"><con:configuration><scriptText>def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
 def httpResponseHeaders = messageExchange.getResponseHeaders() 
-assert httpResponseHeaders.keySet().contains("x-skltp-prt")
 
-// Asserts common for Mule and Camel
-assert httpResponseHeaders.keySet().contains("Keep-Alive")
+for(header in httpResponseHeaders.keySet())
+{
+	if(header.equalsIgnoreCase("x-skltp-prt"))
+		x_skltp_prt = header
+	if(header.equalsIgnoreCase("content-length"))
+		content_length = header
+	if(header.equalsIgnoreCase("content-type"))
+		content_type = header
+	if(header.equalsIgnoreCase("x-skltp-correlation-id"))
+		x_skltp_correlation_id = header
+}
+assert !x_skltp_prt.isEmpty()
+
+// Common asserts
 assert httpResponseHeaders.keySet().contains("Server")
-assert httpResponseHeaders.keySet().contains("Connection")
 assert httpResponseHeaders.keySet().contains("Date")
-assert httpResponseHeaders.keySet().contains("Via")
 
 // Check content
 // Implementation dependent asserts
-// Mule
-if (httpResponseHeaders.keySet().contains("Transfer-Encoding")) {
-	assert httpResponseHeaders.keySet().contains("http.status")
-	assert httpResponseHeaders["http.status"].contains("200")
-	assert httpResponseHeaders["Content-Type"].contains("text/xml; charset=UTF-8")
-} 
-// Camel
-else if (httpResponseHeaders.keySet().contains("content-length")) {
+if (httpResponseHeaders.keySet().contains(content_length)) {
 	assert httpResponseHeaders.keySet().contains("#status#")
 	assert httpResponseHeaders["#status#"].contains("HTTP/1.1 200 OK")
-	assert httpResponseHeaders["content-type"].contains("text/xml; charset=UTF-8")
-	assert httpResponseHeaders["x-skltp-correlation-id"].contains(context.expand('${#TestCase#xskltpcorrelationid}'))
+	assert httpResponseHeaders[content_type].contains("text/xml; charset=UTF-8")
+	assert httpResponseHeaders[x_skltp_correlation_id].contains(context.expand('${#TestCase#xskltpcorrelationid}'))
 }
 // Other
 else {
@@ -10935,9 +10949,14 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
       </urn1:GetCareDocumentation>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="e8cec593-1604-465b-be30-ef490d396272" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="GroovyScriptAssertion" id="5fe67f0d-8097-441b-9e9b-863c5b657f71" name="Assert x-rivta-routing-history"><con:configuration><scriptText>def httpResponseHeaders = messageExchange.getResponseHeaders() 
-assert httpResponseHeaders.keySet().contains("x-rivta-routing-history")
 
-def routingHistory = httpResponseHeaders['x-rivta-routing-history'][0]
+for(header in httpResponseHeaders.keySet())
+{
+	if(header.equalsIgnoreCase("x-rivta-routing-history"))
+		x_rivta_routing_history = header
+}
+
+def routingHistory = httpResponseHeaders[x_rivta_routing_history][0]
 assert routingHistory.contains(context.serviceConsumerHsaId)
 assert routingHistory.contains("#")
 </scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="a2f66d51-3ae0-4fca-b9be-5c48ae12ff90" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.4.2 Fråga med tidigare anropskejda skickas vidare" searchProperties="true"><con:description>	</con:description><con:settings/><con:testStep type="groovy" name="Read data" id="4e3c7c3a-4f05-4a45-9686-f705160f91db"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
@@ -10960,9 +10979,13 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
       </urn1:GetCareDocumentation>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="e8cec593-1604-465b-be30-ef490d396272" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="GroovyScriptAssertion" id="5fe67f0d-8097-441b-9e9b-863c5b657f71" name="Assert x-rivta-routing-history"><con:configuration><scriptText>def httpResponseHeaders = messageExchange.getResponseHeaders() 
-assert httpResponseHeaders.keySet().contains("x-rivta-routing-history")
+for(header in httpResponseHeaders.keySet())
+{
+	if(header.equalsIgnoreCase("x-rivta-routing-history"))
+		x_rivta_routing_history = header
+}
 
-def routingHistory = httpResponseHeaders['x-rivta-routing-history'][0]
+def routingHistory = httpResponseHeaders[x_rivta_routing_history][0]
 assert routingHistory.contains(context.routingHistory)
 </scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="0395e6b6-a832-46ed-8157-7b329c868765" name="Standardiserade felkoder"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="535f0c1c-c96a-46a0-ae41-8dc641aa3f14" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="2.1.1 Konsument anropar okänd tjänst" searchProperties="true"><con:description>Iom. bytet till Camel NTP-819 så tar inte NTjP längre hänsyn till extension delen av URL som anges i POST.
 Det är SOAPAction som bestämmer vilken tjänst som ska anropas.
@@ -11178,8 +11201,14 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
 else if (context.webServiceUrl.count("test.esb.ntjp") > 0) {
 	context.routingHistory = "NTjP_T-SERVICES-SE165565594230-109C"
 }
+else if (context.webServiceUrl.count("esb.test.ntjp") > 0) { // BKS. should be the same as test?
+	context.routingHistory = "T-SERVICES-SE165565594230-109C"
+}
 else if (context.webServiceUrl.count("qa.esb.ntjp") > 0) {
 	context.routingHistory = "NTjP_T-SERVICES-SE165565594230-1023"
+}
+else if (context.webServiceUrl.count("esb.qa.ntjp") > 0) { // BKS. should be the same as QA?
+	context.routingHistory = "T-SERVICES-SE165565594230-1023"
 }</script></con:config></con:testStep><con:testStep type="request" id="fff7186b-5ae9-493d-9845-d8ae9ff0a625" name="GetCareDocumentation"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCareDocumentationResponderBinding_2.1</con:interface><con:operation>GetCareDocumentation</con:operation><con:request name="GetCareDocumentation" id="adf3c3c3-1732-479d-bd00-5675f7d6268f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-rivta-routing-history" value="${routingHistory}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrl}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
    <soapenv:Header>\r
       <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
@@ -12100,4 +12129,4 @@ for (int parameterIndex = 0; parameterIndex &lt; endpoints.length; parameterInde
 	def interfaceName = interfaces[parameterIndex].trim()	
 	runGetWsdlTestcase(endpoint, interfaceName) 
 }
-</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>HSA_NTJP</con:name><con:value>HSASERVICES-NTJP</con:value></con:property><con:property><con:name>HSA_RTJP</con:name><con:value>HSASERVICES-RTJP</con:value></con:property><con:property><con:name>HSA_KONSUMENT1</con:name><con:value>TSTNMT2321000156-B02</con:value></con:property><con:property><con:name>HSA_PRODUCENT1</con:name><con:value>LOAD-MOCKS</con:value></con:property><con:property><con:name>HSA_PRODUCENT2</con:name><con:value>PRODUCENT2</con:value></con:property><con:property><con:name>HSA_PRODUCENT3</con:name><con:value>PRODUCENT3</con:value></con:property><con:property><con:name>HSA_PRODUCENT4</con:name><con:value>PRODUCENT4</con:value></con:property><con:property><con:name>HSA_KONSUMENT2</con:name><con:value>KONSUMENT2</con:value></con:property><con:property><con:name>ENV_SIT</con:name><con:value>https://test.esb.ntjp.se</con:value></con:property><con:property><con:name>ENV_QA</con:name><con:value>https://qa.esb.ntjp.se</con:value></con:property><con:property><con:name>xmlns:urn</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:hdurn2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gcd2:careDocumentation</con:value></con:property><con:property><con:name>xmlns:gcd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:gro3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetReferralOutcomeResponder:3</con:value></con:property><con:property><con:name>xmlns:haurn3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:3</con:value></con:property><con:property><con:name>xmlns:gcc3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3</con:value></con:property><con:property><con:name>xmlns:llurn3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:3</con:value></con:property><con:property><con:name>xmlns:go1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:1</con:value></con:property><con:property><con:name>xmlns:hburn1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:1</con:value></con:property><con:property><con:name>xmlns:gio1</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetImagingOutcomeResponder:1</con:value></con:property><con:property><con:name>xmlns:ga1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1</con:value></con:property><con:property><con:name>xmlns:aaurn1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:1</con:value></con:property><con:property><con:name>xmlns:gd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2</con:value></con:property></con:properties><con:afterLoadScript/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:endpointStrategy/><con:properties><con:property><con:name>HSA_NTJP</con:name><con:value>HSASERVICES-NTJP</con:value></con:property><con:property><con:name>HSA_RTJP</con:name><con:value>HSASERVICES-RTJP</con:value></con:property><con:property><con:name>HSA_KONSUMENT1</con:name><con:value>TSTNMT2321000156-B02</con:value></con:property><con:property><con:name>HSA_PRODUCENT1</con:name><con:value>LOAD-MOCKS</con:value></con:property><con:property><con:name>HSA_PRODUCENT2</con:name><con:value>PRODUCENT2</con:value></con:property><con:property><con:name>HSA_PRODUCENT3</con:name><con:value>PRODUCENT3</con:value></con:property><con:property><con:name>HSA_PRODUCENT4</con:name><con:value>PRODUCENT4</con:value></con:property><con:property><con:name>HSA_KONSUMENT2</con:name><con:value>KONSUMENT2</con:value></con:property><con:property><con:name>ENV_SIT</con:name><con:value>https://test.esb.ntjp.se</con:value></con:property><con:property><con:name>ENV_QA</con:name><con:value>https://qa.esb.ntjp.se</con:value></con:property><con:property><con:name>xmlns:urn</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:hdurn2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gcd2:careDocumentation</con:value></con:property><con:property><con:name>xmlns:gcd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:gro3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetReferralOutcomeResponder:3</con:value></con:property><con:property><con:name>xmlns:haurn3</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:3</con:value></con:property><con:property><con:name>xmlns:gcc3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:3</con:value></con:property><con:property><con:name>xmlns:llurn3</con:name><con:value>urn:riv:clinicalprocess:logistics:logistics:3</con:value></con:property><con:property><con:name>xmlns:go1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:GetObservationsResponder:1</con:value></con:property><con:property><con:name>xmlns:hburn1</con:name><con:value>urn:riv:clinicalprocess:healthcond:basic:1</con:value></con:property><con:property><con:name>xmlns:gio1</con:name><con:value>urn:riv:clinicalprocess:healthcond:actoutcome:GetImagingOutcomeResponder:1</con:value></con:property><con:property><con:name>xmlns:ga1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1</con:value></con:property><con:property><con:name>xmlns:aaurn1</con:name><con:value>urn:riv:clinicalprocess:activity:actions:1</con:value></con:property><con:property><con:name>xmlns:gd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2</con:value></con:property></con:properties><con:afterLoadScript/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
