@@ -11198,6 +11198,9 @@ def source = new XmlDataReader(context, dataFile)
 source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Set data GCD2" id="be5c5104-026e-4303-b8ce-93555cb13fd1"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gcd2:careDocumentation")</script></con:config></con:testStep><con:testStep type="groovy" name="Set routing history" id="f7bf019f-dad4-4723-bbc6-09dc7ec9bea8"><con:settings/><con:config><script>if (context.webServiceUrl.count("dev.esb.ntjp") > 0) {
 	context.routingHistory = "NTjP_T_SERVICES_SE165565594230-10BR"
 }
+else if (context.webServiceUrl.count("esb.dev.ntjp") > 0) { // BKS. should be the same as dev?
+	context.routingHistory = "T_SERVICES_SE165565594230-10BR"
+}
 else if (context.webServiceUrl.count("test.esb.ntjp") > 0) {
 	context.routingHistory = "NTjP_T-SERVICES-SE165565594230-109C"
 }
