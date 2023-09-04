@@ -15807,49 +15807,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6c7e2e00-4962-47c7-9978-17ccfa90ddc4"/><con:assertion type="Schema Compliance" id="e3952b2a-e4d2-467a-8284-ab65cc41a80d"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="83f14ed1-1c24-4a1f-9aea-870a0b481f48"/><con:assertion type="GroovyScriptAssertion" id="b8d46100-cc78-45c5-856d-2e499fb951d0" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d268bd6c-48f4-40c3-89e7-0cd0af5bc7ef" name="Assert resultCode"><con:configuration><token>resultCode>INFO&lt;</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="90123260-e7b2-449f-8f0c-dc9b6f42964a" name="GetAlertInformationResponderBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="18476f17-6525-4978-8252-2272a3266f72" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetAlertInformation TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="4502d3ec-7091-44fb-9c51-7d3a207b8b9f" name="GetAlertInformation"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_3.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="GetAlertInformation" id="7383fbb5-7ee6-4c94-9b99-411882eeeebd"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://tempuri.org</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:3">\r
-   <soapenv:Header>\r
-      <urn:LogicalAddress>?</urn:LogicalAddress>\r
-   </soapenv:Header>\r
-   <soapenv:Body>\r
-      <urn1:GetAlertInformation>\r
-         <!--Zero or more repetitions:-->\r
-         <urn1:careUnit>\r
-            <urn2:root>?</urn2:root>\r
-            <!--Optional:-->\r
-            <urn2:extension>?</urn2:extension>\r
-            <!--You may enter ANY elements at this point-->\r
-         </urn1:careUnit>\r
-         <!--Zero or more repetitions:-->\r
-         <urn1:healthcareProvider>\r
-            <urn2:root>?</urn2:root>\r
-            <!--Optional:-->\r
-            <urn2:extension>?</urn2:extension>\r
-            <!--You may enter ANY elements at this point-->\r
-         </urn1:healthcareProvider>\r
-         <urn1:patientId>\r
-            <urn2:root>?</urn2:root>\r
-            <!--Optional:-->\r
-            <urn2:extension>?</urn2:extension>\r
-            <!--You may enter ANY elements at this point-->\r
-         </urn1:patientId>\r
-         <!--Optional:-->\r
-         <urn1:datePeriod>\r
-            <urn2:start>?</urn2:start>\r
-            <urn2:end>?</urn2:end>\r
-            <!--You may enter ANY elements at this point-->\r
-         </urn1:datePeriod>\r
-         <!--Optional:-->\r
-         <urn1:sourceSystemId>\r
-            <urn2:root>?</urn2:root>\r
-            <!--Optional:-->\r
-            <urn2:extension>?</urn2:extension>\r
-            <!--You may enter ANY elements at this point-->\r
-         </urn1:sourceSystemId>\r
-         <!--You may enter ANY elements at this point-->\r
-      </urn1:GetAlertInformation>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3:GetAlertInformation"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="9fd37f04-95a6-4ce8-9978-a713750e613f" port="8080" path="/" host="Idefix" name="MockService 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetCareDocumentation" id="de1c62e0-0654-4c98-8a73-6d14132a45f5" interface="GetCareDocumentationResponderBinding" operation="GetCareDocumentation"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="3e0db252-6087-4957-a1ad-c2bd0a2a0782" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:3" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:3">
+ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d268bd6c-48f4-40c3-89e7-0cd0af5bc7ef" name="Assert resultCode"><con:configuration><token>resultCode>INFO&lt;</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="9fd37f04-95a6-4ce8-9978-a713750e613f" port="8080" path="/" host="Idefix" name="MockService 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetCareDocumentation" id="de1c62e0-0654-4c98-8a73-6d14132a45f5" interface="GetCareDocumentationResponderBinding" operation="GetCareDocumentation"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="3e0db252-6087-4957-a1ad-c2bd0a2a0782" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:3" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:3">
    <soapenv:Header/>
    <soapenv:Body>
       <urn:GetCareDocumentationResponse>
@@ -16023,4 +15981,4 @@ ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion
          <!--You may enter ANY elements at this point-->
       </urn:GetCareDocumentationResponse>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:3:GetCareDocumentation"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties><con:property><con:name>xmlns:gai2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2</con:value></con:property><con:property><con:name>xmlns:urn2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:2</con:value></con:property><con:property><con:name>xmlns:urn3</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:3</con:value></con:property><con:property><con:name>xmlns:gcd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:gcd3</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:3</con:value></con:property><con:property><con:name>xmlns:gd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2</con:value></con:property><con:property><con:name>xmlns:gfs2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gcd3:careDocumentation</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:3:GetCareDocumentation"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties><con:property><con:name>xmlns:gai2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2</con:value></con:property><con:property><con:name>xmlns:gai3</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3</con:value></con:property><con:property><con:name>xmlns:urn2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:2</con:value></con:property><con:property><con:name>xmlns:urn3</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:3</con:value></con:property><con:property><con:name>xmlns:gcd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2</con:value></con:property><con:property><con:name>xmlns:gcd3</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:3</con:value></con:property><con:property><con:name>xmlns:gd2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2</con:value></con:property><con:property><con:name>xmlns:gfs2</con:name><con:value>urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatusResponder:2</con:value></con:property><con:property><con:name>RecordElementPath</con:name><con:value>//gcd3:careDocumentation</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
