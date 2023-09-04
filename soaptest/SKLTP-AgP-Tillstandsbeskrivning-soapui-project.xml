@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="b0c9d84a-6a30-4e48-829b-bd6459642f91" activeEnvironment="Default" name="SKLTP-AgP-Tillståndsbeskrivning" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="5707b2fb-0d57-4b9d-981e-912f21fa0caf" wsaVersion="NONE" name="GetFunctionalStatusResponderBinding_2.0" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatus:2:rivtabp21}GetFunctionalStatusResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../../../Users/fragru/Documents/rivta/AAA_Domains/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetFunctionalStatusInteraction/GetFunctionalStatusInteraction_2.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/fragru/Documents/rivta/AAA_Domains/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetFunctionalStatusInteraction/GetFunctionalStatusInteraction_2.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/Users/fragru/Documents/rivta/AAA_Domains/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetFunctionalStatusInteraction/GetFunctionalStatusInteraction_2.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+<con:soapui-project id="b0c9d84a-6a30-4e48-829b-bd6459642f91" activeEnvironment="Default" name="SKLTP-AgP-Tillståndsbeskrivning" resourceRoot="" soapui-version="5.7.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="5707b2fb-0d57-4b9d-981e-912f21fa0caf" wsaVersion="NONE" name="GetFunctionalStatusResponderBinding_2.0" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:description:GetFunctionalStatus:2:rivtabp21}GetFunctionalStatusResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../../../Users/fragru/Documents/rivta/AAA_Domains/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetFunctionalStatusInteraction/GetFunctionalStatusInteraction_2.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/fragru/Documents/rivta/AAA_Domains/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetFunctionalStatusInteraction/GetFunctionalStatusInteraction_2.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/Users/fragru/Documents/rivta/AAA_Domains/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetFunctionalStatusInteraction/GetFunctionalStatusInteraction_2.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements. See the NOTICE file
  distributed with this work for additional information
  regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
@@ -1431,7 +1431,7 @@
          <!--You may enter ANY elements at this point-->\r
       </urn1:GetAlertInformation>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2:GetAlertInformation"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="96e35dd6-e650-49f4-a3fa-91ffe5909ace" wsaVersion="NONE" name="GetCareDocumentationResponderBinding_2.1" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:description:GetCareDocumentation:2:rivtabp21}GetCareDocumentationResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../schemas/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetCareDocumentationInteraction/GetCareDocumentationInteraction_2.1_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\VBShare\schemas\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\interactions\GetCareDocumentationInteraction\GetCareDocumentationInteraction_2.1_RIVTABP21.wsdl"><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\interactions\GetCareDocumentationInteraction\GetCareDocumentationInteraction_2.1_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2:GetAlertInformation"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="96e35dd6-e650-49f4-a3fa-91ffe5909ace" wsaVersion="NONE" name="GetCareDocumentationResponderBinding_2.1" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:description:GetCareDocumentation:2:rivtabp21}GetCareDocumentationResponderBinding" soapVersion="1_1" anonymous="optional" definition="../../schemas/ServiceContracts_clinicalprocess_healthcond_description_2.1.9/schemas/interactions/GetCareDocumentationInteraction/GetCareDocumentationInteraction_2.1_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\VBShare\schemas\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\interactions\GetCareDocumentationInteraction\GetCareDocumentationInteraction_2.1_RIVTABP21.wsdl"><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_clinicalprocess_healthcond_description_2.1.9\schemas\interactions\GetCareDocumentationInteraction\GetCareDocumentationInteraction_2.1_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements. See the NOTICE file
  distributed with this work for additional information
  regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
@@ -13350,14 +13350,538 @@
          <!--You may enter ANY elements at this point-->\r
       </urn1:GetCareDocumentation>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:3:GetCareDocumentation"/></con:call></con:operation></con:interface><con:testSuite id="c83e7720-17f5-41cc-b6bc-c55dc3d8dfeb" name="clinicalprocess_healthcond_description"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="f81bb999-6744-4c3f-ac0b-4bffe060e933" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.1 (GAI) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="cbcca86e-8d3f-4ba0-aabf-33c22a28e9aa"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:3:GetCareDocumentation"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="d7ed91b7-1a2e-492f-897e-aa82a101989f" wsaVersion="NONE" name="GetAlertInformationResponderBinding_3.0" type="wsdl" bindingName="{urn:riv:clinicalprocess:healthcond:description:GetAlertInformation:3:rivtabp21}GetAlertInformationResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Git/riv.clinicalprocess.healthcond.description/schemas/interactions/GetAlertInformationInteraction/GetAlertInformationInteraction_3.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Git/riv.clinicalprocess.healthcond.description/schemas/interactions/GetAlertInformationInteraction/GetAlertInformationInteraction_3.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/Git/riv.clinicalprocess.healthcond.description/schemas/interactions/GetAlertInformationInteraction/GetAlertInformationInteraction_3.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<wsdl:definitions name="GetAlertInformationInteraction" targetNamespace="urn:riv:clinicalprocess:healthcond:description:GetAlertInformation:3:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:tjsi="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationInitiator:3" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:GetAlertInformation:3:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1">
+  <wsdl:documentation>Tjänsteinteraktionens namn: GetAlertInformationInteraction
+        Beskrivning:
+        Returnerar uppmärksamhetsinformation för en patient.
+        Revisioner:
+        Tjänstedomän: clinicalprocess:healthcond:description
+        Tjänsteinteraktionstyp: Fråga-Svar
+        WS-profil: RIVTABP21
+        Förvaltas av: Inera AB</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:GetAlertInformation:3:rivtabp21">
+      <xs:import schemaLocation="GetAlertInformationResponder_3.0.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAlertInformationRequest">
+    <wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
+      <wsdl:documentation>National: The HSA-id of Inera AB ("national" aggregation service)
+                Regional: The HSA-id of Inera AB (regional aggregation service)
+                Specific Source system: The HSA-id of the source system</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="parameters" element="tjsr:GetAlertInformation"/>
+  </wsdl:message>
+  <wsdl:message name="GetAlertInformationResponse">
+    <wsdl:part name="parameters" element="tjsr:GetAlertInformationResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="GetAlertInformationResponderInterface">
+    <wsdl:operation name="GetAlertInformation">
+      <wsdl:input message="tns:GetAlertInformationRequest"/>
+      <wsdl:output message="tns:GetAlertInformationResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetAlertInformationResponderBinding" type="tns:GetAlertInformationResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetAlertInformation">
+      <soap:operation soapAction="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3:GetAlertInformation" style="document"/>
+      <wsdl:input>
+        <soap:header use="literal" message="tns:GetAlertInformationRequest" part="LogicalAddress"/>
+        <soap:body use="literal" parts="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetAlertInformationResponderService">
+    <wsdl:port name="GetAlertInformationResponderPort" binding="tns:GetAlertInformationResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Git\riv.clinicalprocess.healthcond.description\schemas\interactions\GetAlertInformationInteraction\GetAlertInformationResponder_3.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Inera AB licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:core="urn:riv:clinicalprocess:healthcond:description:3">
+  <xs:import schemaLocation="../../core_components/clinicalprocess_healthcond_description_3.0.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:3"/>
+  <xs:element name="GetAlertInformation" type="tns:GetAlertInformationType"/>
+  <xs:element name="GetAlertInformationResponse" type="tns:GetAlertInformationResponseType"/>
+  <xs:complexType name="GetAlertInformationType">
+    <xs:sequence>
+      <xs:element name="careUnit" type="core:IIType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="healthcareProvider" type="core:IIType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="patientId" type="core:IIType"/>
+      <xs:element name="datePeriod" type="core:DatePeriodType" minOccurs="0"/>
+      <xs:element name="sourceSystemId" type="core:IIType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetAlertInformationResponseType">
+    <xs:sequence>
+      <xs:element name="alertInformation" type="tns:AlertInformationType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlertInformationType">
+    <xs:sequence>
+      <xs:element name="header" type="core:HeaderType"/>
+      <xs:element name="body" type="tns:AlertInformationBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlertInformationBodyType">
+    <xs:sequence>
+      <xs:element name="specificationVersion" type="xs:string"/>
+      <xs:element name="hypersensitivity" type="tns:HypersensitivityType" minOccurs="0"/>
+      <xs:element name="activity" type="tns:ActivityType" minOccurs="0"/>
+      <xs:element name="condition" type="tns:ConditionType" minOccurs="0"/>
+      <xs:element name="decisionNonstandardCareProcedure" type="tns:DecisionNonstandardCareProcedureType" minOccurs="0"/>
+      <xs:element name="informationNonstandardCareProcedure" type="tns:InformationNonstandardCareProcedureType" minOccurs="0"/>
+      <xs:element name="contagion" type="tns:ContagionType" minOccurs="0"/>
+      <xs:element name="unstructuredAlertInformation" type="tns:UnstructuredAlertInformationType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HypersensitivityType">
+    <xs:sequence>
+      <xs:element name="value" type="core:CVType"/>
+      <xs:element name="status" type="core:CVType"/>
+      <xs:element name="time" type="tns:TimeType"/>
+      <xs:element name="degreeOfSeverity" type="core:CVType"/>
+      <xs:element name="degreeOfCertainty" type="core:CVType" minOccurs="0"/>
+      <xs:element name="negation" type="xs:boolean"/>
+      <xs:element name="verificationMethod" type="tns:VerificationMethodType" minOccurs="0"/>
+      <xs:element name="resource" type="tns:ResourceType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActivityType">
+    <xs:sequence>
+      <xs:element name="code" type="core:CVType"/>
+      <xs:element name="status" type="core:CVType"/>
+      <xs:element name="time" type="tns:TimeType"/>
+      <xs:element name="resource" type="tns:ResourceType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="bodyStructure" type="tns:BodyStructureType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConditionType">
+    <xs:sequence>
+      <xs:element name="value" type="core:CVType"/>
+      <xs:element name="status" type="core:CVType"/>
+      <xs:element name="time" type="tns:TimeType"/>
+      <xs:element name="negation" type="xs:boolean"/>
+      <xs:element name="bodyStructure" type="tns:BodyStructureType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="resource" type="tns:ResourceType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DecisionNonstandardCareProcedureType">
+    <xs:sequence>
+      <xs:element name="code" type="core:CVType"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="approval" type="xs:boolean"/>
+      <xs:element name="timestamp" type="core:TimeStampType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InformationNonstandardCareProcedureType">
+    <xs:sequence>
+      <xs:element name="value" type="core:CVType"/>
+      <xs:element name="status" type="core:CVType"/>
+      <xs:element name="time" type="tns:TimeType"/>
+      <xs:element name="negation" type="xs:boolean"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ContagionType">
+    <xs:sequence>
+      <xs:element name="value" type="core:CVType"/>
+      <xs:element name="status" type="core:CVType"/>
+      <xs:element name="time" type="tns:TimeType"/>
+      <xs:element name="negation" type="xs:boolean"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UnstructuredAlertInformationType">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VerificationMethodType">
+    <xs:sequence>
+      <xs:element name="code" type="core:CVType"/>
+      <xs:element name="status" type="core:CVType"/>
+      <xs:element name="time" type="tns:TimeType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ResourceType">
+    <xs:sequence>
+      <xs:element name="id" type="core:IIType" minOccurs="0"/>
+      <xs:element name="type" type="core:CVType" minOccurs="0"/>
+      <xs:element name="productId" type="core:CVType" minOccurs="0"/>
+      <xs:element name="resourceProperty" type="tns:ResourcePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ResourcePropertyType">
+    <xs:sequence>
+      <xs:element name="type" type="core:CVType" minOccurs="0"/>
+      <xs:element name="value" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BodyStructureType">
+    <xs:sequence>
+      <xs:element name="code" type="core:CVType" minOccurs="0"/>
+      <xs:element name="laterality" type="core:CVType" minOccurs="0"/>
+      <xs:element name="specifiedLocation" type="core:CVType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TimeType">
+    <xs:sequence>
+      <xs:element name="timestamp" type="core:TimeStampType" minOccurs="0"/>
+      <xs:element name="timePeriod" type="core:TimePeriodType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Git\riv.clinicalprocess.healthcond.description\schemas\core_components\clinicalprocess_healthcond_description_3.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:3" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:3" xmlns:codes="urn:riv:clinicalprocess:healthcond:description:enums:3">
+  <xs:import schemaLocation="./clinicalprocess_healthcond_description_enum_3.0.xsd" namespace="urn:riv:clinicalprocess:healthcond:description:enums:3"/>
+  <!--Below: Types used exclusively by service contract GetCareDocumentation-->
+  <xs:complexType name="CareDocumentationType">
+    <xs:sequence>
+      <xs:element name="header" type="tns:HeaderType"/>
+      <xs:element name="body" type="tns:CareDocumentationBodyType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CareDocumentationBodyType">
+    <xs:sequence>
+      <xs:element name="clinicalDocumentNoteCode" type="tns:CVType"/>
+      <xs:element name="clinicalDocumentNoteTitle" type="xs:string" minOccurs="0"/>
+      <xs:element name="clinicalDocumentNoteText" type="xs:string" minOccurs="0"/>
+      <xs:element name="multimediaEntry" type="tns:MultimediaType" minOccurs="0"/>
+      <xs:element name="dissentingOpinion" type="tns:DissentingOpinionType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DissentingOpinionType">
+    <xs:sequence>
+      <xs:element name="opinionId" type="tns:IIType" minOccurs="0"/>
+      <xs:element name="authorTime" type="tns:TimeStampType"/>
+      <xs:element name="opinion" type="xs:string"/>
+      <xs:element name="personId" type="tns:IIType"/>
+      <xs:element name="personName" type="xs:string"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Below: Common header used in service contracts for JoL (Journal- och Läkemedel).
+
+        Version: JoL Header Fältregler_v2.2-->
+  <xs:complexType name="HeaderType">
+    <xs:sequence>
+      <xs:element name="accessControlHeader" type="tns:AccessControlHeaderType"/>
+      <xs:element name="sourceSystemId" type="tns:IIType"/>
+      <xs:element name="record" type="tns:RecordType"/>
+      <xs:element name="author" type="tns:AuthorType" minOccurs="0"/>
+      <xs:element name="signature" type="tns:SignatureType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AccessControlHeaderType">
+    <xs:sequence>
+      <xs:element name="accountableHealthcareProvider" type="tns:IIType" minOccurs="0"/>
+      <xs:element name="accountableCareUnit" type="tns:IIType" minOccurs="0"/>
+      <xs:element name="patientId" type="tns:IIType"/>
+      <xs:element name="careProcessId" type="tns:IIType" minOccurs="0"/>
+      <xs:element name="blockComparisonTime" type="tns:TimeStampType"/>
+      <xs:element name="approvedForPatient" type="xs:boolean"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecordType">
+    <xs:sequence>
+      <xs:element name="id" type="tns:IIType"/>
+      <xs:element name="timestamp" type="tns:TimeStampType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AuthorType">
+    <xs:sequence>
+      <xs:element name="id" type="tns:IIType" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="timestamp" type="tns:TimeStampType"/>
+      <xs:element name="byRole" type="tns:CVType" minOccurs="0"/>
+      <xs:element name="orgUnit" type="tns:OrgUnitType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SignatureType">
+    <xs:sequence>
+      <xs:element name="id" type="tns:IIType" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="timestamp" type="tns:TimeStampType"/>
+      <xs:element name="byRole" type="tns:CVType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Below: only helper types allowed.
+        
+        A helper type is a type used in one ore more of the domain schema common types.
+        It can also be a type used in two or more service schemas.
+
+        Types are defined in version 17 of "De facto-konventioner för datatyper".-->
+  <xs:complexType name="DatePeriodType">
+    <xs:annotation>
+      <xs:documentation>Används för att specificera ett datumintervall
+                med hjälp av start- och slutdatum.
+
+                start:
+                Startdatum på formatet ÅÅÅÅMMDD
+                end:
+                Slutdatum på formatet ÅÅÅÅMMDD</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="start" type="tns:DateType"/>
+      <xs:element name="end" type="tns:DateType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="DateType">
+    <xs:annotation>
+      <xs:documentation>Formatet är ÅÅÅÅMMDD</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="MultimediaType">
+    <xs:sequence>
+      <xs:element name="mediaType" type="xs:string"/>
+      <xs:element name="value" type="xs:base64Binary" minOccurs="0"/>
+      <xs:element name="reference" type="xs:anyURI" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TimeStampType">
+    <xs:annotation>
+      <xs:documentation>A quantity specifying a point on the axis of natural time.
+                A point in time is most often represented as a calendar
+                expression.
+
+                The time has the format YYYYMMDDhhmmss</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])(0[0-9]|1[0-9]|2[0123])([0-5])([0-9])([0-5])([0-9])"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CVType">
+    <xs:sequence>
+      <xs:element name="code" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystem" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystemName" type="xs:string" minOccurs="0"/>
+      <xs:element name="codeSystemVersion" type="xs:string" minOccurs="0"/>
+      <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+      <xs:element name="originalText" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IIType">
+    <xs:sequence>
+      <xs:element name="root" type="xs:string"/>
+      <xs:element name="extension" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ResultType">
+    <xs:sequence>
+      <xs:element name="resultCode" type="codes:ResultCodeEnum" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="resultText" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OrgUnitType">
+    <xs:sequence>
+      <xs:element name="orgUnitHSAId" type="tns:HSAIdType" minOccurs="0"/>
+      <xs:element name="orgUnitName" type="xs:string" minOccurs="0"/>
+      <xs:element name="orgUnitTelecom" type="xs:string" minOccurs="0"/>
+      <xs:element name="orgUnitEmail" type="xs:string" minOccurs="0"/>
+      <xs:element name="orgUnitAddress" type="xs:string" minOccurs="0"/>
+      <xs:element name="orgUnitLocation" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="HSAIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="TimePeriodType">
+    <xs:annotation>
+      <xs:documentation>Används för att specificera ett datumintervall
+                med hjälp av start- och slutdatum.
+
+                start:
+                Startdatum på formatet YYYYMMDDhhmmss
+                end:
+                Slutdatum på formatet YYYYMMDDhhmmss</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="start" type="tns:TimeStampType" minOccurs="0"/>
+      <xs:element name="end" type="tns:TimeStampType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Git\riv.clinicalprocess.healthcond.description\schemas\core_components\clinicalprocess_healthcond_description_enum_3.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements. See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License. You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied. See the License for the
+ specific language governing permissions and limitations
+ under the License.-->
+<xs:schema targetNamespace="urn:riv:clinicalprocess:healthcond:description:enums:3" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:clinicalprocess:healthcond:description:enums:3">
+  <xs:simpleType name="ResultCodeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="INFO"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Git\riv.clinicalprocess.healthcond.description\schemas\core_components\itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:itintegration:registry:1" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:element name="ServiceContract" type="ServiceContractType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract. Used in interaction GetSupportedServiceContracts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://tempuri.org</con:endpoint></con:endpoints><con:operation id="01366b96-0604-4f8a-9612-1f81f187d18c" isOneWay="false" action="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3:GetAlertInformation" name="GetAlertInformation" bindingOperationName="GetAlertInformation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="df890f79-1f26-461a-afe5-22fe725dc433" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://tempuri.org</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>?</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <!--Zero or more repetitions:-->\r
+         <urn1:careUnit>\r
+            <urn2:root>?</urn2:root>\r
+            <!--Optional:-->\r
+            <urn2:extension>?</urn2:extension>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:careUnit>\r
+         <!--Zero or more repetitions:-->\r
+         <urn1:healthcareProvider>\r
+            <urn2:root>?</urn2:root>\r
+            <!--Optional:-->\r
+            <urn2:extension>?</urn2:extension>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:healthcareProvider>\r
+         <urn1:patientId>\r
+            <urn2:root>?</urn2:root>\r
+            <!--Optional:-->\r
+            <urn2:extension>?</urn2:extension>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:patientId>\r
+         <!--Optional:-->\r
+         <urn1:datePeriod>\r
+            <urn2:start>?</urn2:start>\r
+            <urn2:end>?</urn2:end>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:datePeriod>\r
+         <!--Optional:-->\r
+         <urn1:sourceSystemId>\r
+            <urn2:root>?</urn2:root>\r
+            <!--Optional:-->\r
+            <urn2:extension>?</urn2:extension>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:sourceSystemId>\r
+         <!--You may enter ANY elements at this point-->\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3:GetAlertInformation"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="c83e7720-17f5-41cc-b6bc-c55dc3d8dfeb" name="clinicalprocess_healthcond_description"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="f81bb999-6744-4c3f-ac0b-4bffe060e933" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.1 (GAI) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="cbcca86e-8d3f-4ba0-aabf-33c22a28e9aa"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
-source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="aee327d4-e3e5-45e4-ade3-a42038c700ca"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_2.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="2.0" id="e836766f-0f00-4aea-9389-e324211ee4f2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGAI}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="aee327d4-e3e5-45e4-ade3-a42038c700ca"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_2.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="2.0" id="e836766f-0f00-4aea-9389-e324211ee4f2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGAI}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
    <soapenv:Header>\r
       <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
    </soapenv:Header>\r
@@ -13369,7 +13893,19 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          </urn1:patientId>\r
       </urn1:GetAlertInformation>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f6fa2542-9332-4e9e-9e36-72d08f990096"/><con:assertion type="Schema Compliance" id="962ce0cd-c2b5-4b36-8efa-cf49529b514a"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="32da1281-3f64-4a52-8d1f-c0a473af5bf1"/><con:assertion type="Simple NotContains" id="324b7db5-2848-48a0-a88c-e0be0ed2e3ac" name="Not Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8c777f03-215c-4af0-b985-abf0cfebb1e6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.2 (GAI) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="46f41784-5523-4dcd-a6d2-5da304c3c271"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f6fa2542-9332-4e9e-9e36-72d08f990096"/><con:assertion type="Schema Compliance" id="962ce0cd-c2b5-4b36-8efa-cf49529b514a"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="32da1281-3f64-4a52-8d1f-c0a473af5bf1"/><con:assertion type="Simple NotContains" id="324b7db5-2848-48a0-a88c-e0be0ed2e3ac" name="Not Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="3.0" id="33d8fed4-a89f-4990-a599-34f270ab9e3b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_3.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="3.0" id="9955fb7e-bbd4-404c-a9d4-a0eed9ed6c1d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>
+         	  <urn2:extension>${patientIdNoEngagements}</urn2:extension>
+         </urn1:patientId>\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="8bf0e803-1012-4c8c-b8c8-fae4140853cc"/><con:assertion type="Schema Compliance" id="b795ae44-aa01-4e1f-8ada-718716339b29"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="e2cd26f6-212f-43be-9cfe-4ffca31feee6"/><con:assertion type="Simple NotContains" id="06307213-9be9-4af0-9123-acd4c4a99ee7" name="Not Contains"><con:configuration><token>patientId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8c777f03-215c-4af0-b985-abf0cfebb1e6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.2 (GAI) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="46f41784-5523-4dcd-a6d2-5da304c3c271"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -13391,7 +13927,21 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f6fa2542-9332-4e9e-9e36-72d08f990096"/><con:assertion type="Schema Compliance" id="962ce0cd-c2b5-4b36-8efa-cf49529b514a"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="32da1281-3f64-4a52-8d1f-c0a473af5bf1"/><con:assertion type="GroovyScriptAssertion" id="2da32d75-ca55-4572-b8d8-7b2e1e8e8d64" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="0a279173-faf3-485a-9337-43f511ceb472" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.3 (GAI) Patient med engagemang hos tre producenter med vardera 1 post" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="f9b5c74d-9cfc-4a29-931e-76c629ad53a6"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Set data GAI3" id="804245e0-2482-46c6-b9d5-dc5afaca7ffb"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gai3:alertInformation")</script></con:config></con:testStep><con:testStep type="request" name="3.0" id="2e4fb80b-c711-4dd5-ad03-e53f82b7e043"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_3.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="3.0" id="aa142d4c-762b-412b-837c-2c4ac789603d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>
+         	  <urn2:extension>${patientId}</urn2:extension>  \r
+         </urn1:patientId>\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="01cd3ef0-ab1b-4e4c-8b9b-bd88f2fa6c0d"/><con:assertion type="Schema Compliance" id="27d06ba4-38f2-4194-b280-8988527a88c0" disabled="true"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="d14b40e5-d6c7-4384-b26b-47b500c531ae"/><con:assertion type="GroovyScriptAssertion" id="85f48ea7-0f3a-4981-93f3-2506eb15dda2" name="Script Assertion"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="0a279173-faf3-485a-9337-43f511ceb472" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.3 (GAI) Patient med engagemang hos tre producenter med vardera 1 post" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="f9b5c74d-9cfc-4a29-931e-76c629ad53a6"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -13418,14 +13968,26 @@ ca.assertSpecificValueInAnyRecord('/gai2:alertInformation/urn2:alertInformationH
 ca.assertSpecificValueInAnyRecord('/gai2:alertInformation/urn2:alertInformationHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK03")</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="f8985f5d-0b66-48a4-b76b-b55865fe4828" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId1)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="85b8e797-9f48-4a91-bba1-4aa1116be81d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.4 (GAI) Patient med engagemang hos en producent med 1000 poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="99055da3-d489-47e2-a329-c4b42970ee26"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId1)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Set data GAI3" id="18a7d21e-244b-4245-ae8f-d336fe6bedae"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gai3:alertInformation")</script></con:config></con:testStep><con:testStep type="request" name="3.0" id="cda4f177-0fa9-44b0-9c80-17e8ab4cd8ea"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_3.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="3.0" id="49e14429-951e-4a26-9447-f8e9483c15c5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>
+         	  <urn2:extension>${patientId1}</urn2:extension> 
+         </urn1:patientId>\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="12fab412-e824-4a90-9d4e-5df5d814c623"/><con:assertion type="Schema Compliance" id="12fa1566-73b6-4e12-a119-3930acefe0b9"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="b5cce3d8-5764-455f-9301-48178e9bb110"/><con:assertion type="GroovyScriptAssertion" id="35f9c94d-a0bd-43f8-9620-51c60526a1d1" name="Assert SourceSystem"><con:configuration/></con:assertion><con:assertion type="GroovyScriptAssertion" id="eae1e7a1-46e2-45f0-b552-dd4264ba9077" name="Assert PatientId"><con:configuration><scriptText/></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="85b8e797-9f48-4a91-bba1-4aa1116be81d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.4 (GAI) Patient med engagemang hos en producent med 1000 poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="99055da3-d489-47e2-a329-c4b42970ee26"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
 def dataFile = new File(utils.projectPath + "/data.xml")
 def source = new XmlDataReader(context, dataFile)
 
-source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="01e0ec51-8025-49dc-997d-5ca435f15f13"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_2.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="2.0" id="e836766f-0f00-4aea-9389-e324211ee4f2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="discardResponse">true</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGAI}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+source.load(testRunner.testCase.getName())</script></con:config></con:testStep><con:testStep type="groovy" name="Set data GAI2" id="38a848c6-3f8c-4fed-a7b8-ec5245a6caa3"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gai2:alertInformation")</script></con:config></con:testStep><con:testStep type="request" name="2.0" id="01e0ec51-8025-49dc-997d-5ca435f15f13"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_2.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="2.0" id="e836766f-0f00-4aea-9389-e324211ee4f2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="discardResponse">true</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${webServiceUrlGAI}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
    <soapenv:Header>\r
       <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
    </soapenv:Header>\r
@@ -13443,7 +14005,25 @@ ca.assertNonEmptyResponse()
 ca.assertExactNumberOfRecords(1000)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="f8985f5d-0b66-48a4-b76b-b55865fe4828" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="82b7c7db-b8df-443b-9454-cea3fd7da9c5" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.5 (GAI) Patient med engagemang hos 20 producenter med vardera 5 poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="96fb4f72-981e-4ed8-aee6-3d5ec770686b"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Set data GAI3" id="d7db3891-26f0-4cba-a527-2de549a6ca72"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gai3:alertInformation")</script></con:config></con:testStep><con:testStep type="request" name="3.0" id="5805e6d9-3c1a-4f27-a069-bdbaa47452dc"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_3.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="3.0" id="0231cc86-4b5f-475c-88d7-7dfd977771f7"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>
+         	  <urn2:extension>${patientId2}</urn2:extension>  
+         </urn1:patientId>\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="3cda7305-7b33-4075-a453-c0b7c400970a"/><con:assertion type="Schema Compliance" id="77e70f5a-8048-49ba-866b-7083ddf54b41"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="790c6036-659e-48bc-a0fb-bad3e3b5c76d"/><con:assertion type="GroovyScriptAssertion" id="93c63465-55bc-46c5-98a8-a36db4b19ec9" name="assertNumRecords"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertExactNumberOfRecords(1000)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="783e5b83-7b57-41a5-bacf-422c6ca58cd4" name="assertPatientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gai3:alertInformation/urn3:header/urn3:accessControlHeader/urn3:patientId/urn3:extension', context.patientId2)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="82b7c7db-b8df-443b-9454-cea3fd7da9c5" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.5 (GAI) Patient med engagemang hos 20 producenter med vardera 5 poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="96fb4f72-981e-4ed8-aee6-3d5ec770686b"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -13487,7 +14067,31 @@ ca.assertSpecificValueInAnyRecord('/gai2:alertInformation/urn2:alertInformationH
 ca.assertSpecificValueInAnyRecord('/gai2:alertInformation/urn2:alertInformationHeader/urn2:sourceSystemHSAId', "SKLTP-MOCK20")</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="f8985f5d-0b66-48a4-b76b-b55865fe4828" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId3)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="4c860c86-1699-4578-abbd-8e619ee04932" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.6 (GAI) Tomt svar från en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="3a0e2138-d758-40aa-b6c2-13aa1caf4f08"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId3)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Set data GAI3" id="495da319-7a6f-4a55-a8a8-5af9c2f3e0aa"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gai3:alertInformation")</script></con:config></con:testStep><con:testStep type="request" name="3.0" id="611f0872-7a53-4364-b983-b627bd7d54a9"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_3.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="3.0" id="c21c3d92-9bec-4c9f-a553-f9de7f0abb68"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>
+         	  <urn2:extension>${patientId3}</urn2:extension> 
+         </urn1:patientId>\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="32a347b9-850a-4463-9414-4274e2cb574d"/><con:assertion type="Schema Compliance" id="8a959d57-63c0-4677-8fbf-230b98d0cf9f"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="46a3377c-3a77-4a2a-a733-8f27d4490239"/><con:assertion type="GroovyScriptAssertion" id="193b77e7-f7bc-4fc5-a697-611230cd6245" name="assertNumRecords"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertExactNumberOfRecords(100)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="a4045b7c-ed80-403e-89c2-745669fc2bbd" name="assertSourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+for(int mockNumber in 1..20) {
+	def mockString = String.format("SKLTP-MOCK%02d", mockNumber)
+	ca.assertSpecificValueInAnyRecord('/gai3:alertInformation/urn3:header/urn3:sourceSystemId/urn3:extension', mockString)
+}</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="1ca6d3e4-6892-4d17-bd9f-54257737c2d4" name="assertPatientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gai3:alertInformation/urn3:header/urn3:accessControlHeader/urn3:patientId/urn3:extension', context.patientId3)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="4c860c86-1699-4578-abbd-8e619ee04932" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.6 (GAI) Tomt svar från en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="3a0e2138-d758-40aa-b6c2-13aa1caf4f08"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -13515,7 +14119,26 @@ ca.assertExactNumberOfRecords(2)
 </scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="f8985f5d-0b66-48a4-b76b-b55865fe4828" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId4)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="58b7ef18-611e-4dbd-ae55-6dfc0bc0df78" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.7 (GAI) Timeout mot en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="34d0aeaa-131f-4b1d-9f99-eb8dc30c6ac8"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId4)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Set data GAI3" id="50e0332c-964c-4928-976f-0c9ec5f03b8b"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gai3:alertInformation")</script></con:config></con:testStep><con:testStep type="request" name="3.0" id="0b9b1172-0b64-4234-9d24-a04133d20b71"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_3.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="3.0" id="1fa260b8-053c-4f28-a813-eeedb7cdc6b6"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>
+         	  <urn2:extension>${patientId4}</urn2:extension> 
+         </urn1:patientId>\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9c8f64f2-4e09-4c56-a472-e38fbe764436"/><con:assertion type="Schema Compliance" id="6d3042b9-ab2e-4bc2-b623-03d3ff4a19af"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="98f3d041-2ae2-4ef4-90a9-227a7b407b28"/><con:assertion type="GroovyScriptAssertion" id="aa3e1cf4-5ce6-4eb5-992c-81073d66e657" name="assertSourceSystemMultiple"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gai3:alertInformation/urn3:header/urn3:sourceSystemId/urn3:extension', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gai3:alertInformation/urn3:header/urn3:sourceSystemId/urn3:extension', "SKLTP-MOCK03")</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="ba587d07-6146-42d2-9b14-85ac936cb10c" name="assertPatientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gai3:alertInformation/urn3:header/urn3:accessControlHeader/urn3:patientId/urn3:extension', context.patientId4)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="58b7ef18-611e-4dbd-ae55-6dfc0bc0df78" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.7 (GAI) Timeout mot en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="34d0aeaa-131f-4b1d-9f99-eb8dc30c6ac8"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -13542,7 +14165,27 @@ ca.assertSpecificValueInAnyRecord('/gai2:alertInformation/urn2:alertInformationH
 ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="a853716f-1112-468c-966c-fac7b8fb10dd" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId9)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="abdc9297-33f6-4314-80ed-2980c407abdd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.8 (GAI) Timeout mot samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="eaad126d-76cc-4aa3-9c3a-c10c84e1b086"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId9)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Set data GAI3" id="df659995-501e-42ba-853b-d80aad17c70e"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gai3:alertInformation")</script></con:config></con:testStep><con:testStep type="request" name="3.0" id="c0b1986f-707e-4afb-9fa7-739729054e21"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_3.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="3.0" id="912c3334-e230-49bc-9e4a-bae64db24420"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>
+         	  <urn2:extension>${patientId9}</urn2:extension>  
+         </urn1:patientId>\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="89f5ed9a-78b6-4ce9-858d-ed8743142fe7"/><con:assertion type="Schema Compliance" id="65b8b57d-1b52-4f80-b6ca-c6b65adf5680"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="07f76f7e-e583-471c-b30b-cf2a06bfe091"/><con:assertion type="GroovyScriptAssertion" id="2813ec3f-cc84-4d30-92be-d290d9f640ca" name="assertSourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gai3:alertInformation/urn3:header/urn3:sourceSystemId/urn3:extension', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gai3:alertInformation/urn3:header/urn3:sourceSystemId/urn3:extension', "SKLTP-MOCK02")
+ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="9b547bc6-1893-45b6-a485-61d85f90f710" name="assertPatientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gai3:alertInformation/urn3:header/urn3:accessControlHeader/urn3:patientId/urn3:extension', context.patientId9)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="abdc9297-33f6-4314-80ed-2980c407abdd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.8 (GAI) Timeout mot samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="eaad126d-76cc-4aa3-9c3a-c10c84e1b086"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -13564,7 +14207,21 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f6fa2542-9332-4e9e-9e36-72d08f990096"/><con:assertion type="Schema Compliance" id="962ce0cd-c2b5-4b36-8efa-cf49529b514a"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="32da1281-3f64-4a52-8d1f-c0a473af5bf1"/><con:assertion type="GroovyScriptAssertion" id="05e6d3fa-2cd9-492f-8d8f-06b4ed54cdf4" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertExactNumberOfRecords(0)
-</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="449f3186-fa3e-4324-881e-3d2900b7c4fe" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.9 (GAI) Logiskt fel från en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="ea10f5a7-353e-47a5-b44a-799ebf1a9a48"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Set data GAI3" id="c7302c77-3333-4e14-9e2f-21d80740c8f3"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gai3:alertInformation")</script></con:config></con:testStep><con:testStep type="request" name="3.0" id="f94b5a04-a700-4ec4-921f-f17f2f481c49"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_3.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="3.0" id="3786d6cf-04a0-425e-8b27-411a558234c3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>
+         	  <urn2:extension>${patientId10}</urn2:extension>  
+         </urn1:patientId>\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="b7ac9b78-fd0a-4362-9100-f73b24f5ad80"/><con:assertion type="Schema Compliance" id="023e1915-5e51-467b-b79e-24d17eb2202c"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="7683df21-7250-42e2-bf9b-da718f8617ee"/><con:assertion type="GroovyScriptAssertion" id="32a66983-6655-4196-b2d7-31a6439f6fb8" name="assertSourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="449f3186-fa3e-4324-881e-3d2900b7c4fe" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.9 (GAI) Logiskt fel från en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="ea10f5a7-353e-47a5-b44a-799ebf1a9a48"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -13591,7 +14248,27 @@ ca.assertSpecificValueInAnyRecord('/gai2:alertInformation/urn2:alertInformationH
 ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="f8985f5d-0b66-48a4-b76b-b55865fe4828" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId5)</scriptText></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="0f08abd9-c63a-456d-914d-a1af4ca9594a" name="Assert no resultCode"><con:configuration><token>resultCode</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="375d81ba-e1a6-4479-888e-9857d67a6a30" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.10 (GAI) Logiskt fel från samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="2840c31d-1a1d-47a2-98c7-1838cf42f86e"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId5)</scriptText></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="0f08abd9-c63a-456d-914d-a1af4ca9594a" name="Assert no resultCode"><con:configuration><token>resultCode</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Set data GAI3" id="4996fe9a-6650-410c-b378-9549e307536c"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gai3:alertInformation")</script></con:config></con:testStep><con:testStep type="request" name="3.0" id="588fbed7-4a64-498f-b632-d4add7b7bdfa"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_3.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="3.0" id="712d8f24-49fc-42c0-8315-3bf75b3944fa"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>
+         	  <urn2:extension>${patientId5}</urn2:extension>      
+         </urn1:patientId>\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="694a4076-8a7a-4c99-b80b-5fc39cbfc6c6"/><con:assertion type="Schema Compliance" id="75ca30b4-b72b-4ef7-8779-9bf88d1fe800"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="7d355fc5-3fcd-4fff-958a-43dfc2ad60c4"/><con:assertion type="GroovyScriptAssertion" id="a310166c-9cc7-4501-823a-499218f31a33" name="assertSourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gai3:alertInformation/urn3:header/urn3:sourceSystemId/urn3:extension', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gai3:alertInformation/urn3:header/urn3:sourceSystemId/urn3:extension', "SKLTP-MOCK02")
+ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="4ee2a04c-8919-4beb-9389-42686b9d517a" name="assertPatientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gai3:alertInformation/urn3:header/urn3:accessControlHeader/urn3:patientId/urn3:extension', context.patientId5)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="375d81ba-e1a6-4479-888e-9857d67a6a30" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.10 (GAI) Logiskt fel från samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="2840c31d-1a1d-47a2-98c7-1838cf42f86e"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -13612,7 +14289,21 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f6fa2542-9332-4e9e-9e36-72d08f990096"/><con:assertion type="Schema Compliance" id="962ce0cd-c2b5-4b36-8efa-cf49529b514a"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="32da1281-3f64-4a52-8d1f-c0a473af5bf1"/><con:assertion type="GroovyScriptAssertion" id="05e6d3fa-2cd9-492f-8d8f-06b4ed54cdf4" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="0f08abd9-c63a-456d-914d-a1af4ca9594a" name="Assert no resultCode"><con:configuration><token>resultCode</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="271f2901-b64e-4914-9a65-fd409334f07e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.11 (GAI) Exception från en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="b6b7623f-4af3-411c-9964-7178da1528f6"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="0f08abd9-c63a-456d-914d-a1af4ca9594a" name="Assert no resultCode"><con:configuration><token>resultCode</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Set data GAI3" id="c6e2c697-57e8-415d-b54d-3a859a819545"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gai3:alertInformation")</script></con:config></con:testStep><con:testStep type="request" name="3.0" id="4051da1a-cb77-4c15-b7c5-8b35c4aaba41"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_3.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="3.0" id="906a6815-829d-4c32-b226-171468195eab"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>
+         	  <urn2:extension>${patientId6}</urn2:extension> 
+         </urn1:patientId>\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="082f038b-3056-45ed-aaab-d4c847bf6522"/><con:assertion type="Schema Compliance" id="fb04afad-3d96-4bfb-a571-bfd513dbcb86"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="f0b0dfca-b8f7-4bba-82fa-70a080f25c8a"/><con:assertion type="GroovyScriptAssertion" id="3ddde19c-00e5-4812-9c5c-d0e63ad1d95a" name="assertSourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="271f2901-b64e-4914-9a65-fd409334f07e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.11 (GAI) Exception från en av tre producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="b6b7623f-4af3-411c-9964-7178da1528f6"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -13640,7 +14331,39 @@ ca.assertExactNumberOfRecords(2)
 </scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="f8985f5d-0b66-48a4-b76b-b55865fe4828" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId7)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="ea8c24b8-eee8-444d-b120-9359a9173504" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.12 (GAI) Exception från samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="e2b0bdb8-33ba-4ffd-b599-94eae5bb6c42"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/gai2:alertInformation/urn2:alertInformationHeader/urn2:patientId/urn2:id', context.patientId7)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Set data GAI3" id="42f9e9c0-d28f-4988-87be-4653ca396b15"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gai3:alertInformation")</script></con:config></con:testStep><con:testStep type="request" name="3.0" id="c2829ad6-aa47-4910-a8f4-d4ca5c9e180d"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_3.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="3.0" id="4ea38939-f515-4dbc-aa03-a8f05a4985b9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>
+         	  <urn2:extension>${patientId7}</urn2:extension>   
+         </urn1:patientId>\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4038c2e1-112c-476e-9e3b-dedee7747a37"/><con:assertion type="Schema Compliance" id="1d097cf1-f6c8-4d00-89f5-28aa1cee7eba"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="3ec5f255-4023-4092-9c12-4a850723eac8"/><con:assertion type="GroovyScriptAssertion" id="fe843172-0074-4854-be7b-0a2d0c951e6d" name="assertSourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAnyRecord('/gai3:alertInformation/urn3:header/urn3:sourceSystemId/urn3:extension', "SKLTP-MOCK01")
+ca.assertSpecificValueInAnyRecord('/gai3:alertInformation/urn3:header/urn3:sourceSystemId/urn3:extension', "SKLTP-MOCK02")
+ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="772e41fd-39ae-434c-ad1d-eb35bd52a158" name="assertPatientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertNonEmptyResponse()
+ca.assertSpecificValueInAllRecords('/gai3:alertInformation/urn3:header/urn3:accessControlHeader/urn3:patientId/urn3:extension', context.patientId7)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="b8b6958a-5afd-455f-8b9c-031eaae53f1b" name="assertError500"><con:configuration><scriptText>def responseContent = messageExchange.request.responseContent
+def parsedResponseEnvelope = new groovy.xml.XmlSlurper(true,true,false).parseText(responseContent)
+
+def codes = parsedResponseEnvelope.Header.ProcessingStatus.ProcessingStatusList.lastUnsuccessfulSynchError.code
+def code500count = 0
+for(int pos = 0; pos &lt; 3; pos++) {
+	def currentCode = codes[pos] as String
+	if (currentCode.equals("500")) {
+		code500count++;
+	}
+}
+assert (code500count == 1)
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="ea8c24b8-eee8-444d-b120-9359a9173504" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.1.12 (GAI) Exception från samtliga producenter" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="e2b0bdb8-33ba-4ffd-b599-94eae5bb6c42"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -13662,6 +14385,32 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f6fa2542-9332-4e9e-9e36-72d08f990096"/><con:assertion type="Schema Compliance" id="962ce0cd-c2b5-4b36-8efa-cf49529b514a"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="32da1281-3f64-4a52-8d1f-c0a473af5bf1"/><con:assertion type="GroovyScriptAssertion" id="05e6d3fa-2cd9-492f-8d8f-06b4ed54cdf4" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertExactNumberOfRecords(0)
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Set data GAI3" id="a87f66e1-4763-4ea3-b47c-be68862a11fd"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.setPropertyValue("RecordElementPath", "//gai3:alertInformation")</script></con:config></con:testStep><con:testStep type="request" name="3.0" id="5443ea7e-05ec-41fc-9d6e-e7090f547928"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_3.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="3.0" id="4b7cb46a-1ace-4797-8129-c23922509fd9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${VP}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${logicalAddress}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <urn1:patientId>\r
+            <urn2:root>${patientIdType}</urn2:root>
+         	  <urn2:extension>${patientId8}</urn2:extension> 
+         </urn1:patientId>\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="26404423-3e03-4048-bfcf-c60e6e84a5fe"/><con:assertion type="Schema Compliance" id="f5a68f31-6761-4ace-a90f-85241160cd54"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="38d664eb-875e-4bb6-af75-5d3926a34426"/><con:assertion type="GroovyScriptAssertion" id="c634edaa-6948-442c-a7fb-a94c375916bf" name="assertSourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
+def ca = new ContentAssertions(context, messageExchange, log)
+ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="f2c345b5-0306-48e0-8b0b-955bda6e1627" name="assertError500x3"><con:configuration><scriptText>def responseContent = messageExchange.request.responseContent
+def parsedResponseEnvelope = new groovy.xml.XmlSlurper(true,true,false).parseText(responseContent)
+
+def codes = parsedResponseEnvelope.Header.ProcessingStatus.ProcessingStatusList.lastUnsuccessfulSynchError.code
+def code500count = 0
+for(int pos = 0; pos &lt; 3; pos++) {
+	def currentCode = codes[pos] as String
+	if (currentCode.equals("500")) {
+		code500count++;
+	}
+}
+assert (code500count == 3)
 </scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="89ab2e2c-df9b-486c-8be3-f9bbe5c48be6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.2.1 (GCD) Patient utan engagemang" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="8e8e16bd-884b-404a-9406-b77affbafb04"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
@@ -14155,7 +14904,7 @@ ca.assertSpecificValueInAnyRecord('/gcd3:careDocumentation/urn3:header/urn3:sour
 ca.assertExactNumberOfRecords(2)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="fb327e6f-484e-49bb-939c-01949b214684" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
-ca.assertSpecificValueInAllRecords('/gcd3:careDocumentation/urn3:header/urn3:accessControlHeader/urn3:patientId/urn3:extension', context.patientId7)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="405b6b31-ea8c-427b-9400-6ce6cb4e2486" name="Script Assertion"><con:configuration/></con:assertion><con:assertion type="GroovyScriptAssertion" id="db73659f-0cd2-4d0c-94b0-6fee67cc01df"><con:configuration/></con:assertion><con:assertion type="GroovyScriptAssertion" id="7e6132cc-653a-4f8e-840a-81b557f7a678" name="Assert code 500"><con:configuration><scriptText>def responseContent = messageExchange.request.responseContent
+ca.assertSpecificValueInAllRecords('/gcd3:careDocumentation/urn3:header/urn3:accessControlHeader/urn3:patientId/urn3:extension', context.patientId7)</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="7e6132cc-653a-4f8e-840a-81b557f7a678" name="Assert code 500"><con:configuration><scriptText>def responseContent = messageExchange.request.responseContent
 def parsedResponseEnvelope = new groovy.xml.XmlSlurper(true,true,false).parseText(responseContent)
 
 def codes = parsedResponseEnvelope.Header.ProcessingStatus.ProcessingStatusList.lastUnsuccessfulSynchError.code
@@ -15058,7 +15807,49 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6c7e2e00-4962-47c7-9978-17ccfa90ddc4"/><con:assertion type="Schema Compliance" id="e3952b2a-e4d2-467a-8284-ab65cc41a80d"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="83f14ed1-1c24-4a1f-9aea-870a0b481f48"/><con:assertion type="GroovyScriptAssertion" id="b8d46100-cc78-45c5-856d-2e499fb951d0" name="Assert sourceSystem"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d268bd6c-48f4-40c3-89e7-0cd0af5bc7ef" name="Assert resultCode"><con:configuration><token>resultCode>INFO&lt;</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="9fd37f04-95a6-4ce8-9978-a713750e613f" port="8080" path="/" host="Idefix" name="MockService 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetCareDocumentation" id="de1c62e0-0654-4c98-8a73-6d14132a45f5" interface="GetCareDocumentationResponderBinding" operation="GetCareDocumentation"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="3e0db252-6087-4957-a1ad-c2bd0a2a0782" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:3" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:3">
+ca.assertExactNumberOfRecords(0)</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d268bd6c-48f4-40c3-89e7-0cd0af5bc7ef" name="Assert resultCode"><con:configuration><token>resultCode>INFO&lt;</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="90123260-e7b2-449f-8f0c-dc9b6f42964a" name="GetAlertInformationResponderBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="18476f17-6525-4978-8252-2272a3266f72" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetAlertInformation TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="4502d3ec-7091-44fb-9c51-7d3a207b8b9f" name="GetAlertInformation"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetAlertInformationResponderBinding_3.0</con:interface><con:operation>GetAlertInformation</con:operation><con:request name="GetAlertInformation" id="7383fbb5-7ee6-4c94-9b99-411882eeeebd"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://tempuri.org</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:3">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>?</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetAlertInformation>\r
+         <!--Zero or more repetitions:-->\r
+         <urn1:careUnit>\r
+            <urn2:root>?</urn2:root>\r
+            <!--Optional:-->\r
+            <urn2:extension>?</urn2:extension>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:careUnit>\r
+         <!--Zero or more repetitions:-->\r
+         <urn1:healthcareProvider>\r
+            <urn2:root>?</urn2:root>\r
+            <!--Optional:-->\r
+            <urn2:extension>?</urn2:extension>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:healthcareProvider>\r
+         <urn1:patientId>\r
+            <urn2:root>?</urn2:root>\r
+            <!--Optional:-->\r
+            <urn2:extension>?</urn2:extension>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:patientId>\r
+         <!--Optional:-->\r
+         <urn1:datePeriod>\r
+            <urn2:start>?</urn2:start>\r
+            <urn2:end>?</urn2:end>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:datePeriod>\r
+         <!--Optional:-->\r
+         <urn1:sourceSystemId>\r
+            <urn2:root>?</urn2:root>\r
+            <!--Optional:-->\r
+            <urn2:extension>?</urn2:extension>\r
+            <!--You may enter ANY elements at this point-->\r
+         </urn1:sourceSystemId>\r
+         <!--You may enter ANY elements at this point-->\r
+      </urn1:GetAlertInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetAlertInformationResponder:3:GetAlertInformation"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="9fd37f04-95a6-4ce8-9978-a713750e613f" port="8080" path="/" host="Idefix" name="MockService 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetCareDocumentation" id="de1c62e0-0654-4c98-8a73-6d14132a45f5" interface="GetCareDocumentationResponderBinding" operation="GetCareDocumentation"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="3e0db252-6087-4957-a1ad-c2bd0a2a0782" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:3" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:3">
    <soapenv:Header/>
    <soapenv:Body>
       <urn:GetCareDocumentationResponse>
