@@ -333,7 +333,23 @@ under the License.
 			VP014 returneras (Rundgång)
 		</description>
 	</testcase>
-	
+	<testcase id="2.12.1 Konsument skickar anrop med felaktigt format i envelope (VP015)">
+		<description>
+			(RTJP) -> NTJP(SUT)
+						
+			Förväntat resultat:
+			VP015 returneras (Anrop ej korrekt utformat och kan därför inte behandlas.)
+		</description>
+	</testcase>
+	<testcase id="2.12.2 Konsument skickar anrop med felaktigt format i body (VP015)">
+		<description>
+			(RTJP) -> NTJP(SUT)
+						
+			Förväntat resultat:
+			VP015 returneras (Anrop ej korrekt utformat och kan därför inte behandlas.)
+		</description>
+	</testcase>
+
 	<testcase id="3.1.1 Konsument rivtabp20 mot producent rivtabp20">
 		<description>
 			(KONSUMENT1 RIVTABP20) -> NTJP(SUT) -> (PRODUCENT RIVTABP20)
