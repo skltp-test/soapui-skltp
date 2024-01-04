@@ -102,7 +102,7 @@ under the License.
 		<patientIdType>1.2.752.129.2.1.3.1</patientIdType>
 		<sourceSystemHSAId>LOAD-MOCKS</sourceSystemHSAId>
 		<!-- Loggparametrar-->
-		<logTestData>true</logTestData>
+		<logTestData>false</logTestData>
 		<logTestDataPath>/temp/SOAP-UI/</logTestDataPath>
 		<logTestDataFilesAllowed>500</logTestDataFilesAllowed>
 	</globaldata>
@@ -245,7 +245,7 @@ under the License.
 			VP - NTjP kontroller inte URL'en, utan väljer tjänst att anropa baserat på SOAPAction.
 			Vårdsystemets request skickas vidare
 			
-			(beteendet förändrades i asmband med byte till Camel.)
+			(beteendet förändrades i samband med byte till Camel.)
 			
 			Förväntat resultat:
 			OK response
