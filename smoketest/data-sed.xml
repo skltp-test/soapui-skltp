@@ -427,7 +427,11 @@ under the License.
 			</interfaces>
 		</data>
 	</testcase>
-	
+	<testcase id="NTJP-AAA-requestHeader">
+		<data>
+			<logicalAddress>AAA</logicalAddress>
+		</data>
+	</testcase>
 	<!-- BASIC FLOWS -->
 	<!-- clinicalprocess/healthcond/description -->
 	<testcase id="4.1.1 (GAI) Patient utan engagemang"></testcase>
