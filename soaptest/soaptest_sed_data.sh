@@ -6,6 +6,8 @@ if [ "$#" -ne 1 ]; then
     exit
 fi
 
+ENVIRONMENT_VAR=$1
+
 if [ "$1" = "dev" ]; then
     COOPERATION_URL="https://dev.api.ntjp.se"
     # COOPERATION_URL="http://ind-dtjp-apache-api-vip.ind1.sth.basefarm.net"
@@ -34,4 +36,5 @@ echo "Tests will be run against the following host: ${TARGETHOST}"
 
 sed -e 's@SOURCESYSTEMHSA@'"${SOURCESYSTEMHSA}"'@; s@TARGETHOST@'"${TARGETHOST}"'@' \
     -e  "s,COOPERATION,$COOPERATION_URL,"\
+	-e  "s,ENVIRONMENT,$ENVIRONMENT_VAR,"\
         data-sed.xml > data.xml

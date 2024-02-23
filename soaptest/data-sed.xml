@@ -23,6 +23,7 @@ under the License.
 	<contractName>GetCareDocumentation</contractName>
 	<description>Denna testsvit används för att verifiera releasekandidater av NTjP.</description>
 	<globaldata>
+	    <MILJO>ENVIRONMENT</MILJO>
 		<VP>https://TARGETHOST/vp/</VP>
 		<COOP>COOPERATION</COOP>
 		<COOP_AUTH>COOPAUTH</COOP_AUTH>
