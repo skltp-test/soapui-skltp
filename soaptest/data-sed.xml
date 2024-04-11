@@ -107,156 +107,169 @@ under the License.
 		<logTestDataPath>/temp/SOAP-UI/</logTestDataPath>
 		<logTestDataFilesAllowed>500</logTestDataFilesAllowed>
 	</globaldata>
-	
-	<!-- Anslutning mot tjänst DomDB AdminWeb -->
-	<testcase id="DomDB AdminWeb - Via apache http">
-		<description>
-			Tjänsten ska nås på http protokollet via apache och få status kod 200
-			Förväntat resultat:
-			Lyckat anrop http status kod 200
-		</description>
-	</testcase>
-	<testcase id="DomDB AdminWeb - Via apache https">
-		<description>
-			Tjänsten ska nås på https protokollet via apache och få status kod 200
-			Förväntat resultat:
-			Lyckat anrop http status kod 200
-		</description>
-	</testcase>
-	<testcase id="DomDB AdminWeb - Direct BKS http">
-		<description>
-			Tjänsten ska inte nås på http protokollet direkt mot BKS och få status kod 4xx
-			Förväntat resultat:
-			Lyckat anrop http status kod 4xx
-		</description>
-	</testcase>
-	<testcase id="DomDB AdminWeb - Direct BKS https">
-		<description>
-			Tjänsten ska nås på https protokollet direkt mot BKS och få status kod 200
-			Förväntat resultat:
-			Lyckat anrop http status kod 200
-		</description>
-	</testcase>
-		<!-- Anslutning mot tjänst DomDB-API v1 -->
-	<!-- <testcase id="DomDB-API v1 - Via apache http">
-		<description>
-			Tjänsten ska inte nås på http protokollet via apache och ska få timeout - connection reset
-			Förväntat resultat:
-			Lyckat anrop http status kod 
-		</description>
-	</testcase> -->
-	<testcase id="DomDB-API v1 - Via apache https">
-		<description>
-			Tjänsten ska nås på https protokollet via apache och få status kod 200
-			Förväntat resultat:
-			Lyckat anrop http status kod 200
-		</description>
-	</testcase>
-	<testcase id="DomDB-API v1 - Direct BKS http">
-		<description>
-			Tjänsten ska inte nås på http protokollet direkt mot BKS och få status kod 4xx
-			Förväntat resultat:
-			Lyckat anrop http status kod 4xx
-		</description>
-	</testcase>
-	<testcase id="DomDB-API v1 - Direct BKS https">
-		<description>
-			Tjänsten ska nås på https protokollet direkt mot BKS och få status kod 200
-			Förväntat resultat:
-			Lyckat anrop http status kod 200
-		</description>
-	</testcase>
-		<!-- Anslutning mot tjänst TAK-Web -->
-	<testcase id="TAK-Web - Direct BKS http">
-		<description>
-			Tjänsten ska nås på http protokollet direkt mot BKS och få status kod 200
-			Förväntat resultat:
-			Lyckat anrop http status kod 200
-		</description>
-	</testcase>
-	<testcase id="TAK-Web - Direct BKS https">
-		<description>
-			Tjänsten ska nås på https protokollet direkt mot BKS och få status kod 200
-			Förväntat resultat:
-			Lyckat anrop http status kod 200
-		</description>
-	</testcase>
-		<!-- Anslutning mot tjänst TAK-API v1 -->
-		<!--
-	<testcase id="TAK-API v1 - Via apache http">
-		<description>
-			Tjänsten ska inte nås på http protokollet via apache och ska få timeout - connection reset
-			Förväntat resultat:
-			Lyckat anrop http status kod 
-		</description>
-	</testcase> -->
-	<testcase id="TAK-API v1 - Via apache https">
-		<description>
-			Tjänsten ska nås på https protokollet via apache och få status kod 200
-			Förväntat resultat:
-			Lyckat anrop http status kod 200
-		</description>
-	</testcase>
-	<testcase id="TAK-API v1 - Direct BKS http">
-		<description>
-			Tjänsten ska nås på http protokollet direkt mot BKS och få status kod 200
-			Förväntat resultat:
-			Lyckat anrop http status kod 200
-		</description>
-	</testcase>
-	<testcase id="TAK-API v1 - Direct BKS https">
-		<description>
-			Tjänsten ska nås på https protokollet direkt mot BKS och få status kod 200
-			Förväntat resultat:
-			Lyckat anrop http status kod 200
-		</description>
-	</testcase>
 			<!-- Anslutning mot tjänst AAA -->
 	<testcase id="AAA - Direct BKS http">
 		<description>
-			Tjänsten ska inte nås på http protokollet direkt mot BKS och få status kod 4xx
+			Tjänsten ska nås på http protokollet direkt mot BKS och få status kod 404 - Not Found
 			Förväntat resultat:
-			Lyckat anrop http status kod 4xx
+			Lyckat anrop http status kod 404 - Not Found
 		</description>
 	</testcase>
 	<testcase id="AAA - Direct BKS https">
 		<description>
-			Tjänsten ska nås på https protokollet direkt mot BKS och få status kod 200
+			Tjänsten ska nås på https protokollet direkt mot BKS och få status kod 200 - OK
 			Förväntat resultat:
-			Lyckat anrop http status kod 200
+			Lyckat anrop http status kod 200 - OK
 		</description>
 	</testcase>
-				<!-- Anslutning mot tjänst Axel -->
+			<!-- Anslutning mot tjänst Axel -->
 	<testcase id="Axel - Direct BKS http">
 		<description>
-			Tjänsten ska inte nås på http protokollet direkt mot BKS och få status kod 4xx
+			Tjänsten ska nås på http protokollet direkt mot BKS och få status kod 404 - Not Found
 			Förväntat resultat:
-			Lyckat anrop http status kod 4xx
+			Lyckat anrop http status kod 404 - Not Found
 		</description>
 	</testcase>
 	<testcase id="Axel - Direct BKS https">
 		<description>
-			Tjänsten ska nås på https protokollet direkt mot BKS och få status kod 200
+			Tjänsten ska nås på https protokollet direkt mot BKS och få status kod 200 - OK
 			Förväntat resultat:
-			Lyckat anrop http status kod 200
+			Lyckat anrop http status kod 200 - OK
 		</description>
 	</testcase>
 				<!-- Anslutning mot tjänst Admin-Web -->
 	<testcase id="Admin-Web - Direct BKS http">
 		<description>
-			Tjänsten ska inte nås på http protokollet direkt mot BKS och få status kod 4xx
+			Tjänsten ska inte nås på http protokollet direkt mot BKS och få status kod 404 - Not Found
 			Förväntat resultat:
-			Lyckat anrop http status kod 4xx
+			Lyckat anrop http status kod 404 - Not Found
 		</description>
 	</testcase>
 	<testcase id="Admin-Web - Direct BKS https">
 		<description>
-			Tjänsten ska inte nås på https protokollet direkt mot BKS och få status kod 4xx
+			Tjänsten ska nås på https protokollet direkt mot BKS och få status kod 401 - Unauthorized
 			Förväntat resultat:
-			Lyckat anrop http status kod 4xx
+			Lyckat anrop http status kod 401 - Unauthorized
 		</description>
 	</testcase>
-
+	<!-- Anslutning mot tjänst DomDB AdminWeb -->
+	<testcase id="DomDB AdminWeb - Via apache http">
+		<description>
+			Tjänsten ska nås på http protokollet via apache och få status kod 200 - OK
+			Förväntat resultat:
+			Lyckat anrop http status kod 200 - OK
+		</description>
+	</testcase>
+	<testcase id="DomDB AdminWeb - Via apache https">
+		<description>
+			Tjänsten ska nås på https protokollet via apache och få status kod 200 - OK
+			Förväntat resultat:
+			Lyckat anrop http status kod 200 - OK
+		</description>
+	</testcase>
+	<testcase id="DomDB AdminWeb - Direct BKS http">
+		<description>
+			Tjänsten ska nås på http protokollet direkt mot BKS och få status kod 404 - Not Found
+			Förväntat resultat:
+			Lyckat anrop http status kod 404 - Not Found
+		</description>
+	</testcase>
+	<testcase id="DomDB AdminWeb - Direct BKS https">
+		<description>
+			Tjänsten ska nås på https protokollet direkt mot BKS och få status kod 200 - OK
+			Förväntat resultat:
+			Lyckat anrop http status kod 200 - OK
+		</description>
+	</testcase>
+	<!-- Anslutning mot tjänst DomDB API v1 -->
+	<testcase id="DomDB-API v1 - Via apache https">
+		<description>
+			Tjänsten ska nås på https protokollet via apache och få status kod 200 - OK
+			Förväntat resultat:
+			Lyckat anrop http status kod 200 - OK
+		</description>
+	</testcase>
+	<testcase id="DomDB-API v1 - Direct BKS http">
+		<description>
+			Tjänsten ska nås på http protokollet direkt mot BKS och få status kod 404 - Not Found
+			Förväntat resultat:
+			Lyckat anrop http status kod 404 - Not Found
+		</description>
+	</testcase>
+	<testcase id="DomDB-API v1 - Direct BKS https">
+		<description>
+			Tjänsten ska nås på https protokollet direkt mot BKS och få status kod 200 - OK
+			Förväntat resultat:
+			Lyckat anrop http status kod 200 - OK
+		</description>
+	</testcase>
+	<!-- Anslutning mot tjänst DomDB API v2 -->
+	<testcase id="DomDB-API v2 - Via apache https">
+		<description>
+			Tjänsten ska nås på https protokollet via apache och få status kod 401 - Unauthorized
+			Förväntat resultat:
+			Lyckat anrop http status kod 401 - Unauthorized
+		</description>
+	</testcase>
+	<testcase id="DomDB-API v2 - Direct BKS http">
+		<description>
+			Tjänsten ska nås på http protokollet direkt mot BKS och få status kod 404 - Not Found
+			Förväntat resultat:
+			Lyckat anrop http status kod 404 - Not Found
+		</description>
+	</testcase>
+	<testcase id="DomDB-API v2 - Direct BKS https">
+		<description>
+			Tjänsten ska nås på https protokollet direkt mot BKS och få status kod 401 - Unauthorized
+			Förväntat resultat:
+			Lyckat anrop http status kod 401 - Unauthorized
+		</description>
+	</testcase>
+		<!-- Anslutning mot tjänst TAK-Web -->
+	<testcase id="TAK-Web - Direct BKS http">
+		<description>
+			Tjänsten ska nås på http protokollet direkt mot BKS och få status kod 200 - OK
+			Förväntat resultat:
+			Lyckat anrop http status kod 200 - OK
+		</description>
+	</testcase>
+	<testcase id="TAK-Web - Direct BKS https">
+		<description>
+			Tjänsten ska nås på https protokollet direkt mot BKS och få status kod 200 - OK
+			Förväntat resultat:
+			Lyckat anrop http status kod 200 - OK
+		</description>
+	</testcase>
+		<!-- Anslutning mot tjänst TAK-API v1 -->
+	<testcase id="TAK-API v1 - Via apache https">
+		<description>
+			Tjänsten ska nås på https protokollet via apache och få status kod 200 - OK
+			Förväntat resultat:
+			Lyckat anrop http status kod 200 - OK
+		</description>
+	</testcase>
+	<testcase id="TAK-API v1 - Direct BKS http">
+		<description>
+			Tjänsten ska nås på https protokollet direkt mot BKS och få status kod 200 - OK
+			Förväntat resultat:
+			Lyckat anrop http status kod 200 - OK
+		</description>
+	</testcase>
+			<!-- Anslutning mot tjänst TAK-API v2 -->
+	<testcase id="TAK-API v2 - Via apache https">
+		<description>
+			Tjänsten ska nås på https protokollet via apache och få status kod 401 - Unauthorized
+			Förväntat resultat:
+			Lyckat anrop http status kod 401 - Unauthorized
+		</description>
+	</testcase>
+	<testcase id="TAK-API v2 - Direct BKS https">
+		<description>
+			Tjänsten ska nås på https protokollet direkt mot BKS och få status kod 401 - Unauthorized
+			Förväntat resultat:
+			Lyckat anrop http status kod 401 - Unauthorized
+		</description>
+	</testcase>
         <testcase id="general test data"/>
 	<testcase id="1.1.1 Angränsande konsument skickar fråga via aggregerande tjänst">
 		<description>
