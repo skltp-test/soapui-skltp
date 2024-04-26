@@ -1179,7 +1179,7 @@ under the License.
 		</description>
 		<data>
 			<!-- <logicalAddress>5565594230</logicalAddress> -->
-			<logicalAddress>APO-EXT12</logicalAddress>
+			<logicalAddress>APO-EXT12-DB2</logicalAddress>
 		</data>
 	</testcase>
 	<testcase id="SKLTP-ApSe-AXS">
@@ -1187,7 +1187,7 @@ under the License.
                     E2E-test mot eHMs testmiljö, domän AXS
 		</description>
 		<data>
-			<logicalAddress>APO-EXT12</logicalAddress>
+			<logicalAddress>APO-EXT12-DB2</logicalAddress>
 			<patientId>193603119045</patientId>
 		</data>
 	</testcase>
@@ -1224,7 +1224,7 @@ under the License.
                     E2E-test mot eHMs testmiljö, domän OR
 		</description>
 		<data>
-			<logicalAddress>APO-EXT12</logicalAddress>
+			<logicalAddress>APO-EXT12-DB2</logicalAddress>
 			<patientId>193603119045</patientId>
 		</data>
 	</testcase>
@@ -1233,7 +1233,7 @@ under the License.
                     E2E-test mot eHMs testmiljö, domän LF
 		</description>
 		<data>
-			<logicalAddress>APO-EXT12</logicalAddress>
+			<logicalAddress>APO-EXT12-DB2</logicalAddress>
 			<patientId>193603119045</patientId>
 		</data>
 	</testcase>
