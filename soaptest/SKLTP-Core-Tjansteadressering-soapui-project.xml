@@ -138,7 +138,7 @@
          <!--You may enter ANY elements at this point-->\r
       </urn1:GetSupportedServiceContracts>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:registry:GetSupportedServiceContractsResponder:1:GetSupportedServiceContracts"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="218f450d-a340-49bc-8f41-2b8f06c415fe" wsaVersion="NONE" name="GetSupportedServiceContractsResponderBinding_2.0" type="wsdl" bindingName="{urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContracts:2:rivtabp21}GetSupportedServiceContractsResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/VBShare/schemas/ServiceContracts_infrastructure_itintegration_registry_2.0_RC8/schemas/interactions/GetSupportedServiceContractsInteraction/GetSupportedServiceContractsInteraction_2.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/VBShare/schemas/ServiceContracts_infrastructure_itintegration_registry_2.0_RC8/schemas/interactions/GetSupportedServiceContractsInteraction/GetSupportedServiceContractsInteraction_2.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/VBShare/schemas/ServiceContracts_infrastructure_itintegration_registry_2.0_RC8/schemas/interactions/GetSupportedServiceContractsInteraction/GetSupportedServiceContractsInteraction_2.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:registry:GetSupportedServiceContractsResponder:1:GetSupportedServiceContracts"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="218f450d-a340-49bc-8f41-2b8f06c415fe" wsaVersion="NONE" name="GetSupportedServiceContractsResponderBinding_2.0" type="wsdl" bindingName="{urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContracts:2:rivtabp21}GetSupportedServiceContractsResponderBinding" soapVersion="1_1" anonymous="optional" definition="C:/Users/bjopet/source/riv.infrastructure.itintegration.registry/schemas/interactions/GetSupportedServiceContractsInteraction/GetSupportedServiceContractsInteraction_2.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/bjopet/source/riv.infrastructure.itintegration.registry/schemas/interactions/GetSupportedServiceContractsInteraction/GetSupportedServiceContractsInteraction_2.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/Users/bjopet/source/riv.infrastructure.itintegration.registry/schemas/interactions/GetSupportedServiceContractsInteraction/GetSupportedServiceContractsInteraction_2.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements. See the NOTICE file
  distributed with this work for additional information
  regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
@@ -154,7 +154,7 @@
  KIND, either express or implied. See the License for the
  specific language governing permissions and limitations
  under the License.-->
-<wsdl:definitions name="GetSupportedServiceContractsInteraction" targetNamespace="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContracts:2:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:riv="urn:riv:infrastructure:itintegration:registry:2" xmlns:tjsr="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2" xmlns:tns="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContracts:2:rivtabp21">
+<wsdl:definitions name="GetSupportedServiceContractsInteraction" targetNamespace="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContracts:2:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:riv="urn:riv:itintegration:registry:1" xmlns:tjsr="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2" xmlns:tns="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContracts:2:rivtabp21">
   <wsdl:documentation>Tjänsteinteraktionens namn: GetSupportedServiceContractsInteraction
 			 Beskrivning: 
 			   Retrievs a list of supported service contracts for a given logical address.
@@ -166,7 +166,7 @@
   <wsdl:types>
     <xs:schema targetNamespace="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContracts:2:rivtabp21">
       <xs:import schemaLocation="GetSupportedServiceContractsResponder_2.0.xsd" namespace="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2"/>
-      <xs:import schemaLocation="../../core_components/itintegration_registry_2.0.xsd" namespace="urn:riv:infrastructure:itintegration:registry:2"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
     </xs:schema>
   </wsdl:types>
   <wsdl:message name="GetSupportedServiceContractsRequest">
@@ -202,7 +202,7 @@
       <soap:address location="http://tempuri.org"/>
     </wsdl:port>
   </wsdl:service>
-</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_infrastructure_itintegration_registry_2.0_RC8\schemas\interactions\GetSupportedServiceContractsInteraction\GetSupportedServiceContractsResponder_2.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\bjopet\source\riv.infrastructure.itintegration.registry\schemas\interactions\GetSupportedServiceContractsInteraction\GetSupportedServiceContractsResponder_2.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements. See the NOTICE file
  distributed with this work for additional information
  regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
@@ -219,7 +219,7 @@
  specific language governing permissions and limitations
  under the License.-->
 <xs:schema targetNamespace="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2" xmlns:core="urn:riv:infrastructure:itintegration:registry:2">
-  <xs:import schemaLocation="../../core_components/itintegration_registry_2.0.xsd" namespace="urn:riv:infrastructure:itintegration:registry:2"/>
+  <xs:import schemaLocation="../../core_components/infrastructure_itintegration_registry_2.0.xsd" namespace="urn:riv:infrastructure:itintegration:registry:2"/>
   <xs:element name="GetSupportedServiceContracts" type="tns:GetSupportedServiceContractsType"/>
   <xs:element name="GetSupportedServiceContractsResponse" type="tns:GetSupportedServiceContractsResponseType"/>
   <xs:complexType name="GetSupportedServiceContractsType">
@@ -235,7 +235,38 @@
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_infrastructure_itintegration_registry_2.0_RC8\schemas\core_components\itintegration_registry_2.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:infrastructure:itintegration:registry:2" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:infrastructure:itintegration:registry:2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\bjopet\source\riv.infrastructure.itintegration.registry\schemas\core_components\infrastructure_itintegration_registry_2.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:infrastructure:itintegration:registry:2" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:infrastructure:itintegration:registry:2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractNamespaceType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="HsaIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\bjopet\source\riv.infrastructure.itintegration.registry\schemas\core_components\itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:itintegration:registry:1" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
 			
@@ -278,7 +309,7 @@
          <!--You may enter ANY elements at this point-->\r
       </urn1:GetSupportedServiceContracts>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2:GetSupportedServiceContracts"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="d5da0529-2ba8-4c86-89c5-1e6df6b88855" wsaVersion="NONE" name="GetLogicalAddresseesByServiceContractResponderBinding_2.0" type="wsdl" bindingName="{urn:riv:infrastructure:itintegration:registry:GetLogicalAddresseesByServiceContract:2:rivtabp21}GetLogicalAddresseesByServiceContractResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/VBShare/schemas/ServiceContracts_infrastructure_itintegration_registry_2.0_RC8/schemas/interactions/GetLogicalAddresseesByServiceContractInteraction/GetLogicalAddresseesByServiceContractInteraction_2.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/VBShare/schemas/ServiceContracts_infrastructure_itintegration_registry_2.0_RC8/schemas/interactions/GetLogicalAddresseesByServiceContractInteraction/GetLogicalAddresseesByServiceContractInteraction_2.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/VBShare/schemas/ServiceContracts_infrastructure_itintegration_registry_2.0_RC8/schemas/interactions/GetLogicalAddresseesByServiceContractInteraction/GetLogicalAddresseesByServiceContractInteraction_2.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2:GetSupportedServiceContracts"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="d5da0529-2ba8-4c86-89c5-1e6df6b88855" wsaVersion="NONE" name="GetLogicalAddresseesByServiceContractResponderBinding_2.0" type="wsdl" bindingName="{urn:riv:infrastructure:itintegration:registry:GetLogicalAddresseesByServiceContract:2:rivtabp21}GetLogicalAddresseesByServiceContractResponderBinding" soapVersion="1_1" anonymous="optional" definition="C:/Users/bjopet/source/riv.infrastructure.itintegration.registry/schemas/interactions/GetLogicalAddresseesByServiceContractInteraction/GetLogicalAddresseesByServiceContractInteraction_2.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/bjopet/source/riv.infrastructure.itintegration.registry/schemas/interactions/GetLogicalAddresseesByServiceContractInteraction/GetLogicalAddresseesByServiceContractInteraction_2.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/Users/bjopet/source/riv.infrastructure.itintegration.registry/schemas/interactions/GetLogicalAddresseesByServiceContractInteraction/GetLogicalAddresseesByServiceContractInteraction_2.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements. See the NOTICE file
  distributed with this work for additional information
  regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
@@ -294,7 +325,7 @@
  KIND, either express or implied. See the License for the
  specific language governing permissions and limitations
  under the License.-->
-<wsdl:definitions name="GetLogicalAddresseesByServiceContractInteraction" targetNamespace="urn:riv:infrastructure:itintegration:registry:GetLogicalAddresseesByServiceContract:2:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:infrastructure:itintegration:registry:GetLogicalAddresseesByServiceContractResponder:2" xmlns:tns="urn:riv:infrastructure:itintegration:registry:GetLogicalAddresseesByServiceContract:2:rivtabp21" xmlns:itr="urn:riv:infrastructure:itintegration:registry:2">
+<wsdl:definitions name="GetLogicalAddresseesByServiceContractInteraction" targetNamespace="urn:riv:infrastructure:itintegration:registry:GetLogicalAddresseesByServiceContract:2:rivtabp21" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:infrastructure:itintegration:registry:GetLogicalAddresseesByServiceContractResponder:2" xmlns:tns="urn:riv:infrastructure:itintegration:registry:GetLogicalAddresseesByServiceContract:2:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1">
   <xs:annotation>
     <xs:documentation>Tjänsteinteraktionens namn: GetLogicalAddresseesByServiceContractInteraction
 			 Beskrivning: 
@@ -308,7 +339,7 @@
   <wsdl:types>
     <xs:schema targetNamespace="urn:riv:infrastructure:itintegration:registry:GetLogicalAddresseesByServiceContract:2:rivtabp21">
       <xs:import schemaLocation="GetLogicalAddresseesByServiceContractResponder_2.0.xsd" namespace="urn:riv:infrastructure:itintegration:registry:GetLogicalAddresseesByServiceContractResponder:2"/>
-      <xs:import schemaLocation="../../core_components/itintegration_registry_2.0.xsd" namespace="urn:riv:infrastructure:itintegration:registry:2"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
     </xs:schema>
   </wsdl:types>
   <wsdl:message name="GetLogicalAddresseesByServiceContractRequest">
@@ -344,7 +375,7 @@
       <soap:address location="http://tempuri.org"/>
     </wsdl:port>
   </wsdl:service>
-</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_infrastructure_itintegration_registry_2.0_RC8\schemas\interactions\GetLogicalAddresseesByServiceContractInteraction\GetLogicalAddresseesByServiceContractResponder_2.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\Users\bjopet\source\riv.infrastructure.itintegration.registry\schemas\interactions\GetLogicalAddresseesByServiceContractInteraction\GetLogicalAddresseesByServiceContractResponder_2.0.xsd</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements. See the NOTICE file
  distributed with this work for additional information
  regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
@@ -361,7 +392,7 @@
  specific language governing permissions and limitations
  under the License.-->
 <xs:schema targetNamespace="urn:riv:infrastructure:itintegration:registry:GetLogicalAddresseesByServiceContractResponder:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:infrastructure:itintegration:registry:GetLogicalAddresseesByServiceContractResponder:2" xmlns:core="urn:riv:infrastructure:itintegration:registry:2">
-  <xs:import schemaLocation="../../core_components/itintegration_registry_2.0.xsd" namespace="urn:riv:infrastructure:itintegration:registry:2"/>
+  <xs:import schemaLocation="../../core_components/infrastructure_itintegration_registry_2.0.xsd" namespace="urn:riv:infrastructure:itintegration:registry:2"/>
   <xs:element name="GetLogicalAddresseesByServiceContract" type="tns:GetLogicalAddresseesByServiceContractType"/>
   <xs:element name="GetLogicalAddresseesByServiceContractResponse" type="tns:GetLogicalAddresseesByServiceContractResponseType"/>
   <xs:complexType name="GetLogicalAddresseesByServiceContractType">
@@ -391,7 +422,38 @@
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\VBShare\schemas\ServiceContracts_infrastructure_itintegration_registry_2.0_RC8\schemas\core_components\itintegration_registry_2.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:infrastructure:itintegration:registry:2" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:infrastructure:itintegration:registry:2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\bjopet\source\riv.infrastructure.itintegration.registry\schemas\core_components\infrastructure_itintegration_registry_2.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:infrastructure:itintegration:registry:2" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:infrastructure:itintegration:registry:2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
+			
+			Revisionshistorik: 2011-06-27 Mats Ekhammar, Callista Enterprise AB
+				Added ServiceContractType
+			
+			Datum:			2011-05-04
+			Beskrivning:	Initial version
+			Författare:		marcus.krantz@callistaenterprise.se</xs:documentation>
+  </xs:annotation>
+  <xs:element name="LogicalAddress" type="LogicalAddressType"/>
+  <xs:simpleType name="LogicalAddressType">
+    <xs:annotation>
+      <xs:documentation>Defines the type for logical address according to national reference architecture.
+				Superseeds wsa:To as type for logical address header in RIVTA 2.1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:complexType name="ServiceContractNamespaceType">
+    <xs:annotation>
+      <xs:documentation>Type which describes a service contract.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ServiceContractNamespace" type="xs:anyURI"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="HsaIdType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\Users\bjopet\source\riv.infrastructure.itintegration.registry\schemas\core_components\itintegration_registry_1.0.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="urn:riv:itintegration:registry:1" elementFormDefault="qualified" version="1.0" xmlns="urn:riv:itintegration:registry:1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>Beskrivning: 	Grundläggande informationsobjekt för domänen itintegration:registry (adressering av tjänster)
 			
@@ -553,4 +615,4 @@ log.info(ca.getContentRecords().size)
 ca.assertSpecificValueInAnyRecord('/glabsc2:logicalAddressRecord/glabsc2:logicalAddress', context.subscriberEI)
 ca.assertSpecificValueInAnyRecord('/glabsc2:logicalAddressRecord/glabsc2:filter/glabsc2:serviceDomain', "riv:clinicalprocess:logistics:logistics")
 ca.assertSpecificValueInAnyRecord('/glabsc2:logicalAddressRecord/glabsc2:filter/glabsc2:categorization', "vko")
-//ca.assertSpecificValueInAllRecords('/glabsc2:logicalAddressRecord/glabsc2:filter/glabsc2:serviceDomain', "riv:infrastructure:itintegration:registry")</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>ContentSize</con:name><con:value>48</con:value></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>RecordElementPath</con:name><con:value>//glabsc2:logicalAddressRecord</con:value></con:property><con:property><con:name>xmlns:gssc2</con:name><con:value>urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2</con:value></con:property><con:property><con:name>xmlns:glabsc2</con:name><con:value>urn:riv:infrastructure:itintegration:registry:GetLogicalAddresseesByServiceContractResponder:2</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+//ca.assertSpecificValueInAllRecords('/glabsc2:logicalAddressRecord/glabsc2:filter/glabsc2:serviceDomain', "riv:infrastructure:itintegration:registry")</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>ContentSize</con:name><con:value>35</con:value></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>RecordElementPath</con:name><con:value>//glabsc2:logicalAddressRecord</con:value></con:property><con:property><con:name>xmlns:gssc2</con:name><con:value>urn:riv:infrastructure:itintegration:registry:GetSupportedServiceContractsResponder:2</con:value></con:property><con:property><con:name>xmlns:glabsc2</con:name><con:value>urn:riv:infrastructure:itintegration:registry:GetLogicalAddresseesByServiceContractResponder:2</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
