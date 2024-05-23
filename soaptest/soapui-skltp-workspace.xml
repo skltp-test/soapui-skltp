@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-workspace name="soapui-skltp" soapui-version="5.7.1" projectRoot="${workspaceDir}" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-workspace name="soapui-skltp" soapui-version="5.7.2" projectRoot="${workspaceDir}" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:project name="SKLTP-Core-Functionality">SKLTP-Core-Functionality-soapui-project.xml</con:project>
   <con:project name="SKLTP-Core-Tjänsteadressering">SKLTP-Core-Tjansteadressering-soapui-project.xml</con:project>

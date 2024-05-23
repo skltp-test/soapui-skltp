@@ -607,6 +607,13 @@ under the License.
 		</data>
 	</testcase>
 	
+	<testcase id="Hostname verification">
+		<description>Anrop till en producent som svarar med cert med CN som inte motsvarar hostname skall misslyckas när hostname verification är aktivt</description>
+		<data>
+			<logicalAddress>CERT-MOCK</logicalAddress>
+		</data>
+	</testcase>
+
 	<!-- BASIC FLOWS -->
 	<!-- clinicalprocess/healthcond/description -->
 	<testcase id="4.1.1 (GAI) Patient utan engagemang"></testcase>
