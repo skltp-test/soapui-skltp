@@ -948,9 +948,7 @@ under the License.
 	<testcase id="5.7.2 Skicka Update använd FindContent för samtliga optionella element"></testcase>
 	<testcase id="5.7.3 Skicka FindContent med samtliga optionella element"></testcase>
 
-<!-- Start NOTE(2020-03-02) : Kommenterar bort testfallen angående Standartvägval och Standartbehörighet, stöd saknas -->
-<!--
-	
+
 	<testcase id="NTP-775.1 Direktadresserad GRO, finns endast SB och SV">
 		<description>
 			Konsument skickar direktadresserad GRO till SKLTP-MOCK01 (TSTNMT2321000156-10K5)
@@ -1122,8 +1120,7 @@ under the License.
 			<logicalAddress>5565594230</logicalAddress>
 		</data>
 	</testcase>
--->
-<!--	End NOTE (2020-03-02) -->
+
 		
 	<testcase id="NTP-775.41 RMCQ med default routing, vägval baseras på VG">
 		<description>
