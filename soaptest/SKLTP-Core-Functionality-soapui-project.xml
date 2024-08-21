@@ -10709,101 +10709,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d60abbc0-6b70-43e4-8594-38247e98df25" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="e8cec593-1604-465b-be30-ef490d396272" name="Not SOAP Fault"/><con:assertion type="Schema Compliance" id="af469e24-551e-4c6d-ac34-0e59324f976d" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="GroovyScriptAssertion" id="d9825246-425e-42e3-b7b9-3b7e7e18ed5d" name="Assert patientId"><con:configuration><scriptText>import se.skl.rivta.tksupport.soapui.ContentAssertions
 def ca = new ContentAssertions(context, messageExchange, log)
-ca.assertSpecificValueInAllRecords('/urn:careDocumentation/hdurn2:careDocumentationHeader/hdurn2:patientId/hdurn2:id', context.patientId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="ce84f838-1b1f-4cc9-82ea-faf9ed8479f0" name="Producer with HSAID in lowercase" disabled="true"><con:description>Testfall för att verifiera att det går att anropa HSA-ID som innehåller gemener. Jira: NTP-2255
-Tjänstekontrakt: urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2
-Logisk Adress: gemenlogiskadress
-Tjänsteproducent: TSTNMT2321000156-B2X
-Anropsadress: https://tjp.nordicmedtest.se/skaulo/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21 [RIVTABP21]
-Fr.o.m. Tidpunkt 2024-08-16
-T.o.m. Tidpunkt 2124-08-16
-Id 854</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="286ed159-35b9-4755-863d-93cb1fc54d53" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Links producer with mock gemenlogiskadress" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true"><con:settings/><con:testStep type="request" id="36da5c1d-9cca-48e4-b85c-307d47379451" name="Update data for patientId16 on HSAID gemenlogiskadress"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>UpdateResponderBinding</con:interface><con:operation>Update</con:operation><con:request name="Update data for patientId16 on HSAID gemenlogiskadress" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="40b6f526-4747-461e-9c4a-7f619116a9f6"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://dev.esb.ntjp.se/vp/Update/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">
-   <soapenv:Header>
-      <urn:LogicalAddress>${#TestSuite#LA_Inera}</urn:LogicalAddress>
-   </soapenv:Header>
-   <soapenv:Body>
-      <urn1:Update>
-         <urn1:engagementTransaction>
-            <urn2:deleteFlag>false</urn2:deleteFlag>
-            <urn2:engagement>
-               <urn2:registeredResidentIdentification>${#TestSuite#patientId16}</urn2:registeredResidentIdentification>
-               <urn2:serviceDomain>riv:clinicalprocess:activity:actions</urn2:serviceDomain>
-               <urn2:categorization>caa-ga</urn2:categorization>
-               <urn2:logicalAddress>${#TestSuite#gemenlogiskadress_1}</urn2:logicalAddress>
-               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
-               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
-               <urn2:sourceSystem>${#TestSuite#gemenlogiskadress_1}</urn2:sourceSystem>
-               <urn2:creationTime>20240814080000</urn2:creationTime>
-			<urn2:dataController>SE-NMT123</urn2:dataController>
-            </urn2:engagement>
-         </urn1:engagementTransaction>
-      </urn1:Update>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Fault Assertion" id="b0c241ec-c073-4037-b9ab-082933bae66e" name="Not SOAP Fault"/><con:assertion type="Simple Contains" id="ac8f9b95-5b1f-4a10-a14c-f4b883caa355" name="OK"><con:configuration><token>OK</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="12759bd5-c69b-4b20-be95-04c2aa061901" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetDiagnosis - gemenlogiskadress direct" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:description>Verifierar att kontrollen av HSAID är skiftlägeskänslig. HSAID = gemenlogiskadsesS, gemenlogiskadsess,  GemenLogiskAddress och GEMENLOGISKADRESS skall hämta diagnos på patientId16</con:description><con:settings/><con:testStep type="request" name="Input HSAID: gemenlogiskadresS" id="376f5a65-d377-4cd4-9282-ff087eb6d247"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="Input HSAID: gemenlogiskadresS" id="e2f595c5-fd81-47a7-9adb-72e9fdc88361" sslKeystore=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@encode_attachments">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://dev.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">
-   <soapenv:Header>
-      <urn:LogicalAddress>${#TestSuite#gemenlogiskadresS}</urn:LogicalAddress>
-   </soapenv:Header>
-   <soapenv:Body>
-      <urn1:GetDiagnosis>
-         <urn1:patientId>
-            <urn2:id>${#TestSuite#patientId16}</urn2:id>
-            <urn2:type>${#TestSuite#patientIdType}</urn2:type>
-         </urn1:patientId>
-<urn1:sourceSystemHSAid>${#TestSuite#gemenlogiskadresS}</urn1:sourceSystemHSAid>-->
-      </urn1:GetDiagnosis>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a69cd850-cf7b-4008-b474-e371dbb8da83"/><con:assertion type="Schema Compliance" id="2ef7ad07-3e5f-4e10-8f75-53b5d80d12dd"><con:configuration/></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="7ea4ed59-5229-420c-a0be-19e4cce9d84c" name="SOAP Fault"/><con:assertion type="Simple NotContains" id="df783bf6-1f5a-43e1-8be0-e246b29d0f60" name="Not Contains &quot;Fault&quot;"><con:configuration><token>Fault</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="c508b890-e7ab-4e62-8d50-9936bc87311e" name="Contains Migrän med aura, klassisk migrän"><con:configuration><token>Migrän med aura, klassisk migrän</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="input HSAID: gemenlogiskadress" id="50eb9e1b-63b7-470b-82e3-13cf97aa96ba"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="input HSAID: gemenlogiskadress" id="e2f595c5-fd81-47a7-9adb-72e9fdc88361"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://dev.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">
-   <soapenv:Header>
-      <urn:LogicalAddress>${#TestSuite#gemenlogiskadress_1}</urn:LogicalAddress>
-   </soapenv:Header>
-   <soapenv:Body>
-      <urn1:GetDiagnosis>
-         <urn1:patientId>
-            <urn2:id>${#TestSuite#patientId16}</urn2:id>
-            <urn2:type>${#TestSuite#patientIdType}</urn2:type>
-         </urn1:patientId>
-          <urn1:sourceSystemHSAid>${#TestSuite#gemenlogiskadress_1}</urn1:sourceSystemHSAid>
-      </urn1:GetDiagnosis>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a69cd850-cf7b-4008-b474-e371dbb8da83"/><con:assertion type="Schema Compliance" id="2ef7ad07-3e5f-4e10-8f75-53b5d80d12dd"><con:configuration/></con:assertion><con:assertion type="Simple NotContains" id="0c6fb826-864e-494a-82d5-fd76dfd9d550" name="Not Contains &quot;Fault&quot;"><con:configuration><token>Fault</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d1c1412d-9db7-40de-adff-2575628b9e9b" name="Migrän med aura, klassisk migrän"><con:configuration><token>Migrän med aura, klassisk migrän</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Input HSAID: GemenLogiskAdress" id="5198f9d2-603d-48f5-a8aa-d94c3eaf57b4"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="Input HSAID: GemenLogiskAdress" id="e2f595c5-fd81-47a7-9adb-72e9fdc88361"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://dev.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">
-   <soapenv:Header>
-      <urn:LogicalAddress>${#TestSuite#GemenLogiskAdress_2}</urn:LogicalAddress>
-   </soapenv:Header>
-   <soapenv:Body>
-      <urn1:GetDiagnosis>
-         <urn1:patientId>
-            <urn2:id>${#TestSuite#patientId16}</urn2:id>
-            <urn2:type>${#TestSuite#patientIdType}</urn2:type>
-         </urn1:patientId>
-         <urn1:sourceSystemHSAid>${#TestSuite#gemenlogiskadress_2}</urn1:sourceSystemHSAid>
-      </urn1:GetDiagnosis>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a69cd850-cf7b-4008-b474-e371dbb8da83"/><con:assertion type="Schema Compliance" id="2ef7ad07-3e5f-4e10-8f75-53b5d80d12dd"><con:configuration/></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="7ea4ed59-5229-420c-a0be-19e4cce9d84c" name="SOAP Fault"/><con:assertion type="Simple Contains" id="73ac535b-f0cc-45c4-a16b-3ebc137ab9b7" name="Contains Migrän med aura, klassisk migrän"><con:configuration><token>Migrän med aura, klassisk migrän</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="097a1ad6-4fd2-406b-b90c-661a0171ee35" name="Not Contains &quot;Fault&quot;"><con:configuration><token>Fault</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Input HSAID: GEMENLOGISKADRESS" id="4d83efec-3028-42f8-a3a8-465df9888e0e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="Input HSAID: GEMENLOGISKADRESS" id="e2f595c5-fd81-47a7-9adb-72e9fdc88361"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://dev.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
-   <soapenv:Header>\r
-      <urn:LogicalAddress>${#TestSuite#GEMENLOGISKADRESS_3}</urn:LogicalAddress>\r
-   </soapenv:Header>\r
-   <soapenv:Body>\r
-      <urn1:GetDiagnosis>\r
-         <urn1:patientId>\r
-            <urn2:id>${#TestSuite#patientId16}</urn2:id>\r
-            <urn2:type>${#TestSuite#patientIdType}</urn2:type>\r
-         </urn1:patientId>\r
-         <urn1:sourceSystemHSAid>${#TestSuite#gemenlogiskadress_3}</urn1:sourceSystemHSAid>
-      </urn1:GetDiagnosis>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a69cd850-cf7b-4008-b474-e371dbb8da83"/><con:assertion type="Schema Compliance" id="2ef7ad07-3e5f-4e10-8f75-53b5d80d12dd"><con:configuration/></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="7ea4ed59-5229-420c-a0be-19e4cce9d84c" name="SOAP Fault"/><con:assertion type="Simple Contains" id="bf9416f1-8225-4fb7-bad8-a75277b6789d" name="Contains"><con:configuration><token>VP007 Authorization missing for serviceNamespace: urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2, receiverId: TSTNMT2321000156-9999, senderId: TSTNMT2321000156-B02</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e3f311b0-5e68-49b7-b426-ce10e923f445" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetDiagnosis - gemenlogiskadress via Agp" searchProperties="true"><con:settings/><con:testStep type="request" name="Input HSAID: 5565594230" id="4688b885-2653-4264-9e3a-e93ca3f45fcc"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="Input HSAID: 5565594230" id="e2f595c5-fd81-47a7-9adb-72e9fdc88361"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://dev.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21</con:endpoint><con:request><![CDATA[  <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">
-   <soapenv:Header>
-      <urn:LogicalAddress>${#TestSuite#LA_Inera}</urn:LogicalAddress>
-   </soapenv:Header>
-   <soapenv:Body>
-      <urn1:GetDiagnosis>
-         <urn1:patientId>
-            <urn2:id>${#TestSuite#patientId16}</urn2:id>
-            <urn2:type>${#TestSuite#patientIdType}</urn2:type>
-         </urn1:patientId>
-      </urn1:GetDiagnosis>
-   </soapenv:Body>
-</soapenv:Envelope>
-]]></con:request><con:assertion type="SOAP Response" id="a69cd850-cf7b-4008-b474-e371dbb8da83"/><con:assertion type="Schema Compliance" id="2ef7ad07-3e5f-4e10-8f75-53b5d80d12dd"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="bf9416f1-8225-4fb7-bad8-a75277b6789d" name="Contains migrän"><con:configuration><token>migrän</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="baa97803-55cf-4380-8569-c9d6ecb09e2d" name="Not Contains Fault"><con:configuration><token>Fault</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>LA_Inera</con:name><con:value>5565594230</con:value></con:property><con:property><con:name>patientId16</con:name><con:value>191003249800</con:value></con:property><con:property><con:name>patientIdType</con:name><con:value>1.2.752.129.2.1.3.1</con:value></con:property><con:property><con:name>gemenlogiskadress_1</con:name><con:value>gemenlogiskadress</con:value></con:property><con:property><con:name>gemenlogiskadresS</con:name><con:value>gemenlogiskadresS</con:value></con:property><con:property><con:name>GemenLogiskAdress_2</con:name><con:value>GemenLogiskAdress</con:value></con:property><con:property><con:name>GEMENLOGISKADRESS_3</con:name><con:value>GEMENLOGISKADRESS</con:value></con:property></con:properties></con:testSuite><con:testSuite id="4a17b9c0-1d3b-4a27-a25b-1d03172a8575" name="CorrelationId"><con:settings/><con:runType>PARALLELL</con:runType><con:testCase id="b6acd868-4c28-42c0-9fc7-a4e2542d9351" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.3.1 Angränsande konsument skickar fråga via aggregerande tjänst (x-skltp-correlation-id satt)" searchProperties="true"><con:description>	</con:description><con:settings/><con:testStep type="groovy" name="Read data" id="d9c55b05-3268-4b1b-8695-9cfd99f219b9"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+ca.assertSpecificValueInAllRecords('/urn:careDocumentation/hdurn2:careDocumentationHeader/hdurn2:patientId/hdurn2:id', context.patientId)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="4a17b9c0-1d3b-4a27-a25b-1d03172a8575" name="CorrelationId"><con:settings/><con:runType>PARALLELL</con:runType><con:testCase id="b6acd868-4c28-42c0-9fc7-a4e2542d9351" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="1.3.1 Angränsande konsument skickar fråga via aggregerande tjänst (x-skltp-correlation-id satt)" searchProperties="true"><con:description>	</con:description><con:settings/><con:testStep type="groovy" name="Read data" id="d9c55b05-3268-4b1b-8695-9cfd99f219b9"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
@@ -11081,7 +10987,137 @@ for(header in httpResponseHeaders.keySet())
 
 def routingHistory = httpResponseHeaders[x_rivta_routing_history][0]
 assert routingHistory.contains(context.routingHistory)
-</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="0395e6b6-a832-46ed-8157-7b329c868765" name="Standardiserade felkoder"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="535f0c1c-c96a-46a0-ae41-8dc641aa3f14" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="2.1.1 Konsument anropar okänd tjänst" searchProperties="true"><con:description>Iom. bytet till Camel NTP-819 så tar inte NTjP längre hänsyn till extension delen av URL som anges i POST.
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:clinicalprocess:healthcond:description:GetCareDocumentationResponder:2:GetCareDocumentation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="02b7999d-0d7a-4d9e-bd40-44acdfff1bcd" name="Producer with HSAID in lowercase" disabled="true"><con:description>Testfall för att verifiera att det går att anropa HSA-ID som innehåller gemener. Jira: NTP-2255
+Tjänstekontrakt: urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2
+Logisk Adress: gemenlogiskadress
+Tjänsteproducent: TSTNMT2321000156-B2X
+Anropsadress: https://tjp.nordicmedtest.se/skaulo/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21 [RIVTABP21]
+Fr.o.m. Tidpunkt 2024-08-16
+T.o.m. Tidpunkt 2124-08-16
+Id 854</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="b357c09a-cea1-4c09-aeed-12d3e6c59233" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Get and set environment properties" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Get environment URL from data.xml" id="fc3e1538-05e6-4c74-beb9-d178c601c9c6"><con:description>Get environment from data.xml</con:description><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader 
+import com.eviware.soapui.support.GroovyUtils  
+
+def utils = new GroovyUtils(context) 
+
+//Create the datafile with global data 
+def dataFile = new File(utils.projectPath + "/data.xml") 
+def source = new XmlDataReader(context, dataFile)  
+
+def alert = com.eviware.soapui.support.UISupport;
+//Define a file pointer for groovy to handle the file operations.
+def inputFile = new File(utils.projectPath + "/data.xml") 
+
+
+if(!inputFile.exists())
+{
+    //Display an alert if the file is not found.
+    alert.showInfoMessage("Input File " inputFile " not found!");   
+}
+else
+{
+    //Read and parse XML file and store it into a variable
+    def InputXML = new XmlParser().parseText(inputFile.text)
+    
+    //Find/ Filter XML nodes based on a condition   
+    def InputRow = InputXML.globaldata.findAll{
+        it.VP.text();  
+        
+        //log.info(it.VP.text());
+        def url = it.VP.text() 
+
+        //Set environent variable
+        testRunner.testCase.testSuite.setPropertyValue("ENV", url)
+    }
+} </script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="702feadd-d6dd-449a-92b9-53c40339fd90" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Link producer with mock gemenlogiskadress" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true"><con:settings/><con:testStep type="request" id="b860f671-632c-4cbd-bb03-7c1aaf91d03c" name="Update data for patientId16 on HSAID gemenlogiskadress"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>UpdateResponderBinding</con:interface><con:operation>Update</con:operation><con:request name="Update data for patientId16 on HSAID gemenlogiskadress" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="40b6f526-4747-461e-9c4a-7f619116a9f6"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}Update/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:itintegration:engagementindex:UpdateResponder:1" xmlns:urn2="urn:riv:itintegration:engagementindex:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>${#TestSuite#LA_Inera}</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:Update>
+         <urn1:engagementTransaction>
+            <urn2:deleteFlag>false</urn2:deleteFlag>
+            <urn2:engagement>
+               <urn2:registeredResidentIdentification>${#TestSuite#patientId16}</urn2:registeredResidentIdentification>
+               <urn2:serviceDomain>riv:clinicalprocess:activity:actions</urn2:serviceDomain>
+               <urn2:categorization>caa-ga</urn2:categorization>
+               <urn2:logicalAddress>${#TestSuite#gemenlogiskadress_1}</urn2:logicalAddress>
+               <urn2:businessObjectInstanceIdentifier>NA</urn2:businessObjectInstanceIdentifier>
+               <urn2:clinicalProcessInterestId>NA</urn2:clinicalProcessInterestId>
+               <urn2:sourceSystem>${#TestSuite#gemenlogiskadress_1}</urn2:sourceSystem>
+               <urn2:creationTime>20240814080000</urn2:creationTime>
+			<urn2:dataController>SE-NMT123</urn2:dataController>
+            </urn2:engagement>
+         </urn1:engagementTransaction>
+      </urn1:Update>
+   </soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:assertion type="SOAP Fault Assertion" id="b0c241ec-c073-4037-b9ab-082933bae66e" name="Not SOAP Fault"/><con:assertion type="Simple Contains" id="ac8f9b95-5b1f-4a10-a14c-f4b883caa355" name="OK"><con:configuration><token>OK</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:riv:itintegration:engagementindex:UpdateResponder:1:Update"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="eab8bc14-b280-4e2c-9ef6-b70ea029c85e" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetDiagnosis - gemenlogiskadress direct" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:description>Verifierar att kontrollen av HSAID är skiftlägeskänslig. HSAID = gemenlogiskadsesS, gemenlogiskadsess,  GemenLogiskAddress och GEMENLOGISKADRESS skall hämta diagnos på patientId16</con:description><con:settings/><con:testStep type="request" name="Input HSAID: gemenlogiskadresS" id="5363d1c3-a983-4f69-b282-1f438f059fe9"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="Input HSAID: gemenlogiskadresS" id="e2f595c5-fd81-47a7-9adb-72e9fdc88361" sslKeystore=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@encode_attachments">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">
+   <soapenv:Header>
+      <urn:LogicalAddress>${#TestSuite#gemenlogiskadresS}</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:GetDiagnosis>
+         <urn1:patientId>
+            <urn2:id>${#TestSuite#patientId16}</urn2:id>
+            <urn2:type>${#TestSuite#patientIdType}</urn2:type>
+         </urn1:patientId>
+<urn1:sourceSystemHSAid>${#TestSuite#gemenlogiskadresS}</urn1:sourceSystemHSAid>-->
+      </urn1:GetDiagnosis>
+   </soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:assertion type="SOAP Response" id="a69cd850-cf7b-4008-b474-e371dbb8da83"/><con:assertion type="Schema Compliance" id="2ef7ad07-3e5f-4e10-8f75-53b5d80d12dd"><con:configuration/></con:assertion><con:assertion type="Simple NotContains" id="df783bf6-1f5a-43e1-8be0-e246b29d0f60" name="Not Contains &quot;Fault&quot;"><con:configuration><token>Fault</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="c508b890-e7ab-4e62-8d50-9936bc87311e" name="Contains Migrän med aura, klassisk migrän"><con:configuration><token>Migrän med aura, klassisk migrän</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="input HSAID: gemenlogiskadress" id="ae0bdc3b-1623-46a8-9171-033289587c51"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="input HSAID: gemenlogiskadress" id="e2f595c5-fd81-47a7-9adb-72e9fdc88361"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">
+   <soapenv:Header>
+      <urn:LogicalAddress>${#TestSuite#gemenlogiskadress_1}</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:GetDiagnosis>
+         <urn1:patientId>
+            <urn2:id>${#TestSuite#patientId16}</urn2:id>
+            <urn2:type>${#TestSuite#patientIdType}</urn2:type>
+         </urn1:patientId>
+          <urn1:sourceSystemHSAid>${#TestSuite#gemenlogiskadress_1}</urn1:sourceSystemHSAid>
+      </urn1:GetDiagnosis>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a69cd850-cf7b-4008-b474-e371dbb8da83"/><con:assertion type="Schema Compliance" id="2ef7ad07-3e5f-4e10-8f75-53b5d80d12dd"><con:configuration/></con:assertion><con:assertion type="Simple NotContains" id="0c6fb826-864e-494a-82d5-fd76dfd9d550" name="Not Contains &quot;Fault&quot;"><con:configuration><token>Fault</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d1c1412d-9db7-40de-adff-2575628b9e9b" name="Contains &quot;Migrän med aura, klassisk migrän&quot;"><con:configuration><token>Migrän med aura, klassisk migrän</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Input HSAID: GemenLogiskAdress" id="0780b9be-9c2b-4518-b248-e42490ae2b0d"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="Input HSAID: GemenLogiskAdress" id="e2f595c5-fd81-47a7-9adb-72e9fdc88361"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">
+   <soapenv:Header>
+      <urn:LogicalAddress>${#TestSuite#GemenLogiskAdress_2}</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:GetDiagnosis>
+         <urn1:patientId>
+            <urn2:id>${#TestSuite#patientId16}</urn2:id>
+            <urn2:type>${#TestSuite#patientIdType}</urn2:type>
+         </urn1:patientId>
+         <urn1:sourceSystemHSAid>${#TestSuite#gemenlogiskadress_2}</urn1:sourceSystemHSAid>
+      </urn1:GetDiagnosis>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a69cd850-cf7b-4008-b474-e371dbb8da83"/><con:assertion type="Schema Compliance" id="2ef7ad07-3e5f-4e10-8f75-53b5d80d12dd"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="73ac535b-f0cc-45c4-a16b-3ebc137ab9b7" name="Contains Migrän med aura, klassisk migrän"><con:configuration><token>Migrän med aura, klassisk migrän</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="097a1ad6-4fd2-406b-b90c-661a0171ee35" name="Not Contains &quot;Fault&quot;"><con:configuration><token>Fault</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Input HSAID: GEMENLOGISKADRESS" id="a8fa43c4-7234-4e1b-bd9f-665d26114862"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="Input HSAID: GEMENLOGISKADRESS" id="e2f595c5-fd81-47a7-9adb-72e9fdc88361"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">\r
+   <soapenv:Header>\r
+      <urn:LogicalAddress>${#TestSuite#GEMENLOGISKADRESS_3}</urn:LogicalAddress>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn1:GetDiagnosis>\r
+         <urn1:patientId>\r
+            <urn2:id>${#TestSuite#patientId16}</urn2:id>\r
+            <urn2:type>${#TestSuite#patientIdType}</urn2:type>\r
+         </urn1:patientId>\r
+         <urn1:sourceSystemHSAid>${#TestSuite#gemenlogiskadress_3}</urn1:sourceSystemHSAid>
+      </urn1:GetDiagnosis>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a69cd850-cf7b-4008-b474-e371dbb8da83"/><con:assertion type="Schema Compliance" id="2ef7ad07-3e5f-4e10-8f75-53b5d80d12dd"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="bf9416f1-8225-4fb7-bad8-a75277b6789d" name="Contains migrän"><con:configuration><token>migrän</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="085eeee3-5c8c-4ce1-9a61-fa5d4a853aed" name="Not Contains &quot;Fault&quot;"><con:configuration><token>Fault</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="f8d25c74-0064-42f5-ad66-158316af6e53" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetDiagnosis - gemenlogiskadress via Agp" searchProperties="true"><con:settings/><con:testStep type="request" name="Input HSAID: 5565594230" id="e4a1e64b-bf14-4c4d-848d-13175a354eff"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDiagnosisResponderBinding</con:interface><con:operation>GetDiagnosis</con:operation><con:request name="Input HSAID: 5565594230" id="e2f595c5-fd81-47a7-9adb-72e9fdc88361"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://dev.esb.ntjp.se/vp/clinicalprocess/healthcond/description/GetDiagnosis/2/rivtabp21</con:endpoint><con:request><![CDATA[  <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:clinicalprocess:healthcond:description:GetDiagnosisResponder:2" xmlns:urn2="urn:riv:clinicalprocess:healthcond:description:2">
+   <soapenv:Header>
+      <urn:LogicalAddress>${#TestSuite#LA_Inera}</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:GetDiagnosis>
+         <urn1:patientId>
+            <urn2:id>${#TestSuite#patientId16}</urn2:id>
+            <urn2:type>${#TestSuite#patientIdType}</urn2:type>
+         </urn1:patientId>
+      </urn1:GetDiagnosis>
+   </soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:assertion type="SOAP Response" id="a69cd850-cf7b-4008-b474-e371dbb8da83"/><con:assertion type="Schema Compliance" id="2ef7ad07-3e5f-4e10-8f75-53b5d80d12dd"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="bf9416f1-8225-4fb7-bad8-a75277b6789d" name="Contains migrän"><con:configuration><token>migrän</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="baa97803-55cf-4380-8569-c9d6ecb09e2d" name="Not Contains Fault"><con:configuration><token>Fault</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>LA_Inera</con:name><con:value>5565594230</con:value></con:property><con:property><con:name>patientId16</con:name><con:value>191003249800</con:value></con:property><con:property><con:name>patientIdType</con:name><con:value>1.2.752.129.2.1.3.1</con:value></con:property><con:property><con:name>gemenlogiskadress_1</con:name><con:value>gemenlogiskadress</con:value></con:property><con:property><con:name>gemenlogiskadresS</con:name><con:value>gemenlogiskadresS</con:value></con:property><con:property><con:name>GemenLogiskAdress_2</con:name><con:value>GemenLogiskAdress</con:value></con:property><con:property><con:name>GEMENLOGISKADRESS_3</con:name><con:value>GEMENLOGISKADRESS</con:value></con:property><con:property><con:name>ENV</con:name><con:value>https://dev.esb.ntjp.se/vp/</con:value></con:property></con:properties></con:testSuite><con:testSuite id="0395e6b6-a832-46ed-8157-7b329c868765" name="Standardiserade felkoder"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="535f0c1c-c96a-46a0-ae41-8dc641aa3f14" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="2.1.1 Konsument anropar okänd tjänst" searchProperties="true"><con:description>Iom. bytet till Camel NTP-819 så tar inte NTjP längre hänsyn till extension delen av URL som anges i POST.
 Det är SOAPAction som bestämmer vilken tjänst som ska anropas.
 Testfallet har modifierats för ovanstående.</con:description><con:settings/><con:testStep type="groovy" name="Read data" id="ab2a8edd-0919-4ee1-ae45-5c2f2b58a52e"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
