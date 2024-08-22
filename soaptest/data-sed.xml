@@ -1019,14 +1019,13 @@ under the License.
 			<sourceSystemHSAId>SKLTP-MOCK01</sourceSystemHSAId>
 		</data>
 	</testcase>
-	<testcase id="NTP-775.8 Direktadresserad GD, SV finns men anropsbehörighet saknas">
+	<testcase id="NTP-775.8 Direktadresserad FAQ, SV finns men anropsbehörighet saknas">
 		<description>
-			Konsument skickar direktadresserad GD till SKLTP-MOCK100 (TSTNMT2321000156-9999)
+			Konsument skickar direktadresserad FindAllQuestions till SKLTP-MOCK100 (TSTNMT2321000156-9999)
 			Syfte: Säkerställ att konsumenten inte kommer åt standardvägvalet
 		</description>
 		<data>
 			<logicalAddress>TSTNMT2321000156-9999</logicalAddress>
-			<sourceSystemHSAId>TSTNMT2321000156-9999</sourceSystemHSAId>
 		</data>
 	</testcase>
 	<testcase id="NTP-775.9 Direktadresserad GO, vägval baseras på SB och HSA-klättring">
@@ -1106,15 +1105,6 @@ under the License.
 		<description>
 			Konsument skickar GD till AGP, engagemang finns till SKLTP-MOCK100 (TSTNMT2321000156-9999)
 			Syfte: Säkerställ att konsumenten inte kommer åt standardvägvalet
-		</description>
-		<data>
-			<logicalAddress>5565594230</logicalAddress>
-		</data>
-	</testcase>
-	<testcase id="NTP-775.29 GO till AGP, vägval baseras på SB och HSA-klättring">
-		<description>
-			Konsument skickar GO till AGP, där engagemang finns till SKLTP-MOCK02 (TSTNMT2321000156-10K6)
-			Syfte: Säkerställ att HSA-klättring används.
 		</description>
 		<data>
 			<logicalAddress>5565594230</logicalAddress>
