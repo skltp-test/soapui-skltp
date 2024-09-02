@@ -14516,9 +14516,15 @@ def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
 ca.assertSpecificValueInAllRecords('/gcd2:careDocumentation/hdurn2:careDocumentationHeader/hdurn2:patientId/hdurn2:id', context.patientId1)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="f40cb4c3-b8d6-406e-b4fa-f16860dfbcf0" name="Tradklattring"><con:description>Syftet med testsviten är att verifiera logiken för när trädklättring kan ske.
 Logiken är implementerad för behörigheter och vägval.
-Trädklättring är tillåten som skönvärde (default)
-Trädklättring kan stängas av
-Trädklättring på (ProcessClaimSpecification) av () financial.billing.claim</con:description><con:settings/><con:runType>PARALLELL</con:runType><con:testCase id="19ab87c7-9817-4d32-ab80-0f86c9b19c39" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Get and set environment properties" searchProperties="true"><con:description>Get environment URL from data.xml and Updates ENV variable in testsuite properties. Do not disable. Run if you change test environment.</con:description><con:settings/><con:testStep type="groovy" name="Get environment URL from data.xml" id="fc4b660c-0df7-41bb-9a95-1cb14da5485b"><con:description>Get environment from data.xml</con:description><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader 
+Vägval kontrolleras först, därefter anropsbehörighet.
+REGLER
+Trädklättring inte tillåten:
+* för vägval för kontrakt RequestExemptionStatuses  v1
+* för anropsbehörighet på kontrakt ProcessExemptionStatuses v1
+* varken för vägval eller anropsbehörighet på kontrakt ProcessClaimSpecification v1
+
+Beskrivning över organisationsträd och takningar återfinns på Confluence under systemtester och trädklättring
+</con:description><con:settings/><con:runType>PARALLELL</con:runType><con:testCase id="19ab87c7-9817-4d32-ab80-0f86c9b19c39" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Get and set environment properties" searchProperties="true"><con:description>Get environment URL from data.xml and Updates ENV variable in testsuite properties. Do not disable. Run if you change test environment.</con:description><con:settings/><con:testStep type="groovy" name="Get environment URL from data.xml" id="fc4b660c-0df7-41bb-9a95-1cb14da5485b"><con:description>Get environment from data.xml</con:description><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader 
 import com.eviware.soapui.support.GroovyUtils  
 
 def utils = new GroovyUtils(context) 
@@ -14552,23 +14558,10 @@ else
         //Set environent variable
         testRunner.testCase.testSuite.setPropertyValue("ENV", url)
     }
-} </script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8edaf85c-f326-4a80-a1e6-f895293048da" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TK - Ej tillatet pa: vagval" searchProperties="true"><con:description>Vägval
-Tjänstekontrakt
-urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1
-Logisk Adress
-SKLTP-MOCK20
-Tjänsteproducent
-TSTNMT2321000156-B2X
-Anropsadress
-https://tjp.nordicmedtest.se/vp [RIVTABP21]
-Fr.o.m. Tidpunkt
-2020-10-22
-T.o.m. Tidpunkt
-2120-10-22
-Id
-749
-Publicerad version
-310</con:description><con:settings/><con:testStep type="groovy" name="Do not run in these environments" id="8dc7134b-0271-4073-8bb9-b2e090a88298"><con:description>Aborts testcase. Set environments not to run in</con:description><con:settings/><con:config><script>def url = testRunner.testCase.testSuite.getPropertyValue("ENV")
+} </script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8edaf85c-f326-4a80-a1e6-f895293048da" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TK - Ej tillatet pa vagval" searchProperties="true"><con:description>Syftet med testfallet är att verifiera att trädklättring
+sker på anropsbehörighet ej på vägval
+Vägval och och anropsbehörighet finns till LA "K3"
+anropsbehörighet finns till LA "K5" </con:description><con:settings/><con:testStep type="groovy" name="Do not run in these environments" id="8dc7134b-0271-4073-8bb9-b2e090a88298"><con:description>Aborts testcase. Set environments not to run in</con:description><con:settings/><con:config><script>def url = testRunner.testCase.testSuite.getPropertyValue("ENV")
 
 //only run in dev
 if ((url.contains("qa") || url.contains("test")))
@@ -14576,55 +14569,7 @@ testRunner.cancel( "Feature not implemented in "+ url + ", cancelling test step"
 
 /* only run in dev and test
 if ((url.contains("qa")))
-	testRunner.cancel( "Feature not implemented in "+ url + ", cancelling test step" )   */</script></con:config></con:testStep><con:testStep type="request" id="74e52006-7809-44a0-a110-ecbe02cec331" name="Anrop direkt producent"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RequestExemptionStatusesResponderBinding</con:interface><con:operation>RequestExemptionStatuses</con:operation><con:request name="Anrop direkt producent" id="4b5940fc-7df5-4748-8a91-6499623e859b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}financial/patienfees/exemption/RequestExemptionStatuses/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">
-   <soapenv:Header>
-      <urn:LogicalAddress>${#TestSuite#NTJ_REG_MOCK}</urn:LogicalAddress>
-   </soapenv:Header>
-   <soapenv:Body>
-      <urn1:RequestExemptionStatuses>
-         <urn1:requestId>
-            <urn2:root>REQUEST_ID_ROOT</urn2:root>
-            <urn2:extension>${=java.util.UUID.randomUUID()}</urn2:extension>
-         </urn1:requestId>
-         <urn1:patientId>
-            <urn2:root>${patientIdType}</urn2:root>
-           <urn2:extension>${#TestSuite#patientId16}</urn2:extension>
-         </urn1:patientId>
-         <urn1:actor>
-            <urn2:actorTypeEnum>CITIZEN</urn2:actorTypeEnum>
-            <urn2:actorId>
-               <urn2:root>${patientIdType}</urn2:root>
-               <urn2:extension>${patientIdNoEngagements}</urn2:extension>
-            </urn2:actorId>
-         </urn1:actor>
-         <urn1:responseLogicalAddress>RESPONSE_LOGICAL_ADDRESS</urn1:responseLogicalAddress>
-      </urn1:RequestExemptionStatuses>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1:RequestExemptionStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="a5045a63-fd45-4769-9194-c698d8533a7a" name="Anrop mot takad LA"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RequestExemptionStatusesResponderBinding</con:interface><con:operation>RequestExemptionStatuses</con:operation><con:request name="Anrop mot takad LA" id="4b5940fc-7df5-4748-8a91-6499623e859b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}financial/patienfees/exemption/RequestExemptionStatuses/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">
-   <soapenv:Header>
-      <urn:LogicalAddress>${#TestSuite#LA_K4_niva-1}</urn:LogicalAddress>
-   </soapenv:Header>
-   <soapenv:Body>
-      <urn1:RequestExemptionStatuses>
-         <urn1:requestId>
-            <urn2:root>REQUEST_ID_ROOT</urn2:root>
-            <urn2:extension>${=java.util.UUID.randomUUID()}</urn2:extension>
-         </urn1:requestId>
-         <urn1:patientId>
-            <urn2:root>${patientIdType}</urn2:root>
-           <urn2:extension>${#TestSuite#patientId16}</urn2:extension>
-         </urn1:patientId>
-         <urn1:actor>
-            <urn2:actorTypeEnum>CITIZEN</urn2:actorTypeEnum>
-            <urn2:actorId>
-               <urn2:root>${patientIdType}</urn2:root>
-               <urn2:extension>${patientIdNoEngagements}</urn2:extension>
-            </urn2:actorId>
-         </urn1:actor>
-         <urn1:responseLogicalAddress>RESPONSE_LOGICAL_ADDRESS</urn1:responseLogicalAddress>
-      </urn1:RequestExemptionStatuses>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1:RequestExemptionStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="f11dca78-2ad8-4434-bf91-0cc57fa4a7a5" name="Anrop mot LA takad niva -2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RequestExemptionStatusesResponderBinding</con:interface><con:operation>RequestExemptionStatuses</con:operation><con:request name="Anrop mot LA takad niva -2" id="4b5940fc-7df5-4748-8a91-6499623e859b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}financial/patienfees/exemption/RequestExemptionStatuses/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">
+	testRunner.cancel( "Feature not implemented in "+ url + ", cancelling test step" )   */</script></con:config></con:testStep><con:testStep type="request" id="5ac73ceb-4878-4bd1-ab7e-c70084cb3d3d" name="Behorigt anrop mot takad LA"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RequestExemptionStatusesResponderBinding</con:interface><con:operation>RequestExemptionStatuses</con:operation><con:request name="Behorigt anrop mot takad LA" id="4b5940fc-7df5-4748-8a91-6499623e859b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}financial/patienfees/exemption/RequestExemptionStatuses/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">
    <soapenv:Header>
       <urn:LogicalAddress>${#TestSuite#LA_K3_niva0}</urn:LogicalAddress>
    </soapenv:Header>
@@ -14648,861 +14593,310 @@ if ((url.contains("qa")))
          <urn1:responseLogicalAddress>RESPONSE_LOGICAL_ADDRESS</urn1:responseLogicalAddress>
       </urn1:RequestExemptionStatuses>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1:RequestExemptionStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="d34cb949-338d-44ac-86b9-4c34dfe54be5" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TK - Ej tillatet pa: anropsbehorighet" searchProperties="true" disabled="true"><con:settings/><con:testStep type="request" id="319e2683-93a3-4d1e-8dda-c5736a04a782" name="ProcessExemptionStatuses"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ProcessExemptionStatusesResponderBinding</con:interface><con:operation>ProcessExemptionStatuses</con:operation><con:request name="ProcessExemptionStatuses" id="e9ad9af3-0b80-408c-af4b-03663910a1ed"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://tempuri.org</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:ProcessExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Fault Assertion" id="08ff9c99-f1cc-4825-8a6d-9eaa2dd8158a" name="Contains body"/><con:assertion type="Simple Contains" id="0bce9906-c5ef-45d1-8fa9-89164468cf67" name="Contains"><con:configuration><token>   &lt;soapenv:Body>
+      &lt;urn:RequestExemptionStatusesResponse/>
+   &lt;/soapenv:Body></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1:RequestExemptionStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="a5045a63-fd45-4769-9194-c698d8533a7a" name="Anrop till LA pa niva -1 under vagval"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RequestExemptionStatusesResponderBinding</con:interface><con:operation>RequestExemptionStatuses</con:operation><con:request name="Anrop till LA pa niva -1 under vagval" id="4b5940fc-7df5-4748-8a91-6499623e859b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}financial/patienfees/exemption/RequestExemptionStatuses/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">
    <soapenv:Header>
-      <urn:LogicalAddress>?</urn:LogicalAddress>
+      <urn:LogicalAddress>${#TestSuite#LA_K4_niva-1}</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:RequestExemptionStatuses>
+         <urn1:requestId>
+            <urn2:root>REQUEST_ID_ROOT</urn2:root>
+            <urn2:extension>${=java.util.UUID.randomUUID()}</urn2:extension>
+         </urn1:requestId>
+         <urn1:patientId>
+            <urn2:root>${patientIdType}</urn2:root>
+           <urn2:extension>${#TestSuite#patientId16}</urn2:extension>
+         </urn1:patientId>
+         <urn1:actor>
+            <urn2:actorTypeEnum>CITIZEN</urn2:actorTypeEnum>
+            <urn2:actorId>
+               <urn2:root>${patientIdType}</urn2:root>
+               <urn2:extension>${patientIdNoEngagements}</urn2:extension>
+            </urn2:actorId>
+         </urn1:actor>
+         <urn1:responseLogicalAddress>RESPONSE_LOGICAL_ADDRESS</urn1:responseLogicalAddress>
+      </urn1:RequestExemptionStatuses>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="Invalid HTTP Status Codes" id="95fcd8dd-5732-429f-aa07-2a0962306b35" name="NOT HTTP 200"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="f1144f17-4c98-4f0b-b208-a584b4b1ea63" name="Contains TSTNMT2321000156-10K4"><con:configuration><token>VP004</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="38340f6b-25d4-4011-8d73-9f662906e51c" name="Contains"><con:configuration><token>No receiverId (logical address) found for No receiverId (logical address) found for serviceNamespace: urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1, receiverId: TSTNMT2321000156-10K4</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1:RequestExemptionStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="1dd6e564-45c5-4848-827e-937df74959f0" name="Beh Anrop till LA pa niva -2 under takat vagval"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RequestExemptionStatusesResponderBinding</con:interface><con:operation>RequestExemptionStatuses</con:operation><con:request name="Beh Anrop till LA pa niva -2 under takat vagval" id="4b5940fc-7df5-4748-8a91-6499623e859b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}financial/patienfees/exemption/RequestExemptionStatuses/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>${#TestSuite#LA_K5_niva-2}</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:RequestExemptionStatuses>
+         <urn1:requestId>
+            <urn2:root>REQUEST_ID_ROOT</urn2:root>
+            <urn2:extension>${=java.util.UUID.randomUUID()}</urn2:extension>
+         </urn1:requestId>
+         <urn1:patientId>
+            <urn2:root>${patientIdType}</urn2:root>
+           <urn2:extension>${#TestSuite#patientId16}</urn2:extension>
+         </urn1:patientId>
+         <urn1:actor>
+            <urn2:actorTypeEnum>CITIZEN</urn2:actorTypeEnum>
+            <urn2:actorId>
+               <urn2:root>${patientIdType}</urn2:root>
+               <urn2:extension>${patientIdNoEngagements}</urn2:extension>
+            </urn2:actorId>
+         </urn1:actor>
+         <urn1:responseLogicalAddress>RESPONSE_LOGICAL_ADDRESS</urn1:responseLogicalAddress>
+      </urn1:RequestExemptionStatuses>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="c722f37a-a17c-4e73-9efa-a87133318a28" name="Contains"><con:configuration><token>VP004</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="8c135aa3-351f-429e-8383-1ec2c1c040a6" name="Contains TSTNMT2321000156-10K5"><con:configuration><token>TSTNMT2321000156-10K5</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:financial:patientfees:exemption:RequestExemptionStatusesResponder:1:RequestExemptionStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="d34cb949-338d-44ac-86b9-4c34dfe54be5" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TK - Ej tillatet pa: anropsbehorighet" searchProperties="true"><con:description>Syftet med testfallet är att verifiera att trädklättring
+sker på vägval ej på anropsbehörighet
+Vägval och och anropsbehörighet finns till LA "K3"
+anropsbehörighet finns till LA "K5"</con:description><con:settings/><con:testStep type="groovy" name="Do not run in these environments" id="64ae171b-d7ae-4d2a-a8f8-714397e0f21c"><con:description>Aborts testcase. Set environments not to run in</con:description><con:settings/><con:config><script>def url = testRunner.testCase.testSuite.getPropertyValue("ENV")
+
+//only run in dev
+if ((url.contains("qa") || url.contains("test")))
+testRunner.cancel( "Feature not implemented in "+ url + ", cancelling test step" )   
+
+/* only run in dev and test
+if ((url.contains("qa")))
+	testRunner.cancel( "Feature not implemented in "+ url + ", cancelling test step" )   */</script></con:config></con:testStep><con:testStep type="request" id="319e2683-93a3-4d1e-8dda-c5736a04a782" name="Behorigt anrop mot takad LA"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ProcessExemptionStatusesResponderBinding</con:interface><con:operation>ProcessExemptionStatuses</con:operation><con:request name="Behorigt anrop mot takad LA" id="e9ad9af3-0b80-408c-af4b-03663910a1ed"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}financial/patienfees/exemption/ProcessExemptionStatuses/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:ProcessExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>${#TestSuite#LA_K3_niva0}</urn:LogicalAddress>
    </soapenv:Header>
    <soapenv:Body>
       <urn1:ProcessExemptionStatuses>
          <urn1:requestId>
             <urn2:root>?</urn2:root>
-            <!--Optional:-->
             <urn2:extension>?</urn2:extension>
-            <!--You may enter ANY elements at this point-->
          </urn1:requestId>
-         <!--Zero or more repetitions:-->
-         <urn1:feeExemption>
-            <urn2:patientId>
-               <urn2:root>?</urn2:root>
-               <!--Optional:-->
-               <urn2:extension>?</urn2:extension>
-               <!--You may enter ANY elements at this point-->
-            </urn2:patientId>
-            <!--Zero or more repetitions:-->
-            <urn2:transactions>
-               <!--Optional:-->
-               <urn2:fee>
-                  <urn2:amount>?</urn2:amount>
-                  <urn2:currency>
-                     <!--Optional:-->
-                     <urn2:code>?</urn2:code>
-                     <!--Optional:-->
-                     <urn2:codeSystem>?</urn2:codeSystem>
-                     <!--Optional:-->
-                     <urn2:codeSystemName>?</urn2:codeSystemName>
-                     <!--Optional:-->
-                     <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                     <!--Optional:-->
-                     <urn2:displayName>?</urn2:displayName>
-                     <!--Optional:-->
-                     <urn2:originalText>?</urn2:originalText>
-                     <!--You may enter ANY elements at this point-->
-                  </urn2:currency>
-                  <!--You may enter ANY elements at this point-->
-               </urn2:fee>
-               <!--Optional:-->
-               <urn2:dateOfVisit>?</urn2:dateOfVisit>
-               <!--Optional:-->
-               <urn2:timeOfRegistration>?</urn2:timeOfRegistration>
-               <urn2:typeOfFee>?</urn2:typeOfFee>
-               <!--Optional:-->
-               <urn2:careGiver>
-                  <urn2:root>?</urn2:root>
-                  <!--Optional:-->
-                  <urn2:extension>?</urn2:extension>
-                  <!--You may enter ANY elements at this point-->
-               </urn2:careGiver>
-               <!--Optional:-->
-               <urn2:careUnit>
-                  <urn2:root>?</urn2:root>
-                  <!--Optional:-->
-                  <urn2:extension>?</urn2:extension>
-                  <!--You may enter ANY elements at this point-->
-               </urn2:careUnit>
-               <!--You may enter ANY elements at this point-->
-            </urn2:transactions>
-            <!--Zero or more repetitions:-->
-            <urn2:exemptions>
-               <urn2:id>?</urn2:id>
-               <urn2:highCostProtectionPeriod>
-                  <!--Optional:-->
-                  <urn2:start>?</urn2:start>
-                  <!--Optional:-->
-                  <urn2:end>?</urn2:end>
-                  <!--You may enter ANY elements at this point-->
-               </urn2:highCostProtectionPeriod>
-               <urn2:exemptionPeriod>
-                  <!--Optional:-->
-                  <urn2:start>?</urn2:start>
-                  <!--Optional:-->
-                  <urn2:end>?</urn2:end>
-                  <!--You may enter ANY elements at this point-->
-               </urn2:exemptionPeriod>
-               <urn2:typeOfExemption>?</urn2:typeOfExemption>
-               <urn2:region>
-                  <urn2:root>?</urn2:root>
-                  <!--Optional:-->
-                  <urn2:extension>?</urn2:extension>
-                  <!--You may enter ANY elements at this point-->
-               </urn2:region>
-               <!--You may enter ANY elements at this point-->
-            </urn2:exemptions>
-            <!--You may enter ANY elements at this point-->
-         </urn1:feeExemption>
-         <!--You may enter ANY elements at this point-->
       </urn1:ProcessExemptionStatuses>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:financial:patientfees:exemption:ProcessExemptionStatusesResponder:1:ProcessExemptionStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="36cdb837-5998-4fab-a6b3-e1e434c77abf" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TK - Ej tillatet pa: kontrakt" searchProperties="true" disabled="true"><con:settings/><con:testStep type="request" id="d5834427-114e-4e26-b69b-369361f40ebd" name="ProcessClaimSpecification"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ProcessClaimSpecificationResponderBinding</con:interface><con:operation>ProcessClaimSpecification</con:operation><con:request name="ProcessClaimSpecification" id="be2bce01-9236-4592-8a4c-d6d757b68054"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://tempuri.org</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:billing:claim:ProcessClaimSpecificationResponder:1" xmlns:urn2="urn:riv:financial:billing:claim:1">
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="fa60f08f-8237-4655-82ec-5195891f3192" name="&lt;urn:resultCode>OK&lt;/urn:resultCode>"><con:configuration><token>&lt;urn:resultCode>OK&lt;/urn:resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="SOAP Fault Assertion" id="c792f848-f40f-4f87-9ac5-c55cba3407b4" name="Not SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:financial:patientfees:exemption:ProcessExemptionStatusesResponder:1:ProcessExemptionStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="950dd2b7-8b76-4834-8d89-dd8dbb4a6add" name="Anrop till LA pa niva -1 under vagval"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ProcessExemptionStatusesResponderBinding</con:interface><con:operation>ProcessExemptionStatuses</con:operation><con:request name="Anrop till LA pa niva -1 under vagval" id="e9ad9af3-0b80-408c-af4b-03663910a1ed"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}financial/patienfees/exemption/ProcessExemptionStatuses/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:ProcessExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">
    <soapenv:Header>
-      <urn:LogicalAddress>?</urn:LogicalAddress>
+      <urn:LogicalAddress>${#TestSuite#LA_K4_niva-1}</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:ProcessExemptionStatuses>
+         <urn1:requestId>
+            <urn2:root>?</urn2:root>
+            <urn2:extension>?</urn2:extension>
+         </urn1:requestId>
+      </urn1:ProcessExemptionStatuses>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="b1080f78-e871-4b17-9d6d-bc43202f100a" name="VP007"><con:configuration><token>VP007</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d9577478-f78f-403b-adad-568e03123e87" name="TSTNMT2321000156-10K4"><con:configuration><token>TSTNMT2321000156-10K4</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="6d2441f1-e2bf-4eb7-9af9-3e456c0f24e4" name="SOAP Fault HTTP 500"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:financial:patientfees:exemption:ProcessExemptionStatusesResponder:1:ProcessExemptionStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="3f876a0f-0a63-4cdb-98e9-c576f554855d" name="Beh Anrop till LA pa niva -2 under takat vagval"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ProcessExemptionStatusesResponderBinding</con:interface><con:operation>ProcessExemptionStatuses</con:operation><con:request name="Beh Anrop till LA pa niva -2 under takat vagval" id="e9ad9af3-0b80-408c-af4b-03663910a1ed"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}financial/patienfees/exemption/ProcessExemptionStatuses/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:patientfees:exemption:ProcessExemptionStatusesResponder:1" xmlns:urn2="urn:riv:financial:patientfees:exemption:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>${#TestSuite#LA_K5_niva-2}</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:ProcessExemptionStatuses>
+         <urn1:requestId>
+            <urn2:root>?</urn2:root>
+            <urn2:extension>?</urn2:extension>
+         </urn1:requestId>
+      </urn1:ProcessExemptionStatuses>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="198634cc-d052-4736-94d8-6f1559e4fcbf" name="&lt;urn:resultCode>OK&lt;/urn:resultCode>"><con:configuration><token>&lt;urn:resultCode>OK&lt;/urn:resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="SOAP Fault Assertion" id="970e541a-c450-45e3-b951-4a4982a65fa8" name="Not SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:financial:patientfees:exemption:ProcessExemptionStatusesResponder:1:ProcessExemptionStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="36cdb837-5998-4fab-a6b3-e1e434c77abf" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TK - Ej tillatet pa: kontrakt" searchProperties="true"><con:description>Syftet med testfallet är att verifiera att trädklättring
+varken sker på vägval eller anropsbehörighet
+Vägval och och anropsbehörighet finns till LA "K3" 
+anropsbehörighet finns till LA "K5" </con:description><con:settings/><con:testStep type="groovy" name="Do not run in these environments" id="1021fe88-d1a1-45d5-b909-b5b4d6915044"><con:description>Aborts testcase. Set environments not to run in</con:description><con:settings/><con:config><script>def url = testRunner.testCase.testSuite.getPropertyValue("ENV")
+
+//only run in dev
+if ((url.contains("qa") || url.contains("test")))
+testRunner.cancel( "Feature not implemented in "+ url + ", cancelling test step" )   
+
+/* only run in dev and test
+if ((url.contains("qa")))
+	testRunner.cancel( "Feature not implemented in "+ url + ", cancelling test step" )   */</script></con:config></con:testStep><con:testStep type="request" id="d5834427-114e-4e26-b69b-369361f40ebd" name="Direktanrop mot takad LA"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ProcessClaimSpecificationResponderBinding</con:interface><con:operation>ProcessClaimSpecification</con:operation><con:request name="Direktanrop mot takad LA" id="be2bce01-9236-4592-8a4c-d6d757b68054"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}financial/patienfees/exemption/ProcessClaimSpecification/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:billing:claim:ProcessClaimSpecificationResponder:1" xmlns:urn2="urn:riv:financial:billing:claim:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>${#TestSuite#LA_K3_niva0}</urn:LogicalAddress>
    </soapenv:Header>
    <soapenv:Body>
       <urn1:ProcessClaimSpecification>
          <urn1:claimSpecification>
             <urn2:id>?</urn2:id>
             <urn2:issueDate>?</urn2:issueDate>
-            <!--Optional:-->
-            <urn2:issueTime>?</urn2:issueTime>
-            <urn2:typeOfInvoice>?</urn2:typeOfInvoice>
-            <!--Optional:-->
-            <urn2:invoiceId>?</urn2:invoiceId>
-            <!--Optional:-->
-            <urn2:invoiceDateOfIssue>?</urn2:invoiceDateOfIssue>
-            <!--Optional:-->
-            <urn2:referenceToInvoice>?</urn2:referenceToInvoice>
-            <!--Optional:-->
-            <urn2:referenceToProcessClaimSpecificationId>?</urn2:referenceToProcessClaimSpecificationId>
             <urn2:payableAmount>
                <urn2:amount>?</urn2:amount>
                <urn2:currency>
-                  <!--Optional:-->
                   <urn2:code>?</urn2:code>
-                  <!--Optional:-->
-                  <urn2:codeSystem>?</urn2:codeSystem>
-                  <!--Optional:-->
-                  <urn2:codeSystemName>?</urn2:codeSystemName>
-                  <!--Optional:-->
-                  <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                  <!--Optional:-->
-                  <urn2:displayName>?</urn2:displayName>
-                  <!--Optional:-->
-                  <urn2:originalText>?</urn2:originalText>
-                  <!--You may enter ANY elements at this point-->
                </urn2:currency>
-               <!--You may enter ANY elements at this point-->
             </urn2:payableAmount>
-            <!--Zero or more repetitions:-->
             <urn2:unspecified>
                <urn2:text>?</urn2:text>
-               <!--Optional:-->
-               <urn2:type>?</urn2:type>
-               <!--You may enter ANY elements at this point-->
             </urn2:unspecified>
             <urn2:supplierParty>
-               <!--1 to 2 repetitions:-->
                <urn2:identification>
                   <urn2:root>?</urn2:root>
                   <urn2:extension>?</urn2:extension>
-                  <!--You may enter ANY elements at this point-->
                </urn2:identification>
-               <!--Optional:-->
-               <urn2:sellerContact>
-                  <!--Optional:-->
-                  <urn2:name>?</urn2:name>
-                  <!--Optional:-->
-                  <urn2:telephone>?</urn2:telephone>
-                  <!--Optional:-->
-                  <urn2:electronicMail>?</urn2:electronicMail>
-                  <!--You may enter ANY elements at this point-->
-               </urn2:sellerContact>
-               <!--You may enter ANY elements at this point-->
             </urn2:supplierParty>
             <urn2:customerParty>
-               <!--1 to 2 repetitions:-->
                <urn2:identification>
                   <urn2:root>?</urn2:root>
                   <urn2:extension>?</urn2:extension>
-                  <!--You may enter ANY elements at this point-->
                </urn2:identification>
-               <!--Optional:-->
-               <urn2:buyerContact>
-                  <!--Optional:-->
-                  <urn2:name>?</urn2:name>
-                  <!--Optional:-->
-                  <urn2:telephone>?</urn2:telephone>
-                  <!--Optional:-->
-                  <urn2:electronicMail>?</urn2:electronicMail>
-                  <!--You may enter ANY elements at this point-->
-               </urn2:buyerContact>
-               <!--You may enter ANY elements at this point-->
-            </urn2:customerParty>
-            <!--Zero or more repetitions:-->
+             </urn2:customerParty>
             <urn2:healthCareServicesSpecificationLine>
                <urn2:patientInformation>
                   <urn2:patientIdentity>
                      <urn2:root>?</urn2:root>
                      <urn2:extension>?</urn2:extension>
-                     <!--You may enter ANY elements at this point-->
                   </urn2:patientIdentity>
                   <urn2:patientOtherInformation>
-                     <urn2:county>
-                        <!--Optional:-->
-                        <urn2:code>?</urn2:code>
-                        <!--Optional:-->
-                        <urn2:codeSystem>?</urn2:codeSystem>
-                        <!--Optional:-->
-                        <urn2:codeSystemName>?</urn2:codeSystemName>
-                        <!--Optional:-->
-                        <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                        <!--Optional:-->
-                        <urn2:displayName>?</urn2:displayName>
-                        <!--Optional:-->
-                        <urn2:originalText>?</urn2:originalText>
-                        <!--You may enter ANY elements at this point-->
+                     <urn2:county>                 
                      </urn2:county>
-                     <urn2:municipality>
-                        <!--Optional:-->
-                        <urn2:code>?</urn2:code>
-                        <!--Optional:-->
-                        <urn2:codeSystem>?</urn2:codeSystem>
-                        <!--Optional:-->
-                        <urn2:codeSystemName>?</urn2:codeSystemName>
-                        <!--Optional:-->
-                        <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                        <!--Optional:-->
-                        <urn2:displayName>?</urn2:displayName>
-                        <!--Optional:-->
-                        <urn2:originalText>?</urn2:originalText>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:municipality>
-                     <!--Optional:-->
-                     <urn2:listingLocalAuthoritiesNumber>
-                        <urn2:root>?</urn2:root>
-                        <urn2:extension>?</urn2:extension>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:listingLocalAuthoritiesNumber>
-                     <!--Optional:-->
-                     <urn2:LMACardNumber>?</urn2:LMACardNumber>
-                     <!--Optional:-->
-                     <urn2:gender>
-                        <!--Optional:-->
-                        <urn2:code>?</urn2:code>
-                        <!--Optional:-->
-                        <urn2:codeSystem>?</urn2:codeSystem>
-                        <!--Optional:-->
-                        <urn2:codeSystemName>?</urn2:codeSystemName>
-                        <!--Optional:-->
-                        <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                        <!--Optional:-->
-                        <urn2:displayName>?</urn2:displayName>
-                        <!--Optional:-->
-                        <urn2:originalText>?</urn2:originalText>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:gender>
-                     <!--Optional:-->
-                     <urn2:EUCardNumber>?</urn2:EUCardNumber>
-                     <!--Zero or more repetitions:-->
+                     <urn2:municipality>                     
+                     </urn2:municipality>                     
                      <urn2:unspecified>
                         <urn2:text>?</urn2:text>
-                        <!--Optional:-->
-                        <urn2:type>?</urn2:type>
-                        <!--You may enter ANY elements at this point-->
                      </urn2:unspecified>
-                     <!--You may enter ANY elements at this point-->
                   </urn2:patientOtherInformation>
-                  <!--You may enter ANY elements at this point-->
                </urn2:patientInformation>
-               <!--1 or more repetitions:-->
                <urn2:healthcarePerformed>
                   <urn2:lineId>?</urn2:lineId>
-                  <!--Optional:-->
-                  <urn2:careContactId>?</urn2:careContactId>
-                  <!--Optional:-->
-                  <urn2:referenceToLineId>?</urn2:referenceToLineId>
-                  <!--Optional:-->
-                  <urn2:reasonForCredit>?</urn2:reasonForCredit>
-                  <!--Zero or more repetitions:-->
                   <urn2:unspecified>
                      <urn2:text>?</urn2:text>
-                     <!--Optional:-->
-                     <urn2:type>?</urn2:type>
-                     <!--You may enter ANY elements at this point-->
                   </urn2:unspecified>
-                  <!--Optional:-->
-                  <urn2:paymentCommitment>
-                     <!--Optional:-->
-                     <urn2:remittanceNumber>?</urn2:remittanceNumber>
-                     <!--Optional:-->
-                     <urn2:paymentCommitmentNumber>?</urn2:paymentCommitmentNumber>
-                     <!--Optional:-->
-                     <urn2:typeOfAgreement>?</urn2:typeOfAgreement>
-                     <!--Optional:-->
-                     <urn2:typeOfChapter>?</urn2:typeOfChapter>
-                     <!--Optional:-->
-                     <urn2:agreementInRiksavtalet>?</urn2:agreementInRiksavtalet>
-                     <!--Optional:-->
-                     <urn2:typeOfReimbursement>?</urn2:typeOfReimbursement>
-                     <!--Optional:-->
-                     <urn2:unspecified>
-                        <urn2:text>?</urn2:text>
-                        <!--Optional:-->
-                        <urn2:type>?</urn2:type>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:unspecified>
-                     <!--You may enter ANY elements at this point-->
-                  </urn2:paymentCommitment>
-                  <urn2:healthcareCategory>
-                     <urn2:typeOfCare>
-                        <!--Optional:-->
-                        <urn2:code>?</urn2:code>
-                        <!--Optional:-->
-                        <urn2:codeSystem>?</urn2:codeSystem>
-                        <!--Optional:-->
-                        <urn2:codeSystemName>?</urn2:codeSystemName>
-                        <!--Optional:-->
-                        <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                        <!--Optional:-->
-                        <urn2:displayName>?</urn2:displayName>
-                        <!--Optional:-->
-                        <urn2:originalText>?</urn2:originalText>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:typeOfCare>
-                     <!--Optional:-->
-                     <urn2:publicCare>?</urn2:publicCare>
-                     <urn2:plannedHealthcare>?</urn2:plannedHealthcare>
-                     <!--Optional:-->
-                     <urn2:typeOfVisit>?</urn2:typeOfVisit>
-                     <!--Zero or more repetitions:-->
-                     <urn2:unspecified>
-                        <urn2:text>?</urn2:text>
-                        <!--Optional:-->
-                        <urn2:type>?</urn2:type>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:unspecified>
-                     <!--You may enter ANY elements at this point-->
-                  </urn2:healthcareCategory>
-                  <urn2:timespan>
-                     <urn2:healthcareVisitDateTime>
-                        <urn2:careVisitDate>?</urn2:careVisitDate>
-                        <!--Optional:-->
-                        <urn2:careVisitTime>?</urn2:careVisitTime>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:healthcareVisitDateTime>
-                     <!--Optional:-->
-                     <urn2:healthcareDischargeDateTime>
-                        <urn2:careDischargeDate>?</urn2:careDischargeDate>
-                        <!--Optional:-->
-                        <urn2:careDischargeTime>?</urn2:careDischargeTime>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:healthcareDischargeDateTime>
-                     <!--Optional:-->
-                     <urn2:invoicePeriod>
-                        <!--Optional:-->
-                        <urn2:start>?</urn2:start>
-                        <!--Optional:-->
-                        <urn2:end>?</urn2:end>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:invoicePeriod>
-                     <!--Optional:-->
-                     <urn2:numberOfDays>
-                        <!--Optional:-->
-                        <urn2:onLeave>?</urn2:onLeave>
-                        <!--Optional:-->
-                        <urn2:inCare>?</urn2:inCare>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:numberOfDays>
-                     <!--You may enter ANY elements at this point-->
-                  </urn2:timespan>
-                  <urn2:healthcareUnit>
-                     <!--Optional:-->
-                     <urn2:careUnitId>
-                        <urn2:root>?</urn2:root>
-                        <urn2:extension>?</urn2:extension>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:careUnitId>
-                     <urn2:careUnitName>?</urn2:careUnitName>
-                     <!--Optional:-->
-                     <urn2:professionCodeForHealthcare>?</urn2:professionCodeForHealthcare>
-                     <!--Zero or more repetitions:-->
-                     <urn2:unspecified>
-                        <urn2:text>?</urn2:text>
-                        <!--Optional:-->
-                        <urn2:type>?</urn2:type>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:unspecified>
-                     <!--You may enter ANY elements at this point-->
-                  </urn2:healthcareUnit>
-                  <!--Optional:-->
-                  <urn2:categorization>
-                     <!--Optional:-->
-                     <urn2:productCategory>?</urn2:productCategory>
-                     <!--Optional:-->
-                     <urn2:priceList>?</urn2:priceList>
-                     <!--Optional:-->
-                     <urn2:DRGCost>
-                        <!--Optional:-->
-                        <urn2:DRGCode>
-                           <!--Optional:-->
-                           <urn2:code>?</urn2:code>
-                           <!--Optional:-->
-                           <urn2:codeSystem>?</urn2:codeSystem>
-                           <!--Optional:-->
-                           <urn2:codeSystemName>?</urn2:codeSystemName>
-                           <!--Optional:-->
-                           <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                           <!--Optional:-->
-                           <urn2:displayName>?</urn2:displayName>
-                           <!--Optional:-->
-                           <urn2:originalText>?</urn2:originalText>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:DRGCode>
-                        <!--Optional:-->
-                        <urn2:DRGPrice>
-                           <urn2:amount>?</urn2:amount>
-                           <urn2:currency>
-                              <!--Optional:-->
-                              <urn2:code>?</urn2:code>
-                              <!--Optional:-->
-                              <urn2:codeSystem>?</urn2:codeSystem>
-                              <!--Optional:-->
-                              <urn2:codeSystemName>?</urn2:codeSystemName>
-                              <!--Optional:-->
-                              <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                              <!--Optional:-->
-                              <urn2:displayName>?</urn2:displayName>
-                              <!--Optional:-->
-                              <urn2:originalText>?</urn2:originalText>
-                              <!--You may enter ANY elements at this point-->
-                           </urn2:currency>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:DRGPrice>
-                        <!--Optional:-->
-                        <urn2:extendedAllowanceCareTime>
-                           <urn2:amount>?</urn2:amount>
-                           <urn2:currency>
-                              <!--Optional:-->
-                              <urn2:code>?</urn2:code>
-                              <!--Optional:-->
-                              <urn2:codeSystem>?</urn2:codeSystem>
-                              <!--Optional:-->
-                              <urn2:codeSystemName>?</urn2:codeSystemName>
-                              <!--Optional:-->
-                              <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                              <!--Optional:-->
-                              <urn2:displayName>?</urn2:displayName>
-                              <!--Optional:-->
-                              <urn2:originalText>?</urn2:originalText>
-                              <!--You may enter ANY elements at this point-->
-                           </urn2:currency>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:extendedAllowanceCareTime>
-                        <!--Optional:-->
-                        <urn2:extendedAllowanceCost>
-                           <urn2:amount>?</urn2:amount>
-                           <urn2:currency>
-                              <!--Optional:-->
-                              <urn2:code>?</urn2:code>
-                              <!--Optional:-->
-                              <urn2:codeSystem>?</urn2:codeSystem>
-                              <!--Optional:-->
-                              <urn2:codeSystemName>?</urn2:codeSystemName>
-                              <!--Optional:-->
-                              <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                              <!--Optional:-->
-                              <urn2:displayName>?</urn2:displayName>
-                              <!--Optional:-->
-                              <urn2:originalText>?</urn2:originalText>
-                              <!--You may enter ANY elements at this point-->
-                           </urn2:currency>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:extendedAllowanceCost>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:DRGCost>
-                     <!--Zero or more repetitions:-->
-                     <urn2:patientSpecificCare>
-                        <!--Optional:-->
-                        <urn2:patientSpecificCareCode>?</urn2:patientSpecificCareCode>
-                        <!--Optional:-->
-                        <urn2:patientSpecificCareCodeName>?</urn2:patientSpecificCareCodeName>
-                        <!--Optional:-->
-                        <urn2:numberOfPatientSpecificCare>?</urn2:numberOfPatientSpecificCare>
-                        <!--Optional:-->
-                        <urn2:patientSpecificCarePrice>
-                           <urn2:amount>?</urn2:amount>
-                           <urn2:currency>
-                              <!--Optional:-->
-                              <urn2:code>?</urn2:code>
-                              <!--Optional:-->
-                              <urn2:codeSystem>?</urn2:codeSystem>
-                              <!--Optional:-->
-                              <urn2:codeSystemName>?</urn2:codeSystemName>
-                              <!--Optional:-->
-                              <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                              <!--Optional:-->
-                              <urn2:displayName>?</urn2:displayName>
-                              <!--Optional:-->
-                              <urn2:originalText>?</urn2:originalText>
-                              <!--You may enter ANY elements at this point-->
-                           </urn2:currency>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:patientSpecificCarePrice>
-                        <!--Optional:-->
-                        <urn2:patientSpecificCareTotalAmount>
-                           <urn2:amount>?</urn2:amount>
-                           <urn2:currency>
-                              <!--Optional:-->
-                              <urn2:code>?</urn2:code>
-                              <!--Optional:-->
-                              <urn2:codeSystem>?</urn2:codeSystem>
-                              <!--Optional:-->
-                              <urn2:codeSystemName>?</urn2:codeSystemName>
-                              <!--Optional:-->
-                              <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                              <!--Optional:-->
-                              <urn2:displayName>?</urn2:displayName>
-                              <!--Optional:-->
-                              <urn2:originalText>?</urn2:originalText>
-                              <!--You may enter ANY elements at this point-->
-                           </urn2:currency>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:patientSpecificCareTotalAmount>
-                        <!--Zero or more repetitions:-->
-                        <urn2:unspecified>
-                           <urn2:text>?</urn2:text>
-                           <!--Optional:-->
-                           <urn2:type>?</urn2:type>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:unspecified>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:patientSpecificCare>
-                     <!--You may enter ANY elements at this point-->
-                  </urn2:categorization>
-                  <urn2:invoicedAmountDetails>
-                     <urn2:patientCareInvoiceGrossAmount>
-                        <urn2:amount>?</urn2:amount>
-                        <urn2:currency>
-                           <!--Optional:-->
-                           <urn2:code>?</urn2:code>
-                           <!--Optional:-->
-                           <urn2:codeSystem>?</urn2:codeSystem>
-                           <!--Optional:-->
-                           <urn2:codeSystemName>?</urn2:codeSystemName>
-                           <!--Optional:-->
-                           <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                           <!--Optional:-->
-                           <urn2:displayName>?</urn2:displayName>
-                           <!--Optional:-->
-                           <urn2:originalText>?</urn2:originalText>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:currency>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:patientCareInvoiceGrossAmount>
-                     <urn2:patientCareInvoiceNetAmount>
-                        <urn2:amount>?</urn2:amount>
-                        <urn2:currency>
-                           <!--Optional:-->
-                           <urn2:code>?</urn2:code>
-                           <!--Optional:-->
-                           <urn2:codeSystem>?</urn2:codeSystem>
-                           <!--Optional:-->
-                           <urn2:codeSystemName>?</urn2:codeSystemName>
-                           <!--Optional:-->
-                           <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                           <!--Optional:-->
-                           <urn2:displayName>?</urn2:displayName>
-                           <!--Optional:-->
-                           <urn2:originalText>?</urn2:originalText>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:currency>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:patientCareInvoiceNetAmount>
-                     <!--Optional:-->
-                     <urn2:patientCareAllowance>
-                        <urn2:amount>?</urn2:amount>
-                        <urn2:currency>
-                           <!--Optional:-->
-                           <urn2:code>?</urn2:code>
-                           <!--Optional:-->
-                           <urn2:codeSystem>?</urn2:codeSystem>
-                           <!--Optional:-->
-                           <urn2:codeSystemName>?</urn2:codeSystemName>
-                           <!--Optional:-->
-                           <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                           <!--Optional:-->
-                           <urn2:displayName>?</urn2:displayName>
-                           <!--Optional:-->
-                           <urn2:originalText>?</urn2:originalText>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:currency>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:patientCareAllowance>
-                     <!--Optional:-->
-                     <urn2:patientCareDiscount>
-                        <urn2:amount>?</urn2:amount>
-                        <urn2:currency>
-                           <!--Optional:-->
-                           <urn2:code>?</urn2:code>
-                           <!--Optional:-->
-                           <urn2:codeSystem>?</urn2:codeSystem>
-                           <!--Optional:-->
-                           <urn2:codeSystemName>?</urn2:codeSystemName>
-                           <!--Optional:-->
-                           <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                           <!--Optional:-->
-                           <urn2:displayName>?</urn2:displayName>
-                           <!--Optional:-->
-                           <urn2:originalText>?</urn2:originalText>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:currency>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:patientCareDiscount>
-                     <!--Optional:-->
-                     <urn2:patientCareCharge>
-                        <urn2:amount>?</urn2:amount>
-                        <urn2:currency>
-                           <!--Optional:-->
-                           <urn2:code>?</urn2:code>
-                           <!--Optional:-->
-                           <urn2:codeSystem>?</urn2:codeSystem>
-                           <!--Optional:-->
-                           <urn2:codeSystemName>?</urn2:codeSystemName>
-                           <!--Optional:-->
-                           <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                           <!--Optional:-->
-                           <urn2:displayName>?</urn2:displayName>
-                           <!--Optional:-->
-                           <urn2:originalText>?</urn2:originalText>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:currency>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:patientCareCharge>
-                     <!--Optional:-->
-                     <urn2:outPatientCareFee>
-                        <urn2:amount>?</urn2:amount>
-                        <urn2:currency>
-                           <!--Optional:-->
-                           <urn2:code>?</urn2:code>
-                           <!--Optional:-->
-                           <urn2:codeSystem>?</urn2:codeSystem>
-                           <!--Optional:-->
-                           <urn2:codeSystemName>?</urn2:codeSystemName>
-                           <!--Optional:-->
-                           <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                           <!--Optional:-->
-                           <urn2:displayName>?</urn2:displayName>
-                           <!--Optional:-->
-                           <urn2:originalText>?</urn2:originalText>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:currency>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:outPatientCareFee>
-                     <!--Optional:-->
-                     <urn2:outPatientCareFeePaid>
-                        <urn2:amount>?</urn2:amount>
-                        <urn2:currency>
-                           <!--Optional:-->
-                           <urn2:code>?</urn2:code>
-                           <!--Optional:-->
-                           <urn2:codeSystem>?</urn2:codeSystem>
-                           <!--Optional:-->
-                           <urn2:codeSystemName>?</urn2:codeSystemName>
-                           <!--Optional:-->
-                           <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                           <!--Optional:-->
-                           <urn2:displayName>?</urn2:displayName>
-                           <!--Optional:-->
-                           <urn2:originalText>?</urn2:originalText>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:currency>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:outPatientCareFeePaid>
-                     <!--Optional:-->
-                     <urn2:patientFeeReducedCategory>?</urn2:patientFeeReducedCategory>
-                     <!--Optional:-->
-                     <urn2:patientFreePassCauseIndicator>?</urn2:patientFreePassCauseIndicator>
-                     <!--Optional:-->
-                     <urn2:inpatientCareFee>
-                        <urn2:amount>?</urn2:amount>
-                        <urn2:currency>
-                           <!--Optional:-->
-                           <urn2:code>?</urn2:code>
-                           <!--Optional:-->
-                           <urn2:codeSystem>?</urn2:codeSystem>
-                           <!--Optional:-->
-                           <urn2:codeSystemName>?</urn2:codeSystemName>
-                           <!--Optional:-->
-                           <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                           <!--Optional:-->
-                           <urn2:displayName>?</urn2:displayName>
-                           <!--Optional:-->
-                           <urn2:originalText>?</urn2:originalText>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:currency>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:inpatientCareFee>
-                     <!--Zero or more repetitions:-->
-                     <urn2:unspecified>
-                        <urn2:text>?</urn2:text>
-                        <!--Optional:-->
-                        <urn2:type>?</urn2:type>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:unspecified>
-                     <!--You may enter ANY elements at this point-->
-                  </urn2:invoicedAmountDetails>
-                  <urn2:activity>
-                     <urn2:medicalFieldCode>?</urn2:medicalFieldCode>
-                     <!--Optional:-->
-                     <urn2:businessClassification>
-                        <!--Optional:-->
-                        <urn2:code>?</urn2:code>
-                        <!--Optional:-->
-                        <urn2:codeSystem>?</urn2:codeSystem>
-                        <!--Optional:-->
-                        <urn2:codeSystemName>?</urn2:codeSystemName>
-                        <!--Optional:-->
-                        <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                        <!--Optional:-->
-                        <urn2:displayName>?</urn2:displayName>
-                        <!--Optional:-->
-                        <urn2:originalText>?</urn2:originalText>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:businessClassification>
-                     <!--Optional:-->
-                     <urn2:careLevel>?</urn2:careLevel>
-                     <!--Zero or more repetitions:-->
-                     <urn2:unspecified>
-                        <urn2:text>?</urn2:text>
-                        <!--Optional:-->
-                        <urn2:type>?</urn2:type>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:unspecified>
-                     <!--You may enter ANY elements at this point-->
-                  </urn2:activity>
-                  <!--Optional:-->
-                  <urn2:diagnosis>
-                     <!--Optional:-->
-                     <urn2:inpatientCareDiagnosis>
-                        <urn2:mainDiagnosis>
-                           <urn2:diagnosisCode>
-                              <!--Optional:-->
-                              <urn2:code>?</urn2:code>
-                              <!--Optional:-->
-                              <urn2:codeSystem>?</urn2:codeSystem>
-                              <!--Optional:-->
-                              <urn2:codeSystemName>?</urn2:codeSystemName>
-                              <!--Optional:-->
-                              <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                              <!--Optional:-->
-                              <urn2:displayName>?</urn2:displayName>
-                              <!--Optional:-->
-                              <urn2:originalText>?</urn2:originalText>
-                              <!--You may enter ANY elements at this point-->
-                           </urn2:diagnosisCode>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:mainDiagnosis>
-                        <!--Zero or more repetitions:-->
-                        <urn2:biDiagnosis>
-                           <urn2:diagnosisCode>
-                              <!--Optional:-->
-                              <urn2:code>?</urn2:code>
-                              <!--Optional:-->
-                              <urn2:codeSystem>?</urn2:codeSystem>
-                              <!--Optional:-->
-                              <urn2:codeSystemName>?</urn2:codeSystemName>
-                              <!--Optional:-->
-                              <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                              <!--Optional:-->
-                              <urn2:displayName>?</urn2:displayName>
-                              <!--Optional:-->
-                              <urn2:originalText>?</urn2:originalText>
-                              <!--You may enter ANY elements at this point-->
-                           </urn2:diagnosisCode>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:biDiagnosis>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:inpatientCareDiagnosis>
-                     <!--Optional:-->
-                     <urn2:outpatientCareDiagnosis>
-                        <urn2:mainDiagnosis>
-                           <urn2:diagnosisCode>
-                              <!--Optional:-->
-                              <urn2:code>?</urn2:code>
-                              <!--Optional:-->
-                              <urn2:codeSystem>?</urn2:codeSystem>
-                              <!--Optional:-->
-                              <urn2:codeSystemName>?</urn2:codeSystemName>
-                              <!--Optional:-->
-                              <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                              <!--Optional:-->
-                              <urn2:displayName>?</urn2:displayName>
-                              <!--Optional:-->
-                              <urn2:originalText>?</urn2:originalText>
-                              <!--You may enter ANY elements at this point-->
-                           </urn2:diagnosisCode>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:mainDiagnosis>
-                        <!--Zero or more repetitions:-->
-                        <urn2:biDiagnosis>
-                           <urn2:diagnosisCode>
-                              <!--Optional:-->
-                              <urn2:code>?</urn2:code>
-                              <!--Optional:-->
-                              <urn2:codeSystem>?</urn2:codeSystem>
-                              <!--Optional:-->
-                              <urn2:codeSystemName>?</urn2:codeSystemName>
-                              <!--Optional:-->
-                              <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                              <!--Optional:-->
-                              <urn2:displayName>?</urn2:displayName>
-                              <!--Optional:-->
-                              <urn2:originalText>?</urn2:originalText>
-                              <!--You may enter ANY elements at this point-->
-                           </urn2:diagnosisCode>
-                           <!--You may enter ANY elements at this point-->
-                        </urn2:biDiagnosis>
-                        <!--You may enter ANY elements at this point-->
-                     </urn2:outpatientCareDiagnosis>
-                     <!--You may enter ANY elements at this point-->
-                  </urn2:diagnosis>
-                  <!--Optional:-->
-                  <urn2:treatment>
-                     <!--Zero or more repetitions:-->
+                   <urn2:treatment>
                      <urn2:typeOfTreatment>
-                        <!--Optional:-->
-                        <urn2:code>?</urn2:code>
-                        <!--Optional:-->
-                        <urn2:codeSystem>?</urn2:codeSystem>
-                        <!--Optional:-->
-                        <urn2:codeSystemName>?</urn2:codeSystemName>
-                        <!--Optional:-->
-                        <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                        <!--Optional:-->
-                        <urn2:displayName>?</urn2:displayName>
-                        <!--Optional:-->
-                        <urn2:originalText>?</urn2:originalText>
-                        <!--You may enter ANY elements at this point-->
                      </urn2:typeOfTreatment>
-                     <!--Zero or more repetitions:-->
                      <urn2:ATC>
-                        <!--Optional:-->
-                        <urn2:code>?</urn2:code>
-                        <!--Optional:-->
-                        <urn2:codeSystem>?</urn2:codeSystem>
-                        <!--Optional:-->
-                        <urn2:codeSystemName>?</urn2:codeSystemName>
-                        <!--Optional:-->
-                        <urn2:codeSystemVersion>?</urn2:codeSystemVersion>
-                        <!--Optional:-->
-                        <urn2:displayName>?</urn2:displayName>
-                        <!--Optional:-->
-                        <urn2:originalText>?</urn2:originalText>
-                        <!--You may enter ANY elements at this point-->
                      </urn2:ATC>
-                     <!--Zero or more repetitions:-->
                      <urn2:unspecified>
                         <urn2:text>?</urn2:text>
-                        <!--Optional:-->
-                        <urn2:type>?</urn2:type>
-                        <!--You may enter ANY elements at this point-->
                      </urn2:unspecified>
                   </urn2:treatment>
                </urn2:healthcarePerformed>
             </urn2:healthCareServicesSpecificationLine>
-
          </urn1:claimSpecification>
       </urn1:ProcessClaimSpecification>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:financial:billing:claim:ProcessClaimSpecificationResponder:1:ProcessClaimSpecification" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>ENV</con:name><con:value>https://dev.esb.ntjp.se/vp/</con:value></con:property><con:property><con:name>LA_K3_niva0</con:name><con:value>TSTNMT2321000156-10K3</con:value></con:property><con:property><con:name>LA_K4_niva-1</con:name><con:value>TSTNMT2321000156-10K4</con:value></con:property><con:property><con:name>LA_K5_niva-2</con:name><con:value>TSTNMT2321000156-10K5</con:value></con:property><con:property><con:name>LA_K6_niva-2</con:name><con:value>TSTNMT2321000156-10K6</con:value></con:property><con:property><con:name>NTJ_REG_MOCK</con:name><con:value>TSTNMT2321000156-B2X</con:value></con:property><con:property><con:name>patientId16</con:name><con:value>191003249800</con:value></con:property><con:property><con:name>patientIdType</con:name><con:value>1.2.752.129.2.1.3.1</con:value></con:property></con:properties></con:testSuite><con:testSuite id="490a1f90-8987-440b-9a41-59576c259169" name="Standardbehörigheter och standardvägval"><con:description/><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="2dbfbb20-3d6e-4212-90d6-f00e45e10b97" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.1 Direktadresserad GRO, finns endast SB och SV" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="51296d6e-7749-495f-9970-34dcbe5a1b69"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="03e52f2c-11f9-41b7-8911-b24aaf6ff544" name="Contains OK"><con:configuration><token>&lt;resultCode xsi:type="ResultCodeEnum">OK&lt;/resultCode></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="SOAP Fault Assertion" id="f2024eb6-ee5e-4e3d-bffa-44ea5cfb5d4f" name="Not SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:financial:billing:claim:ProcessClaimSpecificationResponder:1:ProcessClaimSpecification" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="7f348813-6886-4b69-ad2d-0b922e3ea14e" name="Anrop till LA pa niva -1 under vagval"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ProcessClaimSpecificationResponderBinding</con:interface><con:operation>ProcessClaimSpecification</con:operation><con:request name="Anrop till LA pa niva -1 under vagval" id="be2bce01-9236-4592-8a4c-d6d757b68054"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}financial/patienfees/exemption/ProcessClaimSpecification/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:billing:claim:ProcessClaimSpecificationResponder:1" xmlns:urn2="urn:riv:financial:billing:claim:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>${#TestSuite#LA_K4_niva-1}</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:ProcessClaimSpecification>
+         <urn1:claimSpecification>
+            <urn2:id>?</urn2:id>
+            <urn2:issueDate>?</urn2:issueDate>
+            <urn2:payableAmount>
+               <urn2:amount>?</urn2:amount>
+               <urn2:currency>
+                  <urn2:code>?</urn2:code>
+               </urn2:currency>
+            </urn2:payableAmount>
+            <urn2:unspecified>
+               <urn2:text>?</urn2:text>
+            </urn2:unspecified>
+            <urn2:supplierParty>
+               <urn2:identification>
+                  <urn2:root>?</urn2:root>
+                  <urn2:extension>?</urn2:extension>
+               </urn2:identification>
+            </urn2:supplierParty>
+            <urn2:customerParty>
+               <urn2:identification>
+                  <urn2:root>?</urn2:root>
+                  <urn2:extension>?</urn2:extension>
+               </urn2:identification>
+             </urn2:customerParty>
+            <urn2:healthCareServicesSpecificationLine>
+               <urn2:patientInformation>
+                  <urn2:patientIdentity>
+                     <urn2:root>?</urn2:root>
+                     <urn2:extension>?</urn2:extension>
+                  </urn2:patientIdentity>
+                  <urn2:patientOtherInformation>
+                     <urn2:county>                 
+                     </urn2:county>
+                     <urn2:municipality>                     
+                     </urn2:municipality>                     
+                     <urn2:unspecified>
+                        <urn2:text>?</urn2:text>
+                     </urn2:unspecified>
+                  </urn2:patientOtherInformation>
+               </urn2:patientInformation>
+               <urn2:healthcarePerformed>
+                  <urn2:lineId>?</urn2:lineId>
+                  <urn2:unspecified>
+                     <urn2:text>?</urn2:text>
+                  </urn2:unspecified>
+                   <urn2:treatment>
+                     <urn2:typeOfTreatment>
+                     </urn2:typeOfTreatment>
+                     <urn2:ATC>
+                     </urn2:ATC>
+                     <urn2:unspecified>
+                        <urn2:text>?</urn2:text>
+                     </urn2:unspecified>
+                  </urn2:treatment>
+               </urn2:healthcarePerformed>
+            </urn2:healthCareServicesSpecificationLine>
+         </urn1:claimSpecification>
+      </urn1:ProcessClaimSpecification>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="9a2c729f-3119-46e6-998f-9caf49066141" name="VP004"><con:configuration><token>VP004</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="38412a96-c082-4de0-9126-572c11af0a0a" name="TSTNMT2321000156-10K4"><con:configuration><token>TSTNMT2321000156-10K4</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="57b20baa-020f-4c67-a2b6-04f1edb67736" name="SOAP Fault HTTP 500"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:financial:billing:claim:ProcessClaimSpecificationResponder:1:ProcessClaimSpecification" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="a4d0a97f-5239-4dca-96b1-4ad0df51bdae" name="Beh Anrop till LA pa niva -2 under takat vagval"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ProcessClaimSpecificationResponderBinding</con:interface><con:operation>ProcessClaimSpecification</con:operation><con:request name="Beh Anrop till LA pa niva -2 under takat vagval" id="be2bce01-9236-4592-8a4c-d6d757b68054"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#TestSuite#ENV}financial/patienfees/exemption/ProcessClaimSpecification/1/rivtabp21</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:riv:itintegration:registry:1" xmlns:urn1="urn:riv:financial:billing:claim:ProcessClaimSpecificationResponder:1" xmlns:urn2="urn:riv:financial:billing:claim:1">
+   <soapenv:Header>
+      <urn:LogicalAddress>${#TestSuite#LA_K5_niva-2}</urn:LogicalAddress>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn1:ProcessClaimSpecification>
+         <urn1:claimSpecification>
+            <urn2:id>?</urn2:id>
+            <urn2:issueDate>?</urn2:issueDate>
+            <urn2:payableAmount>
+               <urn2:amount>?</urn2:amount>
+               <urn2:currency>
+                  <urn2:code>?</urn2:code>
+               </urn2:currency>
+            </urn2:payableAmount>
+            <urn2:unspecified>
+               <urn2:text>?</urn2:text>
+            </urn2:unspecified>
+            <urn2:supplierParty>
+               <urn2:identification>
+                  <urn2:root>?</urn2:root>
+                  <urn2:extension>?</urn2:extension>
+               </urn2:identification>
+            </urn2:supplierParty>
+            <urn2:customerParty>
+               <urn2:identification>
+                  <urn2:root>?</urn2:root>
+                  <urn2:extension>?</urn2:extension>
+               </urn2:identification>
+             </urn2:customerParty>
+            <urn2:healthCareServicesSpecificationLine>
+               <urn2:patientInformation>
+                  <urn2:patientIdentity>
+                     <urn2:root>?</urn2:root>
+                     <urn2:extension>?</urn2:extension>
+                  </urn2:patientIdentity>
+                  <urn2:patientOtherInformation>
+                     <urn2:county>                 
+                     </urn2:county>
+                     <urn2:municipality>                     
+                     </urn2:municipality>                     
+                     <urn2:unspecified>
+                        <urn2:text>?</urn2:text>
+                     </urn2:unspecified>
+                  </urn2:patientOtherInformation>
+               </urn2:patientInformation>
+               <urn2:healthcarePerformed>
+                  <urn2:lineId>?</urn2:lineId>
+                  <urn2:unspecified>
+                     <urn2:text>?</urn2:text>
+                  </urn2:unspecified>
+                   <urn2:treatment>
+                     <urn2:typeOfTreatment>
+                     </urn2:typeOfTreatment>
+                     <urn2:ATC>
+                     </urn2:ATC>
+                     <urn2:unspecified>
+                        <urn2:text>?</urn2:text>
+                     </urn2:unspecified>
+                  </urn2:treatment>
+               </urn2:healthcarePerformed>
+            </urn2:healthCareServicesSpecificationLine>
+         </urn1:claimSpecification>
+      </urn1:ProcessClaimSpecification>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="70ec65b2-5381-47a7-a9fa-2c4f55506b48" name="VP004"><con:configuration><token>VP004</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="a4f658c7-fc37-4e55-883f-bef19e78c66e" name="SOAP Fault"/><con:assertion type="Simple Contains" id="5be127cb-30a3-4385-b734-085d740478a5" name="TSTNMT2321000156-10K5"><con:configuration><token>TSTNMT2321000156-10K5</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:financial:billing:claim:ProcessClaimSpecificationResponder:1:ProcessClaimSpecification" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>ENV</con:name><con:value>https://dev.esb.ntjp.se/vp/</con:value></con:property><con:property><con:name>LA_K3_niva0</con:name><con:value>TSTNMT2321000156-10K3</con:value></con:property><con:property><con:name>LA_K4_niva-1</con:name><con:value>TSTNMT2321000156-10K4</con:value></con:property><con:property><con:name>LA_K5_niva-2</con:name><con:value>TSTNMT2321000156-10K5</con:value></con:property><con:property><con:name>LA_K6_niva-2</con:name><con:value>TSTNMT2321000156-10K6</con:value></con:property><con:property><con:name>LA_K7_niva-2</con:name><con:value>TSTNMT2321000156-10K7</con:value></con:property><con:property><con:name>patientId16</con:name><con:value>191003249800</con:value></con:property><con:property><con:name>patientIdType</con:name><con:value>1.2.752.129.2.1.3.1</con:value></con:property></con:properties></con:testSuite><con:testSuite id="490a1f90-8987-440b-9a41-59576c259169" name="Standardbehörigheter och standardvägval"><con:description/><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="2dbfbb20-3d6e-4212-90d6-f00e45e10b97" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="NTP-775.1 Direktadresserad GRO, finns endast SB och SV" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="51296d6e-7749-495f-9970-34dcbe5a1b69"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
