@@ -14783,9 +14783,9 @@ if ((url.contains("qa")))
       </urn1:ProcessExemptionStatuses>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="b1080f78-e871-4b17-9d6d-bc43202f100a" name="VP007"><con:configuration><token>VP007</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d9577478-f78f-403b-adad-568e03123e87" name="TSTNMT2321000156-10K4"><con:configuration><token>TSTNMT2321000156-10K4</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Not SOAP Fault Assertion" id="6d2441f1-e2bf-4eb7-9af9-3e456c0f24e4" name="SOAP Fault HTTP 500"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:riv:financial:patientfees:exemption:ProcessExemptionStatusesResponder:1:ProcessExemptionStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="36cdb837-5998-4fab-a6b3-e1e434c77abf" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TK - Ej tillatet pa: kontrakt (neg VP004)" searchProperties="true"><con:description>Syftet med testfallet är att verifiera att trädklättring
-varken sker på vägval eller anropsbehörighet
-Vägval och och anropsbehörighet finns till LA "K3" 
-anropsbehörighet finns till LA "K5" </con:description><con:settings/><con:testStep type="groovy" name="Do not run in these environments" id="1021fe88-d1a1-45d5-b909-b5b4d6915044"><con:description>Aborts testcase. Set environments not to run in</con:description><con:settings/><con:config><script>def url = testRunner.testCase.testSuite.getPropertyValue("ENV")
+sker på vägval ej på anropsbehörighet
+Vägval och och anropsbehörighet finns till logisk adress TSTNMT2321000156-10K3
+anropsbehörighet finns till logisk adress TSTNMT2321000156-10K5</con:description><con:settings/><con:testStep type="groovy" name="Do not run in these environments" id="1021fe88-d1a1-45d5-b909-b5b4d6915044"><con:description>Aborts testcase. Set environments not to run in</con:description><con:settings/><con:config><script>def url = testRunner.testCase.testSuite.getPropertyValue("ENV")
 
 //only run in dev
 if ((url.contains("qa") || url.contains("test")))
