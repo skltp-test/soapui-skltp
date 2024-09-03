@@ -14515,16 +14515,21 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
 def ca = new ContentAssertions(context, messageExchange, log)
 ca.assertNonEmptyResponse()
 ca.assertSpecificValueInAllRecords('/gcd2:careDocumentation/hdurn2:careDocumentationHeader/hdurn2:patientId/hdurn2:id', context.patientId1)</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="f40cb4c3-b8d6-406e-b4fa-f16860dfbcf0" name="Tradklattring"><con:description>Syftet med testsviten är att verifiera logiken för när trädklättring kan ske.
-Logiken är implementerad för behörigheter och vägval.
-Vägval kontrolleras först, därefter anropsbehörighet.
-REGLER
+Testsviten  verifierar
+takade vägval på kontrakten (pos)
+att trädklättring inte kan ske för vägval där det är avstängt men på anropsbehörighet 
+att trädklättring inte kan ske för anropsbehörighet där det är avstängt men på vägval
+att ingen trädklättring görs varken vägval eller anropsbehörighet på kontrakt där det är avstängt.
+
 Trädklättring inte tillåten:
 * för vägval för kontrakt RequestExemptionStatuses  v1
 * för anropsbehörighet på kontrakt ProcessExemptionStatuses v1
 * varken för vägval eller anropsbehörighet på kontrakt ProcessClaimSpecification v1
 
 Beskrivning över organisationsträd och takningar återfinns på Confluence under systemtester och trädklättring
-Ändringen implementerad utifrån jira NTP-2887</con:description><con:settings/><con:runType>PARALLELL</con:runType><con:testCase id="19ab87c7-9817-4d32-ab80-0f86c9b19c39" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Get and set environment properties" searchProperties="true"><con:description>Get environment URL from data.xml and Updates ENV variable in testsuite properties. Do not disable. Run if you change test environment.</con:description><con:settings/><con:testStep type="groovy" name="Get environment URL from data.xml" id="fc4b660c-0df7-41bb-9a95-1cb14da5485b"><con:description>Get environment from data.xml</con:description><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader 
+Ändringen implementerad utifrån jira NTP-2887
+
+</con:description><con:settings/><con:runType>PARALLELL</con:runType><con:testCase id="19ab87c7-9817-4d32-ab80-0f86c9b19c39" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Get and set environment properties" searchProperties="true"><con:description>Get environment URL from data.xml and Updates ENV variable in testsuite properties. Do not disable. Run if you change test environment.</con:description><con:settings/><con:testStep type="groovy" name="Get environment URL from data.xml" id="fc4b660c-0df7-41bb-9a95-1cb14da5485b"><con:description>Get environment from data.xml</con:description><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader 
 import com.eviware.soapui.support.GroovyUtils  
 
 def utils = new GroovyUtils(context) 
