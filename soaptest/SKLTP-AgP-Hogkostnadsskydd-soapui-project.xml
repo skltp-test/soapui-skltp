@@ -746,7 +746,7 @@ context.oneYearAgo = now.minus(367).format("yyyyMMddHHmmss")</script></con:confi
          <urn1:engagementTransaction>\r
             <urn2:deleteFlag>false</urn2:deleteFlag>\r
             <urn2:engagement>\r
-               <urn2:registeredResidentIdentification>${patientId}</urn2:registeredResidentIdentification>\r
+               <urn2:registeredResidentIdentification>${patientId17}</urn2:registeredResidentIdentification>\r
                <urn2:serviceDomain>riv:financial:patientfees:exemption</urn2:serviceDomain>\r
                <urn2:categorization>fpe-es</urn2:categorization>\r
                <urn2:logicalAddress>LOAD-MOCKS</urn2:logicalAddress>\r
@@ -1373,7 +1373,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          </urn1:requestId>\r
          <urn1:patientId>\r
             <urn2:root>${patientIdType}</urn2:root>\r
-            <urn2:extension>${patientId}</urn2:extension>\r
+            <urn2:extension>${patientId17}</urn2:extension>\r
          </urn1:patientId>\r
          <urn1:actor>\r
             <urn2:actorTypeEnum>CITIZEN</urn2:actorTypeEnum>\r
