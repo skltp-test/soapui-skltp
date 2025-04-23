@@ -1,29 +1,23 @@
 # soapui-skltp
 
-Test destined to be ran from Jenkins toward different SKLTP deployments.
+System tests for SKLTP. Requires mocking setup only available in NTjP test environments.
 
-## Soap test (FT)
+## Local execution
 
-There is support to run tests from Jenkins (see Jenkinsfile which is read by Jenkins project).
+The tests can be run from a local SoapUI installation. This requires SoapUI to be configured 
+with the [soapui-support library](https://rivta-tools.bitbucket.io/soapui-support/) and a client certificate.
 
-There is support to run tests locally (CLI) using testrunner (see soaptest/soaptest_local.sh).
-
-```
-  Input parameters:
-    - Hostname 
-        (for SIT, use test.esb.njtp.se)
-        (for QA, use qa.esb.ntjp.se)
-    - Certificate (path to a pkcs12 file)
-    - Certificate password
-    - Source system (HSA, normally LOAD-MOCKS i SIT, JOL-MOCK i QA) 
-```
-
-There is support to run tests from SoapUI. This requires the SoapUI installation to be configured 
-with the [soapui-support library](https://rivta-tools.bitbucket.io/soapui-support/) and a client certificate. 
-
-Also run soaptest/soaptest_sed_data.sh to prepare(sed) the needed data.xml file for the target NTjP environment. Usage:
+Also run `soaptest/soaptest_sed_data.sh` to prepare(sed) the needed data.xml file for the target NTjP environment. Usage:
 
 ```
   ./soaptest_sed_data.sh {dev|test|qa}
 ```
 
+When the above is prepared, open `soaptest/soapui-skltp-workspace.xml` in SoapUI to access all the testsuites.
+
+## Jenkins execution
+
+This repository also includes the needed files to support execution in Jenkins. These are:
+* `Jenkinsfile` - the main script used by Jenkins.
+* `soaptest/Dockerfile` - defines a containerized SoapUI execution environment.
+* `soaptest/testrunner_all.sh` - a script that uses SoapUI testrunner to execute testsuites according to input parameters from Jenkins.
