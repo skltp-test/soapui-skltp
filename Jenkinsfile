@@ -22,7 +22,7 @@ pipeline {
                         cat ${CERTKEY} > ./cert.p12
                         ls -l ./cert.p12
                         sed -e 's@KEYSTOREVARIABLE@'"cert.p12"'@; s@KEYSTOREPASSWORD@'"${CERTKEYPWD}"'@' soapui-sed.xml > soapui-settings.xml
-						sed -e 's@SOURCESYSTEMHSA@'"${SOURCESYSTEMHSA}"'@; s@TARGETHOST@'"${TARGETHOST}"'@' \
+						sed -e 's@TARGETHOST@'"${TARGETHOST}"'@' \
 							-e 's@COOPERATION@'"${params.COOPERATION_URL}"'@; s@COOPAUTH@'"${COOP_AUTH_HEADER}"'@' \
 							-e 's@ENVIRONMENT@'"${ENVIRONMENT_VAR}"'@' \
 							data-sed.xml > data.xml

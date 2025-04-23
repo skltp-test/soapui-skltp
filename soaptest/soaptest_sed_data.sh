@@ -30,11 +30,10 @@ else
     TARGETHOST="$1.esb.ntjp.se"
 fi
 
-SOURCESYSTEMHSA="LOAD-MOCKS"
 
 echo "Tests will be run against the following host: ${TARGETHOST}"
 
-sed -e 's@SOURCESYSTEMHSA@'"${SOURCESYSTEMHSA}"'@; s@TARGETHOST@'"${TARGETHOST}"'@' \
-    -e  "s,COOPERATION,$COOPERATION_URL,"\
-	-e  "s,ENVIRONMENT,$ENVIRONMENT_VAR,"\
+sed -e "s,TARGETHOST,$TARGETHOST," \
+    -e "s,COOPERATION,$COOPERATION_URL,"\
+	-e "s,ENVIRONMENT,$ENVIRONMENT_VAR,"\
         data-sed.xml > data.xml
