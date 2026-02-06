@@ -15,7 +15,8 @@ elif [ "$1" = "test" ]; then
     COOPERATION_URL="https://test.api.ntjp.se"
     # COOPERATION_URL="http://ind-ttjp-apache-api-vip.ind1.sth.basefarm.net"
 elif [ "$1" = "qa" ]; then
-    COOPERATION_URL="http://ind-stjp-apache-api-vip.ind1.sth.basefarm.net"
+    COOPERATION_URL="https://qa.api.ntjp.se"
+    # COOPERATION_URL="http://ind-stjp-apache-api-vip.ind1.sth.basefarm.net"
 elif [ "$1" = "vmdev" ]; then
     COOPERATION_URL="https://dev.api.ntjp.se"
 else
