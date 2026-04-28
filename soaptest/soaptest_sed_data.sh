@@ -29,12 +29,15 @@ if [ "$1" = "vmdev" ]; then
     TARGETHOST="dev.esb.ntjp.se/vm"
 else
     TARGETHOST="$1.esb.ntjp.se"
+    BACKENDHOSTMGMT="$1.ntjp.se"
 fi
 
 
 echo "Tests will be run against the following host: ${TARGETHOST}"
+echo "EI backend management host: ${BACKENDHOSTMGMT}"
 
 sed -e "s,TARGETHOST,$TARGETHOST," \
+    -e "s,BACKENDHOSTMGMT,$BACKENDHOSTMGMT," \
     -e "s,COOPERATION,$COOPERATION_URL,"\
 	-e "s,ENVIRONMENT,$ENVIRONMENT_VAR,"\
         data-sed.xml > data.xml
