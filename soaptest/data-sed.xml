@@ -30,7 +30,6 @@ under the License.
 		<webServiceUrlEI>https://TARGETHOST/vp/Update/1/rivtabp21</webServiceUrlEI>
 		<webServiceUrlFC>https://TARGETHOST/vp/FindContent/1/rivtabp21</webServiceUrlFC>
 		<webServiceUrlPN>https://TARGETHOST/vp/ProcessNotification/1/rivtabp21</webServiceUrlPN>
-		<webServiceUrlBackendMgmt>https://BACKENDHOSTMGMT/ei-backend/skltp-ei</webServiceUrlBackendMgmt>
 		<!-- <webServiceUrlSubscriberFC>https://tjp.nordicmedtest.se/skaulo/vp/itintegration/engagementindex/FindContent/1/rivtabp21</webServiceUrlSubscriberFC> -->
 		<webServiceUrlSubscriberFC>https://TARGETHOST/vp/FindContent/1/rivtabp21</webServiceUrlSubscriberFC>
 		<webServiceUrl>https://TARGETHOST/vp/clinicalprocess/healthcond/description/GetCareDocumentation/2/rivtabp21</webServiceUrl>
@@ -949,10 +948,6 @@ under the License.
 	<testcase id="5.7.2 Skicka Update använd FindContent för samtliga optionella element"></testcase>
 	<testcase id="5.7.3 Skicka FindContent med samtliga optionella element"></testcase>
 
-	<testcase id="5.8.1 Write lock blockerar processning, unlock återupptar"></testcase>
-	<testcase id="5.8.2 Write lock enable är idempotent"></testcase>
-	<testcase id="5.8.3 FindContent fungerar medan write lock är aktivt"></testcase>
-	<testcase id="5.8.4 POST - Rensa writelock-testdata"></testcase>
 
 	<testcase id="NTP-775.1 Direktadresserad GRO, finns endast SB och SV">
 		<description>
