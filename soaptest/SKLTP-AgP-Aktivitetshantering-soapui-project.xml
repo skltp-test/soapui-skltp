@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="8f879d69-8f10-4e04-ba4d-282b244ec1c3" activeEnvironment="Default" name="SKLTP-AgP-Aktivitetshantering" resourceRoot="" soapui-version="5.7.2" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="e943a93f-b90d-4d45-939a-626c54f229aa" wsaVersion="NONE" name="GetActivitiesResponderBinding_1.0" type="wsdl" bindingName="{urn:riv:clinicalprocess:activity:actions:GetActivities:1:rivtabp21}GetActivitiesResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_activity_actions_1.0.5/schemas/interactions/GetActivitiesInteraction/GetActivitiesInteraction_1.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_activity_actions_1.0.5/schemas/interactions/GetActivitiesInteraction/GetActivitiesInteraction_1.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_activity_actions_1.0.5/schemas/interactions/GetActivitiesInteraction/GetActivitiesInteraction_1.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
+<con:soapui-project id="8f879d69-8f10-4e04-ba4d-282b244ec1c3" activeEnvironment="Default" name="SKLTP-AgP-Aktivitetshantering" resourceRoot="" soapui-version="5.9.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="&lt;all>"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:WsdlInterface" id="e943a93f-b90d-4d45-939a-626c54f229aa" wsaVersion="NONE" name="GetActivitiesResponderBinding_1.0" type="wsdl" bindingName="{urn:riv:clinicalprocess:activity:actions:GetActivities:1:rivtabp21}GetActivitiesResponderBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_activity_actions_1.0.5/schemas/interactions/GetActivitiesInteraction/GetActivitiesInteraction_1.0_RIVTABP21.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_activity_actions_1.0.5/schemas/interactions/GetActivitiesInteraction/GetActivitiesInteraction_1.0_RIVTABP21.wsdl"><con:part><con:url>file:/C:/VBShare/schemas/ServiceContracts_clinicalprocess_activity_actions_1.0.5/schemas/interactions/GetActivitiesInteraction/GetActivitiesInteraction_1.0_RIVTABP21.wsdl</con:url><con:content><![CDATA[<!--Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements. See the NOTICE file
  distributed with this work for additional information
  regarding copyright ownership. Sveriges Kommuner och Landsting licenses this file
@@ -3658,7 +3689,7 @@ source.load(testRunner.testCase.getName())</script></con:config></con:testStep><
          </urn1:personPatientId>\r
       </urn1:GetActivities>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="cf877ed8-5d71-423c-9045-dcd5a0a7e992"/><con:assertion type="Schema Compliance" id="ef16049d-400b-4da1-aca1-664daadd67d3"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="b36d7f59-0f77-4595-8935-7cb27bbd3eab"/><con:assertion type="Simple NotContains" id="0fc5fd97-f4e7-4034-afbe-8b842a9bddfe" name="Not Contains"><con:configuration><token>extension</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="9821f838-8ff9-4624-9683-2a646ab8fa92" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.16.2 (GA) Patient med engagemang hos en producent(LOAD-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="ce7d3ae2-15e6-44d3-b062-68baa35e0583"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="cf877ed8-5d71-423c-9045-dcd5a0a7e992"/><con:assertion type="Schema Compliance" id="ef16049d-400b-4da1-aca1-664daadd67d3"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="b36d7f59-0f77-4595-8935-7cb27bbd3eab"/><con:assertion type="Simple NotContains" id="0fc5fd97-f4e7-4034-afbe-8b842a9bddfe" name="Not Contains"><con:configuration><token>extension</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="9821f838-8ff9-4624-9683-2a646ab8fa92" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="4.16.2 (GA) Patient med engagemang hos en producent(NTJP-MOCKS) med 1 eller flera poster" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Read data" id="ce7d3ae2-15e6-44d3-b062-68baa35e0583"><con:settings/><con:config><script>import se.skl.rivta.testsupport.soapui.datasource.XmlDataReader
 import com.eviware.soapui.support.GroovyUtils
 
 def utils = new GroovyUtils(context)
