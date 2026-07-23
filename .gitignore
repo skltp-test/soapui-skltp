@@ -9,3 +9,4 @@ file.key.pem
 cert.p12
 data.xml
 soapui-settings.xml
+/.idea
