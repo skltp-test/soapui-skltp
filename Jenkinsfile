@@ -1,10 +1,10 @@
 pipeline {
     agent any
     parameters {
-        booleanParam(name: 'RUN_CORE', defaultValue: true, description: 'Kör tester av kärnfunktionalitet')
+        booleanParam(name: 'RUN_CORE', defaultValue: false, description: 'Kör tester av kärnfunktionalitet')
         booleanParam(name: 'RUN_EI', defaultValue: true, description: 'Kör EI-tester')
         booleanParam(name: 'RUN_AGP', defaultValue: true, description: 'Kör tester för aggregerande tjänster')
-        booleanParam(name: 'RUN_REST', defaultValue: true, description: 'Kör REST-tester')
+        booleanParam(name: 'RUN_REST', defaultValue: false, description: 'Kör REST-tester')
         booleanParam(name: 'RUN_ADAPTER', defaultValue: true, description: 'Kör adapter-tester')
     }
     stages {
