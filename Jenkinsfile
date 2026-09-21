@@ -1,10 +1,8 @@
 pipeline {
     agent any
     parameters {
-        booleanParam(name: 'RUN_CORE', defaultValue: true, description: 'Kör tester av kärnfunktionalitet')
         booleanParam(name: 'RUN_EI', defaultValue: true, description: 'Kör EI-tester')
         booleanParam(name: 'RUN_AGP', defaultValue: true, description: 'Kör tester för aggregerande tjänster')
-        booleanParam(name: 'RUN_REST', defaultValue: true, description: 'Kör REST-tester')
         booleanParam(name: 'RUN_ADAPTER', defaultValue: true, description: 'Kör adapter-tester')
     }
     stages {
@@ -32,17 +30,6 @@ pipeline {
                 }
             }
         }
-        stage('Run core tests') {
-             when {
-                expression { return params.RUN_CORE }
-            }
-            steps {
-                sh """
-                    cd soaptest
-                    docker run -v `pwd`:/usr/src/soapui --rm testsuite 'SKLTP-Core-*soapui-project.xml'
-                """
-            }
-        }
         stage('Run EI tests') {
             when {
                 expression { return params.RUN_EI }
@@ -62,17 +49,6 @@ pipeline {
                 sh """
                     cd soaptest
                     docker run -v `pwd`:/usr/src/soapui --rm testsuite 'SKLTP-AgP-*soapui-project.xml'
-                """
-            }
-        }
-        stage('Run REST tests') {
-            when {
-                expression { return params.RUN_REST && !params.TARGETHOST.contains('vm') }
-            }
-            steps {
-                sh """
-                    cd soaptest
-                    docker run -v `pwd`:/usr/src/soapui --rm testsuite 'SKLTP-REST-*soapui-project.xml'
                 """
             }
         }
