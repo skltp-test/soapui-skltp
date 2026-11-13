@@ -34,7 +34,21 @@ fi
 
 echo "Tests will be run against the following host: ${TARGETHOST}"
 
+if [ ! -s "coop-auth.txt" ]; then
+    echo "Missing or empty coop-auth.txt"
+    exit 1
+fi
+
+IFS= read -r COOP_AUTH < coop-auth.txt
+COOP_AUTH=${COOP_AUTH%$'\r'}
+if [ -z "$COOP_AUTH" ]; then
+    echo "Missing or empty coop-auth.txt"
+    exit 1
+fi
+COOP_AUTH_SED=$(printf '%s' "$COOP_AUTH" | sed 's/[\\&|]/\\&/g')
+
 sed -e "s,TARGETHOST,$TARGETHOST," \
     -e "s,COOPERATION,$COOPERATION_URL,"\
 	-e "s,ENVIRONMENT,$ENVIRONMENT_VAR,"\
+	-e "s|COOPAUTH|$COOP_AUTH_SED|"\
         data-sed.xml > data.xml

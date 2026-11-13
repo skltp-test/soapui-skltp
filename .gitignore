@@ -7,6 +7,7 @@ file.crt.pem
 file.key.pem
 *.scala.swp
 cert.p12
+coop-auth.txt
 data.xml
 soapui-settings.xml
 /.idea
