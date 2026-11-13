@@ -220,6 +220,8 @@ Suite `infrastructure_itintegration_registry` testar registry-sökningar:
 
 ## Engagemangsindex (EI)
 
+Se [Testpersoner och dataändringar](testpersoner_och_dataandringar.md) för en sammanfattning av när EI-testfallen använder testpersoner för att ändra engagemangsdata.
+
 ### `SKLTP-EI-soapui-project.xml`
 
 - `5.0.1 PRE - Rensa engagemang`: förberedande test som rensar engagemangsdata.
