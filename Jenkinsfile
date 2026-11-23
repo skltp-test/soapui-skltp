@@ -1,7 +1,6 @@
 pipeline {
     agent any
     parameters {
-        booleanParam(name: 'RUN_EI', defaultValue: true, description: 'Kör EI-tester')
         booleanParam(name: 'RUN_AGP', defaultValue: true, description: 'Kör tester för aggregerande tjänster')
         booleanParam(name: 'RUN_ADAPTER', defaultValue: true, description: 'Kör adapter-tester')
     }
@@ -28,17 +27,6 @@ pipeline {
                         docker build -t testsuite .
                     """
                 }
-            }
-        }
-        stage('Run EI tests') {
-            when {
-                expression { return params.RUN_EI }
-            }
-            steps {
-                sh """
-                    cd soaptest
-                    docker run -v `pwd`:/usr/src/soapui --rm testsuite 'SKLTP-EI-*soapui-project.xml'
-                """
             }
         }
         stage('Run AgP tests') {
